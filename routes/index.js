@@ -3,7 +3,7 @@ const   express = require('express'),
     bodyParser = require('body-parser'),
     mongojs = require('mongojs'),
     cors = require('cors'),
-    db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['tracesListe', 'anreiseListe', 'imHausListe', 'tables']);
+    db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['hubertusTracesListe', 'hubertusAnreiseListe', 'hubertusImHausListe', 'hubertusTables']);
 
 //Bodyparser middleware
 router.use(bodyParser.urlencoded({ extended: false}));
@@ -23,10 +23,10 @@ router.post('/anreiseListe', function(req, res, next) {
         data: "",};
     anreiseListe.data = req.body;
 
-    db.anreiseListe.remove({});
+    db.hubertusAnreiseListe.remove({});
 
     setTimeout(function() {
-        db.anreiseListe.save(anreiseListe, function(err, anreiseListe) {
+        db.hubertusAnreiseListe.save(anreiseListe, function(err, anreiseListe) {
             if (err) {
                 res.send(err);
             }
@@ -46,9 +46,9 @@ router.post('/imHausListe', function(req, res, next) {
     };
     imHausListe.data = req.body;
 
-    db.imHausListe.remove({});
+    db.hubertusImHausListe.remove({});
     setTimeout(function() {
-        db.imHausListe.save(imHausListe, function (err, imHausListe) {
+        db.hubertusImHausListe.save(imHausListe, function (err, imHausListe) {
             if (err) {
                 res.send(err);
             }
@@ -66,9 +66,9 @@ router.post('/tracesListe', function(req, res, next) {
         data: "",
     };
     tracesListe.data = req.body;
-    db.tracesListe.remove({});
+    db.hubertusTracesListe.remove({});
     setTimeout(function() {
-        db.tracesListe.save(tracesListe, function(err, tracesListe) {
+        db.hubertusTracesListe.save(tracesListe, function(err, tracesListe) {
             if (err) {
                 res.send(err);
             }
@@ -82,7 +82,7 @@ router.post('/tracesListe', function(req, res, next) {
 router.get('/anreiseListe', function(req, res, next) {
     console.log("anreiseListe get called");
     //Get guests from Mongo DB
-    db.anreiseListe.find(function(err, anreiseListe){
+    db.hubertusAnreiseListe.find(function(err, anreiseListe){
         if (err){
             res.send(err);
         }
@@ -94,7 +94,7 @@ router.get('/anreiseListe', function(req, res, next) {
 router.get('/imHausListe', function(req, res, next) {
     console.log("imHausListe get called");
     //Get guests from Mongo DB
-    db.imHausListe.find(function(err, imHausListe){
+    db.hubertusImHausListe.find(function(err, imHausListe){
         if (err){
             res.send(err);
         }
@@ -106,7 +106,7 @@ router.get('/imHausListe', function(req, res, next) {
 router.get('/tracesListe', function(req, res, next) {
     console.log("tracesListe get called");
     //Get guests from Mongo DB
-    db.tracesListe.find(function(err, tracesListe){
+    db.hubertusTracesListe.find(function(err, tracesListe){
         if (err){
             res.send(err);
         }
@@ -118,7 +118,7 @@ router.get('/tracesListe', function(req, res, next) {
 router.get('/tables', function(req, res, next) {
     console.log("tables get called");
     //Get guests from Mongo DB
-    db.tables.find(function(err, tables){
+    db.hubertusTables.find(function(err, tables){
         if (err){
             res.send(err);
         }
@@ -167,7 +167,7 @@ router.post('/moveTable', function(req, res, next) {
     console.log('leftValue' + leftValue);
 
     if (tableNumber === '19' && topValue === '200' && leftValue === '550') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -184,7 +184,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "20",
@@ -198,7 +198,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '19' && topValue === '200' && leftValue === '580' && width === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -215,7 +215,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "21",
@@ -229,7 +229,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '19' && topValue === '200' && leftValue === '580' && width === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -246,7 +246,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: {
@@ -272,7 +272,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: {
@@ -299,7 +299,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '20' && topValue === '200' && leftValue === '610') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -316,7 +316,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "21",
@@ -330,7 +330,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '20' && topValue === '200' && leftValue === '640') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -347,7 +347,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: {
@@ -374,7 +374,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '48' && topValue === '220' && leftValue === '400' && height === '40') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -391,7 +391,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "49",
@@ -405,7 +405,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '48' && topValue === '260' && leftValue === '400' && height === '80') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -422,7 +422,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: {
@@ -449,7 +449,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '50' && topValue === '430') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -466,7 +466,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("moveTable Update successful");
             });
 
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: {
@@ -491,7 +491,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '50' && topValue === '460') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -508,7 +508,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("moveTable Update successful");
             });
 
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "51",
@@ -522,7 +522,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '52' && topValue === '280' && leftValue === '200') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -538,7 +538,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: {
@@ -565,7 +565,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '52' && topValue === '280' && leftValue === '230') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -581,7 +581,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "53",
@@ -595,7 +595,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '54' && topValue === '320' && leftValue === '50') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -612,7 +612,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "55",
@@ -626,7 +626,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '54' && topValue === '290' && leftValue === '50' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -642,7 +642,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "56",
@@ -656,7 +656,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '54' && topValue === '260' && leftValue === '50' && height === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -672,7 +672,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "57",
@@ -686,7 +686,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '54' && topValue === '200' && leftValue === '50' && height === '120') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -703,7 +703,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -726,7 +726,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -751,7 +751,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -777,7 +777,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '55' && topValue === '260' && leftValue === '50') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -794,7 +794,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "56",
@@ -808,7 +808,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '55' && topValue === '230' && leftValue === '50' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -825,7 +825,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "57",
@@ -839,7 +839,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '55' && topValue === '200' && leftValue === '50' && height === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -856,7 +856,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -881,7 +881,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -907,7 +907,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '56' && topValue === '200' && leftValue === '50') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -924,7 +924,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "57",
@@ -938,7 +938,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '56' && topValue === '170' && leftValue === '50') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -955,7 +955,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -981,7 +981,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '58' && topValue === '140' && leftValue === '170' && width === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -998,7 +998,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "59",
@@ -1013,7 +1013,7 @@ router.post('/moveTable', function(req, res, next) {
             });
 
     } else if (tableNumber === '58' && topValue === '140' && leftValue === '170' && width === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1030,7 +1030,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1056,7 +1056,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '60' && topValue === '440' && leftValue === '220' && width === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1073,7 +1073,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "61",
@@ -1087,7 +1087,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '60' && topValue === '440' && leftValue === '250' && width === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1104,7 +1104,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "62",
@@ -1118,7 +1118,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '60' && topValue === '440' && leftValue === '250' && width === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1135,7 +1135,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "63",
@@ -1150,7 +1150,7 @@ router.post('/moveTable', function(req, res, next) {
             });
 
     } else if (tableNumber === '60' && topValue === '440' && leftValue === '250' && width === '120') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1167,7 +1167,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1192,7 +1192,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1217,7 +1217,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1244,7 +1244,7 @@ router.post('/moveTable', function(req, res, next) {
             });
 
     } else if (tableNumber === '61' && topValue === '440' && leftValue === '280'  && width === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1259,7 +1259,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "62",
@@ -1273,7 +1273,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '61' && topValue === '440' && leftValue === '280' && width === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1288,7 +1288,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "63",
@@ -1302,7 +1302,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '61' && topValue === '440' && leftValue === '280' && width === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1317,7 +1317,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "64",
@@ -1331,7 +1331,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '61' && topValue === '440' && leftValue === '280' && width === '120') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1346,7 +1346,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1371,7 +1371,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1396,7 +1396,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1422,7 +1422,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '62' && topValue === '440' && leftValue === '340' && width === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1437,7 +1437,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "63",
@@ -1451,7 +1451,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '62' && topValue === '440' && leftValue === '340' && width === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1466,7 +1466,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "64",
@@ -1480,7 +1480,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '62' && topValue === '440' && leftValue === '340' && width === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1495,7 +1495,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "65",
@@ -1509,7 +1509,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '62' && topValue === '440' && leftValue === '340' && width === '120') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1524,7 +1524,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1549,7 +1549,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1574,7 +1574,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1600,7 +1600,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '63' && topValue === '440' && leftValue === '400' && width === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1615,7 +1615,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "64",
@@ -1629,7 +1629,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '63' && topValue === '440' && leftValue === '400' && width === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1644,7 +1644,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "65",
@@ -1658,7 +1658,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '63' && topValue === '440' && leftValue === '400' && width === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1673,7 +1673,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "66",
@@ -1687,7 +1687,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '63' && topValue === '440' && leftValue === '400' && width === '120') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1702,7 +1702,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1727,7 +1727,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1752,7 +1752,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1778,7 +1778,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '64' && topValue === '440' && leftValue === '460' && width === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1793,7 +1793,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "65",
@@ -1807,7 +1807,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '64' && topValue === '440' && leftValue === '460' && width === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1822,7 +1822,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "66",
@@ -1836,7 +1836,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '64' && topValue === '440' && leftValue === '460' && width === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1851,7 +1851,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1876,7 +1876,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1902,7 +1902,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '65' && topValue === '440' && leftValue === '520' && width === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1917,7 +1917,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "66",
@@ -1931,7 +1931,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '65' && topValue === '440' && leftValue === '520' && width === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1946,7 +1946,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -1972,7 +1972,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '67' && topValue === '340' && leftValue === '580' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -1988,7 +1988,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "68",
@@ -2002,7 +2002,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '67' && topValue === '310' && leftValue === '580' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2018,7 +2018,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "69",
@@ -2032,7 +2032,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '67' && topValue === '280' && leftValue === '580' && height === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2048,7 +2048,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "70",
@@ -2062,7 +2062,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '67' && topValue === '250' && leftValue === '580' && height === '120') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2078,7 +2078,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -2103,7 +2103,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -2128,7 +2128,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -2154,7 +2154,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '68' && topValue === '280' && leftValue === '580' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2170,7 +2170,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "69",
@@ -2184,7 +2184,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '68' && topValue === '250' && leftValue === '580' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2200,7 +2200,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "70",
@@ -2214,7 +2214,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '68' && topValue === '220' && leftValue === '580' && height === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2230,7 +2230,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -2255,7 +2255,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -2282,7 +2282,7 @@ router.post('/moveTable', function(req, res, next) {
             });
 
     } else if (tableNumber === '69' && topValue === '220' && leftValue === '580' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2298,7 +2298,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "70",
@@ -2312,7 +2312,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '69' && topValue === '190' && leftValue === '580' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2328,7 +2328,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -2354,7 +2354,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '71' && topValue === '160' && leftValue === '460' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2370,7 +2370,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "72",
@@ -2384,7 +2384,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '71' && topValue === '160' && leftValue === '460' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2400,7 +2400,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "73",
@@ -2414,7 +2414,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '71' && topValue === '160' && leftValue === '460' && height === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2430,7 +2430,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "74",
@@ -2444,7 +2444,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '71' && topValue === '160' && leftValue === '460' && height === '120') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2460,7 +2460,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -2485,7 +2485,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -2510,7 +2510,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -2537,7 +2537,7 @@ router.post('/moveTable', function(req, res, next) {
             });
 
     } else if (tableNumber === '72' && topValue === '220' && leftValue === '460' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2552,7 +2552,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "73",
@@ -2566,7 +2566,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '72' && topValue === '220' && leftValue === '460' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2581,7 +2581,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "74",
@@ -2597,7 +2597,7 @@ router.post('/moveTable', function(req, res, next) {
 
 
     } else if (tableNumber === '72' && topValue === '220' && leftValue === '460' && height === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2612,7 +2612,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -2637,7 +2637,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -2663,7 +2663,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '73' && topValue === '280' && leftValue === '460' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2678,7 +2678,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "74",
@@ -2692,7 +2692,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '73' && topValue === '280' && leftValue === '460' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2707,7 +2707,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -2734,7 +2734,7 @@ router.post('/moveTable', function(req, res, next) {
             });
 
     } else if (tableNumber === '75' && topValue === '340' && leftValue === '340' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2750,7 +2750,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "76",
@@ -2764,7 +2764,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '75' && topValue === '310' && leftValue === '340' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2780,7 +2780,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "77",
@@ -2794,7 +2794,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '75' && topValue === '280' && leftValue === '340' && height === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2810,7 +2810,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "78",
@@ -2824,7 +2824,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '75' && topValue === '250' && leftValue === '340' && height === '120') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2840,7 +2840,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -2865,7 +2865,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -2890,7 +2890,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -2916,7 +2916,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '76' && topValue === '280' && leftValue === '340' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2932,7 +2932,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "77",
@@ -2946,7 +2946,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '76' && topValue === '250' && leftValue === '340' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2962,7 +2962,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "78",
@@ -2976,7 +2976,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '76' && topValue === '220' && leftValue === '340' && height === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -2992,7 +2992,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3017,7 +3017,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3044,7 +3044,7 @@ router.post('/moveTable', function(req, res, next) {
             });
 
     } else if (tableNumber === '77' && topValue === '220' && leftValue === '340' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3060,7 +3060,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "78",
@@ -3074,7 +3074,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '77' && topValue === '190' && leftValue === '340' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3090,7 +3090,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3117,7 +3117,7 @@ router.post('/moveTable', function(req, res, next) {
             });
 
     } else if (tableNumber === '79' && topValue === '340' && leftValue === '220' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3133,7 +3133,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "80",
@@ -3147,7 +3147,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '79' && topValue === '310' && leftValue === '220' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3163,7 +3163,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "81",
@@ -3177,7 +3177,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '79' && topValue === '280' && leftValue === '220' && height === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3193,7 +3193,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "82",
@@ -3207,7 +3207,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '79' && topValue === '250' && leftValue === '220' && height === '120') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3223,7 +3223,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3248,7 +3248,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3273,7 +3273,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3299,7 +3299,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '80' && topValue === '280' && leftValue === '220' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3315,7 +3315,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "81",
@@ -3329,7 +3329,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '80' && topValue === '250' && leftValue === '220' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3345,7 +3345,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "82",
@@ -3359,7 +3359,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '80' && topValue === '220' && leftValue === '220' && height === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3375,7 +3375,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3400,7 +3400,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3427,7 +3427,7 @@ router.post('/moveTable', function(req, res, next) {
             });
 
     } else if (tableNumber === '81' && topValue === '220' && leftValue === '220' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3443,7 +3443,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "82",
@@ -3457,7 +3457,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '81' && topValue === '190' && leftValue === '220' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3473,7 +3473,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3499,7 +3499,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '83' && topValue === '160' && leftValue === '60' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3515,7 +3515,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "84",
@@ -3529,7 +3529,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '83' && topValue === '160' && leftValue === '60' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3545,7 +3545,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "85",
@@ -3559,7 +3559,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '83' && topValue === '160' && leftValue === '60' && height === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3575,7 +3575,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "86",
@@ -3589,7 +3589,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '83' && topValue === '160' && leftValue === '60' && height === '120') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3605,7 +3605,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3630,7 +3630,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3655,7 +3655,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3682,7 +3682,7 @@ router.post('/moveTable', function(req, res, next) {
             });
 
     } else if (tableNumber === '84' && topValue === '220' && leftValue === '60' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3697,7 +3697,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "85",
@@ -3711,7 +3711,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '84' && topValue === '220' && leftValue === '60' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3726,7 +3726,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "86",
@@ -3740,7 +3740,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '84' && topValue === '220' && leftValue === '60' && height === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3755,7 +3755,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "87",
@@ -3771,7 +3771,7 @@ router.post('/moveTable', function(req, res, next) {
 
 
     } else if (tableNumber === '84' && topValue === '220' && leftValue === '60' && height === '120') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3786,7 +3786,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3811,7 +3811,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3836,7 +3836,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3862,7 +3862,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '85' && topValue === '280' && leftValue === '60' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3877,7 +3877,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "86",
@@ -3891,7 +3891,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '85' && topValue === '280' && leftValue === '60' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3906,7 +3906,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "87",
@@ -3920,7 +3920,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '85' && topValue === '280' && leftValue === '60' && height === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3935,7 +3935,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "88",
@@ -3949,7 +3949,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '85' && topValue === '280' && leftValue === '60' && height === '120') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -3964,7 +3964,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -3989,7 +3989,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -4014,7 +4014,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -4041,7 +4041,7 @@ router.post('/moveTable', function(req, res, next) {
             });
 
     } else if (tableNumber === '86' && topValue === '340' && leftValue === '60' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4056,7 +4056,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "87",
@@ -4070,7 +4070,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '86' && topValue === '340' && leftValue === '60'  && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4085,7 +4085,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "88",
@@ -4099,7 +4099,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '86' && topValue === '340' && leftValue === '60'  && height === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4114,7 +4114,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "89",
@@ -4128,7 +4128,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '86' && topValue === '340' && leftValue === '60'  && height === '120') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4143,7 +4143,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -4168,7 +4168,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -4193,7 +4193,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -4219,7 +4219,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '87' && topValue === '400' && leftValue === '60' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4234,7 +4234,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "88",
@@ -4248,7 +4248,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '87' && topValue === '400' && leftValue === '60' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4263,7 +4263,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "89",
@@ -4277,7 +4277,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '87' && topValue === '400' && leftValue === '60' && height === '90') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4292,7 +4292,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -4317,7 +4317,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -4343,7 +4343,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '88' && topValue === '460' && leftValue === '60' && height === '30') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4358,7 +4358,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "89",
@@ -4373,7 +4373,7 @@ router.post('/moveTable', function(req, res, next) {
             });
 
     } else if (tableNumber === '88' && topValue === '460' && leftValue === '60' && height === '60') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4388,7 +4388,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -4414,7 +4414,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '501' && topValue === '115' && leftValue === '430' && width === '40') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4429,7 +4429,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "502",
@@ -4443,7 +4443,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '501' && topValue === '115' && leftValue === '430' && width === '80') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4458,7 +4458,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -4484,7 +4484,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '503' && topValue === '115' && leftValue === '590' && width === '40') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4500,7 +4500,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "504",
@@ -4514,7 +4514,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '503' && topValue === '115' && leftValue === '590' && width === '80') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4530,7 +4530,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -4558,7 +4558,7 @@ router.post('/moveTable', function(req, res, next) {
             });
 
     } else if (tableNumber === '505' && topValue === '215' && leftValue === '590' && width === '40') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4574,7 +4574,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "506",
@@ -4588,7 +4588,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '505' && topValue === '215' && leftValue === '590' && width === '80') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4604,7 +4604,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -4631,7 +4631,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '515' && topValue === '380' && leftValue === '280' && width === '40') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4648,7 +4648,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "516",
@@ -4662,7 +4662,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '515' && topValue === '380' && leftValue === '250' && width === '80') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4679,7 +4679,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -4706,7 +4706,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     } else if (tableNumber === '523' && topValue === '180' && leftValue === '260'  && width === '40') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4724,7 +4724,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
             }, { $pull: { tables: {
                 "number": "524",
@@ -4738,7 +4738,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log(tables);
             });
     } else if (tableNumber === '523' && topValue === '110' && leftValue === '260' && width === '80') {
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
                 "tables.number": tableNumber
@@ -4757,7 +4757,7 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-        db.tables.update(
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: { tables: {
@@ -4784,7 +4784,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("addTable Update successful");
             });
     }        setTimeout(function() {
-        db.tables.find(
+        db.hubertusTables.find(
             {
                 "department": departmentValue,
             },
@@ -4874,7 +4874,7 @@ router.post('/occupyTable', function(req, res, next) {
         departmentValueDB = "Wintergarten";
     }
 
-    db.tables.update(
+    db.hubertusTables.update(
         {department: departmentValueDB,
             "tables.number": tableValue[0]},
         {$set: {
@@ -4888,7 +4888,7 @@ router.post('/occupyTable', function(req, res, next) {
         });
 
     setTimeout(function() {
-        db.tables.findOne(
+        db.hubertusTables.findOne(
             {
                 "department": departmentValueDB,
                 "tables.number": tableValue[0]
@@ -4912,7 +4912,7 @@ router.post('/dispenseTable', function(req, res, next) {
     console.log("dispenseTable request made to /dispenseTable");
     let dispenseTable = req.body;
     console.log("dispenseTable" + JSON.stringify(dispenseTable));
-    db.tables.findAndModify({
+    db.hubertusTables.findAndModify({
         query: {department: dispenseTable.department, "tables.number": dispenseTable.number},
         update: {$set: {
             "tables.$.bgColor": "#ffffff",
@@ -4958,7 +4958,7 @@ router.post('/dispenseTable', function(req, res, next) {
     });
 
     setTimeout(function() {
-        db.tables.find(
+        db.hubertusTables.find(
             {
                 department: dispenseTable.department,
                 "tables.number": dispenseTable.number
@@ -5020,7 +5020,7 @@ router.post('/removePlaceholder', function(req, res, next) {
     //console.log(tableValue);
 
     //console.log(occupyTable);
-    db.tables.update(
+    db.hubertusTables.update(
         {
             department: departmentValueDB,
             "tables.number": tableValue[0]
@@ -5035,7 +5035,7 @@ router.post('/removePlaceholder', function(req, res, next) {
         });
 
     setTimeout(function() {
-        db.tables.findOne(
+        db.hubertusTables.findOne(
             {
                 department: departmentValueDB,
                 "tables.number": tableValue[0]
@@ -5057,7 +5057,7 @@ router.post('/addPlaceholder', function(req, res, next) {
     let addPlaceholder = req.body;
     //console.log(occupyTable);
 
-    db.tables.update(
+    db.hubertusTables.update(
         {department: addPlaceholder.department,
             "tables.number": addPlaceholder.number} ,
         {$set: {
@@ -5070,7 +5070,7 @@ router.post('/addPlaceholder', function(req, res, next) {
         });
 
     setTimeout(function() {
-        db.tables.find(
+        db.hubertusTables.find(
             {
                 department: addPlaceholder.department,
                 "tables.number": addPlaceholder.number
@@ -5179,7 +5179,7 @@ router.post('/addInformationToTable', function(req, res, next) {
     console.log(departmentValueDB);
     console.log(tableValue[0]);
     setTimeout(function() {
-        db.tables.findOne(
+        db.hubertusTables.findOne(
             {
                 department: departmentValueDB,
                 "tables.number": tableValue[0]
@@ -5197,7 +5197,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                 }
                 console.log("Länge tables firstplace" + JSON.stringify(tablesfirst.tables[0]).length);
                 if (JSON.stringify(tablesfirst.tables[0]).length < 350) {
-                    db.tables.update(
+                    db.hubertusTables.update(
                         {
                             department: departmentValueDB,
                             "tables.number": tableValue[0]
@@ -5223,7 +5223,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                             console.log("addInformationToTable updated successfully");
                         });
                 } else if (JSON.stringify(tablesfirst.tables[0]).length > 350 && JSON.stringify(tablesfirst.tables[0]).length < 600) {
-                    db.tables.update(
+                    db.hubertusTables.update(
                         {
                             department: departmentValueDB,
                             "tables.number": tableValue[0]
@@ -5248,7 +5248,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                             console.log("addInformationToTable updated successfully");
                         });
                 } else if (JSON.stringify(tablesfirst.tables[0]).length > 600) {
-                    db.tables.update(
+                    db.hubertusTables.update(
                         {
                             department: departmentValueDB,
                             "tables.number": tableValue[0]
@@ -5277,7 +5277,7 @@ router.post('/addInformationToTable', function(req, res, next) {
     }, 300);
 
     setTimeout(function() {
-        db.tables.findOne(
+        db.hubertusTables.findOne(
             {
                 department: departmentValueDB,
                 "tables.number": tableValue[0]

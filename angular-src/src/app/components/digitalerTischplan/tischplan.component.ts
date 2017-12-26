@@ -167,6 +167,7 @@ export class TischplanComponent implements OnInit {
     }
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
       console.log(o + tracesListeElemente[0].data[o]);
+      console.log('length of : ' + o + tracesListeElemente[0].data[o].length);
     }
 
     let trace = [];
@@ -177,15 +178,16 @@ export class TischplanComponent implements OnInit {
 
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
       if (tracesListeElemente[0].data[o] !== undefined) {
-        if (tracesListeElemente[0].data[o].length === 8) {
+        //if (tracesListeElemente[0].data[o].length === 8) {
           trace[o] = tracesListeElemente[0].data[o].concat(tracesListeElemente[0].data[o+1]);
-        }
+          console.log('Trace before ->>' + trace[o]);
+        //}
       }
     }
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
-      if (trace[o].length === 9) {
-        this.tracesListeElemente.push(trace[o])
-      }
+    //if (trace[o].length === 9) {
+        this.tracesListeElemente.push(trace[o]);
+      //}
     }
     console.log('263' + tracesListeElemente[0].data);
     console.log('264 ' + this.tracesListeElemente);
