@@ -51,7 +51,7 @@ export class TischplanComponent implements OnInit {
     this.tischplanService.getImHausListe()
       .subscribe(imHausListeElemente => {
         this.imHausListeElemente = imHausListeElemente[0].data;
-        console.log(this.imHausListeElemente);
+        console.log('IM-HAUS-LISTE: ' + this.imHausListeElemente);
       });
 
     this.tischplanService.getAnreiseListe()
@@ -126,7 +126,7 @@ export class TischplanComponent implements OnInit {
   public formatTracesListeElements(tracesListeElemente) {
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
       if (tracesListeElemente[0].data[o].length === 7) {
-        tracesListeElemente[0].data[o].splice(0, 5);
+        tracesListeElemente[0].data[o].splice(0, 4);
         tracesListeElemente[0].data[o].splice(6, 7);
       }
     }
@@ -135,36 +135,36 @@ export class TischplanComponent implements OnInit {
         tracesListeElemente[0].data.splice(o, 1);
       }
     }
+    /*
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
       if (tracesListeElemente[0].data[o].length === 24) {
         tracesListeElemente[0].data[o].splice(0, 12);
       }
     }
-    for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
-      if (tracesListeElemente[0].data[o].length === 13) {
-        tracesListeElemente[0].data.splice(o, 1);
-      }
-    }
+
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
       if (tracesListeElemente[0].data[o].length === 19) {
         tracesListeElemente[0].data[o].splice(0, 17);
       }
     }
+     */
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
       if (tracesListeElemente[0].data[o].length === 1) {
         tracesListeElemente[0].data.splice(o, 1);
       }
     }
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
-      if (tracesListeElemente[0].data[o].length === 12) {
+      if (tracesListeElemente[0].data[o].length === 13) {
         tracesListeElemente[0].data[o].splice(8, 12);
       }
     }
+/*
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
       if (tracesListeElemente[0].data[o].length === 2) {
         tracesListeElemente[0].data[o].splice(1, 2);
       }
     }
+ */
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
       console.log(o + tracesListeElemente[0].data[o]);
       console.log('length of : ' + o + tracesListeElemente[0].data[o].length);
@@ -176,22 +176,42 @@ export class TischplanComponent implements OnInit {
       trace[o] = [];
     }
 
-    for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
+    for (let o = 1; o < tracesListeElemente[0].data.length; o++) {
       if (tracesListeElemente[0].data[o] !== undefined) {
-        //if (tracesListeElemente[0].data[o].length === 8) {
-          trace[o] = tracesListeElemente[0].data[o].concat(tracesListeElemente[0].data[o+1]);
+       // if (tracesListeElemente[0].data[o].length === 13 || tracesListeElemente[0].data[o].length === 24) {
+          trace[o] = tracesListeElemente[0].data[o].concat(tracesListeElemente[0].data[o + 1]);
           console.log('Trace before ->>' + trace[o]);
         //}
       }
     }
-    for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
-    //if (trace[o].length === 9) {
+    trace[0] = tracesListeElemente[0].data[0].concat(tracesListeElemente[0].data[1]).concat(tracesListeElemente[0].data[2]);
+    trace[0].unshift("","","","");
+    trace[0].splice(20, 0, "");
+    trace[0].splice(20, 0, "");
+    trace[0].splice(20, 0, "");
+    trace[0].splice(20, 0, "");
+    trace[0].splice(20, 0, "");
+
+    this.tracesListeElemente.push(trace[0]);
+
+    for (let o = 1; o < tracesListeElemente[0].data.length; o+=2) {
+      if (trace[o].length > 20) {
         this.tracesListeElemente.push(trace[o]);
-      //}
+      }
     }
     console.log('263' + tracesListeElemente[0].data);
     console.log('264 ' + this.tracesListeElemente);
+    console.log(this.tracesListeElemente);
+    for (let o = 0; o < this.tracesListeElemente.length; o++) {
+      //if (trace[o].length === 25 || trace[o].length === 14) {
+
+      //}
+    }
   }
+
+
+
+
 
   private onDrag(args) {
     let [e, el] = args;

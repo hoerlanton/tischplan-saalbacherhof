@@ -288,14 +288,15 @@
             <div class='container' id='container1' [dragula]='"evented-bag"'>
               <div class="card" id="card1">
                 <p> <b>Name:</b> {{imHausListeElement[23]}}<br>
-                  <b>Sprache:</b> {{imHausListeElement[25]}}<br>
-                  <b>Zimmernummer:</b> {{imHausListeElement[26]}}<br>
-                  <b>PreisTyp:</b> {{imHausListeElement[28]}}<br>
-                  <b>Anreise:</b> {{imHausListeElement[29]}}<br>
-                  <b>Abreise:</b> {{imHausListeElement[30]}}<br>
-                  <b>Personen Anzahl:</b> {{imHausListeElement[31]}}<br>
-                  <b>RB/SOU:</b> {{imHausListeElement[32]}}<br>
-                  <b>Notiz2:</b> {{imHausListeElement[33]}}<br>
+                  <b>Zimmernummer:</b> {{imHausListeElement[24]}}<br>
+                  <b>PreisTyp:</b> {{imHausListeElement[29]}}<br>
+                  <b>Anreise:</b> {{imHausListeElement[26]}}<br>
+                  <b>Abreise:</b> {{imHausListeElement[27]}}<br>
+                  <b>Personen Anzahl:</b> {{imHausListeElement[28]}}<br>
+                  <b>KAT:</b> {{imHausListeElement[25]}}<br>
+                  <b>Notiz1:</b> {{imHausListeElement[37]}}<br>
+                  <b>Notiz2:</b> {{imHausListeElement[39]}}<br>
+                  <b>Bemerkung:</b> {{imHausListeElement[54]}}<br>
                 </p>
               </div>
             </div>
@@ -308,14 +309,15 @@
           <div *ngFor="let anreiseListeElement of anreiseListeElemente">
             <div class='container' id='container2' [dragula]='"evented-bag"'>
               <div class="card" id="card2">
-                <p> <b>Name:</b> {{anreiseListeElement[20]}}<br>
-                  <b>Zimmernummer:</b> {{anreiseListeElement[22]}}<br>
-                  <b>PreisTyp:</b> {{anreiseListeElement[26]}}<br>
-                  <b>Anreise:</b> {{anreiseListeElement[11]}}<br>
-                  <b>Abreise:</b> {{anreiseListeElement[24]}}<br>
-                  <b>Personen Anzahl:</b> {{anreiseListeElement[25]}}<br>
-                  <b>RB/SOU:</b> {{anreiseListeElement[26]}}<br>
-                  <b>Notiz2:</b> {{anreiseListeElement[27]}}<br>
+                <p> <b>Name:</b> {{anreiseListeElement[22]}}<br>
+                  <b>Zimmernummer:</b> {{anreiseListeElement[23]}}<br>
+                  <b>PreisTyp:</b> {{anreiseListeElement[27]}}<br>
+                  <b>Abreise:</b> {{anreiseListeElement[25]}}<br>
+                  <b>Personen Anzahl:</b> {{anreiseListeElement[26]}}<br>
+                  <b>KAT:</b> {{anreiseListeElement[24]}}<br>
+                  <b>Notiz1:</b> {{anreiseListeElement[36]}}<br>
+                  <b>Notiz2:</b> {{anreiseListeElement[39]}}<br>
+                  <b>Bemerkung:</b> {{anreiseListeElement[52]}}<br>
                 </p>
               </div>
             </div>
@@ -328,12 +330,12 @@
           <div *ngFor="let tracesListeElement of tracesListeElemente; let t = index;">
             <div class='container' id='container3' [dragula]='"evented-bag"' >
               <div class="card" id="card3">
-                <b>Zimmernummer:</b> {{tracesListeElement[0]}}<br>
-                <b>Name:</b> {{tracesListeElement[1]}}<br>
-                <b>Gäste Kategorie:</b> {{tracesListeElement[2]}}<br>
-                <b>Anreise:</b> {{tracesListeElement[3]}}<br>
-                <b>Abreise:</b> {{tracesListeElement[5]}}<br>
-                <b>Trace:</b> {{tracesListeElement[8]}}<br>
+                <b>Zimmernummer:</b> {{tracesListeElement[12]}}<br>
+                <b>Name:</b> {{tracesListeElement[13]}}<br>
+                <b>Personen:</b> {{tracesListeElement[14]}}<br>
+                <b>Anreise:</b> {{tracesListeElement[16]}}<br>
+                <b>Abreise:</b> {{tracesListeElement[18]}}<br>
+                <b>Trace:</b> {{tracesListeElement[26]}}<br>
               </div>
             </div>
           </div>
