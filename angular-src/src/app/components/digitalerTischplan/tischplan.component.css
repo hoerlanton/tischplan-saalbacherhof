@@ -11,6 +11,7 @@ html, body {
 
 .row .container-fluid {
   height: 100%;
+  display: flex;
 }
 
 .line{
@@ -22,14 +23,43 @@ html, body {
   top: 150px;
 }
 
-.row .container-fluid .col-md-4 {
+.row .print-col, .row .upload-col, .row .table-col {
   background-color: #f3efe4;
   padding: 20px 10px 20px 10px;
   border-left: 5px solid #0a7a74;
   border-right: 5px solid #0a7a74;
-  height: 100%;
+  min-height: 100vh;
   border-bottom: 20px solid #0a7a74;
-  max-width: 20%;
+  box-sizing: border-box;
+}
+
+.row .upload-col {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .row .upload-col {
+    display: block;
+  }
+}
+
+.row1 {
+  height: calc((100vh - 244px) / 3);
+  overflow: auto;
+}
+
+.inner-table {
+  height: calc(100vh - 44px);
+  overflow: auto;
+}
+
+.cards-container {
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+}
+
+.cards-container .card {
+  padding: 10px;
 }
 
 .row .container-fluid .col-md-4 .row1 {
@@ -56,14 +86,6 @@ html, body {
   border-radius: 3px;
 }
 
-.row .container-fluid .col-md-4 .row3 {
-  margin: 0 auto;
-  display: inline-block;
-  width: 100%;
-  height: 800px;
-  padding-top: 20px;
-}
-
 .row .container-fluid .col-md-4 .col-xs-12 .row1 {
   overflow: auto;
   margin: 0 auto;
@@ -74,13 +96,13 @@ html, body {
 }
 
 
-.row .container-fluid .col-md-6 h3 {
+.row .container-fluid h3 {
   align-content: center;
   margin: 0 auto;
   display: inline-block;
   color: #0a7a74;
   position: relative;
-  text-align:center;
+  text-align: center;
 }
 
 .row .container-fluid .col-md-4 h3 {
@@ -159,15 +181,6 @@ html, body {
   max-width: 100%;
 }
 
-.row .container-fluid .col-md-6 {
-  height: 620px;
-  width: 58%;
-  background-color: #eaf3f3;
-  padding: 20px 10px 20px 10px;
-  border-left: 5px solid #0a7a74;
-  border-right: 5px solid #0a7a74;
-  border-bottom: 20px solid #0a7a74;
-}
 
 .row .container-fluid .col-md-6 .row {
   background-color: #eaf3f3;
@@ -188,392 +201,7 @@ html, body {
   position: absolute;
 }
 
-.row .container-fluid .col-md-6 .row .t3 {
+.row .container-fluid .row .table-item {
   position: absolute;
 }
 
-.row .container-fluid .col-md-6 .row .t4 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t5 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t6 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t7 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t8 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t9 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t10 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t11 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t12 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t13 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t14 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t15 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t16 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t17 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t18 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t19 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t20 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t21 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t22 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t23 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t24 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t40 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t41 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t42 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t43 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t44 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t45 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t46 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t47 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t48 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t49 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t50 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t51 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t52 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t53 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t54 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t55 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t56 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t57 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t58 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t59 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t60 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t61 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t62 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t63 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t64 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t65 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t66 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t67 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t68 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t69 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t70 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t71 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t72 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t73 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t74 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t75 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t76 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t77 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t78 {
-  position: absolute;
-}
-
-
-.row .container-fluid .col-md-6 .row .t79 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t80 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t81 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t82 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t83 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t84 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t85 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row  .t86 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t87 {
-  position: absolute;
-}
-
-
-.row .container-fluid .col-md-6 .row .t88 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t89 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t501 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t502 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t503 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t504 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t505 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t506 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t507 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t508 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t509 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t510 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t511 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t512 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t513 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t514 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t515 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t516 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t517 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t518 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t519 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t520 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t521 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t522 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t523 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t524 {
-  position: absolute;
-}
-
-.row .container-fluid .col-md-6 .row .t525 {
-  position: absolute;
-}

@@ -4,6 +4,8 @@ export class Table {
   leftValue: string;
   bgColor: string;
   isBesetzt: boolean;
+  department: string;
+  arrayIndex: string;
   placeholder: boolean;
   border: string;
   width: string;
@@ -11,15 +13,18 @@ export class Table {
   borderRadius: string;
   transformValue: string;
   nameValue: string;
-  spracheValue: string;
+  katValue: string;
   zimmernummerValue: string;
   preistypValue: string;
   anreiseValue: string;
   abreiseValue: string;
   personenAnzahlValue: string;
-  rbsouValue: string;
+  notiz1Value: string;
   notiz2Value: string;
   trace: string;
+  bemerkungValue: string;
+  bemerkungValue1: string;
+  bemerkungValue2: string;
   nameValue2: string;
   spracheValue2: string;
   zimmernummerValue2: string;
@@ -27,9 +32,12 @@ export class Table {
   anreiseValue2: string;
   abreiseValue2: string;
   personenAnzahlValue2: string;
-  rbsouValue2: string;
-  notiz2Value2: string;
+  notiz3Value2: string;
+  notiz4Value2: string;
   trace2: string;
+  bemerkungValue3: string;
+  bemerkungValue4: string;
+  bemerkungValue5: string;
   nameValue3: string;
   spracheValue3: string;
   zimmernummerValue3: string;
@@ -38,6 +46,10 @@ export class Table {
   abreiseValue3: string;
   personenAnzahlValue3: string;
   rbsouValue3: string;
-  notiz2Value3: string;
+  notiz4Value: string;
+  notiz5Value: string;
   trace3: string;
+  bemerkungValue6: string;
+  bemerkungValue7: string;
+  bemerkungValue8: string;
 }

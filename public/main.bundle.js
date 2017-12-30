@@ -140,7 +140,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "html, body {\n  padding: 0;\n  margin: 0;\n  height: 100%;\n  background-color: #0a7a74;\n}\n\n.row {\n  height: 100%;\n}\n\n.row .container-fluid {\n  height: 100%;\n}\n\n.line{\n  width: 100%;\n  height: 20px;\n  border-bottom: solid 10px #0a7a74;\n  position: absolute;\n  right: 0px;\n  top: 150px;\n}\n\n.row .container-fluid .col-md-4 {\n  background-color: #f3efe4;\n  padding: 20px 10px 20px 10px;\n  border-left: 5px solid #0a7a74;\n  border-right: 5px solid #0a7a74;\n  height: 100%;\n  border-bottom: 20px solid #0a7a74;\n  max-width: 20%;\n}\n\n.row .container-fluid .col-md-4 .row1 {\n  overflow: auto;\n  margin: 0 0 0 0;\n  display: inline-block;\n  width: 105%;\n  height: 232.5px;\n  padding-top: 20px;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper {\n  overflow: auto;\n  margin: 0 0 0 0;\n  display: inline-block;\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper .container {\n  overflow: auto;\n  margin: 20px 40px 20px 0;\n  display: inline-block;\n  max-width: 100%;\n  border-radius: 3px;\n}\n\n.row .container-fluid .col-md-4 .row3 {\n  margin: 0 auto;\n  display: inline-block;\n  width: 100%;\n  height: 800px;\n  padding-top: 20px;\n}\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 {\n  overflow: auto;\n  margin: 0 auto;\n  display: inline-block;\n  width: 100%;\n  height: 800px;\n  padding-top: 20px;\n}\n\n\n.row .container-fluid .col-md-6 h3 {\n  -ms-flex-line-pack: center;\n      align-content: center;\n  margin: 0 auto;\n  display: inline-block;\n  color: #0a7a74;\n  position: relative;\n  text-align:center;\n}\n\n.row .container-fluid .col-md-4 h3 {\n  margin: 0 auto;\n  color: #0a7a74;\n  position: relative;\n}\n\n.row .container-fluid .col-md-4 .row3 .col-xs-12 .form-group {\n  border-top:3px solid #0a7a74;\n  width: 105%;\n  padding: 10px 10px 10px 30px;\n}\n\n.row .container-fluid .col-md-4 .row3 .col-xs-12  .group {\n  border-top:3px solid #0a7a74;\n  width: 105%;\n  padding: 10px 10px 10px 30px;\n}\n\n.row .container-fluid .col-md-4 .row3 .col-xs-12 .form-group1 {\n  margin-top: 20px;\n  overflow: auto;\n  max-height: 300px;\n  display: inline-block;\n  border-top:3px solid #0a7a74;\n  width: 102%;\n  padding: 10px 10px 10px 25px;\n}\n\n.row1 .col {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n\n.row1 .col:nth-child(1) {\n  -webkit-box-ordinal-group: 2;\n      -ms-flex-order: 1;\n          order: 1;\n}\n.row1 .col:nth-child(2) {\n  -webkit-box-ordinal-group: 1;\n      -ms-flex-order: 0;\n          order: 0;\n}\n.row1 .col:nth-child(3) {\n  -webkit-box-ordinal-group: 3;\n      -ms-flex-order: 2;\n          order: 2;\n}\n\n.row .col-md-4 .row2 {\n  padding-bottom: 10px;\n  position: relative;\n  min-height: 100%;\n  border-bottom: 1px solid red;\n}\n\n.card {\n  background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n  background: rgba(255,255,255, 1);\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper .container .card p {\n  /*padding:10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .wrapper .container .card p {\n  /*padding:10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .row3 .row1 p {\n  /*padding: 10px 10px 10px 10px;*/\n  background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n  background: rgba(255,255,255, 1);\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 .wrapper .container .card p {\n  /*padding: 10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-6 {\n  height: 620px;\n  width: 58%;\n  background-color: #eaf3f3;\n  padding: 20px 10px 20px 10px;\n  border-left: 5px solid #0a7a74;\n  border-right: 5px solid #0a7a74;\n  border-bottom: 20px solid #0a7a74;\n}\n\n.row .container-fluid .col-md-6 .row {\n  background-color: #eaf3f3;\n  padding: 20px 10px 20px 10px;\n  height: 100%;\n}\n\n.row .container-fluid .col-md-6 .row1 .col-md-3 {\n  margin: 0px 0px 0px 0px;\n  padding: 20px 20px 20px 20px;\n}\n\n.row .container-fluid .col-md-6 #printSectionId2 .row .t1 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 #printSectionId2 .row .t2 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t3 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t4 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t5 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t6 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t7 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t8 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t9 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t10 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t11 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t12 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t13 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t14 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t15 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t16 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t17 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t18 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t19 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t20 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t21 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t22 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t23 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t24 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t40 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t41 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t42 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t43 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t44 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t45 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t46 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t47 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t48 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t49 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t50 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t51 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t52 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t53 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t54 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t55 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t56 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t57 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t58 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t59 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t60 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t61 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t62 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t63 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t64 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t65 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t66 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t67 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t68 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t69 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t70 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t71 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t72 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t73 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t74 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t75 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t76 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t77 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t78 {\n  position: absolute;\n}\n\n\n.row .container-fluid .col-md-6 .row .t79 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t80 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t81 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t82 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t83 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t84 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t85 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row  .t86 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t87 {\n  position: absolute;\n}\n\n\n.row .container-fluid .col-md-6 .row .t88 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t89 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t501 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t502 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t503 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t504 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t505 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t506 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t507 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t508 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t509 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t510 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t511 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t512 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t513 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t514 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t515 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t516 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t517 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t518 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t519 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t520 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t521 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t522 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t523 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t524 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 .row .t525 {\n  position: absolute;\n}\n", ""]);
+exports.push([module.i, "html, body {\n  padding: 0;\n  margin: 0;\n  height: 100%;\n  background-color: #0a7a74;\n}\n\n.row {\n  height: 100%;\n}\n\n.row .container-fluid {\n  height: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.line{\n  width: 100%;\n  height: 20px;\n  border-bottom: solid 10px #0a7a74;\n  position: absolute;\n  right: 0px;\n  top: 150px;\n}\n\n.row .print-col, .row .upload-col, .row .table-col {\n  background-color: #f3efe4;\n  padding: 20px 10px 20px 10px;\n  border-left: 5px solid #0a7a74;\n  border-right: 5px solid #0a7a74;\n  min-height: 100vh;\n  border-bottom: 20px solid #0a7a74;\n  box-sizing: border-box;\n}\n\n.row .upload-col {\n  display: none;\n}\n\n@media (min-width: 1200px) {\n  .row .upload-col {\n    display: block;\n  }\n}\n\n.row1 {\n  height: calc((100vh - 244px) / 3);\n  overflow: auto;\n}\n\n.inner-table {\n  height: calc(100vh - 44px);\n  overflow: auto;\n}\n\n.cards-container {\n  margin: 10px 0px 10px 0px;\n  padding: 10px;\n}\n\n.cards-container .card {\n  padding: 10px;\n}\n\n.row .container-fluid .col-md-4 .row1 {\n  overflow: auto;\n  margin: 0 0 0 0;\n  display: inline-block;\n  width: 105%;\n  height: 232.5px;\n  padding-top: 20px;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper {\n  overflow: auto;\n  margin: 0 0 0 0;\n  display: inline-block;\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper .container {\n  overflow: auto;\n  margin: 20px 40px 20px 0;\n  display: inline-block;\n  max-width: 100%;\n  border-radius: 3px;\n}\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 {\n  overflow: auto;\n  margin: 0 auto;\n  display: inline-block;\n  width: 100%;\n  height: 800px;\n  padding-top: 20px;\n}\n\n\n.row .container-fluid h3 {\n  -ms-flex-line-pack: center;\n      align-content: center;\n  margin: 0 auto;\n  display: inline-block;\n  color: #0a7a74;\n  position: relative;\n  text-align: center;\n}\n\n.row .container-fluid .col-md-4 h3 {\n  margin: 0 auto;\n  color: #0a7a74;\n  position: relative;\n}\n\n.row .container-fluid .col-md-4 .row3 .col-xs-12 .form-group {\n  border-top:3px solid #0a7a74;\n  width: 105%;\n  padding: 10px 10px 10px 30px;\n}\n\n.row .container-fluid .col-md-4 .row3 .col-xs-12  .group {\n  border-top:3px solid #0a7a74;\n  width: 105%;\n  padding: 10px 10px 10px 30px;\n}\n\n.row .container-fluid .col-md-4 .row3 .col-xs-12 .form-group1 {\n  margin-top: 20px;\n  overflow: auto;\n  max-height: 300px;\n  display: inline-block;\n  border-top:3px solid #0a7a74;\n  width: 102%;\n  padding: 10px 10px 10px 25px;\n}\n\n.row1 .col {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n\n.row1 .col:nth-child(1) {\n  -webkit-box-ordinal-group: 2;\n      -ms-flex-order: 1;\n          order: 1;\n}\n.row1 .col:nth-child(2) {\n  -webkit-box-ordinal-group: 1;\n      -ms-flex-order: 0;\n          order: 0;\n}\n.row1 .col:nth-child(3) {\n  -webkit-box-ordinal-group: 3;\n      -ms-flex-order: 2;\n          order: 2;\n}\n\n.row .col-md-4 .row2 {\n  padding-bottom: 10px;\n  position: relative;\n  min-height: 100%;\n  border-bottom: 1px solid red;\n}\n\n.card {\n  background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n  background: rgba(255,255,255, 1);\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper .container .card p {\n  /*padding:10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .wrapper .container .card p {\n  /*padding:10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .row3 .row1 p {\n  /*padding: 10px 10px 10px 10px;*/\n  background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n  background: rgba(255,255,255, 1);\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 .wrapper .container .card p {\n  /*padding: 10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n\n.row .container-fluid .col-md-6 .row {\n  background-color: #eaf3f3;\n  padding: 20px 10px 20px 10px;\n  height: 100%;\n}\n\n.row .container-fluid .col-md-6 .row1 .col-md-3 {\n  margin: 0px 0px 0px 0px;\n  padding: 20px 20px 20px 20px;\n}\n\n.row .container-fluid .col-md-6 #printSectionId2 .row .t1 {\n  position: absolute;\n}\n\n.row .container-fluid .col-md-6 #printSectionId2 .row .t2 {\n  position: absolute;\n}\n\n.row .container-fluid .row .table-item {\n  position: absolute;\n}\n\n", ""]);
 
 // exports
 
@@ -153,7 +153,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/digitalerTischplan/tischplan.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n<head>\n  <title>Dashboard</title>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n  <script src=\"node_modules/core-js/client/shim.min.js\"></script>\n  <script src=\"<your-libs-directory>/object-assign.min.js\"></script>\n</head>\n\n<body>\n<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n      <ul class=\"nav navbar-nav\">\n        <li><img alt=\"Brand\" href=\"http://www.servicio.io\" src=\"http://servicio.io/wp-content/uploads/2016/05/servicio-logo-hellblau-auto-ohne-hintergrund-1.png\" style=\"height: 45px; width: auto; margin-top:15px; margin-right: 50px; text-align: left; display:table-cell; vertical-align:middle;\"></li>\n        <li style=\"text-align: left; display:table-cell; vertical-align:middle; margin-bottom: 5px; margin-right: 20px;\"><a href=\"http://servicio.io/tester-info-3-2\">Anleitung</a></li>\n        <button (click)=\"printToCart1('printSectionId1')\" style=\"text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px\" class=\"button\">Tisch Übersicht Drucken</button>\n        <button (click)=\"printToCart2('printSectionId2')\" style=\"text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px\" class=\"button\">Tisch Plan Drucken</button>\n      </ul>\n    </div>\n    <ul class=\"nav navbar-nav navbar-right\">\n      <li><img alt=\"Partner\" href=\"http://www.salzburgerhof.servicio.io/wlanlandingpage\" src=\"http://servicio.io/wp-content/uploads/2017/12/680001_160527_7E4EAE33_logo_779px.jpg\" style=\"height: 45px; width: auto; margin-top: 10px; margin-bottom: 5px; margin-right: 5px;float: right; text-align: right; display:table-cell; vertical-align:middle;\"></li>\n    </ul>\n  </div>\n</nav>\n\n<div id=\"charge-error\" class=\"alert alert-danger <% if ( !errMsg ) { %> hidden <% } %>\">\n  <%= errMsg  %>\n</div>\n\n<div class=\"row\">\n  <div class=\"container-fluid\">\n    <div id=\"printSectionId1\">\n      <div class=\"col-md-4\"><h3>Tisch Übersicht</h3>\n        <div class=\"col-xs-12\" style=\"padding: 0px 0px 0px 0px;\">\n          <div class=\"row1\">\n            <div class='wrapper' id=\"wrapper\">\n              <div *ngIf=\"showSonnbergZirbnBool\">\n                <div *ngFor=\"let tableSonnbergZirbn of tablesSonnbergZirbn; let j = index;\">\n                  <div *ngIf=\"tablesSonnbergZirbn[j] !== tablesSonnbergZirbn[j+1]\">\n                    <button style=\"float: right; margin: 20px 0px 20px 0px\" type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableSonnbergZirbn, j)\">{{tableSonnbergZirbn.isBesetzt === 'true' ? 'FREI MACHEN' : '' }}</button>\n                    <div class='container' id='containerSonnbergZirbn' [dragula]='\"evented-bag\"' [ngStyle]=\"{'background-color': + tableSonnbergZirbn.bgColor}\">\n                      <p><b> Tisch:</b>{{tableSonnbergZirbn.number}} </p><br>\n                      <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableSonnbergZirbn.bgColor}\">\n                        <div *ngIf=\"tableSonnbergZirbn.isBesetzt === 'true'\">\n                          <p style=\"background-color: #FFFFFF\">\n                            <b> Name:</b>{{tableSonnbergZirbn.nameValue}}<br>\n                            <b> Sprache:</b>{{tableSonnbergZirbn.spracheValue}}<br>\n                            <b> Zimmernummer:</b>{{tableSonnbergZirbn.zimmernummerValue}}<br>\n                            <b> Preis Typ:</b>{{tableSonnbergZirbn.preistypValue}}<br>\n                            <b> Anreise Datum:</b>{{tableSonnbergZirbn.anreiseValue}}<br>\n                            <b> Abreise Datum:</b>{{tableSonnbergZirbn.abreiseValue}}<br>\n                            <b> Personenanzahl:</b>{{tableSonnbergZirbn.personenAnzahlValue}}<br>\n                            <b> RB/SOU:</b>{{tableSonnbergZirbn.rbsouValue}}<br>\n                            <b> Notiz2:</b>{{tableSonnbergZirbn.notiz2Value}}<br>\n                            <b> Trace:</b>{{tableSonnbergZirbn.trace}}\n                          </p>\n                          <div *ngIf=\"tableSonnbergZirbn.nameValue2\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tableSonnbergZirbn.nameValue2}}<br>\n                              <b> Sprache:</b>{{tableSonnbergZirbn.spracheValue2}}<br>\n                              <b> Zimmernummer:</b>{{tableSonnbergZirbn.zimmernummerValue2}}<br>\n                              <b> Preis Typ:</b>{{tableSonnbergZirbn.preistypValue2}}<br>\n                              <b> Anreise Datum:</b>{{tableSonnbergZirbn.anreiseValue2}}<br>\n                              <b> Abreise Datum:</b>{{tableSonnbergZirbn.abreiseValue2}}<br>\n                              <b> Personenanzahl:</b>{{tableSonnbergZirbn.personenAnzahlValue2}}<br>\n                              <b> RB/SOU:</b>{{tableSonnbergZirbn.rbsouValue2}}<br>\n                              <b> Notiz2:</b>{{tableSonnbergZirbn.notiz2Value2}}<br>\n                              <b> Trace:</b>{{tableSonnbergZirbn.trace2}}\n                            </p>\n                          </div>\n                          <div *ngIf=\"tableSonnbergZirbn.nameValue3\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tableSonnbergZirbn.nameValue3}}<br>\n                              <b> Sprache:</b>{{tableSonnbergZirbn.spracheValue3}}<br>\n                              <b> Zimmernummer:</b>{{tableSonnbergZirbn.zimmernummerValue3}}<br>\n                              <b> Preis Typ:</b>{{tableSonnbergZirbn.preistypValue3}}<br>\n                              <b> Anreise Datum:</b>{{tableSonnbergZirbn.anreiseValue3}}<br>\n                              <b> Abreise Datum:</b>{{tableSonnbergZirbn.abreiseValue3}}<br>\n                              <b> Personenanzahl:</b>{{tableSonnbergZirbn.personenAnzahlValue3}}<br>\n                              <b> RB/SOU:</b>{{tableSonnbergZirbn.rbsouValue3}}<br>\n                              <b> Notiz2:</b>{{tableSonnbergZirbn.notiz2Value3}}<br>\n                              <b> Trace:</b>{{tableSonnbergZirbn.trace3}}\n                            </p>\n                          </div>\n                        </div>\n                        <div *ngIf=\"tableSonnbergZirbn.placeholder === 'true'\">\n                          <p style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px\">Listen-Element hier hin ziehen!</p>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n              <div *ngIf=\"showPanoramaBool\">\n                <div *ngFor=\"let tablePanorama of tablesPanorama; let j = index;\">\n                  <div *ngIf=\"tablesPanorama[j] !== tablesPanorama[j+1]\">\n                    <button style=\"float: right; margin: 20px 0px 20px 0px\" type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tablePanorama, j)\">{{tablePanorama.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>\n                    <div class='container' id='containerPanorama' [dragula]='\"evented-bag\"' [ngStyle]=\"{'background-color': + tablePanorama.bgColor}\">\n                      <p><b> Tisch:</b>{{tablePanorama.number}} </p><br>\n                      <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tablePanorama.bgColor}\">\n                        <div *ngIf=\"tablePanorama.isBesetzt === 'true'\">\n                          <p style=\"background-color: #FFFFFF\">\n                            <b> Name:</b>{{tablePanorama.nameValue}}<br>\n                            <b> Sprache:</b>{{tablePanorama.spracheValue}}<br>\n                            <b> Zimmernummer:</b>{{tablePanorama.zimmernummerValue}}<br>\n                            <b> Preis Typ:</b>{{tablePanorama.preistypValue}}<br>\n                            <b> Anreise Datum:</b>{{tablePanorama.anreiseValue}}<br>\n                            <b> Abreise Datum:</b>{{tablePanorama.abreiseValue}}<br>\n                            <b> Personenanzahl:</b>{{tablePanorama.personenAnzahlValue}}<br>\n                            <b> RB/SOU:</b>{{tablePanorama.rbsouValue}}<br>\n                            <b> Notiz2:</b>{{tablePanorama.notiz2Value}}<br>\n                            <b> Trace:</b>{{tablePanorama.trace}}\n                          </p>\n                          <div *ngIf=\"tablePanorama.nameValue2\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tablePanorama.nameValue2}}<br>\n                              <b> Sprache:</b>{{tablePanorama.spracheValue2}}<br>\n                              <b> Zimmernummer:</b>{{tablePanorama.zimmernummerValue2}}<br>\n                              <b> Preis Typ:</b>{{tablePanorama.preistypValue2}}<br>\n                              <b> Anreise Datum:</b>{{tablePanorama.anreiseValue2}}<br>\n                              <b> Abreise Datum:</b>{{tablePanorama.abreiseValue2}}<br>\n                              <b> Personenanzahl:</b>{{tablePanorama.personenAnzahlValue2}}<br>\n                              <b> RB/SOU:</b>{{tablePanorama.rbsouValue2}}<br>\n                              <b> Notiz2:</b>{{tablePanorama.notiz2Value2}}<br>\n                              <b> Trace:</b>{{tablePanorama.trace2}}\n                            </p>\n                          </div>\n                          <div *ngIf=\"tablePanorama.nameValue3\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tablePanorama.nameValue3}}<br>\n                              <b> Sprache:</b>{{tablePanorama.spracheValue3}}<br>\n                              <b> Zimmernummer:</b>{{tablePanorama.zimmernummerValue3}}<br>\n                              <b> Preis Typ:</b>{{tablePanorama.preistypValue3}}<br>\n                              <b> Anreise Datum:</b>{{tablePanorama.anreiseValue3}}<br>\n                              <b> Abreise Datum:</b>{{tablePanorama.abreiseValue3}}<br>\n                              <b> Personenanzahl:</b>{{tablePanorama.personenAnzahlValue3}}<br>\n                              <b> RB/SOU:</b>{{tablePanorama.rbsouValue3}}<br>\n                              <b> Notiz2:</b>{{tablePanorama.notiz2Value3}}<br>\n                              <b> Trace:</b>{{tablePanorama.trace3}}\n                            </p>\n                          </div>\n                        </div>\n                        <div *ngIf=\"tablePanorama.placeholder === 'true'\">\n                          <p style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px\">Listen-Element hier hin ziehen!</p>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n              <div *ngIf=\"showRestaurantBool\">\n                <div *ngFor=\"let tableRestaurant of tablesRestaurant; let j = index;\">\n                  <div *ngIf=\"tablesRestaurant[j] !== tablesRestaurant[j+1]\">\n                    <button style=\"float: right; margin: 20px 0px 20px 0px\" type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableRestaurant, j)\">{{tableRestaurant.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>\n                    <div class='container' id='containerRestaurant' [dragula]='\"evented-bag\"' [ngStyle]=\"{'background-color': + tableRestaurant.bgColor}\">\n                      <p><b> Tisch:</b>{{tableRestaurant.number}} </p><br>\n                      <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableRestaurant.bgColor}\">\n                        <div *ngIf=\"tableRestaurant.isBesetzt === 'true'\">\n                          <p style=\"background-color: #FFFFFF\">\n                            <b> Name:</b>{{tableRestaurant.nameValue}}<br>\n                            <b> Sprache:</b>{{tableRestaurant.spracheValue}}<br>\n                            <b> Zimmernummer:</b>{{tableRestaurant.zimmernummerValue}}<br>\n                            <b> Preis Typ:</b>{{tableRestaurant.preistypValue}}<br>\n                            <b> Anreise Datum:</b>{{tableRestaurant.anreiseValue}}<br>\n                            <b> Abreise Datum:</b>{{tableRestaurant.abreiseValue}}<br>\n                            <b> Personenanzahl:</b>{{tableRestaurant.personenAnzahlValue}}<br>\n                            <b> RB/SOU:</b>{{tableRestaurant.rbsouValue}}<br>\n                            <b> Notiz2:</b>{{tableRestaurant.notiz2Value}}<br>\n                            <b> Trace:</b>{{tableRestaurant.trace}}\n                          </p>\n                          <div *ngIf=\"tableRestaurant.nameValue2\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tableRestaurant.nameValue2}}<br>\n                              <b> Sprache:</b>{{tableRestaurant.spracheValue2}}<br>\n                              <b> Zimmernummer:</b>{{tableRestaurant.zimmernummerValue2}}<br>\n                              <b> Preis Typ:</b>{{tableRestaurant.preistypValue2}}<br>\n                              <b> Anreise Datum:</b>{{tableRestaurant.anreiseValue2}}<br>\n                              <b> Abreise Datum:</b>{{tableRestaurant.abreiseValue2}}<br>\n                              <b> Personenanzahl:</b>{{tableRestaurant.personenAnzahlValue2}}<br>\n                              <b> RB/SOU:</b>{{tableRestaurant.rbsouValue2}}<br>\n                              <b> Notiz2:</b>{{tableRestaurant.notiz2Value2}}<br>\n                              <b> Trace:</b>{{tableRestaurant.trace2}}\n                            </p>\n                          </div>\n                          <div *ngIf=\"tableRestaurant.nameValue3\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tableRestaurant.nameValue3}}<br>\n                              <b> Sprache:</b>{{tableRestaurant.spracheValue3}}<br>\n                              <b> Zimmernummer:</b>{{tableRestaurant.zimmernummerValue3}}<br>\n                              <b> Preis Typ:</b>{{tableRestaurant.preistypValue3}}<br>\n                              <b> Anreise Datum:</b>{{tableRestaurant.anreiseValue3}}<br>\n                              <b> Abreise Datum:</b>{{tableRestaurant.abreiseValue3}}<br>\n                              <b> Personenanzahl:</b>{{tableRestaurant.personenAnzahlValue3}}<br>\n                              <b> RB/SOU:</b>{{tableRestaurant.rbsouValue3}}<br>\n                              <b> Notiz2:</b>{{tableRestaurant.notiz2Value3}}<br>\n                              <b> Trace:</b>{{tableRestaurant.trace3}}\n                            </p>\n                          </div>\n                        </div>\n                        <div *ngIf=\"tableRestaurant.placeholder === 'true'\">\n                          <p style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px\">Listen-Element hier hin ziehen!</p>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n\n              <div *ngIf=\"showWintergartenBool\">\n                <div *ngFor=\"let tableWintergarten of tablesWintergarten; let j = index;\">\n                  <div *ngIf=\"tablesWintergarten[j] !== tablesWintergarten[j+1]\">\n                    <button style=\"float: right; margin: 20px 0px 20px 0px\" type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableWintergarten, j)\">{{tableWintergarten.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>\n                    <div class='container' id='containerWintergarten' [dragula]='\"evented-bag\"' [ngStyle]=\"{'background-color': + tableWintergarten.bgColor}\">\n                      <p><b> Tisch:</b>{{tableWintergarten.number}} </p><br>\n                      <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableWintergarten.bgColor}\">\n                        <div *ngIf=\"tableWintergarten.isBesetzt === 'true'\">\n                          <p style=\"background-color: #FFFFFF\">\n                            <b> Name:</b>{{tableWintergarten.nameValue}}<br>\n                            <b> Sprache:</b>{{tableWintergarten.spracheValue}}<br>\n                            <b> Zimmernummer:</b>{{tableWintergarten.zimmernummerValue}}<br>\n                            <b> Preis Typ:</b>{{tableWintergarten.preistypValue}}<br>\n                            <b> Anreise Datum:</b>{{tableWintergarten.anreiseValue}}<br>\n                            <b> Abreise Datum:</b>{{tableWintergarten.abreiseValue}}<br>\n                            <b> Personenanzahl:</b>{{tableWintergarten.personenAnzahlValue}}<br>\n                            <b> RB/SOU:</b>{{tableWintergarten.rbsouValue}}<br>\n                            <b> Notiz2:</b>{{tableWintergarten.notiz2Value}}<br>\n                            <b> Trace:</b>{{tableWintergarten.trace}}\n                          </p>\n                          <div *ngIf=\"tableWintergarten.nameValue2\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tableWintergarten.nameValue2}}<br>\n                              <b> Sprache:</b>{{tableWintergarten.spracheValue2}}<br>\n                              <b> Zimmernummer:</b>{{tableWintergarten.zimmernummerValue2}}<br>\n                              <b> Preis Typ:</b>{{tableWintergarten.preistypValue2}}<br>\n                              <b> Anreise Datum:</b>{{tableWintergarten.anreiseValue2}}<br>\n                              <b> Abreise Datum:</b>{{tableWintergarten.abreiseValue2}}<br>\n                              <b> Personenanzahl:</b>{{tableWintergarten.personenAnzahlValue2}}<br>\n                              <b> RB/SOU:</b>{{tableWintergarten.rbsouValue2}}<br>\n                              <b> Notiz2:</b>{{tableWintergarten.notiz2Value2}}<br>\n                              <b> Trace:</b>{{tableWintergarten.trace2}}\n                            </p>\n                          </div>\n                          <div *ngIf=\"tableWintergarten.nameValue3\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tableWintergarten.nameValue3}}<br>\n                              <b> Sprache:</b>{{tableWintergarten.spracheValue3}}<br>\n                              <b> Zimmernummer:</b>{{tableWintergarten.zimmernummerValue3}}<br>\n                              <b> Preis Typ:</b>{{tableWintergarten.preistypValue3}}<br>\n                              <b> Anreise Datum:</b>{{tableWintergarten.anreiseValue3}}<br>\n                              <b> Abreise Datum:</b>{{tableWintergarten.abreiseValue3}}<br>\n                              <b> Personenanzahl:</b>{{tableWintergarten.personenAnzahlValue3}}<br>\n                              <b> RB/SOU:</b>{{tableWintergarten.rbsouValue3}}<br>\n                              <b> Notiz2:</b>{{tableWintergarten.notiz2Value3}}<br>\n                              <b> Trace:</b>{{tableWintergarten.trace3}}\n                            </p>\n                          </div>\n                        </div>\n                        <div *ngIf=\"tableWintergarten.placeholder === 'true'\">\n                          <p style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px\">Listen-Element hier hin ziehen!</p>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"col-md-4\">\n      <div class=\"csv\"  style=\" width: 100%; height: 150px; padding: 10px 20px 50px 20px\"><h3>CSV-Datei hochladen</h3>\n        <div class=\"line\"></div>\n        <form class=\"SendMessage\" (submit)=\"sendMessage($event)\">\n          <input type=\"file\" style=\"float: left; margin-top: 10px; color: #0a7a74\" (change)=\"fileChangeEvent($event)\" placeholder=\"Upload file...\" />\n          <button style=\" background-color: #0a7a74; float: right; color:  white\" type=\"button\" class=\"btn btn-send\" (click)=\"upload()\">CSV HOCHLADEN</button>\n        </form>\n      </div>\n      <h3>Im-Haus-Liste</h3>\n      <div class=\"row1\">\n        <div class='wrapper'>\n          <div *ngFor=\"let imHausListeElement of imHausListeElemente\">\n            <div class='container' id='container1' [dragula]='\"evented-bag\"'>\n              <div class=\"card\" id=\"card1\">\n                <p> <b>Name:</b> {{imHausListeElement[23]}}<br>\n                  <b>Zimmernummer:</b> {{imHausListeElement[24]}}<br>\n                  <b>PreisTyp:</b> {{imHausListeElement[29]}}<br>\n                  <b>Anreise:</b> {{imHausListeElement[26]}}<br>\n                  <b>Abreise:</b> {{imHausListeElement[27]}}<br>\n                  <b>Personen Anzahl:</b> {{imHausListeElement[28]}}<br>\n                  <b>KAT:</b> {{imHausListeElement[25]}}<br>\n                  <b>Notiz1:</b> {{imHausListeElement[37]}}<br>\n                  <b>Notiz2:</b> {{imHausListeElement[39]}}<br>\n                  <b>Bemerkung:</b> {{imHausListeElement[54]}}<br>\n                </p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <h3>Anreise-Liste</h3>\n      <div class=\"row1\">\n        <div class='wrapper'>\n          <div *ngFor=\"let anreiseListeElement of anreiseListeElemente\">\n            <div class='container' id='container2' [dragula]='\"evented-bag\"'>\n              <div class=\"card\" id=\"card2\">\n                <p> <b>Name:</b> {{anreiseListeElement[22]}}<br>\n                  <b>Zimmernummer:</b> {{anreiseListeElement[23]}}<br>\n                  <b>PreisTyp:</b> {{anreiseListeElement[27]}}<br>\n                  <b>Abreise:</b> {{anreiseListeElement[25]}}<br>\n                  <b>Personen Anzahl:</b> {{anreiseListeElement[26]}}<br>\n                  <b>KAT:</b> {{anreiseListeElement[24]}}<br>\n                  <b>Notiz1:</b> {{anreiseListeElement[36]}}<br>\n                  <b>Notiz2:</b> {{anreiseListeElement[39]}}<br>\n                  <b>Bemerkung:</b> {{anreiseListeElement[52]}}<br>\n                </p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <h3>Traces-Liste</h3>\n      <div class=\"row1\">\n        <div class='wrapper'>\n          <div *ngFor=\"let tracesListeElement of tracesListeElemente; let t = index;\">\n            <div class='container' id='container3' [dragula]='\"evented-bag\"' >\n              <div class=\"card\" id=\"card3\">\n                <b>Zimmernummer:</b> {{tracesListeElement[12]}}<br>\n                <b>Name:</b> {{tracesListeElement[13]}}<br>\n                <b>Personen:</b> {{tracesListeElement[14]}}<br>\n                <b>Anreise:</b> {{tracesListeElement[16]}}<br>\n                <b>Abreise:</b> {{tracesListeElement[18]}}<br>\n                <b>Trace:</b> {{tracesListeElement[26]}}<br>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n\n\n    <div class=\"col-md-6\"><h3>Tisch Plan</h3>\n      <div class=\"row1\" style=\"height: auto; max-width: 95%\">\n        <div class=\"col-md-3\"  (click)=\"showSonnbergZirbn()\" [ngStyle]=\"{'background-color': '#' + buttonBgColor1}\">\n          <h3 [ngStyle]=\"{'color': '#' + fontColor1}\">Sonnberg-Zirbn</h3>\n        </div>\n        <div class=\"col-md-3\"  (click)=\"showPanorama()\" [ngStyle]=\"{'background-color': '#' + buttonBgColor2}\">\n          <h3 [ngStyle]=\"{'color': '#' + fontColor2}\">Panorama</h3>\n        </div>\n        <div class=\"col-md-3\"  (click)=\"showRestaurant()\" [ngStyle]=\"{'background-color': '#' + buttonBgColor3}\">\n          <h3 [ngStyle]=\"{'color': '#' + fontColor3}\">Restaurant</h3>\n        </div>\n        <div class=\"col-md-3\"  (click)=\"showWintergarten()\" [ngStyle]=\"{'background-color': '#' + buttonBgColor4}\">\n          <h3 [ngStyle]=\"{'color': '#' + fontColor4}\">Wintergarten</h3>\n        </div>\n      </div>\n      <div id=\"printSectionId2\">\n        <div class=\"row\" style=\"background-color: #eaf3f3; border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;\" >\n          <div *ngIf=\"showSonnbergZirbnBool\">\n            <div *ngFor=\"let tableSonnbergZirbn of tablesSonnbergZirbn; let j = index;\">\n              <div class=\"t{{tableSonnbergZirbn.number}}\" (click)=\"moveTable(tableSonnbergZirbn, j)\" [ngStyle]=\"{'top': tableSonnbergZirbn.topValue + 'px', 'left': tableSonnbergZirbn.leftValue + 'px', 'background-color': + tableSonnbergZirbn.bgColor, 'height': + tableSonnbergZirbn.height + 'px', 'width': + tableSonnbergZirbn.width + 'px', 'border': + tableSonnbergZirbn.border}\">\n                <div *ngIf=\"tablesSonnbergZirbn[j] !== tablesSonnbergZirbn[j+1]\">\n                  <p>{{tableSonnbergZirbn.number}}</p>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div *ngIf=\"showPanoramaBool\">\n            <div *ngFor=\"let tablePanorama of tablesPanorama; let j = index;\">\n              <div class=\"t{{tablePanorama.number}}\" (click)=\"moveTable(tablePanorama, j)\" [ngStyle]=\"{'top': tablePanorama.topValue + 'px', 'left': tablePanorama.leftValue + 'px', 'background-color': + tablePanorama.bgColor,  'height': + tablePanorama.height + 'px', 'width': + tablePanorama.width + 'px', 'border': + tablePanorama.border}\">\n                <div *ngIf=\"tablesPanorama[j] !== tablesPanorama[j+1]\">\n                  <p>{{tablePanorama.number}}</p>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div *ngIf=\"showRestaurantBool\">\n            <div *ngFor=\"let tableRestaurant of tablesRestaurant; let j = index;\">\n              <div class=\"t{{tableRestaurant.number}}\" (click)=\"moveTable(tableRestaurant, j)\" [ngStyle]=\"{'top': tableRestaurant.topValue + 'px', 'left': tableRestaurant.leftValue + 'px', 'background-color': + tableRestaurant.bgColor, 'height': + tableRestaurant.height + 'px', 'width': + tableRestaurant.width + 'px', 'border': + tableRestaurant.border}\">\n                <div *ngIf=\"tablesRestaurant[j] !== tablesRestaurant[j+1]\">\n                  <p>{{tableRestaurant.number}}</p>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div *ngIf=\"showWintergartenBool\">\n            <div *ngFor=\"let tableWintergarten of tablesWintergarten; let j = index;\">\n              <div class=\"t{{tableWintergarten.number}}\" (click)=\"moveTable(tableWintergarten, j)\" [ngStyle]=\"{'top': tableWintergarten.topValue + 'px', 'left': tableWintergarten.leftValue + 'px', 'background-color': + tableWintergarten.bgColor,  'height': + tableWintergarten.height + 'px', 'width': + tableWintergarten.width + 'px', 'border': + tableWintergarten.border, 'border-radius': + tableWintergarten.borderRadius, 'transform':  + tableWintergarten.transformValue}\">\n                <div *ngIf=\"tablesWintergarten[j] !== tablesWintergarten[j+1]\">\n                  <p>{{tableWintergarten.number}}</p>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n</body>\n\n</html>\n\n\n"
+module.exports = "<html>\n<head>\n  <title>Dashboard</title>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n  <script src=\"node_modules/core-js/client/shim.min.js\"></script>\n  <script src=\"<your-libs-directory>/object-assign.min.js\"></script>\n</head>\n\n<body>\n<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n      <ul class=\"nav navbar-nav\">\n        <li><img alt=\"Brand\" href=\"http://www.servicio.io\" src=\"http://servicio.io/wp-content/uploads/2016/05/servicio-logo-hellblau-auto-ohne-hintergrund-1.png\" style=\"height: 45px; width: auto; margin-top:15px; margin-right: 50px; text-align: left; display:table-cell; vertical-align:middle;\"></li>\n        <li style=\"text-align: left; display:table-cell; vertical-align:middle; margin-bottom: 5px; margin-right: 20px;\"><a href=\"http://servicio.io/tester-info-3-2\">Anleitung</a></li>\n        <li><button (click)=\"printToCart1('printSectionId1')\" style=\"text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px\" class=\"button\">Tisch Übersicht Drucken</button></li>\n        <li><button (click)=\"printToCart2('printSectionId2')\" style=\"text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px\" class=\"button\">Tisch Plan Drucken</button></li>\n      </ul>\n    </div>\n    <ul class=\"nav navbar-nav navbar-right\">\n      <li><img alt=\"Partner\" href=\"http://www.salzburgerhof.servicio.io/wlanlandingpage\" src=\"http://servicio.io/wp-content/uploads/2017/12/680001_160527_7E4EAE33_logo_779px.jpg\" style=\"height: 45px; width: auto; margin-top: 10px; margin-bottom: 5px; margin-right: 5px;float: right; text-align: right; display:table-cell; vertical-align:middle;\"></li>\n    </ul>\n  </div>\n</nav>\n\n<div id=\"charge-error\" class=\"alert alert-danger <% if ( !errMsg ) { %> hidden <% } %>\">\n  <%= errMsg  %>\n</div>\n\n<div class=\"row\">\n  <div class=\"container-fluid\">\n    <div id=\"printSectionId1\" class=\"col-md-3 col-lg-2 print-col\">\n      <div>\n        <h3>Tisch Übersicht</h3>\n        <div class=\"inner-table\" style=\"padding: 0px 0px 0px 0px;\">\n          <div class=\"row3\">\n            <div class='wrapper' id=\"wrapper\">\n              <div *ngIf=\"showSonnbergZirbnBool\">\n                <div *ngFor=\"let tableSonnbergZirbn of tablesSonnbergZirbn; let j = index;\">\n                  <div *ngIf=\"tablesSonnbergZirbn[j] !== tablesSonnbergZirbn[j+1]\">\n                    <button style=\"float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF\" type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableSonnbergZirbn, j)\">{{tableSonnbergZirbn.isBesetzt === 'true' ? 'FREI MACHEN' : '' }}</button>\n                    <p><b> Tisch: </b>{{tableSonnbergZirbn.number}} </p><br>\n                    <div class='cards-container' id='containerSonnbergZirbn'  [ngStyle]=\"{'background-color': + tableSonnbergZirbn.bgColor}\">\n                      <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableSonnbergZirbn.bgColor}\">\n                        <div *ngIf=\"tableSonnbergZirbn.isBesetzt === 'true'\">\n                          <p style=\"background-color: #FFFFFF\">\n                            <b> Name:</b>{{tableSonnbergZirbn.nameValue}}<br>\n                            <b> Sprache:</b>{{tableSonnbergZirbn.spracheValue}}<br>\n                            <b> Zimmernummer:</b>{{tableSonnbergZirbn.zimmernummerValue}}<br>\n                            <b> Preis Typ:</b>{{tableSonnbergZirbn.preistypValue}}<br>\n                            <b> Anreise Datum:</b>{{tableSonnbergZirbn.anreiseValue}}<br>\n                            <b> Abreise Datum:</b>{{tableSonnbergZirbn.abreiseValue}}<br>\n                            <b> Personenanzahl:</b>{{tableSonnbergZirbn.personenAnzahlValue}}<br>\n                            <b> RB/SOU:</b>{{tableSonnbergZirbn.rbsouValue}}<br>\n                            <b> Notiz2:</b>{{tableSonnbergZirbn.notiz2Value}}<br>\n                            <b> Trace:</b>{{tableSonnbergZirbn.trace}}\n                          </p>\n                          <div *ngIf=\"tableSonnbergZirbn.nameValue2\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tableSonnbergZirbn.nameValue2}}<br>\n                              <b> Sprache:</b>{{tableSonnbergZirbn.spracheValue2}}<br>\n                              <b> Zimmernummer:</b>{{tableSonnbergZirbn.zimmernummerValue2}}<br>\n                              <b> Preis Typ:</b>{{tableSonnbergZirbn.preistypValue2}}<br>\n                              <b> Anreise Datum:</b>{{tableSonnbergZirbn.anreiseValue2}}<br>\n                              <b> Abreise Datum:</b>{{tableSonnbergZirbn.abreiseValue2}}<br>\n                              <b> Personenanzahl:</b>{{tableSonnbergZirbn.personenAnzahlValue2}}<br>\n                              <b> RB/SOU:</b>{{tableSonnbergZirbn.rbsouValue2}}<br>\n                              <b> Notiz2:</b>{{tableSonnbergZirbn.notiz2Value2}}<br>\n                              <b> Trace:</b>{{tableSonnbergZirbn.trace2}}\n                            </p>\n                          </div>\n                          <div *ngIf=\"tableSonnbergZirbn.nameValue3\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tableSonnbergZirbn.nameValue3}}<br>\n                              <b> Sprache:</b>{{tableSonnbergZirbn.spracheValue3}}<br>\n                              <b> Zimmernummer:</b>{{tableSonnbergZirbn.zimmernummerValue3}}<br>\n                              <b> Preis Typ:</b>{{tableSonnbergZirbn.preistypValue3}}<br>\n                              <b> Anreise Datum:</b>{{tableSonnbergZirbn.anreiseValue3}}<br>\n                              <b> Abreise Datum:</b>{{tableSonnbergZirbn.abreiseValue3}}<br>\n                              <b> Personenanzahl:</b>{{tableSonnbergZirbn.personenAnzahlValue3}}<br>\n                              <b> RB/SOU:</b>{{tableSonnbergZirbn.rbsouValue3}}<br>\n                              <b> Notiz2:</b>{{tableSonnbergZirbn.notiz2Value3}}<br>\n                              <b> Trace:</b>{{tableSonnbergZirbn.trace3}}\n                            </p>\n                          </div>\n                        </div>\n                      </div>\n                      <div *ngIf=\"tableSonnbergZirbn.placeholder === 'true'\">\n                        <p [dragula]='\"evented-bag\"' id=\"Sonnberg-Zirbn\" style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px\">Listen-Element hier hin ziehen! {{tableSonnbergZirbn.number}} {{tableSonnbergZirbn.department}}</p>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n              <div *ngIf=\"showBauernStubnBool\">\n                <div *ngFor=\"let tableBauernstube of tablesBauernstube; let j = index;\">\n                  <div *ngIf=\"tablesBauernstube[j] !== tablesBauernstube[j+1]\">\n                    <button style=\"float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF\"  type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableBauernstube, j)\">{{tableBauernstube.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>\n                    <p><b> Tisch:</b>{{tableBauernstube.number}} </p><br>\n                    <div class='cards-container' id='containerBauernstube' [ngStyle]=\"{'background-color': + tableBauernstube.bgColor}\">\n                      <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableBauernstube.bgColor}\">\n                        <div *ngIf=\"tableBauernstube.isBesetzt === 'true'\">\n                          <p style=\"background-color: #FFFFFF\">\n                            <b> Name:</b>{{tableBauernstube.nameValue}}<br>\n                            <b> Sprache:</b>{{tableBauernstube.katValue}}<br>\n                            <b> Zimmernummer:</b>{{tableBauernstube.zimmernummerValue}}<br>\n                            <b> Preis Typ:</b>{{tableBauernstube.preistypValue}}<br>\n                            <b> Anreise Datum:</b>{{tableBauernstube.anreiseValue}}<br>\n                            <b> Abreise Datum:</b>{{tableBauernstube.abreiseValue}}<br>\n                            <b> Personenanzahl:</b>{{tableBauernstube.personenAnzahlValue}}<br>\n                            <b> RB/SOU:</b>{{tableBauernstube.notiz1Value}}<br>\n                            <b> Notiz2:</b>{{tableBauernstube.notiz2Value}}<br>\n                            <b> Trace:</b>{{tableBauernstube.trace}}<br>\n                            <b> BemerkungValue:</b>{{tableBauernstube.bemerkungValue}}<br>\n                            <b> BemerkungValue1:</b>{{tableBauernstube.bemerkungValue1}}<br>\n                            <b> BemerkungValue2:</b>{{tableBauernstube.bemerkungValue2}}<br>\n                          </p>\n                          <div *ngIf=\"tableBauernstube.nameValue2\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tableBauernstube.nameValue2}}<br>\n                              <b> Sprache:</b>{{tableBauernstube.katValue2}}<br>\n                              <b> Zimmernummer:</b>{{tableBauernstube.zimmernummerValue2}}<br>\n                              <b> Preis Typ:</b>{{tableBauernstube.preistypValue2}}<br>\n                              <b> Anreise Datum:</b>{{tableBauernstube.anreiseValue2}}<br>\n                              <b> Abreise Datum:</b>{{tableBauernstube.abreiseValue2}}<br>\n                              <b> Personenanzahl:</b>{{tableBauernstube.personenAnzahlValue2}}<br>\n                              <b> RB/SOU:</b>{{tableBauernstube.notiz3Value}}<br>\n                              <b> Notiz2:</b>{{tableBauernstube.notiz4Value}}<br>\n                              <b> Trace:</b>{{tableBauernstube.trace2}}<br>\n                              <b> BemerkungValue:</b>{{tableBauernstube.bemerkungValue3}}<br>\n                              <b> BemerkungValue1:</b>{{tableBauernstube.bemerkungValue4}}<br>\n                              <b> BemerkungValue2:</b>{{tableBauernstube.bemerkungValue5}}<br>\n                            </p>\n                          </div>\n                          <div *ngIf=\"tableBauernstube.nameValue3\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tableBauernstube.nameValue3}}<br>\n                              <b> Sprache:</b>{{tableBauernstube.katValue3}}<br>\n                              <b> Zimmernummer:</b>{{tableBauernstube.zimmernummerValue3}}<br>\n                              <b> Preis Typ:</b>{{tableBauernstube.preistypValue3}}<br>\n                              <b> Anreise Datum:</b>{{tableBauernstube.anreiseValue3}}<br>\n                              <b> Abreise Datum:</b>{{tableBauernstube.abreiseValue3}}<br>\n                              <b> Personenanzahl:</b>{{tableBauernstube.personenAnzahlValue3}}<br>\n                              <b> RB/SOU:</b>{{tableBauernstube.notiz5Value}}<br>\n                              <b> Notiz2:</b>{{tableBauernstube.notiz6Value}}<br>\n                              <b> Trace:</b>{{tableBauernstube.trace3}}<br>\n                              <b> BemerkungValue:</b>{{tableBauernstube.bemerkungValue6}}<br>\n                              <b> BemerkungValue1:</b>{{tableBauernstube.bemerkungValue7}}<br>\n                              <b> BemerkungValue2:</b>{{tableBauernstube.bemerkungValue8}}<br>\n                            </p>\n                          </div>\n                        </div>\n                        <div *ngIf=\"tableBauernstube.placeholder === 'true'\">\n                          <p [dragula]='\"evented-bag\"' id=\"Bauernstube\" style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px\">Listen-Element hier hin ziehen!  {{tableBauernstube.number}} {{tableBauernstube.department}} {{tableBauernstube.arrayIndex}} </p>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n              <div *ngIf=\"showRestaurantBool\">\n                <div *ngFor=\"let tableRestaurant of tablesRestaurant; let j = index;\">\n                  <div *ngIf=\"tablesRestaurant[j] !== tablesRestaurant[j+1]\">\n                    <button style=\"float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF\" type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableRestaurant, j)\">{{tableRestaurant.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>\n                    <p><b> Tisch:</b>{{tableRestaurant.number}} </p><br>\n                    <div class='cards-container' id='containerRestaurant' [ngStyle]=\"{'background-color': + tableRestaurant.bgColor}\">\n                      <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableRestaurant.bgColor}\">\n                        <div *ngIf=\"tableRestaurant.isBesetzt === 'true'\">\n                          <p style=\"background-color: #FFFFFF\">\n                            <b> Name:</b>{{tableRestaurant.nameValue}}<br>\n                            <b> Sprache:</b>{{tableRestaurant.katValue}}<br>\n                            <b> Zimmernummer:</b>{{tableRestaurant.zimmernummerValue}}<br>\n                            <b> Preis Typ:</b>{{tableRestaurant.preistypValue}}<br>\n                            <b> Anreise Datum:</b>{{tableRestaurant.anreiseValue}}<br>\n                            <b> Abreise Datum:</b>{{tableRestaurant.abreiseValue}}<br>\n                            <b> Personenanzahl:</b>{{tableRestaurant.personenAnzahlValue}}<br>\n                            <b> RB/SOU:</b>{{tableRestaurant.notiz1Value}}<br>\n                            <b> Notiz2:</b>{{tableRestaurant.notiz2Value}}<br>\n                            <b> Trace:</b>{{tableRestaurant.trace}}<br>\n                            <b> BemerkungValue:</b>{{tableRestaurant.bemerkungValue}}<br>\n                            <b> BemerkungValue1:</b>{{tableRestaurant.bemerkungValue1}}<br>\n                            <b> BemerkungValue2:</b>{{tableRestaurant.bemerkungValue2}}<br>\n                          </p>\n                          <div *ngIf=\"tableRestaurant.nameValue2\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tableRestaurant.nameValue2}}<br>\n                              <b> Sprache:</b>{{tableRestaurant.katValue2}}<br>\n                              <b> Zimmernummer:</b>{{tableRestaurant.zimmernummerValue2}}<br>\n                              <b> Preis Typ:</b>{{tableRestaurant.preistypValue2}}<br>\n                              <b> Anreise Datum:</b>{{tableRestaurant.anreiseValue2}}<br>\n                              <b> Abreise Datum:</b>{{tableRestaurant.abreiseValue2}}<br>\n                              <b> Personenanzahl:</b>{{tableRestaurant.personenAnzahlValue2}}<br>\n                              <b> RB/SOU:</b>{{tableRestaurant.notiz3Value}}<br>\n                              <b> Notiz2:</b>{{tableRestaurant.notiz4Value}}<br>\n                              <b> Trace:</b>{{tableRestaurant.trace2}}<br>\n                              <b> BemerkungValue:</b>{{tableRestaurant.bemerkungValue3}}<br>\n                              <b> BemerkungValue1:</b>{{tableRestaurant.bemerkungValue4}}<br>\n                              <b> BemerkungValue2:</b>{{tableRestaurant.bemerkungValue5}}<br>\n                            </p>\n                          </div>\n                          <div *ngIf=\"tableRestaurant.nameValue3\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tableRestaurant.nameValue3}}<br>\n                              <b> Sprache:</b>{{tableRestaurant.katValue3}}<br>\n                              <b> Zimmernummer:</b>{{tableRestaurant.zimmernummerValue3}}<br>\n                              <b> Preis Typ:</b>{{tableRestaurant.preistypValue3}}<br>\n                              <b> Anreise Datum:</b>{{tableRestaurant.anreiseValue3}}<br>\n                              <b> Abreise Datum:</b>{{tableRestaurant.abreiseValue3}}<br>\n                              <b> Personenanzahl:</b>{{tableRestaurant.personenAnzahlValue3}}<br>\n                              <b> RB/SOU:</b>{{tableRestaurant.notiz5Value}}<br>\n                              <b> Notiz2:</b>{{tableRestaurant.notiz6Value}}<br>\n                              <b> Trace:</b>{{tableRestaurant.trace3}}<br>\n                              <b> BemerkungValue:</b>{{tableRestaurant.bemerkungValue6}}<br>\n                              <b> BemerkungValue1:</b>{{tableRestaurant.bemerkungValue7}}<br>\n                              <b> BemerkungValue2:</b>{{tableRestaurant.bemerkungValue8}}<br>\n                            </p>\n                          </div>\n                        </div>\n                      </div>\n                      <div *ngIf=\"tableRestaurant.placeholder === 'true'\">\n                        <p [dragula]='\"evented-bag\"' id=\"Restaurant\" style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px\">Listen-Element hier hin ziehen! {{tableRestaurant.number}} {{tableRestaurant.department}}</p>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n\n\n              <div *ngIf=\"showWintergartenBool\">\n                <div *ngFor=\"let tableWintergarten of tablesWintergarten; let j = index;\">\n                  <div *ngIf=\"tablesWintergarten[j] !== tablesWintergarten[j+1]\">\n                    <button style=\"float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF\" type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableWintergarten, j)\">{{tableWintergarten.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>\n                    <p><b> Tisch:</b>{{tableWintergarten.number}} </p><br>\n                    <div class='cards-container' id='containerWintergarten' [ngStyle]=\"{'background-color': + tableWintergarten.bgColor}\">\n                      <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableWintergarten.bgColor}\">\n                        <div *ngIf=\"tableWintergarten.isBesetzt === 'true'\">\n                          <p style=\"background-color: #FFFFFF\">\n                            <b> Name:</b>{{tableWintergarten.nameValue}}<br>\n                            <b> Sprache:</b>{{tableWintergarten.spracheValue}}<br>\n                            <b> Zimmernummer:</b>{{tableWintergarten.zimmernummerValue}}<br>\n                            <b> Preis Typ:</b>{{tableWintergarten.preistypValue}}<br>\n                            <b> Anreise Datum:</b>{{tableWintergarten.anreiseValue}}<br>\n                            <b> Abreise Datum:</b>{{tableWintergarten.abreiseValue}}<br>\n                            <b> Personenanzahl:</b>{{tableWintergarten.personenAnzahlValue}}<br>\n                            <b> RB/SOU:</b>{{tableWintergarten.rbsouValue}}<br>\n                            <b> Notiz2:</b>{{tableWintergarten.notiz2Value}}<br>\n                            <b> Trace:</b>{{tableWintergarten.trace}}\n                          </p>\n                          <div *ngIf=\"tableWintergarten.nameValue2\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tableWintergarten.nameValue2}}<br>\n                              <b> Sprache:</b>{{tableWintergarten.spracheValue2}}<br>\n                              <b> Zimmernummer:</b>{{tableWintergarten.zimmernummerValue2}}<br>\n                              <b> Preis Typ:</b>{{tableWintergarten.preistypValue2}}<br>\n                              <b> Anreise Datum:</b>{{tableWintergarten.anreiseValue2}}<br>\n                              <b> Abreise Datum:</b>{{tableWintergarten.abreiseValue2}}<br>\n                              <b> Personenanzahl:</b>{{tableWintergarten.personenAnzahlValue2}}<br>\n                              <b> RB/SOU:</b>{{tableWintergarten.rbsouValue2}}<br>\n                              <b> Notiz2:</b>{{tableWintergarten.notiz2Value2}}<br>\n                              <b> Trace:</b>{{tableWintergarten.trace2}}\n                            </p>\n                          </div>\n                          <div *ngIf=\"tableWintergarten.nameValue3\">\n                            <p style=\"background-color: #FFFFFF\">\n                              <b> Name:</b>{{tableWintergarten.nameValue3}}<br>\n                              <b> Sprache:</b>{{tableWintergarten.spracheValue3}}<br>\n                              <b> Zimmernummer:</b>{{tableWintergarten.zimmernummerValue3}}<br>\n                              <b> Preis Typ:</b>{{tableWintergarten.preistypValue3}}<br>\n                              <b> Anreise Datum:</b>{{tableWintergarten.anreiseValue3}}<br>\n                              <b> Abreise Datum:</b>{{tableWintergarten.abreiseValue3}}<br>\n                              <b> Personenanzahl:</b>{{tableWintergarten.personenAnzahlValue3}}<br>\n                              <b> RB/SOU:</b>{{tableWintergarten.rbsouValue3}}<br>\n                              <b> Notiz2:</b>{{tableWintergarten.notiz2Value3}}<br>\n                              <b> Trace:</b>{{tableWintergarten.trace3}}\n                            </p>\n                          </div>\n                        </div>\n                      </div>\n                      <div *ngIf=\"tableWintergarten.placeholder === 'true'\">\n                        <p [dragula]='\"evented-bag\"' id=\"Wintergarten\" style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px\">Listen-Element hier hin ziehen! {{tableWintergarten.number}} {{tableWintergarten.department}}</p>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"col-lg-3 upload-col\">\n      <div class=\"csv\"  style=\" width: 100%; height: 150px; padding: 10px 20px 50px 20px\"><h3>CSV-Datei hochladen</h3>\n        <div class=\"line\"></div>\n        <form class=\"SendMessage\" (submit)=\"sendMessage($event)\">\n          <input type=\"file\" style=\"float: left; margin-top: 10px; color: #0a7a74\" (change)=\"fileChangeEvent($event)\" placeholder=\"Upload file...\" />\n          <button style=\" background-color: #0a7a74; float: right; color:  white\" type=\"button\" class=\"btn btn-send\" (click)=\"upload()\">CSV HOCHLADEN</button>\n        </form>\n      </div>\n      <div class=\"outer-cards\">\n        <h3>Im-Haus-Liste</h3>\n        <div class=\"row1\">\n          <div class='wrapper'>\n            <div *ngFor=\"let imHausListeElement of imHausListeElemente\">\n              <div class='cards-container' id='container1' [dragula]='\"evented-bag\"'>\n                <div class=\"card\" id=\"card1\">\n                  <p> <b>Name:</b> {{imHausListeElement[23]}}<br>\n                    <b>Zimmernummer:</b> {{imHausListeElement[24]}}<br>\n                    <b>PreisTyp:</b> {{imHausListeElement[29]}}<br>\n                    <b>Anreise:</b> {{imHausListeElement[26]}}<br>\n                    <b>Abreise:</b> {{imHausListeElement[27]}}<br>\n                    <b>Personen Anzahl:</b> {{imHausListeElement[28]}}<br>\n                    <b>KAT:</b> {{imHausListeElement[25]}}<br>\n                    <b>Notiz1:</b> {{imHausListeElement[37]}}<br>\n                    <b>Notiz2:</b> {{imHausListeElement[39]}}<br>\n                    <b>Bemerkung:</b> {{imHausListeElement[54]}}<br>\n                  </p>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n        <h3>Anreise-Liste</h3>\n        <div class=\"row1\">\n          <div class='wrapper'>\n            <div *ngFor=\"let anreiseListeElement of anreiseListeElemente\">\n              <div class='cards-container' id='container2' [dragula]='\"evented-bag\"'>\n                <div class=\"card\" id=\"card2\">\n                  <p> <b>Name:</b> {{anreiseListeElement[22]}}<br>\n                    <b>Zimmernummer:</b> {{anreiseListeElement[23]}}<br>\n                    <b>PreisTyp:</b> {{anreiseListeElement[27]}}<br>\n                    <b>Abreise:</b> {{anreiseListeElement[25]}}<br>\n                    <b>Personen Anzahl:</b> {{anreiseListeElement[26]}}<br>\n                    <b>KAT:</b> {{anreiseListeElement[24]}}<br>\n                    <b>Notiz1:</b> {{anreiseListeElement[36]}}<br>\n                    <b>Notiz2:</b> {{anreiseListeElement[39]}}<br>\n                    <b>Bemerkung:</b> {{anreiseListeElement[52]}}<br>\n                  </p>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n        <h3>Traces-Liste</h3>\n        <div class=\"row1\">\n          <div class='wrapper'>\n            <div *ngFor=\"let tracesListeElement of tracesListeElemente; let t = index;\">\n              <div class='cards-container' id='container3' [dragula]='\"evented-bag\"' >\n                <div class=\"card\" id=\"card3\">\n                  <b>Zimmernummer:</b> {{tracesListeElement[12]}}<br>\n                  <b>Name:</b> {{tracesListeElement[13]}}<br>\n                  <b>Personen:</b> {{tracesListeElement[14]}}<br>\n                  <b>Anreise:</b> {{tracesListeElement[16]}}<br>\n                  <b>Abreise:</b> {{tracesListeElement[18]}}<br>\n                  <b>Trace:</b> {{tracesListeElement[26]}}<br>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"col-md-9 col-lg-7 table-col\">\n      <div class=\"row1\" style=\"height: auto; max-width: 95%\">\n        <div class=\"col-md-3\"  (click)=\"showBauernStubn()\" [ngStyle]=\"{'background-color': '#' + buttonBgColor1}\">\n          <h5 [ngStyle]=\"{'color': '#' + fontColor1}\">Bauernstube</h5>\n        </div>\n        <div class=\"col-md-3\"  (click)=\"showBergler()\" [ngStyle]=\"{'background-color': '#' + buttonBgColor2}\">\n          <h5 [ngStyle]=\"{'color': '#' + fontColor2}\">Berglerstube / <br> HUBERTUS Stube</h5>\n        </div>\n        <div class=\"col-md-3\"  (click)=\"showWaeldler()\" [ngStyle]=\"{'background-color': '#' + buttonBgColor3}\">\n          <h5 [ngStyle]=\"{'color': '#' + fontColor3}\">Wäldlerstube / <br> Kristallstube</h5>\n        </div>\n        <div class=\"col-md-3\"  (click)=\"showEdelweiss()\" [ngStyle]=\"{'background-color': '#' + buttonBgColor4}\">\n          <h5 [ngStyle]=\"{'color': '#' + fontColor4}\">EDELWEISS / <br> Kaminstube</h5>\n        </div>\n        <div class=\"col-md-3\"  (click)=\"showTeestube()\" [ngStyle]=\"{'background-color': '#' + buttonBgColor5}\">\n          <h5 [ngStyle]=\"{'color': '#' + fontColor5}\">TeeStube / <br>Teelounge</h5>\n        </div>\n      </div>\n      <div id=\"printSectionId2\">\n        <div class=\"row\" style=\"background-color: #eaf3f3; border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;\" >\n          <div *ngIf=\"showSonnbergZirbnBool\">\n            <div *ngFor=\"let tableSonnbergZirbn of tablesSonnbergZirbn; let j = index;\">\n              <div class=\"t{{tableSonnbergZirbn.number}} table-item\" (click)=\"moveTable(tableSonnbergZirbn, j)\" [ngStyle]=\"{'top': tableSonnbergZirbn.topValue + 'px', 'left': tableSonnbergZirbn.leftValue + 'px', 'background-color': + tableSonnbergZirbn.bgColor, 'height': + tableSonnbergZirbn.height + 'px', 'width': + tableSonnbergZirbn.width + 'px', 'border': + tableSonnbergZirbn.border}\">\n                <div *ngIf=\"tablesSonnbergZirbn[j] !== tablesSonnbergZirbn[j+1]\">\n                  <p>{{tableSonnbergZirbn.number}}</p>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div *ngIf=\"showBauernStubnBool\">\n            <div *ngFor=\"let tableBauernstube of tablesBauernstube; let j = index;\">\n              <div class=\"t{{tableBauernstube.number}} table-item\" (click)=\"moveTable(tableBauernstube, j)\" [ngStyle]=\"{'top': tableBauernstube.topValue + 'px', 'left': tableBauernstube.leftValue + 'px', 'background-color': + tableBauernstube.bgColor,  'height': + tableBauernstube.height + 'px', 'width': + tableBauernstube.width + 'px', 'border': + tableBauernstube.border}\">\n                  <p>{{tableBauernstube.number}}</p>\n              </div>\n            </div>\n          </div>\n          <div *ngIf=\"showRestaurantBool\">\n            <div *ngFor=\"let tableRestaurant of tablesRestaurant; let j = index;\">\n              <div class=\"t{{tableRestaurant.number}} table-item\" (click)=\"moveTable(tableRestaurant, j)\" [ngStyle]=\"{'top': tableRestaurant.topValue + 'px', 'left': tableRestaurant.leftValue + 'px', 'background-color': + tableRestaurant.bgColor, 'height': + tableRestaurant.height + 'px', 'width': + tableRestaurant.width + 'px', 'border': + tableRestaurant.border}\">\n                <div *ngIf=\"tablesRestaurant[j] !== tablesRestaurant[j+1]\">\n                  <p>{{tableRestaurant.number}}</p>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div *ngIf=\"showWintergartenBool\">\n            <div *ngFor=\"let tableWintergarten of tablesWintergarten; let j = index;\">\n              <div class=\"t{{tableWintergarten.number}} table-item\" (click)=\"moveTable(tableWintergarten, j)\" [ngStyle]=\"{'top': tableWintergarten.topValue + 'px', 'left': tableWintergarten.leftValue + 'px', 'background-color': + tableWintergarten.bgColor,  'height': + tableWintergarten.height + 'px', 'width': + tableWintergarten.width + 'px', 'border': + tableWintergarten.border, 'border-radius': + tableWintergarten.borderRadius, 'transform':  + tableWintergarten.transformValue}\">\n                <div *ngIf=\"tablesWintergarten[j] !== tablesWintergarten[j+1]\">\n                  <p>{{tableWintergarten.number}}</p>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n</body>\n\n</html>\n\n\n"
 
 /***/ }),
 
@@ -195,7 +195,7 @@ var TischplanComponent = (function () {
         this.topValues = [];
         this.tracesListeElemente = [];
         this.tablesSonnbergZirbn = [];
-        this.tablesPanorama = [];
+        this.tablesBauernstube = [];
         this.tablesRestaurant = [];
         this.tablesWintergarten = [];
         this.filesToUpload = [];
@@ -204,33 +204,48 @@ var TischplanComponent = (function () {
         var wrapperElementsChildNames = [];
         this.tischplanService.getImHausListe()
             .subscribe(function (imHausListeElemente) {
-            _this.imHausListeElemente = imHausListeElemente[0].data;
-            console.log('IM-HAUS-LISTE: ' + _this.imHausListeElemente);
+            if (imHausListeElemente === null) {
+                return;
+            }
+            else {
+                _this.imHausListeElemente = imHausListeElemente[0].data;
+                console.log('IM-HAUS-LISTE: ' + _this.imHausListeElemente);
+            }
         });
         this.tischplanService.getAnreiseListe()
             .subscribe(function (anreiseListeElemente) {
-            _this.anreiseListeElemente = anreiseListeElemente[0].data;
-            console.log(_this.anreiseListeElemente);
+            if (anreiseListeElemente === null) {
+                return;
+            }
+            else {
+                _this.anreiseListeElemente = anreiseListeElemente[0].data;
+                console.log(_this.anreiseListeElemente);
+            }
         });
         this.tischplanService.getTables()
             .subscribe(function (tables) {
             console.log("TABLES LENGTH: " + tables.length);
-            for (var a = 0; a < tables.length; a++) {
-                if (tables[a].department === "Panorama") {
-                    _this.tablesPanorama = tables[a].tables;
-                }
-                else if (tables[a].department === "Wintergarten") {
-                    _this.tablesWintergarten = tables[a].tables;
-                    console.log('Test' + JSON.stringify(_this.tablesWintergarten));
-                }
-                else if (tables[a].department === "Sonnberg-Zirbn") {
-                    _this.tablesSonnbergZirbn = tables[a].tables;
-                }
-                else if (tables[a].department === "Restaurant") {
-                    _this.tablesRestaurant = tables[a].tables;
+            if (tables === null) {
+                return;
+            }
+            else {
+                for (var a = 0; a < tables.length; a++) {
+                    if (tables[a].department === "Bauernstube") {
+                        _this.tablesBauernstube = tables[a].tables;
+                    }
+                    else if (tables[a].department === "Wintergarten") {
+                        _this.tablesWintergarten = tables[a].tables;
+                        console.log('Test' + JSON.stringify(_this.tablesWintergarten));
+                    }
+                    else if (tables[a].department === "Sonnberg-Zirbn") {
+                        _this.tablesSonnbergZirbn = tables[a].tables;
+                    }
+                    else if (tables[a].department === "Restaurant") {
+                        _this.tablesRestaurant = tables[a].tables;
+                    }
                 }
             }
-            console.log(_this.tablesPanorama);
+            console.log(_this.tablesBauernstube);
             console.log(_this.tablesWintergarten);
             console.log(_this.tablesSonnbergZirbn);
             console.log(_this.tablesRestaurant);
@@ -243,14 +258,16 @@ var TischplanComponent = (function () {
             //this.tracesListeElemente = tracesListeElemente[0].data;
             _this.formatTracesListeElements(tracesListeElemente);
         });
-        this.buttonBgColor1 = "eaf3f3";
-        this.buttonBgColor2 = "eaf3f3";
-        this.buttonBgColor3 = "eaf3f3";
-        this.buttonBgColor4 = "eaf3f3";
+        this.buttonBgColor1 = "f3efe4";
+        this.buttonBgColor2 = "f3efe4";
+        this.buttonBgColor3 = "f3efe4";
+        this.buttonBgColor4 = "f3efe4";
+        this.buttonBgColor5 = "f3efe4";
         this.fontColor1 = "0a7a74";
         this.fontColor2 = "0a7a74";
         this.fontColor3 = "0a7a74";
         this.fontColor4 = "0a7a74";
+        this.fontColor5 = "0a7a74";
         dragulaService.drag.subscribe(function (value) {
             console.log("drag: " + value[0]);
             _this.onDrag(value.slice(1));
@@ -353,36 +370,53 @@ var TischplanComponent = (function () {
     TischplanComponent.prototype.onDrop = function (args) {
         var _this = this;
         var e = args[0], el = args[1];
-        console.log("Args = ");
+        console.log("Args = " + JSON.stringify(args));
+        console.log("Args1 = " + JSON.stringify(args[1]));
+        console.log("Args2 = " + JSON.stringify(args[2]));
+        console.log("Args3 = " + JSON.stringify(args[3]));
+        console.log("Args4 = " + JSON.stringify(args[4]));
+        console.log("e = " + JSON.stringify(e));
+        console.log("el = " + JSON.stringify(el));
         var information = args[0].innerText;
         var department = JSON.stringify(args[1].id);
-        var departementSubstring = department.substring(10, department.length - 1);
-        console.log(departementSubstring);
+        console.log("departement" + department);
+        var departementSubstring = department.substring(1, department.length - 1);
+        console.log("departementSubstring: " + departementSubstring);
         var tableNumber = args[1].innerText;
-        var tableNumberSubstring = "";
-        console.log("tableNumber" + tableNumber);
-        tableNumberSubstring = tableNumber.toString().match(/\d+/);
-        console.log("tableNumberSubstring" + tableNumberSubstring);
+        console.log("tableNumber: " + tableNumber);
+        var tableNumberSubstring = tableNumber.toString().match(/\d+/);
+        console.log("tableNumberSubstring: " + tableNumberSubstring);
         var dataString = [];
         dataString.push(information + departementSubstring + tableNumberSubstring);
-        //console.log(dataString);
+        var jBefore = tableNumber.toString().match(/\d+/g);
+        var j = jBefore[1];
+        //let j = jArray[1];
+        var addPlaceholderDataString = [];
+        addPlaceholderDataString.push(departementSubstring);
+        addPlaceholderDataString.push(tableNumberSubstring);
+        console.log('j ===================>>>>>>>>>>>' + addPlaceholderDataString + 'END');
         //console.log(departementSubstring);
         //console.log(tableNumberSubstring);
         this.tischplanService.addInformationToTable(dataString)
             .subscribe(function (response) {
             // let arrayIndex = response[1];
             console.log("RESPONSE addInformationToTable:" + JSON.stringify(response));
-            if (response.tables[0].department === "Sonnberg-Zirbn") {
-                _this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+            if (response === null) {
+                return;
             }
-            else if (response.tables[0].department === "Panorama") {
-                _this.tablesPanorama[response.tables[0].arrayIndex] = response.tables[0];
-            }
-            else if (response.tables[0].department === "Restaurant") {
-                _this.tablesRestaurant[response.tables[0].arrayIndex] = response.tables[0];
-            }
-            else if (response.tables[0].department === "Wintergarten") {
-                _this.tablesWintergarten[response.tables[0].arrayIndex] = response.tables[0];
+            else {
+                if (response.tables[0].department === "Sonnberg-Zirbn") {
+                    _this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+                }
+                else if (response.tables[0].department === "Bauernstube") {
+                    _this.tablesBauernstube[response.tables[0].arrayIndex] = response.tables[0];
+                }
+                else if (response.tables[0].department === "Restaurant") {
+                    _this.tablesRestaurant[response.tables[0].arrayIndex] = response.tables[0];
+                }
+                else if (response.tables[0].department === "Wintergarten") {
+                    _this.tablesWintergarten[response.tables[0].arrayIndex] = response.tables[0];
+                }
             }
             // console.log(this.tablesSonnbergZirbn[arrayIndex]);
         });
@@ -393,38 +427,65 @@ var TischplanComponent = (function () {
             //console.log("arrayIndex:" + arrayIndex);
             //console.log("bgColor:" + JSON.stringify(response[0].tables[arrayIndex].bgColor));
             console.log("Response occupyTable:" + JSON.stringify(response));
-            if (response.tables[0].department === "Sonnberg-Zirbn") {
-                _this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+            if (response === null) {
+                return;
             }
-            else if (response.tables[0].department === "Panorama") {
-                _this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
-            }
-            else if (response.tables[0].department === "Restaurant") {
-                _this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
-            }
-            else if (response.tables[0].department === "Wintergarten") {
-                _this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+            else {
+                if (response.tables[0].department === "Sonnberg-Zirbn") {
+                    _this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+                }
+                else if (response.tables[0].department === "Bauernstube") {
+                    _this.tablesBauernstube[response.tables[0].arrayIndex] = response.tables[0];
+                }
+                else if (response.tables[0].department === "Restaurant") {
+                    _this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+                }
+                else if (response.tables[0].department === "Wintergarten") {
+                    _this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+                }
             }
             //console.log("bgColor:" + JSON.stringify(this.tablesSonnbergZirbn[arrayIndex]));
         });
-        this.tischplanService.removePlaceholder(dataString)
-            .subscribe(function (response) {
-            //let arrayIndex = response[1];
-            console.log("Response placeholder:" + JSON.stringify(response));
-            if (response.tables[0].department === "Sonnberg-Zirbn") {
-                _this.tablesSonnbergZirbn[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
-            }
-            else if (response.tables[0].department === "Panorama") {
-                _this.tablesPanorama[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
-            }
-            else if (response.tables[0].department === "Restaurant") {
-                _this.tablesRestaurant[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
-            }
-            else if (response.tables[0].department === "Wintergarten") {
-                _this.tablesWintergarten[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
-            }
-            //console.log("placeholder:" + JSON.stringify(this.tablesSonnbergZirbn[arrayIndex]));
-        });
+        /*
+            this.tischplanService.removePlaceholder(dataString)
+              .subscribe(response => {
+                //let arrayIndex = response[1];
+                console.log("Response placeholder:" + JSON.stringify(response));
+                if(response.tables[0].department === "Sonnberg-Zirbn") {
+                  this.tablesSonnbergZirbn[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
+                }
+                else if(response.tables[0].department === "Bauernstube") {
+                  this.tablesBauernstube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
+                }
+                else if(response.tables[0].department === "Restaurant") {
+                  this.tablesRestaurant[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
+                }
+                else if(response.tables[0].department === "Wintergarten") {
+                  this.tablesWintergarten[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
+                }
+              });
+        
+                this.tischplanService.addPlaceholder(addPlaceholderDataString)
+                  .subscribe(response => {
+                  console.log("Add placeholder!");
+                  console.log("Add placeholder! : " + JSON.stringify(response));
+                  console.log("placeholder:" + JSON.stringify(response[0].tables[j].placeholder));
+                  //console.log(this.tablesSonnbergZirbn[j].placeholder);
+                  if(response[0].tables[j].department === "Sonnberg-Zirbn") {
+                    this.tablesSonnbergZirbn[j].placeholder = response[0].tables[j].placeholder;
+                  }
+                  else if(response[0].tables[j].department === "Bauernstube") {
+                    this.tablesBauernstube[j].placeholder = response[0].tables[j].placeholder;
+                  }
+                  else if(response[0].tables[j].department === "Restaurant") {
+                    this.tablesRestaurant[j].placeholder = response[0].tables[j].placeholder;
+                  }
+                  else if(response[0].tables[j].department === "Wintergarten") {
+                    this.tablesWintergarten[j].placeholder = response[0].tables[j].placeholder;
+                  }
+                });
+         */
+        //console.log("placeholder:" + JSON.stringify(this.tablesSonnbergZirbn[arrayIndex]));
     };
     TischplanComponent.prototype.onOver = function (args) {
         var e = args[0], el = args[1], container = args[2];
@@ -462,99 +523,118 @@ var TischplanComponent = (function () {
             console.log("Dispense Table:");
             console.log("bgColor:" + JSON.stringify(response[0].tables[j].bgColor));
             console.log("isBesetzt:" + JSON.stringify(response[0].tables[j].isBesetzt));
-            if (response[0].tables[j].department === "Sonnberg-Zirbn") {
-                _this.tablesSonnbergZirbn[j] = response[0].tables[j];
+            if (response === null) {
+                return;
             }
-            else if (response[0].tables[j].department === "Panorama") {
-                _this.tablesSonnbergZirbn[j] = response[0].tables[j];
-            }
-            else if (response[0].tables[j].department === "Restaurant") {
-                _this.tablesSonnbergZirbn[j] = response[0].tables[j];
-            }
-            else if (response[0].tables[j].department === "Wintergarten") {
-                _this.tablesSonnbergZirbn[j] = response[0].tables[j];
+            else {
+                if (response[0].tables[j].department === "Sonnberg-Zirbn") {
+                    _this.tablesSonnbergZirbn[j] = response[0].tables[j];
+                }
+                else if (response[0].tables[j].department === "Bauernstube") {
+                    _this.tablesBauernstube[j] = response[0].tables[j];
+                }
+                else if (response[0].tables[j].department === "Restaurant") {
+                    _this.tablesSonnbergZirbn[j] = response[0].tables[j];
+                }
+                else if (response[0].tables[j].department === "Wintergarten") {
+                    _this.tablesSonnbergZirbn[j] = response[0].tables[j];
+                }
             }
         });
         this.tischplanService.addPlaceholder(table).subscribe(function (response) {
             console.log("Add placeholder!");
+            console.log("Add placeholder! table ... " + JSON.stringify(table));
             console.log("placeholder:" + JSON.stringify(response[0].tables[j].placeholder));
-            //console.log(this.tablesSonnbergZirbn[j].placeholder);
-            if (response[0].tables[j].department === "Sonnberg-Zirbn") {
-                _this.tablesSonnbergZirbn[j].placeholder = response[0].tables[j].placeholder;
+            if (response === null) {
+                return;
             }
-            else if (response[0].tables[j].department === "Panorama") {
-                _this.tablesPanorama[j].placeholder = response[0].tables[j].placeholder;
-            }
-            else if (response[0].tables[j].department === "Restaurant") {
-                _this.tablesRestaurant[j].placeholder = response[0].tables[j].placeholder;
-            }
-            else if (response[0].tables[j].department === "Wintergarten") {
-                _this.tablesWintergarten[j].placeholder = response[0].tables[j].placeholder;
+            else {
+                //console.log(this.tablesSonnbergZirbn[j].placeholder);
+                if (response[0].tables[j].department === "Sonnberg-Zirbn") {
+                    _this.tablesSonnbergZirbn[j].placeholder = response[0].tables[j].placeholder;
+                }
+                else if (response[0].tables[j].department === "Bauernstube") {
+                    _this.tablesBauernstube[j].placeholder = response[0].tables[j].placeholder;
+                }
+                else if (response[0].tables[j].department === "Restaurant") {
+                    _this.tablesRestaurant[j].placeholder = response[0].tables[j].placeholder;
+                }
+                else if (response[0].tables[j].department === "Wintergarten") {
+                    _this.tablesWintergarten[j].placeholder = response[0].tables[j].placeholder;
+                }
             }
         });
     };
-    TischplanComponent.prototype.showSonnbergZirbn = function () {
-        console.log("showSonnbergZirbn!");
-        this.showSonnbergZirbnBool = true;
-        this.showPanoramaBool = false;
-        this.showRestaurantBool = false;
-        this.showWintergartenBool = false;
-        if (this.buttonBgColor1 === "eaf3f3") {
+    TischplanComponent.prototype.showBauernStubn = function () {
+        console.log("showBauernStubn!");
+        this.showBauernStubnBool = true;
+        this.showBerglerBool = false;
+        this.showWaeldlerBool = false;
+        this.showEdelweissBool = false;
+        this.showTeeStubeBool = false;
+        if (this.buttonBgColor1 === "f3efe4") {
             this.buttonBgColor1 = "0a7a74";
-            this.buttonBgColor2 = "eaf3f3";
-            this.buttonBgColor3 = "eaf3f3";
-            this.buttonBgColor4 = "eaf3f3";
+            this.buttonBgColor2 = "f3efe4";
+            this.buttonBgColor3 = "f3efe4";
+            this.buttonBgColor4 = "f3efe4";
+            this.buttonBgColor5 = "f3efe4";
         }
         else {
-            this.buttonBgColor1 = "eaf3f3";
+            this.buttonBgColor1 = "f3efe4";
         }
         if (this.fontColor1 === "0a7a74") {
             this.fontColor1 = "eaf3f3";
             this.fontColor2 = "0a7a74";
             this.fontColor3 = "0a7a74";
             this.fontColor4 = "0a7a74";
+            this.fontColor5 = "0a7a74";
         }
         else {
             this.fontColor1 = "0a7a74";
         }
     };
-    TischplanComponent.prototype.showPanorama = function () {
-        console.log("showPanorama!");
-        this.showSonnbergZirbnBool = false;
-        this.showPanoramaBool = true;
-        console.log(this.showPanoramaBool);
-        this.showRestaurantBool = false;
-        this.showWintergartenBool = false;
-        if (this.buttonBgColor2 === "eaf3f3") {
+    TischplanComponent.prototype.showBergler = function () {
+        console.log("showBergler!");
+        this.showBauernStubnBool = false;
+        this.showBerglerBool = true;
+        console.log(this.showBerglerBool);
+        this.showWaeldlerBool = false;
+        this.showEdelweissBool = false;
+        this.showTeeStubeBool = false;
+        if (this.buttonBgColor2 === "f3efe4") {
             this.buttonBgColor2 = "0a7a74";
-            this.buttonBgColor1 = "eaf3f3";
-            this.buttonBgColor3 = "eaf3f3";
-            this.buttonBgColor4 = "eaf3f3";
+            this.buttonBgColor1 = "f3efe4";
+            this.buttonBgColor3 = "f3efe4";
+            this.buttonBgColor4 = "f3efe4";
+            this.buttonBgColor5 = "f3efe4";
         }
         else {
-            this.buttonBgColor2 = "eaf3f3";
+            this.buttonBgColor2 = "f3efe4";
         }
         if (this.fontColor2 === "0a7a74") {
             this.fontColor2 = "eaf3f3";
             this.fontColor1 = "0a7a74";
             this.fontColor3 = "0a7a74";
             this.fontColor4 = "0a7a74";
+            this.fontColor5 = "0a7a74";
         }
         else {
             this.fontColor2 = "0a7a74";
         }
     };
-    TischplanComponent.prototype.showRestaurant = function () {
-        console.log("showRestaurant!");
-        this.showSonnbergZirbnBool = false;
-        this.showPanoramaBool = false;
-        this.showRestaurantBool = true;
-        this.showWintergartenBool = false;
-        if (this.buttonBgColor3 === "eaf3f3") {
+    TischplanComponent.prototype.showWaeldler = function () {
+        console.log("showWaeldler!");
+        this.showBauernStubnBool = false;
+        this.showBerglerBool = false;
+        this.showWaeldlerBool = true;
+        this.showEdelweissBool = false;
+        this.showTeeStubeBool = false;
+        if (this.buttonBgColor3 === "f3efe4") {
             this.buttonBgColor3 = "0a7a74";
-            this.buttonBgColor1 = "eaf3f3";
-            this.buttonBgColor2 = "eaf3f3";
-            this.buttonBgColor4 = "eaf3f3";
+            this.buttonBgColor1 = "f3efe4";
+            this.buttonBgColor2 = "f3efe4";
+            this.buttonBgColor4 = "f3efe4";
+            this.buttonBgColor5 = "f3efe4";
         }
         else {
             this.buttonBgColor3 = "eaf3f3";
@@ -564,22 +644,25 @@ var TischplanComponent = (function () {
             this.fontColor1 = "0a7a74";
             this.fontColor2 = "0a7a74";
             this.fontColor4 = "0a7a74";
+            this.fontColor5 = "0a7a74";
         }
         else {
             this.fontColor3 = "0a7a74";
         }
     };
-    TischplanComponent.prototype.showWintergarten = function () {
-        console.log("showWintergarten!");
-        this.showSonnbergZirbnBool = false;
-        this.showPanoramaBool = false;
-        this.showRestaurantBool = false;
-        this.showWintergartenBool = true;
-        if (this.buttonBgColor4 === "eaf3f3") {
+    TischplanComponent.prototype.showEdelweiss = function () {
+        console.log("showEdelweiss!");
+        this.showBauernStubnBool = false;
+        this.showBerglerBool = false;
+        this.showWaeldlerBool = false;
+        this.showEdelweissBool = true;
+        this.showTeeStubeBool = false;
+        if (this.buttonBgColor4 === "f3efe4") {
             this.buttonBgColor4 = "0a7a74";
-            this.buttonBgColor1 = "eaf3f3";
-            this.buttonBgColor2 = "eaf3f3";
-            this.buttonBgColor3 = "eaf3f3";
+            this.buttonBgColor1 = "f3efe4";
+            this.buttonBgColor2 = "f3efe4";
+            this.buttonBgColor3 = "f3efe4";
+            this.buttonBgColor5 = "f3efe4";
         }
         else {
             this.buttonBgColor4 = "eaf3f3";
@@ -589,9 +672,38 @@ var TischplanComponent = (function () {
             this.fontColor1 = "0a7a74";
             this.fontColor2 = "0a7a74";
             this.fontColor3 = "0a7a74";
+            this.fontColor5 = "0a7a74";
         }
         else {
             this.fontColor4 = "0a7a74";
+        }
+    };
+    TischplanComponent.prototype.showTeestube = function () {
+        console.log("showTeeStube!");
+        this.showBauernStubnBool = false;
+        this.showBerglerBool = false;
+        this.showWaeldlerBool = false;
+        this.showEdelweissBool = false;
+        this.showTeeStubeBool = true;
+        if (this.buttonBgColor5 === "f3efe4") {
+            this.buttonBgColor5 = "0a7a74";
+            this.buttonBgColor1 = "f3efe4";
+            this.buttonBgColor2 = "f3efe4";
+            this.buttonBgColor3 = "f3efe4";
+            this.buttonBgColor4 = "f3efe4";
+        }
+        else {
+            this.buttonBgColor5 = "f3efe4";
+        }
+        if (this.fontColor5 === "0a7a74") {
+            this.fontColor5 = "eaf3f3";
+            this.fontColor4 = "0a7a74";
+            this.fontColor1 = "0a7a74";
+            this.fontColor2 = "0a7a74";
+            this.fontColor3 = "0a7a74";
+        }
+        else {
+            this.fontColor5 = "0a7a74";
         }
     };
     TischplanComponent.prototype.moveTable = function (table, j) {
@@ -606,8 +718,8 @@ var TischplanComponent = (function () {
             if (response[0].tables[j].department === "Sonnberg-Zirbn") {
                 _this.tablesSonnbergZirbn = response[0].tables;
             }
-            else if (response[0].tables[j].department === "Panorama") {
-                _this.tablesPanorama = response[0].tables;
+            else if (response[0].tables[j].department === "Bauernstube") {
+                _this.tablesBauernstube = response[0].tables;
             }
             else if (response[0].tables[j].department === "Restaurant") {
                 _this.tablesRestaurant = response[0].tables;

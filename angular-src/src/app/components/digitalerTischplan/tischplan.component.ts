@@ -20,10 +20,12 @@ export class TischplanComponent implements OnInit {
   buttonBgColor2: string;
   buttonBgColor3: string;
   buttonBgColor4: string;
+  buttonBgColor5: string;
   fontColor1: string;
   fontColor2: string;
   fontColor3: string;
   fontColor4: string;
+  fontColor5: string;
   leftValues: LeftValue[];
   topValues: any[] = [];
 
@@ -32,17 +34,18 @@ export class TischplanComponent implements OnInit {
   tracesListeElemente: any[] = [];
   tables: Table[];
   tablesSonnbergZirbn: Table[] = [];
-  tablesPanorama: Table[] = [];
+  tablesBauernstube: Table[] = [];
   tablesRestaurant: Table[] = [];
   tablesWintergarten: Table[] = [];
   title: string;
   filesToUpload: Array<File> = [];
 
   isDropped: any[] = [];
-  showSonnbergZirbnBool: boolean;
-  showPanoramaBool: boolean;
-  showRestaurantBool: boolean;
-  showWintergartenBool: boolean;
+  showBauernStubnBool: boolean;
+  showBerglerBool: boolean;
+  showWaeldlerBool: boolean;
+  showEdelweissBool: boolean;
+  showTeeStubeBool: boolean;
 
   constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, private dragulaService: DragulaService, private element: ElementRef, private renderer: Renderer) {
     let DomBaseElement = this.element.nativeElement;
@@ -50,37 +53,48 @@ export class TischplanComponent implements OnInit {
 
     this.tischplanService.getImHausListe()
       .subscribe(imHausListeElemente => {
-        this.imHausListeElemente = imHausListeElemente[0].data;
-        console.log('IM-HAUS-LISTE: ' + this.imHausListeElemente);
+        if(imHausListeElemente === null) {
+          return;
+        } else {
+          this.imHausListeElemente = imHausListeElemente[0].data;
+          console.log('IM-HAUS-LISTE: ' + this.imHausListeElemente);
+        }
       });
 
     this.tischplanService.getAnreiseListe()
       .subscribe(anreiseListeElemente => {
-        this.anreiseListeElemente = anreiseListeElemente[0].data;
-        console.log(this.anreiseListeElemente);
+        if(anreiseListeElemente === null) {
+          return;
+        } else {
+          this.anreiseListeElemente = anreiseListeElemente[0].data;
+          console.log(this.anreiseListeElemente);
+        }
       });
 
     this.tischplanService.getTables()
       .subscribe(tables => {
         console.log("TABLES LENGTH: " + tables.length);
+        if(tables === null) {
+          return;
+        } else {
 
-        for (let a = 0; a < tables.length; a++) {
-          if (tables[a].department === "Panorama") {
-            this.tablesPanorama = tables[a].tables;
-          }
-          else if (tables[a].department === "Wintergarten") {
-            this.tablesWintergarten = tables[a].tables;
-            console.log('Test' + JSON.stringify(this.tablesWintergarten));
-          }
-          else if (tables[a].department === "Sonnberg-Zirbn") {
-            this.tablesSonnbergZirbn = tables[a].tables;
-          }
-          else if (tables[a].department === "Restaurant") {
-            this.tablesRestaurant = tables[a].tables;
+          for (let a = 0; a < tables.length; a++) {
+            if (tables[a].department === "Bauernstube") {
+              this.tablesBauernstube = tables[a].tables;
+            }
+            else if (tables[a].department === "Wintergarten") {
+              this.tablesWintergarten = tables[a].tables;
+              console.log('Test' + JSON.stringify(this.tablesWintergarten));
+            }
+            else if (tables[a].department === "Sonnberg-Zirbn") {
+              this.tablesSonnbergZirbn = tables[a].tables;
+            }
+            else if (tables[a].department === "Restaurant") {
+              this.tablesRestaurant = tables[a].tables;
+            }
           }
         }
-
-        console.log(this.tablesPanorama);
+        console.log(this.tablesBauernstube);
         console.log(this.tablesWintergarten);
         console.log(this.tablesSonnbergZirbn);
         console.log(this.tablesRestaurant);
@@ -96,14 +110,16 @@ export class TischplanComponent implements OnInit {
         this.formatTracesListeElements(tracesListeElemente);
       });
 
-    this.buttonBgColor1 = "eaf3f3";
-    this.buttonBgColor2 = "eaf3f3";
-    this.buttonBgColor3 = "eaf3f3";
-    this.buttonBgColor4 = "eaf3f3";
+    this.buttonBgColor1 = "f3efe4";
+    this.buttonBgColor2 = "f3efe4";
+    this.buttonBgColor3 = "f3efe4";
+    this.buttonBgColor4 = "f3efe4";
+    this.buttonBgColor5 = "f3efe4";
     this.fontColor1 = "0a7a74";
     this.fontColor2 = "0a7a74";
     this.fontColor3 = "0a7a74";
     this.fontColor4 = "0a7a74";
+    this.fontColor5 = "0a7a74";
 
     dragulaService.drag.subscribe((value) => {
       console.log(`drag: ${value[0]}`);
@@ -209,29 +225,40 @@ export class TischplanComponent implements OnInit {
     }
   }
 
-
-
-
-
   private onDrag(args) {
     let [e, el] = args;
   }
 
   private onDrop(args) {
     let [e, el] = args;
-    console.log("Args = ");
+
+    console.log("Args = " + JSON.stringify(args));
+    console.log("Args1 = " + JSON.stringify(args[1]));
+    console.log("Args2 = " + JSON.stringify(args[2]));
+    console.log("Args3 = " + JSON.stringify(args[3]));
+    console.log("Args4 = " + JSON.stringify(args[4]));
+    console.log("e = " + JSON.stringify(e));
+    console.log("el = " + JSON.stringify(el));
+
     let information = args[0].innerText;
     let department = JSON.stringify(args[1].id);
-    let departementSubstring = department.substring(10, department.length - 1);
-    console.log(departementSubstring);
+    console.log("departement" + department);
+    let departementSubstring = department.substring(1, department.length - 1);
+    console.log("departementSubstring: " + departementSubstring);
     let tableNumber = args[1].innerText;
-    let tableNumberSubstring = "";
-    console.log("tableNumber" + tableNumber);
-    tableNumberSubstring = tableNumber.toString().match(/\d+/);
-    console.log("tableNumberSubstring" + tableNumberSubstring);
+    console.log("tableNumber: " + tableNumber);
+    let tableNumberSubstring = tableNumber.toString().match(/\d+/);
+    console.log("tableNumberSubstring: " + tableNumberSubstring);
     let dataString = [];
     dataString.push(information + departementSubstring + tableNumberSubstring);
-    //console.log(dataString);
+    let jBefore = tableNumber.toString().match(/\d+/g);
+    let j = jBefore[1];
+    //let j = jArray[1];
+    let addPlaceholderDataString = [];
+
+    addPlaceholderDataString.push(departementSubstring);
+    addPlaceholderDataString.push(tableNumberSubstring);
+    console.log('j ===================>>>>>>>>>>>' + addPlaceholderDataString + 'END');
     //console.log(departementSubstring);
     //console.log(tableNumberSubstring);
 
@@ -239,17 +266,21 @@ export class TischplanComponent implements OnInit {
       .subscribe(response => {
         // let arrayIndex = response[1];
         console.log("RESPONSE addInformationToTable:" + JSON.stringify(response));
-        if(response.tables[0].department === "Sonnberg-Zirbn") {
-          this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
-        }
-        else if(response.tables[0].department === "Panorama") {
-          this.tablesPanorama[response.tables[0].arrayIndex] = response.tables[0];
-        }
-        else if(response.tables[0].department === "Restaurant") {
-          this.tablesRestaurant[response.tables[0].arrayIndex] = response.tables[0];
-        }
-        else if(response.tables[0].department === "Wintergarten") {
-          this.tablesWintergarten[response.tables[0].arrayIndex] = response.tables[0];
+        if(response === null) {
+          return;
+        } else {
+          if (response.tables[0].department === "Sonnberg-Zirbn") {
+            this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+          }
+          else if (response.tables[0].department === "Bauernstube") {
+            this.tablesBauernstube[response.tables[0].arrayIndex] = response.tables[0];
+          }
+          else if (response.tables[0].department === "Restaurant") {
+            this.tablesRestaurant[response.tables[0].arrayIndex] = response.tables[0];
+          }
+          else if (response.tables[0].department === "Wintergarten") {
+            this.tablesWintergarten[response.tables[0].arrayIndex] = response.tables[0];
+          }
         }
         // console.log(this.tablesSonnbergZirbn[arrayIndex]);
       });
@@ -261,24 +292,26 @@ export class TischplanComponent implements OnInit {
         //console.log("arrayIndex:" + arrayIndex);
         //console.log("bgColor:" + JSON.stringify(response[0].tables[arrayIndex].bgColor));
         console.log("Response occupyTable:" + JSON.stringify(response));
-
-        if(response.tables[0].department === "Sonnberg-Zirbn") {
-          this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+        if(response === null) {
+          return;
+        } else {
+          if (response.tables[0].department === "Sonnberg-Zirbn") {
+            this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+          }
+          else if (response.tables[0].department === "Bauernstube") {
+            this.tablesBauernstube[response.tables[0].arrayIndex] = response.tables[0];
+          }
+          else if (response.tables[0].department === "Restaurant") {
+            this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+          }
+          else if (response.tables[0].department === "Wintergarten") {
+            this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+          }
         }
-        else if(response.tables[0].department === "Panorama") {
-          this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
-        }
-        else if(response.tables[0].department === "Restaurant") {
-          this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
-        }
-        else if(response.tables[0].department === "Wintergarten") {
-          this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
-        }
-
 
         //console.log("bgColor:" + JSON.stringify(this.tablesSonnbergZirbn[arrayIndex]));
       });
-
+/*
     this.tischplanService.removePlaceholder(dataString)
       .subscribe(response => {
         //let arrayIndex = response[1];
@@ -286,8 +319,8 @@ export class TischplanComponent implements OnInit {
         if(response.tables[0].department === "Sonnberg-Zirbn") {
           this.tablesSonnbergZirbn[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
         }
-        else if(response.tables[0].department === "Panorama") {
-          this.tablesPanorama[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
+        else if(response.tables[0].department === "Bauernstube") {
+          this.tablesBauernstube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
         }
         else if(response.tables[0].department === "Restaurant") {
           this.tablesRestaurant[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
@@ -295,11 +328,30 @@ export class TischplanComponent implements OnInit {
         else if(response.tables[0].department === "Wintergarten") {
           this.tablesWintergarten[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
         }
-
-
-
-        //console.log("placeholder:" + JSON.stringify(this.tablesSonnbergZirbn[arrayIndex]));
       });
+
+        this.tischplanService.addPlaceholder(addPlaceholderDataString)
+          .subscribe(response => {
+          console.log("Add placeholder!");
+          console.log("Add placeholder! : " + JSON.stringify(response));
+          console.log("placeholder:" + JSON.stringify(response[0].tables[j].placeholder));
+          //console.log(this.tablesSonnbergZirbn[j].placeholder);
+          if(response[0].tables[j].department === "Sonnberg-Zirbn") {
+            this.tablesSonnbergZirbn[j].placeholder = response[0].tables[j].placeholder;
+          }
+          else if(response[0].tables[j].department === "Bauernstube") {
+            this.tablesBauernstube[j].placeholder = response[0].tables[j].placeholder;
+          }
+          else if(response[0].tables[j].department === "Restaurant") {
+            this.tablesRestaurant[j].placeholder = response[0].tables[j].placeholder;
+          }
+          else if(response[0].tables[j].department === "Wintergarten") {
+            this.tablesWintergarten[j].placeholder = response[0].tables[j].placeholder;
+          }
+        });
+ */
+        //console.log("placeholder:" + JSON.stringify(this.tablesSonnbergZirbn[arrayIndex]));
+
   }
 
   private onOver(args) {
@@ -342,105 +394,123 @@ export class TischplanComponent implements OnInit {
       console.log("Dispense Table:");
       console.log("bgColor:" + JSON.stringify(response[0].tables[j].bgColor));
       console.log("isBesetzt:" + JSON.stringify(response[0].tables[j].isBesetzt));
-
-      if(response[0].tables[j].department === "Sonnberg-Zirbn") {
-        this.tablesSonnbergZirbn[j] = response[0].tables[j];
-      }
-      else if(response[0].tables[j].department === "Panorama") {
-        this.tablesSonnbergZirbn[j] = response[0].tables[j];
-      }
-      else if(response[0].tables[j].department === "Restaurant") {
-        this.tablesSonnbergZirbn[j] = response[0].tables[j];
-      }
-      else if(response[0].tables[j].department === "Wintergarten") {
-        this.tablesSonnbergZirbn[j] = response[0].tables[j];
+      if(response === null) {
+        return;
+      } else {
+        if (response[0].tables[j].department === "Sonnberg-Zirbn") {
+          this.tablesSonnbergZirbn[j] = response[0].tables[j];
+        }
+        else if (response[0].tables[j].department === "Bauernstube") {
+          this.tablesBauernstube[j] = response[0].tables[j];
+        }
+        else if (response[0].tables[j].department === "Restaurant") {
+          this.tablesSonnbergZirbn[j] = response[0].tables[j];
+        }
+        else if (response[0].tables[j].department === "Wintergarten") {
+          this.tablesSonnbergZirbn[j] = response[0].tables[j];
+        }
       }
     });
 
     this.tischplanService.addPlaceholder(table).subscribe(response => {
       console.log("Add placeholder!");
+      console.log("Add placeholder! table ... " + JSON.stringify(table));
       console.log("placeholder:" + JSON.stringify(response[0].tables[j].placeholder));
-      //console.log(this.tablesSonnbergZirbn[j].placeholder);
-      if(response[0].tables[j].department === "Sonnberg-Zirbn") {
-        this.tablesSonnbergZirbn[j].placeholder = response[0].tables[j].placeholder;
-      }
-      else if(response[0].tables[j].department === "Panorama") {
-        this.tablesPanorama[j].placeholder = response[0].tables[j].placeholder;
-      }
-      else if(response[0].tables[j].department === "Restaurant") {
-        this.tablesRestaurant[j].placeholder = response[0].tables[j].placeholder;
-      }
-      else if(response[0].tables[j].department === "Wintergarten") {
-        this.tablesWintergarten[j].placeholder = response[0].tables[j].placeholder;
+      if(response === null) {
+        return;
+      } else {
+        //console.log(this.tablesSonnbergZirbn[j].placeholder);
+        if (response[0].tables[j].department === "Sonnberg-Zirbn") {
+          this.tablesSonnbergZirbn[j].placeholder = response[0].tables[j].placeholder;
+        }
+        else if (response[0].tables[j].department === "Bauernstube") {
+          this.tablesBauernstube[j].placeholder = response[0].tables[j].placeholder;
+        }
+        else if (response[0].tables[j].department === "Restaurant") {
+          this.tablesRestaurant[j].placeholder = response[0].tables[j].placeholder;
+        }
+        else if (response[0].tables[j].department === "Wintergarten") {
+          this.tablesWintergarten[j].placeholder = response[0].tables[j].placeholder;
+        }
       }
     });
 
   }
 
-  showSonnbergZirbn() {
+  showBauernStubn() {
 
-    console.log("showSonnbergZirbn!");
-    this.showSonnbergZirbnBool = true;
-    this.showPanoramaBool = false;
-    this.showRestaurantBool = false;
-    this.showWintergartenBool = false;
+    console.log("showBauernStubn!");
+    this.showBauernStubnBool = true;
+    this.showBerglerBool = false;
+    this.showWaeldlerBool = false;
+    this.showEdelweissBool = false;
+    this.showTeeStubeBool = false;
 
-    if (this.buttonBgColor1 === "eaf3f3") {
+    if (this.buttonBgColor1 === "f3efe4") {
       this.buttonBgColor1 = "0a7a74";
-      this.buttonBgColor2 = "eaf3f3";
-      this.buttonBgColor3 = "eaf3f3";
-      this.buttonBgColor4 = "eaf3f3"
+      this.buttonBgColor2 = "f3efe4";
+      this.buttonBgColor3 = "f3efe4";
+      this.buttonBgColor4 = "f3efe4";
+      this.buttonBgColor5 = "f3efe4";
     } else {
-      this.buttonBgColor1 = "eaf3f3";
+      this.buttonBgColor1 = "f3efe4";
     }
     if (this.fontColor1 === "0a7a74") {
       this.fontColor1 = "eaf3f3";
       this.fontColor2 = "0a7a74";
       this.fontColor3 = "0a7a74";
-      this.fontColor4 = "0a7a74"
+      this.fontColor4 = "0a7a74";
+      this.fontColor5 = "0a7a74";
     } else {
       this.fontColor1 = "0a7a74";
     }
   }
 
-  showPanorama() {
-    console.log("showPanorama!");
-    this.showSonnbergZirbnBool = false;
-    this.showPanoramaBool = true;
-    console.log(this.showPanoramaBool);
-    this.showRestaurantBool = false;
-    this.showWintergartenBool = false;
+  showBergler() {
+    console.log("showBergler!");
+    this.showBauernStubnBool = false;
+    this.showBerglerBool = true;
+    console.log(this.showBerglerBool);
+    this.showWaeldlerBool = false;
+    this.showEdelweissBool = false;
+    this.showTeeStubeBool = false;
 
-    if (this.buttonBgColor2 === "eaf3f3") {
+
+    if (this.buttonBgColor2 === "f3efe4") {
       this.buttonBgColor2 = "0a7a74";
-      this.buttonBgColor1 = "eaf3f3";
-      this.buttonBgColor3 = "eaf3f3";
-      this.buttonBgColor4 = "eaf3f3"
+      this.buttonBgColor1 = "f3efe4";
+      this.buttonBgColor3 = "f3efe4";
+      this.buttonBgColor4 = "f3efe4";
+      this.buttonBgColor5 = "f3efe4";
     } else {
-      this.buttonBgColor2 = "eaf3f3";
+      this.buttonBgColor2 = "f3efe4";
     }
     if (this.fontColor2 === "0a7a74") {
       this.fontColor2 = "eaf3f3";
       this.fontColor1 = "0a7a74";
       this.fontColor3 = "0a7a74";
-      this.fontColor4 = "0a7a74"
+      this.fontColor4 = "0a7a74";
+      this.fontColor5 = "0a7a74";
     } else {
       this.fontColor2 = "0a7a74";
     }
   }
 
-  showRestaurant() {
-    console.log("showRestaurant!");
-    this.showSonnbergZirbnBool = false;
-    this.showPanoramaBool = false;
-    this.showRestaurantBool = true;
-    this.showWintergartenBool = false;
+  showWaeldler() {
+    console.log("showWaeldler!");
+    this.showBauernStubnBool = false;
+    this.showBerglerBool = false;
+    this.showWaeldlerBool = true;
+    this.showEdelweissBool = false;
+    this.showTeeStubeBool = false;
 
-    if (this.buttonBgColor3 === "eaf3f3") {
+
+    if (this.buttonBgColor3 === "f3efe4") {
       this.buttonBgColor3 = "0a7a74";
-      this.buttonBgColor1 = "eaf3f3";
-      this.buttonBgColor2 = "eaf3f3";
-      this.buttonBgColor4 = "eaf3f3"
+      this.buttonBgColor1 = "f3efe4";
+      this.buttonBgColor2 = "f3efe4";
+      this.buttonBgColor4 = "f3efe4";
+      this.buttonBgColor5 = "f3efe4";
     } else {
       this.buttonBgColor3 = "eaf3f3";
     }
@@ -448,24 +518,27 @@ export class TischplanComponent implements OnInit {
       this.fontColor3 = "eaf3f3";
       this.fontColor1 = "0a7a74";
       this.fontColor2 = "0a7a74";
-      this.fontColor4 = "0a7a74"
+      this.fontColor4 = "0a7a74";
+      this.fontColor5 = "0a7a74";
     } else {
       this.fontColor3 = "0a7a74";
     }
   }
 
-  showWintergarten() {
-    console.log("showWintergarten!");
-    this.showSonnbergZirbnBool = false;
-    this.showPanoramaBool = false;
-    this.showRestaurantBool = false;
-    this.showWintergartenBool = true;
+  showEdelweiss() {
+    console.log("showEdelweiss!");
+    this.showBauernStubnBool = false;
+    this.showBerglerBool = false;
+    this.showWaeldlerBool = false;
+    this.showEdelweissBool = true;
+    this.showTeeStubeBool = false;
 
-    if (this.buttonBgColor4 === "eaf3f3") {
+    if (this.buttonBgColor4 === "f3efe4") {
       this.buttonBgColor4 = "0a7a74";
-      this.buttonBgColor1 = "eaf3f3";
-      this.buttonBgColor2 = "eaf3f3";
-      this.buttonBgColor3 = "eaf3f3"
+      this.buttonBgColor1 = "f3efe4";
+      this.buttonBgColor2 = "f3efe4";
+      this.buttonBgColor3 = "f3efe4";
+      this.buttonBgColor5 = "f3efe4";
     } else {
       this.buttonBgColor4 = "eaf3f3";
     }
@@ -473,11 +546,41 @@ export class TischplanComponent implements OnInit {
       this.fontColor4 = "eaf3f3";
       this.fontColor1 = "0a7a74";
       this.fontColor2 = "0a7a74";
-      this.fontColor3 = "0a7a74"
+      this.fontColor3 = "0a7a74";
+      this.fontColor5 = "0a7a74";
     } else {
       this.fontColor4 = "0a7a74";
     }
   }
+
+  showTeestube() {
+    console.log("showTeeStube!");
+    this.showBauernStubnBool = false;
+    this.showBerglerBool = false;
+    this.showWaeldlerBool = false;
+    this.showEdelweissBool = false;
+    this.showTeeStubeBool = true;
+
+    if (this.buttonBgColor5 === "f3efe4") {
+      this.buttonBgColor5 = "0a7a74";
+      this.buttonBgColor1 = "f3efe4";
+      this.buttonBgColor2 = "f3efe4";
+      this.buttonBgColor3 = "f3efe4";
+      this.buttonBgColor4 = "f3efe4";
+    } else {
+      this.buttonBgColor5 = "f3efe4";
+    }
+    if (this.fontColor5 === "0a7a74") {
+      this.fontColor5 = "eaf3f3";
+      this.fontColor4 = "0a7a74";
+      this.fontColor1 = "0a7a74";
+      this.fontColor2 = "0a7a74";
+      this.fontColor3 = "0a7a74"
+    } else {
+      this.fontColor5 = "0a7a74";
+    }
+  }
+
   moveTable(table, j) {
 
     console.log("moveTable clicked");
@@ -491,8 +594,8 @@ export class TischplanComponent implements OnInit {
 
       if (response[0].tables[j].department === "Sonnberg-Zirbn") {
         this.tablesSonnbergZirbn = response[0].tables;
-      } else if(response[0].tables[j].department === "Panorama") {
-        this.tablesPanorama = response[0].tables;
+      } else if(response[0].tables[j].department === "Bauernstube") {
+        this.tablesBauernstube = response[0].tables;
       } else if(response[0].tables[j].department === "Restaurant") {
         this.tablesRestaurant = response[0].tables;
       } else if(response[0].tables[j].department === "Wintergarten") {

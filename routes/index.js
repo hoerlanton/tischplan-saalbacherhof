@@ -1173,7 +1173,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [      {
                     "arrayIndex": "3",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "63",
                     "topValue": "440",
                     "leftValue": "400",
@@ -1198,7 +1198,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [      {
                     "arrayIndex": "2",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "62",
                     "topValue": "440",
                     "leftValue": "340",
@@ -1223,7 +1223,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [     {
                     "arrayIndex": "1",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "61",
                     "topValue": "440",
                     "leftValue": "280",
@@ -1352,7 +1352,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [      {
                     "arrayIndex": "3",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "63",
                     "topValue": "440",
                     "leftValue": "400",
@@ -1377,7 +1377,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [      {
                     "arrayIndex": "2",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "62",
                     "topValue": "440",
                     "leftValue": "340",
@@ -1402,7 +1402,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "4",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "64",
                     "topValue": "440",
                     "leftValue": "460",
@@ -1530,7 +1530,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [      {
                     "arrayIndex": "3",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "63",
                     "topValue": "440",
                     "leftValue": "400",
@@ -1555,7 +1555,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [         {
                     "arrayIndex": "5",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "65",
                     "topValue": "440",
                     "leftValue": "520",
@@ -1580,7 +1580,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "4",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "64",
                     "topValue": "440",
                     "leftValue": "460",
@@ -1708,7 +1708,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [       {
                     "arrayIndex": "6",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "66",
                     "topValue": "440",
                     "leftValue": "580",
@@ -1733,7 +1733,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [         {
                     "arrayIndex": "5",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "65",
                     "topValue": "440",
                     "leftValue": "520",
@@ -1758,7 +1758,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "4",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "64",
                     "topValue": "440",
                     "leftValue": "460",
@@ -1857,7 +1857,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "6",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "66",
                     "topValue": "440",
                     "leftValue": "580",
@@ -1882,7 +1882,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [          {
                     "arrayIndex": "5",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "65",
                     "topValue": "440",
                     "leftValue": "520",
@@ -1952,7 +1952,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "6",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "66",
                     "topValue": "440",
                     "leftValue": "580",
@@ -2084,7 +2084,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "8",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "68",
                     "topValue": "280",
                     "leftValue": "580",
@@ -2109,7 +2109,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "9",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "69",
                     "topValue": "220",
                     "leftValue": "580",
@@ -2134,7 +2134,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "10",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "70",
                     "topValue": "160",
                     "leftValue": "580",
@@ -2236,7 +2236,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "9",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "69",
                     "topValue": "220",
                     "leftValue": "580",
@@ -2261,7 +2261,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "10",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "70",
                     "topValue": "160",
                     "leftValue": "580",
@@ -2334,7 +2334,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "10",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "70",
                     "topValue": "160",
                     "leftValue": "580",
@@ -2466,7 +2466,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [         {
                     "arrayIndex": "12",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "72",
                     "topValue": "220",
                     "leftValue": "460",
@@ -2491,7 +2491,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "13",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "73",
                     "topValue": "280",
                     "leftValue": "460",
@@ -2516,7 +2516,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "14",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "74",
                     "topValue": "340",
                     "leftValue": "460",
@@ -2618,7 +2618,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "13",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "73",
                     "topValue": "280",
                     "leftValue": "460",
@@ -2643,7 +2643,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "14",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "74",
                     "topValue": "340",
                     "leftValue": "460",
@@ -2713,7 +2713,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "14",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "74",
                     "topValue": "340",
                     "leftValue": "460",
@@ -2846,7 +2846,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "16",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "76",
                     "topValue": "280",
                     "leftValue": "340",
@@ -2871,7 +2871,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "17",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "77",
                     "topValue": "220",
                     "leftValue": "340",
@@ -2896,7 +2896,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "18",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "78",
                     "topValue": "160",
                     "leftValue": "340",
@@ -2998,7 +2998,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "17",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "77",
                     "topValue": "220",
                     "leftValue": "340",
@@ -3023,7 +3023,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "18",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "78",
                     "topValue": "160",
                     "leftValue": "340",
@@ -3096,7 +3096,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "18",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "78",
                     "topValue": "160",
                     "leftValue": "340",
@@ -3229,7 +3229,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [         {
                     "arrayIndex": "20",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "80",
                     "topValue": "280",
                     "leftValue": "220",
@@ -3254,7 +3254,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [       {
                     "arrayIndex": "21",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "81",
                     "topValue": "220",
                     "leftValue": "220",
@@ -3279,7 +3279,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "22",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "82",
                     "topValue": "160",
                     "leftValue": "220",
@@ -3381,7 +3381,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [       {
                     "arrayIndex": "21",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "81",
                     "topValue": "220",
                     "leftValue": "220",
@@ -3406,7 +3406,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "22",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "82",
                     "topValue": "160",
                     "leftValue": "220",
@@ -3479,7 +3479,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "22",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "82",
                     "topValue": "160",
                     "leftValue": "220",
@@ -3611,7 +3611,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [         {
                     "arrayIndex": "24",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "84",
                     "topValue": "220",
                     "leftValue": "60",
@@ -3636,7 +3636,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "25",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "85",
                     "topValue": "280",
                     "leftValue": "60",
@@ -3661,7 +3661,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "26",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "86",
                     "topValue": "340",
                     "leftValue": "60",
@@ -3792,7 +3792,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "25",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "85",
                     "topValue": "280",
                     "leftValue": "60",
@@ -3817,7 +3817,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "26",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "86",
                     "topValue": "340",
                     "leftValue": "60",
@@ -3842,7 +3842,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "27",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "87",
                     "topValue": "400",
                     "leftValue": "60",
@@ -3970,7 +3970,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "28",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "88",
                     "topValue": "460",
                     "leftValue": "60",
@@ -3995,7 +3995,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "26",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "86",
                     "topValue": "340",
                     "leftValue": "60",
@@ -4020,7 +4020,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "27",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "87",
                     "topValue": "400",
                     "leftValue": "60",
@@ -4149,7 +4149,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "28",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "88",
                     "topValue": "460",
                     "leftValue": "60",
@@ -4174,7 +4174,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [            {
                     "arrayIndex": "29",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "89",
                     "topValue": "520",
                     "leftValue": "60",
@@ -4199,7 +4199,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "27",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "87",
                     "topValue": "400",
                     "leftValue": "60",
@@ -4298,7 +4298,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [        {
                     "arrayIndex": "28",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "88",
                     "topValue": "460",
                     "leftValue": "60",
@@ -4323,7 +4323,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [            {
                     "arrayIndex": "29",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "89",
                     "topValue": "520",
                     "leftValue": "60",
@@ -4394,7 +4394,7 @@ router.post('/moveTable', function(req, res, next) {
             }, { $push: { tables: {
                 $each: [            {
                     "arrayIndex": "29",
-                    "department": "Panorama",
+                    "department": "Bauernstube",
                     "number": "89",
                     "topValue": "520",
                     "leftValue": "60",
@@ -4834,38 +4834,44 @@ router.post('/occupyTable', function(req, res, next) {
     //console.log(JSON.stringify(req.body));
     let departmentValueDB = "";
     let departmentValue = "";
+    let tableValueArray = [];
     let tableValue = "";
     let data = JSON.stringify(req.body);
     let splitted = data.split("\\");
-    //console.log(splitted);
+    console.log(splitted);
     let informationElements2 = [];
+    let value = "nAnreise";
+    let infoElementString = "";
     for (let s = 0; s < splitted.length; s++){
         informationElements2.push(splitted[s].split(":"));
     }
-    //console.log(informationElements2);
-
-    if(informationElements2.length >= 10) {
+    console.log(informationElements2);
+    let informationElements2Length = informationElements2.length;
+    console.log(informationElements2Length);
+    infoElementString = JSON.stringify(informationElements2);
+    if(infoElementString.indexOf(value) != -1 && infoElementString.indexOf('nKAT') != -1) {
         console.log("Im-Haus-Liste");
-        departmentValue = informationElements2[9][0].substring(1, informationElements2[9][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
-        tableValue = informationElements2[9][0].toString().match(/\d+/);
-        //console.log(departmentValueDB);
-        //console.log(tableValue);
-        //console.log(occupyTable);
-    } else if (informationElements2.length === 9) {
-        console.log("Anreise");
-        departmentValue = informationElements2[8][0].substring(1, informationElements2[8][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
-        tableValue = informationElements2[8][0].toString().match(/\d+/);
-    } else {
+        console.log(informationElements2[informationElements2Length - 1][0]);
+        departmentValue = informationElements2[informationElements2Length - 1][0].substring(1, informationElements2[informationElements2Length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
+        tableValueArray = informationElements2[informationElements2Length - 1][0].toString().match(/\d+/);
+        tableValue = tableValueArray[0];
+    } else if (infoElementString.indexOf('nTrace') != -1) {
         console.log("Trace");
         departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
-        tableValue = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
+        tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
+        tableValue = tableValueArray[0];
+    } else {
+        console.log("Anreise");
+        departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2Length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
+        tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
+        tableValue = tableValueArray[0];
     }
 
     if(departmentValue === "SonnbergZirbn") {
         departmentValueDB = "Sonnberg-Zirbn";
     }
-    else if(departmentValue === "Panorama") {
-        departmentValueDB = "Panorama";
+    else if(departmentValue === "Bauernstube") {
+        departmentValueDB = "Bauernstube";
     }
     else if(departmentValue === "Restaurant") {
         departmentValueDB = "Restaurant";
@@ -4876,7 +4882,7 @@ router.post('/occupyTable', function(req, res, next) {
 
     db.hubertusTables.update(
         {department: departmentValueDB,
-            "tables.number": tableValue[0]},
+            "tables.number": tableValue},
         {$set: {
             "tables.$.bgColor": "#0a7a74",
             "tables.$.isBesetzt": "true"
@@ -4891,7 +4897,7 @@ router.post('/occupyTable', function(req, res, next) {
         db.hubertusTables.findOne(
             {
                 "department": departmentValueDB,
-                "tables.number": tableValue[0]
+                "tables.number": tableValue
             },
             {
                 "tables.$": 1,
@@ -4901,7 +4907,7 @@ router.post('/occupyTable', function(req, res, next) {
                     res.send(err);
                 }
                 res.json(tables);
-                console.log(JSON.stringify(tables));
+                console.log('occupy Table response:' + JSON.stringify(tables));
             });
     }, 100);
 });
@@ -4919,35 +4925,44 @@ router.post('/dispenseTable', function(req, res, next) {
             "tables.$.isBesetzt": "false",
         }, $unset: {
             "tables.$.nameValue": 1,
-            "tables.$.spracheValue": 1,
+            "tables.$.katValue": 1,
             "tables.$.zimmernummerValue": 1,
             "tables.$.preistypValue": 1,
             "tables.$.anreiseValue": 1,
             "tables.$.abreiseValue": 1,
             "tables.$.personenAnzahlValue": 1,
-            "tables.$.rbsouValue": 1,
+            "tables.$.notiz1Value": 1,
             "tables.$.notiz2Value": 1,
             "tables.$.trace": 1,
+            "tables.$.bemerkungValue": 1,
+            "tables.$.bemerkungValue1":  1,
+            "tables.$.bemerkungValue2": 1,
             "tables.$.nameValue2": 1,
-            "tables.$.spracheValue2": 1,
+            "tables.$.katValue2": 1,
             "tables.$.zimmernummerValue2": 1,
             "tables.$.preistypValue2": 1,
             "tables.$.anreiseValue2": 1,
             "tables.$.abreiseValue2": 1,
             "tables.$.personenAnzahlValue2": 1,
-            "tables.$.rbsouValue2": 1,
-            "tables.$.notiz2Value2": 1,
+            "tables.$.notiz3Value": 1,
+            "tables.$.notiz4Value": 1,
             "tables.$.trace2": 1,
+            "tables.$.bemerkungValue3": 1,
+            "tables.$.bemerkungValue4":  1,
+            "tables.$.bemerkungValue5": 1,
             "tables.$.nameValue3": 1,
-            "tables.$.spracheValue3": 1,
+            "tables.$.katValue3": 1,
             "tables.$.zimmernummerValue3": 1,
             "tables.$.preistypValue3": 1,
             "tables.$.anreiseValue3": 1,
             "tables.$.abreiseValue3": 1,
             "tables.$.personenAnzahlValue3": 1,
-            "tables.$.rbsouValue3": 1,
-            "tables.$.notiz2Value3": 1,
+            "tables.$.notiz5Value": 1,
+            "tables.$.notiz6Value": 1,
             "tables.$.trace3": 1,
+            "tables.$.bemerkungValue6": 1,
+            "tables.$.bemerkungValue7":  1,
+            "tables.$.bemerkungValue8": 1
         } },
         new: false
     }, function (err, tables) {
@@ -4982,32 +4997,41 @@ router.post('/removePlaceholder', function(req, res, next) {
     let departmentValue = "";
     let tableValue = "";
     let departmentValueDB = "";
+    let tableValueArray = [];
+    let value = "nAnreise";
     //console.log(splitted);
     let informationElements2 = [];
+    let infoElementString = "";
     for (let s = 0; s < splitted.length; s++){
         informationElements2.push(splitted[s].split(":"));
     }
+    console.log('removePlaceholder: array: ');
+    console.log(informationElements2);
+    infoElementString = JSON.stringify(informationElements2);
 
-    if(informationElements2.length >= 10) {
-        console.log("Im-Haus-Liste");
-        departmentValue = informationElements2[9][0].substring(1, informationElements2[9][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
-        tableValue = informationElements2[9][0].toString().match(/\d+/);
-    } else if (informationElements2.length === 9) {
-        console.log("Anreise");
-        departmentValue = informationElements2[8][0].substring(1, informationElements2[8][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
-        tableValue = informationElements2[8][0].toString().match(/\d+/);
-    } else {
-        console.log("Trace");
-        departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
-        tableValue = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
-    }
+    if(infoElementString.indexOf(value) != -1 && infoElementString.indexOf('nKAT') != -1) {
+            console.log("Im-Haus-Liste");
+            departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
+            tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
+            tableValue = tableValueArray[0];
+    } else if (infoElementString.indexOf('nTrace') != -1) {
+            console.log("Trace");
+            departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
+            tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
+            tableValue = tableValueArray[0];
+        } else {
+            console.log("Anreise");
+            departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
+            tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
+            tableValue = tableValueArray[0];
+        }
 
 
     if(departmentValue === "SonnbergZirbn") {
         departmentValueDB = "Sonnberg-Zirbn";
     }
-    else if(departmentValue === "Panorama") {
-        departmentValueDB = "Panorama";
+    else if(departmentValue === "Bauernstube") {
+        departmentValueDB = "Bauernstube";
     }
     else if(departmentValue === "Restaurant") {
         departmentValueDB = "Restaurant";
@@ -5016,14 +5040,13 @@ router.post('/removePlaceholder', function(req, res, next) {
         departmentValueDB = "Wintergarten";
     }
 
-    //console.log(departmentValueDB);
-    //console.log(tableValue);
+    console.log('removePlaceholder:' + departmentValue);
+    console.log('removePlaceholder:' + tableValue);
 
-    //console.log(occupyTable);
     db.hubertusTables.update(
         {
             department: departmentValueDB,
-            "tables.number": tableValue[0]
+            "tables.number": tableValue
         },
         {$set: {
             "tables.$.placeholder": "false",
@@ -5038,7 +5061,7 @@ router.post('/removePlaceholder', function(req, res, next) {
         db.hubertusTables.findOne(
             {
                 department: departmentValueDB,
-                "tables.number": tableValue[0]
+                "tables.number": tableValue
             },{
                 "tables.$": 1,
             }, function (err, tables) {
@@ -5046,8 +5069,10 @@ router.post('/removePlaceholder', function(req, res, next) {
                     res.send(err);
                 }
                 res.json(tables);
+                console.log("removePlaceholder response: " + JSON.stringify(tables));
             });
     }, 100);
+
 });
 
 //addPlaceholder
@@ -5055,33 +5080,71 @@ router.post('/addPlaceholder', function(req, res, next) {
     //JSON string is parsed to a JSON object
     console.log("addPlaceholder request made to /addPlaceholder");
     let addPlaceholder = req.body;
-    //console.log(occupyTable);
-
-    db.hubertusTables.update(
-        {department: addPlaceholder.department,
-            "tables.number": addPlaceholder.number} ,
-        {$set: {
-            "tables.$.placeholder": "true",
-        }}, function (err, tables) {
-            if (err) {
-                console.log("Error");
-            }
-            console.log("No Error");
-        });
-
-    setTimeout(function() {
-        db.hubertusTables.find(
+    console.log(addPlaceholder);
+    if (addPlaceholder.length === 2) {
+        let department = addPlaceholder[0];
+        let tableNumber = addPlaceholder[1];
+        console.log("department: " + department + ' ' + tableNumber);
+        setTimeout(function() {
+        db.hubertusTables.update(
+            {
+                department: department,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.placeholder": "true",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("No Error");
+            });
+        }, 100);
+        setTimeout(function() {
+            db.hubertusTables.find(
+                {
+                    department: department,
+                    "tables.number": tableNumber
+                }, function (err, tables) {
+                    if (err) {
+                        res.send(err);
+                    }
+                    res.json(tables);
+                    console.log('Response tables addPlaceholder' + JSON.stringify(tables));
+                });
+        }, 200);
+    } else {
+        db.hubertusTables.update(
             {
                 department: addPlaceholder.department,
                 "tables.number": addPlaceholder.number
+            },
+            {
+                $set: {
+                    "tables.$.placeholder": "true",
+                }
             }, function (err, tables) {
                 if (err) {
-                    res.send(err);
+                    console.log("Error");
                 }
-                res.json(tables);
-                console.log(JSON.stringify(tables));
+                console.log("No Error");
             });
-    }, 100);
+        setTimeout(function () {
+            db.hubertusTables.find(
+                {
+                    department: addPlaceholder.department,
+                    "tables.number": addPlaceholder.number
+                }, function (err, tables) {
+                    if (err) {
+                        res.send(err);
+                    }
+                    res.json(tables);
+                    console.log(JSON.stringify(tables));
+                });
+        }, 100);
+    }
 });
 
 
@@ -5095,23 +5158,30 @@ router.post('/addInformationToTable', function(req, res, next) {
     let informationElements2 = [];
     let departmentValueDB = "";
     let nameValue = "";
-    let spracheValue = "";
+    let katValue = "";
     let zimmernummerValue = "";
     let preistypValue = "";
     let anreiseValue = "";
     let abreiseValue = "";
     let personenAnzahlValue = "";
-    let rbsouValue = "";
     let notiz2Value = "";
+    let notiz1Value = "";
     let departmentValue = "";
     let tableValue = "";
+    let tableValueArray = [];
     let trace = "";
+    let bemerkungValue = "";
+    let bemerkungValue1 = "";
+    let bemerkungValue2 = "";
+    let value = "nAnreise";
+    let infoElementString = "";
+    let bermerkungValueConcatenated = "";
 
     for (let s = 0; s < splitted.length; s++){
         informationElements2.push(splitted[s].split(":"));
     }
 
-    console.log(informationElements2);
+    console.log('informationElements2 length: -> ' + informationElements2.length);
     //console.log(informationElements2[0][0]);
     //console.log(informationElements2[1][0]);
     //console.log(informationElements2[2][0]);
@@ -5122,33 +5192,41 @@ router.post('/addInformationToTable', function(req, res, next) {
     //console.log(informationElements2[7][0]);
     //console.log(informationElements2[8][0]);
     //console.log(informationElements2[9][0]);
-    if(informationElements2.length >= 10) {
-        console.log("Im Haus Liste gedropped");
-        nameValue = informationElements2[0][1].substring(1, informationElements2[0][1].length);
-        spracheValue = informationElements2[1][1].substring(1, informationElements2[1][1].length);
-        zimmernummerValue = informationElements2[2][1].substring(1, informationElements2[2][1].length);
-        preistypValue = informationElements2[3][1].substring(1, informationElements2[3][1].length);
-        anreiseValue = informationElements2[4][1].substring(1, informationElements2[4][1].length);
-        abreiseValue = informationElements2[5][1].substring(1, informationElements2[5][1].length);
-        personenAnzahlValue = informationElements2[6][1].substring(1, informationElements2[6][1].length);
-        rbsouValue = informationElements2[7][1].substring(1, informationElements2[7][1].length);
-        notiz2Value = informationElements2[8][1].substring(1, informationElements2[8][1].length);
-        departmentValue = informationElements2[9][0].substring(1, informationElements2[9][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
-        tableValue = informationElements2[9][0].toString().match(/\d+/);
 
-    } else if (informationElements2.length === 9) {
-        console.log("Anreise Liste gedropped");
+    console.log(informationElements2);
+    console.log(informationElements2.includes('nTrace'));
+    console.log(informationElements2.includes('nAnreise'));
+
+    infoElementString = JSON.stringify(informationElements2);
+
+    console.log(informationElements2[3][1]);
+
+    if (infoElementString.indexOf(value) != -1){
+        console.log('!!!!!!!!!!!!<:::::::::::::::::::::::::::::::::::::::');
+        }
+
+    if(infoElementString.indexOf(value) != -1 && infoElementString.indexOf('nKAT') != -1) {
+        console.log("Im Haus Liste gedropped");
         nameValue = informationElements2[0][1].substring(1, informationElements2[0][1].length);
         zimmernummerValue = informationElements2[1][1].substring(1, informationElements2[1][1].length);
         preistypValue = informationElements2[2][1].substring(1, informationElements2[2][1].length);
-        anreiseValue = informationElements2[3][2].substring(1, informationElements2[3][2].length);
+        anreiseValue = informationElements2[3][1].substring(1, informationElements2[3][1].length);
         abreiseValue = informationElements2[4][1].substring(1, informationElements2[4][1].length);
         personenAnzahlValue = informationElements2[5][1].substring(1, informationElements2[5][1].length);
-        rbsouValue = informationElements2[6][1].substring(1, informationElements2[6][1].length);
-        notiz2Value = informationElements2[7][1].substring(1, informationElements2[7][1].length);
-        departmentValue = informationElements2[8][0].substring(1, informationElements2[8][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
-        tableValue = informationElements2[8][0].toString().match(/\d+/);
-    } else {
+        katValue = informationElements2[6][1].substring(1, informationElements2[6][1].length);
+        notiz1Value = informationElements2[7][1].substring(1, informationElements2[7][1].length);
+        notiz2Value = informationElements2[8][1].substring(1, informationElements2[8][1].length);
+        bemerkungValue = informationElements2[9][1].substring(1, informationElements2[9][1].length);
+        if (informationElements2.length === 12) {
+            bemerkungValue1 = informationElements2[10][0].substring(1, informationElements2[10][0].length);
+            bemerkungValue2 = informationElements2[informationElements2.length - 2][0].substring(1, informationElements2[informationElements2.length - 2][0].length);
+        } else if (informationElements2.length === 11) {
+            bemerkungValue1 = informationElements2[10][0].substring(1, informationElements2[10][0].length);
+        }
+        departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
+        tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
+        tableValue = tableValueArray[0];
+    } else if (infoElementString.indexOf('nTrace') != -1) {
         console.log("Trace Liste gedropped");
         zimmernummerValue = informationElements2[0][1].substring(1, informationElements2[0][1].length);
         nameValue = informationElements2[1][1].substring(1, informationElements2[1][1].length);
@@ -5157,18 +5235,40 @@ router.post('/addInformationToTable', function(req, res, next) {
         abreiseValue = informationElements2[4][1].substring(1, informationElements2[4][1].length);
         trace = informationElements2[5][1].substring(1, informationElements2[5][1].length);
         departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
-        tableValue = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
+        tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
+        tableValue = tableValueArray[0];
+        katValue = "";
+    } else {
+        console.log("Anreise Liste gedropped");
+        nameValue = informationElements2[0][1].substring(1, informationElements2[0][1].length);
+        zimmernummerValue = informationElements2[1][1].substring(1, informationElements2[1][1].length);
+        preistypValue = informationElements2[2][1].substring(1, informationElements2[2][1].length);
+        abreiseValue = informationElements2[3][1].substring(1, informationElements2[3][1].length);
+        personenAnzahlValue = informationElements2[4][1].substring(1, informationElements2[4][1].length);
+        katValue = informationElements2[5][1].substring(1, informationElements2[5][1].length);
+        notiz1Value = informationElements2[6][1].substring(1, informationElements2[6][1].length);
+        notiz2Value = informationElements2[7][1].substring(1, informationElements2[7][1].length);
+        bemerkungValue = informationElements2[8][1].substring(1, informationElements2[8][1].length);
+        if (informationElements2.length === 12) {
+            bemerkungValue1 = informationElements2[9][0].substring(1, informationElements2[10][0].length);
+            bemerkungValue2 = informationElements2[informationElements2.length - 2][0].substring(1, informationElements2[informationElements2.length - 2][0].length);
+        } else if (informationElements2.length === 11) {
+            bemerkungValue1 = informationElements2[9][0].substring(1, informationElements2[10][0].length);
+        }
+        departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
+        tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
+        tableValue = tableValueArray[0];
     }
 
 
-    console.log(" nameValue " + nameValue + " spracheValue " + spracheValue + " zimmernummerValue " + zimmernummerValue + " preistypValue " + preistypValue + " anreiseValue " + anreiseValue + " abreiseValue " + abreiseValue + " personenAnzahlValue " + personenAnzahlValue + " rbsouValue " + rbsouValue + " notiz2Value " + notiz2Value + " departmentValue " + departmentValue + " tableValue " + tableValue);
+    console.log(" nameValue " + nameValue + " zimmernummerValue " + zimmernummerValue + " preistypValue " + preistypValue + " anreiseValue " + anreiseValue + " abreiseValue " + abreiseValue + " personenAnzahlValue " + personenAnzahlValue + " katValue " + katValue + " notiz1Value " + notiz1Value + " notiz2Value " + notiz2Value + " bemerkungValue " + bemerkungValue + bemerkungValue1 + bemerkungValue2 + "tableValue" + tableValue + "departmentvalue" + departmentValue);
 
 
     if(departmentValue === "SonnbergZirbn") {
         departmentValueDB = "Sonnberg-Zirbn";
     }
-    else if(departmentValue === "Panorama") {
-        departmentValueDB = "Panorama";
+    else if(departmentValue === "Bauernstube") {
+        departmentValueDB = "Bauernstube";
     }
     else if(departmentValue === "Restaurant") {
         departmentValueDB = "Restaurant";
@@ -5177,12 +5277,11 @@ router.post('/addInformationToTable', function(req, res, next) {
         departmentValueDB = "Wintergarten";
     }
     console.log(departmentValueDB);
-    console.log(tableValue[0]);
     setTimeout(function() {
         db.hubertusTables.findOne(
             {
                 department: departmentValueDB,
-                "tables.number": tableValue[0]
+                "tables.number": tableValue
             },
             {
                 "tables.$": 1,
@@ -5193,6 +5292,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                 }
                 if (tablesfirst === null) {
                     console.log("tablesfirst is null");
+                    console.log(tablesfirst);
                     return;
                 }
                 console.log("Länge tables firstplace" + JSON.stringify(tablesfirst.tables[0]).length);
@@ -5200,20 +5300,23 @@ router.post('/addInformationToTable', function(req, res, next) {
                     db.hubertusTables.update(
                         {
                             department: departmentValueDB,
-                            "tables.number": tableValue[0]
+                            "tables.number": tableValue
                         },
                         {
                             $set: {
                                 "tables.$.nameValue": nameValue,
-                                "tables.$.spracheValue": spracheValue,
+                                "tables.$.katValue": katValue,
                                 "tables.$.zimmernummerValue": zimmernummerValue,
                                 "tables.$.preistypValue": preistypValue,
                                 "tables.$.anreiseValue": anreiseValue,
                                 "tables.$.abreiseValue": abreiseValue,
                                 "tables.$.personenAnzahlValue": personenAnzahlValue,
-                                "tables.$.rbsouValue": rbsouValue,
+                                "tables.$.notiz1Value": notiz1Value,
                                 "tables.$.notiz2Value": notiz2Value,
                                 "tables.$.trace": trace,
+                                "tables.$.bemerkungValue": bemerkungValue,
+                                "tables.$.bemerkungValue1":  bemerkungValue1,
+                                "tables.$.bemerkungValue2": bemerkungValue2
 
                             }
                         }, function (err, tables) {
@@ -5222,24 +5325,27 @@ router.post('/addInformationToTable', function(req, res, next) {
                             }
                             console.log("addInformationToTable updated successfully");
                         });
-                } else if (JSON.stringify(tablesfirst.tables[0]).length > 350 && JSON.stringify(tablesfirst.tables[0]).length < 600) {
+                } else if (JSON.stringify(tablesfirst.tables[0]).length > 350 && JSON.stringify(tablesfirst.tables[0]).length < 650) {
                     db.hubertusTables.update(
                         {
                             department: departmentValueDB,
-                            "tables.number": tableValue[0]
+                            "tables.number": tableValue
                         },
                         {
                             $set: {
                                 "tables.$.nameValue2": nameValue,
-                                "tables.$.spracheValue2": spracheValue,
+                                "tables.$.katValue2": katValue,
                                 "tables.$.zimmernummerValue2": zimmernummerValue,
                                 "tables.$.preistypValue2": preistypValue,
                                 "tables.$.anreiseValue2": anreiseValue,
                                 "tables.$.abreiseValue2": abreiseValue,
                                 "tables.$.personenAnzahlValue2": personenAnzahlValue,
-                                "tables.$.rbsouValue2": rbsouValue,
-                                "tables.$.notiz2Value2": notiz2Value,
+                                "tables.$.notiz3Value": notiz1Value,
+                                "tables.$.notiz4Value": notiz2Value,
                                 "tables.$.trace2": trace,
+                                "tables.$.bemerkungValue3": bemerkungValue,
+                                "tables.$.bemerkungValue4":  bemerkungValue1,
+                                "tables.$.bemerkungValue5": bemerkungValue2
                             }
                         }, function (err, tables) {
                             if (err) {
@@ -5247,24 +5353,27 @@ router.post('/addInformationToTable', function(req, res, next) {
                             }
                             console.log("addInformationToTable updated successfully");
                         });
-                } else if (JSON.stringify(tablesfirst.tables[0]).length > 600) {
+                } else if (JSON.stringify(tablesfirst.tables[0]).length > 650) {
                     db.hubertusTables.update(
                         {
                             department: departmentValueDB,
-                            "tables.number": tableValue[0]
+                            "tables.number": tableValue
                         },
                         {
                             $set: {
                                 "tables.$.nameValue3": nameValue,
-                                "tables.$.spracheValue3": spracheValue,
+                                "tables.$.katValue3": katValue,
                                 "tables.$.zimmernummerValue3": zimmernummerValue,
                                 "tables.$.preistypValue3": preistypValue,
                                 "tables.$.anreiseValue3": anreiseValue,
                                 "tables.$.abreiseValue3": abreiseValue,
                                 "tables.$.personenAnzahlValue3": personenAnzahlValue,
-                                "tables.$.rbsouValue3": rbsouValue,
-                                "tables.$.notiz2Value3": notiz2Value,
+                                "tables.$.notiz5Value": notiz1Value,
+                                "tables.$.notiz6Value": notiz2Value,
                                 "tables.$.trace3": trace,
+                                "tables.$.bemerkungValue6": bemerkungValue,
+                                "tables.$.bemerkungValue7":  bemerkungValue1,
+                                "tables.$.bemerkungValue8": bemerkungValue2
                             }
                         }, function (err, tables) {
                             if (err) {
@@ -5280,7 +5389,7 @@ router.post('/addInformationToTable', function(req, res, next) {
         db.hubertusTables.findOne(
             {
                 department: departmentValueDB,
-                "tables.number": tableValue[0]
+                "tables.number": tableValue
             },
             {
                 "tables.$": 1,
@@ -5290,10 +5399,9 @@ router.post('/addInformationToTable', function(req, res, next) {
                     res.send(err);
                 }
                 res.json(tables);
-                console.log(JSON.stringify(tables));
+                console.log(JSON.stringify('5306' + JSON.stringify(tables)));
             });
     }, 500);
 });
-
 
 module.exports = router;
