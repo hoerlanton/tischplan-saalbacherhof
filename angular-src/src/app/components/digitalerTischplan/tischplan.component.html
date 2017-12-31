@@ -36,58 +36,58 @@
         <div class="inner-table" style="padding: 0px 0px 0px 0px;">
           <div class="row3">
             <div class='wrapper' id="wrapper">
-              <div *ngIf="showSonnbergZirbnBool">
-                <div *ngFor="let tableSonnbergZirbn of tablesSonnbergZirbn; let j = index;">
-                  <div *ngIf="tablesSonnbergZirbn[j] !== tablesSonnbergZirbn[j+1]">
-                    <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableSonnbergZirbn, j)">{{tableSonnbergZirbn.isBesetzt === 'true' ? 'FREI MACHEN' : '' }}</button>
-                    <p><b> Tisch: </b>{{tableSonnbergZirbn.number}} </p><br>
-                    <div class='cards-container' id='containerSonnbergZirbn'  [ngStyle]="{'background-color': + tableSonnbergZirbn.bgColor}">
-                      <div class="table" [ngStyle]="{'background-color': '#' + tableSonnbergZirbn.bgColor}">
-                        <div *ngIf="tableSonnbergZirbn.isBesetzt === 'true'">
+              <div *ngIf="showBerglerBool">
+                <div *ngFor="let tableBerglerStubeHubertusStube of tablesBerglerStubeHubertusStube; let j = index;">
+                  <div *ngIf="tablesBerglerStubeHubertusStube[j] !== tablesBerglerStubeHubertusStube[j+1]">
+                    <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableBerglerStubeHubertusStube, j)">{{tableBerglerStubeHubertusStube.isBesetzt === 'true' ? 'FREI MACHEN' : '' }}</button>
+                    <p><b> Tisch: </b>{{tableBerglerStubeHubertusStube.number}} </p><br>
+                    <div class='cards-container' id='containerSonnbergZirbn'  [ngStyle]="{'background-color': + tableBerglerStubeHubertusStube.bgColor}">
+                      <div class="table" [ngStyle]="{'background-color': '#' + tableBerglerStubeHubertusStube.bgColor}">
+                        <div *ngIf="tableBerglerStubeHubertusStube.isBesetzt === 'true'">
                           <p style="background-color: #FFFFFF">
-                            <b> Name:</b>{{tableSonnbergZirbn.nameValue}}<br>
-                            <b> Sprache:</b>{{tableSonnbergZirbn.spracheValue}}<br>
-                            <b> Zimmernummer:</b>{{tableSonnbergZirbn.zimmernummerValue}}<br>
-                            <b> Preis Typ:</b>{{tableSonnbergZirbn.preistypValue}}<br>
-                            <b> Anreise Datum:</b>{{tableSonnbergZirbn.anreiseValue}}<br>
-                            <b> Abreise Datum:</b>{{tableSonnbergZirbn.abreiseValue}}<br>
-                            <b> Personenanzahl:</b>{{tableSonnbergZirbn.personenAnzahlValue}}<br>
-                            <b> RB/SOU:</b>{{tableSonnbergZirbn.rbsouValue}}<br>
-                            <b> Notiz2:</b>{{tableSonnbergZirbn.notiz2Value}}<br>
-                            <b> Trace:</b>{{tableSonnbergZirbn.trace}}
+                            <b> Name:</b>{{tableBerglerStubeHubertusStube.nameValue}}<br>
+                            <b> Sprache:</b>{{tableBerglerStubeHubertusStube.spracheValue}}<br>
+                            <b> Zimmernummer:</b>{{tableBerglerStubeHubertusStube.zimmernummerValue}}<br>
+                            <b> Preis Typ:</b>{{tableBerglerStubeHubertusStube.preistypValue}}<br>
+                            <b> Anreise Datum:</b>{{tableBerglerStubeHubertusStube.anreiseValue}}<br>
+                            <b> Abreise Datum:</b>{{tableBerglerStubeHubertusStube.abreiseValue}}<br>
+                            <b> Personenanzahl:</b>{{tableBerglerStubeHubertusStube.personenAnzahlValue}}<br>
+                            <b> RB/SOU:</b>{{tableBerglerStubeHubertusStube.rbsouValue}}<br>
+                            <b> Notiz2:</b>{{tableBerglerStubeHubertusStube.notiz2Value}}<br>
+                            <b> Trace:</b>{{tableBerglerStubeHubertusStube.trace}}
                           </p>
-                          <div *ngIf="tableSonnbergZirbn.nameValue2">
+                          <div *ngIf="tableBerglerStubeHubertusStube.nameValue2">
                             <p style="background-color: #FFFFFF">
-                              <b> Name:</b>{{tableSonnbergZirbn.nameValue2}}<br>
-                              <b> Sprache:</b>{{tableSonnbergZirbn.spracheValue2}}<br>
-                              <b> Zimmernummer:</b>{{tableSonnbergZirbn.zimmernummerValue2}}<br>
-                              <b> Preis Typ:</b>{{tableSonnbergZirbn.preistypValue2}}<br>
-                              <b> Anreise Datum:</b>{{tableSonnbergZirbn.anreiseValue2}}<br>
-                              <b> Abreise Datum:</b>{{tableSonnbergZirbn.abreiseValue2}}<br>
-                              <b> Personenanzahl:</b>{{tableSonnbergZirbn.personenAnzahlValue2}}<br>
-                              <b> RB/SOU:</b>{{tableSonnbergZirbn.rbsouValue2}}<br>
-                              <b> Notiz2:</b>{{tableSonnbergZirbn.notiz2Value2}}<br>
-                              <b> Trace:</b>{{tableSonnbergZirbn.trace2}}
+                              <b> Name:</b>{{tableBerglerStubeHubertusStube.nameValue2}}<br>
+                              <b> Sprache:</b>{{tableBerglerStubeHubertusStube.spracheValue2}}<br>
+                              <b> Zimmernummer:</b>{{tableBerglerStubeHubertusStube.zimmernummerValue2}}<br>
+                              <b> Preis Typ:</b>{{tableBerglerStubeHubertusStube.preistypValue2}}<br>
+                              <b> Anreise Datum:</b>{{tableBerglerStubeHubertusStube.anreiseValue2}}<br>
+                              <b> Abreise Datum:</b>{{tableBerglerStubeHubertusStube.abreiseValue2}}<br>
+                              <b> Personenanzahl:</b>{{tableBerglerStubeHubertusStube.personenAnzahlValue2}}<br>
+                              <b> RB/SOU:</b>{{tableBerglerStubeHubertusStube.rbsouValue2}}<br>
+                              <b> Notiz2:</b>{{tableBerglerStubeHubertusStube.notiz2Value2}}<br>
+                              <b> Trace:</b>{{tableBerglerStubeHubertusStube.trace2}}
                             </p>
                           </div>
-                          <div *ngIf="tableSonnbergZirbn.nameValue3">
+                          <div *ngIf="tableBerglerStubeHubertusStube.nameValue3">
                             <p style="background-color: #FFFFFF">
-                              <b> Name:</b>{{tableSonnbergZirbn.nameValue3}}<br>
-                              <b> Sprache:</b>{{tableSonnbergZirbn.spracheValue3}}<br>
-                              <b> Zimmernummer:</b>{{tableSonnbergZirbn.zimmernummerValue3}}<br>
-                              <b> Preis Typ:</b>{{tableSonnbergZirbn.preistypValue3}}<br>
-                              <b> Anreise Datum:</b>{{tableSonnbergZirbn.anreiseValue3}}<br>
-                              <b> Abreise Datum:</b>{{tableSonnbergZirbn.abreiseValue3}}<br>
-                              <b> Personenanzahl:</b>{{tableSonnbergZirbn.personenAnzahlValue3}}<br>
-                              <b> RB/SOU:</b>{{tableSonnbergZirbn.rbsouValue3}}<br>
-                              <b> Notiz2:</b>{{tableSonnbergZirbn.notiz2Value3}}<br>
-                              <b> Trace:</b>{{tableSonnbergZirbn.trace3}}
+                              <b> Name:</b>{{tableBerglerStubeHubertusStube.nameValue3}}<br>
+                              <b> Sprache:</b>{{tableBerglerStubeHubertusStube.spracheValue3}}<br>
+                              <b> Zimmernummer:</b>{{tableBerglerStubeHubertusStube.zimmernummerValue3}}<br>
+                              <b> Preis Typ:</b>{{tableBerglerStubeHubertusStube.preistypValue3}}<br>
+                              <b> Anreise Datum:</b>{{tableBerglerStubeHubertusStube.anreiseValue3}}<br>
+                              <b> Abreise Datum:</b>{{tableBerglerStubeHubertusStube.abreiseValue3}}<br>
+                              <b> Personenanzahl:</b>{{tableBerglerStubeHubertusStube.personenAnzahlValue3}}<br>
+                              <b> RB/SOU:</b>{{tableBerglerStubeHubertusStube.rbsouValue3}}<br>
+                              <b> Notiz2:</b>{{tableBerglerStubeHubertusStube.notiz2Value3}}<br>
+                              <b> Trace:</b>{{tableBerglerStubeHubertusStube.trace3}}
                             </p>
                           </div>
                         </div>
                       </div>
-                      <div *ngIf="tableSonnbergZirbn.placeholder === 'true'">
-                        <p [dragula]='"evented-bag"' id="Sonnberg-Zirbn" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableSonnbergZirbn.number}} {{tableSonnbergZirbn.department}}</p>
+                      <div *ngIf="tableBerglerStubeHubertusStube.placeholder === 'true'">
+                        <p [dragula]='"evented-bag"' id="Sonnberg-Zirbn" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableBerglerStubeHubertusStube.number}} {{tableBerglerStubeHubertusStube.department}} {{tableBerglerStubeHubertusStube.arrayIndex}} </p>
                       </div>
                     </div>
                   </div>
@@ -161,67 +161,67 @@
                 </div>
               </div>
 
-              <div *ngIf="showRestaurantBool">
-                <div *ngFor="let tableRestaurant of tablesRestaurant; let j = index;">
-                  <div *ngIf="tablesRestaurant[j] !== tablesRestaurant[j+1]">
-                    <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableRestaurant, j)">{{tableRestaurant.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
-                    <p><b> Tisch:</b>{{tableRestaurant.number}} </p><br>
-                    <div class='cards-container' id='containerRestaurant' [ngStyle]="{'background-color': + tableRestaurant.bgColor}">
-                      <div class="table" [ngStyle]="{'background-color': '#' + tableRestaurant.bgColor}">
-                        <div *ngIf="tableRestaurant.isBesetzt === 'true'">
+              <div *ngIf="showWaeldlerBool">
+                <div *ngFor="let tableWaeldlerStubeKristallStube of tablesWaeldlerStubeKristallStube; let j = index;">
+                  <div *ngIf="tablesWaeldlerStubeKristallStube[j] !== tablesWaeldlerStubeKristallStube[j+1]">
+                    <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableWaeldlerStubeKristallStube, j)">{{tableWaeldlerStubeKristallStube.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
+                    <p><b> Tisch:</b>{{tableWaeldlerStubeKristallStube.number}} </p><br>
+                    <div class='cards-container' id='containerRestaurant' [ngStyle]="{'background-color': + tableWaeldlerStubeKristallStube.bgColor}">
+                      <div class="table" [ngStyle]="{'background-color': '#' + tableWaeldlerStubeKristallStube.bgColor}">
+                        <div *ngIf="tableWaeldlerStubeKristallStube.isBesetzt === 'true'">
                           <p style="background-color: #FFFFFF">
-                            <b> Name:</b>{{tableRestaurant.nameValue}}<br>
-                            <b> Sprache:</b>{{tableRestaurant.katValue}}<br>
-                            <b> Zimmernummer:</b>{{tableRestaurant.zimmernummerValue}}<br>
-                            <b> Preis Typ:</b>{{tableRestaurant.preistypValue}}<br>
-                            <b> Anreise Datum:</b>{{tableRestaurant.anreiseValue}}<br>
-                            <b> Abreise Datum:</b>{{tableRestaurant.abreiseValue}}<br>
-                            <b> Personenanzahl:</b>{{tableRestaurant.personenAnzahlValue}}<br>
-                            <b> RB/SOU:</b>{{tableRestaurant.notiz1Value}}<br>
-                            <b> Notiz2:</b>{{tableRestaurant.notiz2Value}}<br>
-                            <b> Trace:</b>{{tableRestaurant.trace}}<br>
-                            <b> BemerkungValue:</b>{{tableRestaurant.bemerkungValue}}<br>
-                            <b> BemerkungValue1:</b>{{tableRestaurant.bemerkungValue1}}<br>
-                            <b> BemerkungValue2:</b>{{tableRestaurant.bemerkungValue2}}<br>
+                            <b> Name:</b>{{tableWaeldlerStubeKristallStube.nameValue}}<br>
+                            <b> Sprache:</b>{{tableWaeldlerStubeKristallStube.katValue}}<br>
+                            <b> Zimmernummer:</b>{{tableWaeldlerStubeKristallStube.zimmernummerValue}}<br>
+                            <b> Preis Typ:</b>{{tableWaeldlerStubeKristallStube.preistypValue}}<br>
+                            <b> Anreise Datum:</b>{{tableWaeldlerStubeKristallStube.anreiseValue}}<br>
+                            <b> Abreise Datum:</b>{{tableWaeldlerStubeKristallStube.abreiseValue}}<br>
+                            <b> Personenanzahl:</b>{{tableWaeldlerStubeKristallStube.personenAnzahlValue}}<br>
+                            <b> RB/SOU:</b>{{tableWaeldlerStubeKristallStube.notiz1Value}}<br>
+                            <b> Notiz2:</b>{{tableWaeldlerStubeKristallStube.notiz2Value}}<br>
+                            <b> Trace:</b>{{tableWaeldlerStubeKristallStube.trace}}<br>
+                            <b> BemerkungValue:</b>{{tableWaeldlerStubeKristallStube.bemerkungValue}}<br>
+                            <b> BemerkungValue1:</b>{{tableWaeldlerStubeKristallStube.bemerkungValue1}}<br>
+                            <b> BemerkungValue2:</b>{{tableWaeldlerStubeKristallStube.bemerkungValue2}}<br>
                           </p>
-                          <div *ngIf="tableRestaurant.nameValue2">
+                          <div *ngIf="tableWaeldlerStubeKristallStube.nameValue2">
                             <p style="background-color: #FFFFFF">
-                              <b> Name:</b>{{tableRestaurant.nameValue2}}<br>
-                              <b> Sprache:</b>{{tableRestaurant.katValue2}}<br>
-                              <b> Zimmernummer:</b>{{tableRestaurant.zimmernummerValue2}}<br>
-                              <b> Preis Typ:</b>{{tableRestaurant.preistypValue2}}<br>
-                              <b> Anreise Datum:</b>{{tableRestaurant.anreiseValue2}}<br>
-                              <b> Abreise Datum:</b>{{tableRestaurant.abreiseValue2}}<br>
-                              <b> Personenanzahl:</b>{{tableRestaurant.personenAnzahlValue2}}<br>
-                              <b> RB/SOU:</b>{{tableRestaurant.notiz3Value}}<br>
-                              <b> Notiz2:</b>{{tableRestaurant.notiz4Value}}<br>
-                              <b> Trace:</b>{{tableRestaurant.trace2}}<br>
-                              <b> BemerkungValue:</b>{{tableRestaurant.bemerkungValue3}}<br>
-                              <b> BemerkungValue1:</b>{{tableRestaurant.bemerkungValue4}}<br>
-                              <b> BemerkungValue2:</b>{{tableRestaurant.bemerkungValue5}}<br>
+                              <b> Name:</b>{{tableWaeldlerStubeKristallStube.nameValue2}}<br>
+                              <b> Sprache:</b>{{tableWaeldlerStubeKristallStube.katValue2}}<br>
+                              <b> Zimmernummer:</b>{{tableWaeldlerStubeKristallStube.zimmernummerValue2}}<br>
+                              <b> Preis Typ:</b>{{tableWaeldlerStubeKristallStube.preistypValue2}}<br>
+                              <b> Anreise Datum:</b>{{tableWaeldlerStubeKristallStube.anreiseValue2}}<br>
+                              <b> Abreise Datum:</b>{{tableWaeldlerStubeKristallStube.abreiseValue2}}<br>
+                              <b> Personenanzahl:</b>{{tableWaeldlerStubeKristallStube.personenAnzahlValue2}}<br>
+                              <b> RB/SOU:</b>{{tableWaeldlerStubeKristallStube.notiz3Value}}<br>
+                              <b> Notiz2:</b>{{tableWaeldlerStubeKristallStube.notiz4Value}}<br>
+                              <b> Trace:</b>{{tableWaeldlerStubeKristallStube.trace2}}<br>
+                              <b> BemerkungValue:</b>{{tableWaeldlerStubeKristallStube.bemerkungValue3}}<br>
+                              <b> BemerkungValue1:</b>{{tableWaeldlerStubeKristallStube.bemerkungValue4}}<br>
+                              <b> BemerkungValue2:</b>{{tableWaeldlerStubeKristallStube.bemerkungValue5}}<br>
                             </p>
                           </div>
-                          <div *ngIf="tableRestaurant.nameValue3">
+                          <div *ngIf="tableWaeldlerStubeKristallStube.nameValue3">
                             <p style="background-color: #FFFFFF">
-                              <b> Name:</b>{{tableRestaurant.nameValue3}}<br>
-                              <b> Sprache:</b>{{tableRestaurant.katValue3}}<br>
-                              <b> Zimmernummer:</b>{{tableRestaurant.zimmernummerValue3}}<br>
-                              <b> Preis Typ:</b>{{tableRestaurant.preistypValue3}}<br>
-                              <b> Anreise Datum:</b>{{tableRestaurant.anreiseValue3}}<br>
-                              <b> Abreise Datum:</b>{{tableRestaurant.abreiseValue3}}<br>
-                              <b> Personenanzahl:</b>{{tableRestaurant.personenAnzahlValue3}}<br>
-                              <b> RB/SOU:</b>{{tableRestaurant.notiz5Value}}<br>
-                              <b> Notiz2:</b>{{tableRestaurant.notiz6Value}}<br>
-                              <b> Trace:</b>{{tableRestaurant.trace3}}<br>
-                              <b> BemerkungValue:</b>{{tableRestaurant.bemerkungValue6}}<br>
-                              <b> BemerkungValue1:</b>{{tableRestaurant.bemerkungValue7}}<br>
-                              <b> BemerkungValue2:</b>{{tableRestaurant.bemerkungValue8}}<br>
+                              <b> Name:</b>{{tableWaeldlerStubeKristallStube.nameValue3}}<br>
+                              <b> Sprache:</b>{{tableWaeldlerStubeKristallStube.katValue3}}<br>
+                              <b> Zimmernummer:</b>{{tableWaeldlerStubeKristallStube.zimmernummerValue3}}<br>
+                              <b> Preis Typ:</b>{{tableWaeldlerStubeKristallStube.preistypValue3}}<br>
+                              <b> Anreise Datum:</b>{{tableWaeldlerStubeKristallStube.anreiseValue3}}<br>
+                              <b> Abreise Datum:</b>{{tableWaeldlerStubeKristallStube.abreiseValue3}}<br>
+                              <b> Personenanzahl:</b>{{tableWaeldlerStubeKristallStube.personenAnzahlValue3}}<br>
+                              <b> RB/SOU:</b>{{tableWaeldlerStubeKristallStube.notiz5Value}}<br>
+                              <b> Notiz2:</b>{{tableWaeldlerStubeKristallStube.notiz6Value}}<br>
+                              <b> Trace:</b>{{tableWaeldlerStubeKristallStube.trace3}}<br>
+                              <b> BemerkungValue:</b>{{tableWaeldlerStubeKristallStube.bemerkungValue6}}<br>
+                              <b> BemerkungValue1:</b>{{tableWaeldlerStubeKristallStube.bemerkungValue7}}<br>
+                              <b> BemerkungValue2:</b>{{tableWaeldlerStubeKristallStube.bemerkungValue8}}<br>
                             </p>
                           </div>
                         </div>
                       </div>
-                      <div *ngIf="tableRestaurant.placeholder === 'true'">
-                        <p [dragula]='"evented-bag"' id="Restaurant" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableRestaurant.number}} {{tableRestaurant.department}}</p>
+                      <div *ngIf="tableWaeldlerStubeKristallStube.placeholder === 'true'">
+                        <p [dragula]='"evented-bag"' id="Restaurant" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableWaeldlerStubeKristallStube.number}} {{tableWaeldlerStubeKristallStube.department}} {{tableWaeldlerStubeKristallStube.arrayIndex}}</p>
                       </div>
                     </div>
                   </div>
@@ -229,63 +229,123 @@
               </div>
 
 
-              <div *ngIf="showWintergartenBool">
-                <div *ngFor="let tableWintergarten of tablesWintergarten; let j = index;">
-                  <div *ngIf="tablesWintergarten[j] !== tablesWintergarten[j+1]">
-                    <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableWintergarten, j)">{{tableWintergarten.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
-                    <p><b> Tisch:</b>{{tableWintergarten.number}} </p><br>
-                    <div class='cards-container' id='containerWintergarten' [ngStyle]="{'background-color': + tableWintergarten.bgColor}">
-                      <div class="table" [ngStyle]="{'background-color': '#' + tableWintergarten.bgColor}">
-                        <div *ngIf="tableWintergarten.isBesetzt === 'true'">
+              <div *ngIf="showEdelweissBool">
+                <div *ngFor="let tableEdelweissKaminStube of tablesEdelweissKaminStube; let j = index;">
+                  <div *ngIf="tablesEdelweissKaminStube[j] !== tablesEdelweissKaminStube[j+1]">
+                    <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableEdelweissKaminStube, j)">{{tableEdelweissKaminStube.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
+                    <p><b> Tisch:</b>{{tableEdelweissKaminStube.number}} </p><br>
+                    <div class='cards-container' id='containerWintergarten' [ngStyle]="{'background-color': + tableEdelweissKaminStube.bgColor}">
+                      <div class="table" [ngStyle]="{'background-color': '#' + tableEdelweissKaminStube.bgColor}">
+                        <div *ngIf="tableEdelweissKaminStube.isBesetzt === 'true'">
                           <p style="background-color: #FFFFFF">
-                            <b> Name:</b>{{tableWintergarten.nameValue}}<br>
-                            <b> Sprache:</b>{{tableWintergarten.spracheValue}}<br>
-                            <b> Zimmernummer:</b>{{tableWintergarten.zimmernummerValue}}<br>
-                            <b> Preis Typ:</b>{{tableWintergarten.preistypValue}}<br>
-                            <b> Anreise Datum:</b>{{tableWintergarten.anreiseValue}}<br>
-                            <b> Abreise Datum:</b>{{tableWintergarten.abreiseValue}}<br>
-                            <b> Personenanzahl:</b>{{tableWintergarten.personenAnzahlValue}}<br>
-                            <b> RB/SOU:</b>{{tableWintergarten.rbsouValue}}<br>
-                            <b> Notiz2:</b>{{tableWintergarten.notiz2Value}}<br>
-                            <b> Trace:</b>{{tableWintergarten.trace}}
+                            <b> Name:</b>{{tableEdelweissKaminStube.nameValue}}<br>
+                            <b> Sprache:</b>{{tableEdelweissKaminStube.spracheValue}}<br>
+                            <b> Zimmernummer:</b>{{tableEdelweissKaminStube.zimmernummerValue}}<br>
+                            <b> Preis Typ:</b>{{tableEdelweissKaminStube.preistypValue}}<br>
+                            <b> Anreise Datum:</b>{{tableEdelweissKaminStube.anreiseValue}}<br>
+                            <b> Abreise Datum:</b>{{tableEdelweissKaminStube.abreiseValue}}<br>
+                            <b> Personenanzahl:</b>{{tableEdelweissKaminStube.personenAnzahlValue}}<br>
+                            <b> RB/SOU:</b>{{tableEdelweissKaminStube.rbsouValue}}<br>
+                            <b> Notiz2:</b>{{tableEdelweissKaminStube.notiz2Value}}<br>
+                            <b> Trace:</b>{{tableEdelweissKaminStube.trace}}
                           </p>
-                          <div *ngIf="tableWintergarten.nameValue2">
+                          <div *ngIf="tableEdelweissKaminStube.nameValue2">
                             <p style="background-color: #FFFFFF">
-                              <b> Name:</b>{{tableWintergarten.nameValue2}}<br>
-                              <b> Sprache:</b>{{tableWintergarten.spracheValue2}}<br>
-                              <b> Zimmernummer:</b>{{tableWintergarten.zimmernummerValue2}}<br>
-                              <b> Preis Typ:</b>{{tableWintergarten.preistypValue2}}<br>
-                              <b> Anreise Datum:</b>{{tableWintergarten.anreiseValue2}}<br>
-                              <b> Abreise Datum:</b>{{tableWintergarten.abreiseValue2}}<br>
-                              <b> Personenanzahl:</b>{{tableWintergarten.personenAnzahlValue2}}<br>
-                              <b> RB/SOU:</b>{{tableWintergarten.rbsouValue2}}<br>
-                              <b> Notiz2:</b>{{tableWintergarten.notiz2Value2}}<br>
-                              <b> Trace:</b>{{tableWintergarten.trace2}}
+                              <b> Name:</b>{{tableEdelweissKaminStube.nameValue2}}<br>
+                              <b> Sprache:</b>{{tableEdelweissKaminStube.spracheValue2}}<br>
+                              <b> Zimmernummer:</b>{{tableEdelweissKaminStube.zimmernummerValue2}}<br>
+                              <b> Preis Typ:</b>{{tableEdelweissKaminStube.preistypValue2}}<br>
+                              <b> Anreise Datum:</b>{{tableEdelweissKaminStube.anreiseValue2}}<br>
+                              <b> Abreise Datum:</b>{{tableEdelweissKaminStube.abreiseValue2}}<br>
+                              <b> Personenanzahl:</b>{{tableEdelweissKaminStube.personenAnzahlValue2}}<br>
+                              <b> RB/SOU:</b>{{tableEdelweissKaminStube.rbsouValue2}}<br>
+                              <b> Notiz2:</b>{{tableEdelweissKaminStube.notiz2Value2}}<br>
+                              <b> Trace:</b>{{tableEdelweissKaminStube.trace2}}
                             </p>
                           </div>
-                          <div *ngIf="tableWintergarten.nameValue3">
+                          <div *ngIf="tableEdelweissKaminStube.nameValue3">
                             <p style="background-color: #FFFFFF">
-                              <b> Name:</b>{{tableWintergarten.nameValue3}}<br>
-                              <b> Sprache:</b>{{tableWintergarten.spracheValue3}}<br>
-                              <b> Zimmernummer:</b>{{tableWintergarten.zimmernummerValue3}}<br>
-                              <b> Preis Typ:</b>{{tableWintergarten.preistypValue3}}<br>
-                              <b> Anreise Datum:</b>{{tableWintergarten.anreiseValue3}}<br>
-                              <b> Abreise Datum:</b>{{tableWintergarten.abreiseValue3}}<br>
-                              <b> Personenanzahl:</b>{{tableWintergarten.personenAnzahlValue3}}<br>
-                              <b> RB/SOU:</b>{{tableWintergarten.rbsouValue3}}<br>
-                              <b> Notiz2:</b>{{tableWintergarten.notiz2Value3}}<br>
-                              <b> Trace:</b>{{tableWintergarten.trace3}}
+                              <b> Name:</b>{{tableEdelweissKaminStube.nameValue3}}<br>
+                              <b> Sprache:</b>{{tableEdelweissKaminStube.spracheValue3}}<br>
+                              <b> Zimmernummer:</b>{{tableEdelweissKaminStube.zimmernummerValue3}}<br>
+                              <b> Preis Typ:</b>{{tableEdelweissKaminStube.preistypValue3}}<br>
+                              <b> Anreise Datum:</b>{{tableEdelweissKaminStube.anreiseValue3}}<br>
+                              <b> Abreise Datum:</b>{{tableEdelweissKaminStube.abreiseValue3}}<br>
+                              <b> Personenanzahl:</b>{{tableEdelweissKaminStube.personenAnzahlValue3}}<br>
+                              <b> RB/SOU:</b>{{tableEdelweissKaminStube.rbsouValue3}}<br>
+                              <b> Notiz2:</b>{{tableEdelweissKaminStube.notiz2Value3}}<br>
+                              <b> Trace:</b>{{tableEdelweissKaminStube.trace3}}
                             </p>
                           </div>
                         </div>
                       </div>
-                      <div *ngIf="tableWintergarten.placeholder === 'true'">
-                        <p [dragula]='"evented-bag"' id="Wintergarten" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableWintergarten.number}} {{tableWintergarten.department}}</p>
+                      <div *ngIf="tableEdelweissKaminStube.placeholder === 'true'">
+                        <p [dragula]='"evented-bag"' id="Wintergarten" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableEdelweissKaminStube.number}} {{tableEdelweissKaminStube.department}} {{tableEdelweissKaminStube.arrayIndex}}</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <div *ngIf="showTeeStubeBool">
+                <div *ngFor="let tableTeestubeTeelounge of tablesTeestubeTeelounge; let j = index;">
+                  <div *ngIf="tablesTeestubeTeelounge[j] !== tablesTeestubeTeelounge[j+1]">
+                    <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableTeestubeTeelounge, j)">{{tableTeestubeTeelounge.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
+                    <p><b> Tisch:</b>{{tableTeestubeTeelounge.number}} </p><br>
+                    <div class='cards-container' id='containerWintergarten' [ngStyle]="{'background-color': + tableTeestubeTeelounge.bgColor}">
+                      <div class="table" [ngStyle]="{'background-color': '#' + tableTeestubeTeelounge.bgColor}">
+                        <div *ngIf="tableTeestubeTeelounge.isBesetzt === 'true'">
+                          <p style="background-color: #FFFFFF">
+                            <b> Name:</b>{{tableTeestubeTeelounge.nameValue}}<br>
+                            <b> Sprache:</b>{{tableTeestubeTeelounge.spracheValue}}<br>
+                            <b> Zimmernummer:</b>{{tableTeestubeTeelounge.zimmernummerValue}}<br>
+                            <b> Preis Typ:</b>{{tableTeestubeTeelounge.preistypValue}}<br>
+                            <b> Anreise Datum:</b>{{tableTeestubeTeelounge.anreiseValue}}<br>
+                            <b> Abreise Datum:</b>{{tableTeestubeTeelounge.abreiseValue}}<br>
+                            <b> Personenanzahl:</b>{{tableTeestubeTeelounge.personenAnzahlValue}}<br>
+                            <b> RB/SOU:</b>{{tableTeestubeTeelounge.rbsouValue}}<br>
+                            <b> Notiz2:</b>{{tableTeestubeTeelounge.notiz2Value}}<br>
+                            <b> Trace:</b>{{tableTeestubeTeelounge.trace}}
+                          </p>
+                          <div *ngIf="tableTeestubeTeelounge.nameValue2">
+                            <p style="background-color: #FFFFFF">
+                              <b> Name:</b>{{tableTeestubeTeelounge.nameValue2}}<br>
+                              <b> Sprache:</b>{{tableTeestubeTeelounge.spracheValue2}}<br>
+                              <b> Zimmernummer:</b>{{tableTeestubeTeelounge.zimmernummerValue2}}<br>
+                              <b> Preis Typ:</b>{{tableTeestubeTeelounge.preistypValue2}}<br>
+                              <b> Anreise Datum:</b>{{tableTeestubeTeelounge.anreiseValue2}}<br>
+                              <b> Abreise Datum:</b>{{tableTeestubeTeelounge.abreiseValue2}}<br>
+                              <b> Personenanzahl:</b>{{tableTeestubeTeelounge.personenAnzahlValue2}}<br>
+                              <b> RB/SOU:</b>{{tableTeestubeTeelounge.rbsouValue2}}<br>
+                              <b> Notiz2:</b>{{tableTeestubeTeelounge.notiz2Value2}}<br>
+                              <b> Trace:</b>{{tableTeestubeTeelounge.trace2}}
+                            </p>
+                          </div>
+                          <div *ngIf="tableTeestubeTeelounge.nameValue3">
+                            <p style="background-color: #FFFFFF">
+                              <b> Name:</b>{{tableTeestubeTeelounge.nameValue3}}<br>
+                              <b> Sprache:</b>{{tableTeestubeTeelounge.spracheValue3}}<br>
+                              <b> Zimmernummer:</b>{{tableTeestubeTeelounge.zimmernummerValue3}}<br>
+                              <b> Preis Typ:</b>{{tableTeestubeTeelounge.preistypValue3}}<br>
+                              <b> Anreise Datum:</b>{{tableTeestubeTeelounge.anreiseValue3}}<br>
+                              <b> Abreise Datum:</b>{{tableTeestubeTeelounge.abreiseValue3}}<br>
+                              <b> Personenanzahl:</b>{{tableTeestubeTeelounge.personenAnzahlValue3}}<br>
+                              <b> RB/SOU:</b>{{tableTeestubeTeelounge.rbsouValue3}}<br>
+                              <b> Notiz2:</b>{{tableTeestubeTeelounge.notiz2Value3}}<br>
+                              <b> Trace:</b>{{tableTeestubeTeelounge.trace3}}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div *ngIf="tableTeestubeTeelounge.placeholder === 'true'">
+                        <p [dragula]='"evented-bag"' id="Wintergarten" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableTeestubeTeelounge.number}} {{tableTeestubeTeelounge.department}} {{tableTeestubeTeelounge.arrayIndex}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -385,11 +445,11 @@
       </div>
       <div id="printSectionId2">
         <div class="row" style="background-color: #eaf3f3; border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;" >
-          <div *ngIf="showSonnbergZirbnBool">
-            <div *ngFor="let tableSonnbergZirbn of tablesSonnbergZirbn; let j = index;">
-              <div class="t{{tableSonnbergZirbn.number}} table-item" (click)="moveTable(tableSonnbergZirbn, j)" [ngStyle]="{'top': tableSonnbergZirbn.topValue + 'px', 'left': tableSonnbergZirbn.leftValue + 'px', 'background-color': + tableSonnbergZirbn.bgColor, 'height': + tableSonnbergZirbn.height + 'px', 'width': + tableSonnbergZirbn.width + 'px', 'border': + tableSonnbergZirbn.border}">
-                <div *ngIf="tablesSonnbergZirbn[j] !== tablesSonnbergZirbn[j+1]">
-                  <p>{{tableSonnbergZirbn.number}}</p>
+          <div *ngIf="showBerglerBool">
+            <div *ngFor="let tableBerglerStubeHubertusStube of tablesBerglerStubeHubertusStube; let j = index;">
+              <div class="t{{tableBerglerStubeHubertusStube.number}} table-item" (click)="moveTable(tableBerglerStubeHubertusStube, j)" [ngStyle]="{'top': tableBerglerStubeHubertusStube.topValue + 'px', 'left': tableBerglerStubeHubertusStube.leftValue + 'px', 'background-color': + tableBerglerStubeHubertusStube.bgColor, 'height': + tableBerglerStubeHubertusStube.height + 'px', 'width': + tableBerglerStubeHubertusStube.width + 'px', 'border': + tableBerglerStubeHubertusStube.border}">
+                <div *ngIf="tablesBerglerStubeHubertusStube[j] !== tablesBerglerStubeHubertusStube[j+1]">
+                  <p>{{tableBerglerStubeHubertusStube.number}}</p>
                 </div>
               </div>
             </div>
@@ -401,20 +461,29 @@
               </div>
             </div>
           </div>
-          <div *ngIf="showRestaurantBool">
-            <div *ngFor="let tableRestaurant of tablesRestaurant; let j = index;">
-              <div class="t{{tableRestaurant.number}} table-item" (click)="moveTable(tableRestaurant, j)" [ngStyle]="{'top': tableRestaurant.topValue + 'px', 'left': tableRestaurant.leftValue + 'px', 'background-color': + tableRestaurant.bgColor, 'height': + tableRestaurant.height + 'px', 'width': + tableRestaurant.width + 'px', 'border': + tableRestaurant.border}">
-                <div *ngIf="tablesRestaurant[j] !== tablesRestaurant[j+1]">
-                  <p>{{tableRestaurant.number}}</p>
+          <div *ngIf="showWaeldlerBool">
+            <div *ngFor="let tableWaeldlerStubeKristallStube of tablesWaeldlerStubeKristallStube; let j = index;">
+              <div class="t{{tableWaeldlerStubeKristallStube.number}} table-item" (click)="moveTable(tableWaeldlerStubeKristallStube, j)" [ngStyle]="{'top': tableWaeldlerStubeKristallStube.topValue + 'px', 'left': tableWaeldlerStubeKristallStube.leftValue + 'px', 'background-color': + tableWaeldlerStubeKristallStube.bgColor, 'height': + tableWaeldlerStubeKristallStube.height + 'px', 'width': + tableWaeldlerStubeKristallStube.width + 'px', 'border': + tableWaeldlerStubeKristallStube.border}">
+                <div *ngIf="tablesWaeldlerStubeKristallStube[j] !== tablesWaeldlerStubeKristallStube[j+1]">
+                  <p>{{tableWaeldlerStubeKristallStube.number}}</p>
                 </div>
               </div>
             </div>
           </div>
-          <div *ngIf="showWintergartenBool">
-            <div *ngFor="let tableWintergarten of tablesWintergarten; let j = index;">
-              <div class="t{{tableWintergarten.number}} table-item" (click)="moveTable(tableWintergarten, j)" [ngStyle]="{'top': tableWintergarten.topValue + 'px', 'left': tableWintergarten.leftValue + 'px', 'background-color': + tableWintergarten.bgColor,  'height': + tableWintergarten.height + 'px', 'width': + tableWintergarten.width + 'px', 'border': + tableWintergarten.border, 'border-radius': + tableWintergarten.borderRadius, 'transform':  + tableWintergarten.transformValue}">
-                <div *ngIf="tablesWintergarten[j] !== tablesWintergarten[j+1]">
-                  <p>{{tableWintergarten.number}}</p>
+          <div *ngIf="showEdelweissBool">
+            <div *ngFor="let tableEdelweissKaminStube of tablesEdelweissKaminStube; let j = index;">
+              <div class="t{{tableEdelweissKaminStube.number}} table-item" (click)="moveTable(tableEdelweissKaminStube, j)" [ngStyle]="{'top': tableEdelweissKaminStube.topValue + 'px', 'left': tableEdelweissKaminStube.leftValue + 'px', 'background-color': + tableEdelweissKaminStube.bgColor,  'height': + tableEdelweissKaminStube.height + 'px', 'width': + tableEdelweissKaminStube.width + 'px', 'border': + tableEdelweissKaminStube.border, 'border-radius': + tableEdelweissKaminStube.borderRadius, 'transform':  + tableEdelweissKaminStube.transformValue}">
+                <div *ngIf="tablesEdelweissKaminStube[j] !== tablesEdelweissKaminStube[j+1]">
+                  <p>{{tableEdelweissKaminStube.number}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="showTeeStubeBool">
+            <div *ngFor="let tableTeestubeTeelounge  of tablesTeestubeTeelounge; let j = index;">
+              <div class="t{{tableTeestubeTeelounge.number}} table-item" (click)="moveTable(tableTeestubeTeelounge, j)" [ngStyle]="{'top': tableTeestubeTeelounge.topValue + 'px', 'left': tableTeestubeTeelounge.leftValue + 'px', 'background-color': + tableTeestubeTeelounge.bgColor,  'height': + tableTeestubeTeelounge.height + 'px', 'width': + tableTeestubeTeelounge.width + 'px', 'border': + tableTeestubeTeelounge.border, 'border-radius': + tableTeestubeTeelounge.borderRadius, 'transform':  + tableTeestubeTeelounge.transformValue}">
+                <div *ngIf="tablesTeestubeTeelounge[j] !== tablesTeestubeTeelounge[j+1]">
+                  <p>{{tableTeestubeTeelounge.number}}</p>
                 </div>
               </div>
             </div>

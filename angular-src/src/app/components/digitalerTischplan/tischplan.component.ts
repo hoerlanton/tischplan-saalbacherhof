@@ -33,25 +33,15 @@ export class TischplanComponent implements OnInit {
   anreiseListeElemente: AnreiseListe[];
   tracesListeElemente: any[] = [];
   tables: Table[];
-  tablesSonnbergZirbn: Table[] = [];
+  tablesBerglerStubeHubertusStube: Table[] = [];
   tablesBauernstube: Table[] = [];
-  tablesRestaurant: Table[] = [];
-  tablesWintergarten: Table[] = [];
+  tablesWaeldlerStubeKristallStube: Table[] = [];
+  tablesEdelweissKaminStube: Table[] = [];
+  tablesTeestubeTeelounge: Table[] = [];
   title: string;
   filesToUpload: Array<File> = [];
-  indexBemerkung: string;
-  indexNotiz1 : string;
-  indexNotiz2: string;
 
   isDropped: any[] = [];
-  arrayBemerkung: any[] = [];
-  arrayNotiz1: any[] = [];
-  arrayNotiz2: any[] = [];
-  arrayGastWuensche: any[] = [];
-  arrayRestBemerk: any[] = [];
-  arrayBemerkungLaenge: any[] = [];
-  arrayNotiz1Laenge: any[] = [];
-  arrayNotiz2Laenge: any[] = [];
   showBauernStubnBool: boolean;
   showBerglerBool: boolean;
   showWaeldlerBool: boolean;
@@ -175,22 +165,26 @@ export class TischplanComponent implements OnInit {
             if (tables[a].department === "Bauernstube") {
               this.tablesBauernstube = tables[a].tables;
             }
-            else if (tables[a].department === "Wintergarten") {
-              this.tablesWintergarten = tables[a].tables;
-              console.log('Test' + JSON.stringify(this.tablesWintergarten));
+            else if (tables[a].department === "edelweissKaminStube") {
+              this.tablesEdelweissKaminStube = tables[a].tables;
+              console.log('Test' + JSON.stringify(this.tablesEdelweissKaminStube));
             }
-            else if (tables[a].department === "Sonnberg-Zirbn") {
-              this.tablesSonnbergZirbn = tables[a].tables;
+            else if (tables[a].department === "berglerStubeHubertusStube") {
+              this.tablesBerglerStubeHubertusStube = tables[a].tables;
             }
-            else if (tables[a].department === "Restaurant") {
-              this.tablesRestaurant = tables[a].tables;
+            else if (tables[a].department === "waeldlerStubeKristallStube") {
+              this.tablesWaeldlerStubeKristallStube = tables[a].tables;
+            }
+            else if (tables[a].department === "teestubeTeelounge") {
+              this.tablesTeestubeTeelounge = tables[a].tables;
             }
           }
         }
         console.log(this.tablesBauernstube);
-        console.log(this.tablesWintergarten);
-        console.log(this.tablesSonnbergZirbn);
-        console.log(this.tablesRestaurant);
+        console.log(this.tablesEdelweissKaminStube);
+        console.log(this.tablesBerglerStubeHubertusStube);
+        console.log(this.tablesWaeldlerStubeKristallStube);
+        console.log(this.tablesTeestubeTeelounge);
 
       });
 
@@ -362,20 +356,23 @@ export class TischplanComponent implements OnInit {
         if(response === null) {
           return;
         } else {
-          if (response.tables[0].department === "Sonnberg-Zirbn") {
-            this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+          if (response.tables[0].department === "berglerStubeHubertusStube") {
+            this.tablesBerglerStubeHubertusStube[response.tables[0].arrayIndex] = response.tables[0];
           }
           else if (response.tables[0].department === "Bauernstube") {
             this.tablesBauernstube[response.tables[0].arrayIndex] = response.tables[0];
           }
-          else if (response.tables[0].department === "Restaurant") {
-            this.tablesRestaurant[response.tables[0].arrayIndex] = response.tables[0];
+          else if (response.tables[0].department === "waeldlerStubeKristallStube") {
+            this.tablesWaeldlerStubeKristallStube[response.tables[0].arrayIndex] = response.tables[0];
           }
-          else if (response.tables[0].department === "Wintergarten") {
-            this.tablesWintergarten[response.tables[0].arrayIndex] = response.tables[0];
+          else if (response.tables[0].department === "edelweissKaminStube") {
+            this.tablesEdelweissKaminStube[response.tables[0].arrayIndex] = response.tables[0];
+          }
+          else if (response.tables[0].department === "teestubeTeelounge") {
+            this.tablesTeestubeTeelounge[response.tables[0].arrayIndex] = response.tables[0];
           }
         }
-        // console.log(this.tablesSonnbergZirbn[arrayIndex]);
+        // console.log(this.tablesBerglerStubeHubertusStube[arrayIndex]);
       });
 
     console.log("Occupy Table!");
@@ -388,38 +385,41 @@ export class TischplanComponent implements OnInit {
         if(response === null) {
           return;
         } else {
-          if (response.tables[0].department === "Sonnberg-Zirbn") {
-            this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+          if (response.tables[0].department === "berglerStubeHubertusStube") {
+            this.tablesBerglerStubeHubertusStube[response.tables[0].arrayIndex] = response.tables[0];
           }
           else if (response.tables[0].department === "Bauernstube") {
             this.tablesBauernstube[response.tables[0].arrayIndex] = response.tables[0];
           }
-          else if (response.tables[0].department === "Restaurant") {
-            this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+          else if (response.tables[0].department === "waeldlerStubeKristallStube") {
+            this.tablesBerglerStubeHubertusStube[response.tables[0].arrayIndex] = response.tables[0];
           }
-          else if (response.tables[0].department === "Wintergarten") {
-            this.tablesSonnbergZirbn[response.tables[0].arrayIndex] = response.tables[0];
+          else if (response.tables[0].department === "edelweissKaminStube") {
+            this.tablesBerglerStubeHubertusStube[response.tables[0].arrayIndex] = response.tables[0];
+          }
+          else if (response.tables[0].department === "teestubeTeelounge") {
+            this.tablesTeestubeTeelounge[response.tables[0].arrayIndex] = response.tables[0];
           }
         }
 
-        //console.log("bgColor:" + JSON.stringify(this.tablesSonnbergZirbn[arrayIndex]));
+        //console.log("bgColor:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
       });
 /*
     this.tischplanService.removePlaceholder(dataString)
       .subscribe(response => {
         //let arrayIndex = response[1];
         console.log("Response placeholder:" + JSON.stringify(response));
-        if(response.tables[0].department === "Sonnberg-Zirbn") {
-          this.tablesSonnbergZirbn[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
+        if(response.tables[0].department === "berglerStubeHubertusStube") {
+          this.tablesBerglerStubeHubertusStube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
         }
         else if(response.tables[0].department === "Bauernstube") {
           this.tablesBauernstube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
         }
-        else if(response.tables[0].department === "Restaurant") {
-          this.tablesRestaurant[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
+        else if(response.tables[0].department === "tablesWaeldlerStubeKristallStube") {
+          this.tablesWaeldlerStubeKristallStube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
         }
-        else if(response.tables[0].department === "Wintergarten") {
-          this.tablesWintergarten[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
+        else if(response.tables[0].department === "edelweissKaminStube") {
+          this.tablesEdelweissKaminStube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
         }
       });
 
@@ -428,22 +428,22 @@ export class TischplanComponent implements OnInit {
           console.log("Add placeholder!");
           console.log("Add placeholder! : " + JSON.stringify(response));
           console.log("placeholder:" + JSON.stringify(response[0].tables[j].placeholder));
-          //console.log(this.tablesSonnbergZirbn[j].placeholder);
-          if(response[0].tables[j].department === "Sonnberg-Zirbn") {
-            this.tablesSonnbergZirbn[j].placeholder = response[0].tables[j].placeholder;
+          //console.log(this.tablesBerglerStubeHubertusStube[j].placeholder);
+          if(response[0].tables[j].department === "berglerStubeHubertusStube") {
+            this.tablesBerglerStubeHubertusStube[j].placeholder = response[0].tables[j].placeholder;
           }
           else if(response[0].tables[j].department === "Bauernstube") {
             this.tablesBauernstube[j].placeholder = response[0].tables[j].placeholder;
           }
-          else if(response[0].tables[j].department === "Restaurant") {
-            this.tablesRestaurant[j].placeholder = response[0].tables[j].placeholder;
+          else if(response[0].tables[j].department === "tablesWaeldlerStubeKristallStube") {
+            this.tablesWaeldlerStubeKristallStube[j].placeholder = response[0].tables[j].placeholder;
           }
-          else if(response[0].tables[j].department === "Wintergarten") {
-            this.tablesWintergarten[j].placeholder = response[0].tables[j].placeholder;
+          else if(response[0].tables[j].department === "edelweissKaminStube") {
+            this.tablesEdelweissKaminStube[j].placeholder = response[0].tables[j].placeholder;
           }
         });
  */
-        //console.log("placeholder:" + JSON.stringify(this.tablesSonnbergZirbn[arrayIndex]));
+        //console.log("placeholder:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
 
   }
 
@@ -490,17 +490,20 @@ export class TischplanComponent implements OnInit {
       if(response === null) {
         return;
       } else {
-        if (response[0].tables[j].department === "Sonnberg-Zirbn") {
-          this.tablesSonnbergZirbn[j] = response[0].tables[j];
+        if (response[0].tables[j].department === "berglerStubeHubertusStube") {
+          this.tablesBerglerStubeHubertusStube[j] = response[0].tables[j];
         }
         else if (response[0].tables[j].department === "Bauernstube") {
           this.tablesBauernstube[j] = response[0].tables[j];
         }
-        else if (response[0].tables[j].department === "Restaurant") {
-          this.tablesSonnbergZirbn[j] = response[0].tables[j];
+        else if (response[0].tables[j].department === "waeldlerStubeKristallStube") {
+          this.tablesBerglerStubeHubertusStube[j] = response[0].tables[j];
         }
-        else if (response[0].tables[j].department === "Wintergarten") {
-          this.tablesSonnbergZirbn[j] = response[0].tables[j];
+        else if (response[0].tables[j].department === "edelweissKaminStube") {
+          this.tablesBerglerStubeHubertusStube[j] = response[0].tables[j];
+        }
+        else if (response[0].tables[j].department === "teestubeTeelounge") {
+          this.tablesTeestubeTeelounge[j] = response[0].tables[j];
         }
       }
     });
@@ -512,18 +515,21 @@ export class TischplanComponent implements OnInit {
       if(response === null) {
         return;
       } else {
-        //console.log(this.tablesSonnbergZirbn[j].placeholder);
-        if (response[0].tables[j].department === "Sonnberg-Zirbn") {
-          this.tablesSonnbergZirbn[j].placeholder = response[0].tables[j].placeholder;
+        //console.log(this.tablesBerglerStubeHubertusStube[j].placeholder);
+        if (response[0].tables[j].department === "berglerStubeHubertusStube") {
+          this.tablesBerglerStubeHubertusStube[j].placeholder = response[0].tables[j].placeholder;
         }
         else if (response[0].tables[j].department === "Bauernstube") {
           this.tablesBauernstube[j].placeholder = response[0].tables[j].placeholder;
         }
-        else if (response[0].tables[j].department === "Restaurant") {
-          this.tablesRestaurant[j].placeholder = response[0].tables[j].placeholder;
+        else if (response[0].tables[j].department === "waeldlerStubeKristallStube") {
+          this.tablesWaeldlerStubeKristallStube[j].placeholder = response[0].tables[j].placeholder;
         }
-        else if (response[0].tables[j].department === "Wintergarten") {
-          this.tablesWintergarten[j].placeholder = response[0].tables[j].placeholder;
+        else if (response[0].tables[j].department === "edelweissKaminStube") {
+          this.tablesEdelweissKaminStube[j].placeholder = response[0].tables[j].placeholder;
+        }
+        else if (response[0].tables[j].department === "teestubeTeelounge") {
+          this.tablesTeestubeTeelounge[j].placeholder = response[0].tables[j].placeholder;
         }
       }
     });
@@ -685,14 +691,16 @@ export class TischplanComponent implements OnInit {
       console.log("topValue:" + JSON.stringify(response[0].tables[j].topValue));
       console.log("leftValue:" + JSON.stringify(response[0].tables[j].leftValue));
 
-      if (response[0].tables[j].department === "Sonnberg-Zirbn") {
-        this.tablesSonnbergZirbn = response[0].tables;
+      if (response[0].tables[j].department === "berglerStubeHubertusStube") {
+        this.tablesBerglerStubeHubertusStube = response[0].tables;
       } else if(response[0].tables[j].department === "Bauernstube") {
         this.tablesBauernstube = response[0].tables;
-      } else if(response[0].tables[j].department === "Restaurant") {
-        this.tablesRestaurant = response[0].tables;
-      } else if(response[0].tables[j].department === "Wintergarten") {
-        this.tablesWintergarten = response[0].tables;
+      } else if(response[0].tables[j].department === "waeldlerStubeKristallStube") {
+        this.tablesWaeldlerStubeKristallStube = response[0].tables;
+      } else if(response[0].tables[j].department === "edelweissKaminStube") {
+        this.tablesEdelweissKaminStube = response[0].tables;
+      } else if(response[0].tables[j].department === "teestubeTeelounge") {
+        this.tablesTeestubeTeelounge = response[0].tables;
       }
     });
   }

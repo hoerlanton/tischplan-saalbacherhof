@@ -158,7 +158,7 @@ router.post('/moveTable', function(req, res, next) {
     let height = splitted7[1].substring(1, splitted7[1].length - 2);
     console.log('height: ' + height);
     console.log('width: ' + width);
-    //Sonnberg-Zirbn
+    //berglerStubeHubertusStube
     //50
 
     console.log('tableNumber' + tableNumber);
@@ -166,7 +166,7 @@ router.post('/moveTable', function(req, res, next) {
     console.log('topValue' + topValue);
     console.log('leftValue' + leftValue);
 
-    if (tableNumber === '19' && topValue === '200' && leftValue === '550') {
+    if (tableNumber === '1' && topValue === '510' && leftValue === '160' && height === '65') {
         db.hubertusTables.update(
             {
                 department: departmentValue,
@@ -174,9 +174,8 @@ router.post('/moveTable', function(req, res, next) {
             },
             {
                 $set: {
-                    "tables.$.topValue": "200",
-                    "tables.$.leftValue": "580",
-                    "tables.$.width": "60",
+                    "tables.$.height": "130",
+                    "tables.$.topValue": "410",
                 }
             }, function (err, tables) {
                 if (err) {
@@ -187,7 +186,7 @@ router.post('/moveTable', function(req, res, next) {
         db.hubertusTables.update(
             {
             }, { $pull: { tables: {
-                "number": "20",
+                "number": "2",
             } } },
             { multi: true
             }, function (err, tables) {
@@ -197,7 +196,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("removeTable Update successful");
                 console.log(tables);
             });
-    } else if (tableNumber === '19' && topValue === '200' && leftValue === '580' && width === '60') {
+    } else if (tableNumber === '1' && topValue === '410' && leftValue === '160' && height === '130') {
         db.hubertusTables.update(
             {
                 department: departmentValue,
@@ -205,9 +204,9 @@ router.post('/moveTable', function(req, res, next) {
             },
             {
                 $set: {
-                    "tables.$.topValue": "200",
-                    "tables.$.leftValue": "580",
-                    "tables.$.width": "90",
+                    "tables.$.height": "195",
+                    "tables.$.topValue": "310",
+
                 }
             }, function (err, tables) {
                 if (err) {
@@ -218,7 +217,7 @@ router.post('/moveTable', function(req, res, next) {
         db.hubertusTables.update(
             {
             }, { $pull: { tables: {
-                "number": "21",
+                "number": "3",
             } } },
             { multi: true
             }, function (err, tables) {
@@ -228,7 +227,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("removeTable Update successful");
                 console.log(tables);
             });
-    } else if (tableNumber === '19' && topValue === '200' && leftValue === '580' && width === '90') {
+    } else if (tableNumber === '1' && topValue === '310' && leftValue === '160' && height === '195') {
         db.hubertusTables.update(
             {
                 department: departmentValue,
@@ -236,9 +235,9 @@ router.post('/moveTable', function(req, res, next) {
             },
             {
                 $set: {
-                    "tables.$.topValue": "200",
-                    "tables.$.leftValue": "550",
-                    "tables.$.width": "30",
+                    "tables.$.height": "260",
+                    "tables.$.topValue": "210",
+
                 }
             }, function (err, tables) {
                 if (err) {
@@ -246,23 +245,85 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
+        db.hubertusTables.update(
+            {
+            }, { $pull: { tables: {
+                "number": "4",
+            } } },
+            { multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    } else if (tableNumber === '1' && topValue === '210' && leftValue === '160' && height === '260') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "325",
+                    "tables.$.topValue": "140",
+
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {
+            }, { $pull: { tables: {
+                "number": "5",
+            } } },
+            { multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    } else if (tableNumber === '1' && topValue === '140' && leftValue === '160' && height === '325') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "65",
+                    "tables.$.topValue": "510",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+
         db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: {
                 tables: {
-                    $each: [ {
-                        "arrayIndex": "19",
-                        "department": "Restaurant",
-                        "number": "20",
-                        "topValue": "200",
-                        "leftValue": "610",
+                    $each: [  {
+                        "arrayIndex": 4,
+                        "department": "teestubeTeelounge",
+                        "number": "5",
+                        "topValue": "140",
+                        "leftValue": "160",
                         "bgColor": "#ffffff",
                         "isBesetzt": "false",
                         "placeholder": "true",
                         "border": "solid 1px #0a7a74",
-                        "width": "30",
-                        "height": "60"
+                        "width": "85",
+                        "height": "65"
                     } ],
                     $sort: { number: 1 } } } },
             { multi: true },
@@ -277,18 +338,18 @@ router.post('/moveTable', function(req, res, next) {
                 department: departmentValue,
             }, { $push: {
                 tables: {
-                    $each: [ {
-                        "arrayIndex": "20",
-                        "department": "Restaurant",
-                        "number": "21",
-                        "topValue": "200",
-                        "leftValue": "670",
+                    $each: [   {
+                        "arrayIndex": 3,
+                        "department": "teestubeTeelounge",
+                        "number": "4",
+                        "topValue": "225",
+                        "leftValue": "160",
                         "bgColor": "#ffffff",
                         "isBesetzt": "false",
                         "placeholder": "true",
                         "border": "solid 1px #0a7a74",
-                        "width": "30",
-                        "height": "60"
+                        "width": "85",
+                        "height": "65"
                     } ],
                     $sort: { number: 1 } } } },
             { multi: true },
@@ -298,7 +359,61 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-    } else if (tableNumber === '20' && topValue === '200' && leftValue === '610') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 2,
+                        "department": "teestubeTeelounge",
+                        "number": "3",
+                        "topValue": "325",
+                        "leftValue": "160",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "85",
+                        "height": "65"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 1,
+                        "department": "teestubeTeelounge",
+                        "number": "2",
+                        "topValue": "420",
+                        "leftValue": "160",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "85",
+                        "height": "65"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+
+    }   else if (tableNumber === '80' && topValue === '345' && leftValue === '250' && height === '35') {
         db.hubertusTables.update(
             {
                 department: departmentValue,
@@ -306,9 +421,311 @@ router.post('/moveTable', function(req, res, next) {
             },
             {
                 $set: {
-                    "tables.$.topValue": "200",
-                    "tables.$.leftValue": "640",
-                    "tables.$.width": "60",
+                    "tables.$.height": "70",
+                    "tables.$.topValue": "305",
+
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "81",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '80' && topValue === '305' && leftValue === '250' && height === '70') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "35",
+                    "tables.$.topValue": "345",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [  {
+                        "arrayIndex": 1,
+                        "department": "edelweissKaminStube",
+                        "number": "81",
+                        "topValue": "305",
+                        "leftValue": "250",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "35"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+    }   else if (tableNumber === '83' && topValue === '212' && leftValue === '250' && height === '35') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "70",
+                    "tables.$.topValue": "170",
+
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "84",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '83' && topValue === '170' && leftValue === '250' && height === '70') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "35",
+                    "tables.$.topValue": "212",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 4,
+                        "department": "edelweissKaminStube",
+                        "number": "84",
+                        "topValue": "170",
+                        "leftValue": "250",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "35"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+
+        //____________
+
+    }   else if (tableNumber === '85' && topValue === '130' && leftValue === '250' && height === '35') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "70",
+                    "tables.$.topValue": "85",
+
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "86",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '85' && topValue === '85' && leftValue === '250' && height === '70') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "35",
+                    "tables.$.width": "145",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "90",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '85' && topValue === '85' && leftValue === '250' && height === '35' && width === '145') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "35",
+                    "tables.$.width": "40",
+                    "tables.$.topValue": "130",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [    {
+                        "arrayIndex": 6,
+                        "department": "edelweissKaminStube",
+                        "number": "86",
+                        "topValue": "85",
+                        "leftValue": "250",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "35"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [    {
+                        "arrayIndex": 7,
+                        "department": "edelweissKaminStube",
+                        "number": "90",
+                        "topValue": "85",
+                        "leftValue": "360",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "60",
+                        "height": "35"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+        //____________
+
+    } else if (tableNumber === '95' && topValue === '179' && leftValue === '187' && height === '35') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "70",
+
                 }
             }, function (err, tables) {
                 if (err) {
@@ -319,7 +736,7 @@ router.post('/moveTable', function(req, res, next) {
         db.hubertusTables.update(
             {
             }, { $pull: { tables: {
-                "number": "21",
+                "number": "96",
             } } },
             { multi: true
             }, function (err, tables) {
@@ -329,7 +746,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("removeTable Update successful");
                 console.log(tables);
             });
-    } else if (tableNumber === '20' && topValue === '200' && leftValue === '640') {
+    } else if (tableNumber === '95' && topValue === '179' && leftValue === '187' && height === '70') {
         db.hubertusTables.update(
             {
                 department: departmentValue,
@@ -337,9 +754,66 @@ router.post('/moveTable', function(req, res, next) {
             },
             {
                 $set: {
-                    "tables.$.topValue": "200",
-                    "tables.$.leftValue": "610",
-                    "tables.$.width": "30",
+                    "tables.$.height": "105",
+
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {
+            }, { $pull: { tables: {
+                "number": "97",
+            } } },
+            { multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    } else if (tableNumber === '95' && topValue === '179' && leftValue === '187' && height === '105') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "140",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {
+            }, { $pull: { tables: {
+                "number": "98",
+            } } },
+            { multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    } else if (tableNumber === '95' && topValue === '179' && leftValue === '187' && height === '140') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "35",
                 }
             }, function (err, tables) {
                 if (err) {
@@ -352,18 +826,18 @@ router.post('/moveTable', function(req, res, next) {
                 department: departmentValue,
             }, { $push: {
                 tables: {
-                    $each: [ {
-                        "arrayIndex": "20",
-                        "department": "Restaurant",
-                        "number": "21",
-                        "topValue": "200",
-                        "leftValue": "670",
+                    $each: [  {
+                        "arrayIndex": 15,
+                        "department": "edelweissKaminStube",
+                        "number": "98",
+                        "topValue": "355",
+                        "leftValue": "187",
                         "bgColor": "#ffffff",
                         "isBesetzt": "false",
                         "placeholder": "true",
                         "border": "solid 1px #0a7a74",
-                        "width": "30",
-                        "height": "60"
+                        "width": "40",
+                        "height": "35"
                     } ],
                     $sort: { number: 1 } } } },
             { multi: true },
@@ -373,7 +847,62 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-    } else if (tableNumber === '48' && topValue === '220' && leftValue === '400' && height === '40') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 14,
+                        "department": "edelweissKaminStube",
+                        "number": "97",
+                        "topValue": "290",
+                        "leftValue": "187",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "35"
+                    }],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 13,
+                        "department": "edelweissKaminStube",
+                        "number": "96",
+                        "topValue": "228",
+                        "leftValue": "187",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "35"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+
+        //_____________________
+
+    }   else if (tableNumber === '73' && topValue === '481' && leftValue === '559' && width === '40') {
         db.hubertusTables.update(
             {
                 department: departmentValue,
@@ -381,9 +910,8 @@ router.post('/moveTable', function(req, res, next) {
             },
             {
                 $set: {
-                    "tables.$.topValue": "260",
-                    "tables.$.leftValue": "400",
-                    "tables.$.height": "80",
+                    "tables.$.width": "80",
+                    "tables.$.leftValue": "500",
                 }
             }, function (err, tables) {
                 if (err) {
@@ -392,11 +920,15 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("moveTable Update successful");
             });
         db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "74",
+                    }
+                }
+            },
             {
-            }, { $pull: { tables: {
-                "number": "49",
-            } } },
-            { multi: true
+                multi: true
             }, function (err, tables) {
                 if (err) {
                     console.log("Error");
@@ -404,7 +936,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("removeTable Update successful");
                 console.log(tables);
             });
-    } else if (tableNumber === '48' && topValue === '260' && leftValue === '400' && height === '80') {
+    }   else if (tableNumber === '73' && topValue === '481' && leftValue === '500' && width === '80') {
         db.hubertusTables.update(
             {
                 department: departmentValue,
@@ -412,9 +944,53 @@ router.post('/moveTable', function(req, res, next) {
             },
             {
                 $set: {
-                    "tables.$.topValue": "220",
-                    "tables.$.leftValue": "400",
-                    "tables.$.height": "40",
+                    "tables.$.width": "40",
+                    "tables.$.leftValue": "559",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 18,
+                        "department": "waeldlerStubeKristallStube",
+                        "number": "74",
+                        "topValue": "481",
+                        "leftValue": "456",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "35"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+
+    }   else if (tableNumber === '70' && topValue === '330' && leftValue === '458' && width === '40') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.width": "80",
+                    "tables.$.leftValue": "500",
                 }
             }, function (err, tables) {
                 if (err) {
@@ -423,22 +999,823 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("moveTable Update successful");
             });
         db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "71",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '70' && topValue === '330' && leftValue === '500' && width === '80') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.width": "40",
+                    "tables.$.leftValue": "458",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+
+        db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: {
                 tables: {
-                    $each: [ {
+                    $each: [   {
+                        "arrayIndex": 16,
+                        "department": "waeldlerStubeKristallStube",
+                        "number": "71",
+                        "topValue": "330",
+                        "leftValue": "550",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "35"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+
+//_____________________
+
+
+    }   else if (tableNumber === '61' && topValue === '147' && leftValue === '86' && width === '40') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.width": "80",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "62",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '61' && topValue === '147' && leftValue === '86' && width === '80') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.width": "40",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 11,
+                        "department": "waeldlerStubeKristallStube",
+                        "number": "62",
+                        "topValue": "147",
+                        "leftValue": "132",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "35"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+
+
+    }   else if (tableNumber === '55' && topValue === '247' && leftValue === '312' && width === '40') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.width": "80",
+                    "tables.$.leftValue": "267",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "56",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '55' && topValue === '247' && leftValue === '267' && width === '80') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.width": "120",
+                    "tables.$.leftValue": "221",
+
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "57",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '55' && topValue === '247' && leftValue === '221' && width === '120') {
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.width": "40",
+                    "tables.$.leftValue": "312",
+
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 5,
+                        "department": "waeldlerStubeKristallStube",
+                        "number": "56",
+                        "topValue": "247",
+                        "leftValue": "267",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "35"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 6,
+                        "department": "waeldlerStubeKristallStube",
+                        "number": "57",
+                        "topValue": "247",
+                        "leftValue": "221",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "35"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+
+
+    }   else if (tableNumber === '58' && topValue === '247' && leftValue === '132' && width === '40') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.width": "80",
+                    "tables.$.leftValue": "86",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "59",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '58' && topValue === '247' && leftValue === '86' && width === '80') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.width": "120",
+                    "tables.$.leftValue": "41",
+
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "60",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '58' && topValue === '247' && leftValue === '41' && width === '120') {
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.width": "40",
+                    "tables.$.leftValue": "132",
+
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 8,
+                        "department": "waeldlerStubeKristallStube",
+                        "number": "59",
+                        "topValue": "247",
+                        "leftValue": "86",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "35"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
                         "arrayIndex": 9,
-                        "department": "Sonnberg-Zirbn",
-                        "number": "49",
-                        "topValue": "340",
+                        "department": "waeldlerStubeKristallStube",
+                        "number": "60",
+                        "topValue": "247",
+                        "leftValue": "41",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "35"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+
+
+    }   else if (tableNumber === '63' && topValue === '147' && leftValue === '222' && width === '40') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.width": "80",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "64",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '63' && topValue === '147' && leftValue === '222' && width === '80') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.width": "120",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "65",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '63' && topValue === '147' && leftValue === '222' && width === '120') {
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.width": "40",
+
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 13,
+                        "department": "waeldlerStubeKristallStube",
+                        "number": "64",
+                        "topValue": "147",
+                        "leftValue": "267",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "35"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 14,
+                        "department": "waeldlerStubeKristallStube",
+                        "number": "65",
+                        "topValue": "147",
+                        "leftValue": "312",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "35"
+                    }],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+
+
+    }   else if (tableNumber === '42' && topValue === '223' && leftValue === '552' && height === '35') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "70",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "43",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '42' && topValue === '223' && leftValue === '552' && height === '70') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "35",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 12,
+                        "department": "berglerStubeHubertusStube",
+                        "number": "43",
+                        "topValue": "277",
+                        "leftValue": "552",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "width": "40",
+                        "height": "35",
+                        "border": "solid 1px #0a7a74"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+
+    }   else if (tableNumber === '44' && topValue === '349' && leftValue === '552' && height === '35') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "70",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "45",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '44' && topValue === '349' && leftValue === '552' && height === '70') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "35",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 14,
+                        "department": "berglerStubeHubertusStube",
+                        "number": "45",
+                        "topValue": "395",
+                        "leftValue": "552",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "35"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 12,
+                        "department": "berglerStubeHubertusStube",
+                        "number": "43",
+                        "topValue": "277",
+                        "leftValue": "552",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "width": "40",
+                        "height": "35",
+                        "border": "solid 1px #0a7a74"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+
+    }   else if (tableNumber === '12' && topValue === '220' && leftValue === '400' && height === '60') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "120",
+                    "tables.$.topValue": "160",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "13",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '12' && topValue === '160' && leftValue === '400' && height === '120') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "60",
+                    "tables.$.topValue": "220",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [   {
+                        "arrayIndex": 3,
+                        "department": "Bauernstube",
+                        "number": "13",
+                        "topValue": "160",
                         "leftValue": "400",
                         "bgColor": "#ffffff",
                         "isBesetzt": "false",
                         "placeholder": "true",
                         "border": "solid 1px #0a7a74",
-                        "width": "60",
-                        "height": "40"
+                        "width": "40",
+                        "height": "60",
                     } ],
                     $sort: { number: 1 } } } },
             { multi: true },
@@ -448,7 +1825,8 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-    } else if (tableNumber === '50' && topValue === '430') {
+
+    }   else if (tableNumber === '25' && topValue === '160' && leftValue === '300' && height === '60') {
         db.hubertusTables.update(
             {
                 department: departmentValue,
@@ -456,8 +1834,40 @@ router.post('/moveTable', function(req, res, next) {
             },
             {
                 $set: {
-                    "tables.$.topValue": "460",
-                    "tables.$.height": "30",
+                    "tables.$.height": "120",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "26",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '25' && topValue === '160' && leftValue === '300' && height === '120') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.height": "60",
                 }
             }, function (err, tables) {
                 if (err) {
@@ -471,17 +1881,19 @@ router.post('/moveTable', function(req, res, next) {
                 department: departmentValue,
             }, { $push: {
                 tables: {
-                    $each: [ { "arrayIndex": 11,
-                        "department": "Sonnberg-Zirbn",
-                        "number": "51",
-                        "topValue": "400",
-                        "leftValue": "200",
+                    $each: [   {
+                        "arrayIndex": 12,
+                        "department": "Bauernstube",
+                        "number": "26",
+                        "topValue": "220",
+                        "leftValue": "300",
                         "bgColor": "#ffffff",
                         "isBesetzt": "false",
                         "placeholder": "true",
-                        "width": "60",
-                        "height": "30",
-                        "border": "solid 1px #0a7a74" } ],
+                        "border": "solid 1px #0a7a74",
+                        "width": "40",
+                        "height": "60"
+                    } ],
                     $sort: { number: 1 } } } },
             { multi: true },
             function (err, tables) {
@@ -490,7 +1902,9 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("addTable Update successful");
             });
-    } else if (tableNumber === '50' && topValue === '460') {
+
+
+    }   else if (tableNumber === '22' && topValue === '220' && leftValue === '180' && height === '60') {
         db.hubertusTables.update(
             {
                 department: departmentValue,
@@ -498,8 +1912,8 @@ router.post('/moveTable', function(req, res, next) {
             },
             {
                 $set: {
-                    "tables.$.topValue": "430",
-                    "tables.$.height": "60",
+                    "tables.$.height": "120",
+                    "tables.$.topValue": "160",
                 }
             }, function (err, tables) {
                 if (err) {
@@ -507,13 +1921,16 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
-
         db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "23",
+                    }
+                }
+            },
             {
-            }, { $pull: { tables: {
-                "number": "51",
-            } } },
-            { multi: true
+                multi: true
             }, function (err, tables) {
                 if (err) {
                     console.log("Error");
@@ -521,7 +1938,7 @@ router.post('/moveTable', function(req, res, next) {
                 console.log("removeTable Update successful");
                 console.log(tables);
             });
-    } else if (tableNumber === '52' && topValue === '280' && leftValue === '200') {
+    }   else if (tableNumber === '22' && topValue === '160' && leftValue === '180' && height === '120') {
         db.hubertusTables.update(
             {
                 department: departmentValue,
@@ -529,8 +1946,8 @@ router.post('/moveTable', function(req, res, next) {
             },
             {
                 $set: {
-                    "tables.$.leftValue": "230",
-                    "tables.$.width": "30",
+                    "tables.$.height": "60",
+                    "tables.$.topValue": "220",
                 }
             }, function (err, tables) {
                 if (err) {
@@ -538,4252 +1955,36 @@ router.post('/moveTable', function(req, res, next) {
                 }
                 console.log("moveTable Update successful");
             });
+
         db.hubertusTables.update(
             {
                 department: departmentValue,
             }, { $push: {
                 tables: {
-                    $each: [ {
-                        "arrayIndex": 13,
-                        "department": "Sonnberg-Zirbn",
-                        "number": "53",
-                        "topValue": "280",
-                        "leftValue": "170",
+                    $each: [   {
+                        "arrayIndex": 9,
+                        "department": "Bauernstube",
+                        "number": "23",
+                        "topValue": "160",
+                        "leftValue": "180",
                         "bgColor": "#ffffff",
                         "isBesetzt": "false",
                         "placeholder": "true",
                         "border": "solid 1px #0a7a74",
-                        "width": "30",
-                        "height": "60" }],
-                    $sort: { number:  1 },
-                } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log(err);
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '52' && topValue === '280' && leftValue === '230') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "60",
-                    "tables.$.leftValue": "200",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "53",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '54' && topValue === '320' && leftValue === '50') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "290",
-                    "tables.$.leftValue": "50",
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "55",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '54' && topValue === '290' && leftValue === '50' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "260",
-                    "tables.$.height": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "56",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '54' && topValue === '260' && leftValue === '50' && height === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "200",
-                    "tables.$.height": "120",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "57",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '54' && topValue === '200' && leftValue === '50' && height === '120') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "320",
-                    "tables.$.leftValue": "50",
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [ {"arrayIndex": 15,
-                    "department": "Sonnberg-Zirbn",
-                    "number": "55",
-                    "topValue": "260",
-                    "leftValue": "50",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"} ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [     {
-                    "arrayIndex": 16,
-                    "department": "Sonnberg-Zirbn",
-                    "number": "56",
-                    "topValue": "200",
-                    "leftValue": "50",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [     {
-                    "arrayIndex": 17,
-                    "department": "Sonnberg-Zirbn",
-                    "number": "57",
-                    "topValue": "140",
-                    "leftValue": "50",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '55' && topValue === '260' && leftValue === '50') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "230",
-                    "tables.$.leftValue": "50",
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "56",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '55' && topValue === '230' && leftValue === '50' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "200",
-                    "tables.$.leftValue": "50",
-                    "tables.$.height": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "57",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '55' && topValue === '200' && leftValue === '50' && height === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "260",
-                    "tables.$.leftValue": "50",
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [      {
-                    "arrayIndex": 16,
-                    "department": "Sonnberg-Zirbn",
-                    "number": "56",
-                    "topValue": "200",
-                    "leftValue": "50",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": 17,
-                    "department": "Sonnberg-Zirbn",
-                    "number": "57",
-                    "topValue": "140",
-                    "leftValue": "50",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '56' && topValue === '200' && leftValue === '50') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "170",
-                    "tables.$.leftValue": "50",
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "57",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '56' && topValue === '170' && leftValue === '50') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "200",
-                    "tables.$.leftValue": "50",
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [      {
-                    "arrayIndex": 17,
-                    "department": "Sonnberg-Zirbn",
-                    "number": "57",
-                    "topValue": "140",
-                    "leftValue": "50",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '58' && topValue === '140' && leftValue === '170' && width === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "140",
-                    "tables.$.leftValue": "170",
-                    "tables.$.width": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "59",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-
-    } else if (tableNumber === '58' && topValue === '140' && leftValue === '170' && width === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "140",
-                    "tables.$.leftValue": "170",
-                    "tables.$.width": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [      {
-                    "arrayIndex": 19,
-                    "department": "Sonnberg-Zirbn",
-                    "number": "59",
-                    "topValue": "140",
-                    "leftValue": "230",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '60' && topValue === '440' && leftValue === '220' && width === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "440",
-                    "tables.$.leftValue": "250",
-                    "tables.$.width": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "61",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '60' && topValue === '440' && leftValue === '250' && width === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "440",
-                    "tables.$.leftValue": "250",
-                    "tables.$.width": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "62",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '60' && topValue === '440' && leftValue === '250' && width === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "440",
-                    "tables.$.leftValue": "250",
-                    "tables.$.width": "120",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "63",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-
-    } else if (tableNumber === '60' && topValue === '440' && leftValue === '250' && width === '120') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "440",
-                    "tables.$.leftValue": "220",
-                    "tables.$.width": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [      {
-                    "arrayIndex": "3",
-                    "department": "Bauernstube",
-                    "number": "63",
-                    "topValue": "440",
-                    "leftValue": "400",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [      {
-                    "arrayIndex": "2",
-                    "department": "Bauernstube",
-                    "number": "62",
-                    "topValue": "440",
-                    "leftValue": "340",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [     {
-                    "arrayIndex": "1",
-                    "department": "Bauernstube",
-                    "number": "61",
-                    "topValue": "440",
-                    "leftValue": "280",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
+                        "width": "40",
+                        "height": "60"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
                 if (err) {
                     console.log("Error");
                 }
                 console.log("addTable Update successful");
             });
 
-    } else if (tableNumber === '61' && topValue === '440' && leftValue === '280'  && width === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "62",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '61' && topValue === '440' && leftValue === '280' && width === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "63",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '61' && topValue === '440' && leftValue === '280' && width === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "120",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "64",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '61' && topValue === '440' && leftValue === '280' && width === '120') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [      {
-                    "arrayIndex": "3",
-                    "department": "Bauernstube",
-                    "number": "63",
-                    "topValue": "440",
-                    "leftValue": "400",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [      {
-                    "arrayIndex": "2",
-                    "department": "Bauernstube",
-                    "number": "62",
-                    "topValue": "440",
-                    "leftValue": "340",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "4",
-                    "department": "Bauernstube",
-                    "number": "64",
-                    "topValue": "440",
-                    "leftValue": "460",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '62' && topValue === '440' && leftValue === '340' && width === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "63",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '62' && topValue === '440' && leftValue === '340' && width === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "64",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '62' && topValue === '440' && leftValue === '340' && width === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "120",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "65",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '62' && topValue === '440' && leftValue === '340' && width === '120') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [      {
-                    "arrayIndex": "3",
-                    "department": "Bauernstube",
-                    "number": "63",
-                    "topValue": "440",
-                    "leftValue": "400",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [         {
-                    "arrayIndex": "5",
-                    "department": "Bauernstube",
-                    "number": "65",
-                    "topValue": "440",
-                    "leftValue": "520",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "4",
-                    "department": "Bauernstube",
-                    "number": "64",
-                    "topValue": "440",
-                    "leftValue": "460",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '63' && topValue === '440' && leftValue === '400' && width === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "64",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '63' && topValue === '440' && leftValue === '400' && width === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "65",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '63' && topValue === '440' && leftValue === '400' && width === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "120",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "66",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '63' && topValue === '440' && leftValue === '400' && width === '120') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [       {
-                    "arrayIndex": "6",
-                    "department": "Bauernstube",
-                    "number": "66",
-                    "topValue": "440",
-                    "leftValue": "580",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [         {
-                    "arrayIndex": "5",
-                    "department": "Bauernstube",
-                    "number": "65",
-                    "topValue": "440",
-                    "leftValue": "520",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "4",
-                    "department": "Bauernstube",
-                    "number": "64",
-                    "topValue": "440",
-                    "leftValue": "460",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '64' && topValue === '440' && leftValue === '460' && width === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "65",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '64' && topValue === '440' && leftValue === '460' && width === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "66",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '64' && topValue === '440' && leftValue === '460' && width === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "6",
-                    "department": "Bauernstube",
-                    "number": "66",
-                    "topValue": "440",
-                    "leftValue": "580",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [          {
-                    "arrayIndex": "5",
-                    "department": "Bauernstube",
-                    "number": "65",
-                    "topValue": "440",
-                    "leftValue": "520",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '65' && topValue === '440' && leftValue === '520' && width === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "66",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '65' && topValue === '440' && leftValue === '520' && width === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "6",
-                    "department": "Bauernstube",
-                    "number": "66",
-                    "topValue": "440",
-                    "leftValue": "580",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "30",
-                    "height": "60"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '67' && topValue === '340' && leftValue === '580' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "60",
-                    "tables.$.topValue": "310",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "68",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '67' && topValue === '310' && leftValue === '580' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "90",
-                    "tables.$.topValue": "280",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "69",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '67' && topValue === '280' && leftValue === '580' && height === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "120",
-                    "tables.$.topValue": "250",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "70",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '67' && topValue === '250' && leftValue === '580' && height === '120') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "30",
-                    "tables.$.topValue": "340",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "8",
-                    "department": "Bauernstube",
-                    "number": "68",
-                    "topValue": "280",
-                    "leftValue": "580",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "9",
-                    "department": "Bauernstube",
-                    "number": "69",
-                    "topValue": "220",
-                    "leftValue": "580",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "10",
-                    "department": "Bauernstube",
-                    "number": "70",
-                    "topValue": "160",
-                    "leftValue": "580",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '68' && topValue === '280' && leftValue === '580' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "250",
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "69",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '68' && topValue === '250' && leftValue === '580' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "220",
-                    "tables.$.height": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "70",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '68' && topValue === '220' && leftValue === '580' && height === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "280",
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "9",
-                    "department": "Bauernstube",
-                    "number": "69",
-                    "topValue": "220",
-                    "leftValue": "580",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "10",
-                    "department": "Bauernstube",
-                    "number": "70",
-                    "topValue": "160",
-                    "leftValue": "580",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
 
-    } else if (tableNumber === '69' && topValue === '220' && leftValue === '580' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "190",
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "70",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '69' && topValue === '190' && leftValue === '580' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "220",
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "10",
-                    "department": "Bauernstube",
-                    "number": "70",
-                    "topValue": "160",
-                    "leftValue": "580",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '71' && topValue === '160' && leftValue === '460' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "160",
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "72",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '71' && topValue === '160' && leftValue === '460' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "160",
-                    "tables.$.height": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "73",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '71' && topValue === '160' && leftValue === '460' && height === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "160",
-                    "tables.$.height": "120",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "74",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '71' && topValue === '160' && leftValue === '460' && height === '120') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "160",
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [         {
-                    "arrayIndex": "12",
-                    "department": "Bauernstube",
-                    "number": "72",
-                    "topValue": "220",
-                    "leftValue": "460",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "13",
-                    "department": "Bauernstube",
-                    "number": "73",
-                    "topValue": "280",
-                    "leftValue": "460",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "14",
-                    "department": "Bauernstube",
-                    "number": "74",
-                    "topValue": "340",
-                    "leftValue": "460",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-
-    } else if (tableNumber === '72' && topValue === '220' && leftValue === '460' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "73",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '72' && topValue === '220' && leftValue === '460' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "74",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-
-
-    } else if (tableNumber === '72' && topValue === '220' && leftValue === '460' && height === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "13",
-                    "department": "Bauernstube",
-                    "number": "73",
-                    "topValue": "280",
-                    "leftValue": "460",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "14",
-                    "department": "Bauernstube",
-                    "number": "74",
-                    "topValue": "340",
-                    "leftValue": "460",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '73' && topValue === '280' && leftValue === '460' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "74",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '73' && topValue === '280' && leftValue === '460' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "14",
-                    "department": "Bauernstube",
-                    "number": "74",
-                    "topValue": "340",
-                    "leftValue": "460",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-
-    } else if (tableNumber === '75' && topValue === '340' && leftValue === '340' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "60",
-                    "tables.$.topValue": "310",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "76",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '75' && topValue === '310' && leftValue === '340' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "90",
-                    "tables.$.topValue": "280",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "77",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '75' && topValue === '280' && leftValue === '340' && height === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "120",
-                    "tables.$.topValue": "250",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "78",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '75' && topValue === '250' && leftValue === '340' && height === '120') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "30",
-                    "tables.$.topValue": "340",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "16",
-                    "department": "Bauernstube",
-                    "number": "76",
-                    "topValue": "280",
-                    "leftValue": "340",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "17",
-                    "department": "Bauernstube",
-                    "number": "77",
-                    "topValue": "220",
-                    "leftValue": "340",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "18",
-                    "department": "Bauernstube",
-                    "number": "78",
-                    "topValue": "160",
-                    "leftValue": "340",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '76' && topValue === '280' && leftValue === '340' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "250",
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "77",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '76' && topValue === '250' && leftValue === '340' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "220",
-                    "tables.$.height": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "78",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '76' && topValue === '220' && leftValue === '340' && height === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "280",
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "17",
-                    "department": "Bauernstube",
-                    "number": "77",
-                    "topValue": "220",
-                    "leftValue": "340",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "18",
-                    "department": "Bauernstube",
-                    "number": "78",
-                    "topValue": "160",
-                    "leftValue": "340",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-
-    } else if (tableNumber === '77' && topValue === '220' && leftValue === '340' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "190",
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "78",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '77' && topValue === '190' && leftValue === '340' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "220",
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "18",
-                    "department": "Bauernstube",
-                    "number": "78",
-                    "topValue": "160",
-                    "leftValue": "340",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-
-    } else if (tableNumber === '79' && topValue === '340' && leftValue === '220' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "60",
-                    "tables.$.topValue": "310",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "80",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '79' && topValue === '310' && leftValue === '220' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "90",
-                    "tables.$.topValue": "280",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "81",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '79' && topValue === '280' && leftValue === '220' && height === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "120",
-                    "tables.$.topValue": "250",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "82",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '79' && topValue === '250' && leftValue === '220' && height === '120') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "30",
-                    "tables.$.topValue": "340",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [         {
-                    "arrayIndex": "20",
-                    "department": "Bauernstube",
-                    "number": "80",
-                    "topValue": "280",
-                    "leftValue": "220",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [       {
-                    "arrayIndex": "21",
-                    "department": "Bauernstube",
-                    "number": "81",
-                    "topValue": "220",
-                    "leftValue": "220",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "22",
-                    "department": "Bauernstube",
-                    "number": "82",
-                    "topValue": "160",
-                    "leftValue": "220",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '80' && topValue === '280' && leftValue === '220' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "250",
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "81",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '80' && topValue === '250' && leftValue === '220' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "220",
-                    "tables.$.height": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "82",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '80' && topValue === '220' && leftValue === '220' && height === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "280",
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [       {
-                    "arrayIndex": "21",
-                    "department": "Bauernstube",
-                    "number": "81",
-                    "topValue": "220",
-                    "leftValue": "220",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "22",
-                    "department": "Bauernstube",
-                    "number": "82",
-                    "topValue": "160",
-                    "leftValue": "220",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-
-    } else if (tableNumber === '81' && topValue === '220' && leftValue === '220' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "190",
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "82",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '81' && topValue === '190' && leftValue === '220' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "220",
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "22",
-                    "department": "Bauernstube",
-                    "number": "82",
-                    "topValue": "160",
-                    "leftValue": "220",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '83' && topValue === '160' && leftValue === '60' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "160",
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "84",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '83' && topValue === '160' && leftValue === '60' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "160",
-                    "tables.$.height": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "85",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '83' && topValue === '160' && leftValue === '60' && height === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "160",
-                    "tables.$.height": "120",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "86",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '83' && topValue === '160' && leftValue === '60' && height === '120') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "160",
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [         {
-                    "arrayIndex": "24",
-                    "department": "Bauernstube",
-                    "number": "84",
-                    "topValue": "220",
-                    "leftValue": "60",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "25",
-                    "department": "Bauernstube",
-                    "number": "85",
-                    "topValue": "280",
-                    "leftValue": "60",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "26",
-                    "department": "Bauernstube",
-                    "number": "86",
-                    "topValue": "340",
-                    "leftValue": "60",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-
-    } else if (tableNumber === '84' && topValue === '220' && leftValue === '60' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "85",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '84' && topValue === '220' && leftValue === '60' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "86",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '84' && topValue === '220' && leftValue === '60' && height === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "120",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "87",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-
-
-    } else if (tableNumber === '84' && topValue === '220' && leftValue === '60' && height === '120') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "25",
-                    "department": "Bauernstube",
-                    "number": "85",
-                    "topValue": "280",
-                    "leftValue": "60",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "26",
-                    "department": "Bauernstube",
-                    "number": "86",
-                    "topValue": "340",
-                    "leftValue": "60",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "27",
-                    "department": "Bauernstube",
-                    "number": "87",
-                    "topValue": "400",
-                    "leftValue": "60",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '85' && topValue === '280' && leftValue === '60' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "86",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '85' && topValue === '280' && leftValue === '60' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "87",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '85' && topValue === '280' && leftValue === '60' && height === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "120",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "88",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '85' && topValue === '280' && leftValue === '60' && height === '120') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "28",
-                    "department": "Bauernstube",
-                    "number": "88",
-                    "topValue": "460",
-                    "leftValue": "60",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "26",
-                    "department": "Bauernstube",
-                    "number": "86",
-                    "topValue": "340",
-                    "leftValue": "60",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "27",
-                    "department": "Bauernstube",
-                    "number": "87",
-                    "topValue": "400",
-                    "leftValue": "60",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-
-    } else if (tableNumber === '86' && topValue === '340' && leftValue === '60' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "87",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '86' && topValue === '340' && leftValue === '60'  && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "88",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '86' && topValue === '340' && leftValue === '60'  && height === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "120",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "89",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '86' && topValue === '340' && leftValue === '60'  && height === '120') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "28",
-                    "department": "Bauernstube",
-                    "number": "88",
-                    "topValue": "460",
-                    "leftValue": "60",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [            {
-                    "arrayIndex": "29",
-                    "department": "Bauernstube",
-                    "number": "89",
-                    "topValue": "520",
-                    "leftValue": "60",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "27",
-                    "department": "Bauernstube",
-                    "number": "87",
-                    "topValue": "400",
-                    "leftValue": "60",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '87' && topValue === '400' && leftValue === '60' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "88",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '87' && topValue === '400' && leftValue === '60' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "90",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "89",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '87' && topValue === '400' && leftValue === '60' && height === '90') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [        {
-                    "arrayIndex": "28",
-                    "department": "Bauernstube",
-                    "number": "88",
-                    "topValue": "460",
-                    "leftValue": "60",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [            {
-                    "arrayIndex": "29",
-                    "department": "Bauernstube",
-                    "number": "89",
-                    "topValue": "520",
-                    "leftValue": "60",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '88' && topValue === '460' && leftValue === '60' && height === '30') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "60",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "89",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-
-    } else if (tableNumber === '88' && topValue === '460' && leftValue === '60' && height === '60') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.height": "30",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [            {
-                    "arrayIndex": "29",
-                    "department": "Bauernstube",
-                    "number": "89",
-                    "topValue": "520",
-                    "leftValue": "60",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "60",
-                    "height": "30"
-                } ],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '501' && topValue === '115' && leftValue === '430' && width === '40') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "80",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "502",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '501' && topValue === '115' && leftValue === '430' && width === '80') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "40",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [              {
-                    "arrayIndex": "1",
-                    "department": "Wintergarten",
-                    "number": "502",
-                    "topValue": "115",
-                    "leftValue": "500",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "40",
-                    "height": "40"
-                }],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '503' && topValue === '115' && leftValue === '590' && width === '40') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "80",
-                    "tables.$.transformValue": "rotate(0deg)",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "504",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '503' && topValue === '115' && leftValue === '590' && width === '80') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "40",
-                    "tables.$.transformValue": "rotate(45deg)",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [              {
-                    "arrayIndex": "3",
-                    "department": "Wintergarten",
-                    "number": "504",
-                    "topValue": "115",
-                    "leftValue": "680",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "40",
-                    "height": "40",
-                    "transformValue": "rotate(45deg)"
-                }],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-
-    } else if (tableNumber === '505' && topValue === '215' && leftValue === '590' && width === '40') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "80",
-                    "tables.$.transformValue": "rotate(0deg)",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "506",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '505' && topValue === '215' && leftValue === '590' && width === '80') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "40",
-                    "tables.$.transformValue": "rotate(45deg)",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [              {
-                    "arrayIndex": "5",
-                    "department": "Wintergarten",
-                    "number": "506",
-                    "topValue": "215",
-                    "leftValue": "690",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "40",
-                    "height": "40",
-                    "transformValue": "rotate(45deg)"
-                }],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '515' && topValue === '380' && leftValue === '280' && width === '40') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "80",
-                    "tables.$.leftValue": "250",
-                    "tables.$.transformValue": "rotate(0deg)",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "516",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '515' && topValue === '380' && leftValue === '250' && width === '80') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.width": "40",
-                    "tables.$.leftValue": "280",
-                    "tables.$.transformValue": "rotate(45deg)",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [              {
-                    "arrayIndex": "15",
-                    "department": "Wintergarten",
-                    "number": "516",
-                    "topValue": "380",
-                    "leftValue": "200",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "40",
-                    "height": "40",
-                    "transformValue": "rotate(45deg)"
-                }],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    } else if (tableNumber === '523' && topValue === '180' && leftValue === '260'  && width === '40') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "110",
-                    "tables.$.leftValue": "260",
-                    "tables.$.width": "80",
-                    "tables.$.transformValue": "rotate(0deg)",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-            }, { $pull: { tables: {
-                "number": "524",
-            } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-                console.log(tables);
-            });
-    } else if (tableNumber === '523' && topValue === '110' && leftValue === '260' && width === '80') {
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-                "tables.number": tableNumber
-            },
-            {
-                $set: {
-                    "tables.$.topValue": "180",
-                    "tables.$.leftValue": "260",
-                    "tables.$.width": "40",
-                    "tables.$.transformValue": "rotate(45deg)",
-
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("moveTable Update successful");
-            });
-        db.hubertusTables.update(
-            {
-                department: departmentValue,
-            }, { $push: { tables: {
-                $each: [              {
-                    "arrayIndex": "23",
-                    "department": "Wintergarten",
-                    "number": "524",
-                    "topValue": "115",
-                    "leftValue": "300",
-                    "bgColor": "#ffffff",
-                    "isBesetzt": "false",
-                    "placeholder": "true",
-                    "border": "solid 1px #0a7a74",
-                    "width": "40",
-                    "height": "40",
-                    "transformValue": "rotate(45deg)"
-                }],
-                $sort: { number: 1 } } } },
-            { multi: true
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("addTable Update successful");
-            });
-    }        setTimeout(function() {
+    } setTimeout(function() {
         db.hubertusTables.find(
             {
                 "department": departmentValue,
@@ -4797,35 +1998,6 @@ router.post('/moveTable', function(req, res, next) {
             });
     }, 100);
 });
-
-
-/*
-
-
- //9
- if (g === 8 && this.leftValues[f] === 180 && this.topValues[g] === 200) {
- this.topValues[g] = 200;
- this.leftValues[f] = 210;
- this.tables.splice(j + 1, 1, 9);
- } else if (g === 8 && this.leftValues[f] === 210 && this.topValues[g] === 200) {
- this.topValues[g] = 200;
- this.leftValues[f] = 180;
- this.tables.splice(j + 1, 1, 10);
-
- //523
- if (g === 23 && this.leftValues[f] === 300 && this.topValues[g] === 115) {
- this.topValues[g] = 130;
- this.leftValues[f] = 260;
- this.tables.splice(j, 1, 523);
- } else if (g === 23 && this.leftValues[f] === 260 && this.topValues[g] === 130) {
- this.topValues[g] = 115;
- this.leftValues[f] = 300;
- this.tables.splice(j, 1, 524);
- }
-
-
- });
- */
 
 //occupyTable
 router.post('/occupyTable', function(req, res, next) {
@@ -4867,17 +2039,17 @@ router.post('/occupyTable', function(req, res, next) {
         tableValue = tableValueArray[0];
     }
 
-    if(departmentValue === "SonnbergZirbn") {
-        departmentValueDB = "Sonnberg-Zirbn";
+    if(departmentValue === "berglerStubeHubertusStube") {
+        departmentValueDB = "berglerStubeHubertusStube";
     }
     else if(departmentValue === "Bauernstube") {
         departmentValueDB = "Bauernstube";
     }
-    else if(departmentValue === "Restaurant") {
-        departmentValueDB = "Restaurant";
+    else if(departmentValue === "waeldlerStubeKristallStube") {
+        departmentValueDB = "waeldlerStubeKristallStube";
     }
-    else if(departmentValue === "Wintergarten") {
-        departmentValueDB = "Wintergarten";
+    else if(departmentValue === "edelweissKaminStube") {
+        departmentValueDB = "edelweissKaminStube";
     }
 
     db.hubertusTables.update(
@@ -5027,17 +2199,17 @@ router.post('/removePlaceholder', function(req, res, next) {
         }
 
 
-    if(departmentValue === "SonnbergZirbn") {
-        departmentValueDB = "Sonnberg-Zirbn";
+    if(departmentValue === "berglerStubeHubertusStube") {
+        departmentValueDB = "berglerStubeHubertusStube";
     }
     else if(departmentValue === "Bauernstube") {
         departmentValueDB = "Bauernstube";
     }
-    else if(departmentValue === "Restaurant") {
-        departmentValueDB = "Restaurant";
+    else if(departmentValue === "waeldlerStubeKristallStube") {
+        departmentValueDB = "waeldlerStubeKristallStube";
     }
-    else if(departmentValue === "Wintergarten") {
-        departmentValueDB = "Wintergarten";
+    else if(departmentValue === "edelweissKaminStube") {
+        departmentValueDB = "edelweissKaminStube";
     }
 
     console.log('removePlaceholder:' + departmentValue);
@@ -5264,17 +2436,17 @@ router.post('/addInformationToTable', function(req, res, next) {
     console.log(" nameValue " + nameValue + " zimmernummerValue " + zimmernummerValue + " preistypValue " + preistypValue + " anreiseValue " + anreiseValue + " abreiseValue " + abreiseValue + " personenAnzahlValue " + personenAnzahlValue + " katValue " + katValue + " notiz1Value " + notiz1Value + " notiz2Value " + notiz2Value + " bemerkungValue " + bemerkungValue + bemerkungValue1 + bemerkungValue2 + "tableValue" + tableValue + "departmentvalue" + departmentValue);
 
 
-    if(departmentValue === "SonnbergZirbn") {
-        departmentValueDB = "Sonnberg-Zirbn";
+    if(departmentValue === "berglerStubeHubertusStube") {
+        departmentValueDB = "berglerStubeHubertusStube";
     }
     else if(departmentValue === "Bauernstube") {
         departmentValueDB = "Bauernstube";
     }
-    else if(departmentValue === "Restaurant") {
-        departmentValueDB = "Restaurant";
+    else if(departmentValue === "waeldlerStubeKristallStube") {
+        departmentValueDB = "waeldlerStubeKristallStube";
     }
-    else if(departmentValue === "Wintergarten") {
-        departmentValueDB = "Wintergarten";
+    else if(departmentValue === "edelweissKaminStube") {
+        departmentValueDB = "edelweissKaminStube";
     }
     console.log(departmentValueDB);
     setTimeout(function() {
