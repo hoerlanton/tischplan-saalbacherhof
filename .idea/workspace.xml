@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b12636d-0934-43d0-9e11-bbac60639e35" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/inline.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/inline.bundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/main.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/main.bundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/polyfills.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/polyfills.bundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/styles.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/styles.bundle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor.bundle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/vendor.bundle.js.map" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -36,8 +23,8 @@
       <file leaf-file-name="tischplan.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="705" column="3" lean-forward="true" selection-start-line="705" selection-start-column="3" selection-end-line="705" selection-end-column="3" />
+            <state relative-caret-position="567">
+              <caret line="723" column="9218" lean-forward="false" selection-start-line="723" selection-start-column="9218" selection-end-line="723" selection-end-column="9218" />
               <folding>
                 <element signature="e#0#93#0" expanded="true" />
               </folding>
@@ -136,7 +123,7 @@
         <entry file="file://$PROJECT_DIR$/config/default.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+              <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -585,12 +572,12 @@
       <workItem from="1514366528423" duration="68000" />
       <workItem from="1514384624827" duration="42683000" />
       <workItem from="1514574923420" duration="6237000" />
-      <workItem from="1514614913094" duration="42785000" />
+      <workItem from="1514614913094" duration="43102000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="375357000" />
+    <option name="totallyTimeSpent" value="375674000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -888,7 +875,7 @@
     <entry file="file://$PROJECT_DIR$/config/default.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -920,8 +907,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="705" column="3" lean-forward="true" selection-start-line="705" selection-start-column="3" selection-end-line="705" selection-end-column="3" />
+        <state relative-caret-position="567">
+          <caret line="723" column="9218" lean-forward="false" selection-start-line="723" selection-start-column="9218" selection-end-line="723" selection-end-column="9218" />
           <folding>
             <element signature="e#0#93#0" expanded="true" />
           </folding>
