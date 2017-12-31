@@ -5296,7 +5296,8 @@ router.post('/addInformationToTable', function(req, res, next) {
                     return;
                 }
                 console.log("Länge tables firstplace" + JSON.stringify(tablesfirst.tables[0]).length);
-                if (JSON.stringify(tablesfirst.tables[0]).length < 350) {
+                console.log("nameValue" in tablesfirst.tables[0]);
+                if (!("nameValue" in tablesfirst.tables[0])) {
                     db.hubertusTables.update(
                         {
                             department: departmentValueDB,
@@ -5325,7 +5326,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                             }
                             console.log("addInformationToTable updated successfully");
                         });
-                } else if (JSON.stringify(tablesfirst.tables[0]).length > 350 && JSON.stringify(tablesfirst.tables[0]).length < 650) {
+                } else if (!("nameValue2" in tablesfirst.tables[0])) {
                     db.hubertusTables.update(
                         {
                             department: departmentValueDB,
@@ -5353,7 +5354,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                             }
                             console.log("addInformationToTable updated successfully");
                         });
-                } else if (JSON.stringify(tablesfirst.tables[0]).length > 650) {
+                } else if (!("nameValue3" in tablesfirst.tables[0])) {
                     db.hubertusTables.update(
                         {
                             department: departmentValueDB,

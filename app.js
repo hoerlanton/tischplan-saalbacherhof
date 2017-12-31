@@ -48,6 +48,9 @@ let storage = multer.diskStorage({
 
 let upload = multer({ storage: storage });
 let csvDatei = "";
+let csvDateiWithoutBackSlashes = "";
+let csvDateiWithoutQuotes = "";
+let csvDatei2 = "";
 
 //source: https://gist.github.com/aitoribanez/8b2d38601f6916139f5754aae5bcc15f
 //New file got attached to message
@@ -56,16 +59,30 @@ app.post("/upload", upload.array("uploads[]", 12), function (req, res) {
     res.send(req.files);
     let uploadedFileName = req.files[0].filename.replace(/ /g, "");
     let json = [];
+
+
+
     csv({noheader:true})
         .fromStream(request.get(String(config.get('serverURL') + "/uploads/" + uploadedFileName)))
         .on('csv',(csvRow)=>{
             json.push(csvRow);
-            //console.log("json = " + JSON.stringify(json));
-            //console.log("after stringifying: " + csvDatei);
+            console.log("csvRow");
+            console.log(csvRow);
+            console.log(JSON.stringify(csvRow));
+            console.log("json = " + JSON.stringify(json));
+            console.log("after stringifying: " + csvDatei);
         })
         .on('done', (error)=>{
-
+            //console.log(json);
             csvDatei = JSON.stringify(json);
+            csvDateiWithoutBackSlashes = csvDatei.replace(/\\/gi,"");
+            csvDateiWithoutQuotes = csvDateiWithoutBackSlashes.replace(/["']/g, "");
+            csvDatei2 = JSON.stringify({test: csvDateiWithoutQuotes});
+            let csvDateiJSON = JSON.parse(csvDatei2);
+            console.log("csvDateiJSON:");
+            console.log(csvDateiJSON);
+            console.log(JSON.stringify(csvDateiJSON));
+
             console.log(csvDatei);
             if (csvDatei.indexOf("Im Haus") !== -1) {
                 postImHausListeToDB();
