@@ -41,7 +41,7 @@
                   <div *ngIf="tablesBerglerStubeHubertusStube[j] !== tablesBerglerStubeHubertusStube[j+1]">
                     <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableBerglerStubeHubertusStube, j)">{{tableBerglerStubeHubertusStube.isBesetzt === 'true' ? 'FREI MACHEN' : '' }}</button>
                     <p><b> Tisch: </b>{{tableBerglerStubeHubertusStube.number}} </p><br>
-                    <div class='cards-container' id='containerSonnbergZirbn'  [ngStyle]="{'background-color': + tableBerglerStubeHubertusStube.bgColor}">
+                    <div class='cards-container' id='containerBerglerStubeHubertusStube'  [ngStyle]="{'background-color': + tableBerglerStubeHubertusStube.bgColor}">
                       <div class="table" [ngStyle]="{'background-color': '#' + tableBerglerStubeHubertusStube.bgColor}">
                         <div *ngIf="tableBerglerStubeHubertusStube.isBesetzt === 'true'">
                           <p style="background-color: #FFFFFF">
@@ -87,7 +87,7 @@
                         </div>
                       </div>
                       <div *ngIf="tableBerglerStubeHubertusStube.placeholder === 'true'">
-                        <p [dragula]='"evented-bag"' id="Sonnberg-Zirbn" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableBerglerStubeHubertusStube.number}} {{tableBerglerStubeHubertusStube.department}} {{tableBerglerStubeHubertusStube.arrayIndex}} </p>
+                        <p [dragula]='"evented-bag"' id="BerglerStubeHubertusStube" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableBerglerStubeHubertusStube.number}} {{tableBerglerStubeHubertusStube.department}} {{tableBerglerStubeHubertusStube.arrayIndex}} </p>
                       </div>
                     </div>
                   </div>
@@ -166,7 +166,7 @@
                   <div *ngIf="tablesWaeldlerStubeKristallStube[j] !== tablesWaeldlerStubeKristallStube[j+1]">
                     <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableWaeldlerStubeKristallStube, j)">{{tableWaeldlerStubeKristallStube.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
                     <p><b> Tisch:</b>{{tableWaeldlerStubeKristallStube.number}} </p><br>
-                    <div class='cards-container' id='containerRestaurant' [ngStyle]="{'background-color': + tableWaeldlerStubeKristallStube.bgColor}">
+                    <div class='cards-container' id='containerWaeldlerStubeKristallStube' [ngStyle]="{'background-color': + tableWaeldlerStubeKristallStube.bgColor}">
                       <div class="table" [ngStyle]="{'background-color': '#' + tableWaeldlerStubeKristallStube.bgColor}">
                         <div *ngIf="tableWaeldlerStubeKristallStube.isBesetzt === 'true'">
                           <p style="background-color: #FFFFFF">
@@ -221,7 +221,7 @@
                         </div>
                       </div>
                       <div *ngIf="tableWaeldlerStubeKristallStube.placeholder === 'true'">
-                        <p [dragula]='"evented-bag"' id="Restaurant" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableWaeldlerStubeKristallStube.number}} {{tableWaeldlerStubeKristallStube.department}} {{tableWaeldlerStubeKristallStube.arrayIndex}}</p>
+                        <p [dragula]='"evented-bag"' id="WaeldlerStubeKristallStube" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableWaeldlerStubeKristallStube.number}} {{tableWaeldlerStubeKristallStube.department}} {{tableWaeldlerStubeKristallStube.arrayIndex}}</p>
                       </div>
                     </div>
                   </div>
@@ -234,7 +234,7 @@
                   <div *ngIf="tablesEdelweissKaminStube[j] !== tablesEdelweissKaminStube[j+1]">
                     <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableEdelweissKaminStube, j)">{{tableEdelweissKaminStube.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
                     <p><b> Tisch:</b>{{tableEdelweissKaminStube.number}} </p><br>
-                    <div class='cards-container' id='containerWintergarten' [ngStyle]="{'background-color': + tableEdelweissKaminStube.bgColor}">
+                    <div class='cards-container' id='containerEdelweissKaminStube' [ngStyle]="{'background-color': + tableEdelweissKaminStube.bgColor}">
                       <div class="table" [ngStyle]="{'background-color': '#' + tableEdelweissKaminStube.bgColor}">
                         <div *ngIf="tableEdelweissKaminStube.isBesetzt === 'true'">
                           <p style="background-color: #FFFFFF">
@@ -280,7 +280,7 @@
                         </div>
                       </div>
                       <div *ngIf="tableEdelweissKaminStube.placeholder === 'true'">
-                        <p [dragula]='"evented-bag"' id="Wintergarten" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableEdelweissKaminStube.number}} {{tableEdelweissKaminStube.department}} {{tableEdelweissKaminStube.arrayIndex}}</p>
+                        <p [dragula]='"evented-bag"' id="EdelweissKaminStube" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableEdelweissKaminStube.number}} {{tableEdelweissKaminStube.department}} {{tableEdelweissKaminStube.arrayIndex}}</p>
                       </div>
                     </div>
                   </div>
@@ -292,7 +292,7 @@
                   <div *ngIf="tablesTeestubeTeelounge[j] !== tablesTeestubeTeelounge[j+1]">
                     <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableTeestubeTeelounge, j)">{{tableTeestubeTeelounge.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
                     <p><b> Tisch:</b>{{tableTeestubeTeelounge.number}} </p><br>
-                    <div class='cards-container' id='containerWintergarten' [ngStyle]="{'background-color': + tableTeestubeTeelounge.bgColor}">
+                    <div class='cards-container' id='containerTeestubeTeelounge' [ngStyle]="{'background-color': + tableTeestubeTeelounge.bgColor}">
                       <div class="table" [ngStyle]="{'background-color': '#' + tableTeestubeTeelounge.bgColor}">
                         <div *ngIf="tableTeestubeTeelounge.isBesetzt === 'true'">
                           <p style="background-color: #FFFFFF">
@@ -338,7 +338,7 @@
                         </div>
                       </div>
                       <div *ngIf="tableTeestubeTeelounge.placeholder === 'true'">
-                        <p [dragula]='"evented-bag"' id="Wintergarten" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableTeestubeTeelounge.number}} {{tableTeestubeTeelounge.department}} {{tableTeestubeTeelounge.arrayIndex}}</p>
+                        <p [dragula]='"evented-bag"' id="TeestubeTeelounge" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableTeestubeTeelounge.number}} {{tableTeestubeTeelounge.department}} {{tableTeestubeTeelounge.arrayIndex}}</p>
                       </div>
                     </div>
                   </div>

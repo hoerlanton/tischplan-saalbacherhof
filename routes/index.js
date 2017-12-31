@@ -2039,17 +2039,20 @@ router.post('/occupyTable', function(req, res, next) {
         tableValue = tableValueArray[0];
     }
 
-    if(departmentValue === "berglerStubeHubertusStube") {
+    if(departmentValue === "BerglerStubeHubertusStube") {
         departmentValueDB = "berglerStubeHubertusStube";
     }
     else if(departmentValue === "Bauernstube") {
         departmentValueDB = "Bauernstube";
     }
-    else if(departmentValue === "waeldlerStubeKristallStube") {
+    else if(departmentValue === "WaeldlerStubeKristallStube") {
         departmentValueDB = "waeldlerStubeKristallStube";
     }
-    else if(departmentValue === "edelweissKaminStube") {
+    else if(departmentValue === "EdelweissKaminStube") {
         departmentValueDB = "edelweissKaminStube";
+    }
+    else if(departmentValue === "TeestubeTeelounge") {
+        departmentValueDB = "teestubeTeelounge";
     }
 
     db.hubertusTables.update(
@@ -2198,18 +2201,20 @@ router.post('/removePlaceholder', function(req, res, next) {
             tableValue = tableValueArray[0];
         }
 
-
-    if(departmentValue === "berglerStubeHubertusStube") {
+    if(departmentValue === "BerglerStubeHubertusStube") {
         departmentValueDB = "berglerStubeHubertusStube";
     }
     else if(departmentValue === "Bauernstube") {
         departmentValueDB = "Bauernstube";
     }
-    else if(departmentValue === "waeldlerStubeKristallStube") {
+    else if(departmentValue === "WaeldlerStubeKristallStube") {
         departmentValueDB = "waeldlerStubeKristallStube";
     }
-    else if(departmentValue === "edelweissKaminStube") {
+    else if(departmentValue === "EdelweissKaminStube") {
         departmentValueDB = "edelweissKaminStube";
+    }
+    else if(departmentValue === "TeestubeTeelounge") {
+        departmentValueDB = "teestubeTeelounge";
     }
 
     console.log('removePlaceholder:' + departmentValue);
@@ -2436,17 +2441,20 @@ router.post('/addInformationToTable', function(req, res, next) {
     console.log(" nameValue " + nameValue + " zimmernummerValue " + zimmernummerValue + " preistypValue " + preistypValue + " anreiseValue " + anreiseValue + " abreiseValue " + abreiseValue + " personenAnzahlValue " + personenAnzahlValue + " katValue " + katValue + " notiz1Value " + notiz1Value + " notiz2Value " + notiz2Value + " bemerkungValue " + bemerkungValue + bemerkungValue1 + bemerkungValue2 + "tableValue" + tableValue + "departmentvalue" + departmentValue);
 
 
-    if(departmentValue === "berglerStubeHubertusStube") {
+    if(departmentValue === "BerglerStubeHubertusStube") {
         departmentValueDB = "berglerStubeHubertusStube";
     }
     else if(departmentValue === "Bauernstube") {
         departmentValueDB = "Bauernstube";
     }
-    else if(departmentValue === "waeldlerStubeKristallStube") {
+    else if(departmentValue === "WaeldlerStubeKristallStube") {
         departmentValueDB = "waeldlerStubeKristallStube";
     }
-    else if(departmentValue === "edelweissKaminStube") {
+    else if(departmentValue === "EdelweissKaminStube") {
         departmentValueDB = "edelweissKaminStube";
+    }
+    else if(departmentValue === "TeestubeTeelounge") {
+        departmentValueDB = "teestubeTeelounge";
     }
     console.log(departmentValueDB);
     setTimeout(function() {
