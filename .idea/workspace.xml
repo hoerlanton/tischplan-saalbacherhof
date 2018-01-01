@@ -93,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="1347" column="15" lean-forward="false" selection-start-line="1347" selection-start-column="15" selection-end-line="1347" selection-end-column="15" />
+            <state relative-caret-position="315">
+              <caret line="1146" column="44" lean-forward="true" selection-start-line="1146" selection-start-column="44" selection-end-line="1146" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -123,7 +123,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/default.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
@@ -146,7 +146,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>showZirbnStubn</find>
       <find>showSonnbergZirbn</find>
       <find>showPanorama</find>
       <find>showRestaurant</find>
@@ -174,8 +173,9 @@
       <find>tableEdelweissKaninStube</find>
       <find>tablesWintergarten</find>
       <find>Wintergarten</find>
-      <find>wintergarten</find>
       <find>55</find>
+      <find>wintergarten</find>
+      <find>86</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -576,12 +576,12 @@
       <workItem from="1514366528423" duration="68000" />
       <workItem from="1514384624827" duration="42683000" />
       <workItem from="1514574923420" duration="6237000" />
-      <workItem from="1514614913094" duration="62299000" />
+      <workItem from="1514614913094" duration="62977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="394871000" />
+    <option name="totallyTimeSpent" value="395549000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -868,13 +868,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.ts">
+    <entry file="file://$PROJECT_DIR$/config/default.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#93#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -906,18 +904,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="1347" column="15" lean-forward="false" selection-start-line="1347" selection-start-column="15" selection-end-line="1347" selection-end-column="15" />
-          <folding />
+        <state relative-caret-position="225">
+          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#93#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/default.json">
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="315">
+          <caret line="1146" column="44" lean-forward="true" selection-start-line="1146" selection-start-column="44" selection-end-line="1146" selection-end-column="44" />
           <folding />
         </state>
       </provider>

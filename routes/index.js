@@ -1141,6 +1141,86 @@ router.post('/moveTable', function(req, res, next) {
             });
         //____________
 
+    }   else if (tableNumber === '86' && topValue === '85' && leftValue === '250' && width === '40') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.width": "120",
+                    "tables.$.leftValue": "280",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+        db.hubertusTables.update(
+            {}, {
+                $pull: {
+                    tables: {
+                        "number": "90",
+                    }
+                }
+            },
+            {
+                multi: true
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("removeTable Update successful");
+                console.log(tables);
+            });
+    }   else if (tableNumber === '86' && topValue === '85' && leftValue === '280' && width === '120') {
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+                "tables.number": tableNumber
+            },
+            {
+                $set: {
+                    "tables.$.leftValue": "250",
+                    "tables.$.width": "40",
+                }
+            }, function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("moveTable Update successful");
+            });
+
+        db.hubertusTables.update(
+            {
+                department: departmentValue,
+            }, { $push: {
+                tables: {
+                    $each: [    {
+                        "arrayIndex": 7,
+                        "department": "edelweissKaminStube",
+                        "number": "90",
+                        "topValue": "85",
+                        "leftValue": "360",
+                        "bgColor": "#ffffff",
+                        "isBesetzt": "false",
+                        "placeholder": "true",
+                        "border": "solid 1px #0a7a74",
+                        "width": "60",
+                        "height": "35"
+                    } ],
+                    $sort: { number: 1 } } } },
+            { multi: true },
+            function (err, tables) {
+                if (err) {
+                    console.log("Error");
+                }
+                console.log("addTable Update successful");
+            });
+
+
 
     } else if (tableNumber === '96' && topValue === '228' && leftValue === '187' && height === '35') {
         db.hubertusTables.update(
