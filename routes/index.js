@@ -2386,20 +2386,14 @@ router.post('/addInformationToTable', function(req, res, next) {
         console.log("Im Haus Liste gedropped");
         nameValue = informationElements2[0][1].substring(1, informationElements2[0][1].length);
         zimmernummerValue = informationElements2[1][1].substring(1, informationElements2[1][1].length);
-        preistypValue = informationElements2[2][1].substring(1, informationElements2[2][1].length);
-        anreiseValue = informationElements2[3][1].substring(1, informationElements2[3][1].length);
-        abreiseValue = informationElements2[4][1].substring(1, informationElements2[4][1].length);
-        personenAnzahlValue = informationElements2[5][1].substring(1, informationElements2[5][1].length);
-        katValue = informationElements2[6][1].substring(1, informationElements2[6][1].length);
-        notiz1Value = informationElements2[7][1].substring(1, informationElements2[7][1].length);
-        notiz2Value = informationElements2[8][1].substring(1, informationElements2[8][1].length);
-        bemerkungValue = informationElements2[9][1].substring(1, informationElements2[9][1].length);
-        if (informationElements2.length === 12) {
-            bemerkungValue1 = informationElements2[10][0].substring(1, informationElements2[10][0].length);
-            bemerkungValue2 = informationElements2[informationElements2.length - 2][0].substring(1, informationElements2[informationElements2.length - 2][0].length);
-        } else if (informationElements2.length === 11) {
-            bemerkungValue1 = informationElements2[10][0].substring(1, informationElements2[10][0].length);
-        }
+        katValue = informationElements2[2][1].substring(1, informationElements2[2][1].length);
+        preistypValue = informationElements2[3][1].substring(1, informationElements2[3][1].length);
+        anreiseValue = informationElements2[4][1].substring(1, informationElements2[4][1].length);
+        abreiseValue = informationElements2[5][1].substring(1, informationElements2[5][1].length);
+        personenAnzahlValue = informationElements2[6][1].substring(1, informationElements2[6][1].length);
+        notiz1Value = informationElements2[8][1].substring(1, informationElements2[8][1].length);
+        notiz2Value = informationElements2[9][1].substring(1, informationElements2[9][1].length);
+        bemerkungValue = informationElements2[10][1].substring(1, informationElements2[10][1].length);
         departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
         tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
         tableValue = tableValueArray[0];
@@ -2498,7 +2492,6 @@ router.post('/addInformationToTable', function(req, res, next) {
                                 "tables.$.bemerkungValue": bemerkungValue,
                                 "tables.$.bemerkungValue1":  bemerkungValue1,
                                 "tables.$.bemerkungValue2": bemerkungValue2
-
                             }
                         }, function (err, tables) {
                             if (err) {

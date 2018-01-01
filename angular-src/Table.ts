@@ -52,4 +52,9 @@ export class Table {
   bemerkungValue6: string;
   bemerkungValue7: string;
   bemerkungValue8: string;
+  katValue2: string;
+  notiz3Value: string;
+  katValue3: string;
+  notiz6Value: string;
+
 }
