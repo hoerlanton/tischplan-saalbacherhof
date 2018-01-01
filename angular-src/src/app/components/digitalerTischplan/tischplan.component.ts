@@ -392,10 +392,10 @@ export class TischplanComponent implements OnInit {
             this.tablesBauernstube[response.tables[0].arrayIndex] = response.tables[0];
           }
           else if (response.tables[0].department === "waeldlerStubeKristallStube") {
-            this.tablesBerglerStubeHubertusStube[response.tables[0].arrayIndex] = response.tables[0];
+            this.tablesWaeldlerStubeKristallStube[response.tables[0].arrayIndex] = response.tables[0];
           }
           else if (response.tables[0].department === "edelweissKaminStube") {
-            this.tablesBerglerStubeHubertusStube[response.tables[0].arrayIndex] = response.tables[0];
+            this.tablesEdelweissKaminStube[response.tables[0].arrayIndex] = response.tables[0];
           }
           else if (response.tables[0].department === "teestubeTeelounge") {
             this.tablesTeestubeTeelounge[response.tables[0].arrayIndex] = response.tables[0];
@@ -497,10 +497,10 @@ export class TischplanComponent implements OnInit {
           this.tablesBauernstube[j] = response[0].tables[j];
         }
         else if (response[0].tables[j].department === "waeldlerStubeKristallStube") {
-          this.tablesBerglerStubeHubertusStube[j] = response[0].tables[j];
+          this.tablesWaeldlerStubeKristallStube[j] = response[0].tables[j];
         }
         else if (response[0].tables[j].department === "edelweissKaminStube") {
-          this.tablesBerglerStubeHubertusStube[j] = response[0].tables[j];
+          this.tablesEdelweissKaminStube[j] = response[0].tables[j];
         }
         else if (response[0].tables[j].department === "teestubeTeelounge") {
           this.tablesTeestubeTeelounge[j] = response[0].tables[j];

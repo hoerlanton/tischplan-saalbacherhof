@@ -524,10 +524,10 @@ var TischplanComponent = (function () {
                     _this.tablesBauernstube[response.tables[0].arrayIndex] = response.tables[0];
                 }
                 else if (response.tables[0].department === "waeldlerStubeKristallStube") {
-                    _this.tablesBerglerStubeHubertusStube[response.tables[0].arrayIndex] = response.tables[0];
+                    _this.tablesWaeldlerStubeKristallStube[response.tables[0].arrayIndex] = response.tables[0];
                 }
                 else if (response.tables[0].department === "edelweissKaminStube") {
-                    _this.tablesBerglerStubeHubertusStube[response.tables[0].arrayIndex] = response.tables[0];
+                    _this.tablesEdelweissKaminStube[response.tables[0].arrayIndex] = response.tables[0];
                 }
                 else if (response.tables[0].department === "teestubeTeelounge") {
                     _this.tablesTeestubeTeelounge[response.tables[0].arrayIndex] = response.tables[0];
@@ -623,10 +623,10 @@ var TischplanComponent = (function () {
                     _this.tablesBauernstube[j] = response[0].tables[j];
                 }
                 else if (response[0].tables[j].department === "waeldlerStubeKristallStube") {
-                    _this.tablesBerglerStubeHubertusStube[j] = response[0].tables[j];
+                    _this.tablesWaeldlerStubeKristallStube[j] = response[0].tables[j];
                 }
                 else if (response[0].tables[j].department === "edelweissKaminStube") {
-                    _this.tablesBerglerStubeHubertusStube[j] = response[0].tables[j];
+                    _this.tablesEdelweissKaminStube[j] = response[0].tables[j];
                 }
                 else if (response[0].tables[j].department === "teestubeTeelounge") {
                     _this.tablesTeestubeTeelounge[j] = response[0].tables[j];
