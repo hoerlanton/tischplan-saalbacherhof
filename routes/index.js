@@ -2450,6 +2450,9 @@ router.post('/addInformationToTable', function(req, res, next) {
         anreiseValue = informationElements2[3][1].substring(1, informationElements2[3][1].length);
         abreiseValue = informationElements2[4][1].substring(1, informationElements2[4][1].length);
         trace = informationElements2[5][1].substring(1, informationElements2[5][1].length);
+        if (informationElements2.length > 7) {
+            trace = trace + informationElements2[6][0].substring(1, informationElements2[6][0].length);
+        }
         departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
         tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
         tableValue = tableValueArray[0];
