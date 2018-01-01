@@ -2392,8 +2392,53 @@ router.post('/addInformationToTable', function(req, res, next) {
         abreiseValue = informationElements2[5][1].substring(1, informationElements2[5][1].length);
         personenAnzahlValue = informationElements2[6][1].substring(1, informationElements2[6][1].length);
         notiz1Value = informationElements2[8][1].substring(1, informationElements2[8][1].length);
+        if (informationElements2[8].length > 2) {
+            notiz1Value = informationElements2[8][1].substring(1, informationElements2[8][1].length) + informationElements2[8][2].substring(1, informationElements2[8][2].length);
+        }
         notiz2Value = informationElements2[9][1].substring(1, informationElements2[9][1].length);
+        if (informationElements2[9].length > 2) {
+            notiz2Value = informationElements2[9][1].substring(1, informationElements2[9][1].length) + informationElements2[9][2].substring(1, informationElements2[9][2].length);
+        }
         bemerkungValue = informationElements2[10][1].substring(1, informationElements2[10][1].length);
+        if (informationElements2[10].length > 2) {
+            bemerkungValue = bemerkungValue + informationElements2[10][2];
+            bemerkungValue = bemerkungValue + informationElements2[10][3];
+        }
+        console.log('----------______________--------------->' + informationElements2[informationElements2.length - 2][2]);
+        if (informationElements2.length === 14) {
+            bemerkungValue = bemerkungValue + informationElements2[11][0].substring(1, informationElements2[11][0].length);
+            bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2][0].substring(1, informationElements2[informationElements2.length - 2][0].length);
+            if (informationElements2[11].length > 1) {
+                bemerkungValue = bemerkungValue + informationElements2[11][1].substring(1, informationElements2[11][0].length);
+            }
+            if (informationElements2[informationElements2.length - 2].length > 1){
+                bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2][1].substring(1, informationElements2[informationElements2.length - 2][1].length);
+            }
+        } else if (informationElements2.length === 13) {
+            bemerkungValue = bemerkungValue + informationElements2[11][0].substring(1, informationElements2[11][0].length);
+            if (informationElements2[informationElements2.length - 2].length > 1){
+                bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2][1].substring(1, informationElements2[informationElements2.length - 2][1].length);
+            }
+
+            } else if (informationElements2.length > 14) {
+            bemerkungValue = bemerkungValue + informationElements2[11][0].substring(1, informationElements2[11][0].length);
+            bemerkungValue = bemerkungValue + informationElements2[12][0].substring(1, informationElements2[12][0].length);
+            bemerkungValue = bemerkungValue + informationElements2[13][0].substring(1, informationElements2[13][0].length);
+            bemerkungValue = bemerkungValue + informationElements2[14][0].substring(1, informationElements2[14][0].length);
+            if (informationElements2[11].length > 1) {
+                bemerkungValue = bemerkungValue + informationElements2[11][1].substring(1, informationElements2[11][0].length);
+            }
+            if (informationElements2[12].length > 1) {
+                bemerkungValue = bemerkungValue + informationElements2[12][1].substring(1, informationElements2[12][0].length);
+            }
+            if (informationElements2[13].length > 1) {
+                bemerkungValue = bemerkungValue + informationElements2[13][1].substring(1, informationElements2[13][0].length);
+            }
+
+            if (informationElements2[informationElements2.length - 2].length > 1){
+                bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2][1].substring(1, informationElements2[informationElements2.length - 2][1].length);
+            }
+        }
         departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
         tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
         tableValue = tableValueArray[0];
@@ -2421,10 +2466,10 @@ router.post('/addInformationToTable', function(req, res, next) {
         notiz2Value = informationElements2[7][1].substring(1, informationElements2[7][1].length);
         bemerkungValue = informationElements2[8][1].substring(1, informationElements2[8][1].length);
         if (informationElements2.length === 12) {
-            bemerkungValue1 = informationElements2[9][0].substring(1, informationElements2[10][0].length);
-            bemerkungValue2 = informationElements2[informationElements2.length - 2][0].substring(1, informationElements2[informationElements2.length - 2][0].length);
+            bemerkungValue = bemerkungValue + informationElements2[9][0].substring(1, informationElements2[9][0].length);
+            bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2][0].substring(1, informationElements2[informationElements2.length - 2][0].length);
         } else if (informationElements2.length === 11) {
-            bemerkungValue1 = informationElements2[9][0].substring(1, informationElements2[10][0].length);
+            bemerkungValue = bemerkungValue + informationElements2[9][0].substring(1, informationElements2[9][0].length);
         }
         departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
         tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
@@ -2575,7 +2620,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                 res.json(tables);
                 console.log(JSON.stringify('5306' + JSON.stringify(tables)));
             });
-    }, 500);
+    }, 1000);
 });
 
 module.exports = router;
