@@ -51,6 +51,7 @@ html, body {
 .inner-table {
   height: calc(100vh - 44px);
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .cards-container {

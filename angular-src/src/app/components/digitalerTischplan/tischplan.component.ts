@@ -161,6 +161,7 @@ export class TischplanComponent implements OnInit {
           return;
         } else {
 
+
           for (let a = 0; a < tables.length; a++) {
             if (tables[a].department === "Bauernstube") {
               this.tablesBauernstube = tables[a].tables;
