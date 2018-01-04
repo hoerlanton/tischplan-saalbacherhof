@@ -185,22 +185,19 @@
                             </p>
                           </div>
                         </div>
-                        <div *ngIf="tableBauernstube.newInformation">
+                        <div *ngIf="tableBauernstube.newTraceName">
                           <p style="background-color: #FFFFFF; border: solid 3px red">
-                            <b> Zimmernummer: </b>{{tableBauernstube.newInformation.substring(tableBauernstube.newInformation.length - 3, tableBauernstube.newInformation.length)}}<br> <b> Neuer Trace: </b>{{tableBauernstube.newInformation.substring(0, tableBauernstube.newInformation.length - 3)}}
+                            <b> Zimmernummer: </b>{{tableBauernstube.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{tableBauernstube.newTraceText}} <br> <b> Tischnummer: </b>{{tableBauernstube.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{tableBauernstube.newTraceEmployee}} <br> <b> Name: </b>{{tableBauernstube.newTraceName}} <br> <b> Datum: </b>{{tableBauernstube.newTraceDate}}
                           </p>
                         </div>
-                        <div *ngIf="tableBauernstube.newInformation1">
+                        <div *ngIf="tableBauernstube.newTraceName1">
                           <p style="background-color: #FFFFFF; border: solid 3px red">
-                            <b> Zimmernummer: </b>{{tableBauernstube.newInformation1.substring(tableBauernstube.newInformation1.length - 3, tableBauernstube.newInformation1.length)}}<br> <b> Neuer Trace: </b>{{tableBauernstube.newInformation1.substring(0, tableBauernstube.newInformation1.length - 3)}}
+                            <b> Zimmernummer: </b>{{tableBauernstube.newTraceRoomNumber1}}<br> <b> Neuer Trace: </b>{{tableBauernstube.newTraceText1}} <br> <b> Tischnummer: </b>{{tableBauernstube.newTraceTableNumber1}} <br> <b> Mitarbeiter: </b>{{tableBauernstube.newTraceEmployee1}} <br> <b> Name: </b>{{tableBauernstube.newTraceName1}} <br> <b> Datum: </b>{{tableBauernstube.newTraceDate1}}                            </p>
+                        </div>
+                        <div *ngIf="tableBauernstube.newTraceName2">
+                          <p style="background-color: #FFFFFF; border: solid 3px red">
+                            <b> Zimmernummer: </b>{{tableBauernstube.newTraceRoomNumber2}}<br> <b> Neuer Trace: </b>{{tableBauernstube.newTraceText2}} <br> <b> Tischnummer: </b>{{tableBauernstube.newTraceTableNumber2}} <br> <b> Mitarbeiter: </b>{{tableBauernstube.newTraceEmployee2}} <br> <b> Name: </b>{{tableBauernstube.newTraceName2}} <br> <b> Datum: </b>{{tableBauernstube.newTraceDate2}}
                           </p>
-                        </div>
-                        <div *ngIf="tableBauernstube.newInformation2">
-                          <p style="background-color: #FFFFFF; border: solid 3px red">
-                            <b> Zimmernummer: </b>{{tableBauernstube.newInformation2.substring(tableBauernstube.newInformation2.length - 3, tableBauernstube.newInformation2.length)}}<br> <b> Neuer Trace: </b>{{tableBauernstube.newInformation2.substring(0, tableBauernstube.newInformation2.length - 3)}}
-                        </div>
-                        <div *ngIf="tableBauernstube.placeholder === 'true'">
-                          <p [dragula]='"evented-bag"' id="Bauernstube" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen!  {{tableBauernstube.number}} {{tableBauernstube.department}} {{tableBauernstube.arrayIndex}} </p>
                         </div>
                       </div>
                     </div>
@@ -259,19 +256,18 @@
                               <b> BemerkungValue:</b>{{tableWaeldlerStubeKristallStube.bemerkungValue6}}<br>
                             </p>
                           </div>
-                          <div *ngIf="tableWaeldlerStubeKristallStube.newInformation">
+                          <div *ngIf="tableWaeldlerStubeKristallStube.newTraceName">
                             <p style="background-color: #FFFFFF; border: solid 3px red">
-                              <b> Zimmernummer: </b>{{tableWaeldlerStubeKristallStube.newInformation.substring(tableWaeldlerStubeKristallStube.newInformation.length - 3, tableWaeldlerStubeKristallStube.newInformation.length)}}<br> <b> Neuer Trace: </b>{{tableWaeldlerStubeKristallStube.newInformation.substring(0, tableWaeldlerStubeKristallStube.newInformation.length - 3)}}
+                              <b> Zimmernummer: </b>{{tableWaeldlerStubeKristallStube.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{tableWaeldlerStubeKristallStube.newTraceText}} <br> <b> Tischnummer: </b>{{tableWaeldlerStubeKristallStube.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{tableWaeldlerStubeKristallStube.newTraceEmployee}} <br> <b> Name: </b>{{tableWaeldlerStubeKristallStube.newTraceName}} <br> <b> Datum: </b>{{tableWaeldlerStubeKristallStube.newTraceDate}}
                             </p>
                           </div>
-                          <div *ngIf="tableWaeldlerStubeKristallStube.newInformation1">
+                          <div *ngIf="tableWaeldlerStubeKristallStube.newTraceName1">
                             <p style="background-color: #FFFFFF; border: solid 3px red">
-                              <b> Zimmernummer: </b>{{tableWaeldlerStubeKristallStube.newInformation1.substring(tableWaeldlerStubeKristallStube.newInformation1.length - 3, tableWaeldlerStubeKristallStube.newInformation1.length)}}<br> <b> Neuer Trace: </b>{{tableWaeldlerStubeKristallStube.newInformation1.substring(0, tableWaeldlerStubeKristallStube.newInformation1.length - 3)}}
-                            </p>
+                              <b> Zimmernummer: </b>{{tableWaeldlerStubeKristallStube.newTraceRoomNumber1}}<br> <b> Neuer Trace: </b>{{tableWaeldlerStubeKristallStube.newTraceText1}} <br> <b> Tischnummer: </b>{{tableWaeldlerStubeKristallStube.newTraceTableNumber1}} <br> <b> Mitarbeiter: </b>{{tableWaeldlerStubeKristallStube.newTraceEmployee1}} <br> <b> Name: </b>{{tableWaeldlerStubeKristallStube.newTraceName1}} <br> <b> Datum: </b>{{tableWaeldlerStubeKristallStube.newTraceDate1}}                            </p>
                           </div>
-                          <div *ngIf="tableWaeldlerStubeKristallStube.newInformation2">
+                          <div *ngIf="tableWaeldlerStubeKristallStube.newTraceName2">
                             <p style="background-color: #FFFFFF; border: solid 3px red">
-                              <b> Zimmernummer: </b>{{tableWaeldlerStubeKristallStube.newInformation2.substring(tableWaeldlerStubeKristallStube.newInformation2.length - 3, tableWaeldlerStubeKristallStube.newInformation2.length)}}<br> <b> Neuer Trace: </b>{{tableWaeldlerStubeKristallStube.newInformation2.substring(0, tableWaeldlerStubeKristallStube.newInformation2.length - 3)}}
+                              <b> Zimmernummer: </b>{{tableWaeldlerStubeKristallStube.newTraceRoomNumber2}}<br> <b> Neuer Trace: </b>{{tableWaeldlerStubeKristallStube.newTraceText2}} <br> <b> Tischnummer: </b>{{tableWaeldlerStubeKristallStube.newTraceTableNumber2}} <br> <b> Mitarbeiter: </b>{{tableWaeldlerStubeKristallStube.newTraceEmployee2}} <br> <b> Name: </b>{{tableWaeldlerStubeKristallStube.newTraceName2}} <br> <b> Datum: </b>{{tableWaeldlerStubeKristallStube.newTraceDate2}}
                             </p>
                           </div>
 
@@ -337,19 +333,18 @@
                               <b> BemerkungValue:</b>{{tableEdelweissKaminStube.bemerkungValue6}}<br>
                             </p>
                           </div>
-                          <div *ngIf="tableEdelweissKaminStube.newInformation">
+                          <div *ngIf="tableEdelweissKaminStube.newTraceName">
                             <p style="background-color: #FFFFFF; border: solid 3px red">
-                              <b> Zimmernummer: </b>{{tableEdelweissKaminStube.newInformation.substring(tableEdelweissKaminStube.newInformation.length - 3, tableEdelweissKaminStube.newInformation.length)}}<br> <b> Neuer Trace: </b>{{tableEdelweissKaminStube.newInformation.substring(0, tableEdelweissKaminStube.newInformation.length - 3)}}
+                              <b> Zimmernummer: </b>{{tableEdelweissKaminStube.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{tableEdelweissKaminStube.newTraceText}} <br> <b> Tischnummer: </b>{{tableEdelweissKaminStube.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{tableEdelweissKaminStube.newTraceEmployee}} <br> <b> Name: </b>{{tableEdelweissKaminStube.newTraceName}} <br> <b> Datum: </b>{{tableEdelweissKaminStube.newTraceDate}}
                             </p>
                           </div>
-                          <div *ngIf="tableEdelweissKaminStube.newInformation1">
+                          <div *ngIf="tableEdelweissKaminStube.newTraceName1">
                             <p style="background-color: #FFFFFF; border: solid 3px red">
-                              <b> Zimmernummer: </b>{{tableWintergarten.newInformation1.substring(tableEdelweissKaminStube.newInformation1.length - 3, tableEdelweissKaminStube.newInformation1.length)}}<br> <b> Neuer Trace: </b>{{tableEdelweissKaminStube.newInformation1.substring(0, tableEdelweissKaminStube.newInformation1.length - 3)}}
-                            </p>
+                              <b> Zimmernummer: </b>{{tableEdelweissKaminStube.newTraceRoomNumber1}}<br> <b> Neuer Trace: </b>{{tableEdelweissKaminStube.newTraceText1}} <br> <b> Tischnummer: </b>{{tableEdelweissKaminStube.newTraceTableNumber1}} <br> <b> Mitarbeiter: </b>{{tableEdelweissKaminStube.newTraceEmployee1}} <br> <b> Name: </b>{{tableEdelweissKaminStube.newTraceName1}} <br> <b> Datum: </b>{{tableEdelweissKaminStube.newTraceDate1}}                            </p>
                           </div>
-                          <div *ngIf="tableEdelweissKaminStube.newInformation2">
+                          <div *ngIf="tableEdelweissKaminStube.newTraceName2">
                             <p style="background-color: #FFFFFF; border: solid 3px red">
-                              <b> Zimmernummer: </b>{{tableEdelweissKaminStube.newInformation2.substring(tableEdelweissKaminStube.newInformation2.length - 3, tableEdelweissKaminStube.newInformation2.length)}}<br> <b> Neuer Trace: </b>{{tableEdelweissKaminStube.newInformation2.substring(0, tableEdelweissKaminStube.newInformation2.length - 3)}}
+                              <b> Zimmernummer: </b>{{tableEdelweissKaminStube.newTraceRoomNumber2}}<br> <b> Neuer Trace: </b>{{tableEdelweissKaminStube.newTraceText2}} <br> <b> Tischnummer: </b>{{tableEdelweissKaminStube.newTraceTableNumber2}} <br> <b> Mitarbeiter: </b>{{tableEdelweissKaminStube.newTraceEmployee2}} <br> <b> Name: </b>{{tableEdelweissKaminStube.newTraceName2}} <br> <b> Datum: </b>{{tableEdelweissKaminStube.newTraceDate2}}
                             </p>
                           </div>
 
@@ -414,19 +409,18 @@
                               <b> BemerkungValue:</b>{{tableTeestubeTeelounge.bemerkungValue6}}<br>
                             </p>
                           </div>
-                          <div *ngIf="tableTeestubeTeelounge.newInformation">
+                          <div *ngIf="tableTeestubeTeelounge.newTraceName">
                             <p style="background-color: #FFFFFF; border: solid 3px red">
-                              <b> Zimmernummer: </b>{{tableTeestubeTeelounge.newInformation.substring(tableTeestubeTeelounge.newInformation.length - 3, tableTeestubeTeelounge.newInformation.length)}}<br> <b> Neuer Trace: </b>{{tableTeestubeTeelounge.newInformation.substring(0, tableTeestubeTeelounge.newInformation.length - 3)}}
+                              <b> Zimmernummer: </b>{{tableTeestubeTeelounge.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{tableTeestubeTeelounge.newTraceText}} <br> <b> Tischnummer: </b>{{tableTeestubeTeelounge.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{tableTeestubeTeelounge.newTraceEmployee}} <br> <b> Name: </b>{{tableTeestubeTeelounge.newTraceName}} <br> <b> Datum: </b>{{tableTeestubeTeelounge.newTraceDate}}
                             </p>
                           </div>
-                          <div *ngIf="tableTeestubeTeelounge.newInformation1">
+                          <div *ngIf="tableBerglerStubeHubertusStube.newTraceName1">
                             <p style="background-color: #FFFFFF; border: solid 3px red">
-                              <b> Zimmernummer: </b>{{tableTeestubeTeelounge.newInformation1.substring(tableTeestubeTeelounge.newInformation1.length - 3, tableTeestubeTeelounge.newInformation1.length)}}<br> <b> Neuer Trace: </b>{{tableTeestubeTeelounge.newInformation1.substring(0, tableTeestubeTeelounge.newInformation1.length - 3)}}
-                            </p>
+                              <b> Zimmernummer: </b>{{tableTeestubeTeelounge.newTraceRoomNumber1}}<br> <b> Neuer Trace: </b>{{tableTeestubeTeelounge.newTraceText1}} <br> <b> Tischnummer: </b>{{tableTeestubeTeelounge.newTraceTableNumber1}} <br> <b> Mitarbeiter: </b>{{tableTeestubeTeelounge.newTraceEmployee1}} <br> <b> Name: </b>{{tableTeestubeTeelounge.newTraceName1}} <br> <b> Datum: </b>{{tableTeestubeTeelounge.newTraceDate1}}                            </p>
                           </div>
-                          <div *ngIf="tableTeestubeTeelounge.newInformation2">
+                          <div *ngIf="tableBerglerStubeHubertusStube.newTraceName2">
                             <p style="background-color: #FFFFFF; border: solid 3px red">
-                              <b> Zimmernummer: </b>{{tableTeestubeTeelounge.newInformation2.substring(tableTeestubeTeelounge.newInformation2.length - 3, tableTeestubeTeelounge.newInformation2.length)}}<br> <b> Neuer Trace: </b>{{tableTeestubeTeelounge.newInformation2.substring(0, tableTeestubeTeelounge.newInformation2.length - 3)}}
+                              <b> Zimmernummer: </b>{{tableTeestubeTeelounge.newTraceRoomNumber2}}<br> <b> Neuer Trace: </b>{{tableTeestubeTeelounge.newTraceText2}} <br> <b> Tischnummer: </b>{{tableTeestubeTeelounge.newTraceTableNumber2}} <br> <b> Mitarbeiter: </b>{{tableTeestubeTeelounge.newTraceEmployee2}} <br> <b> Name: </b>{{tableTeestubeTeelounge.newTraceName2}} <br> <b> Datum: </b>{{tableTeestubeTeelounge.newTraceDate2}}
                             </p>
                           </div>
 
