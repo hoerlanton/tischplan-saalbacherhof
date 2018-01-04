@@ -8,12 +8,6 @@ html, body {
 .row {
   height: 100%;
 }
-
-.row .container-fluid {
-  height: 100%;
-  display: flex;
-}
-
 .line{
   width: 100%;
   height: 20px;
@@ -21,6 +15,15 @@ html, body {
   position: absolute;
   right: 0px;
   top: 150px;
+}
+
+.line1{
+  width: 100%;
+  height: 20px;
+  border-bottom: solid 10px #0a7a74;
+  position: absolute;
+  right: 0px;
+  top: 345px;
 }
 
 .row .print-col, .row .upload-col, .row .table-col {
@@ -33,34 +36,41 @@ html, body {
   box-sizing: border-box;
 }
 
-.row .upload-col {
+.row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .anleitung {
   display: none;
 }
 
 @media (min-width: 1200px) {
-  .row .upload-col {
+  .row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .anleitung{
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  . {
     display: block;
   }
 }
 
 .row1 {
-  height: calc((100vh - 244px) / 3);
+  height: calc((100vh - 286px) / 3);
   overflow: auto;
 }
 
 .inner-table {
-  height: calc(100vh - 44px);
+  height: calc(100vh - 440px);
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 
 .cards-container {
   margin: 10px 0px 10px 0px;
-  padding: 10px;
+  padding: 10px 10px 40px 10px;
 }
 
 .cards-container .card {
   padding: 10px;
+
 }
 
 .row .container-fluid .col-md-4 .row1 {
@@ -110,28 +120,6 @@ html, body {
   margin: 0 auto;
   color: #0a7a74;
   position: relative;
-}
-
-.row .container-fluid .col-md-4 .row3 .col-xs-12 .form-group {
-  border-top:3px solid #0a7a74;
-  width: 105%;
-  padding: 10px 10px 10px 30px;
-}
-
-.row .container-fluid .col-md-4 .row3 .col-xs-12  .group {
-  border-top:3px solid #0a7a74;
-  width: 105%;
-  padding: 10px 10px 10px 30px;
-}
-
-.row .container-fluid .col-md-4 .row3 .col-xs-12 .form-group1 {
-  margin-top: 20px;
-  overflow: auto;
-  max-height: 300px;
-  display: inline-block;
-  border-top:3px solid #0a7a74;
-  width: 102%;
-  padding: 10px 10px 10px 25px;
 }
 
 .row1 .col {
@@ -189,20 +177,16 @@ html, body {
   height: 100%;
 }
 
-.row .container-fluid .col-md-6 .row1 .col-md-3 {
-  margin: 0px 0px 0px 0px;
-  padding: 20px 20px 20px 20px;
+.row .container-fluid .table-col .row1 {
+  height: auto;
 }
 
-.row .container-fluid .col-md-6 #printSectionId2 .row .t1 {
+.printTwo {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  min-height: 550px;
+}
+
+.row .container-fluid .table-col .printTwo .table-item {
   position: absolute;
 }
-
-.row .container-fluid .col-md-6 #printSectionId2 .row .t2 {
-  position: absolute;
-}
-
-.row .container-fluid .row .table-item {
-  position: absolute;
-}
-

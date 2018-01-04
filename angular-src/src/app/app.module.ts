@@ -7,6 +7,8 @@ import { TischplanComponent } from './components/digitalerTischplan/tischplan.co
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { DragulaModule } from 'ng2-dragula';
 import {NgClass} from '@angular/common';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import {DropdownModule} from "ng2-dropdown";
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import {NgClass} from '@angular/common';
     FlashMessagesModule,
     DragulaModule,
     ReactiveFormsModule,
-    BrowserModule
+    BrowserModule,
+    BsDropdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

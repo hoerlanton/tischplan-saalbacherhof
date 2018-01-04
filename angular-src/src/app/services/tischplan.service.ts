@@ -28,6 +28,12 @@ export class TischplanService {
       .map(res => res.json());
   }
 
+  getInformationElements() {
+    return this.http.get('information')
+      .map(res => res.json());
+  }
+
+
   occupyTable(dataString) {
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -73,4 +79,27 @@ export class TischplanService {
       .map(res => res.json()
       );
   }
-}
+  sendInformation(newInformation) {
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    console.log(headers);
+    return this.http.post('newInformationToTables', newInformation, {headers: headers} )
+      .map(res => res.json());
+  }
+
+  sendInformationToBox(newInformation) {
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    console.log(headers);
+    return this.http.post('newInformationToBox', newInformation, {headers: headers} )
+      .map(res => res.json());
+  }
+
+
+  deleteInformationElement(informationElement) {
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    console.log(headers);
+    return this.http.post('deleteInformationElement', informationElement, {headers: headers})
+  }
+  }

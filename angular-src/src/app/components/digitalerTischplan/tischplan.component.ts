@@ -28,7 +28,10 @@ export class TischplanComponent implements OnInit {
   fontColor5: string;
   leftValues: LeftValue[];
   topValues: any[] = [];
+  dateGenerated: any;
 
+
+  newInformationElements: any[] = [];
   imHausListeElemente: ImHausListe[];
   anreiseListeElemente: AnreiseListe[];
   tracesListeElemente: any[] = [];
@@ -48,6 +51,9 @@ export class TischplanComponent implements OnInit {
   showEdelweissBool: boolean;
   showTeeStubeBool: boolean;
 
+  roomNumber: string;
+  tableNumber: string;
+
   constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, private dragulaService: DragulaService, private element: ElementRef, private renderer: Renderer) {
     let DomBaseElement = this.element.nativeElement;
     let wrapperElementsChildNames = [];
@@ -60,104 +66,104 @@ export class TischplanComponent implements OnInit {
         console.log('IM-HAUS-LISTE:');
         console.log(this.imHausListeElemente);
         /*
-        let hoi = "";
-        let hoi2 = [];
-        let hoi3 = [];
-        hoi2 = hoi.split("Druckdatum", 1000);
-        console.log('hoi2:');
-        console.log(hoi2);
-        for(let a = 0; a < hoi2.length; a++) {
-          hoi3[a] = hoi2[a].split(",", 1000);
-        }
+         let hoi = "";
+         let hoi2 = [];
+         let hoi3 = [];
+         hoi2 = hoi.split("Druckdatum", 1000);
+         console.log('hoi2:');
+         console.log(hoi2);
+         for(let a = 0; a < hoi2.length; a++) {
+         hoi3[a] = hoi2[a].split(",", 1000);
+         }
 
-        let indexBemerkung = hoi3[1].indexOf("Bemerkung");
-        let indexRestBemerk = hoi3[1].indexOf("Rest.-Bemerk.");
-        let indexNotiz1 = hoi3[1].indexOf("Notiz 1");
-        let indexNotiz2 = hoi3[1].indexOf("Notiz 2");
-        let gastWuensche = hoi3[1].indexOf("Gastw�nsche");
+         let indexBemerkung = hoi3[1].indexOf("Bemerkung");
+         let indexRestBemerk = hoi3[1].indexOf("Rest.-Bemerk.");
+         let indexNotiz1 = hoi3[1].indexOf("Notiz 1");
+         let indexNotiz2 = hoi3[1].indexOf("Notiz 2");
+         let gastWuensche = hoi3[1].indexOf("Gastw�nsche");
 
-        let bemerkungLaenge = indexRestBemerk - indexBemerkung + 1;
-        let notiz1Laenge = indexNotiz2 - indexNotiz1 + 1;
-        let notiz2Laenge = gastWuensche - indexNotiz2 + 1;
+         let bemerkungLaenge = indexRestBemerk - indexBemerkung + 1;
+         let notiz1Laenge = indexNotiz2 - indexNotiz1 + 1;
+         let notiz2Laenge = gastWuensche - indexNotiz2 + 1;
 
-        console.log(bemerkungLaenge);
-        console.log(notiz1Laenge);
-        console.log(notiz2Laenge);
+         console.log(bemerkungLaenge);
+         console.log(notiz1Laenge);
+         console.log(notiz2Laenge);
 
-        for (let a = 0; a < hoi3.length; a++) {
-          this.arrayBemerkung[a] = hoi3[a].indexOf("Bemerkung") + 1 ;
-        }
+         for (let a = 0; a < hoi3.length; a++) {
+         this.arrayBemerkung[a] = hoi3[a].indexOf("Bemerkung") + 1 ;
+         }
 
-        for (let a = 0; a < hoi3.length; a++) {
-          this.arrayNotiz1[a] = hoi3[a].indexOf("Notiz 1") + 1;
-        }
+         for (let a = 0; a < hoi3.length; a++) {
+         this.arrayNotiz1[a] = hoi3[a].indexOf("Notiz 1") + 1;
+         }
 
-        for (let a = 0; a < hoi3.length; a++) {
-          this.arrayNotiz2[a] = hoi3[a].indexOf("Notiz 2") + 1;
-        }
+         for (let a = 0; a < hoi3.length; a++) {
+         this.arrayNotiz2[a] = hoi3[a].indexOf("Notiz 2") + 1;
+         }
 
-        for (let a = 0; a < hoi3.length; a++) {
-          this.arrayRestBemerk[a] = hoi3[a].indexOf("Rest.-Bemerk.");
-        }
+         for (let a = 0; a < hoi3.length; a++) {
+         this.arrayRestBemerk[a] = hoi3[a].indexOf("Rest.-Bemerk.");
+         }
 
-        for (let a = 0; a < hoi3.length; a++) {
-          this.arrayGastWuensche[a] = hoi3[a].indexOf("Gastw�nsche");
-        }
+         for (let a = 0; a < hoi3.length; a++) {
+         this.arrayGastWuensche[a] = hoi3[a].indexOf("Gastw�nsche");
+         }
 
-        for (let a = 0; a < hoi3.length; a++) {
-          this.arrayBemerkungLaenge[a] = this.arrayRestBemerk[a] - this.arrayBemerkung[a];
-          console.log(this.arrayBemerkungLaenge[a]);
-        }
+         for (let a = 0; a < hoi3.length; a++) {
+         this.arrayBemerkungLaenge[a] = this.arrayRestBemerk[a] - this.arrayBemerkung[a];
+         console.log(this.arrayBemerkungLaenge[a]);
+         }
 
-        for (let a = 0; a < hoi3.length; a++) {
-          this.arrayNotiz1Laenge[a] = this.arrayNotiz2[a] - this.arrayNotiz1[a +1];
-          console.log(this.arrayNotiz1Laenge[a]);
-        }
-        for (let a = 0; a < hoi3.length; a++) {
-          this.arrayNotiz2Laenge[a] = this.arrayGastWuensche[a] - this.arrayNotiz2[a +1];
-          console.log(this.arrayNotiz2Laenge[a]);
-        }
-        for (let a = 1; a < hoi3.length; a++) {
-          if (this.arrayBemerkungLaenge[a] > 1) {
+         for (let a = 0; a < hoi3.length; a++) {
+         this.arrayNotiz1Laenge[a] = this.arrayNotiz2[a] - this.arrayNotiz1[a +1];
+         console.log(this.arrayNotiz1Laenge[a]);
+         }
+         for (let a = 0; a < hoi3.length; a++) {
+         this.arrayNotiz2Laenge[a] = this.arrayGastWuensche[a] - this.arrayNotiz2[a +1];
+         console.log(this.arrayNotiz2Laenge[a]);
+         }
+         for (let a = 1; a < hoi3.length; a++) {
+         if (this.arrayBemerkungLaenge[a] > 1) {
 
-            hoi3[a][this.arrayBemerkung[a]] = hoi3[a].slice(this.arrayBemerkung[a], this.arrayBemerkung[a + 2]);
-            console.log(hoi3[a][this.arrayBemerkung[a]]);
-          }
-        }
-        for (let a = 1; a < hoi3.length; a++) {
-          if (this.arrayBemerkungLaenge[a] > 1) {
-            hoi3[a][this.arrayBemerkung[a]] = hoi3[a].slice(this.arrayBemerkung[a], this.arrayBemerkung[a + 2]);
-          }
-        }
-        for (let a = 1; a < hoi3.length; a++) {
-          if (this.arrayNotiz2Laenge[a] > 1) {
-            hoi3[a][this.arrayNotiz1[a]] = hoi3[a].slice(hoi3[a][this.arrayNotiz1[a]], hoi3[a][this.arrayBemerkung[a] + 1]); hoi3[a][this.arrayNotiz1[a] + 1]);
-          }
-        }
+         hoi3[a][this.arrayBemerkung[a]] = hoi3[a].slice(this.arrayBemerkung[a], this.arrayBemerkung[a + 2]);
+         console.log(hoi3[a][this.arrayBemerkung[a]]);
+         }
+         }
+         for (let a = 1; a < hoi3.length; a++) {
+         if (this.arrayBemerkungLaenge[a] > 1) {
+         hoi3[a][this.arrayBemerkung[a]] = hoi3[a].slice(this.arrayBemerkung[a], this.arrayBemerkung[a + 2]);
+         }
+         }
+         for (let a = 1; a < hoi3.length; a++) {
+         if (this.arrayNotiz2Laenge[a] > 1) {
+         hoi3[a][this.arrayNotiz1[a]] = hoi3[a].slice(hoi3[a][this.arrayNotiz1[a]], hoi3[a][this.arrayBemerkung[a] + 1]); hoi3[a][this.arrayNotiz1[a] + 1]);
+         }
+         }
 
-        hoi3[1].splice(indexRestBemerk, hoi3[1].length);
-        //hoi3[1].splice(gastWuensche, indexBemerkung);
-        //hoi3[1].filter();
+         hoi3[1].splice(indexRestBemerk, hoi3[1].length);
+         //hoi3[1].splice(gastWuensche, indexBemerkung);
+         //hoi3[1].filter();
 
 
-        console.log('Index Bemerkung:' + indexBemerkung);
-        console.log('hoi3:');
-        console.log(hoi3);
-        */
+         console.log('Index Bemerkung:' + indexBemerkung);
+         console.log('hoi3:');
+         console.log(hoi3);
+         */
 
 
       });
 
     this.tischplanService.getAnreiseListe()
       .subscribe(anreiseListeElemente => {
-          this.anreiseListeElemente = anreiseListeElemente[0].data;
-          console.log(this.anreiseListeElemente);
+        this.anreiseListeElemente = anreiseListeElemente[0].data;
+        console.log(this.anreiseListeElemente);
       });
 
     this.tischplanService.getTables()
       .subscribe(tables => {
         console.log("TABLES LENGTH: " + tables.length);
-        if(tables === null) {
+        if (tables === null) {
           return;
         } else {
 
@@ -190,13 +196,24 @@ export class TischplanComponent implements OnInit {
       });
 
     this.tischplanService.getTracesListe()
-      .subscribe(tracesListeElemente  => {
+      .subscribe(tracesListeElemente => {
         console.log('92' + JSON.stringify(tracesListeElemente));
         //console.log("2:" + tracesListeElemente[0].data[0]);
         //console.log(tracesListeElemente[0].data.length);
         //this.tracesListeElemente = tracesListeElemente[0].data;
         this.formatTracesListeElements(tracesListeElemente);
       });
+
+    this.tischplanService.getInformationElements()
+      .subscribe(informationElemente => {
+        if (informationElemente === null) {
+          return;
+        } else {
+          this.newInformationElements = informationElemente;
+          console.log(this.newInformationElements);
+        }
+      });
+
 
     this.buttonBgColor1 = "f3efe4";
     this.buttonBgColor2 = "f3efe4";
@@ -240,17 +257,17 @@ export class TischplanComponent implements OnInit {
       }
     }
     /*
-    for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
-      if (tracesListeElemente[0].data[o].length === 24) {
-        tracesListeElemente[0].data[o].splice(0, 12);
-      }
-    }
+     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
+     if (tracesListeElemente[0].data[o].length === 24) {
+     tracesListeElemente[0].data[o].splice(0, 12);
+     }
+     }
 
-    for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
-      if (tracesListeElemente[0].data[o].length === 19) {
-        tracesListeElemente[0].data[o].splice(0, 17);
-      }
-    }
+     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
+     if (tracesListeElemente[0].data[o].length === 19) {
+     tracesListeElemente[0].data[o].splice(0, 17);
+     }
+     }
      */
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
       if (tracesListeElemente[0].data[o].length === 1) {
@@ -262,13 +279,13 @@ export class TischplanComponent implements OnInit {
         tracesListeElemente[0].data[o].splice(8, 12);
       }
     }
-/*
-    for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
-      if (tracesListeElemente[0].data[o].length === 2) {
-        tracesListeElemente[0].data[o].splice(1, 2);
-      }
-    }
- */
+    /*
+     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
+     if (tracesListeElemente[0].data[o].length === 2) {
+     tracesListeElemente[0].data[o].splice(1, 2);
+     }
+     }
+     */
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
       console.log(o + tracesListeElemente[0].data[o]);
       console.log('length of : ' + o + tracesListeElemente[0].data[o].length);
@@ -282,14 +299,14 @@ export class TischplanComponent implements OnInit {
 
     for (let o = 1; o < tracesListeElemente[0].data.length; o++) {
       if (tracesListeElemente[0].data[o] !== undefined) {
-       // if (tracesListeElemente[0].data[o].length === 13 || tracesListeElemente[0].data[o].length === 24) {
-          trace[o] = tracesListeElemente[0].data[o].concat(tracesListeElemente[0].data[o + 1]);
-          console.log('Trace before ->>' + trace[o]);
+        // if (tracesListeElemente[0].data[o].length === 13 || tracesListeElemente[0].data[o].length === 24) {
+        trace[o] = tracesListeElemente[0].data[o].concat(tracesListeElemente[0].data[o + 1]);
+        console.log('Trace before ->>' + trace[o]);
         //}
       }
     }
     trace[0] = tracesListeElemente[0].data[0].concat(tracesListeElemente[0].data[1]).concat(tracesListeElemente[0].data[2]);
-    trace[0].unshift("","","","");
+    trace[0].unshift("", "", "", "");
     trace[0].splice(20, 0, "");
     trace[0].splice(20, 0, "");
     trace[0].splice(20, 0, "");
@@ -298,7 +315,7 @@ export class TischplanComponent implements OnInit {
 
     this.tracesListeElemente.push(trace[0]);
 
-    for (let o = 1; o < tracesListeElemente[0].data.length; o+=2) {
+    for (let o = 1; o < tracesListeElemente[0].data.length; o += 2) {
       if (trace[o].length > 20) {
         this.tracesListeElemente.push(trace[o]);
       }
@@ -354,7 +371,7 @@ export class TischplanComponent implements OnInit {
       .subscribe(response => {
         // let arrayIndex = response[1];
         console.log("RESPONSE addInformationToTable:" + JSON.stringify(response));
-        if(response === null) {
+        if (response === null) {
           return;
         } else {
           if (response.tables[0].department === "berglerStubeHubertusStube") {
@@ -383,7 +400,7 @@ export class TischplanComponent implements OnInit {
         //console.log("arrayIndex:" + arrayIndex);
         //console.log("bgColor:" + JSON.stringify(response[0].tables[arrayIndex].bgColor));
         console.log("Response occupyTable:" + JSON.stringify(response));
-        if(response === null) {
+        if (response === null) {
           return;
         } else {
           if (response.tables[0].department === "berglerStubeHubertusStube") {
@@ -405,46 +422,46 @@ export class TischplanComponent implements OnInit {
 
         //console.log("bgColor:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
       });
-/*
-    this.tischplanService.removePlaceholder(dataString)
-      .subscribe(response => {
-        //let arrayIndex = response[1];
-        console.log("Response placeholder:" + JSON.stringify(response));
-        if(response.tables[0].department === "berglerStubeHubertusStube") {
-          this.tablesBerglerStubeHubertusStube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
-        }
-        else if(response.tables[0].department === "Bauernstube") {
-          this.tablesBauernstube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
-        }
-        else if(response.tables[0].department === "tablesWaeldlerStubeKristallStube") {
-          this.tablesWaeldlerStubeKristallStube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
-        }
-        else if(response.tables[0].department === "edelweissKaminStube") {
-          this.tablesEdelweissKaminStube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
-        }
-      });
+    /*
+     this.tischplanService.removePlaceholder(dataString)
+     .subscribe(response => {
+     //let arrayIndex = response[1];
+     console.log("Response placeholder:" + JSON.stringify(response));
+     if(response.tables[0].department === "berglerStubeHubertusStube") {
+     this.tablesBerglerStubeHubertusStube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
+     }
+     else if(response.tables[0].department === "Bauernstube") {
+     this.tablesBauernstube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
+     }
+     else if(response.tables[0].department === "tablesWaeldlerStubeKristallStube") {
+     this.tablesWaeldlerStubeKristallStube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
+     }
+     else if(response.tables[0].department === "edelweissKaminStube") {
+     this.tablesEdelweissKaminStube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
+     }
+     });
 
-        this.tischplanService.addPlaceholder(addPlaceholderDataString)
-          .subscribe(response => {
-          console.log("Add placeholder!");
-          console.log("Add placeholder! : " + JSON.stringify(response));
-          console.log("placeholder:" + JSON.stringify(response[0].tables[j].placeholder));
-          //console.log(this.tablesBerglerStubeHubertusStube[j].placeholder);
-          if(response[0].tables[j].department === "berglerStubeHubertusStube") {
-            this.tablesBerglerStubeHubertusStube[j].placeholder = response[0].tables[j].placeholder;
-          }
-          else if(response[0].tables[j].department === "Bauernstube") {
-            this.tablesBauernstube[j].placeholder = response[0].tables[j].placeholder;
-          }
-          else if(response[0].tables[j].department === "tablesWaeldlerStubeKristallStube") {
-            this.tablesWaeldlerStubeKristallStube[j].placeholder = response[0].tables[j].placeholder;
-          }
-          else if(response[0].tables[j].department === "edelweissKaminStube") {
-            this.tablesEdelweissKaminStube[j].placeholder = response[0].tables[j].placeholder;
-          }
-        });
- */
-        //console.log("placeholder:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
+     this.tischplanService.addPlaceholder(addPlaceholderDataString)
+     .subscribe(response => {
+     console.log("Add placeholder!");
+     console.log("Add placeholder! : " + JSON.stringify(response));
+     console.log("placeholder:" + JSON.stringify(response[0].tables[j].placeholder));
+     //console.log(this.tablesBerglerStubeHubertusStube[j].placeholder);
+     if(response[0].tables[j].department === "berglerStubeHubertusStube") {
+     this.tablesBerglerStubeHubertusStube[j].placeholder = response[0].tables[j].placeholder;
+     }
+     else if(response[0].tables[j].department === "Bauernstube") {
+     this.tablesBauernstube[j].placeholder = response[0].tables[j].placeholder;
+     }
+     else if(response[0].tables[j].department === "tablesWaeldlerStubeKristallStube") {
+     this.tablesWaeldlerStubeKristallStube[j].placeholder = response[0].tables[j].placeholder;
+     }
+     else if(response[0].tables[j].department === "edelweissKaminStube") {
+     this.tablesEdelweissKaminStube[j].placeholder = response[0].tables[j].placeholder;
+     }
+     });
+     */
+    //console.log("placeholder:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
 
   }
 
@@ -488,7 +505,7 @@ export class TischplanComponent implements OnInit {
       console.log("Dispense Table:");
       console.log("bgColor:" + JSON.stringify(response[0].tables[j].bgColor));
       console.log("isBesetzt:" + JSON.stringify(response[0].tables[j].isBesetzt));
-      if(response === null) {
+      if (response === null) {
         return;
       } else {
         if (response[0].tables[j].department === "berglerStubeHubertusStube") {
@@ -513,7 +530,7 @@ export class TischplanComponent implements OnInit {
       console.log("Add placeholder!");
       console.log("Add placeholder! table ... " + JSON.stringify(table));
       console.log("placeholder:" + JSON.stringify(response[0].tables[j].placeholder));
-      if(response === null) {
+      if (response === null) {
         return;
       } else {
         //console.log(this.tablesBerglerStubeHubertusStube[j].placeholder);
@@ -684,7 +701,7 @@ export class TischplanComponent implements OnInit {
   moveTable(table, j) {
 
     console.log("moveTable clicked");
-    console.log('table :' + table.number + 'j' +  j);
+    console.log('table :' + table.number + 'j' + j);
     this.tischplanService.moveTable(table).subscribe(response => {
       console.log('Response:' + JSON.stringify(response));
 
@@ -694,17 +711,86 @@ export class TischplanComponent implements OnInit {
 
       if (response[0].tables[j].department === "berglerStubeHubertusStube") {
         this.tablesBerglerStubeHubertusStube = response[0].tables;
-      } else if(response[0].tables[j].department === "Bauernstube") {
+      } else if (response[0].tables[j].department === "Bauernstube") {
         this.tablesBauernstube = response[0].tables;
-      } else if(response[0].tables[j].department === "waeldlerStubeKristallStube") {
+      } else if (response[0].tables[j].department === "waeldlerStubeKristallStube") {
         this.tablesWaeldlerStubeKristallStube = response[0].tables;
-      } else if(response[0].tables[j].department === "edelweissKaminStube") {
+      } else if (response[0].tables[j].department === "edelweissKaminStube") {
         this.tablesEdelweissKaminStube = response[0].tables;
-      } else if(response[0].tables[j].department === "teestubeTeelounge") {
+      } else if (response[0].tables[j].department === "teestubeTeelounge") {
         this.tablesTeestubeTeelounge = response[0].tables;
       }
     });
   }
+
+  sendInformation(event) {
+    event.preventDefault();
+    this.dateGenerated = new Date();
+    let newInformation = {
+      text: this.title,
+      roomNumber: this.roomNumber,
+      tableNumber: this.tableNumber,
+      date: this.dateGenerated
+    };
+    if (newInformation.text === undefined) {
+      this._flashMessagesService.show('Die Nachricht ist leer ... ',
+        {cssClass: 'alert-danger', timeout: 20000});
+      return;
+    } else {
+      this._flashMessagesService.show('Erfolgreich Information gespeichert ... ',
+        {cssClass: 'alert-success', timeout: 20000});
+
+      console.log(newInformation.tableNumber);
+
+      if (newInformation.tableNumber) {
+        this.tischplanService.sendInformation(newInformation)
+          .subscribe(Information => {
+            //console.log('Information: ' + JSON.stringify(Information.tables[0].tableNumber));
+            console.log('Information: ' + JSON.stringify(Information));
+            console.log(Information.tables[0]);
+            console.log("------");
+            //console.log(Information[0].tables);
+            if (Information === null) {
+              return;
+            } else {
+              if (Information.tables[0].department === "Bauernstube") {
+                this.tablesBauernstube[Information.tables[0].arrayIndex] = Information.tables[0];
+              } else if (Information.tables[0].department === "waeldlerStubeKristallStube") {
+                this.tablesWaeldlerStubeKristallStube[Information.tables[0].arrayIndex] = Information.tables[0];
+              } else if (Information.tables[0].department === "berglerStubeHubertusStube") {
+                this.tablesBerglerStubeHubertusStube[Information.tables[0].arrayIndex] = Information.tables[0];
+              } else if (Information.tables[0].department === "edelweissKaminStube") {
+                this.tablesEdelweissKaminStube[Information.tables[0].arrayIndex] = Information.tables[0];
+              } else if (Information.tables[0].department === "teestubeTeelounge") {
+                this.tablesTeestubeTeelounge[Information.tables[0].arrayIndex] = Information.tables[0];
+              }
+            }
+          });
+      }
+      this.tischplanService.sendInformationToBox(newInformation)
+        .subscribe(Information => {
+          //console.log('Information: ' + JSON.stringify(Information.tables[0].tableNumber));
+          console.log('Information: ' + JSON.stringify(Information));
+          //console.log(Information.tables[0]);
+          //console.log("------");
+          //console.log(Information[0].tables);
+          this.newInformationElements.push(Information);
+          console.log('this.newInformationElements' + this.newInformationElements);
+        });
+    }
+  }
+
+    delete(informationElement, j, event) {
+      console.log(informationElement);
+
+      console.log(j);
+      event.stopPropagation();
+
+      this.tischplanService.deleteInformationElement(informationElement)
+        .subscribe(informationElement => {
+          this.newInformationElements.splice(j, 1);
+        });
+    }
 
   printToCart1(printSectionId1: string) {
     let popupWinindow;

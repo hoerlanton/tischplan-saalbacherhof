@@ -3,7 +3,7 @@ const   express = require('express'),
     bodyParser = require('body-parser'),
     mongojs = require('mongojs'),
     cors = require('cors'),
-    db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['hubertusTracesListe', 'hubertusAnreiseListe', 'hubertusImHausListe', 'hubertusTables']);
+    db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['hubertusTracesListe', 'hubertusAnreiseListe', 'hubertusImHausListe', 'hubertusTables', 'newInformationHubertus']);
 
 //Bodyparser middleware
 router.use(bodyParser.urlencoded({ extended: false}));
@@ -125,6 +125,35 @@ router.get('/tables', function(req, res, next) {
         res.json(tables);
     });
 });
+
+//Get Information
+router.get('/information', function(req, res, next) {
+    console.log("tables get called");
+    //Get guests from Mongo DB
+    db.newInformationHubertus.find(function(err, information){
+        if (err){
+            res.send(err);
+        }
+        res.json(information);
+    });
+});
+
+//Delete scheduled message
+router.post('/deleteInformationElement', function(req, res, next) {
+    //JSON string is parsed to a JSON object
+    console.log("Delete request made to /deleteInformationElement");
+    let informationElementToDelete = req.body;
+    console.log(JSON.stringify(informationElementToDelete));
+    db.newInformationHubertus.remove({
+
+            roomNumber: informationElementToDelete.roomNumber
+        },
+        {
+            justOne: true,
+        });
+    res.json(informationElementToDelete);
+});
+
 
 //moveTable
 router.post('/moveTable', function(req, res, next) {
@@ -3100,7 +3129,11 @@ router.post('/dispenseTable', function(req, res, next) {
             "tables.$.trace3": 1,
             "tables.$.bemerkungValue6": 1,
             "tables.$.bemerkungValue7":  1,
-            "tables.$.bemerkungValue8": 1
+            "tables.$.bemerkungValue8": 1,
+            "tables.$.newInformation": 1,
+            "tables.$.newInformation1": 1,
+            "tables.$.newInformation2": 1
+
         } },
         new: false
     }, function (err, tables) {
@@ -3317,7 +3350,7 @@ router.post('/addInformationToTable', function(req, res, next) {
     let infoElementString = "";
     let bermerkungValueConcatenated = "";
 
-    for (let s = 0; s < splitted.length; s++){
+    for (let s = 0; s < splitted.length; s++) {
         informationElements2.push(splitted[s].split(":"));
     }
 
@@ -3341,11 +3374,11 @@ router.post('/addInformationToTable', function(req, res, next) {
 
     console.log(informationElements2[3][1]);
 
-    if (infoElementString.indexOf(value) != -1){
+    if (infoElementString.indexOf(value) != -1) {
         console.log('!!!!!!!!!!!!<:::::::::::::::::::::::::::::::::::::::');
-        }
+    }
 
-    if(infoElementString.indexOf(value) != -1 && infoElementString.indexOf('nKAT') != -1) {
+    if (infoElementString.indexOf(value) != -1 && infoElementString.indexOf('nKAT') != -1) {
         console.log("Im Haus Liste gedropped");
         nameValue = informationElements2[0][1].substring(1, informationElements2[0][1].length);
         zimmernummerValue = informationElements2[1][1].substring(1, informationElements2[1][1].length);
@@ -3374,16 +3407,16 @@ router.post('/addInformationToTable', function(req, res, next) {
             if (informationElements2[11].length > 1) {
                 bemerkungValue = bemerkungValue + informationElements2[11][1].substring(1, informationElements2[11][0].length);
             }
-            if (informationElements2[informationElements2.length - 2].length > 1){
+            if (informationElements2[informationElements2.length - 2].length > 1) {
                 bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2][1].substring(1, informationElements2[informationElements2.length - 2][1].length);
             }
         } else if (informationElements2.length === 13) {
             bemerkungValue = bemerkungValue + informationElements2[11][0].substring(1, informationElements2[11][0].length);
-            if (informationElements2[informationElements2.length - 2].length > 1){
+            if (informationElements2[informationElements2.length - 2].length > 1) {
                 bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2][1].substring(1, informationElements2[informationElements2.length - 2][1].length);
             }
 
-            } else if (informationElements2.length > 14) {
+        } else if (informationElements2.length > 14) {
             bemerkungValue = bemerkungValue + informationElements2[11][0].substring(1, informationElements2[11][0].length);
             bemerkungValue = bemerkungValue + informationElements2[12][0].substring(1, informationElements2[12][0].length);
             bemerkungValue = bemerkungValue + informationElements2[13][0].substring(1, informationElements2[13][0].length);
@@ -3398,7 +3431,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                 bemerkungValue = bemerkungValue + informationElements2[13][1].substring(1, informationElements2[13][0].length);
             }
 
-            if (informationElements2[informationElements2.length - 2].length > 1){
+            if (informationElements2[informationElements2.length - 2].length > 1) {
                 bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2][1].substring(1, informationElements2[informationElements2.length - 2][1].length);
             }
         }
@@ -3446,23 +3479,23 @@ router.post('/addInformationToTable', function(req, res, next) {
     console.log(" nameValue " + nameValue + " zimmernummerValue " + zimmernummerValue + " preistypValue " + preistypValue + " anreiseValue " + anreiseValue + " abreiseValue " + abreiseValue + " personenAnzahlValue " + personenAnzahlValue + " katValue " + katValue + " notiz1Value " + notiz1Value + " notiz2Value " + notiz2Value + " bemerkungValue " + bemerkungValue + bemerkungValue1 + bemerkungValue2 + "tableValue" + tableValue + "departmentvalue" + departmentValue);
 
 
-    if(departmentValue === "BerglerStubeHubertusStube") {
+    if (departmentValue === "BerglerStubeHubertusStube") {
         departmentValueDB = "berglerStubeHubertusStube";
     }
-    else if(departmentValue === "Bauernstube") {
+    else if (departmentValue === "Bauernstube") {
         departmentValueDB = "Bauernstube";
     }
-    else if(departmentValue === "WaeldlerStubeKristallStube") {
+    else if (departmentValue === "WaeldlerStubeKristallStube") {
         departmentValueDB = "waeldlerStubeKristallStube";
     }
-    else if(departmentValue === "EdelweissKaminStube") {
+    else if (departmentValue === "EdelweissKaminStube") {
         departmentValueDB = "edelweissKaminStube";
     }
-    else if(departmentValue === "TeestubeTeelounge") {
+    else if (departmentValue === "TeestubeTeelounge") {
         departmentValueDB = "teestubeTeelounge";
     }
     console.log(departmentValueDB);
-    setTimeout(function() {
+    setTimeout(function () {
         db.hubertusTables.findOne(
             {
                 department: departmentValueDB,
@@ -3501,7 +3534,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                                 "tables.$.notiz2Value": notiz2Value,
                                 "tables.$.trace": trace,
                                 "tables.$.bemerkungValue": bemerkungValue,
-                                "tables.$.bemerkungValue1":  bemerkungValue1,
+                                "tables.$.bemerkungValue1": bemerkungValue1,
                                 "tables.$.bemerkungValue2": bemerkungValue2
                             }
                         }, function (err, tables) {
@@ -3529,7 +3562,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                                 "tables.$.notiz4Value": notiz2Value,
                                 "tables.$.trace2": trace,
                                 "tables.$.bemerkungValue3": bemerkungValue,
-                                "tables.$.bemerkungValue4":  bemerkungValue1,
+                                "tables.$.bemerkungValue4": bemerkungValue1,
                                 "tables.$.bemerkungValue5": bemerkungValue2
                             }
                         }, function (err, tables) {
@@ -3557,7 +3590,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                                 "tables.$.notiz6Value": notiz2Value,
                                 "tables.$.trace3": trace,
                                 "tables.$.bemerkungValue6": bemerkungValue,
-                                "tables.$.bemerkungValue7":  bemerkungValue1,
+                                "tables.$.bemerkungValue7": bemerkungValue1,
                                 "tables.$.bemerkungValue8": bemerkungValue2
                             }
                         }, function (err, tables) {
@@ -3574,7 +3607,7 @@ router.post('/addInformationToTable', function(req, res, next) {
         db.hubertusTables.findOne(
             {
                 department: departmentValueDB,
-                "tables.number": tableValue
+                "tables.number": tableValue[0]
             },
             {
                 "tables.$": 1,
@@ -3584,9 +3617,119 @@ router.post('/addInformationToTable', function(req, res, next) {
                     res.send(err);
                 }
                 res.json(tables);
-                console.log(JSON.stringify('5306' + JSON.stringify(tables)));
+                console.log(JSON.stringify(tables));
             });
-    }, 1000);
+    }, 500);
+});
+    router.post('/newInformationToTables', function(req, res, next) {
+        console.log("newInformationToTables post called");
+        //Get guests from Mongo DB
+
+        console.log(req.body);
+        let newInformation = req.body;
+
+        setTimeout(function() {
+            db.hubertusTables.findOne(
+            {
+                "tables.number": newInformation.tableNumber
+            },{
+                "tables.$": 1,
+            },
+            function (err, tablesfirst) {
+                if (err) {
+                    res.send(err);
+                }
+                if (tablesfirst === null) {
+                    console.log("tablesfirst is null");
+                    return;
+                }
+                console.log("Länge tables firstplace" + JSON.stringify(tablesfirst.tables[0]).length);
+                if (!("newInformation" in tablesfirst.tables[0])) {
+                    db.hubertusTables.update(
+                        {
+                            "tables.number": newInformation.tableNumber,
+                        },
+                        {
+                            $set: {
+                                "tables.$.newInformation": newInformation.text + " " + newInformation.roomNumber,
+                                "tables.$.date": newInformation.date
+                            }
+                        }, function (err, tables) {
+                            if (err) {
+                                console.log("Error");
+                            }
+                            console.log("addInformationToTable updated successfully");
+                        });
+                } else if (!("newInformation1" in tablesfirst.tables[0])) {
+
+                    db.hubertusTables.update(
+                        {
+                            "tables.number": newInformation.tableNumber,
+                        },
+                        {
+                            $set: {
+                                "tables.$.newInformation1": newInformation.text + " " + newInformation.roomNumber,
+                                "tables.$.date": newInformation.date
+                            }
+                        }, function (err, tables) {
+                            if (err) {
+                                console.log("Error");
+                            }
+                            console.log("addInformationToTable updated successfully");
+                        });
+                } else if (!("newInformation2" in tablesfirst.tables[0])) {
+
+                    db.hubertusTables.update(
+                        {
+                            "tables.number": newInformation.tableNumber,
+                        },
+                        {
+                            $set: {
+                                "tables.$.newInformation2": newInformation.text + " " + newInformation.roomNumber,
+                                "tables.$.date": newInformation.date
+                            }
+                        }, function (err, tables) {
+                            if (err) {
+                                console.log("Error");
+                            }
+                            console.log("addInformationToTable updated successfully");
+                        });
+                }
+                }, 300);
+        });
+
+        setTimeout(function() {
+            db.hubertusTables.findOne(
+                {
+                    "tables.number": newInformation.tableNumber
+                },
+                {
+                    "tables.$": 1,
+                },
+                function (err, tables) {
+                    if (err) {
+                        res.send(err);
+                    }
+                    res.json(tables);
+                    console.log(JSON.stringify(tables));
+                });
+        }, 500);
+});
+
+router.post('/newInformationToBox', function(req, res, next) {
+    console.log("newInformationToBox post called");
+    //Get guests from Mongo DB
+
+    console.log(req.body);
+    let newInformation = req.body;
+
+
+    db.newInformationHubertus.save(newInformation, function(err, newInformation) {
+        if (err) {
+            res.send(err);
+        }
+        res.json(newInformation);
+    });
 });
 
 module.exports = router;
