@@ -23,7 +23,7 @@
         <ul *dropdownMenu class="dropdown-menu" role="menu" style="overflow: auto; height: 350px; width: 200px">
           <div *ngFor="let newInformationElement of newInformationElements; let j = index;">
             <button style="float: right; background-color: #0a7a74; color: #FFFFFF" type="submit" class="btn btn-send" (click)="delete(newInformationElement, j, $event)">x</button>
-            <li role="menuitem" style="padding: 5px;"> <b>Zimmer Nummer: </b> {{newInformationElement.roomNumber}} <br><b>Trace: </b> {{newInformationElement.text}} <br><b>Tisch: </b> {{newInformationElement.tableNumber}}<br><b>Datum: </b> {{newInformationElement.date}}</li>
+            <li role="menuitem" style="padding: 5px;"> <b>Zimmer Nummer: </b> {{newInformationElement.roomNumber}} <br><b>Trace: </b> {{newInformationElement.text}} <br><b>Tisch: </b> {{newInformationElement.tableNumber}}<br><b>Datum: </b> {{newInformationElement.date}}<br><b>Name: </b> {{newInformationElement.name}}<br><b>Mitarbeiter: </b> {{newInformationElement.employee}}</li>
             <li class="divider dropdown-divider"></li>
           </div>
         </ul>
@@ -38,12 +38,15 @@
 
 <div class="row">
   <div class="container-fluid">
-    <div id="printSectionId1" class="col-xs-12 col-sm-4 col-lg-2 print-col">
+    <div  class="col-xs-12 col-sm-4 col-lg-2 print-col">
       <h3>Info hinzufügen</h3>
       <form class="SendInformation"  #myForm="ngForm" (submit)="sendInformation($event); myForm.reset() ">
         <div class="form-group" style="margin-bottom: 40px">
           <input  class="form-control" style="margin-top: 20px" id="roomNumber" [(ngModel)]="roomNumber" name="roomNumber" placeholder="Zimmer Nummer">
           <input  class="form-control" style="margin-top: 20px" id="tableNumber" [(ngModel)]="tableNumber" name="tableNumber" placeholder="Tisch Nummer">
+          <input  class="form-control" style="margin-top: 20px" id="name" [(ngModel)]="nameTraceInput" name="Name" placeholder="Name">
+          <input  class="form-control" style="margin-top: 20px" id="employee" [(ngModel)]="employee" name="employee" placeholder="Mitarbeiter">
+
           ​<textarea id="informationText" rows="5" type="text" style="margin-bottom: 10px" [(ngModel)]="title" placeholder="Trace hinzufügen" name="title" class="form-control" required>
           </textarea>
           <button type="button|submit|reset" style="float: right; margin: 10px 0px 0px 0px; background-color: #0a7a74; color: #FFFFFF" class="btn btn-primary">Hinzufügen</button>          </div>
@@ -51,7 +54,7 @@
       <div class="tischUebersicht" style="margin-top: 100px">
        <div class="line1"></div>
         <h3>Tisch Übersicht</h3>
-        <div class="inner-table" style="padding: 0px 0px 0px 0px;">
+        <div id="printSectionId1" class="inner-table" style="padding: 0px 0px 0px 0px;">
           <div class="row3">
             <div class='wrapper' id="wrapper">
               <div *ngIf="showBerglerBool">
@@ -103,22 +106,21 @@
                               <b> Notiz2:</b>{{tableBerglerStubeHubertusStube.notiz6Value}}<br>
                               <b> Trace:</b>{{tableBerglerStubeHubertusStube.trace3}}<br>
                               <b> BemerkungValue:</b>{{tableBerglerStubeHubertusStube.bemerkungValue6}}<br>
-                              <b> Trace:</b>{{tableSonnbergZirbn.trace3}}<br>
+                              <b> Trace:</b>{{tableBerglerStubeHubertusStube.trace3}}<br>
                             </p>
                           </div>
-                          <div *ngIf="tableBerglerStubeHubertusStube.newInformation">
+                          <div *ngIf="tableBerglerStubeHubertusStube.newTraceName">
                             <p style="background-color: #FFFFFF; border: solid 3px red">
-                              <b> Zimmernummer: </b>{{tableBerglerStubeHubertusStube.newInformation.substring(tableBerglerStubeHubertusStube.newInformation.length - 3, tableBerglerStubeHubertusStube.newInformation.length)}}<br> <b> Neuer Trace: </b>{{tableBerglerStubeHubertusStube.newInformation.substring(0, tableBerglerStubeHubertusStube.newInformation.length - 3)}}
+                              <b> Zimmernummer: </b>{{tableBerglerStubeHubertusStube.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{tableBerglerStubeHubertusStube.newTraceText}} <br> <b> Tischnummer: </b>{{tableBerglerStubeHubertusStube.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{tableBerglerStubeHubertusStube.newTraceEmployee}} <br> <b> Name: </b>{{tableBerglerStubeHubertusStube.newTraceName}} <br> <b> Datum: </b>{{tableBerglerStubeHubertusStube.newTraceDate}}
                             </p>
                           </div>
-                          <div *ngIf="tableBerglerStubeHubertusStube.newInformation1">
+                          <div *ngIf="tableBerglerStubeHubertusStube.newTraceName1">
                             <p style="background-color: #FFFFFF; border: solid 3px red">
-                              <b> Zimmernummer: </b>{{tableBerglerStubeHubertusStube.newInformation1.substring(tableBerglerStubeHubertusStube.newInformation1.length - 3, tableBerglerStubeHubertusStube.newInformation1.length)}}<br> <b> Neuer Trace: </b>{{tableBerglerStubeHubertusStube.newInformation1.substring(0, tableBerglerStubeHubertusStube.newInformation1.length - 3)}}
-                            </p>
+                              <b> Zimmernummer: </b>{{tableBerglerStubeHubertusStube.newTraceRoomNumber1}}<br> <b> Neuer Trace: </b>{{tableBerglerStubeHubertusStube.newTraceText1}} <br> <b> Tischnummer: </b>{{tableBerglerStubeHubertusStube.newTraceTableNumber1}} <br> <b> Mitarbeiter: </b>{{tableBerglerStubeHubertusStube.newTraceEmployee1}} <br> <b> Name: </b>{{tableBerglerStubeHubertusStube.newTraceName1}} <br> <b> Datum: </b>{{tableBerglerStubeHubertusStube.newTraceDate1}}                            </p>
                           </div>
-                          <div *ngIf="tableBerglerStubeHubertusStube.newInformation2">
+                          <div *ngIf="tableBerglerStubeHubertusStube.newTraceName2">
                             <p style="background-color: #FFFFFF; border: solid 3px red">
-                              <b> Zimmernummer: </b>{{tableBerglerStubeHubertusStube.newInformation2.substring(tableBerglerStubeHubertusStube.newInformation2.length - 3, tableBerglerStubeHubertusStube.newInformation2.length)}}<br> <b> Neuer Trace: </b>{{tableBerglerStubeHubertusStube.newInformation2.substring(0, tableBerglerStubeHubertusStube.newInformation2.length - 3)}}
+                              <b> Zimmernummer: </b>{{tableBerglerStubeHubertusStube.newTraceRoomNumber2}}<br> <b> Neuer Trace: </b>{{tableBerglerStubeHubertusStube.newTraceText2}} <br> <b> Tischnummer: </b>{{tableBerglerStubeHubertusStube.newTraceTableNumber2}} <br> <b> Mitarbeiter: </b>{{tableBerglerStubeHubertusStube.newTraceEmployee2}} <br> <b> Name: </b>{{tableBerglerStubeHubertusStube.newTraceName2}} <br> <b> Datum: </b>{{tableBerglerStubeHubertusStube.newTraceDate2}}
                             </p>
                           </div>
                         </div>

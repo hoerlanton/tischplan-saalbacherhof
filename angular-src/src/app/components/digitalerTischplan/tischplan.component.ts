@@ -53,6 +53,8 @@ export class TischplanComponent implements OnInit {
 
   roomNumber: string;
   tableNumber: string;
+  employee: string;
+  nameTraceInput: string;
 
   constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, private dragulaService: DragulaService, private element: ElementRef, private renderer: Renderer) {
     let DomBaseElement = this.element.nativeElement;
@@ -730,7 +732,9 @@ export class TischplanComponent implements OnInit {
       text: this.title,
       roomNumber: this.roomNumber,
       tableNumber: this.tableNumber,
-      date: this.dateGenerated
+      date: this.dateGenerated,
+      name: this.nameTraceInput,
+      employee: this.employee
     };
     if (newInformation.text === undefined) {
       this._flashMessagesService.show('Die Nachricht ist leer ... ',

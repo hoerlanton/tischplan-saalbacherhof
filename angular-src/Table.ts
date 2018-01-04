@@ -52,7 +52,22 @@ export class Table {
   rbsouValue3: string;
   notiz2Value3: string;
   trace3: string;
-  newInformation: string;
-  newInformation1: string;
-  newInformation2: string;
+  newTraceText: string;
+  newTraceRoomNumber: string;
+  newTraceTableNumber: string;
+  newTraceEmployee: string;
+  newTraceName: string;
+  newTraceDate: string;
+  newTraceText1: string;
+  newTraceRoomNumber1: string;
+  newTraceTableNumber1: string;
+  newTraceEmployee1: string;
+  newTraceName1: string;
+  newTraceDate1: string;
+  newTraceText2: string;
+  newTraceRoomNumber2: string;
+  newTraceTableNumber2: string;
+  newTraceEmployee2: string;
+  newTraceName2: string;
+  newTraceDate2: string;
 }

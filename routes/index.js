@@ -3133,7 +3133,25 @@ router.post('/dispenseTable', function(req, res, next) {
             "tables.$.newInformation": 1,
             "tables.$.newInformation1": 1,
             "tables.$.newInformation2": 1,
-            "tables.$.date": 1
+            "tables.$.newTraceDate": 1,
+            "tables.$.newTraceText": 1,
+            "tables.$.newTraceRoomNumber": 1,
+            "tables.$.newTraceName": 1,
+            "tables.$.newTraceEmployee": 1,
+            "tables.$.newTraceText1": 1,
+            "tables.$.newTraceRoomNumber1": 1,
+            "tables.$.newTraceName1": 1,
+            "tables.$.newTraceEmployee1": 1,
+            "tables.$.newTraceDate1": 1,
+            "tables.$.newTraceText2": 1,
+            "tables.$.newTraceRoomNumber2": 1,
+            "tables.$.newTraceName2": 1,
+            "tables.$.newTraceEmployee2": 1,
+            "tables.$.newTraceDate2": 1,
+            "tables.$.newTraceTableNumber": 1,
+            "tables.$.newTraceTableNumber1": 1,
+            "tables.$.newTraceTableNumber2": 1
+
 
         } },
         new: false
@@ -3645,15 +3663,19 @@ router.post('/addInformationToTable', function(req, res, next) {
                     return;
                 }
                 console.log("Länge tables firstplace" + JSON.stringify(tablesfirst.tables[0]).length);
-                if (!("newInformation" in tablesfirst.tables[0])) {
+                if (!("newTraceText" in tablesfirst.tables[0])) {
                     db.hubertusTables.update(
                         {
                             "tables.number": newInformation.tableNumber,
                         },
                         {
                             $set: {
-                                "tables.$.newInformation": newInformation.text + " " + newInformation.roomNumber,
-                                "tables.$.date": newInformation.date
+                                "tables.$.newTraceText": newInformation.text,
+                                "tables.$.newTraceRoomNumber": newInformation.roomNumber,
+                                "tables.$.newTraceName": newInformation.name,
+                                "tables.$.newTraceEmployee": newInformation.employee,
+                                "tables.$.newTraceDate": newInformation.date,
+                                "tables.$.newTraceTableNumber": newInformation.tableNumber
                             }
                         }, function (err, tables) {
                             if (err) {
@@ -3661,7 +3683,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                             }
                             console.log("addInformationToTable updated successfully");
                         });
-                } else if (!("newInformation1" in tablesfirst.tables[0])) {
+                } else if (!("newTraceText1" in tablesfirst.tables[0])) {
 
                     db.hubertusTables.update(
                         {
@@ -3669,8 +3691,12 @@ router.post('/addInformationToTable', function(req, res, next) {
                         },
                         {
                             $set: {
-                                "tables.$.newInformation1": newInformation.text + " " + newInformation.roomNumber,
-                                "tables.$.date": newInformation.date
+                                "tables.$.newTraceText1": newInformation.text,
+                                "tables.$.newTraceRoomNumber1": newInformation.roomNumber,
+                                "tables.$.newTraceName1": newInformation.name,
+                                "tables.$.newTraceEmployee1": newInformation.employee,
+                                "tables.$.newTraceDate1": newInformation.date,
+                                "tables.$.newTraceTableNumber1": newInformation.tableNumber
                             }
                         }, function (err, tables) {
                             if (err) {
@@ -3678,7 +3704,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                             }
                             console.log("addInformationToTable updated successfully");
                         });
-                } else if (!("newInformation2" in tablesfirst.tables[0])) {
+                } else if (!("newTraceText2" in tablesfirst.tables[0])) {
 
                     db.hubertusTables.update(
                         {
@@ -3686,8 +3712,12 @@ router.post('/addInformationToTable', function(req, res, next) {
                         },
                         {
                             $set: {
-                                "tables.$.newInformation2": newInformation.text + " " + newInformation.roomNumber,
-                                "tables.$.date": newInformation.date
+                                "tables.$.newTraceText2": newInformation.text,
+                                "tables.$.newTraceRoomNumber2": newInformation.roomNumber,
+                                "tables.$.newTraceName2": newInformation.name,
+                                "tables.$.newTraceEmployee2": newInformation.employee,
+                                "tables.$.newTraceDate2": newInformation.date,
+                                "tables.$.newTraceTableNumber2": newInformation.tableNumber
                             }
                         }, function (err, tables) {
                             if (err) {

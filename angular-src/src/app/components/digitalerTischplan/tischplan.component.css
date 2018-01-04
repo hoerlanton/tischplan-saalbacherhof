@@ -23,7 +23,7 @@ html, body {
   border-bottom: solid 10px #0a7a74;
   position: absolute;
   right: 0px;
-  top: 345px;
+  top: 455px;
 }
 
 .row .print-col, .row .upload-col, .row .table-col {
@@ -40,10 +40,6 @@ html, body {
   display: none;
 }
 
-.inner-table {
-  min-height: 370px;
-}
-
 @media (min-width: 1200px) {
   .row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .anleitung {
     display: block;
@@ -51,12 +47,13 @@ html, body {
 }
 
 .row1 {
-  height: calc((100vh - 286px) / 3);
+  height: calc((100vh - 290px) / 3);
   overflow: auto;
 }
 
 .inner-table {
-  height: calc(100vh - 440px);
+  min-height: 370px;
+  height: calc(100vh - 540px);
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
