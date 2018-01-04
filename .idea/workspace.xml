@@ -3,19 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2b12636d-0934-43d0-9e11-bbac60639e35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/Table.ts" afterPath="$PROJECT_DIR$/angular-src/Table.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/package-lock.json" afterPath="$PROJECT_DIR$/angular-src/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/package.json" afterPath="$PROJECT_DIR$/angular-src/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.css" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/tischplan.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/tischplan.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/inline.bundle.js.map" afterPath="$PROJECT_DIR$/public/inline.bundle.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/main.bundle.js" afterPath="$PROJECT_DIR$/public/main.bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/main.bundle.js.map" afterPath="$PROJECT_DIR$/public/main.bundle.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor.bundle.js" afterPath="$PROJECT_DIR$/public/vendor.bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/vendor.bundle.js.map" afterPath="$PROJECT_DIR$/public/vendor.bundle.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -76,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8513">
-              <caret line="3626" column="0" lean-forward="false" selection-start-line="3626" selection-start-column="0" selection-end-line="3626" selection-end-column="0" />
+            <state relative-caret-position="246">
+              <caret line="3708" column="40" lean-forward="true" selection-start-line="3708" selection-start-column="40" selection-end-line="3708" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -177,7 +164,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/default.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
@@ -266,9 +253,9 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/services/tischplan.service.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.css" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.ts" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.html" />
         <option value="$PROJECT_DIR$/config/default.json" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
       </list>
     </option>
   </component>
@@ -632,12 +619,12 @@
       <workItem from="1514574923420" duration="6237000" />
       <workItem from="1514614913094" duration="66920000" />
       <workItem from="1514887357186" duration="7972000" />
-      <workItem from="1515051109071" duration="4147000" />
+      <workItem from="1515051109071" duration="4335000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="411611000" />
+    <option name="totallyTimeSpent" value="411799000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -999,18 +986,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8513">
-          <caret line="3626" column="0" lean-forward="false" selection-start-line="3626" selection-start-column="0" selection-end-line="3626" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/default.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="41" lean-forward="true" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="3708" column="40" lean-forward="true" selection-start-line="3708" selection-start-column="40" selection-end-line="3708" selection-end-column="40" />
           <folding />
         </state>
       </provider>

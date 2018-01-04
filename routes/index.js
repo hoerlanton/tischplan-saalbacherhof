@@ -3607,7 +3607,7 @@ router.post('/addInformationToTable', function(req, res, next) {
         db.hubertusTables.findOne(
             {
                 department: departmentValueDB,
-                "tables.number": tableValue[0]
+                "tables.number": tableValue
             },
             {
                 "tables.$": 1,
