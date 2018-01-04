@@ -3132,7 +3132,8 @@ router.post('/dispenseTable', function(req, res, next) {
             "tables.$.bemerkungValue8": 1,
             "tables.$.newInformation": 1,
             "tables.$.newInformation1": 1,
-            "tables.$.newInformation2": 1
+            "tables.$.newInformation2": 1,
+            "tables.$.date": 1
 
         } },
         new: false
