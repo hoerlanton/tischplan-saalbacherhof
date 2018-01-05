@@ -70,4 +70,5 @@ export class Table {
   newTraceEmployee2: string;
   newTraceName2: string;
   newTraceDate2: string;
+  arrayIndex: string;
 }

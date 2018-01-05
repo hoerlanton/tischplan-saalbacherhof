@@ -201,6 +201,9 @@
                         </div>
                       </div>
                     </div>
+                    <div *ngIf="tableBauernstube.placeholder === 'true'">
+                      <p [dragula]='"evented-bag"' id="Bauernstube" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableBauernstube.number}} {{tableBauernstube.department}} {{tableBauernstube.arrayIndex}}</p>
+                    </div>
                   </div>
                 </div>
               </div>
