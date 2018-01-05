@@ -199,7 +199,7 @@ export class TischplanComponent implements OnInit {
 
     this.tischplanService.getTracesListe()
       .subscribe(tracesListeElemente => {
-        console.log('92' + JSON.stringify(tracesListeElemente));
+        console.log(tracesListeElemente);
         //console.log("2:" + tracesListeElemente[0].data[0]);
         //console.log(tracesListeElemente[0].data.length);
         //this.tracesListeElemente = tracesListeElemente[0].data;
@@ -276,6 +276,12 @@ export class TischplanComponent implements OnInit {
         tracesListeElemente[0].data.splice(o, 1);
       }
     }
+
+    for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
+      if (tracesListeElemente[0].data[o].length === 19) {
+        tracesListeElemente[0].data[o].unshift("", "", "", "","", "", "", "","");
+      }
+    }
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
       if (tracesListeElemente[0].data[o].length === 13) {
         tracesListeElemente[0].data[o].splice(8, 12);
@@ -301,12 +307,16 @@ export class TischplanComponent implements OnInit {
 
     for (let o = 1; o < tracesListeElemente[0].data.length; o++) {
       if (tracesListeElemente[0].data[o] !== undefined) {
-        // if (tracesListeElemente[0].data[o].length === 13 || tracesListeElemente[0].data[o].length === 24) {
+        if (tracesListeElemente[0].data[o].length === 28) {
+          trace[o] = tracesListeElemente[0].data[o];
+        }
+        if (tracesListeElemente[0].data[o].length === 25) {
         trace[o] = tracesListeElemente[0].data[o].concat(tracesListeElemente[0].data[o + 1]);
         console.log('Trace before ->>' + trace[o]);
-        //}
+        }
       }
     }
+
     trace[0] = tracesListeElemente[0].data[0].concat(tracesListeElemente[0].data[1]).concat(tracesListeElemente[0].data[2]);
     trace[0].unshift("", "", "", "");
     trace[0].splice(20, 0, "");
@@ -317,8 +327,8 @@ export class TischplanComponent implements OnInit {
 
     this.tracesListeElemente.push(trace[0]);
 
-    for (let o = 1; o < tracesListeElemente[0].data.length; o += 2) {
-      if (trace[o].length > 20) {
+    for (let o = 1; o < tracesListeElemente[0].data.length; o++) {
+      if (trace[o].length > 18) {
         this.tracesListeElemente.push(trace[o]);
       }
     }

@@ -339,7 +339,7 @@ var TischplanComponent = (function () {
         });
         this.tischplanService.getTracesListe()
             .subscribe(function (tracesListeElemente) {
-            console.log('92' + JSON.stringify(tracesListeElemente));
+            console.log(tracesListeElemente);
             //console.log("2:" + tracesListeElemente[0].data[0]);
             //console.log(tracesListeElemente[0].data.length);
             //this.tracesListeElemente = tracesListeElemente[0].data;
@@ -413,6 +413,11 @@ var TischplanComponent = (function () {
             }
         }
         for (var o = 0; o < tracesListeElemente[0].data.length; o++) {
+            if (tracesListeElemente[0].data[o].length === 19) {
+                tracesListeElemente[0].data[o].unshift("", "", "", "", "", "", "", "", "");
+            }
+        }
+        for (var o = 0; o < tracesListeElemente[0].data.length; o++) {
             if (tracesListeElemente[0].data[o].length === 13) {
                 tracesListeElemente[0].data[o].splice(8, 12);
             }
@@ -434,10 +439,13 @@ var TischplanComponent = (function () {
         }
         for (var o = 1; o < tracesListeElemente[0].data.length; o++) {
             if (tracesListeElemente[0].data[o] !== undefined) {
-                // if (tracesListeElemente[0].data[o].length === 13 || tracesListeElemente[0].data[o].length === 24) {
-                trace[o] = tracesListeElemente[0].data[o].concat(tracesListeElemente[0].data[o + 1]);
-                console.log('Trace before ->>' + trace[o]);
-                //}
+                if (tracesListeElemente[0].data[o].length === 28) {
+                    trace[o] = tracesListeElemente[0].data[o];
+                }
+                if (tracesListeElemente[0].data[o].length === 25) {
+                    trace[o] = tracesListeElemente[0].data[o].concat(tracesListeElemente[0].data[o + 1]);
+                    console.log('Trace before ->>' + trace[o]);
+                }
             }
         }
         trace[0] = tracesListeElemente[0].data[0].concat(tracesListeElemente[0].data[1]).concat(tracesListeElemente[0].data[2]);
@@ -448,8 +456,8 @@ var TischplanComponent = (function () {
         trace[0].splice(20, 0, "");
         trace[0].splice(20, 0, "");
         this.tracesListeElemente.push(trace[0]);
-        for (var o = 1; o < tracesListeElemente[0].data.length; o += 2) {
-            if (trace[o].length > 20) {
+        for (var o = 1; o < tracesListeElemente[0].data.length; o++) {
+            if (trace[o].length > 18) {
                 this.tracesListeElemente.push(trace[o]);
             }
         }
