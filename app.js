@@ -88,7 +88,7 @@ app.post("/upload", upload.array("uploads[]", 12), function (req, res) {
                 console.log(csvDatei);
                 if (csvDatei.indexOf("Im Haus") !== -1) {
                     postImHausListeToDB();
-                } else if (csvDatei.indexOf("Anreiseliste") !== -1) {
+                } else if (csvDatei.indexOf("Anreisen") !== -1) {
                     postAnreiseListeToDB();
                 } else if (csvDatei.indexOf("Trace Report") !== -1){
                     postTracesListeToDB();
