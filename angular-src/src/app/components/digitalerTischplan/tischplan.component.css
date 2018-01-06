@@ -14,21 +14,107 @@ html, body {
   border-bottom: solid 10px #0a7a74;
   position: absolute;
   right: 0px;
-  top: 150px;
+  top: 100px;
 }
 
-.line1{
-  width: 100%;
-  height: 20px;
-  border-bottom: solid 10px #0a7a74;
-  position: absolute;
-  right: 0px;
-  top: 455px;
+@media (min-width: 1200px) {
+  .printTwo {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: #0a7a74;
+    min-height: calc(100vh - 400px);
+  }
 }
 
-.row .print-col, .row .upload-col, .row .table-col {
+@media (min-width: 800px) {
+  .printTwo {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: #0a7a74;
+    min-height: 570px;
+  }
+}
+
+.printTwo {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: #0a7a74;
+  min-height: 570px;
+}
+
+
+.row .inner-table {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: calc(100vh - 100px);
+}
+
+
+.row4 {
+  margin-top: 80px;
+}
+
+@media (min-width: 1200px) {
+  .row4 {
+    margin-top: 350px;
+  }
+}
+
+.row .table-col {
+  min-height: 100vh;
+  max-height: 100vh;
   background-color: #f3efe4;
   padding: 20px 10px 20px 10px;
+  border-left: 5px solid #0a7a74;
+  border-right: 5px solid #0a7a74;
+  border-bottom: 20px solid #0a7a74;
+  box-sizing: border-box;
+}
+
+@media (min-width: 800px) {
+  .row .table-col {
+    min-height: calc(100vh +  375px);
+    background-color: #f3efe4;
+    padding: 20px 10px 20px 10px;
+    border-left: 5px solid #0a7a74;
+    border-right: 5px solid #0a7a74;
+    border-bottom: 20px solid #0a7a74;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 800px) {
+  .row .inner-table {
+    max-height: calc(100vh + 300px);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (min-width: 1200px) {
+  .row .table-col {
+    min-height: 100vh;
+    max-height: calc(100vh - 100px);
+    background-color: #f3efe4;
+    padding: 20px 10px 20px 10px;
+    border-left: 5px solid #0a7a74;
+    border-right: 5px solid #0a7a74;
+    border-bottom: 20px solid #0a7a74;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 1200px) {
+  .row .inner-table {
+    max-height: calc(100vh - 100px);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.row .print-col {
+  padding: 0;
+  background-color: #f3efe4;
   border-left: 5px solid #0a7a74;
   border-right: 5px solid #0a7a74;
   min-height: 100vh;
@@ -36,27 +122,59 @@ html, body {
   box-sizing: border-box;
 }
 
+@media (min-width: 800px) {
+  .row .upload-col {
+    background-color: #f3efe4;
+    padding: 20px 10px 20px 10px;
+    border-left: 5px solid #0a7a74;
+    border-right: 5px solid #0a7a74;
+    border-bottom: 20px solid #0a7a74;
+    box-sizing: border-box;
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+}
+@media (min-width: 1200px) {
+  .row .upload-col {
+    background-color: #f3efe4;
+    padding: 20px 10px 20px 10px;
+    border-left: 5px solid #0a7a74;
+    border-right: 5px solid #0a7a74;
+    border-bottom: 20px solid #0a7a74;
+    box-sizing: border-box;
+    min-height: 100vh;
+    max-height: 100vh;
+
+  }
+}
+
+.row .upload-col {
+  background-color: #f3efe4;
+  padding: 20px 10px 20px 10px;
+  border-left: 5px solid #0a7a74;
+  border-right: 5px solid #0a7a74;
+  border-bottom: 20px solid #0a7a74;
+  box-sizing: border-box;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.row1 {
+  height: calc((100vh - 250px) / 3);
+  overflow: auto;
+}
+
+
 .row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .anleitung {
   display: none;
 }
 
 @media (min-width: 1200px) {
-  .row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .anleitung {
+  .row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .anleitung{
     display: block;
   }
 }
 
-.row1 {
-  height: calc((100vh - 290px) / 3);
-  overflow: auto;
-}
-
-.inner-table {
-  min-height: 370px;
-  height: calc(100vh - 540px);
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
 
 .cards-container {
   margin: 10px 0px 10px 0px;
@@ -100,6 +218,7 @@ html, body {
   height: 800px;
   padding-top: 20px;
 }
+
 
 .row .container-fluid h3 {
   align-content: center;
@@ -171,16 +290,8 @@ html, body {
   height: 100%;
 }
 
-.row .container-fluid .table-col .row1 {
-  height: auto;
-}
 
-.printTwo {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  min-height: 550px;
-}
 
-.row .container-fluid .table-col .printTwo .table-item {
+.row .container-fluid .print-col .printTwo .table-item {
   position: absolute;
 }

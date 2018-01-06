@@ -132,16 +132,14 @@ export class TischplanComponent implements OnInit {
       });
 
 
-    this.buttonBgColor1 = "f3efe4";
-    this.buttonBgColor2 = "f3efe4";
-    this.buttonBgColor3 = "f3efe4";
-    this.buttonBgColor4 = "f3efe4";
-    this.buttonBgColor5 = "f3efe4";
-    this.fontColor1 = "0a7a74";
-    this.fontColor2 = "0a7a74";
-    this.fontColor3 = "0a7a74";
-    this.fontColor4 = "0a7a74";
-    this.fontColor5 = "0a7a74";
+    this.buttonBgColor1 = "0a7a74";
+    this.buttonBgColor2 = "0a7a74";
+    this.buttonBgColor3 = "0a7a74";
+    this.buttonBgColor4 = "0a7a74";
+    this.fontColor1 = "f3efe4";
+    this.fontColor2 = "f3efe4";
+    this.fontColor3 = "f3efe4";
+    this.fontColor4 = "f3efe4";
 
     dragulaService.drag.subscribe((value) => {
       console.log(`drag: ${value[0]}`);
@@ -436,23 +434,23 @@ export class TischplanComponent implements OnInit {
     this.showEdelweissBool = false;
     this.showTeeStubeBool = false;
 
-    if (this.buttonBgColor1 === "f3efe4") {
-      this.buttonBgColor1 = "0a7a74";
-      this.buttonBgColor2 = "f3efe4";
-      this.buttonBgColor3 = "f3efe4";
-      this.buttonBgColor4 = "f3efe4";
-      this.buttonBgColor5 = "f3efe4";
-    } else {
+    if (this.buttonBgColor1 === "0a7a74") {
       this.buttonBgColor1 = "f3efe4";
-    }
-    if (this.fontColor1 === "0a7a74") {
-      this.fontColor1 = "eaf3f3";
-      this.fontColor2 = "0a7a74";
-      this.fontColor3 = "0a7a74";
-      this.fontColor4 = "0a7a74";
-      this.fontColor5 = "0a7a74";
+      this.buttonBgColor2 = "0a7a74";
+      this.buttonBgColor3 = "0a7a74";
+      this.buttonBgColor4 = "0a7a74";
+      this.buttonBgColor5 = "0a7a74";
     } else {
+      this.buttonBgColor1 = "0a7a74";
+    }
+    if (this.fontColor1 === "f3efe4") {
       this.fontColor1 = "0a7a74";
+      this.fontColor2 = "f3efe4";
+      this.fontColor3 = "f3efe4";
+      this.fontColor4 = "f3efe4";
+      this.fontColor5 = "f3efe4";
+    } else {
+      this.fontColor1 = "f3efe4";
     }
   }
 
@@ -466,23 +464,23 @@ export class TischplanComponent implements OnInit {
     this.showTeeStubeBool = false;
 
 
-    if (this.buttonBgColor2 === "f3efe4") {
-      this.buttonBgColor2 = "0a7a74";
-      this.buttonBgColor1 = "f3efe4";
-      this.buttonBgColor3 = "f3efe4";
-      this.buttonBgColor4 = "f3efe4";
-      this.buttonBgColor5 = "f3efe4";
-    } else {
+    if (this.buttonBgColor2 === "0a7a74") {
       this.buttonBgColor2 = "f3efe4";
-    }
-    if (this.fontColor2 === "0a7a74") {
-      this.fontColor2 = "eaf3f3";
-      this.fontColor1 = "0a7a74";
-      this.fontColor3 = "0a7a74";
-      this.fontColor4 = "0a7a74";
-      this.fontColor5 = "0a7a74";
+      this.buttonBgColor1 = "0a7a74";
+      this.buttonBgColor3 = "0a7a74";
+      this.buttonBgColor4 = "0a7a74";
+      this.buttonBgColor5 = "0a7a74";
     } else {
+      this.buttonBgColor2 = "0a7a74";
+    }
+    if (this.fontColor2 === "f3efe4") {
       this.fontColor2 = "0a7a74";
+      this.fontColor1 = "f3efe4";
+      this.fontColor3 = "f3efe4";
+      this.fontColor4 = "f3efe4";
+      this.fontColor5 = "f3efe4";
+    } else {
+      this.fontColor2 = "f3efe4";
     }
   }
 
@@ -495,23 +493,23 @@ export class TischplanComponent implements OnInit {
     this.showTeeStubeBool = false;
 
 
-    if (this.buttonBgColor3 === "f3efe4") {
+    if (this.buttonBgColor3 === "0a7a74") {
+      this.buttonBgColor3 = "f3efe4";
+      this.buttonBgColor1 = "0a7a74";
+      this.buttonBgColor2 = "0a7a74";
+      this.buttonBgColor4 = "0a7a74";
+      this.buttonBgColor5 = "0a7a74";
+    } else {
       this.buttonBgColor3 = "0a7a74";
-      this.buttonBgColor1 = "f3efe4";
-      this.buttonBgColor2 = "f3efe4";
-      this.buttonBgColor4 = "f3efe4";
-      this.buttonBgColor5 = "f3efe4";
-    } else {
-      this.buttonBgColor3 = "eaf3f3";
     }
-    if (this.fontColor3 === "0a7a74") {
-      this.fontColor3 = "eaf3f3";
-      this.fontColor1 = "0a7a74";
-      this.fontColor2 = "0a7a74";
-      this.fontColor4 = "0a7a74";
-      this.fontColor5 = "0a7a74";
-    } else {
+    if (this.fontColor3 === "f3efe4") {
       this.fontColor3 = "0a7a74";
+      this.fontColor1 = "f3efe4";
+      this.fontColor2 = "f3efe4";
+      this.fontColor4 = "f3efe4";
+      this.fontColor5 = "f3efe4";
+    } else {
+      this.fontColor3 = "f3efe4";
     }
   }
 
@@ -523,23 +521,23 @@ export class TischplanComponent implements OnInit {
     this.showEdelweissBool = true;
     this.showTeeStubeBool = false;
 
-    if (this.buttonBgColor4 === "f3efe4") {
+    if (this.buttonBgColor4 === "0a7a74") {
+      this.buttonBgColor4 = "f3efe4";
+      this.buttonBgColor1 = "0a7a74";
+      this.buttonBgColor2 = "0a7a74";
+      this.buttonBgColor3 = "0a7a74";
+      this.buttonBgColor5 = "0a7a74";
+    } else {
       this.buttonBgColor4 = "0a7a74";
-      this.buttonBgColor1 = "f3efe4";
-      this.buttonBgColor2 = "f3efe4";
-      this.buttonBgColor3 = "f3efe4";
-      this.buttonBgColor5 = "f3efe4";
-    } else {
-      this.buttonBgColor4 = "eaf3f3";
     }
-    if (this.fontColor4 === "0a7a74") {
-      this.fontColor4 = "eaf3f3";
-      this.fontColor1 = "0a7a74";
-      this.fontColor2 = "0a7a74";
-      this.fontColor3 = "0a7a74";
-      this.fontColor5 = "0a7a74";
-    } else {
+    if (this.fontColor4 === "f3efe4") {
       this.fontColor4 = "0a7a74";
+      this.fontColor1 = "f3efe4";
+      this.fontColor2 = "f3efe4";
+      this.fontColor3 = "f3efe4";
+      this.fontColor5 = "f3efe4";
+    } else {
+      this.fontColor4 = "f3efe4";
     }
   }
 
@@ -551,23 +549,23 @@ export class TischplanComponent implements OnInit {
     this.showEdelweissBool = false;
     this.showTeeStubeBool = true;
 
-    if (this.buttonBgColor5 === "f3efe4") {
-      this.buttonBgColor5 = "0a7a74";
-      this.buttonBgColor1 = "f3efe4";
-      this.buttonBgColor2 = "f3efe4";
-      this.buttonBgColor3 = "f3efe4";
-      this.buttonBgColor4 = "f3efe4";
-    } else {
+    if (this.buttonBgColor5 === "0a7a74") {
       this.buttonBgColor5 = "f3efe4";
-    }
-    if (this.fontColor5 === "0a7a74") {
-      this.fontColor5 = "eaf3f3";
-      this.fontColor4 = "0a7a74";
-      this.fontColor1 = "0a7a74";
-      this.fontColor2 = "0a7a74";
-      this.fontColor3 = "0a7a74"
+      this.buttonBgColor1 = "0a7a74";
+      this.buttonBgColor2 = "0a7a74";
+      this.buttonBgColor3 = "0a7a74";
+      this.buttonBgColor4 = "0a7a74";
     } else {
+      this.buttonBgColor5 = "0a7a74";
+    }
+    if (this.fontColor5 === "f3efe4") {
       this.fontColor5 = "0a7a74";
+      this.fontColor4 = "f3efe4";
+      this.fontColor1 = "f3efe4";
+      this.fontColor2 = "f3efe4";
+      this.fontColor3 = "f3efe4"
+    } else {
+      this.fontColor5 = "f3efe4";
     }
   }
 
