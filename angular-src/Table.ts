@@ -5,9 +5,6 @@ export class Table {
   bgColor: string;
   isBesetzt: boolean;
   placeholder: boolean;
-  katValue: string;
-  katValue2: string;
-  katValue3: string;
   notiz3Value: string;
   notiz4Value: string;
   notiz5Value: string;
@@ -25,7 +22,6 @@ export class Table {
   nameValue: string;
   spracheValue: string;
   zimmernummerValue: string;
-  preistypValue: string;
   anreiseValue: string;
   abreiseValue: string;
   personenAnzahlValue: string;
@@ -35,7 +31,6 @@ export class Table {
   nameValue2: string;
   spracheValue2: string;
   zimmernummerValue2: string;
-  preistypValue2: string;
   anreiseValue2: string;
   abreiseValue2: string;
   personenAnzahlValue2: string;
@@ -45,7 +40,6 @@ export class Table {
   nameValue3: string;
   spracheValue3: string;
   zimmernummerValue3: string;
-  preistypValue3: string;
   anreiseValue3: string;
   abreiseValue3: string;
   personenAnzahlValue3: string;

@@ -323,9 +323,7 @@ router.post('/dispenseTable', function(req, res, next) {
             "tables.$.isBesetzt": "false",
         }, $unset: {
             "tables.$.nameValue": 1,
-            "tables.$.katValue": 1,
             "tables.$.zimmernummerValue": 1,
-            "tables.$.preistypValue": 1,
             "tables.$.anreiseValue": 1,
             "tables.$.abreiseValue": 1,
             "tables.$.personenAnzahlValue": 1,
@@ -336,9 +334,7 @@ router.post('/dispenseTable', function(req, res, next) {
             "tables.$.bemerkungValue1":  1,
             "tables.$.bemerkungValue2": 1,
             "tables.$.nameValue2": 1,
-            "tables.$.katValue2": 1,
             "tables.$.zimmernummerValue2": 1,
-            "tables.$.preistypValue2": 1,
             "tables.$.anreiseValue2": 1,
             "tables.$.abreiseValue2": 1,
             "tables.$.personenAnzahlValue2": 1,
@@ -349,9 +345,7 @@ router.post('/dispenseTable', function(req, res, next) {
             "tables.$.bemerkungValue4":  1,
             "tables.$.bemerkungValue5": 1,
             "tables.$.nameValue3": 1,
-            "tables.$.katValue3": 1,
             "tables.$.zimmernummerValue3": 1,
-            "tables.$.preistypValue3": 1,
             "tables.$.anreiseValue3": 1,
             "tables.$.abreiseValue3": 1,
             "tables.$.personenAnzahlValue3": 1,
@@ -581,9 +575,7 @@ router.post('/addInformationToTable', function(req, res, next) {
     let informationElements2 = [];
     let departmentValueDB = "";
     let nameValue = "";
-    let katValue = "";
     let zimmernummerValue = "";
-    let preistypValue = "";
     let anreiseValue = "";
     let abreiseValue = "";
     let personenAnzahlValue = "";
@@ -605,16 +597,6 @@ router.post('/addInformationToTable', function(req, res, next) {
     }
 
     console.log('informationElements2 length: -> ' + informationElements2.length);
-    //console.log(informationElements2[0][0]);
-    //console.log(informationElements2[1][0]);
-    //console.log(informationElements2[2][0]);
-    //console.log(informationElements2[3][0]);
-    //console.log(informationElements2[4][0]);
-    //console.log(informationElements2[5][0]);
-    //console.log(informationElements2[6][0]);
-    //console.log(informationElements2[7][0]);
-    //console.log(informationElements2[8][0]);
-    //console.log(informationElements2[9][0]);
 
     console.log(informationElements2);
     console.log(informationElements2.includes('nTrace'));
@@ -632,23 +614,21 @@ router.post('/addInformationToTable', function(req, res, next) {
         console.log("Im Haus Liste gedropped");
         nameValue = informationElements2[0][1].substring(1, informationElements2[0][1].length);
         zimmernummerValue = informationElements2[1][1].substring(1, informationElements2[1][1].length);
-        katValue = informationElements2[2][1].substring(1, informationElements2[2][1].length);
-        preistypValue = informationElements2[3][1].substring(1, informationElements2[3][1].length);
         anreiseValue = informationElements2[4][1].substring(1, informationElements2[4][1].length);
         abreiseValue = informationElements2[5][1].substring(1, informationElements2[5][1].length);
         personenAnzahlValue = informationElements2[6][1].substring(1, informationElements2[6][1].length);
-        notiz1Value = informationElements2[8][1].substring(1, informationElements2[8][1].length);
+        notiz1Value = informationElements2[7][1].substring(1, informationElements2[7][1].length);
         if (informationElements2[8].length > 2) {
-            notiz1Value = informationElements2[8][1].substring(1, informationElements2[8][1].length) + informationElements2[8][2].substring(1, informationElements2[8][2].length);
+            notiz1Value = informationElements2[7][1].substring(1, informationElements2[7][1].length) + informationElements2[7][2].substring(1, informationElements2[7][2].length);
         }
-        notiz2Value = informationElements2[9][1].substring(1, informationElements2[9][1].length);
+        notiz2Value = informationElements2[8][1].substring(1, informationElements2[8][1].length);
+        if (informationElements2[8].length > 2) {
+            notiz2Value = informationElements2[8][1].substring(1, informationElements2[8][1].length) + informationElements2[8][2].substring(1, informationElements2[8][2].length);
+        }
+        bemerkungValue = informationElements2[9][1].substring(1, informationElements2[9][1].length);
         if (informationElements2[9].length > 2) {
-            notiz2Value = informationElements2[9][1].substring(1, informationElements2[9][1].length) + informationElements2[9][2].substring(1, informationElements2[9][2].length);
-        }
-        bemerkungValue = informationElements2[10][1].substring(1, informationElements2[10][1].length);
-        if (informationElements2[10].length > 2) {
-            bemerkungValue = bemerkungValue + informationElements2[10][2];
-            bemerkungValue = bemerkungValue + informationElements2[10][3];
+            bemerkungValue = bemerkungValue + informationElements2[9][2];
+            bemerkungValue = bemerkungValue + informationElements2[9][3];
         }
         console.log('----------______________--------------->' + informationElements2[informationElements2.length - 2][2]);
         if (informationElements2.length === 14) {
@@ -692,7 +672,6 @@ router.post('/addInformationToTable', function(req, res, next) {
         console.log("Trace Liste gedropped");
         zimmernummerValue = informationElements2[0][1].substring(1, informationElements2[0][1].length);
         nameValue = informationElements2[1][1].substring(1, informationElements2[1][1].length);
-        preistypValue = informationElements2[2][1].substring(1, informationElements2[2][1].length);
         anreiseValue = informationElements2[3][1].substring(1, informationElements2[3][1].length);
         abreiseValue = informationElements2[4][1].substring(1, informationElements2[4][1].length);
         trace = informationElements2[5][1].substring(1, informationElements2[5][1].length);
@@ -702,23 +681,20 @@ router.post('/addInformationToTable', function(req, res, next) {
         departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
         tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
         tableValue = tableValueArray[0];
-        katValue = "";
     } else {
         console.log("Anreise Liste gedropped");
         nameValue = informationElements2[0][1].substring(1, informationElements2[0][1].length);
         zimmernummerValue = informationElements2[1][1].substring(1, informationElements2[1][1].length);
-        preistypValue = informationElements2[2][1].substring(1, informationElements2[2][1].length);
-        abreiseValue = informationElements2[3][1].substring(1, informationElements2[3][1].length);
-        personenAnzahlValue = informationElements2[4][1].substring(1, informationElements2[4][1].length);
-        katValue = informationElements2[5][1].substring(1, informationElements2[5][1].length);
-        notiz1Value = informationElements2[6][1].substring(1, informationElements2[6][1].length);
-        notiz2Value = informationElements2[7][1].substring(1, informationElements2[7][1].length);
-        bemerkungValue = informationElements2[8][1].substring(1, informationElements2[8][1].length);
+        abreiseValue = informationElements2[2][1].substring(1, informationElements2[2][1].length);
+        personenAnzahlValue = informationElements2[3][1].substring(1, informationElements2[3][1].length);
+        notiz1Value = informationElements2[4][1].substring(1, informationElements2[4][1].length);
+        notiz2Value = informationElements2[5][1].substring(1, informationElements2[5][1].length);
+        bemerkungValue = informationElements2[6][1].substring(1, informationElements2[6][1].length);
         if (informationElements2.length === 12) {
-            bemerkungValue = bemerkungValue + informationElements2[9][0].substring(1, informationElements2[9][0].length);
+            bemerkungValue = bemerkungValue + informationElements2[6][0].substring(1, informationElements2[6][0].length);
             bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2][0].substring(1, informationElements2[informationElements2.length - 2][0].length);
         } else if (informationElements2.length === 11) {
-            bemerkungValue = bemerkungValue + informationElements2[9][0].substring(1, informationElements2[9][0].length);
+            bemerkungValue = bemerkungValue + informationElements2[6][0].substring(1, informationElements2[6][0].length);
         }
         departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
         tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
@@ -726,7 +702,7 @@ router.post('/addInformationToTable', function(req, res, next) {
     }
 
 
-    console.log(" nameValue " + nameValue + " zimmernummerValue " + zimmernummerValue + " preistypValue " + preistypValue + " anreiseValue " + anreiseValue + " abreiseValue " + abreiseValue + " personenAnzahlValue " + personenAnzahlValue + " katValue " + katValue + " notiz1Value " + notiz1Value + " notiz2Value " + notiz2Value + " bemerkungValue " + bemerkungValue + bemerkungValue1 + bemerkungValue2 + "tableValue" + tableValue + "departmentvalue" + departmentValue);
+    console.log(" nameValue " + nameValue + " zimmernummerValue " + zimmernummerValue + " anreiseValue " + anreiseValue + " abreiseValue " + abreiseValue + " personenAnzahlValue " + personenAnzahlValue + " notiz1Value " + notiz1Value + " notiz2Value " + notiz2Value + " bemerkungValue " + bemerkungValue + bemerkungValue1 + bemerkungValue2 + "tableValue" + tableValue + "departmentvalue" + departmentValue);
 
 
     if (departmentValue === "BerglerStubeHubertusStube") {
@@ -774,9 +750,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                         {
                             $set: {
                                 "tables.$.nameValue": nameValue,
-                                "tables.$.katValue": katValue,
                                 "tables.$.zimmernummerValue": zimmernummerValue,
-                                "tables.$.preistypValue": preistypValue,
                                 "tables.$.anreiseValue": anreiseValue,
                                 "tables.$.abreiseValue": abreiseValue,
                                 "tables.$.personenAnzahlValue": personenAnzahlValue,
@@ -802,9 +776,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                         {
                             $set: {
                                 "tables.$.nameValue2": nameValue,
-                                "tables.$.katValue2": katValue,
                                 "tables.$.zimmernummerValue2": zimmernummerValue,
-                                "tables.$.preistypValue2": preistypValue,
                                 "tables.$.anreiseValue2": anreiseValue,
                                 "tables.$.abreiseValue2": abreiseValue,
                                 "tables.$.personenAnzahlValue2": personenAnzahlValue,
@@ -830,9 +802,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                         {
                             $set: {
                                 "tables.$.nameValue3": nameValue,
-                                "tables.$.katValue3": katValue,
                                 "tables.$.zimmernummerValue3": zimmernummerValue,
-                                "tables.$.preistypValue3": preistypValue,
                                 "tables.$.anreiseValue3": anreiseValue,
                                 "tables.$.abreiseValue3": abreiseValue,
                                 "tables.$.personenAnzahlValue3": personenAnzahlValue,

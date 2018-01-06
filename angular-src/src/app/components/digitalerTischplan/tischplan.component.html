@@ -67,9 +67,7 @@
                         <div *ngIf="tableBerglerStubeHubertusStube.isBesetzt === 'true'">
                           <p style="background-color: #FFFFFF">
                             <b> Name:</b>{{tableBerglerStubeHubertusStube.nameValue}}<br>
-                            <b> KAT:</b>{{tableBerglerStubeHubertusStube.katValue}}<br>
                             <b> Zimmernummer:</b>{{tableBerglerStubeHubertusStube.zimmernummerValue}}<br>
-                            <b> Preis Typ:</b>{{tableBerglerStubeHubertusStube.preistypValue}}<br>
                             <b> Anreise Datum:</b>{{tableBerglerStubeHubertusStube.anreiseValue}}<br>
                             <b> Abreise Datum:</b>{{tableBerglerStubeHubertusStube.abreiseValue}}<br>
                             <b> Personenanzahl:</b>{{tableBerglerStubeHubertusStube.personenAnzahlValue}}<br>
@@ -81,9 +79,7 @@
                           <div *ngIf="tableBerglerStubeHubertusStube.nameValue2">
                             <p style="background-color: #FFFFFF">
                               <b> Name:</b>{{tableBerglerStubeHubertusStube.nameValue2}}<br>
-                              <b> KAT:</b>{{tableBerglerStubeHubertusStube.katValue2}}<br>
                               <b> Zimmernummer:</b>{{tableBerglerStubeHubertusStube.zimmernummerValue2}}<br>
-                              <b> Preis Typ:</b>{{tableBerglerStubeHubertusStube.preistypValue2}}<br>
                               <b> Anreise Datum:</b>{{tableBerglerStubeHubertusStube.anreiseValue2}}<br>
                               <b> Abreise Datum:</b>{{tableBerglerStubeHubertusStube.abreiseValue2}}<br>
                               <b> Personenanzahl:</b>{{tableBerglerStubeHubertusStube.personenAnzahlValue2}}<br>
@@ -98,7 +94,6 @@
                               <b> Name:</b>{{tableBerglerStubeHubertusStube.nameValue3}}<br>
                               <b> Sprache:</b>{{tableBerglerStubeHubertusStube.katValue3}}<br>
                               <b> Zimmernummer:</b>{{tableBerglerStubeHubertusStube.zimmernummerValue3}}<br>
-                              <b> Preis Typ:</b>{{tableBerglerStubeHubertusStube.preistypValue3}}<br>
                               <b> Anreise Datum:</b>{{tableBerglerStubeHubertusStube.anreiseValue3}}<br>
                               <b> Abreise Datum:</b>{{tableBerglerStubeHubertusStube.abreiseValue3}}<br>
                               <b> Personenanzahl:</b>{{tableBerglerStubeHubertusStube.personenAnzahlValue3}}<br>
@@ -126,7 +121,7 @@
                         </div>
                       </div>
                       <div *ngIf="tableBerglerStubeHubertusStube.placeholder === 'true'">
-                        <p [dragula]='"evented-bag"' id="BerglerStubeHubertusStube" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableBerglerStubeHubertusStube.number}} {{tableBerglerStubeHubertusStube.department}} {{tableBerglerStubeHubertusStube.arrayIndex}} </p>
+                        <p [dragula]='"evented-bag"' id="BerglerStubeHubertusStube" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableBerglerStubeHubertusStube.number}} {{tableBerglerStubeHubertusStube.department}} {{j}}</p>
                       </div>
                     </div>
                   </div>
@@ -143,9 +138,7 @@
                         <div *ngIf="tableBauernstube.isBesetzt === 'true'">
                           <p style="background-color: #FFFFFF">
                             <b> Name:</b>{{tableBauernstube.nameValue}}<br>
-                            <b> KAT:</b>{{tableBauernstube.katValue}}<br>
                             <b> Zimmernummer:</b>{{tableBauernstube.zimmernummerValue}}<br>
-                            <b> Preis Typ:</b>{{tableBauernstube.preistypValue}}<br>
                             <b> Anreise Datum:</b>{{tableBauernstube.anreiseValue}}<br>
                             <b> Abreise Datum:</b>{{tableBauernstube.abreiseValue}}<br>
                             <b> Personenanzahl:</b>{{tableBauernstube.personenAnzahlValue}}<br>
@@ -157,9 +150,7 @@
                           <div *ngIf="tableBauernstube.nameValue2">
                             <p style="background-color: #FFFFFF">
                               <b> Name:</b>{{tableBauernstube.nameValue2}}<br>
-                              <b> KAT:</b>{{tableBauernstube.katValue2}}<br>
                               <b> Zimmernummer:</b>{{tableBauernstube.zimmernummerValue2}}<br>
-                              <b> Preis Typ:</b>{{tableBauernstube.preistypValue2}}<br>
                               <b> Anreise Datum:</b>{{tableBauernstube.anreiseValue2}}<br>
                               <b> Abreise Datum:</b>{{tableBauernstube.abreiseValue2}}<br>
                               <b> Personenanzahl:</b>{{tableBauernstube.personenAnzahlValue2}}<br>
@@ -172,9 +163,7 @@
                           <div *ngIf="tableBauernstube.nameValue3">
                             <p style="background-color: #FFFFFF">
                               <b> Name:</b>{{tableBauernstube.nameValue3}}<br>
-                              <b> Sprache:</b>{{tableBauernstube.katValue3}}<br>
                               <b> Zimmernummer:</b>{{tableBauernstube.zimmernummerValue3}}<br>
-                              <b> Preis Typ:</b>{{tableBauernstube.preistypValue3}}<br>
                               <b> Anreise Datum:</b>{{tableBauernstube.anreiseValue3}}<br>
                               <b> Abreise Datum:</b>{{tableBauernstube.abreiseValue3}}<br>
                               <b> Personenanzahl:</b>{{tableBauernstube.personenAnzahlValue3}}<br>
@@ -201,7 +190,7 @@
                         </div>
                       </div>
                     <div *ngIf="tableBauernstube.placeholder === 'true'">
-                      <p [dragula]='"evented-bag"' id="Bauernstube" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableBauernstube.number}} {{tableBauernstube.department}} {{tableBauernstube.arrayIndex}}</p>
+                      <p [dragula]='"evented-bag"' id="Bauernstube" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableBauernstube.number}} {{tableBauernstube.department}} {{j}}</p>
                     </div>
                     </div>
                   </div>
@@ -218,9 +207,7 @@
                         <div *ngIf="tableWaeldlerStubeKristallStube.isBesetzt === 'true'">
                           <p style="background-color: #FFFFFF">
                             <b> Name:</b>{{tableWaeldlerStubeKristallStube.nameValue}}<br>
-                            <b> KAT:</b>{{tableWaeldlerStubeKristallStube.katValue}}<br>
                             <b> Zimmernummer:</b>{{tableWaeldlerStubeKristallStube.zimmernummerValue}}<br>
-                            <b> Preis Typ:</b>{{tableWaeldlerStubeKristallStube.preistypValue}}<br>
                             <b> Anreise Datum:</b>{{tableWaeldlerStubeKristallStube.anreiseValue}}<br>
                             <b> Abreise Datum:</b>{{tableWaeldlerStubeKristallStube.abreiseValue}}<br>
                             <b> Personenanzahl:</b>{{tableWaeldlerStubeKristallStube.personenAnzahlValue}}<br>
@@ -232,9 +219,7 @@
                           <div *ngIf="tableWaeldlerStubeKristallStube.nameValue2">
                             <p style="background-color: #FFFFFF">
                               <b> Name:</b>{{tableWaeldlerStubeKristallStube.nameValue2}}<br>
-                              <b> KAT:</b>{{tableWaeldlerStubeKristallStube.katValue2}}<br>
                               <b> Zimmernummer:</b>{{tableWaeldlerStubeKristallStube.zimmernummerValue2}}<br>
-                              <b> Preis Typ:</b>{{tableWaeldlerStubeKristallStube.preistypValue2}}<br>
                               <b> Anreise Datum:</b>{{tableWaeldlerStubeKristallStube.anreiseValue2}}<br>
                               <b> Abreise Datum:</b>{{tableWaeldlerStubeKristallStube.abreiseValue2}}<br>
                               <b> Personenanzahl:</b>{{tableWaeldlerStubeKristallStube.personenAnzahlValue2}}<br>
@@ -249,7 +234,6 @@
                               <b> Name:</b>{{tableWaeldlerStubeKristallStube.nameValue3}}<br>
                               <b> Sprache:</b>{{tableWaeldlerStubeKristallStube.katValue3}}<br>
                               <b> Zimmernummer:</b>{{tableWaeldlerStubeKristallStube.zimmernummerValue3}}<br>
-                              <b> Preis Typ:</b>{{tableWaeldlerStubeKristallStube.preistypValue3}}<br>
                               <b> Anreise Datum:</b>{{tableWaeldlerStubeKristallStube.anreiseValue3}}<br>
                               <b> Abreise Datum:</b>{{tableWaeldlerStubeKristallStube.abreiseValue3}}<br>
                               <b> Personenanzahl:</b>{{tableWaeldlerStubeKristallStube.personenAnzahlValue3}}<br>
@@ -277,7 +261,7 @@
                         </div>
                       </div>
                       <div *ngIf="tableWaeldlerStubeKristallStube.placeholder === 'true'">
-                        <p [dragula]='"evented-bag"' id="WaeldlerStubeKristallStube" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableWaeldlerStubeKristallStube.number}} {{tableWaeldlerStubeKristallStube.department}} {{tableWaeldlerStubeKristallStube.arrayIndex}}</p>
+                        <p [dragula]='"evented-bag"' id="WaeldlerStubeKristallStube" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableWaeldlerStubeKristallStube.number}} {{tableWaeldlerStubeKristallStube.department}} {{j}}</p>
                       </div>
                     </div>
                   </div>
@@ -295,9 +279,7 @@
                         <div *ngIf="tableEdelweissKaminStube.isBesetzt === 'true'">
                           <p style="background-color: #FFFFFF">
                             <b> Name:</b>{{tableEdelweissKaminStube.nameValue}}<br>
-                            <b> KAT:</b>{{tableEdelweissKaminStube.katValue}}<br>
                             <b> Zimmernummer:</b>{{tableEdelweissKaminStube.zimmernummerValue}}<br>
-                            <b> Preis Typ:</b>{{tableEdelweissKaminStube.preistypValue}}<br>
                             <b> Anreise Datum:</b>{{tableEdelweissKaminStube.anreiseValue}}<br>
                             <b> Abreise Datum:</b>{{tableEdelweissKaminStube.abreiseValue}}<br>
                             <b> Personenanzahl:</b>{{tableEdelweissKaminStube.personenAnzahlValue}}<br>
@@ -309,9 +291,7 @@
                           <div *ngIf="tableEdelweissKaminStube.nameValue2">
                             <p style="background-color: #FFFFFF">
                               <b> Name:</b>{{tableEdelweissKaminStube.nameValue2}}<br>
-                              <b> KAT:</b>{{tableEdelweissKaminStube.katValue2}}<br>
                               <b> Zimmernummer:</b>{{tableEdelweissKaminStube.zimmernummerValue2}}<br>
-                              <b> Preis Typ:</b>{{tableEdelweissKaminStube.preistypValue2}}<br>
                               <b> Anreise Datum:</b>{{tableEdelweissKaminStube.anreiseValue2}}<br>
                               <b> Abreise Datum:</b>{{tableEdelweissKaminStube.abreiseValue2}}<br>
                               <b> Personenanzahl:</b>{{tableEdelweissKaminStube.personenAnzahlValue2}}<br>
@@ -326,7 +306,6 @@
                               <b> Name:</b>{{tableEdelweissKaminStube.nameValue3}}<br>
                               <b> Sprache:</b>{{tableEdelweissKaminStube.katValue3}}<br>
                               <b> Zimmernummer:</b>{{tableEdelweissKaminStube.zimmernummerValue3}}<br>
-                              <b> Preis Typ:</b>{{tableEdelweissKaminStube.preistypValue3}}<br>
                               <b> Anreise Datum:</b>{{tableEdelweissKaminStube.anreiseValue3}}<br>
                               <b> Abreise Datum:</b>{{tableEdelweissKaminStube.abreiseValue3}}<br>
                               <b> Personenanzahl:</b>{{tableEdelweissKaminStube.personenAnzahlValue3}}<br>
@@ -354,7 +333,7 @@
                         </div>
                       </div>
                       <div *ngIf="tableEdelweissKaminStube.placeholder === 'true'">
-                        <p [dragula]='"evented-bag"' id="EdelweissKaminStube" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableEdelweissKaminStube.number}} {{tableEdelweissKaminStube.department}} {{tableEdelweissKaminStube.arrayIndex}}</p>
+                        <p [dragula]='"evented-bag"' id="EdelweissKaminStube" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableEdelweissKaminStube.number}} {{tableEdelweissKaminStube.department}} {{j}}</p>
                       </div>
                     </div>
                   </div>
@@ -371,9 +350,7 @@
                         <div *ngIf="tableTeestubeTeelounge.isBesetzt === 'true'">
                           <p style="background-color: #FFFFFF">
                             <b> Name:</b>{{tableTeestubeTeelounge.nameValue}}<br>
-                            <b> KAT:</b>{{tableTeestubeTeelounge.katValue}}<br>
                             <b> Zimmernummer:</b>{{tableTeestubeTeelounge.zimmernummerValue}}<br>
-                            <b> Preis Typ:</b>{{tableTeestubeTeelounge.preistypValue}}<br>
                             <b> Anreise Datum:</b>{{tableTeestubeTeelounge.anreiseValue}}<br>
                             <b> Abreise Datum:</b>{{tableTeestubeTeelounge.abreiseValue}}<br>
                             <b> Personenanzahl:</b>{{tableTeestubeTeelounge.personenAnzahlValue}}<br>
@@ -385,9 +362,7 @@
                           <div *ngIf="tableTeestubeTeelounge.nameValue2">
                             <p style="background-color: #FFFFFF">
                               <b> Name:</b>{{tableTeestubeTeelounge.nameValue2}}<br>
-                              <b> KAT:</b>{{tableTeestubeTeelounge.katValue2}}<br>
                               <b> Zimmernummer:</b>{{tableTeestubeTeelounge.zimmernummerValue2}}<br>
-                              <b> Preis Typ:</b>{{tableTeestubeTeelounge.preistypValue2}}<br>
                               <b> Anreise Datum:</b>{{tableTeestubeTeelounge.anreiseValue2}}<br>
                               <b> Abreise Datum:</b>{{tableTeestubeTeelounge.abreiseValue2}}<br>
                               <b> Personenanzahl:</b>{{tableTeestubeTeelounge.personenAnzahlValue2}}<br>
@@ -402,7 +377,6 @@
                               <b> Name:</b>{{tableTeestubeTeelounge.nameValue3}}<br>
                               <b> Sprache:</b>{{tableTeestubeTeelounge.katValue3}}<br>
                               <b> Zimmernummer:</b>{{tableTeestubeTeelounge.zimmernummerValue3}}<br>
-                              <b> Preis Typ:</b>{{tableTeestubeTeelounge.preistypValue3}}<br>
                               <b> Anreise Datum:</b>{{tableTeestubeTeelounge.anreiseValue3}}<br>
                               <b> Abreise Datum:</b>{{tableTeestubeTeelounge.abreiseValue3}}<br>
                               <b> Personenanzahl:</b>{{tableTeestubeTeelounge.personenAnzahlValue3}}<br>
@@ -430,7 +404,7 @@
                         </div>
                       </div>
                       <div *ngIf="tableTeestubeTeelounge.placeholder === 'true'">
-                        <p [dragula]='"evented-bag"' id="TeestubeTeelounge" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableTeestubeTeelounge.number}} {{tableTeestubeTeelounge.department}} {{tableTeestubeTeelounge.arrayIndex}}</p>
+                        <p [dragula]='"evented-bag"' id="TeestubeTeelounge" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableTeestubeTeelounge.number}} {{tableTeestubeTeelounge.department}} {{j}}</p>
                       </div>
                     </div>
                   </div>
@@ -461,8 +435,6 @@
                 <div class="card" id="card1">
                   <p> <b>Name:</b> {{imHausListeElement[22]}}<br>
                     <b>Zimmernummer:</b> {{imHausListeElement[23]}}<br>
-                    <b>KAT:</b> {{imHausListeElement[24]}}<br>
-                    <b>PreisTyp:</b> {{imHausListeElement[28]}}<br>
                     <b>Anreise:</b> {{imHausListeElement[25]}}<br>
                     <b>Abreise:</b> {{imHausListeElement[26]}}<br>
                     <b>Personen Anzahl:</b> {{imHausListeElement[27]}}<br>
@@ -481,13 +453,13 @@
             <div *ngFor="let anreiseListeElement of anreiseListeElemente">
               <div class='cards-container' id='container2' [dragula]='"evented-bag"'>
                 <div class="card" id="card2">
-                  <p> <b>Name:</b> {{anreiseListeElement[29]}} {{anreiseListeElement[30]}}<br>
-                    <b>Zimmernummer:</b> {{anreiseListeElement[31]}}<br>
-                    <b>PreisTyp:</b> {{anreiseListeElement[37]}}<br>
-                    <b>Anreise:</b> {{anreiseListeElement[16]}}<br>
-                    <b>Abreise:</b> {{anreiseListeElement[35]}}<br>
-                    <b>Personen Anzahl:</b> {{anreiseListeElement[36]}}<br>
-                    <b>KAT:</b> {{anreiseListeElement[33]}}<br>
+                  <p> <b>Name:</b> {{anreiseListeElement[22]}}<br>
+                    <b>Zimmernummer:</b> {{anreiseListeElement[23]}}<br>
+                    <b>Abreise:</b> {{anreiseListeElement[25]}}<br>
+                    <b>Personen Anzahl:</b> {{anreiseListeElement[26]}}<br>
+                    <b>Notiz1:</b> {{anreiseListeElement[36]}}<br>
+                    <b>Notiz2:</b> {{anreiseListeElement[39]}}<br>
+                    <b>Bemerkung:</b> {{anreiseListeElement[52]}}<br>
                   </p>
                 </div>
               </div>

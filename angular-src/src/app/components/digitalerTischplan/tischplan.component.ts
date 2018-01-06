@@ -365,7 +365,11 @@ export class TischplanComponent implements OnInit {
     let tableNumber = args[1].innerText;
     console.log("tableNumber: " + tableNumber);
     let tableNumberSubstring = tableNumber.toString().match(/\d+/);
-    console.log("tableNumberSubstring: " + tableNumberSubstring);
+    let numbers = tableNumber.match(/\d+/g);
+    console.log("numbers: " + numbers);
+    let arrayIndex = numbers[1];
+    console.log("arrayIndex: " + arrayIndex);
+      console.log("tableNumberSubstring: " + tableNumberSubstring);
     let dataString = [];
     dataString.push(information + departementSubstring + tableNumberSubstring);
     let jBefore = tableNumber.toString().match(/\d+/g);
@@ -387,19 +391,19 @@ export class TischplanComponent implements OnInit {
           return;
         } else {
           if (response.tables[0].department === "berglerStubeHubertusStube") {
-            this.tablesBerglerStubeHubertusStube[response.tables[0].arrayIndex] = response.tables[0];
+            this.tablesBerglerStubeHubertusStube[arrayIndex] = response.tables[0];
           }
           else if (response.tables[0].department === "Bauernstube") {
-            this.tablesBauernstube[response.tables[0].arrayIndex] = response.tables[0];
+            this.tablesBauernstube[arrayIndex] = response.tables[0];
           }
           else if (response.tables[0].department === "waeldlerStubeKristallStube") {
-            this.tablesWaeldlerStubeKristallStube[response.tables[0].arrayIndex] = response.tables[0];
+            this.tablesWaeldlerStubeKristallStube[arrayIndex] = response.tables[0];
           }
           else if (response.tables[0].department === "edelweissKaminStube") {
-            this.tablesEdelweissKaminStube[response.tables[0].arrayIndex] = response.tables[0];
+            this.tablesEdelweissKaminStube[arrayIndex] = response.tables[0];
           }
           else if (response.tables[0].department === "teestubeTeelounge") {
-            this.tablesTeestubeTeelounge[response.tables[0].arrayIndex] = response.tables[0];
+            this.tablesTeestubeTeelounge[arrayIndex] = response.tables[0];
           }
         }
         // console.log(this.tablesBerglerStubeHubertusStube[arrayIndex]);
@@ -416,19 +420,19 @@ export class TischplanComponent implements OnInit {
           return;
         } else {
           if (response.tables[0].department === "berglerStubeHubertusStube") {
-            this.tablesBerglerStubeHubertusStube[response.tables[0].arrayIndex] = response.tables[0];
+            this.tablesBerglerStubeHubertusStube[arrayIndex] = response.tables[0];
           }
           else if (response.tables[0].department === "Bauernstube") {
-            this.tablesBauernstube[response.tables[0].arrayIndex] = response.tables[0];
+            this.tablesBauernstube[arrayIndex] = response.tables[0];
           }
           else if (response.tables[0].department === "waeldlerStubeKristallStube") {
-            this.tablesWaeldlerStubeKristallStube[response.tables[0].arrayIndex] = response.tables[0];
+            this.tablesWaeldlerStubeKristallStube[arrayIndex] = response.tables[0];
           }
           else if (response.tables[0].department === "edelweissKaminStube") {
-            this.tablesEdelweissKaminStube[response.tables[0].arrayIndex] = response.tables[0];
+            this.tablesEdelweissKaminStube[arrayIndex] = response.tables[0];
           }
           else if (response.tables[0].department === "teestubeTeelounge") {
-            this.tablesTeestubeTeelounge[response.tables[0].arrayIndex] = response.tables[0];
+            this.tablesTeestubeTeelounge[arrayIndex] = response.tables[0];
           }
         }
 
