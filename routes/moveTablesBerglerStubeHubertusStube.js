@@ -74,7 +74,7 @@ module.exports = {
                                 "placeholder": "true",
                                 "width": "40",
                                 "height": "35",
-                                "border": "solid 1px #0a7a74"
+                                "border": "solid 3px #f3efe4"
                             }],
                             $sort: {number: 1}
                         }
@@ -153,7 +153,7 @@ module.exports = {
                                 "bgColor": "#ffffff",
                                 "isBesetzt": "false",
                                 "placeholder": "true",
-                                "border": "solid 1px #0a7a74",
+                                "border": "solid 3px #f3efe4",
                                 "width": "40",
                                 "height": "35"
                             }],
@@ -186,7 +186,7 @@ module.exports = {
                                 "placeholder": "true",
                                 "width": "40",
                                 "height": "35",
-                                "border": "solid 1px #0a7a74"
+                                "border": "solid 3px #f3efe4"
                             }],
                             $sort: {number: 1}
                         }
