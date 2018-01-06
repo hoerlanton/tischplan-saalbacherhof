@@ -40,7 +40,7 @@
   <div class="container-fluid">
     <div  class="col-xs-12 col-sm-4 col-lg-2 print-col">
       <h3>Info hinzufügen</h3>
-      <form class="SendInformation"  #myForm="ngForm" (submit)="sendInformation($event); myForm.reset() ">
+      <form class="SendInformation"  #myForm="ngForm" (submit)="sendInformation($event); myForm.reset()">
         <div class="form-group" style="margin-bottom: 40px">
           <input  class="form-control" style="margin-top: 20px" id="roomNumber" [(ngModel)]="roomNumber" name="roomNumber" placeholder="Zimmer Nummer">
           <input  class="form-control" style="margin-top: 20px" id="tableNumber" [(ngModel)]="tableNumber" name="tableNumber" placeholder="Tisch Nummer">

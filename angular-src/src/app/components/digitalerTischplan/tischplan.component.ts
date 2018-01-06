@@ -67,91 +67,6 @@ export class TischplanComponent implements OnInit {
         this.imHausListeElemente = imHausListeElemente[0].data;
         console.log('IM-HAUS-LISTE:');
         console.log(this.imHausListeElemente);
-        /*
-         let hoi = "";
-         let hoi2 = [];
-         let hoi3 = [];
-         hoi2 = hoi.split("Druckdatum", 1000);
-         console.log('hoi2:');
-         console.log(hoi2);
-         for(let a = 0; a < hoi2.length; a++) {
-         hoi3[a] = hoi2[a].split(",", 1000);
-         }
-
-         let indexBemerkung = hoi3[1].indexOf("Bemerkung");
-         let indexRestBemerk = hoi3[1].indexOf("Rest.-Bemerk.");
-         let indexNotiz1 = hoi3[1].indexOf("Notiz 1");
-         let indexNotiz2 = hoi3[1].indexOf("Notiz 2");
-         let gastWuensche = hoi3[1].indexOf("Gastw�nsche");
-
-         let bemerkungLaenge = indexRestBemerk - indexBemerkung + 1;
-         let notiz1Laenge = indexNotiz2 - indexNotiz1 + 1;
-         let notiz2Laenge = gastWuensche - indexNotiz2 + 1;
-
-         console.log(bemerkungLaenge);
-         console.log(notiz1Laenge);
-         console.log(notiz2Laenge);
-
-         for (let a = 0; a < hoi3.length; a++) {
-         this.arrayBemerkung[a] = hoi3[a].indexOf("Bemerkung") + 1 ;
-         }
-
-         for (let a = 0; a < hoi3.length; a++) {
-         this.arrayNotiz1[a] = hoi3[a].indexOf("Notiz 1") + 1;
-         }
-
-         for (let a = 0; a < hoi3.length; a++) {
-         this.arrayNotiz2[a] = hoi3[a].indexOf("Notiz 2") + 1;
-         }
-
-         for (let a = 0; a < hoi3.length; a++) {
-         this.arrayRestBemerk[a] = hoi3[a].indexOf("Rest.-Bemerk.");
-         }
-
-         for (let a = 0; a < hoi3.length; a++) {
-         this.arrayGastWuensche[a] = hoi3[a].indexOf("Gastw�nsche");
-         }
-
-         for (let a = 0; a < hoi3.length; a++) {
-         this.arrayBemerkungLaenge[a] = this.arrayRestBemerk[a] - this.arrayBemerkung[a];
-         console.log(this.arrayBemerkungLaenge[a]);
-         }
-
-         for (let a = 0; a < hoi3.length; a++) {
-         this.arrayNotiz1Laenge[a] = this.arrayNotiz2[a] - this.arrayNotiz1[a +1];
-         console.log(this.arrayNotiz1Laenge[a]);
-         }
-         for (let a = 0; a < hoi3.length; a++) {
-         this.arrayNotiz2Laenge[a] = this.arrayGastWuensche[a] - this.arrayNotiz2[a +1];
-         console.log(this.arrayNotiz2Laenge[a]);
-         }
-         for (let a = 1; a < hoi3.length; a++) {
-         if (this.arrayBemerkungLaenge[a] > 1) {
-
-         hoi3[a][this.arrayBemerkung[a]] = hoi3[a].slice(this.arrayBemerkung[a], this.arrayBemerkung[a + 2]);
-         console.log(hoi3[a][this.arrayBemerkung[a]]);
-         }
-         }
-         for (let a = 1; a < hoi3.length; a++) {
-         if (this.arrayBemerkungLaenge[a] > 1) {
-         hoi3[a][this.arrayBemerkung[a]] = hoi3[a].slice(this.arrayBemerkung[a], this.arrayBemerkung[a + 2]);
-         }
-         }
-         for (let a = 1; a < hoi3.length; a++) {
-         if (this.arrayNotiz2Laenge[a] > 1) {
-         hoi3[a][this.arrayNotiz1[a]] = hoi3[a].slice(hoi3[a][this.arrayNotiz1[a]], hoi3[a][this.arrayBemerkung[a] + 1]); hoi3[a][this.arrayNotiz1[a] + 1]);
-         }
-         }
-
-         hoi3[1].splice(indexRestBemerk, hoi3[1].length);
-         //hoi3[1].splice(gastWuensche, indexBemerkung);
-         //hoi3[1].filter();
-
-
-         console.log('Index Bemerkung:' + indexBemerkung);
-         console.log('hoi3:');
-         console.log(hoi3);
-         */
 
 
       });
@@ -258,19 +173,6 @@ export class TischplanComponent implements OnInit {
         tracesListeElemente[0].data.splice(o, 1);
       }
     }
-    /*
-     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
-     if (tracesListeElemente[0].data[o].length === 24) {
-     tracesListeElemente[0].data[o].splice(0, 12);
-     }
-     }
-
-     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
-     if (tracesListeElemente[0].data[o].length === 19) {
-     tracesListeElemente[0].data[o].splice(0, 17);
-     }
-     }
-     */
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
       if (tracesListeElemente[0].data[o].length === 1) {
         tracesListeElemente[0].data.splice(o, 1);
@@ -287,13 +189,7 @@ export class TischplanComponent implements OnInit {
         tracesListeElemente[0].data[o].splice(8, 12);
       }
     }
-    /*
-     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
-     if (tracesListeElemente[0].data[o].length === 2) {
-     tracesListeElemente[0].data[o].splice(1, 2);
-     }
-     }
-     */
+
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
       console.log(o + tracesListeElemente[0].data[o]);
       console.log('length of : ' + o + tracesListeElemente[0].data[o].length);
@@ -438,45 +334,6 @@ export class TischplanComponent implements OnInit {
 
         //console.log("bgColor:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
       });
-    /*
-     this.tischplanService.removePlaceholder(dataString)
-     .subscribe(response => {
-     //let arrayIndex = response[1];
-     console.log("Response placeholder:" + JSON.stringify(response));
-     if(response.tables[0].department === "berglerStubeHubertusStube") {
-     this.tablesBerglerStubeHubertusStube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
-     }
-     else if(response.tables[0].department === "Bauernstube") {
-     this.tablesBauernstube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
-     }
-     else if(response.tables[0].department === "tablesWaeldlerStubeKristallStube") {
-     this.tablesWaeldlerStubeKristallStube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
-     }
-     else if(response.tables[0].department === "edelweissKaminStube") {
-     this.tablesEdelweissKaminStube[response.tables[0].arrayIndex].placeholder = response.tables[0].placeholder;
-     }
-     });
-
-     this.tischplanService.addPlaceholder(addPlaceholderDataString)
-     .subscribe(response => {
-     console.log("Add placeholder!");
-     console.log("Add placeholder! : " + JSON.stringify(response));
-     console.log("placeholder:" + JSON.stringify(response[0].tables[j].placeholder));
-     //console.log(this.tablesBerglerStubeHubertusStube[j].placeholder);
-     if(response[0].tables[j].department === "berglerStubeHubertusStube") {
-     this.tablesBerglerStubeHubertusStube[j].placeholder = response[0].tables[j].placeholder;
-     }
-     else if(response[0].tables[j].department === "Bauernstube") {
-     this.tablesBauernstube[j].placeholder = response[0].tables[j].placeholder;
-     }
-     else if(response[0].tables[j].department === "tablesWaeldlerStubeKristallStube") {
-     this.tablesWaeldlerStubeKristallStube[j].placeholder = response[0].tables[j].placeholder;
-     }
-     else if(response[0].tables[j].department === "edelweissKaminStube") {
-     this.tablesEdelweissKaminStube[j].placeholder = response[0].tables[j].placeholder;
-     }
-     });
-     */
     //console.log("placeholder:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
 
   }
@@ -772,15 +629,35 @@ export class TischplanComponent implements OnInit {
               return;
             } else {
               if (Information.tables[0].department === "Bauernstube") {
-                this.tablesBauernstube[Information.tables[0].arrayIndex] = Information.tables[0];
+                for (let i = 0; i < this.tablesBauernstube.length; i++) {
+                  if (this.tablesBauernstube[i].number === Information.tables[0].number) {
+                    this.tablesBauernstube[i] = Information.tables[0];
+                  }
+                }
               } else if (Information.tables[0].department === "waeldlerStubeKristallStube") {
-                this.tablesWaeldlerStubeKristallStube[Information.tables[0].arrayIndex] = Information.tables[0];
+                for (let i = 0; i < this.tablesWaeldlerStubeKristallStube.length; i++) {
+                  if (this.tablesWaeldlerStubeKristallStube[i].number === Information.tables[0].number) {
+                    this.tablesWaeldlerStubeKristallStube[i] = Information.tables[0];
+                  }
+                }
               } else if (Information.tables[0].department === "berglerStubeHubertusStube") {
-                this.tablesBerglerStubeHubertusStube[Information.tables[0].arrayIndex] = Information.tables[0];
+                for (let i = 0; i < this.tablesBerglerStubeHubertusStube.length; i++) {
+                  if (this.tablesBerglerStubeHubertusStube[i].number === Information.tables[0].number) {
+                    this.tablesBerglerStubeHubertusStube[i] = Information.tables[0];
+                  }
+                }
               } else if (Information.tables[0].department === "edelweissKaminStube") {
-                this.tablesEdelweissKaminStube[Information.tables[0].arrayIndex] = Information.tables[0];
+                for (let i = 0; i < this.tablesEdelweissKaminStube.length; i++) {
+                  if (this.tablesEdelweissKaminStube[i].number === Information.tables[0].number) {
+                    this.tablesEdelweissKaminStube[i] = Information.tables[0];
+                  }
+                }
               } else if (Information.tables[0].department === "teestubeTeelounge") {
-                this.tablesTeestubeTeelounge[Information.tables[0].arrayIndex] = Information.tables[0];
+                for (let i = 0; i < this.tablesTeestubeTeelounge.length; i++) {
+                  if (this.tablesTeestubeTeelounge[i].number === Information.tables[0].number) {
+                    this.tablesTeestubeTeelounge[i] = Information.tables[0];
+                  }
+                }
               }
             }
           });
@@ -800,10 +677,8 @@ export class TischplanComponent implements OnInit {
 
     delete(informationElement, j, event) {
       console.log(informationElement);
-
       console.log(j);
       event.stopPropagation();
-
       this.tischplanService.deleteInformationElement(informationElement)
         .subscribe(informationElement => {
           this.newInformationElements.splice(j, 1);
