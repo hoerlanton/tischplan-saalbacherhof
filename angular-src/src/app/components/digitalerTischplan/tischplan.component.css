@@ -22,7 +22,7 @@ html, body {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     background-color: #0a7a74;
-    min-height: calc(100vh - 400px);
+    min-height: calc(100vh - 390px);
   }
 }
 
@@ -31,7 +31,7 @@ html, body {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     background-color: #0a7a74;
-    min-height: 570px;
+    min-height: 580px;
   }
 }
 
@@ -39,7 +39,7 @@ html, body {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   background-color: #0a7a74;
-  min-height: 570px;
+  min-height: 580px;
 }
 
 
