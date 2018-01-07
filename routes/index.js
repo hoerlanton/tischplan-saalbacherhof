@@ -593,8 +593,13 @@ router.post('/addInformationToTable', function(req, res, next) {
     let bermerkungValueConcatenated = "";
 
     for (let s = 0; s < splitted.length; s++) {
-        informationElements2.push(splitted[s].split(":"));
+        informationElements2.push(splitted[s].split(/:(.+)/)[1]);
+        if (informationElements2[s] === undefined) {
+            informationElements2[s] = splitted[s]
+        }
     }
+
+    infoElementString = JSON.stringify(splitted);
 
     console.log('informationElements2 length: -> ' + informationElements2.length);
 
@@ -602,7 +607,6 @@ router.post('/addInformationToTable', function(req, res, next) {
     console.log(informationElements2.includes('nTrace'));
     console.log(informationElements2.includes('nAnreise'));
 
-    infoElementString = JSON.stringify(informationElements2);
 
     console.log(informationElements2[3][1]);
 
@@ -610,94 +614,67 @@ router.post('/addInformationToTable', function(req, res, next) {
         console.log('!!!!!!!!!!!!<:::::::::::::::::::::::::::::::::::::::');
     }
 
-    if (infoElementString.indexOf(value) != -1 && infoElementString.indexOf('nKAT') != -1) {
+    if (infoElementString.indexOf(value) != -1 && infoElementString.indexOf('nTrace') === -1) {
         console.log("Im Haus Liste gedropped");
-        nameValue = informationElements2[0][1].substring(1, informationElements2[0][1].length);
-        zimmernummerValue = informationElements2[1][1].substring(1, informationElements2[1][1].length);
-        anreiseValue = informationElements2[4][1].substring(1, informationElements2[4][1].length);
-        abreiseValue = informationElements2[5][1].substring(1, informationElements2[5][1].length);
-        personenAnzahlValue = informationElements2[6][1].substring(1, informationElements2[6][1].length);
-        notiz1Value = informationElements2[7][1].substring(1, informationElements2[7][1].length);
-        if (informationElements2[8].length > 2) {
-            notiz1Value = informationElements2[7][1].substring(1, informationElements2[7][1].length) + informationElements2[7][2].substring(1, informationElements2[7][2].length);
-        }
-        notiz2Value = informationElements2[8][1].substring(1, informationElements2[8][1].length);
-        if (informationElements2[8].length > 2) {
-            notiz2Value = informationElements2[8][1].substring(1, informationElements2[8][1].length) + informationElements2[8][2].substring(1, informationElements2[8][2].length);
-        }
-        bemerkungValue = informationElements2[9][1].substring(1, informationElements2[9][1].length);
-        if (informationElements2[9].length > 2) {
-            bemerkungValue = bemerkungValue + informationElements2[9][2];
-            bemerkungValue = bemerkungValue + informationElements2[9][3];
-        }
-        console.log('----------______________--------------->' + informationElements2[informationElements2.length - 2][2]);
-        if (informationElements2.length === 14) {
-            bemerkungValue = bemerkungValue + informationElements2[11][0].substring(1, informationElements2[11][0].length);
-            bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2][0].substring(1, informationElements2[informationElements2.length - 2][0].length);
-            if (informationElements2[11].length > 1) {
-                bemerkungValue = bemerkungValue + informationElements2[11][1].substring(1, informationElements2[11][0].length);
-            }
-            if (informationElements2[informationElements2.length - 2].length > 1) {
-                bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2][1].substring(1, informationElements2[informationElements2.length - 2][1].length);
-            }
-        } else if (informationElements2.length === 13) {
-            bemerkungValue = bemerkungValue + informationElements2[11][0].substring(1, informationElements2[11][0].length);
-            if (informationElements2[informationElements2.length - 2].length > 1) {
-                bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2][1].substring(1, informationElements2[informationElements2.length - 2][1].length);
-            }
-
-        } else if (informationElements2.length > 14) {
-            bemerkungValue = bemerkungValue + informationElements2[11][0].substring(1, informationElements2[11][0].length);
-            bemerkungValue = bemerkungValue + informationElements2[12][0].substring(1, informationElements2[12][0].length);
-            bemerkungValue = bemerkungValue + informationElements2[13][0].substring(1, informationElements2[13][0].length);
-            bemerkungValue = bemerkungValue + informationElements2[14][0].substring(1, informationElements2[14][0].length);
-            if (informationElements2[11].length > 1) {
-                bemerkungValue = bemerkungValue + informationElements2[11][1].substring(1, informationElements2[11][0].length);
-            }
-            if (informationElements2[12].length > 1) {
-                bemerkungValue = bemerkungValue + informationElements2[12][1].substring(1, informationElements2[12][0].length);
-            }
-            if (informationElements2[13].length > 1) {
-                bemerkungValue = bemerkungValue + informationElements2[13][1].substring(1, informationElements2[13][0].length);
-            }
-
-            if (informationElements2[informationElements2.length - 2].length > 1) {
-                bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2][1].substring(1, informationElements2[informationElements2.length - 2][1].length);
-            }
-        }
-        departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
-        tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
+        nameValue = informationElements2[0].substring(1, informationElements2[0].length);
+        zimmernummerValue = informationElements2[1].substring(1, informationElements2[1].length);
+        anreiseValue = informationElements2[2].substring(1, informationElements2[2].length);
+        abreiseValue = informationElements2[3].substring(1, informationElements2[3].length);
+        personenAnzahlValue = informationElements2[4].substring(1, informationElements2[4].length);
+        notiz1Value = informationElements2[5].substring(1, informationElements2[5].length);
+        notiz2Value = informationElements2[6].substring(1, informationElements2[6].length);
+        bemerkungValue = informationElements2[7].substring(1, informationElements2[7].length);
+        departmentValue = informationElements2[informationElements2.length - 1].substring(1, informationElements2[informationElements2.length - 1].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
+        tableValueArray = informationElements2[informationElements2.length - 1].toString().match(/\d+/);
         tableValue = tableValueArray[0];
-    } else if (infoElementString.indexOf('nTrace') != -1) {
-        console.log("Trace Liste gedropped");
-        zimmernummerValue = informationElements2[0][1].substring(1, informationElements2[0][1].length);
-        nameValue = informationElements2[1][1].substring(1, informationElements2[1][1].length);
-        anreiseValue = informationElements2[3][1].substring(1, informationElements2[3][1].length);
-        abreiseValue = informationElements2[4][1].substring(1, informationElements2[4][1].length);
-        trace = informationElements2[5][1].substring(1, informationElements2[5][1].length);
-        if (informationElements2.length > 7) {
-            trace = trace + informationElements2[6][0].substring(1, informationElements2[6][0].length);
+        if (informationElements2.length === 10) {
+            bemerkungValue += informationElements2[8].substring(1, informationElements2[8].length);
         }
-        departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
-        tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
+        if (informationElements2.length === 11) {
+            bemerkungValue += informationElements2[8].substring(1, informationElements2[8].length);
+            bemerkungValue += informationElements2[9].substring(1, informationElements2[9].length);
+        }
+        if (informationElements2.length === 12) {
+            bemerkungValue += informationElements2[8].substring(1, informationElements2[8].length);
+            bemerkungValue += informationElements2[9].substring(1, informationElements2[9].length);
+            bemerkungValue += informationElements2[10].substring(1, informationElements2[10].length);
+        }
+
+        } else if (infoElementString.indexOf('nTrace') != -1) {
+        console.log("Trace Liste gedropped");
+        zimmernummerValue = informationElements2[0].substring(1, informationElements2[0].length);
+        nameValue = informationElements2[1].substring(1, informationElements2[1].length);
+        anreiseValue = informationElements2[3].substring(1, informationElements2[3].length);
+        abreiseValue = informationElements2[4].substring(1, informationElements2[4].length);
+        trace = informationElements2[5].substring(1, informationElements2[5].length);
+        if (informationElements2.length > 7) {
+            trace = trace + informationElements2[6].substring(1, informationElements2[6].length);
+        }
+        departmentValue = informationElements2[informationElements2.length - 1].substring(1, informationElements2[informationElements2.length - 1].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
+        tableValueArray = informationElements2[informationElements2.length - 1].toString().match(/\d+/);
         tableValue = tableValueArray[0];
     } else {
         console.log("Anreise Liste gedropped");
-        nameValue = informationElements2[0][1].substring(1, informationElements2[0][1].length);
-        zimmernummerValue = informationElements2[1][1].substring(1, informationElements2[1][1].length);
-        abreiseValue = informationElements2[2][1].substring(1, informationElements2[2][1].length);
-        personenAnzahlValue = informationElements2[3][1].substring(1, informationElements2[3][1].length);
-        notiz1Value = informationElements2[4][1].substring(1, informationElements2[4][1].length);
-        notiz2Value = informationElements2[5][1].substring(1, informationElements2[5][1].length);
-        bemerkungValue = informationElements2[6][1].substring(1, informationElements2[6][1].length);
-        if (informationElements2.length === 12) {
-            bemerkungValue = bemerkungValue + informationElements2[6][0].substring(1, informationElements2[6][0].length);
-            bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2][0].substring(1, informationElements2[informationElements2.length - 2][0].length);
-        } else if (informationElements2.length === 11) {
-            bemerkungValue = bemerkungValue + informationElements2[6][0].substring(1, informationElements2[6][0].length);
+        nameValue = informationElements2[0].substring(1, informationElements2[0].length);
+        zimmernummerValue = informationElements2[1].substring(1, informationElements2[1].length);
+        abreiseValue = informationElements2[2].substring(1, informationElements2[2].length);
+        personenAnzahlValue = informationElements2[3].substring(1, informationElements2[3].length);
+        notiz1Value = informationElements2[4].substring(1, informationElements2[4].length);
+        notiz2Value = informationElements2[5].substring(1, informationElements2[5].length);
+        bemerkungValue = informationElements2[6].substring(1, informationElements2[6].length);
+
+        if (informationElements2.length === 11) {
+            bemerkungValue = bemerkungValue + informationElements2[7].substring(1, informationElements2[7].length);
+            bemerkungValue = bemerkungValue + informationElements2[8].substring(1, informationElements2[8].length);
+            bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2].substring(1, informationElements2[informationElements2.length - 2].length);
+        } else if (informationElements2.length === 10) {
+            bemerkungValue = bemerkungValue + informationElements2[7].substring(1, informationElements2[7].length);
+            bemerkungValue = bemerkungValue + informationElements2[informationElements2.length - 2].substring(1, informationElements2[informationElements2.length - 2].length);
+        } else if (informationElements2.length === 9) {
+            bemerkungValue = bemerkungValue + informationElements2[7].substring(1, informationElements2[7].length);
         }
-        departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
-        tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
+        departmentValue = informationElements2[informationElements2.length - 1].substring(1, informationElements2[informationElements2.length - 1].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
+        tableValueArray = informationElements2[informationElements2.length - 1].toString().match(/\d+/);
         tableValue = tableValueArray[0];
     }
 
@@ -821,7 +798,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                         });
                 }
             });
-    }, 300);
+    }, 200);
 
     setTimeout(function() {
         db.hubertusTables.findOne(
@@ -839,7 +816,7 @@ router.post('/addInformationToTable', function(req, res, next) {
                 res.json(tables);
                 console.log(JSON.stringify(tables));
             });
-    }, 500);
+    }, 700);
 });
     router.post('/newInformationToTables', function(req, res, next) {
         console.log("newInformationToTables post called");
