@@ -314,7 +314,7 @@ var TischplanComponent = (function () {
         }
         for (var o = 0; o < tracesListeElemente[0].data.length; o++) {
             if (tracesListeElemente[0].data[o].length === 19) {
-                tracesListeElemente[0].data[o].unshift("", "", "", "", "", "", "", "", "");
+                tracesListeElemente[0].data[o] = tracesListeElemente[0].data[o].splice(17, tracesListeElemente[0].data[o].length);
             }
         }
         for (var o = 0; o < tracesListeElemente[0].data.length; o++) {
@@ -339,6 +339,10 @@ var TischplanComponent = (function () {
                     trace[o] = tracesListeElemente[0].data[o].concat(tracesListeElemente[0].data[o + 1]);
                     console.log('Trace before ->>' + trace[o]);
                 }
+                if (tracesListeElemente[0].data[o].length === 2) {
+                    trace[o] = tracesListeElemente[0].data[o].concat(tracesListeElemente[0].data[o - 1]).concat(tracesListeElemente[0].data[o - 2]);
+                    console.log('Trace before 2222222222222222222222 ------------------------------>>' + trace[o]);
+                }
             }
         }
         trace[0] = tracesListeElemente[0].data[0].concat(tracesListeElemente[0].data[1]).concat(tracesListeElemente[0].data[2]);
@@ -349,8 +353,19 @@ var TischplanComponent = (function () {
         trace[0].splice(20, 0, "");
         trace[0].splice(20, 0, "");
         this.tracesListeElemente.push(trace[0]);
+        for (var o = 0; o < tracesListeElemente[0].data.length; o++) {
+            if (trace[o].length === 30) {
+                trace[o].splice(1, 2);
+                var traceTemp = [];
+                traceTemp = trace[o].splice(0, 3);
+                console.log('traceTemp' + traceTemp);
+                trace[o].push(traceTemp[0]);
+                trace[o].push(traceTemp[1]);
+                trace[o].splice(24, 0, " ");
+            }
+        }
         for (var o = 1; o < tracesListeElemente[0].data.length; o++) {
-            if (trace[o].length > 18) {
+            if (trace[o].length > 26) {
                 this.tracesListeElemente.push(trace[o]);
             }
         }
