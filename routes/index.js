@@ -189,7 +189,9 @@ router.post('/moveTable', function(req, res, next) {
     let topValue = splitted4[1].substring(1, splitted4[1].length - 1);
     let leftValue = splitted5[1].substring(1, splitted5[1].length - 1);
     let width = splitted6[1].substring(1, splitted6[1].length - 1);
-    let height = splitted7[1].substring(1, splitted7[1].length - 2);
+    let heightArray = splitted7[1].toString().match(/\d+/);
+    let height = heightArray[0];
+
     console.log('height: ' + height);
     console.log('width: ' + width);
     //berglerStubeHubertusStube
