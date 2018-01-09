@@ -64,16 +64,14 @@ export class TischplanComponent implements OnInit {
       .subscribe(imHausListeElemente => {
         //console.log('IM-HAUS-LISTE before:');
         //console.log(imHausListeElemente);
-        this.imHausListeElemente = imHausListeElemente[0].data;
+        this.imHausListeElemente = imHausListeElemente;
         console.log('IM-HAUS-LISTE:');
         console.log(this.imHausListeElemente);
-
-
       });
 
     this.tischplanService.getAnreiseListe()
       .subscribe(anreiseListeElemente => {
-        this.anreiseListeElemente = anreiseListeElemente[0].data;
+        this.anreiseListeElemente = anreiseListeElemente;
         console.log(this.anreiseListeElemente);
       });
 
@@ -118,7 +116,8 @@ export class TischplanComponent implements OnInit {
         //console.log("2:" + tracesListeElemente[0].data[0]);
         //console.log(tracesListeElemente[0].data.length);
         //this.tracesListeElemente = tracesListeElemente[0].data;
-        this.formatTracesListeElements(tracesListeElemente);
+        this.tracesListeElemente = tracesListeElemente;
+        //this.formatTracesListeElements(tracesListeElemente);
       });
 
     this.tischplanService.getInformationElements()
@@ -158,7 +157,7 @@ export class TischplanComponent implements OnInit {
       this.onOut(value.slice(1));
     });
   }
-
+/*
   public formatTracesListeElements(tracesListeElemente) {
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
       if (tracesListeElemente[0].data[o].length === 7) {
@@ -252,7 +251,7 @@ export class TischplanComponent implements OnInit {
       //}
     }
   }
-
+*/
   private onDrag(args) {
     let [e, el] = args;
   }
@@ -269,6 +268,19 @@ export class TischplanComponent implements OnInit {
     console.log("el = " + JSON.stringify(el));
 
     let information = args[0].innerText;
+    console.log("information: " + information);
+    let informationElements = information.split(/\n/);
+    console.log(informationElements);
+    let informationElements2 = [];
+    for (let s = 0; s < informationElements.length; s++) {
+      informationElements2.push(informationElements[s].split(/:(.+)/)[1]);
+      if (informationElements2[s] === undefined) {
+        informationElements2[s] = informationElements[s]
+      }
+    }
+    console.log(informationElements2);
+
+
     let department = JSON.stringify(args[1].id);
     console.log("departement" + department);
     let departementSubstring = department.substring(1, department.length - 1);
@@ -280,7 +292,7 @@ export class TischplanComponent implements OnInit {
     console.log("numbers: " + numbers);
     let arrayIndex = numbers[1];
     console.log("arrayIndex: " + arrayIndex);
-      console.log("tableNumberSubstring: " + tableNumberSubstring);
+    console.log("tableNumberSubstring: " + tableNumberSubstring);
     let dataString = [];
     dataString.push(information + departementSubstring + tableNumberSubstring);
     let jBefore = tableNumber.toString().match(/\d+/g);
@@ -319,6 +331,32 @@ export class TischplanComponent implements OnInit {
         }
         // console.log(this.tablesBerglerStubeHubertusStube[arrayIndex]);
       });
+
+
+    this.tischplanService.updateImHausListeElement(informationElements2)
+      .subscribe(response => {
+        //this.imHausListeElemente = response;
+        console.log('updateImHausListeElement response: ');
+        console.log(response);
+      });
+
+    this.tischplanService.updateAnreiseListeElement(informationElements2)
+      .subscribe(response => {
+        //this.imHausListeElemente = response;
+        console.log('updateAnreiseListeElement response: ');
+        console.log(response);
+      });
+
+    this.tischplanService.updateTracesListeElement(informationElements2)
+      .subscribe(response => {
+        //this.imHausListeElemente = response;
+        console.log('updateTracesListeElement response: ');
+        console.log(response);
+      });
+
+
+
+
 
     console.log("Occupy Table!");
     this.tischplanService.occupyTable(dataString)

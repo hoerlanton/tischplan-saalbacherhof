@@ -101,5 +101,30 @@ export class TischplanService {
     headers.append('Content-Type', 'application/json');
     console.log(headers);
     return this.http.post('deleteInformationElement', informationElement, {headers: headers})
+      .map(res => res.json());
   }
+
+  updateImHausListeElement(informationElements2) {
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    console.log(headers);
+    return this.http.post('updateImHausListeElement', informationElements2, {headers: headers})
+      .map(res => res.json());
   }
+
+  updateAnreiseListeElement(informationElements2) {
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    console.log(headers);
+    return this.http.post('updateAnreiseListeElement', informationElements2, {headers: headers})
+      .map(res => res.json());
+  }
+
+  updateTracesListeElement(informationElements2) {
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    console.log(headers);
+    return this.http.post('updateTracesListeElement', informationElements2, {headers: headers})
+      .map(res => res.json());
+  }
+}

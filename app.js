@@ -58,8 +58,6 @@ app.post("/upload", upload.array("uploads[]", 12), function (req, res) {
     console.log("req.files:");
     console.log(req.files);
 
-
-
     let uploadedFileName = req.files[0].filename.replace(/ /g, "");
 
     let data = '';
@@ -76,16 +74,14 @@ app.post("/upload", upload.array("uploads[]", 12), function (req, res) {
         csv({noheader:true})
             .fromString(data)
             .on('csv',(csvRow)=>{ // this func will be called 3 times
-                console.log(csvRow);// => [1,2,3] , [4,5,6]  , [7,8,9]
-
+                //console.log(csvRow);// => [1,2,3] , [4,5,6]  , [7,8,9]
                 json.push(csvRow);
-
             })
             .on('done', (error)=>{
 
                 csvDatei = JSON.stringify(json);
                 console.log('csvDatei: ');
-                console.log(csvDatei);
+                //console.log(csvDatei);
                 if (csvDatei.indexOf("Im Haus") !== -1) {
                     postImHausListeToDB();
                 } else if (csvDatei.indexOf("Anreisen") !== -1) {

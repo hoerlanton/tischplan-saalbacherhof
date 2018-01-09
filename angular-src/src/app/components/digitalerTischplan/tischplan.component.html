@@ -3,6 +3,7 @@
   <title>Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="node_modules/core-js/client/shim.min.js"></script>
   <script src="<your-libs-directory>/object-assign.min.js"></script>
 </head>
@@ -138,16 +139,19 @@
           <div class='wrapper'>
             <div *ngFor="let imHausListeElement of imHausListeElemente">
               <div class='cards-container' id='container1' [dragula]='"evented-bag"'>
-                <div class="card" id="card1">
-                  <p> <b>Name:</b> {{imHausListeElement[22]}}<br>
-                    <b>Zimmernummer:</b> {{imHausListeElement[23]}}<br>
-                    <b>Anreise:</b> {{imHausListeElement[25]}}<br>
-                    <b>Abreise:</b> {{imHausListeElement[26]}}<br>
-                    <b>Personen Anzahl:</b> {{imHausListeElement[27]}}<br>
-                    <b>Notiz1:</b> {{imHausListeElement[37]}}<br>
-                    <b>Notiz2:</b> {{imHausListeElement[39]}}<br>
-                    <b>Bemerkung:</b> {{imHausListeElement[54]}}<br>
+                <div class="card" id="card1" [ngStyle]="{'background-color': '#' + imHausListeElement.bgColor}">
+                  <p> <b>Name:</b> {{imHausListeElement.name}}<br>
+                    <b>Zimmernummer:</b> {{imHausListeElement.zimmernummer}}<br>
+                    <b>Anreise:</b> {{imHausListeElement.anreise}}<br>
+                    <b>Abreise:</b> {{imHausListeElement.abreise}}<br>
+                    <b>Personen Anzahl:</b> {{imHausListeElement.personenAnzahl}}<br>
+                    <b>Notiz1:</b> {{imHausListeElement.notiz1}}<br>
+                    <b>Notiz2:</b> {{imHausListeElement.notiz2}}<br>
+                    <b>Bemerkung:</b> {{imHausListeElement.bemerkung}}<br>
                   </p>
+                  <div *ngIf="imHausListeElement.bgColor === 'f3efe4'">
+                    <i class="fa fa-check-square-o" style="float: right;"></i>
+                  </div>
                 </div>
               </div>
             </div>
@@ -158,15 +162,18 @@
           <div class='wrapper'>
             <div *ngFor="let anreiseListeElement of anreiseListeElemente">
               <div class='cards-container' id='container2' [dragula]='"evented-bag"'>
-                <div class="card" id="card2">
-                  <p> <b>Name:</b> {{anreiseListeElement[22]}}<br>
-                    <b>Zimmernummer:</b> {{anreiseListeElement[23]}}<br>
-                    <b>Abreise:</b> {{anreiseListeElement[25]}}<br>
-                    <b>Personen Anzahl:</b> {{anreiseListeElement[26]}}<br>
-                    <b>Notiz1:</b> {{anreiseListeElement[36]}}<br>
-                    <b>Notiz2:</b> {{anreiseListeElement[39]}}<br>
-                    <b>Bemerkung:</b> {{anreiseListeElement[52]}}<br>
+                <div class="card" id="card2" [ngStyle]="{'background-color': '#' + anreiseListeElement.bgColor}">
+                  <p> <b>Name:</b> {{anreiseListeElement.name}}<br>
+                    <b>Zimmernummer:</b> {{anreiseListeElement.zimmernummer}}<br>
+                    <b>Abreise:</b> {{anreiseListeElement.abreise}}<br>
+                    <b>Personen Anzahl:</b> {{anreiseListeElement.personenAnzahl}}<br>
+                    <b>Notiz1:</b> {{anreiseListeElement.notiz1}}<br>
+                    <b>Notiz2:</b> {{anreiseListeElement.notiz2}}<br>
+                    <b>Bemerkung:</b> {{anreiseListeElement.bemerkung}}<br>
                   </p>
+                  <div *ngIf="anreiseListeElement.bgColor === 'f3efe4'">
+                    <i class="fa fa-check-square-o" style="float: right;"></i>
+                  </div>
                 </div>
               </div>
             </div>
@@ -177,13 +184,17 @@
           <div class='wrapper'>
             <div *ngFor="let tracesListeElement of tracesListeElemente; let t = index;">
               <div class='cards-container' id='container3' [dragula]='"evented-bag"' >
-                <div class="card" id="card3">
-                  <b>Zimmernummer:</b> {{tracesListeElement[12]}}<br>
-                  <b>Name:</b> {{tracesListeElement[13]}}<br>
-                  <b>Personen:</b> {{tracesListeElement[14]}}<br>
-                  <b>Anreise:</b> {{tracesListeElement[16]}}<br>
-                  <b>Abreise:</b> {{tracesListeElement[18]}}<br>
-                  <b>Trace:</b> {{tracesListeElement[26]}}<br>
+                <div class="card" id="card3" [ngStyle]="{'background-color': '#' + tracesListeElement.bgColor}">
+                  <p><b>Zimmernummer:</b> {{tracesListeElement.zimmernummer}}<br>
+                  <b>Name:</b> {{tracesListeElement.name}}<br>
+                  <b>Personen:</b> {{tracesListeElement.personenAnzahl}}<br>
+                  <b>Anreise:</b> {{tracesListeElement.anreise}}<br>
+                  <b>Abreise:</b> {{tracesListeElement.abreise}}<br>
+                  <b>Trace:</b> {{tracesListeElement.trace}}<br>
+                  </p>
+                  <div *ngIf="tracesListeElement.bgColor === 'f3efe4'">
+                    <i class="fa fa-check-square-o" style="float: right;"></i>
+                  </div>
                 </div>
               </div>
             </div>
