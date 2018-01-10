@@ -180,6 +180,9 @@ html, body {
 .cards-container {
   margin: 10px 0px 10px 0px;
   padding: 10px 10px 40px 10px;
+  border-radius: 3px;
+  border: solid 1px grey;
+  padding: 10px 10px 15px 10px;
 }
 
 .row .container-fluid .col-md-4 .row1 {
