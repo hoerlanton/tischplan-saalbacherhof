@@ -149,15 +149,6 @@ html, body {
   }
 }
 
-.th {
-  border: solid 1px black;
-}
-
-.tr {
-  border: solid 1px black;
-
-}
-
 .row .upload-col {
   background-color: #f3efe4;
   padding: 20px 10px 20px 10px;
@@ -169,7 +160,7 @@ html, body {
   max-height: 100vh;
 }
 
-.printSectionId3 {
+.section3 {
   display: none;
 }
 

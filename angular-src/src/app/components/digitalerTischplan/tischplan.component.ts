@@ -33,11 +33,17 @@ export class TischplanComponent implements OnInit {
   dateGeneratedListe: any;
 
 
+
   newInformationElements: any[] = [];
   imHausListeElemente: ImHausListe[];
   anreiseListeElemente: AnreiseListe[];
   tracesListeElemente: any[] = [];
   tables: any[] = [];
+  tablesTemp: any[] = [];
+  tempTablesArray: any[] = [];
+  tempTablesArray2:  any[] = [];
+  tempTablesArray1: any[] = [];
+  tempTablesArray3: any[] = [];
   tablesBerglerStubeHubertusStube: Table[] = [];
   tablesBauernstube: Table[] = [];
   tablesWaeldlerStubeKristallStube: Table[] = [];
@@ -58,7 +64,7 @@ export class TischplanComponent implements OnInit {
   employee: string;
   nameTraceInput: string;
 
-  constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, private dragulaService: DragulaService, private element: ElementRef, private renderer: Renderer) {
+  constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, private dragulaService: DragulaService, private element: ElementRef, private renderer: Renderer ) {
     let DomBaseElement = this.element.nativeElement;
     let wrapperElementsChildNames = [];
 
@@ -116,16 +122,11 @@ export class TischplanComponent implements OnInit {
         this.tables = this.tables.concat(this.tablesEdelweissKaminStube);
         this.tables = this.tables.concat(this.tablesWaeldlerStubeKristallStube);
 
-        console.log('this.tables: ');
-        console.log(this.tables);
-
-        this.tables.sort(function(a, b){
-          if(a.nameValue < b.nameValue) return -1;
-          if(a.nameValue > b.nameValue) return 1;
-          return 0;
-        })
+        this.formatAzListe(tables);
 
       });
+
+
 
     this.tischplanService.getTracesListe()
       .subscribe(tracesListeElemente => {
@@ -178,6 +179,143 @@ export class TischplanComponent implements OnInit {
       this.onOut(value.slice(1));
     });
   }
+
+
+
+
+
+  public formatAzListe(tables) {
+
+    function filterByID(obj) {
+      if ('nameValue2' in obj || 'nameValue3' in obj) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    this.tempTablesArray = this.tables.filter(filterByID);
+
+    for(let i: number = 0; i < this.tables.length; i++) {
+      if(this.tables[i].nameValue2 || this.tables[i].nameValue3) {
+        this.tables.splice(i, 1);
+      }
+    }
+
+    for(let i: number = 0; i < this.tempTablesArray.length; i++) {
+      this.tempTablesArray2[i] = new Table();
+    }
+
+    for(let i: number = 0; i < this.tempTablesArray.length; i++) {
+      this.tempTablesArray3[i] = new Table();
+    }
+
+    for(let i: number = 0; i < this.tempTablesArray.length; i++) {
+      this.tempTablesArray1[i] = new Table();
+    }
+
+
+    for (let a: number = 0; a < this.tempTablesArray.length; a++) {
+      this.tempTablesArray2[a].nameValue = this.tempTablesArray[a].nameValue;
+      this.tempTablesArray2[a].notiz1Value = this.tempTablesArray[a].notiz1Value;
+      this.tempTablesArray2[a].notiz2Value = this.tempTablesArray[a].notiz2Value;
+      this.tempTablesArray2[a].personenAnzahlValue = this.tempTablesArray[a].personenAnzahlValue;
+      this.tempTablesArray2[a].number = this.tempTablesArray[a].number;
+      this.tempTablesArray2[a].zimmernummerValue = this.tempTablesArray[a].zimmernummerValue;
+      this.tempTablesArray2[a].anreiseValue = this.tempTablesArray[a].anreiseValue;
+      this.tempTablesArray2[a].abreiseValue = this.tempTablesArray[a].abreiseValue;
+      this.tempTablesArray2[a].bemerkungValue = this.tempTablesArray[a].bemerkungValue;
+      this.tables = this.tables.concat(this.tempTablesArray2[a]);
+    }
+
+
+    for (let a: number = 0; a < this.tempTablesArray.length; a++) {
+      this.tempTablesArray1[a].nameValue = this.tempTablesArray[a].nameValue2;
+      this.tempTablesArray1[a].notiz1Value = this.tempTablesArray[a].notiz3Value;
+      this.tempTablesArray1[a].notiz2Value = this.tempTablesArray[a].notiz4Value;
+      this.tempTablesArray1[a].personenAnzahlValue = this.tempTablesArray[a].personenAnzahlValue2;
+      this.tempTablesArray1[a].number = this.tempTablesArray[a].number;
+      this.tempTablesArray1[a].zimmernummerValue = this.tempTablesArray[a].zimmernummerValue2;
+      this.tempTablesArray1[a].anreiseValue = this.tempTablesArray[a].anreiseValue2;
+      this.tempTablesArray1[a].abreiseValue = this.tempTablesArray[a].abreiseValue2;
+      this.tempTablesArray1[a].bemerkungValue = this.tempTablesArray[a].bemerkungValue3;
+      this.tables = this.tables.concat(this.tempTablesArray1[a]);
+    }
+
+
+    for (let a: number = 0; a < this.tempTablesArray.length; a++) {
+      if (this.tempTablesArray[a].nameValue3 =! "undefined") {
+        this.tempTablesArray3[a].nameValue = this.tempTablesArray[a].nameValue3;
+        this.tempTablesArray3[a].notiz1Value = this.tempTablesArray[a].notiz5Value;
+        this.tempTablesArray3[a].notiz2Value = this.tempTablesArray[a].notiz6Value;
+        this.tempTablesArray3[a].personenAnzahlValue = this.tempTablesArray[a].personenAnzahlValue3;
+        this.tempTablesArray3[a].number = this.tempTablesArray[a].number;
+        this.tempTablesArray3[a].zimmernummerValue = this.tempTablesArray[a].zimmernummerValue3;
+        this.tempTablesArray3[a].anreiseValue = this.tempTablesArray[a].anreiseValue3;
+        this.tempTablesArray3[a].abreiseValue = this.tempTablesArray[a].abreiseValue3;
+        this.tempTablesArray3[a].bemerkungValue = this.tempTablesArray[a].bemerkungValue6;
+        this.tables = this.tables.concat(this.tempTablesArray3[a]);
+      }
+    }
+
+
+
+    /*
+     for (let row=0; row<tempTablesArray.length; row++) {
+     tempTablesArray[row] = [];
+     for (let col=0; col < tempTablesArray[row].length; col++) {
+     tempTablesArrayRow = tempTablesArray[row][col];
+     }
+     }
+
+
+
+
+     <b> Name:</b> {{tableTeestubeTeelounge.nameValue2}}<br>
+     <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue2}}<br>
+     <b> Anreise Datum:</b> {{tableTeestubeTeelounge.anreiseValue2}}<br>
+     <b> Abreise Datum:</b> {{tableTeestubeTeelounge.abreiseValue2}}<br>
+     <b> Personenanzahl:</b> {{tableTeestubeTeelounge.personenAnzahlValue2}}<br>
+     <b> Notiz1:</b> {{tableTeestubeTeelounge.notiz3Value}}<br>
+     <b> Notiz2:</b> {{tableTeestubeTeelounge.notiz4Value}}<br>
+     <b> Trace:</b> {{tableTeestubeTeelounge.trace2}}<br>
+     <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue3}}<br>
+     </p>
+     </div>
+     <div *ngIf="tableTeestubeTeelounge.nameValue3">
+     <p style="background-color: #FFFFFF; padding: 10px">
+     <b> Name:</b> {{tableTeestubeTeelounge.nameValue3}}<br>
+     <b> Sprache:</b> {{tableTeestubeTeelounge.katValue3}}<br>
+     <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue3}}<br>
+     <b> Anreise Datum:</b> {{tableTeestubeTeelounge.anreiseValue3}}<br>
+     <b> Abreise Datum:</b> {{tableTeestubeTeelounge.abreiseValue3}}<br>
+     <b> Personenanzahl:</b> {{tableTeestubeTeelounge.personenAnzahlValue3}}<br>
+     <b> Notiz1:</b> {{tableTeestubeTeelounge.notiz5Value}}<br>
+     <b> Notiz2:</b> {{tableTeestubeTeelounge.notiz6Value}}<br>
+     <b> Trace:</b> {{tableTeestubeTeelounge.trace3}}<br>
+     <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue6}}<br>
+
+
+     */
+    console.log(this.tempTablesArray1);
+    console.log(this.tempTablesArray);
+    console.log(this.tempTablesArray2);
+    console.log(this.tempTablesArray3);
+
+
+    this.tables.sort(function(a, b){
+      if(a.nameValue < b.nameValue) return -1;
+      if(a.nameValue > b.nameValue) return 1;
+      return 0;
+    });
+
+    console.log('this.tables: ');
+    console.log(this.tables);
+
+  }
+
+
+
 /*
   public formatTracesListeElements(tracesListeElemente) {
     for (let o = 0; o < tracesListeElemente[0].data.length; o++) {
@@ -784,7 +922,7 @@ export class TischplanComponent implements OnInit {
     let innerContents = document.getElementById(printSectionId3).innerHTML;
     popupWinindow = window.open('', '_blank', 'width=1000,height=1000,scrollbars=no,menubar=no,toolbar=no,location=no,status=no,titlebar=no');
     popupWinindow.document.open();
-    popupWinindow.document.write('<html><head><style>  .th { border: solid 1px black; border-collapse: collapse; } .tr { border: solid 1px black; border-collapse: collapse; } .td { border: solid 1px black; border-collapse: collapse;} </style></head><body onload="window.print()">' + innerContents + '</html>');
+    popupWinindow.document.write('<html><head><style></style></head><body onload="window.print()">' + innerContents + '</html>');
     popupWinindow.document.close();
   }
 }
