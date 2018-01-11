@@ -314,36 +314,36 @@ export class TischplanComponent implements OnInit {
     console.log('this.tables before sort ');
     console.log(this.tables);
 
-/*
-    this.tables.sort(function(a, b){
-        if (a.nameValue < b.nameValue) return -1;
-        if (a.nameValue > b.nameValue) return 1;
-        return 0;
-    });
+    for (let i: number = 0; i < this.tables.length; i++) {
+      if (!("nameValue" in this.tables[i])) {
+          this.tables.splice(i,1);
+      }
+    }
 
-*/
+    /*
+        this.tables.sort(function(a, b){
+            if (a.nameValue < b.nameValue) return -1;
+            if (a.nameValue > b.nameValue) return 1;
+            return 0;
+        });
+
+    */
     this.tables = this.tables.sort(function(a, b) {
-      if (typeof a.nameValue !== "undefined") {
+
+      if (typeof a.nameValue !== "undefined" && typeof b.nameValue !== "undefined") {
         var nameA = a.nameValue.toUpperCase(); // ignore upper and lowercase
-      }
-      if (typeof b.nameValue !== "undefined") {
         var nameB = b.nameValue.toUpperCase(); // ignore upper and lowercase
-      }
       if (nameA < nameB) {
-        console.log(nameA);
-        console.log(nameB);
         return -1;
       }
       if (nameA > nameB) {
-        console.log(nameA);
-        console.log(nameB);
         return 1;
       }
-      console.log(nameA);
-      console.log(nameB);
       // names must be equal
       return 0;
+      }
     });
+
 
   /*
     this.tables.sort(function(a, b){
