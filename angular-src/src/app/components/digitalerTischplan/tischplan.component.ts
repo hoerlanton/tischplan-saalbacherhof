@@ -216,35 +216,40 @@ export class TischplanComponent implements OnInit {
 
 
     for (let a: number = 0; a < this.tempTablesArray.length; a++) {
-      this.tempTablesArray2[a].nameValue = this.tempTablesArray[a].nameValue;
-      this.tempTablesArray2[a].notiz1Value = this.tempTablesArray[a].notiz1Value;
-      this.tempTablesArray2[a].notiz2Value = this.tempTablesArray[a].notiz2Value;
-      this.tempTablesArray2[a].personenAnzahlValue = this.tempTablesArray[a].personenAnzahlValue;
-      this.tempTablesArray2[a].number = this.tempTablesArray[a].number;
-      this.tempTablesArray2[a].zimmernummerValue = this.tempTablesArray[a].zimmernummerValue;
-      this.tempTablesArray2[a].anreiseValue = this.tempTablesArray[a].anreiseValue;
-      this.tempTablesArray2[a].abreiseValue = this.tempTablesArray[a].abreiseValue;
-      this.tempTablesArray2[a].bemerkungValue = this.tempTablesArray[a].bemerkungValue;
-      this.tables = this.tables.concat(this.tempTablesArray2[a]);
+      if (typeof this.tempTablesArray[a].nameValue !== "undefined") {
+        this.tempTablesArray2[a].nameValue = this.tempTablesArray[a].nameValue;
+        this.tempTablesArray2[a].notiz1Value = this.tempTablesArray[a].notiz1Value;
+        this.tempTablesArray2[a].notiz2Value = this.tempTablesArray[a].notiz2Value;
+        this.tempTablesArray2[a].personenAnzahlValue = this.tempTablesArray[a].personenAnzahlValue;
+        this.tempTablesArray2[a].number = this.tempTablesArray[a].number;
+        this.tempTablesArray2[a].zimmernummerValue = this.tempTablesArray[a].zimmernummerValue;
+        this.tempTablesArray2[a].anreiseValue = this.tempTablesArray[a].anreiseValue;
+        this.tempTablesArray2[a].abreiseValue = this.tempTablesArray[a].abreiseValue;
+        this.tempTablesArray2[a].bemerkungValue = this.tempTablesArray[a].bemerkungValue;
+        this.tables = this.tables.concat(this.tempTablesArray2[a]);
+      }
+    }
+
+
+
+    for (let a: number = 0; a < this.tempTablesArray.length; a++) {
+      if (typeof this.tempTablesArray[a].nameValue2 !== "undefined") {
+        this.tempTablesArray1[a].nameValue = this.tempTablesArray[a].nameValue2;
+        this.tempTablesArray1[a].notiz1Value = this.tempTablesArray[a].notiz3Value;
+        this.tempTablesArray1[a].notiz2Value = this.tempTablesArray[a].notiz4Value;
+        this.tempTablesArray1[a].personenAnzahlValue = this.tempTablesArray[a].personenAnzahlValue2;
+        this.tempTablesArray1[a].number = this.tempTablesArray[a].number;
+        this.tempTablesArray1[a].zimmernummerValue = this.tempTablesArray[a].zimmernummerValue2;
+        this.tempTablesArray1[a].anreiseValue = this.tempTablesArray[a].anreiseValue2;
+        this.tempTablesArray1[a].abreiseValue = this.tempTablesArray[a].abreiseValue2;
+        this.tempTablesArray1[a].bemerkungValue = this.tempTablesArray[a].bemerkungValue3;
+        this.tables = this.tables.concat(this.tempTablesArray1[a]);
+      }
     }
 
 
     for (let a: number = 0; a < this.tempTablesArray.length; a++) {
-      this.tempTablesArray1[a].nameValue = this.tempTablesArray[a].nameValue2;
-      this.tempTablesArray1[a].notiz1Value = this.tempTablesArray[a].notiz3Value;
-      this.tempTablesArray1[a].notiz2Value = this.tempTablesArray[a].notiz4Value;
-      this.tempTablesArray1[a].personenAnzahlValue = this.tempTablesArray[a].personenAnzahlValue2;
-      this.tempTablesArray1[a].number = this.tempTablesArray[a].number;
-      this.tempTablesArray1[a].zimmernummerValue = this.tempTablesArray[a].zimmernummerValue2;
-      this.tempTablesArray1[a].anreiseValue = this.tempTablesArray[a].anreiseValue2;
-      this.tempTablesArray1[a].abreiseValue = this.tempTablesArray[a].abreiseValue2;
-      this.tempTablesArray1[a].bemerkungValue = this.tempTablesArray[a].bemerkungValue3;
-      this.tables = this.tables.concat(this.tempTablesArray1[a]);
-    }
-
-
-    for (let a: number = 0; a < this.tempTablesArray.length; a++) {
-      if (this.tempTablesArray[a].nameValue3 =! "undefined") {
+      if (typeof this.tempTablesArray[a].nameValue3 !== "undefined") {
         this.tempTablesArray3[a].nameValue = this.tempTablesArray[a].nameValue3;
         this.tempTablesArray3[a].notiz1Value = this.tempTablesArray[a].notiz5Value;
         this.tempTablesArray3[a].notiz2Value = this.tempTablesArray[a].notiz6Value;
@@ -303,13 +308,38 @@ export class TischplanComponent implements OnInit {
     console.log(this.tempTablesArray3);
 
 
+    console.log('this.tables before sort ');
+    console.log(this.tables);
+
+
     this.tables.sort(function(a, b){
-      if(a.nameValue < b.nameValue) return -1;
-      if(a.nameValue > b.nameValue) return 1;
-      return 0;
+      if (typeof a.nameValue !== "undefined" && typeof b.nameValue !== "undefined" ) {
+        console.log(a.nameValue);
+        console.log(b.nameValue);
+        if (a.nameValue < b.nameValue) return -1;
+        if (a.nameValue > b.nameValue) return 1;
+        return 0;
+      }
     });
 
-    console.log('this.tables: ');
+  /*
+    this.tables.sort(function(a, b){
+      console.log(a.nameValue);
+      console.log(b.nameValue);
+      if (a.nameValue =! "undefined") {
+        var nameA=a.nameValue.toLowerCase()
+      }
+      if (b.nameValue =! "undefined") {
+        var nameB=b.nameValue.toLowerCase();
+      }
+      if (nameA < nameB) //sort string ascending
+        return -1;
+      if (nameA > nameB)
+        return 1;
+      return 0; //default return value (no sorting)
+    });
+  */
+    console.log('this.tables after sort: ');
     console.log(this.tables);
 
   }
