@@ -196,21 +196,21 @@ export class TischplanComponent implements OnInit {
 
     this.tempTablesArray = this.tables.filter(filterByID);
 
-    for(let i: number = 0; i < this.tables.length; i++) {
-      if(this.tables[i].nameValue2 || this.tables[i].nameValue3) {
+    for (let i: number = 0; i < this.tables.length; i++) {
+      if (this.tables[i].nameValue2 || this.tables[i].nameValue3) {
         this.tables.splice(i, 1);
       }
     }
 
-    for(let i: number = 0; i < this.tempTablesArray.length; i++) {
+    for (let i: number = 0; i < this.tempTablesArray.length; i++) {
       this.tempTablesArray2[i] = new Table();
     }
 
-    for(let i: number = 0; i < this.tempTablesArray.length; i++) {
+    for (let i: number = 0; i < this.tempTablesArray.length; i++) {
       this.tempTablesArray3[i] = new Table();
     }
 
-    for(let i: number = 0; i < this.tempTablesArray.length; i++) {
+    for (let i: number = 0; i < this.tempTablesArray.length; i++) {
       this.tempTablesArray1[i] = new Table();
     }
 
@@ -231,7 +231,6 @@ export class TischplanComponent implements OnInit {
     }
 
 
-
     for (let a: number = 0; a < this.tempTablesArray.length; a++) {
       if (typeof this.tempTablesArray[a].nameValue2 !== "undefined") {
         this.tempTablesArray1[a].nameValue = this.tempTablesArray[a].nameValue2;
@@ -250,18 +249,18 @@ export class TischplanComponent implements OnInit {
 
     for (let a: number = 0; a < this.tempTablesArray.length; a++) {
       if (typeof this.tempTablesArray[a].nameValue3 !== "undefined") {
-        this.tempTablesArray3[a].nameValue = this.tempTablesArray[a].nameValue3;
-        this.tempTablesArray3[a].notiz1Value = this.tempTablesArray[a].notiz5Value;
-        this.tempTablesArray3[a].notiz2Value = this.tempTablesArray[a].notiz6Value;
-        this.tempTablesArray3[a].personenAnzahlValue = this.tempTablesArray[a].personenAnzahlValue3;
-        this.tempTablesArray3[a].number = this.tempTablesArray[a].number;
-        this.tempTablesArray3[a].zimmernummerValue = this.tempTablesArray[a].zimmernummerValue3;
-        this.tempTablesArray3[a].anreiseValue = this.tempTablesArray[a].anreiseValue3;
-        this.tempTablesArray3[a].abreiseValue = this.tempTablesArray[a].abreiseValue3;
-        this.tempTablesArray3[a].bemerkungValue = this.tempTablesArray[a].bemerkungValue6;
-        this.tables = this.tables.concat(this.tempTablesArray3[a]);
-      }
+      this.tempTablesArray3[a].nameValue = this.tempTablesArray[a].nameValue3;
+      this.tempTablesArray3[a].notiz1Value = this.tempTablesArray[a].notiz5Value;
+      this.tempTablesArray3[a].notiz2Value = this.tempTablesArray[a].notiz6Value;
+      this.tempTablesArray3[a].personenAnzahlValue = this.tempTablesArray[a].personenAnzahlValue3;
+      this.tempTablesArray3[a].number = this.tempTablesArray[a].number;
+      this.tempTablesArray3[a].zimmernummerValue = this.tempTablesArray[a].zimmernummerValue3;
+      this.tempTablesArray3[a].anreiseValue = this.tempTablesArray[a].anreiseValue3;
+      this.tempTablesArray3[a].abreiseValue = this.tempTablesArray[a].abreiseValue3;
+      this.tempTablesArray3[a].bemerkungValue = this.tempTablesArray[a].bemerkungValue6;
+      this.tables = this.tables.concat(this.tempTablesArray3[a]);
     }
+  }
 
 
 
@@ -311,15 +310,35 @@ export class TischplanComponent implements OnInit {
     console.log('this.tables before sort ');
     console.log(this.tables);
 
-
+/*
     this.tables.sort(function(a, b){
-      if (typeof a.nameValue !== "undefined" && typeof b.nameValue !== "undefined" ) {
-        console.log(a.nameValue);
-        console.log(b.nameValue);
         if (a.nameValue < b.nameValue) return -1;
         if (a.nameValue > b.nameValue) return 1;
         return 0;
+    });
+
+*/
+    this.tables = this.tables.sort(function(a, b) {
+      if (typeof a.nameValue !== "undefined") {
+        var nameA = a.nameValue.toUpperCase(); // ignore upper and lowercase
       }
+      if (typeof b.nameValue !== "undefined") {
+        var nameB = b.nameValue.toUpperCase(); // ignore upper and lowercase
+      }
+      if (nameA < nameB) {
+        console.log(nameA);
+        console.log(nameB);
+        return -1;
+      }
+      if (nameA > nameB) {
+        console.log(nameA);
+        console.log(nameB);
+        return 1;
+      }
+      console.log(nameA);
+      console.log(nameB);
+      // names must be equal
+      return 0;
     });
 
   /*
