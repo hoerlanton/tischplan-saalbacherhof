@@ -361,6 +361,7 @@ var TischplanComponent = (function () {
                 this.tempTablesArray2[a].anreiseValue = this.tempTablesArray[a].anreiseValue;
                 this.tempTablesArray2[a].abreiseValue = this.tempTablesArray[a].abreiseValue;
                 this.tempTablesArray2[a].bemerkungValue = this.tempTablesArray[a].bemerkungValue;
+                this.tempTablesArray2[a].trace = this.tempTablesArray[a].trace;
                 this.tables = this.tables.concat(this.tempTablesArray2[a]);
             }
         }
@@ -375,6 +376,7 @@ var TischplanComponent = (function () {
                 this.tempTablesArray1[a].anreiseValue = this.tempTablesArray[a].anreiseValue2;
                 this.tempTablesArray1[a].abreiseValue = this.tempTablesArray[a].abreiseValue2;
                 this.tempTablesArray1[a].bemerkungValue = this.tempTablesArray[a].bemerkungValue3;
+                this.tempTablesArray1[a].trace = this.tempTablesArray[a].trace2;
                 this.tables = this.tables.concat(this.tempTablesArray1[a]);
             }
         }
@@ -389,6 +391,7 @@ var TischplanComponent = (function () {
                 this.tempTablesArray3[a].anreiseValue = this.tempTablesArray[a].anreiseValue3;
                 this.tempTablesArray3[a].abreiseValue = this.tempTablesArray[a].abreiseValue3;
                 this.tempTablesArray3[a].bemerkungValue = this.tempTablesArray[a].bemerkungValue6;
+                this.tempTablesArray3[a].trace = this.tempTablesArray[a].trace2;
                 this.tables = this.tables.concat(this.tempTablesArray3[a]);
             }
         }
