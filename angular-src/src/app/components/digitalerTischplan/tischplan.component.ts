@@ -260,7 +260,7 @@ export class TischplanComponent implements OnInit {
       this.tempTablesArray3[a].anreiseValue = this.tempTablesArray[a].anreiseValue3;
       this.tempTablesArray3[a].abreiseValue = this.tempTablesArray[a].abreiseValue3;
       this.tempTablesArray3[a].bemerkungValue = this.tempTablesArray[a].bemerkungValue6;
-        this.tempTablesArray3[a].trace = this.tempTablesArray[a].trace2;
+        this.tempTablesArray3[a].trace = this.tempTablesArray[a].trace3;
 
         this.tables = this.tables.concat(this.tempTablesArray3[a]);
     }
@@ -363,6 +363,9 @@ export class TischplanComponent implements OnInit {
     });
   */
     console.log('this.tables after sort: ');
+
+
+
     console.log(this.tables);
 
   }

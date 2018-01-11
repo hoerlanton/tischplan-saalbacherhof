@@ -5,11 +5,8 @@
 module.exports = {
     saveTraceListe: function (req, res, db) {
 
-//JSON string is parsed to a JSON object
+        //JSON string is parsed to a JSON object
         console.log("Post request made to /tracesListe");
-
-//JSON string is parsed to a JSON object
-        console.log("Post request made to /anreiseListe");
 
 
         let tracesListeData = {
