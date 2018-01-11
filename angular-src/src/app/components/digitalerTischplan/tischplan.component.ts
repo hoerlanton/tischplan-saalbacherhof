@@ -122,7 +122,7 @@ export class TischplanComponent implements OnInit {
         this.tables = this.tables.concat(this.tablesEdelweissKaminStube);
         this.tables = this.tables.concat(this.tablesWaeldlerStubeKristallStube);
 
-        this.formatAzListe(tables);
+        this.formatAzListe(this.tables);
 
       });
 
@@ -329,10 +329,14 @@ export class TischplanComponent implements OnInit {
 
     */
     this.tables = this.tables.sort(function(a, b) {
-
-      if (typeof a.nameValue !== "undefined" && typeof b.nameValue !== "undefined") {
-        var nameA = a.nameValue.toUpperCase(); // ignore upper and lowercase
-        var nameB = b.nameValue.toUpperCase(); // ignore upper and lowercase
+      let nameA = "";
+      let nameB = "";
+      if (typeof a.nameValue !== "undefined" ) {
+        nameA = a.nameValue.toUpperCase(); // ignore upper and lowercase
+      }
+     if (typeof b.nameValue !== "undefined"   ) {
+          nameB = b.nameValue.toUpperCase(); // ignore upper and lowercase
+      }
       if (nameA < nameB) {
         return -1;
       }
@@ -341,7 +345,7 @@ export class TischplanComponent implements OnInit {
       }
       // names must be equal
       return 0;
-      }
+      //}
     });
 
 
@@ -366,7 +370,7 @@ export class TischplanComponent implements OnInit {
 
 
 
-    console.log(this.tables);
+    console.log(tables);
 
   }
 

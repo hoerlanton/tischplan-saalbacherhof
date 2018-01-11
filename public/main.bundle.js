@@ -279,7 +279,7 @@ var TischplanComponent = (function () {
             _this.tables = _this.tables.concat(_this.tablesBerglerStubeHubertusStube);
             _this.tables = _this.tables.concat(_this.tablesEdelweissKaminStube);
             _this.tables = _this.tables.concat(_this.tablesWaeldlerStubeKristallStube);
-            _this.formatAzListe(tables);
+            _this.formatAzListe(_this.tables);
         });
         this.tischplanService.getTracesListe()
             .subscribe(function (tracesListeElemente) {
@@ -452,18 +452,23 @@ var TischplanComponent = (function () {
     
         */
         this.tables = this.tables.sort(function (a, b) {
-            if (typeof a.nameValue !== "undefined" && typeof b.nameValue !== "undefined") {
-                var nameA = a.nameValue.toUpperCase(); // ignore upper and lowercase
-                var nameB = b.nameValue.toUpperCase(); // ignore upper and lowercase
-                if (nameA < nameB) {
-                    return -1;
-                }
-                if (nameA > nameB) {
-                    return 1;
-                }
-                // names must be equal
-                return 0;
+            var nameA = "";
+            var nameB = "";
+            if (typeof a.nameValue !== "undefined") {
+                nameA = a.nameValue.toUpperCase(); // ignore upper and lowercase
             }
+            if (typeof b.nameValue !== "undefined") {
+                nameB = b.nameValue.toUpperCase(); // ignore upper and lowercase
+            }
+            if (nameA < nameB) {
+                return -1;
+            }
+            if (nameA > nameB) {
+                return 1;
+            }
+            // names must be equal
+            return 0;
+            //}
         });
         /*
           this.tables.sort(function(a, b){
@@ -483,7 +488,7 @@ var TischplanComponent = (function () {
           });
         */
         console.log('this.tables after sort: ');
-        console.log(this.tables);
+        console.log(tables);
     };
     /*
       public formatTracesListeElements(tracesListeElemente) {
