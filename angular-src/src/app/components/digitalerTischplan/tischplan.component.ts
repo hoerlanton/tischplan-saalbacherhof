@@ -957,6 +957,10 @@ export class TischplanComponent implements OnInit {
         });
     }
 
+  none(event) {
+    event.stopPropagation();
+  }
+
   printToCart1(printSectionId1: string) {
     let popupWinindow;
     let innerContents = document.getElementById(printSectionId1).innerHTML;
