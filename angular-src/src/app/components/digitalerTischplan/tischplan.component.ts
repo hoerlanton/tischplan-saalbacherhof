@@ -39,6 +39,9 @@ export class TischplanComponent implements OnInit {
   anreiseListeElemente: AnreiseListe[];
   tracesListeElemente: any[] = [];
   tables: any[] = [];
+  uniqueTables: any[] = [];
+  tableNumbers: any[] = [];
+  tablesOccupied: number;
   tablesTemp: any[] = [];
   tempTablesArray: any[] = [];
   tempTablesArray2:  any[] = [];
@@ -367,6 +370,26 @@ export class TischplanComponent implements OnInit {
     });
   */
     console.log('this.tables after sort: ');
+
+    console.log("this.uniqueTables: ");
+    console.log(this.uniqueTables);
+
+    for (let i: number = 0; i < this.tables.length; i++) {
+      console.log(i);
+      if ("nameValue" in this.tables[i]) {
+        console.log("--->" + i);
+        this.tableNumbers.push(this.tables[i].number);
+      }
+    }
+
+    function onlyUnique(value, index, self) {
+      return self.indexOf(value) === index;
+    }
+
+    this.uniqueTables = this.tableNumbers.filter( onlyUnique );
+
+    this.tablesOccupied = this.uniqueTables.length - 1;
+
 
 
 
