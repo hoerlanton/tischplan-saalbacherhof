@@ -2,6 +2,13 @@
  * Created by antonhorl on 09.01.18.
  */
 
+const
+    moveTablesBauernstube = require('./moveTablesBauernstube.js'),
+    moveTablesBerglerStubeHubertusStube = require('./moveTablesBerglerStubeHubertusStube.js'),
+    moveTablesEdelweissKaminStube = require('./moveTablesEdelweissKaminStube.js'),
+    moveTablesTeestubeTeelounge = require('./moveTablesTeestubeTeelounge.js'),
+    moveTablesWaeldlerStubeKristallStube = require('./moveTablesWaeldlerStubeKristallStube.js');
+
 module.exports = {
     moveTable: function (req, res, db) {
         console.log("moveTable request made to /moveTable");
