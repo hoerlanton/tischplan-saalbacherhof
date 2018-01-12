@@ -144,7 +144,7 @@ module.exports = {
             },
             {
                 $set: {
-                    "tables.$.bgColor": "#0a7a74",
+                    "tables.$.bgColor": "#b7b7b7",
                     "tables.$.isBesetzt": "true"
                 }
             }, function (err, tables) {
