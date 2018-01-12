@@ -503,7 +503,7 @@ var TischplanComponent = (function () {
             return self.indexOf(value) === index;
         }
         this.uniqueTables = this.tableNumbers.filter(onlyUnique);
-        this.tablesOccupied = this.uniqueTables.length - 1;
+        this.tablesOccupied = this.uniqueTables.length;
         console.log(tables);
     };
     /*
