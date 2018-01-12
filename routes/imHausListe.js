@@ -75,7 +75,7 @@ module.exports = {
             },
             {
                 $set: {
-                    "bgColor": "f3efe4",
+                    "bgColor": "0a7a74",
                 }
             }, function (err, tables) {
                 if (err) {
