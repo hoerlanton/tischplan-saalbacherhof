@@ -31,9 +31,6 @@ export class TischplanComponent implements OnInit {
   topValues: any[] = [];
   dateGenerated: any;
   dateGeneratedListe: any;
-
-
-
   newInformationElements: any[] = [];
   imHausListeElemente: ImHausListe[];
   anreiseListeElemente: AnreiseListe[];
@@ -54,14 +51,12 @@ export class TischplanComponent implements OnInit {
   tablesTeestubeTeelounge: Table[] = [];
   title: string;
   filesToUpload: Array<File> = [];
-
   isDropped: any[] = [];
   showBauernStubnBool: boolean;
   showBerglerBool: boolean;
   showWaeldlerBool: boolean;
   showEdelweissBool: boolean;
   showTeeStubeBool: boolean;
-
   roomNumber: string;
   tableNumber: string;
   employee: string;
@@ -108,8 +103,6 @@ export class TischplanComponent implements OnInit {
         if (tables === null) {
           return;
         } else {
-
-
           for (let a = 0; a < tables.length; a++) {
             if (tables[a].department === "Bauernstube") {
               this.tablesBauernstube = tables[a].tables;
