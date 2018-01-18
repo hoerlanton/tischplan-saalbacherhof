@@ -1,5 +1,4 @@
 export class TracesListElement{
-
   name: string;
   zimmernummer: string;
   personenAnzahl: string;

@@ -236,12 +236,26 @@ var TischplanComponent = (function () {
             .subscribe(function (imHausListeElemente) {
             //console.log('IM-HAUS-LISTE before:');
             //console.log(imHausListeElemente);
+            imHausListeElemente.sort(function (a, b) {
+                if (a.name < b.name)
+                    return -1;
+                if (a.name > b.name)
+                    return 1;
+                return 0;
+            });
             _this.imHausListeElemente = imHausListeElemente;
             console.log('IM-HAUS-LISTE:');
             console.log(_this.imHausListeElemente);
         });
         this.tischplanService.getAnreiseListe()
             .subscribe(function (anreiseListeElemente) {
+            anreiseListeElemente.sort(function (a, b) {
+                if (a.name < b.name)
+                    return -1;
+                if (a.name > b.name)
+                    return 1;
+                return 0;
+            });
             _this.anreiseListeElemente = anreiseListeElemente;
             console.log(_this.anreiseListeElemente);
         });
@@ -286,6 +300,13 @@ var TischplanComponent = (function () {
         this.tischplanService.getTracesListe()
             .subscribe(function (tracesListeElemente) {
             console.log(tracesListeElemente);
+            tracesListeElemente.sort(function (a, b) {
+                if (a.name < b.name)
+                    return -1;
+                if (a.name > b.name)
+                    return 1;
+                return 0;
+            });
             //console.log("2:" + tracesListeElemente[0].data[0]);
             //console.log(tracesListeElemente[0].data.length);
             //this.tracesListeElemente = tracesListeElemente[0].data;

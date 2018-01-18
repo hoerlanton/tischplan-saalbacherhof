@@ -75,13 +75,29 @@ export class TischplanComponent implements OnInit {
       .subscribe(imHausListeElemente => {
         //console.log('IM-HAUS-LISTE before:');
         //console.log(imHausListeElemente);
+        imHausListeElemente.sort(function(a, b){
+          if(a.name < b.name) return -1;
+          if(a.name > b.name) return 1;
+          return 0;
+        });
+
         this.imHausListeElemente = imHausListeElemente;
         console.log('IM-HAUS-LISTE:');
         console.log(this.imHausListeElemente);
+
+
+
       });
 
     this.tischplanService.getAnreiseListe()
       .subscribe(anreiseListeElemente => {
+        anreiseListeElemente.sort(function(a, b){
+          if(a.name < b.name) return -1;
+          if(a.name > b.name) return 1;
+          return 0;
+        });
+
+
         this.anreiseListeElemente = anreiseListeElemente;
         console.log(this.anreiseListeElemente);
       });
@@ -134,6 +150,12 @@ export class TischplanComponent implements OnInit {
     this.tischplanService.getTracesListe()
       .subscribe(tracesListeElemente => {
         console.log(tracesListeElemente);
+        tracesListeElemente.sort(function(a, b){
+          if(a.name < b.name) return -1;
+          if(a.name > b.name) return 1;
+          return 0;
+        });
+
         //console.log("2:" + tracesListeElemente[0].data[0]);
         //console.log(tracesListeElemente[0].data.length);
         //this.tracesListeElemente = tracesListeElemente[0].data;
@@ -150,10 +172,6 @@ export class TischplanComponent implements OnInit {
           console.log(this.newInformationElements);
         }
       });
-
-
-
-
 
     this.dateGeneratedListe = new Date();
     this.buttonBgColor1 = "0a7a74";

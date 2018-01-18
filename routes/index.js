@@ -61,7 +61,7 @@ router.post('/deleteInformationElement', function(req, res, next) {
 information.deleteInformation(req, res, db)});
 //Post New Information to Box
 router.post('/newInformationToBox', function(req, res, next) {
-information.newInformation(req, res, db)});
+information.newInformationToBox(req, res, db)});
 //Post New Information to Table
 router.post('/newInformationToTables', function(req, res, next) {
 information.newInformationToTable(req, res, db)});

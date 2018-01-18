@@ -2,7 +2,6 @@
  * Created by antonhorl on 09.01.18.
  */
 
-
 module.exports = {
     getInformation: function (req, res, db) {
         console.log("tables get called");
@@ -13,7 +12,6 @@ module.exports = {
             }
             res.json(information);
         });
-
     },
     deleteInformation: function (req, res, db) {
         //JSON string is parsed to a JSON object
@@ -29,23 +27,10 @@ module.exports = {
             });
         res.json(informationElementToDelete);
     },
-    newInformation: function (req, res, db) {
-        console.log("newInformationToBox post called");
-//Get guests from Mongo DB
-        console.log(req.body);
-        let newInformation = req.body;
-        db.newInformationHubertus.save(newInformation, function (err, newInformation) {
-            if (err) {
-                res.send(err);
-            }
-            res.json(newInformation);
-        });
-    },
-
     newInformationToTable: function (req, res, db) {
 
         console.log("newInformationToTables post called");
-//Get guests from Mongo DB
+        //Get guests from Mongo DB
 
         console.log(req.body);
         let newInformation = req.body;
@@ -148,5 +133,17 @@ module.exports = {
                     console.log(JSON.stringify(tables));
                 });
         }, 500);
-    }
-}
+    },
+    newInformationToBox: function (req, res, db) {
+        console.log("newInformationToBox post called");
+        //Get guests from Mongo DB
+        console.log(req.body);
+        let newInformation = req.body;
+        db.newInformationHubertus.save(newInformation, function (err, newInformation) {
+            if (err) {
+                res.send(err);
+            }
+            res.json(newInformation);
+        });
+    },
+};

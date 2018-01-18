@@ -238,8 +238,6 @@ module.exports = {
                     "tables.$.newTraceTableNumber": 1,
                     "tables.$.newTraceTableNumber1": 1,
                     "tables.$.newTraceTableNumber2": 1
-
-
                 }
             },
             new: false
