@@ -217,6 +217,50 @@ module.exports = {
                     "tables.$.bemerkungValue6": 1,
                     "tables.$.bemerkungValue7": 1,
                     "tables.$.bemerkungValue8": 1,
+                    "tables.$.nameValue4": 1,
+                    "tables.$.zimmernummerValue4": 1,
+                    "tables.$.anreiseValue4": 1,
+                    "tables.$.abreiseValue4": 1,
+                    "tables.$.personenAnzahlValue4": 1,
+                    "tables.$.notiz7Value": 1,
+                    "tables.$.notiz8Value": 1,
+                    "tables.$.trace4": 1,
+                    "tables.$.bemerkungValue9": 1,
+                    "tables.$.bemerkungValue10": 1,
+                    "tables.$.bemerkungValue11": 1,
+                    "tables.$.nameValue5": 1,
+                    "tables.$.zimmernummerValue5": 1,
+                    "tables.$.anreiseValue5": 1,
+                    "tables.$.abreiseValue5": 1,
+                    "tables.$.personenAnzahlValue5": 1,
+                    "tables.$.notiz9Value": 1,
+                    "tables.$.notiz10Value": 1,
+                    "tables.$.trace5": 1,
+                    "tables.$.bemerkungValue12": 1,
+                    "tables.$.bemerkungValue13": 1,
+                    "tables.$.bemerkungValue14": 1,
+                    "tables.$.nameValue6": 1,
+                    "tables.$.zimmernummerValue6": 1,
+                    "tables.$.anreiseValue6": 1,
+                    "tables.$.abreiseValue6": 1,
+                    "tables.$.personenAnzahlValue6": 1,
+                    "tables.$.notiz11Value": 1,
+                    "tables.$.notiz12Value": 1,
+                    "tables.$.trace6": 1,
+                    "tables.$.bemerkungValue15": 1,
+                    "tables.$.bemerkungValue16": 1,
+                    "tables.$.bemerkungValue17": 1,
+                    "tables.$.nameValue7": 1,
+                    "tables.$.zimmernummerValue7": 1,
+                    "tables.$.anreiseValue7": 1,
+                    "tables.$.abreiseValue7": 1,
+                    "tables.$.personenAnzahlValue7": 1,
+                    "tables.$.notiz13Value": 1,
+                    "tables.$.notiz14Value": 1,
+                    "tables.$.trace7": 1,
+                    "tables.$.bemerkungValue18": 1,
+                    "tables.$.bemerkungValue19": 1,
+                    "tables.$.bemerkungValue20":1,
                     "tables.$.newInformation": 1,
                     "tables.$.newInformation1": 1,
                     "tables.$.newInformation2": 1,
@@ -492,6 +536,110 @@ module.exports = {
                                 }
                                 console.log("addInformationToTable updated successfully");
                             });
+                    }   else if (!("nameValue4" in tablesfirst.tables[0])) {
+                        db.hubertusTables.update(
+                            {
+                                department: departmentValueDB,
+                                "tables.number": tableValue
+                            },
+                            {
+                                $set: {
+                                    "tables.$.nameValue4": nameValue,
+                                    "tables.$.zimmernummerValue4": zimmernummerValue,
+                                    "tables.$.anreiseValue4": anreiseValue,
+                                    "tables.$.abreiseValue4": abreiseValue,
+                                    "tables.$.personenAnzahlValue4": personenAnzahlValue,
+                                    "tables.$.notiz7Value": notiz1Value,
+                                    "tables.$.notiz8Value": notiz2Value,
+                                    "tables.$.trace4": trace,
+                                    "tables.$.bemerkungValue9": bemerkungValue,
+                                    "tables.$.bemerkungValue10": bemerkungValue1,
+                                    "tables.$.bemerkungValue11": bemerkungValue2
+                                }
+                            }, function (err, tables) {
+                                if (err) {
+                                    console.log("Error");
+                                }
+                                console.log("addInformationToTable updated successfully");
+                            });
+                    }   else if (!("nameValue5" in tablesfirst.tables[0])) {
+                        db.hubertusTables.update(
+                            {
+                                department: departmentValueDB,
+                                "tables.number": tableValue
+                            },
+                            {
+                                $set: {
+                                    "tables.$.nameValue5": nameValue,
+                                    "tables.$.zimmernummerValue5": zimmernummerValue,
+                                    "tables.$.anreiseValue5": anreiseValue,
+                                    "tables.$.abreiseValue5": abreiseValue,
+                                    "tables.$.personenAnzahlValue5": personenAnzahlValue,
+                                    "tables.$.notiz9Value": notiz1Value,
+                                    "tables.$.notiz10Value": notiz2Value,
+                                    "tables.$.trace5": trace,
+                                    "tables.$.bemerkungValue12": bemerkungValue,
+                                    "tables.$.bemerkungValue13": bemerkungValue1,
+                                    "tables.$.bemerkungValue14": bemerkungValue2
+                                }
+                            }, function (err, tables) {
+                                if (err) {
+                                    console.log("Error");
+                                }
+                                console.log("addInformationToTable updated successfully");
+                            });
+                    }   else if (!("nameValue6" in tablesfirst.tables[0])) {
+                        db.hubertusTables.update(
+                            {
+                                department: departmentValueDB,
+                                "tables.number": tableValue
+                            },
+                            {
+                                $set: {
+                                    "tables.$.nameValue6": nameValue,
+                                    "tables.$.zimmernummerValue6": zimmernummerValue,
+                                    "tables.$.anreiseValue6": anreiseValue,
+                                    "tables.$.abreiseValue6": abreiseValue,
+                                    "tables.$.personenAnzahlValue6": personenAnzahlValue,
+                                    "tables.$.notiz11Value": notiz1Value,
+                                    "tables.$.notiz12Value": notiz2Value,
+                                    "tables.$.trace6": trace,
+                                    "tables.$.bemerkungValue15": bemerkungValue,
+                                    "tables.$.bemerkungValue16": bemerkungValue1,
+                                    "tables.$.bemerkungValue17": bemerkungValue2
+                                }
+                            }, function (err, tables) {
+                                if (err) {
+                                    console.log("Error");
+                                }
+                                console.log("addInformationToTable updated successfully");
+                            });
+                    }    else if (!("nameValue7" in tablesfirst.tables[0])) {
+                        db.hubertusTables.update(
+                            {
+                                department: departmentValueDB,
+                                "tables.number": tableValue
+                            },
+                            {
+                                $set: {
+                                    "tables.$.nameValue7": nameValue,
+                                    "tables.$.zimmernummerValue7": zimmernummerValue,
+                                    "tables.$.anreiseValue7": anreiseValue,
+                                    "tables.$.abreiseValue7": abreiseValue,
+                                    "tables.$.personenAnzahlValue7": personenAnzahlValue,
+                                    "tables.$.notiz13Value": notiz1Value,
+                                    "tables.$.notiz14Value": notiz2Value,
+                                    "tables.$.trace7": trace,
+                                    "tables.$.bemerkungValue18": bemerkungValue,
+                                    "tables.$.bemerkungValue19": bemerkungValue1,
+                                    "tables.$.bemerkungValue20": bemerkungValue2
+                                }
+                            }, function (err, tables) {
+                                if (err) {
+                                    console.log("Error");
+                                }
+                                console.log("addInformationToTable updated successfully");
+                            });
                     }
                 });
         }, 200);
@@ -514,4 +662,4 @@ module.exports = {
                 });
         }, 700);
     }
-}
+};
