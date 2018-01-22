@@ -1,0 +1,47 @@
+<div id="printSectionId2" class="col-xs-12 printTwo">
+  <div class="row" style="background-color: #eaf3f3; border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;" >
+    <div *ngIf="showBerglerBool">
+      <div *ngFor="let tableBerglerStubeHubertusStube of tablesBerglerStubeHubertusStube; let j = index;">
+        <div class="t{{tableBerglerStubeHubertusStube.number}} table-item" (click)="moveTable(tableBerglerStubeHubertusStube, j)" [ngStyle]="{'top': tableBerglerStubeHubertusStube.topValue + 'px', 'left': tableBerglerStubeHubertusStube.leftValue + 'px', 'background-color': + tableBerglerStubeHubertusStube.bgColor, 'height': + tableBerglerStubeHubertusStube.height + 'px', 'width': + tableBerglerStubeHubertusStube.width + 'px', 'border': + tableBerglerStubeHubertusStube.border}">
+          <div *ngIf="tablesBerglerStubeHubertusStube[j] !== tablesBerglerStubeHubertusStube[j+1]">
+            <p><b>{{tableBerglerStubeHubertusStube.number}} | {{tableBerglerStubeHubertusStube.personenAnzahlValue}} {{tableBerglerStubeHubertusStube.personenAnzahlValue2}} {{tableBerglerStubeHubertusStube.personenAnzahlValue3}}</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="showBauernStubnBool">
+      <div *ngFor="let tableBauernstube of tablesBauernstube; let j = index;">
+        <div class="t{{tableBauernstube.number}} table-item" (click)="moveTable(tableBauernstube, j)" [ngStyle]="{'top': tableBauernstube.topValue + 'px', 'left': tableBauernstube.leftValue + 'px', 'background-color': + tableBauernstube.bgColor,  'height': + tableBauernstube.height + 'px', 'width': + tableBauernstube.width + 'px', 'border': + tableBauernstube.border}">
+          <p><b>{{tableBauernstube.number}} | {{tableBauernstube.personenAnzahlValue}} {{tableBauernstube.personenAnzahlValue2}} {{tableBauernstube.personenAnzahlValue3}}</b></p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="showWaeldlerBool">
+      <div *ngFor="let tableWaeldlerStubeKristallStube of tablesWaeldlerStubeKristallStube; let j = index;">
+        <div class="t{{tableWaeldlerStubeKristallStube.number}} table-item" (click)="moveTable(tableWaeldlerStubeKristallStube, j)" [ngStyle]="{'top': tableWaeldlerStubeKristallStube.topValue + 'px', 'left': tableWaeldlerStubeKristallStube.leftValue + 'px', 'background-color': + tableWaeldlerStubeKristallStube.bgColor, 'height': + tableWaeldlerStubeKristallStube.height + 'px', 'width': + tableWaeldlerStubeKristallStube.width + 'px', 'border': + tableWaeldlerStubeKristallStube.border}">
+          <div *ngIf="tablesWaeldlerStubeKristallStube[j] !== tablesWaeldlerStubeKristallStube[j+1]">
+            <p><b>{{tableWaeldlerStubeKristallStube.number}} | {{tableWaeldlerStubeKristallStube.personenAnzahlValue}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue2}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue3}}</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="showEdelweissBool">
+      <div *ngFor="let tableEdelweissKaminStube of tablesEdelweissKaminStube; let j = index;">
+        <div class="t{{tableEdelweissKaminStube.number}} table-item" (click)="moveTable(tableEdelweissKaminStube, j)" [ngStyle]="{'top': tableEdelweissKaminStube.topValue + 'px', 'left': tableEdelweissKaminStube.leftValue + 'px', 'background-color': + tableEdelweissKaminStube.bgColor,  'height': + tableEdelweissKaminStube.height + 'px', 'width': + tableEdelweissKaminStube.width + 'px', 'border': + tableEdelweissKaminStube.border, 'border-radius': + tableEdelweissKaminStube.borderRadius, 'transform':  + tableEdelweissKaminStube.transformValue}">
+          <div *ngIf="tablesEdelweissKaminStube[j] !== tablesEdelweissKaminStube[j+1]">
+            <p><b>{{tableEdelweissKaminStube.number}} | {{tableEdelweissKaminStube.personenAnzahlValue}} {{tableEdelweissKaminStube.personenAnzahlValue2}} {{tableEdelweissKaminStube.personenAnzahlValue3}}</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="showTeeStubeBool">
+      <div *ngFor="let tableTeestubeTeelounge  of tablesTeestubeTeelounge; let j = index;">
+        <div class="t{{tableTeestubeTeelounge.number}} table-item" (click)="moveTable(tableTeestubeTeelounge, j)" [ngStyle]="{'top': tableTeestubeTeelounge.topValue + 'px', 'left': tableTeestubeTeelounge.leftValue + 'px', 'background-color': + tableTeestubeTeelounge.bgColor,  'height': + tableTeestubeTeelounge.height + 'px', 'width': + tableTeestubeTeelounge.width + 'px', 'border': + tableTeestubeTeelounge.border, 'border-radius': + tableTeestubeTeelounge.borderRadius, 'transform':  + tableTeestubeTeelounge.transformValue}">
+          <div *ngIf="tablesTeestubeTeelounge[j] !== tablesTeestubeTeelounge[j+1]">
+            <p><b>{{tableTeestubeTeelounge.number}} | {{tableTeestubeTeelounge.personenAnzahlValue}} {{tableTeestubeTeelounge.personenAnzahlValue2}} {{tableTeestubeTeelounge.personenAnzahlValue3}}</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="row1">
+  <div class='wrapper'>
+    <div *ngFor="let imHausListeElement of imHausListeElemente">
+      <div class='cards-container' id='container1' [dragula]='"evented-bag"'>
+        <div class="card" id="card1" [ngStyle]="{'background-color': '#' + imHausListeElement.bgColor}">
+          <p> <b>Name:</b> {{imHausListeElement.name}}<br>
+            <b>Zimmernummer:</b> {{imHausListeElement.zimmernummer}}<br>
+            <b>Anreise:</b> {{imHausListeElement.anreise}}<br>
+            <b>Abreise:</b> {{imHausListeElement.abreise}}<br>
+            <b>Personen Anzahl:</b> {{imHausListeElement.personenAnzahl}}<br>
+            <b>Notiz1:</b> {{imHausListeElement.notiz1}}<br>
+            <b>Notiz2:</b> {{imHausListeElement.notiz2}}<br>
+            <b>Bemerkung:</b> {{imHausListeElement.bemerkung}}<br>
+          </p>
+          <div *ngIf="imHausListeElement.bgColor === '0a7a74'">
+            <i class="fa fa-check" style="float: right; color: white"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

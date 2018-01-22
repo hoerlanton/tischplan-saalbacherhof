@@ -151,7 +151,7 @@ html, body {
 
 .row .upload-col {
   background-color: #f3efe4;
-  padding: 20px 10px 20px 10px;
+  padding: 0px 10px 20px 10px;
   border-left: 5px solid #0a7a74;
   border-right: 5px solid #0a7a74;
   border-bottom: 20px solid #0a7a74;
@@ -170,12 +170,12 @@ html, body {
 }
 
 
-.row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .anleitung {
+.row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .printToCart3, .Tisch, .anleitung {
   display: none;
 }
 
 @media (min-width: 1200px) {
-  .row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .anleitung{
+  .row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .printToCart3, .Tisch, .anleitung {
     display: block;
   }
 }
@@ -242,6 +242,14 @@ html, body {
   position: relative;
 }
 
+body > div.row > div > div.col-xs-12.col-lg-4.upload-col > app-upload > div > h3 {
+  margin: 0;
+}
+
+.row .container-fluid .upload-col .csv h3 {
+  margin: 0;
+}
+
 .row1 .col {
   flex: 1;
 }
@@ -293,14 +301,13 @@ html, body {
   max-width: 100%;
 }
 
-
 .row .container-fluid .col-md-6 .row {
   background-color: #eaf3f3;
   padding: 20px 10px 20px 10px;
   height: 100%;
 }
 
-.row .container-fluid .print-col .printTwo .table-item {
+.table-item {
   position: absolute;
 }
 
@@ -312,4 +319,8 @@ html, body {
   .btn-send {
     display: block;
   }
+}
+
+.csv {
+  margin-bottom: 30px;
 }
