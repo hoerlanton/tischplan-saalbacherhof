@@ -15,7 +15,7 @@ html, body {
   border-bottom: solid 10px #0a7a74;
   position: absolute;
   right: 0px;
-  top: 100px;
+  top: 120px;
 }
 
 @media (min-width: 1200px) {

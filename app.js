@@ -81,7 +81,7 @@ app.post("/upload", upload.array("uploads[]", 12), function (req, res) {
 
                 csvDatei = JSON.stringify(json);
                 console.log('csvDatei: ');
-                //console.log(csvDatei);
+                console.log(csvDatei);
                 if (csvDatei.indexOf("Im Haus") !== -1) {
                     postImHausListeToDB();
                 } else if (csvDatei.indexOf("Anreisen") !== -1) {
