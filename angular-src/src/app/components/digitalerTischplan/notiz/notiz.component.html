@@ -1,0 +1,47 @@
+<div class="notiz" style="min-height: 105px">
+  <div *ngIf="showBauernStubnBool">
+    <div *ngFor="let notizElement of notizElements" >
+      <div *ngIf="notizElement.departmentNotizInput === 'Bauernstube'">
+        <div style="border: solid 3px greenyellow; padding: 10px; margin: 10px;">
+          <p> {{notizElement.notizInput === '' ? "Keine Notiz" : notizElement.notizInput}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="showEdelweissBool">
+    <div *ngFor="let notizElement of notizElements">
+      <div *ngIf="notizElement.departmentNotizInput === 'EdelweissKaminStube'">
+        <div style="border: solid 3px greenyellow; padding: 10px; margin: 10px;">
+          <p> {{notizElement.notizInput === '' ? "Keine Notiz" : notizElement.notizInput}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="showBerglerBool">
+    <div *ngFor="let notizElement of notizElements">
+      <div *ngIf="notizElement.departmentNotizInput === 'BerglerStubeHubertusStube'">
+        <div style="border: solid 3px greenyellow; padding: 10px; margin: 10px;">
+          <p> {{notizElement.notizInput === '' ? "Keine Notiz" : notizElement.notizInput}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="showTeeStubeBool">
+    <div *ngFor="let notizElement of notizElements">
+      <div *ngIf="notizElement.departmentNotizInput === 'TeestubeTeelounge'">
+        <div style="border: solid 3px greenyellow; padding: 10px; margin: 10px;">
+          <p> {{notizElement.notizInput === '' ? "Keine Notiz" : notizElement.notizInput}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="showWaeldlerBool">
+    <div *ngFor="let notizElement of notizElements">
+      <div *ngIf="notizElement.departmentNotizInput === 'WaeldlerStubeKristallStube'">
+        <div style="border: solid 3px greenyellow; padding: 10px; margin: 10px;">
+          <p> {{notizElement.notizInput === '' ? "Keine Notiz" : notizElement.notizInput}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

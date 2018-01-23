@@ -1,19 +1,44 @@
-<form class="SendInformation"  #myForm="ngForm" (submit)="sendInformation($event); myForm.reset()">
-  <div class="form-row">
-    <div class="form-group">
-      <div class="col-lg-6">
-        <input  class="form-control" style="margin-top: 20px" id="name" [(ngModel)]="nameTraceInput" name="Name" placeholder="Name">
-        <input  class="form-control" style="margin-top: 20px" id="roomNumber" [(ngModel)]="roomNumber" name="roomNumber" placeholder="Zimmer Nummer">
+<div *ngIf="showNotizFormBool">
+  <form class="SendInformation" #myForm="ngForm" (submit)="sendInformation($event); myForm.reset() ">
+    <div class="form-row">
+      <div class="form-group" style="min-height: 250px">
+        <div class="col-lg-6 col-xs-6">
+          <input  class="form-control" style="margin-top: 20px" id="name" [(ngModel)]="nameTraceInput" name="Name" placeholder="Name">
+          <input  class="form-control" style="margin-top: 20px" id="roomNumber" [(ngModel)]="roomNumber" name="roomNumber" placeholder="Zimmer Nummer">
+        </div>
+        <div class="col-lg-6 col-xs-6">
+          <input  class="form-control" style="margin-top: 20px" id="tableNumber" [(ngModel)]="tableNumber" name="tableNumber" placeholder="Tisch Nummer">
+          <input  class="form-control" style="margin-top: 20px" id="employee" [(ngModel)]="employee" name="employee" placeholder="Mitarbeiter">
+        </div>
+        <div class="col-lg-12 col-xs-12">
+                <textarea id="informationText" rows="5" type="text" style="margin-bottom: 10px; margin-top: 20px" [(ngModel)]="title" placeholder="Trace hinzufügen" name="title" class="form-control" required>
+                </textarea>
+        </div>
       </div>
-      <div class="col-lg-6">
-        <input  class="form-control" style="margin-top: 20px" id="tableNumber" [(ngModel)]="tableNumber" name="tableNumber" placeholder="Tisch Nummer">
-        <input  class="form-control" style="margin-top: 20px" id="employee" [(ngModel)]="employee" name="employee" placeholder="Mitarbeiter">
-      </div>
-      <div class="col-lg-12">
-              <textarea id="informationText" rows="5" type="text" style="margin-bottom: 10px; margin-top: 20px" [(ngModel)]="title" placeholder="Trace hinzufügen" name="title" class="form-control" required>
-              </textarea>
-      </div>
+      <button type="button|submit|reset" style="float: right; margin: 10px 20px 0px 0px; background-color: #0a7a74; color: #FFFFFF" class="btn btn-primary">Hinzufügen</button>
     </div>
-    <button type="button|submit|reset" style="float: right; margin: 10px 20px 0px 0px; background-color: #0a7a74; color: #FFFFFF" class="btn btn-primary">Hinzufügen</button>
-  </div>
-</form>
+  </form>
+</div>
+<div *ngIf="showInfoFormBool">
+  <form class="SendNotiz"  #myForm="ngForm" (submit)="sendNotiz($event); myForm.reset() ">
+    <div class="form-row">
+      <div class="form-group" style="min-height: 250px">
+        <div class="col-lg-12">
+          <label for="department" style="padding-bottom: 20px">Abteilung</label>
+          <select class="form-control"  id="department" style="margin-bottom: 10px;" required [(ngModel)]="departmentNotizInput" placeholder="Abteilung auswählen" name="departmentNotizInput">
+            <option *ngFor="let department of departments"
+                    [value]="department">
+              {{department}}
+            </option>
+          </select>
+        </div>
+        <div class="col-lg-12">
+                <textarea id="notizText" rows="5" type="text" style="margin-bottom: 10px; margin-top: 20px" [(ngModel)]="notizInput" placeholder="Notiz hinzufügen" name="title" class="form-control" required>
+                </textarea>
+        </div>
+      </div>
+      <button type="button|submit|reset" style="float: right; margin: 10px 20px 0px 0px; background-color: #0a7a74; color: #FFFFFF" class="btn btn-primary">Hinzufügen</button>
+    </div>
+  </form>
+</div>
+

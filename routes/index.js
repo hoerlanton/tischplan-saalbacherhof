@@ -3,18 +3,20 @@ const   express = require('express'),
     bodyParser = require('body-parser'),
     mongojs = require('mongojs'),
     cors = require('cors'),
-    db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['hubertusTracesListe', 'hubertusAnreiseListe', 'hubertusImHausListe', 'hubertusTables', 'newInformationHubertus']),
+    db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['hubertusTracesListe', 'hubertusAnreiseListe', 'hubertusImHausListe', 'hubertusTables', 'newInformationHubertus', 'newNotizHubertusDb']),
     moveTablesBauernstube = require('./moveTablesBauernstube.js'),
     moveTablesBerglerStubeHubertusStube = require('./moveTablesBerglerStubeHubertusStube.js'),
     moveTablesEdelweissKaminStube = require('./moveTablesEdelweissKaminStube.js'),
     moveTablesTeestubeTeelounge = require('./moveTablesTeestubeTeelounge.js'),
-    moveTablesWaeldlerStubeKristallStube = require('./moveTablesWaeldlerStubeKristallStube.js');
-    anreiseliste = require('./anreiseListe.js');
-    imHausListe = require('./imHausListe.js');
-    traceListe = require('./traceListe.js');
-    information = require('./information.js');
-    placeholder = require('./placeholder.js');
-    table = require('./table.js');
+    moveTablesWaeldlerStubeKristallStube = require('./moveTablesWaeldlerStubeKristallStube.js'),
+    anreiseliste = require('./anreiseListe.js'),
+    imHausListe = require('./imHausListe.js'),
+    traceListe = require('./traceListe.js'),
+    information = require('./information.js'),
+    placeholder = require('./placeholder.js'),
+    table = require('./table.js'),
+    notiz = require('./notiz.js');
+
 
 //Bodyparser middleware
 router.use(bodyParser.urlencoded({ extended: false}));
@@ -86,6 +88,11 @@ table.dispenseTable(req, res, db)});
 //addInformationToTable
 router.post('/addInformationToTable', function(req, res, next) {
 table.addInformationToTable(req, res, db)});
-
++//getNotiz
+router.get('/getNotiz', function(req, res, next) {
+notiz.getNotiz(req, res, db)});
+//newNotiz
+router.post('/newNotiz', function(req, res, next) {
+notiz.newNotiz(req, res, db)});
 
 module.exports = router;

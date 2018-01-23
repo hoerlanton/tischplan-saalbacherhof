@@ -24,11 +24,13 @@ import { BerglerStubeHubertusStubeComponent } from './components/digitalerTischp
 import { WaeldlerStubeKristallStubeComponent } from './components/digitalerTischplan/departments/waeldler-stube-kristall-stube/waeldler-stube-kristall-stube.component';
 import { EdelweissKaminStubeComponent } from './components/digitalerTischplan/departments/edelweiss-kamin-stube/edelweiss-kamin-stube.component';
 import { TeestubeTeeloungeComponent } from './components/digitalerTischplan/departments/teestube-teelounge/teestube-teelounge.component';
+import { FormMenuComponent } from './components/digitalerTischplan/form-menu/form-menu.component';
+import { NotizComponent } from './components/digitalerTischplan/notiz/notiz.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, TischplanComponent, UploadComponent, TracesListeComponent, ImHausListeComponent, AnreiseListeComponent, TableplanComponent, NavigationComponent, PrintComponent, FormComponent, DepartmentsComponent, DepartmentmenuComponent, BauernstubeComponent, BerglerStubeHubertusStubeComponent, WaeldlerStubeKristallStubeComponent, EdelweissKaminStubeComponent, TeestubeTeeloungeComponent
+    AppComponent, TischplanComponent, UploadComponent, TracesListeComponent, ImHausListeComponent, AnreiseListeComponent, TableplanComponent, NavigationComponent, PrintComponent, FormComponent, DepartmentsComponent, DepartmentmenuComponent, BauernstubeComponent, BerglerStubeHubertusStubeComponent, WaeldlerStubeKristallStubeComponent, EdelweissKaminStubeComponent, TeestubeTeeloungeComponent, FormMenuComponent, NotizComponent
   ],
   imports: [
     FormsModule,

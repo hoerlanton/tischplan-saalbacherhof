@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TischplanService } from '../../../services/tischplan.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { Table } from '../../../../../Table';
@@ -22,8 +22,19 @@ export class FormComponent implements OnInit {
   @Input('tablesEdelweissKaminStube') tablesEdelweissKaminStube: Table[];
   @Input('tablesTeestubeTeelounge') tablesTeestubeTeelounge: Table[];
   @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
+  @Input('showInfoFormBool') showInfoFormBool: boolean;
+  @Input('showNotizFormBool') showNotizFormBool: boolean;
+  @Input('notizElements') notizElements: any;
+  @Output()
+  notizResponse:EventEmitter<any> = new EventEmitter();
 
-  constructor(private tischplanService: TischplanService, private _flashMessagesService: FlashMessagesService) { }
+  notizInput: string;
+  departmentNotizInput: string;
+  departments: any[] = [];
+
+  constructor(private tischplanService: TischplanService, private _flashMessagesService: FlashMessagesService) {
+    this.departments = ["Bauernstube", "BerglerStubeHubertusStube", "EdelweissKaminStube", "WaeldlerStubeKristallStube", "TeestubeTeelounge" ];
+  }
 
   ngOnInit() {
   }
@@ -104,5 +115,32 @@ export class FormComponent implements OnInit {
           console.log('this.newInformationElements' + this.newInformationElements);
         });
     }
+  }
+  sendNotiz(event) {
+    event.preventDefault();
+    let newNotiz = {
+      notizInput: this.notizInput,
+      departmentNotizInput: this.departmentNotizInput,
+    };
+    if (newNotiz.notizInput === undefined) {
+      this._flashMessagesService.show('Die Nachricht ist leer ... ',
+        {cssClass: 'alert-danger', timeout: 20000});
+      return;
+    } else {
+      this._flashMessagesService.show('Erfolgreich Information gespeichert ... ',
+        {cssClass: 'alert-success', timeout: 20000});
+    }
+    this.tischplanService.sendInformationToNotizBlock(newNotiz)
+      .subscribe(Notiz => {
+        //console.log('Information: ' + JSON.stringify(Information.tables[0].tableNumber));
+        console.log('Information: ' + JSON.stringify(Notiz));
+        //console.log(Information.tables[0]);
+        //console.log("------");
+        //console.log(Information[0].tables);
+        this.notizResponse.emit(Notiz);
+        this.notizElements = Notiz;
+        console.log('this.newInformationElements' + this.newInformationElements);
+      });
+
   }
 }

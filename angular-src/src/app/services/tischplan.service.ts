@@ -127,4 +127,16 @@ export class TischplanService {
     return this.http.post('updateTracesListeElement', informationElements2, {headers: headers})
       .map(res => res.json());
   }
+  sendInformationToNotizBlock(newInformation) {
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    console.log(headers);
+    return this.http.post('newNotiz', newInformation, {headers: headers})
+      .map(res => res.json());
+  }
+
+  getNotizElements() {
+    return this.http.get('getNotiz')
+      .map(res => res.json());
+  }
 }

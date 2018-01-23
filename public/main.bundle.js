@@ -122,12 +122,16 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_digitalerTischplan_departments_waeldler_stube_kristall_stube_waeldler_stube_kristall_stube_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/waeldler-stube-kristall-stube/waeldler-stube-kristall-stube.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_digitalerTischplan_departments_edelweiss_kamin_stube_edelweiss_kamin_stube_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/edelweiss-kamin-stube/edelweiss-kamin-stube.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_digitalerTischplan_departments_teestube_teelounge_teestube_teelounge_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/teestube-teelounge/teestube-teelounge.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_digitalerTischplan_form_menu_form_menu_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/form-menu/form-menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_digitalerTischplan_notiz_notiz_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/notiz/notiz.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -160,7 +164,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_5__components_digitalerTischplan_tischplan_component__["a" /* TischplanComponent */], __WEBPACK_IMPORTED_MODULE_9__components_digitalerTischplan_upload_upload_component__["a" /* UploadComponent */], __WEBPACK_IMPORTED_MODULE_10__components_digitalerTischplan_traces_liste_traces_liste_component__["a" /* TracesListeComponent */], __WEBPACK_IMPORTED_MODULE_11__components_digitalerTischplan_im_haus_liste_im_haus_liste_component__["a" /* ImHausListeComponent */], __WEBPACK_IMPORTED_MODULE_12__components_digitalerTischplan_anreise_liste_anreise_liste_component__["a" /* AnreiseListeComponent */], __WEBPACK_IMPORTED_MODULE_13__components_digitalerTischplan_tableplan_tableplan_component__["a" /* TableplanComponent */], __WEBPACK_IMPORTED_MODULE_14__components_digitalerTischplan_navigation_navigation_component__["a" /* NavigationComponent */], __WEBPACK_IMPORTED_MODULE_15__components_digitalerTischplan_print_print_component__["a" /* PrintComponent */], __WEBPACK_IMPORTED_MODULE_16__components_digitalerTischplan_form_form_component__["a" /* FormComponent */], __WEBPACK_IMPORTED_MODULE_17__components_digitalerTischplan_departments_departments_component__["a" /* DepartmentsComponent */], __WEBPACK_IMPORTED_MODULE_18__components_digitalerTischplan_departmentmenu_departmentmenu_component__["a" /* DepartmentmenuComponent */], __WEBPACK_IMPORTED_MODULE_19__components_digitalerTischplan_departments_bauernstube_bauernstube_component__["a" /* BauernstubeComponent */], __WEBPACK_IMPORTED_MODULE_20__components_digitalerTischplan_departments_bergler_stube_hubertus_stube_bergler_stube_hubertus_stube_component__["a" /* BerglerStubeHubertusStubeComponent */], __WEBPACK_IMPORTED_MODULE_21__components_digitalerTischplan_departments_waeldler_stube_kristall_stube_waeldler_stube_kristall_stube_component__["a" /* WaeldlerStubeKristallStubeComponent */], __WEBPACK_IMPORTED_MODULE_22__components_digitalerTischplan_departments_edelweiss_kamin_stube_edelweiss_kamin_stube_component__["a" /* EdelweissKaminStubeComponent */], __WEBPACK_IMPORTED_MODULE_23__components_digitalerTischplan_departments_teestube_teelounge_teestube_teelounge_component__["a" /* TeestubeTeeloungeComponent */]
+            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_5__components_digitalerTischplan_tischplan_component__["a" /* TischplanComponent */], __WEBPACK_IMPORTED_MODULE_9__components_digitalerTischplan_upload_upload_component__["a" /* UploadComponent */], __WEBPACK_IMPORTED_MODULE_10__components_digitalerTischplan_traces_liste_traces_liste_component__["a" /* TracesListeComponent */], __WEBPACK_IMPORTED_MODULE_11__components_digitalerTischplan_im_haus_liste_im_haus_liste_component__["a" /* ImHausListeComponent */], __WEBPACK_IMPORTED_MODULE_12__components_digitalerTischplan_anreise_liste_anreise_liste_component__["a" /* AnreiseListeComponent */], __WEBPACK_IMPORTED_MODULE_13__components_digitalerTischplan_tableplan_tableplan_component__["a" /* TableplanComponent */], __WEBPACK_IMPORTED_MODULE_14__components_digitalerTischplan_navigation_navigation_component__["a" /* NavigationComponent */], __WEBPACK_IMPORTED_MODULE_15__components_digitalerTischplan_print_print_component__["a" /* PrintComponent */], __WEBPACK_IMPORTED_MODULE_16__components_digitalerTischplan_form_form_component__["a" /* FormComponent */], __WEBPACK_IMPORTED_MODULE_17__components_digitalerTischplan_departments_departments_component__["a" /* DepartmentsComponent */], __WEBPACK_IMPORTED_MODULE_18__components_digitalerTischplan_departmentmenu_departmentmenu_component__["a" /* DepartmentmenuComponent */], __WEBPACK_IMPORTED_MODULE_19__components_digitalerTischplan_departments_bauernstube_bauernstube_component__["a" /* BauernstubeComponent */], __WEBPACK_IMPORTED_MODULE_20__components_digitalerTischplan_departments_bergler_stube_hubertus_stube_bergler_stube_hubertus_stube_component__["a" /* BerglerStubeHubertusStubeComponent */], __WEBPACK_IMPORTED_MODULE_21__components_digitalerTischplan_departments_waeldler_stube_kristall_stube_waeldler_stube_kristall_stube_component__["a" /* WaeldlerStubeKristallStubeComponent */], __WEBPACK_IMPORTED_MODULE_22__components_digitalerTischplan_departments_edelweiss_kamin_stube_edelweiss_kamin_stube_component__["a" /* EdelweissKaminStubeComponent */], __WEBPACK_IMPORTED_MODULE_23__components_digitalerTischplan_departments_teestube_teelounge_teestube_teelounge_component__["a" /* TeestubeTeeloungeComponent */], __WEBPACK_IMPORTED_MODULE_24__components_digitalerTischplan_form_menu_form_menu_component__["a" /* FormMenuComponent */], __WEBPACK_IMPORTED_MODULE_25__components_digitalerTischplan_notiz_notiz_component__["a" /* NotizComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
@@ -1069,10 +1073,132 @@ var _a;
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/digitalerTischplan/form-menu/form-menu.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row5\" style=\"min-height: 40px\">\n  <div class=\"col-md-6 col-xs-6\" style=\"min-height: 40px\" (click)=\"showInfoForm()\" [ngStyle]=\"{'background-color': '#' + buttonBgColorInfoForm}\">\n    <h6 [ngStyle]=\"{'color': '#' + fontColorInfoForm}\">Info hinzufügen</h6>\n  </div>\n  <div class=\"col-md-6 col-xs-6\" style=\"min-height: 40px\" (click)=\"showNotizForm()\" [ngStyle]=\"{'background-color': '#' + buttonBgColorNotizForm}\">\n    <h6 [ngStyle]=\"{'color': '#' + fontColorNotizForm}\">Notiz hinzufügen</h6>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/digitalerTischplan/form-menu/form-menu.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FormMenuComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FormMenuComponent = (function () {
+    function FormMenuComponent() {
+        this.showNotizFormBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.showInfoFormBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    FormMenuComponent.prototype.ngOnInit = function () {
+    };
+    FormMenuComponent.prototype.ngAfterViewInit = function () {
+    };
+    FormMenuComponent.prototype.showInfoForm = function () {
+        console.log("showInfoForm!");
+        this.showNotizFormBool = true;
+        this.showInfoFormBool = false;
+        if (this.buttonBgColorInfoForm === "0a7a74") {
+            this.buttonBgColorInfoForm = "f3efe4";
+            this.buttonBgColorNotizForm = "0a7a74";
+        }
+        else {
+            this.buttonBgColorInfoForm = "0a7a74";
+        }
+        if (this.fontColorInfoForm === "f3efe4") {
+            this.fontColorInfoForm = "0a7a74";
+            this.fontColorNotizForm = "f3efe4";
+        }
+        else {
+            this.fontColorInfoForm = "f3efe4";
+        }
+        this.showNotizFormBoolChange.emit(this.showNotizFormBool);
+        this.showInfoFormBoolChange.emit(this.showInfoFormBool);
+    };
+    FormMenuComponent.prototype.showNotizForm = function () {
+        console.log("showNotizForm!");
+        this.showNotizFormBool = false;
+        this.showInfoFormBool = true;
+        if (this.buttonBgColorNotizForm === "0a7a74") {
+            this.buttonBgColorNotizForm = "f3efe4";
+            this.buttonBgColorInfoForm = "0a7a74";
+        }
+        else {
+            this.buttonBgColorNotizForm = "0a7a74";
+        }
+        if (this.fontColorNotizForm === "f3efe4") {
+            this.fontColorNotizForm = "0a7a74";
+            this.fontColorInfoForm = "f3efe4";
+        }
+        else {
+            this.fontColorNotizForm = "f3efe4";
+        }
+        this.showNotizFormBoolChange.emit(this.showNotizFormBool);
+        this.showInfoFormBoolChange.emit(this.showInfoFormBool);
+    };
+    return FormMenuComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColorInfoForm'),
+    __metadata("design:type", String)
+], FormMenuComponent.prototype, "buttonBgColorInfoForm", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColorInfoForm'),
+    __metadata("design:type", String)
+], FormMenuComponent.prototype, "fontColorInfoForm", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColorNotizForm'),
+    __metadata("design:type", String)
+], FormMenuComponent.prototype, "fontColorNotizForm", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColorNotizForm'),
+    __metadata("design:type", String)
+], FormMenuComponent.prototype, "buttonBgColorNotizForm", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showNotizFormBool'),
+    __metadata("design:type", Boolean)
+], FormMenuComponent.prototype, "showNotizFormBool", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showInfoFormBool'),
+    __metadata("design:type", Boolean)
+], FormMenuComponent.prototype, "showInfoFormBool", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+], FormMenuComponent.prototype, "showNotizFormBoolChange", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
+], FormMenuComponent.prototype, "showInfoFormBoolChange", void 0);
+FormMenuComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-form-menu',
+        template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/form-menu/form-menu.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], FormMenuComponent);
+
+var _a, _b;
+//# sourceMappingURL=form-menu.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/digitalerTischplan/form/form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form class=\"SendInformation\"  #myForm=\"ngForm\" (submit)=\"sendInformation($event); myForm.reset()\">\n  <div class=\"form-row\">\n    <div class=\"form-group\">\n      <div class=\"col-lg-6\">\n        <input  class=\"form-control\" style=\"margin-top: 20px\" id=\"name\" [(ngModel)]=\"nameTraceInput\" name=\"Name\" placeholder=\"Name\">\n        <input  class=\"form-control\" style=\"margin-top: 20px\" id=\"roomNumber\" [(ngModel)]=\"roomNumber\" name=\"roomNumber\" placeholder=\"Zimmer Nummer\">\n      </div>\n      <div class=\"col-lg-6\">\n        <input  class=\"form-control\" style=\"margin-top: 20px\" id=\"tableNumber\" [(ngModel)]=\"tableNumber\" name=\"tableNumber\" placeholder=\"Tisch Nummer\">\n        <input  class=\"form-control\" style=\"margin-top: 20px\" id=\"employee\" [(ngModel)]=\"employee\" name=\"employee\" placeholder=\"Mitarbeiter\">\n      </div>\n      <div class=\"col-lg-12\">\n              <textarea id=\"informationText\" rows=\"5\" type=\"text\" style=\"margin-bottom: 10px; margin-top: 20px\" [(ngModel)]=\"title\" placeholder=\"Trace hinzufügen\" name=\"title\" class=\"form-control\" required>\n              </textarea>\n      </div>\n    </div>\n    <button type=\"button|submit|reset\" style=\"float: right; margin: 10px 20px 0px 0px; background-color: #0a7a74; color: #FFFFFF\" class=\"btn btn-primary\">Hinzufügen</button>\n  </div>\n</form>\n"
+module.exports = "<div *ngIf=\"showNotizFormBool\">\n  <form class=\"SendInformation\" #myForm=\"ngForm\" (submit)=\"sendInformation($event); myForm.reset() \">\n    <div class=\"form-row\">\n      <div class=\"form-group\" style=\"min-height: 250px\">\n        <div class=\"col-lg-6 col-xs-6\">\n          <input  class=\"form-control\" style=\"margin-top: 20px\" id=\"name\" [(ngModel)]=\"nameTraceInput\" name=\"Name\" placeholder=\"Name\">\n          <input  class=\"form-control\" style=\"margin-top: 20px\" id=\"roomNumber\" [(ngModel)]=\"roomNumber\" name=\"roomNumber\" placeholder=\"Zimmer Nummer\">\n        </div>\n        <div class=\"col-lg-6 col-xs-6\">\n          <input  class=\"form-control\" style=\"margin-top: 20px\" id=\"tableNumber\" [(ngModel)]=\"tableNumber\" name=\"tableNumber\" placeholder=\"Tisch Nummer\">\n          <input  class=\"form-control\" style=\"margin-top: 20px\" id=\"employee\" [(ngModel)]=\"employee\" name=\"employee\" placeholder=\"Mitarbeiter\">\n        </div>\n        <div class=\"col-lg-12 col-xs-12\">\n                <textarea id=\"informationText\" rows=\"5\" type=\"text\" style=\"margin-bottom: 10px; margin-top: 20px\" [(ngModel)]=\"title\" placeholder=\"Trace hinzufügen\" name=\"title\" class=\"form-control\" required>\n                </textarea>\n        </div>\n      </div>\n      <button type=\"button|submit|reset\" style=\"float: right; margin: 10px 20px 0px 0px; background-color: #0a7a74; color: #FFFFFF\" class=\"btn btn-primary\">Hinzufügen</button>\n    </div>\n  </form>\n</div>\n<div *ngIf=\"showInfoFormBool\">\n  <form class=\"SendNotiz\"  #myForm=\"ngForm\" (submit)=\"sendNotiz($event); myForm.reset() \">\n    <div class=\"form-row\">\n      <div class=\"form-group\" style=\"min-height: 250px\">\n        <div class=\"col-lg-12\">\n          <label for=\"department\" style=\"padding-bottom: 20px\">Abteilung</label>\n          <select class=\"form-control\"  id=\"department\" style=\"margin-bottom: 10px;\" required [(ngModel)]=\"departmentNotizInput\" placeholder=\"Abteilung auswählen\" name=\"departmentNotizInput\">\n            <option *ngFor=\"let department of departments\"\n                    [value]=\"department\">\n              {{department}}\n            </option>\n          </select>\n        </div>\n        <div class=\"col-lg-12\">\n                <textarea id=\"notizText\" rows=\"5\" type=\"text\" style=\"margin-bottom: 10px; margin-top: 20px\" [(ngModel)]=\"notizInput\" placeholder=\"Notiz hinzufügen\" name=\"title\" class=\"form-control\" required>\n                </textarea>\n        </div>\n      </div>\n      <button type=\"button|submit|reset\" style=\"float: right; margin: 10px 20px 0px 0px; background-color: #0a7a74; color: #FFFFFF\" class=\"btn btn-primary\">Hinzufügen</button>\n    </div>\n  </form>\n</div>\n\n"
 
 /***/ }),
 
@@ -1102,6 +1228,9 @@ var FormComponent = (function () {
         this.tischplanService = tischplanService;
         this._flashMessagesService = _flashMessagesService;
         this.newInformationElements = [];
+        this.notizResponse = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.departments = [];
+        this.departments = ["Bauernstube", "BerglerStubeHubertusStube", "EdelweissKaminStube", "WaeldlerStubeKristallStube", "TeestubeTeelounge"];
     }
     FormComponent.prototype.ngOnInit = function () {
     };
@@ -1186,6 +1315,32 @@ var FormComponent = (function () {
             });
         }
     };
+    FormComponent.prototype.sendNotiz = function (event) {
+        var _this = this;
+        event.preventDefault();
+        var newNotiz = {
+            notizInput: this.notizInput,
+            departmentNotizInput: this.departmentNotizInput,
+        };
+        if (newNotiz.notizInput === undefined) {
+            this._flashMessagesService.show('Die Nachricht ist leer ... ', { cssClass: 'alert-danger', timeout: 20000 });
+            return;
+        }
+        else {
+            this._flashMessagesService.show('Erfolgreich Information gespeichert ... ', { cssClass: 'alert-success', timeout: 20000 });
+        }
+        this.tischplanService.sendInformationToNotizBlock(newNotiz)
+            .subscribe(function (Notiz) {
+            //console.log('Information: ' + JSON.stringify(Information.tables[0].tableNumber));
+            console.log('Information: ' + JSON.stringify(Notiz));
+            //console.log(Information.tables[0]);
+            //console.log("------");
+            //console.log(Information[0].tables);
+            _this.notizResponse.emit(Notiz);
+            _this.notizElements = Notiz;
+            console.log('this.newInformationElements' + _this.newInformationElements);
+        });
+    };
     return FormComponent;
 }());
 __decorate([
@@ -1236,16 +1391,32 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesWaeldlerStubeKristallStube'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesWaeldlerStubeKristallStube", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showInfoFormBool'),
+    __metadata("design:type", Boolean)
+], FormComponent.prototype, "showInfoFormBool", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showNotizFormBool'),
+    __metadata("design:type", Boolean)
+], FormComponent.prototype, "showNotizFormBool", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('notizElements'),
+    __metadata("design:type", Object)
+], FormComponent.prototype, "notizElements", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+], FormComponent.prototype, "notizResponse", void 0);
 FormComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-form',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/form/form.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _c || Object])
 ], FormComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=form.component.js.map
 
 /***/ }),
@@ -1401,6 +1572,73 @@ NavigationComponent = __decorate([
 
 var _a;
 //# sourceMappingURL=navigation.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/digitalerTischplan/notiz/notiz.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"notiz\" style=\"min-height: 105px\">\n  <div *ngIf=\"showBauernStubnBool\">\n    <div *ngFor=\"let notizElement of notizElements\" >\n      <div *ngIf=\"notizElement.departmentNotizInput === 'Bauernstube'\">\n        <div style=\"border: solid 3px greenyellow; padding: 10px; margin: 10px;\">\n          <p> {{notizElement.notizInput === '' ? \"Keine Notiz\" : notizElement.notizInput}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div *ngIf=\"showEdelweissBool\">\n    <div *ngFor=\"let notizElement of notizElements\">\n      <div *ngIf=\"notizElement.departmentNotizInput === 'EdelweissKaminStube'\">\n        <div style=\"border: solid 3px greenyellow; padding: 10px; margin: 10px;\">\n          <p> {{notizElement.notizInput === '' ? \"Keine Notiz\" : notizElement.notizInput}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div *ngIf=\"showBerglerBool\">\n    <div *ngFor=\"let notizElement of notizElements\">\n      <div *ngIf=\"notizElement.departmentNotizInput === 'BerglerStubeHubertusStube'\">\n        <div style=\"border: solid 3px greenyellow; padding: 10px; margin: 10px;\">\n          <p> {{notizElement.notizInput === '' ? \"Keine Notiz\" : notizElement.notizInput}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div *ngIf=\"showTeeStubeBool\">\n    <div *ngFor=\"let notizElement of notizElements\">\n      <div *ngIf=\"notizElement.departmentNotizInput === 'TeestubeTeelounge'\">\n        <div style=\"border: solid 3px greenyellow; padding: 10px; margin: 10px;\">\n          <p> {{notizElement.notizInput === '' ? \"Keine Notiz\" : notizElement.notizInput}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div *ngIf=\"showWaeldlerBool\">\n    <div *ngFor=\"let notizElement of notizElements\">\n      <div *ngIf=\"notizElement.departmentNotizInput === 'WaeldlerStubeKristallStube'\">\n        <div style=\"border: solid 3px greenyellow; padding: 10px; margin: 10px;\">\n          <p> {{notizElement.notizInput === '' ? \"Keine Notiz\" : notizElement.notizInput}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/digitalerTischplan/notiz/notiz.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NotizComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var NotizComponent = (function () {
+    function NotizComponent() {
+    }
+    NotizComponent.prototype.ngOnInit = function () {
+    };
+    return NotizComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('notizElements'),
+    __metadata("design:type", Object)
+], NotizComponent.prototype, "notizElements", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showBauernStubnBool'),
+    __metadata("design:type", Boolean)
+], NotizComponent.prototype, "showBauernStubnBool", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showEdelweissBool'),
+    __metadata("design:type", Boolean)
+], NotizComponent.prototype, "showEdelweissBool", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showBerglerBool'),
+    __metadata("design:type", Boolean)
+], NotizComponent.prototype, "showBerglerBool", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showTeeStubeBool'),
+    __metadata("design:type", Boolean)
+], NotizComponent.prototype, "showTeeStubeBool", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showWaeldlerBool'),
+    __metadata("design:type", Boolean)
+], NotizComponent.prototype, "showWaeldlerBool", void 0);
+NotizComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-notiz',
+        template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/notiz/notiz.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], NotizComponent);
+
+//# sourceMappingURL=notiz.component.js.map
 
 /***/ }),
 
@@ -1789,7 +2027,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "html, body {\n  padding: 0;\n  margin: 0;\n  height: 100%;\n  background-color: #0a7a74;\n}\n\n.row {\n  height: 100%;\n}\n\n.line{\n  width: 100%;\n  height: 20px;\n  border-bottom: solid 10px #0a7a74;\n  position: absolute;\n  right: 0px;\n  top: 120px;\n}\n\n@media (min-width: 1200px) {\n  .printTwo {\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n    background-color: #0a7a74;\n    min-height: calc(100vh - 390px);\n  }\n}\n\n@media (min-width: 800px) {\n  .printTwo {\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n    background-color: #0a7a74;\n    min-height: 580px;\n  }\n}\n\n.printTwo {\n  overflow-x: auto;\n  -webkit-overflow-scrolling: touch;\n  background-color: #0a7a74;\n  min-height: 580px;\n}\n\n.row .inner-table {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n  max-height: calc(100vh - 100px);\n}\n\n.row4 {\n  margin-top: 80px;\n}\n\n@media (min-width: 1200px) {\n  .row4 {\n    margin-top: 350px;\n  }\n}\n\n.row .table-col {\n  min-height: 100vh;\n  max-height: 100vh;\n  background-color: #f3efe4;\n  padding: 20px 10px 20px 10px;\n  border-left: 5px solid #0a7a74;\n  border-right: 5px solid #0a7a74;\n  border-bottom: 20px solid #0a7a74;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n@media (min-width: 800px) {\n  .row .table-col {\n    min-height: calc(100vh +  375px);\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    border-left: 5px solid #0a7a74;\n    border-right: 5px solid #0a7a74;\n    border-bottom: 20px solid #0a7a74;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n  }\n}\n\n@media (min-width: 800px) {\n  .row .inner-table {\n    max-height: calc(100vh + 300px);\n    overflow: auto;\n    -webkit-overflow-scrolling: touch;\n  }\n}\n\n@media (min-width: 1200px) {\n  .row .table-col {\n    min-height: 100vh;\n    max-height: calc(100vh - 100px);\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    border-left: 5px solid #0a7a74;\n    border-right: 5px solid #0a7a74;\n    border-bottom: 20px solid #0a7a74;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n  }\n}\n\n@media (min-width: 1200px) {\n  .row .inner-table {\n    max-height: calc(100vh - 100px);\n    overflow: auto;\n    -webkit-overflow-scrolling: touch;\n  }\n}\n\n.row .print-col {\n  padding: 0;\n  background-color: #f3efe4;\n  border-left: 5px solid #0a7a74;\n  border-right: 5px solid #0a7a74;\n  min-height: 100vh;\n  border-bottom: 20px solid #0a7a74;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n@media (min-width: 800px) {\n  .row .upload-col {\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    border-left: 5px solid #0a7a74;\n    border-right: 5px solid #0a7a74;\n    border-bottom: 20px solid #0a7a74;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    min-height: 100vh;\n    max-height: 100vh;\n  }\n}\n\n@media (min-width: 1200px) {\n  .row .upload-col {\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    border-left: 5px solid #0a7a74;\n    border-right: 5px solid #0a7a74;\n    border-bottom: 20px solid #0a7a74;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    min-height: 100vh;\n    max-height: 100vh;\n\n  }\n}\n\n.row .upload-col {\n  background-color: #f3efe4;\n  padding: 0px 10px 20px 10px;\n  border-left: 5px solid #0a7a74;\n  border-right: 5px solid #0a7a74;\n  border-bottom: 20px solid #0a7a74;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  min-height: 100vh;\n  max-height: 100vh;\n}\n\n.section3 {\n  display: none;\n}\n\n.row1 {\n  height: calc((100vh - 250px) / 3);\n  overflow: auto;\n}\n\n.row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .printToCart3, .Tisch, .anleitung {\n  display: none;\n}\n\n@media (min-width: 1200px) {\n  .row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .printToCart3, .Tisch, .anleitung {\n    display: block;\n  }\n}\n\n.cards-container {\n  margin: 10px 0px 10px 0px;\n  padding: 10px 10px 40px 10px;\n}\n\n.row .container-fluid .table-col .inner-table .row3 .wrapper .cards-container {\n  border-radius: 3px;\n  border: solid 1px grey;\n  padding: 10px 10px 15px 10px;\n}\n\n.row .container-fluid .col-md-4 .row1 {\n  overflow: auto;\n  margin: 0 0 0 0;\n  display: inline-block;\n  width: 105%;\n  height: 232.5px;\n  padding-top: 20px;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper {\n  overflow: auto;\n  margin: 0 0 0 0;\n  display: inline-block;\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper .container {\n  overflow: auto;\n  margin: 20px 40px 20px 0;\n  display: inline-block;\n  max-width: 100%;\n  border-radius: 3px;\n}\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 {\n  overflow: auto;\n  margin: 0 auto;\n  display: inline-block;\n  width: 100%;\n  height: 800px;\n  padding-top: 20px;\n}\n\n.row .container-fluid h3 {\n  -ms-flex-line-pack: center;\n      align-content: center;\n  margin: 0 auto;\n  display: inline-block;\n  color: #0a7a74;\n  position: relative;\n  text-align: center;\n}\n\n.row .container-fluid .col-md-4 h3 {\n  margin: 0 auto;\n  color: #0a7a74;\n  position: relative;\n}\n\nbody > div.row > div > div.col-xs-12.col-lg-4.upload-col > app-upload > div > h3 {\n  margin: 0;\n}\n\n.row .container-fluid .upload-col .csv h3 {\n  margin: 0;\n}\n\n.row1 .col {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n\n.row1 .col:nth-child(1) {\n  -webkit-box-ordinal-group: 2;\n      -ms-flex-order: 1;\n          order: 1;\n}\n\n.row1 .col:nth-child(2) {\n  -webkit-box-ordinal-group: 1;\n      -ms-flex-order: 0;\n          order: 0;\n}\n\n.row1 .col:nth-child(3) {\n  -webkit-box-ordinal-group: 3;\n      -ms-flex-order: 2;\n          order: 2;\n}\n\n.row .col-md-4 .row2 {\n  padding-bottom: 10px;\n  position: relative;\n  min-height: 100%;\n  border-bottom: 1px solid red;\n}\n\n.card {\n  background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n  background: rgba(255,255,255, 1);\n  border-radius: 3px;\n  border: solid 1px grey;\n  padding: 10px 10px 15px 10px;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper .container .card p {\n  /*padding:10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .wrapper .container .card p {\n  /*padding:10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .row3 .row1 p {\n  /*padding: 10px 10px 10px 10px;*/\n  background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n  background: rgba(255,255,255, 1);\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 .wrapper .container .card p {\n  /*padding: 10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-6 .row {\n  background-color: #eaf3f3;\n  padding: 20px 10px 20px 10px;\n  height: 100%;\n}\n\n.table-item {\n  position: absolute;\n}\n\n.btn-send {\n  display: none;\n}\n\n@media (min-width: 1200px) {\n  .btn-send {\n    display: block;\n  }\n}\n\n.csv {\n  margin-bottom: 30px;\n}\n", ""]);
+exports.push([module.i, "html, body {\n  padding: 0;\n  margin: 0;\n  height: 100%;\n  background-color: #0a7a74;\n}\n\n.row {\n  height: 100%;\n}\n\n.line{\n  width: 100%;\n  height: 20px;\n  border-bottom: solid 10px #0a7a74;\n  position: absolute;\n  right: 0px;\n  top: 115px;\n}\n\n.line1{\n  width: 100%;\n  height: 20px;\n  border-bottom: solid 10px #0a7a74;\n  position: absolute;\n  right: 0px;\n  top: 115px;\n}\n\n@media (min-width: 1200px) {\n  .printTwo {\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n    background-color: #0a7a74;\n    min-height: calc(250vh - 390px);\n  }\n}\n\n@media (min-width: 800px) {\n  .printTwo {\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n    background-color: #0a7a74;\n    min-height: 580px;\n  }\n}\n\n.printTwo {\n  overflow-x: auto;\n  -webkit-overflow-scrolling: touch;\n  background-color: #0a7a74;\n  min-height: 580px;\n}\n\n.row .inner-table {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n  max-height: calc(100vh - 240px);\n}\n\n.row .table-col {\n  min-height: 100vh;\n  max-height: 100vh;\n  background-color: #f3efe4;\n  padding: 20px 10px 20px 10px;\n  border-left: 5px solid #0a7a74;\n  border-right: 5px solid #0a7a74;\n  border-bottom: 20px solid #0a7a74;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.row4 {\n  margin-top: 90px;\n}\n\n@media (min-width: 800px) {\n  .row .table-col {\n    min-height: calc(100vh +  275px);\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    border-left: 5px solid #0a7a74;\n    border-right: 5px solid #0a7a74;\n    border-bottom: 20px solid #0a7a74;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n  }\n}\n\n@media (min-width: 800px) {\n  .row .inner-table {\n    max-height: calc(100vh + 60px);\n    overflow: auto;\n    -webkit-overflow-scrolling: touch;\n  }\n}\n\n@media (min-width: 1200px) {\n  .row .table-col {\n    min-height: 100vh;\n    max-height: calc(100vh - 100px);\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    border-left: 5px solid #0a7a74;\n    border-right: 5px solid #0a7a74;\n    border-bottom: 20px solid #0a7a74;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n  }\n}\n\n@media (min-width: 1200px) {\n  .row .inner-table {\n    min-height: calc(100vh - 200px);\n    min-height: calc(100vh - 200px);\n    overflow: auto;\n    -webkit-overflow-scrolling: touch;\n  }\n}\n\n.row .print-col {\n  padding: 0;\n  background-color: #f3efe4;\n  border-left: 5px solid #0a7a74;\n  border-right: 5px solid #0a7a74;\n  min-height: 100vh;\n  border-bottom: 20px solid #0a7a74;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n@media (min-width: 800px) {\n  .row .upload-col {\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    border-left: 5px solid #0a7a74;\n    border-right: 5px solid #0a7a74;\n    border-bottom: 20px solid #0a7a74;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    min-height: 100vh;\n    max-height: 100vh;\n  }\n}\n\n@media (min-width: 1200px) {\n  .row .upload-col {\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    border-left: 5px solid #0a7a74;\n    border-right: 5px solid #0a7a74;\n    border-bottom: 20px solid #0a7a74;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    min-height: 100vh;\n    max-height: calc(100vh - 250px);\n\n  }\n}\n\n.row .upload-col {\n  background-color: #f3efe4;\n  padding: 0px 10px 20px 10px;\n  border-left: 5px solid #0a7a74;\n  border-right: 5px solid #0a7a74;\n  border-bottom: 20px solid #0a7a74;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  min-height: 100vh;\n  max-height: 100vh;\n}\n\n.section3 {\n  display: none;\n}\n\n.row1 {\n  height: calc((100vh - 250px) / 3);\n  overflow: auto;\n}\n\n.row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .printToCart3, .Tisch, .anleitung {\n  display: none;\n}\n\n@media (min-width: 1200px) {\n  .row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .printToCart3, .Tisch, .anleitung {\n    display: block;\n  }\n}\n\n.cards-container {\n  margin: 10px 0px 10px 0px;\n  padding: 10px 10px 40px 10px;\n}\n\n.row .container-fluid .table-col .inner-table .row3 .wrapper .cards-container {\n  border-radius: 3px;\n  border: solid 1px grey;\n  padding: 10px 10px 15px 10px;\n}\n\n.row .container-fluid .col-md-4 .row1 {\n  overflow: auto;\n  margin: 0 0 0 0;\n  display: inline-block;\n  width: 105%;\n  height: 232.5px;\n  padding-top: 20px;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper {\n  overflow: auto;\n  margin: 0 0 0 0;\n  display: inline-block;\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper .container {\n  overflow: auto;\n  margin: 20px 40px 20px 0;\n  display: inline-block;\n  max-width: 100%;\n  border-radius: 3px;\n}\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 {\n  overflow: auto;\n  margin: 0 auto;\n  display: inline-block;\n  width: 100%;\n  height: 800px;\n  padding-top: 20px;\n}\n\n.row .container-fluid h3 {\n  -ms-flex-line-pack: center;\n      align-content: center;\n  margin: 0 auto;\n  display: inline-block;\n  color: #0a7a74;\n  position: relative;\n  text-align: center;\n}\n\n.row .container-fluid .col-md-4 h3 {\n  margin: 0 auto;\n  color: #0a7a74;\n  position: relative;\n}\n\nbody > div.row > div > div.col-xs-12.col-lg-4.upload-col > app-upload > div > h3 {\n  margin: 0;\n}\n\n.row .container-fluid .upload-col .csv h3 {\n  margin: 0;\n}\n\n.row1 .col {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n\n.row1 .col:nth-child(1) {\n  -webkit-box-ordinal-group: 2;\n      -ms-flex-order: 1;\n          order: 1;\n}\n\n.row1 .col:nth-child(2) {\n  -webkit-box-ordinal-group: 1;\n      -ms-flex-order: 0;\n          order: 0;\n}\n\n.row1 .col:nth-child(3) {\n  -webkit-box-ordinal-group: 3;\n      -ms-flex-order: 2;\n          order: 2;\n}\n\n.row .col-md-4 .row2 {\n  padding-bottom: 10px;\n  position: relative;\n  min-height: 100%;\n  border-bottom: 1px solid red;\n}\n\n.card {\n  background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n  background: rgba(255,255,255, 1);\n  border-radius: 3px;\n  border: solid 1px grey;\n  padding: 10px 10px 15px 10px;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper .container .card p {\n  /*padding:10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .wrapper .container .card p {\n  /*padding:10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .row3 .row1 p {\n  /*padding: 10px 10px 10px 10px;*/\n  background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n  background: rgba(255,255,255, 1);\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 .wrapper .container .card p {\n  /*padding: 10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-6 .row {\n  background-color: #eaf3f3;\n  padding: 20px 10px 20px 10px;\n  height: 100%;\n}\n\n.table-item {\n  position: absolute;\n}\n\n.btn-send {\n  display: none;\n}\n\n@media (min-width: 1200px) {\n  .btn-send {\n    display: block;\n  }\n}\n\n.csv {\n  margin-bottom: 30px;\n}\n", ""]);
 
 // exports
 
@@ -1802,7 +2040,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/digitalerTischplan/tischplan.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n<head>\n  <title>Dashboard</title>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  <script src=\"node_modules/core-js/client/shim.min.js\"></script>\n  <script src=\"<your-libs-directory>/object-assign.min.js\"></script>\n</head>\n<body>\n<app-navigation [newInformationElements]=\"newInformationElements\"\n                      [tablesOccupied]=\"tablesOccupied\"\n                      (getTablesOccupied)=\"tablesOccupied = $event\">\n</app-navigation>\n<div id=\"charge-error\" class=\"alert alert-danger <% if ( !errMsg ) { %> hidden <% } %>\">\n  <%= errMsg  %>\n</div>\n<div class=\"row\">\n  <div class=\"container-fluid\">\n    <div class=\"col-xs-12 col-sm-8 col-lg-4 print-col\">\n      <h3 style=\"margin: 20px 0 20px 20px\">Info hinzufügen</h3>\n      <app-form [newInformationElements]=\"newInformationElements\"\n                [dateGenerated]=\"dateGenerated\"\n                [title]=\"title\"\n                [roomNumber]=\"roomNumber\"\n                [tableNumber]=\"tableNumber\"\n                [employee]=\"employee\"\n                [nameTraceInput]=\"nameTraceInput\"\n                [tablesBauernstube]=\"tablesBauernstube\"\n                [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\">\n      </app-form>\n      <app-departmentmenu\n        [buttonBgColor1]=\"buttonBgColor1\"\n        [buttonBgColor2]=\"buttonBgColor2\"\n        [buttonBgColor3]=\"buttonBgColor3\"\n        [buttonBgColor4]=\"buttonBgColor4\"\n        [buttonBgColor5]=\"buttonBgColor5\"\n        [fontColor1]=\"fontColor1\"\n        [fontColor2]=\"fontColor2\"\n        [fontColor3]=\"fontColor3\"\n        [fontColor4]=\"fontColor4\"\n        [fontColor5]=\"fontColor5\"\n        [showBauernStubnBool]=\"showBauernStubnBool\"\n        [showBerglerBool]=\"showBerglerBool\"\n        [showEdelweissBool]=\"showEdelweissBool\"\n        [showWaeldlerBool]=\"showWaeldlerBool\"\n        [showTeeStubeBool]=\"showTeeStubeBool\"\n        (showBauernStubnBoolChange)=\"showBauernStubnBool=$event\"\n        (showBerglerBoolChange)=\"showBerglerBool=$event\"\n        (showEdelweissBoolChange)=\"showEdelweissBool=$event\"\n        (showWaeldlerBoolChange)=\"showWaeldlerBool=$event\"\n        (showTeeStubeBoolChange)=\"showTeeStubeBool=$event\">\n      </app-departmentmenu>\n\n      <app-tableplan [tablesBauernstube]=\"tablesBauernstube\"\n                     [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                     [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                     [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                     [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                     [showBauernStubnBool]=\"showBauernStubnBool\"\n                     [showBerglerBool]=\"showBerglerBool\"\n                     [showEdelweissBool]=\"showEdelweissBool\"\n                     [showWaeldlerBool]=\"showWaeldlerBool\"\n                     [showTeeStubeBool]=\"showTeeStubeBool\"\n                     (movedBauernstube)=\"tablesBauernstube = $event\"\n                     (movedBerglerStubeHubertusStube)=\"tablesBerglerStubeHubertusStube = $event\"\n                     (movedEdelweissKaminStube)=\"tablesEdelweissKaminStube = $event\"\n                     (movedTeestubeTeelounge)=\"tablesTeestubeTeelounge = $event\"\n                     (movedWaeldlerStubeKristallStube)=\"tablesWaeldlerStubeKristallStube = $event\">\n      </app-tableplan>\n    </div>\n    <div class=\"col-xs-12 col-lg-4 upload-col\">\n      <app-upload></app-upload>\n      <div class=\"outer-cards\">\n        <h3>Im-Haus-Liste</h3>\n        <app-im-haus-liste [imHausListeElemente]=\"imHausListeElemente\"></app-im-haus-liste>\n        <h3>Anreise-Liste</h3>\n        <app-anreise-liste [anreiseListeElemente]=\"anreiseListeElemente\"></app-anreise-liste>\n        <h3>Traces-Liste</h3>\n        <app-traces-liste [tracesListeElemente]=\"tracesListeElemente\" ></app-traces-liste>\n      </div>\n    </div>\n\n    <div class=\"col-xs-12 col-sm-4 col-lg-4 table-col\">\n        <h3>Tisch Übersicht</h3>\n        <div class=\"inner-table\" style=\"padding: 0px 0px 0px 0px;\">\n          <div class=\"row3\">\n            <div class='wrapper' id=\"wrapper\">\n              <app-departments [tablesBauernstube]=\"tablesBauernstube\"\n                               [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                               [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                               [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                               [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                               [showBauernStubnBool]=\"showBauernStubnBool\"\n                               [showBerglerBool]=\"showBerglerBool\"\n                               [showEdelweissBool]=\"showEdelweissBool\"\n                               [showWaeldlerBool]=\"showWaeldlerBool\"\n                               [showTeeStubeBool]=\"showTeeStubeBool\"\n                               (dispensedBauernstube)=\"tablesBauernstube=$event\"\n                               (dispensedBerglerStubeHubertusStube)=\"tablesBerglerStubeHubertusStube=$event\"\n                               (dispensedEdelweissKaminStube)=\"tablesEdelweissKaminStube=$event\"\n                               (dispensedTeestubeTeelounge)=\"tablesTeestubeTeelounge=$event\"\n                               (dispensedWaeldlerStubeKristallStube)=\"tablesWaeldlerStubeKristallStube=$event\">\n              </app-departments>\n            </div>\n          </div>\n        </div>\n    </div>\n  </div>\n</div>\n</body>\n<app-print  [tables]=\"tables\"\n            [dateGeneratedListe]=\"dateGeneratedListe\"\n            [tablesBauernstube]=\"tablesBauernstube\"\n            [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n            [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n            [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n            [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n            [showBauernStubnBool]=\"showBauernStubnBool\"\n            [showBerglerBool]=\"showBerglerBool\"\n            [showEdelweissBool]=\"showEdelweissBool\"\n            [showWaeldlerBool]=\"showWaeldlerBool\"\n            [showTeeStubeBool]=\"showTeeStubeBool\"\n            (getTablesOccupied)=\"tablesOccupied = $event\"\n            (getTablesforAzListe)=\"tables = $event\">\n</app-print>\n</html>\n\n\n"
+module.exports = "<html>\n<head>\n  <title>Dashboard</title>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  <script src=\"node_modules/core-js/client/shim.min.js\"></script>\n  <script src=\"<your-libs-directory>/object-assign.min.js\"></script>\n</head>\n<body>\n<div id=\"charge-error\" class=\"alert alert-danger <% if ( !errMsg ) { %> hidden <% } %>\">\n  <%= errMsg  %>\n</div>\n<div class=\"row\">\n  <div class=\"container-fluid\">\n    <app-navigation [newInformationElements]=\"newInformationElements\"\n                    [tablesOccupied]=\"tablesOccupied\"\n                    (getTablesOccupied)=\"tablesOccupied = $event\">\n    </app-navigation>\n    <div class=\"col-xs-12 col-sm-8 col-lg-4 print-col\">\n      <app-form-menu style=\"min-height: 40px\" [buttonBgColorInfoForm]=\"buttonBgColorInfoForm\"\n                     [buttonBgColorNotizForm]=\"buttonBgColorNotizForm\"\n                     [fontColorInfoForm]=\"fontColorInfoForm\"\n                     [fontColorNotizForm]=\"fontColorNotizForm\"\n                     [showNotizFormBool]=\"showNotizFormBool\"\n                     [showInfoFormBool]=\"showInfoFormBool\"\n                     (showInfoFormBoolChange)=\"showInfoFormBool=$event\"\n                     (showNotizFormBoolChange)=\"showNotizFormBool=$event\">\n      </app-form-menu>\n      <app-form [newInformationElements]=\"newInformationElements\"\n                [dateGenerated]=\"dateGenerated\"\n                [title]=\"title\"\n                [roomNumber]=\"roomNumber\"\n                [tableNumber]=\"tableNumber\"\n                [employee]=\"employee\"\n                [nameTraceInput]=\"nameTraceInput\"\n                [tablesBauernstube]=\"tablesBauernstube\"\n                [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                [showNotizFormBool]=\"showNotizFormBool\"\n                [showInfoFormBool]=\"showInfoFormBool\"\n                [notizElements]=\"notizElements\"\n                (notizResponse)=\"notizElements=$event\"\n      >\n      </app-form>\n      <app-departmentmenu\n        [buttonBgColor1]=\"buttonBgColor1\"\n        [buttonBgColor2]=\"buttonBgColor2\"\n        [buttonBgColor3]=\"buttonBgColor3\"\n        [buttonBgColor4]=\"buttonBgColor4\"\n        [buttonBgColor5]=\"buttonBgColor5\"\n        [fontColor1]=\"fontColor1\"\n        [fontColor2]=\"fontColor2\"\n        [fontColor3]=\"fontColor3\"\n        [fontColor4]=\"fontColor4\"\n        [fontColor5]=\"fontColor5\"\n        [showBauernStubnBool]=\"showBauernStubnBool\"\n        [showBerglerBool]=\"showBerglerBool\"\n        [showEdelweissBool]=\"showEdelweissBool\"\n        [showWaeldlerBool]=\"showWaeldlerBool\"\n        [showTeeStubeBool]=\"showTeeStubeBool\"\n        (showBauernStubnBoolChange)=\"showBauernStubnBool=$event\"\n        (showBerglerBoolChange)=\"showBerglerBool=$event\"\n        (showEdelweissBoolChange)=\"showEdelweissBool=$event\"\n        (showWaeldlerBoolChange)=\"showWaeldlerBool=$event\"\n        (showTeeStubeBoolChange)=\"showTeeStubeBool=$event\">\n      </app-departmentmenu>\n      <app-tableplan [tablesBauernstube]=\"tablesBauernstube\"\n                     [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                     [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                     [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                     [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                     [showBauernStubnBool]=\"showBauernStubnBool\"\n                     [showBerglerBool]=\"showBerglerBool\"\n                     [showEdelweissBool]=\"showEdelweissBool\"\n                     [showWaeldlerBool]=\"showWaeldlerBool\"\n                     [showTeeStubeBool]=\"showTeeStubeBool\"\n                     (movedBauernstube)=\"tablesBauernstube = $event\"\n                     (movedBerglerStubeHubertusStube)=\"tablesBerglerStubeHubertusStube = $event\"\n                     (movedEdelweissKaminStube)=\"tablesEdelweissKaminStube = $event\"\n                     (movedTeestubeTeelounge)=\"tablesTeestubeTeelounge = $event\"\n                     (movedWaeldlerStubeKristallStube)=\"tablesWaeldlerStubeKristallStube = $event\">\n      </app-tableplan>\n    </div>\n    <div class=\"col-xs-12 col-lg-4 upload-col\">\n      <app-upload></app-upload>\n      <div class=\"outer-cards\">\n        <h3>Im-Haus-Liste</h3>\n        <app-im-haus-liste [imHausListeElemente]=\"imHausListeElemente\"></app-im-haus-liste>\n        <h3>Anreise-Liste</h3>\n        <app-anreise-liste [anreiseListeElemente]=\"anreiseListeElemente\"></app-anreise-liste>\n        <h3>Traces-Liste</h3>\n        <app-traces-liste [tracesListeElemente]=\"tracesListeElemente\" ></app-traces-liste>\n      </div>\n    </div>\n\n    <div class=\"col-xs-12 col-sm-4 col-lg-4 table-col\">\n      <h3>Übergabe Notiz</h3><br>\n      <app-notiz\n        [showBauernStubnBool]=\"showBauernStubnBool\"\n        [showBerglerBool]=\"showBerglerBool\"\n        [showEdelweissBool]=\"showEdelweissBool\"\n        [showWaeldlerBool]=\"showWaeldlerBool\"\n        [showTeeStubeBool]=\"showTeeStubeBool\"\n        [notizElements]=\"notizElements\">\n      </app-notiz>\n        <h3>Tisch Übersicht</h3>\n        <div class=\"inner-table\" style=\"padding: 0px 0px 0px 0px;\">\n          <div class=\"row3\">\n            <div class='wrapper' id=\"wrapper\">\n              <app-departments [tablesBauernstube]=\"tablesBauernstube\"\n                               [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                               [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                               [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                               [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                               [showBauernStubnBool]=\"showBauernStubnBool\"\n                               [showBerglerBool]=\"showBerglerBool\"\n                               [showEdelweissBool]=\"showEdelweissBool\"\n                               [showWaeldlerBool]=\"showWaeldlerBool\"\n                               [showTeeStubeBool]=\"showTeeStubeBool\"\n                               (dispensedBauernstube)=\"tablesBauernstube=$event\"\n                               (dispensedBerglerStubeHubertusStube)=\"tablesBerglerStubeHubertusStube=$event\"\n                               (dispensedEdelweissKaminStube)=\"tablesEdelweissKaminStube=$event\"\n                               (dispensedTeestubeTeelounge)=\"tablesTeestubeTeelounge=$event\"\n                               (dispensedWaeldlerStubeKristallStube)=\"tablesWaeldlerStubeKristallStube=$event\">\n              </app-departments>\n            </div>\n          </div>\n        </div>\n    </div>\n  </div>\n</div>\n</body>\n<app-print  [tables]=\"tables\"\n            [dateGeneratedListe]=\"dateGeneratedListe\"\n            [tablesBauernstube]=\"tablesBauernstube\"\n            [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n            [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n            [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n            [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n            [showBauernStubnBool]=\"showBauernStubnBool\"\n            [showBerglerBool]=\"showBerglerBool\"\n            [showEdelweissBool]=\"showEdelweissBool\"\n            [showWaeldlerBool]=\"showWaeldlerBool\"\n            [showTeeStubeBool]=\"showTeeStubeBool\"\n            (getTablesOccupied)=\"tablesOccupied = $event\"\n            (getTablesforAzListe)=\"tables = $event\">\n</app-print>\n</html>\n\n\n"
 
 /***/ }),
 
@@ -1877,6 +2115,11 @@ var TischplanComponent = (function () {
         this.tablesTeestubeTeelounge = [];
         this.filesToUpload = [];
         this.isDropped = [];
+        this.notizElements = [];
+        this.buttonBgColorInfoForm = "0a7a74";
+        this.buttonBgColorNotizForm = "0a7a74";
+        this.fontColorInfoForm = "f3efe4";
+        this.fontColorNotizForm = "f3efe4";
         this.dateGeneratedListe = new Date();
         this.buttonBgColor1 = "0a7a74";
         this.buttonBgColor2 = "0a7a74";
@@ -1919,6 +2162,16 @@ var TischplanComponent = (function () {
             });
             _this.anreiseListeElemente = anreiseListeElemente;
             console.log(_this.anreiseListeElemente);
+        });
+        this.tischplanService.getNotizElements()
+            .subscribe(function (informationElemente) {
+            if (informationElemente === null) {
+                return;
+            }
+            else {
+                _this.notizElements = informationElemente;
+                console.log(_this.notizElements);
+            }
         });
         this.tischplanService.getTables()
             .subscribe(function (tables) {
@@ -2395,6 +2648,17 @@ var TischplanService = (function () {
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('updateTracesListeElement', informationElements2, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    TischplanService.prototype.sendInformationToNotizBlock = function (newInformation) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+        headers.append('Content-Type', 'application/json');
+        console.log(headers);
+        return this.http.post('newNotiz', newInformation, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    TischplanService.prototype.getNotizElements = function () {
+        return this.http.get('getNotiz')
             .map(function (res) { return res.json(); });
     };
     return TischplanService;

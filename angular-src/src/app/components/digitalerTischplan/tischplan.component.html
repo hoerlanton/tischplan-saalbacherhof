@@ -8,17 +8,25 @@
   <script src="<your-libs-directory>/object-assign.min.js"></script>
 </head>
 <body>
-<app-navigation [newInformationElements]="newInformationElements"
-                      [tablesOccupied]="tablesOccupied"
-                      (getTablesOccupied)="tablesOccupied = $event">
-</app-navigation>
 <div id="charge-error" class="alert alert-danger <% if ( !errMsg ) { %> hidden <% } %>">
   <%= errMsg  %>
 </div>
 <div class="row">
   <div class="container-fluid">
+    <app-navigation [newInformationElements]="newInformationElements"
+                    [tablesOccupied]="tablesOccupied"
+                    (getTablesOccupied)="tablesOccupied = $event">
+    </app-navigation>
     <div class="col-xs-12 col-sm-8 col-lg-4 print-col">
-      <h3 style="margin: 20px 0 20px 20px">Info hinzufügen</h3>
+      <app-form-menu style="min-height: 40px" [buttonBgColorInfoForm]="buttonBgColorInfoForm"
+                     [buttonBgColorNotizForm]="buttonBgColorNotizForm"
+                     [fontColorInfoForm]="fontColorInfoForm"
+                     [fontColorNotizForm]="fontColorNotizForm"
+                     [showNotizFormBool]="showNotizFormBool"
+                     [showInfoFormBool]="showInfoFormBool"
+                     (showInfoFormBoolChange)="showInfoFormBool=$event"
+                     (showNotizFormBoolChange)="showNotizFormBool=$event">
+      </app-form-menu>
       <app-form [newInformationElements]="newInformationElements"
                 [dateGenerated]="dateGenerated"
                 [title]="title"
@@ -30,7 +38,12 @@
                 [tablesBerglerStubeHubertusStube]="tablesBerglerStubeHubertusStube"
                 [tablesEdelweissKaminStube]="tablesEdelweissKaminStube"
                 [tablesTeestubeTeelounge]="tablesTeestubeTeelounge"
-                [tablesWaeldlerStubeKristallStube]="tablesWaeldlerStubeKristallStube">
+                [tablesWaeldlerStubeKristallStube]="tablesWaeldlerStubeKristallStube"
+                [showNotizFormBool]="showNotizFormBool"
+                [showInfoFormBool]="showInfoFormBool"
+                [notizElements]="notizElements"
+                (notizResponse)="notizElements=$event"
+      >
       </app-form>
       <app-departmentmenu
         [buttonBgColor1]="buttonBgColor1"
@@ -54,7 +67,6 @@
         (showWaeldlerBoolChange)="showWaeldlerBool=$event"
         (showTeeStubeBoolChange)="showTeeStubeBool=$event">
       </app-departmentmenu>
-
       <app-tableplan [tablesBauernstube]="tablesBauernstube"
                      [tablesBerglerStubeHubertusStube]="tablesBerglerStubeHubertusStube"
                      [tablesEdelweissKaminStube]="tablesEdelweissKaminStube"
@@ -85,6 +97,15 @@
     </div>
 
     <div class="col-xs-12 col-sm-4 col-lg-4 table-col">
+      <h3>Übergabe Notiz</h3><br>
+      <app-notiz
+        [showBauernStubnBool]="showBauernStubnBool"
+        [showBerglerBool]="showBerglerBool"
+        [showEdelweissBool]="showEdelweissBool"
+        [showWaeldlerBool]="showWaeldlerBool"
+        [showTeeStubeBool]="showTeeStubeBool"
+        [notizElements]="notizElements">
+      </app-notiz>
         <h3>Tisch Übersicht</h3>
         <div class="inner-table" style="padding: 0px 0px 0px 0px;">
           <div class="row3">
