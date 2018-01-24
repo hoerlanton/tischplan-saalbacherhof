@@ -1,5 +1,5 @@
 <div id="printSectionId2" class="col-xs-12 printTwo">
-  <div class="row" style="background-color: #eaf3f3; border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;" >
+  <div class="row" style=" border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;" >
     <div *ngIf="showBerglerBool">
       <div *ngFor="let tableBerglerStubeHubertusStube of tablesBerglerStubeHubertusStube; let j = index;">
         <div class="t{{tableBerglerStubeHubertusStube.number}} table-item" (click)="moveTable(tableBerglerStubeHubertusStube, j)" [ngStyle]="{'top': tableBerglerStubeHubertusStube.topValue + 'px', 'left': tableBerglerStubeHubertusStube.leftValue + 'px', 'background-color': + tableBerglerStubeHubertusStube.bgColor, 'height': + tableBerglerStubeHubertusStube.height + 'px', 'width': + tableBerglerStubeHubertusStube.width + 'px', 'border': + tableBerglerStubeHubertusStube.border}">
