@@ -10,6 +10,7 @@ export class EdelweissKaminStubeComponent implements OnInit {
 
   @Input('tablesEdelweissKaminStube') tablesEdelweissKaminStube: Table[];
   @Input('showEdelweissBool') showEdelweissBool: boolean;
+  @Input('term') term: string;
   @Output()
   occupied:EventEmitter<any> = new EventEmitter();
 

@@ -12,6 +12,7 @@ export class NotizComponent implements OnInit {
   @Input('showBerglerBool') showBerglerBool: boolean;
   @Input('showTeeStubeBool') showTeeStubeBool: boolean;
   @Input('showWaeldlerBool') showWaeldlerBool: boolean;
+  @Input('showAlleBool') showAlleBool: boolean;
 
   constructor() {
   }

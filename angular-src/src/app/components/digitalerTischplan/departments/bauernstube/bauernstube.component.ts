@@ -10,6 +10,7 @@ export class BauernstubeComponent implements OnInit {
 
   @Input('tablesBauernstube') tablesBauernstube: Table[];
   @Input('showBauernStubnBool') showBauernStubnBool: boolean;
+  @Input('term') term: string;
   @Output()
   occupied:EventEmitter<any> = new EventEmitter();
 

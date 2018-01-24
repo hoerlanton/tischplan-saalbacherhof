@@ -10,6 +10,7 @@ export class TeestubeTeeloungeComponent implements OnInit {
 
   @Input('tablesTeestubeTeelounge') tablesTeestubeTeelounge: Table[];
   @Input('showTeeStubeBool') showTeeStubeBool: boolean;
+  @Input('term') term: string;
   @Output()
   occupied:EventEmitter<any> = new EventEmitter();
 

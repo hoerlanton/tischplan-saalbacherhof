@@ -54,11 +54,13 @@ export class TischplanComponent {
   buttonBgColor3: string;
   buttonBgColor4: string;
   buttonBgColor5: string;
+  buttonBgColor6: string;
   fontColor1: string;
   fontColor2: string;
   fontColor3: string;
   fontColor4: string;
   fontColor5: string;
+  fontColor6: string;
   leftValues: LeftValue[];
   topValues: any[] = [];
   dateGenerated: any;
@@ -89,6 +91,7 @@ export class TischplanComponent {
   showWaeldlerBool: boolean;
   showEdelweissBool: boolean;
   showTeeStubeBool: boolean;
+  showAlleBool: boolean;
   roomNumber: string;
   tableNumber: string;
   employee: string;
@@ -101,6 +104,7 @@ export class TischplanComponent {
   showInfoshowNotizFormBoolFormBool: boolean;
   showNotizFormBool: boolean;
   notizElements: any[] = [];
+  term: string;
 
 
   constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, private dragulaService: DragulaService ) {
@@ -114,10 +118,14 @@ export class TischplanComponent {
     this.buttonBgColor2 = "0a7a74";
     this.buttonBgColor3 = "0a7a74";
     this.buttonBgColor4 = "0a7a74";
+    this.buttonBgColor5 = "0a7a74";
+    this.buttonBgColor6 = "0a7a74";
     this.fontColor1 = "f3efe4";
     this.fontColor2 = "f3efe4";
     this.fontColor3 = "f3efe4";
     this.fontColor4 = "f3efe4";
+    this.fontColor5 = "f3efe4";
+    this.fontColor6 = "f3efe4";
     this.tablesOccupied = 0;
     this.backgroundColor = "ffffff";
     this.showBauernStubnBool = false;

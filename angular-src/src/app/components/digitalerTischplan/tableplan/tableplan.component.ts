@@ -21,6 +21,7 @@ export class TableplanComponent implements OnInit {
   @Input('showTeeStubeBool') showTeeStubeBool: boolean;
   @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
   @Input('showWaeldlerBool') showWaeldlerBool: boolean;
+  @Input('showAlleBool') showAlleBool: boolean;
   @Output()
   movedBerglerStubeHubertusStube:EventEmitter<any> = new EventEmitter();
   @Output()

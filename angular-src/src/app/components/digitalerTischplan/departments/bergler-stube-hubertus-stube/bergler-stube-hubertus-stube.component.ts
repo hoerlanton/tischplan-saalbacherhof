@@ -10,6 +10,7 @@ export class BerglerStubeHubertusStubeComponent implements OnInit {
 
   @Input('tablesBerglerStubeHubertusStube') tablesBerglerStubeHubertusStube: Table[];
   @Input('showBerglerBool') showBerglerBool: boolean;
+  @Input('term') term: string;
   @Output()
   occupied:EventEmitter<any> = new EventEmitter();
 

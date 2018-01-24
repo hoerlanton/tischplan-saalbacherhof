@@ -26,11 +26,13 @@ import { EdelweissKaminStubeComponent } from './components/digitalerTischplan/de
 import { TeestubeTeeloungeComponent } from './components/digitalerTischplan/departments/teestube-teelounge/teestube-teelounge.component';
 import { FormMenuComponent } from './components/digitalerTischplan/form-menu/form-menu.component';
 import { NotizComponent } from './components/digitalerTischplan/notiz/notiz.component';
-
+import { AlleComponent } from './components/digitalerTischplan/departments/alle/alle.component';
+import { SearchComponent } from './components/digitalerTischplan/search/search.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
-    AppComponent, TischplanComponent, UploadComponent, TracesListeComponent, ImHausListeComponent, AnreiseListeComponent, TableplanComponent, NavigationComponent, PrintComponent, FormComponent, DepartmentsComponent, DepartmentmenuComponent, BauernstubeComponent, BerglerStubeHubertusStubeComponent, WaeldlerStubeKristallStubeComponent, EdelweissKaminStubeComponent, TeestubeTeeloungeComponent, FormMenuComponent, NotizComponent
+    AppComponent, TischplanComponent, UploadComponent, TracesListeComponent, ImHausListeComponent, AnreiseListeComponent, TableplanComponent, NavigationComponent, PrintComponent, FormComponent, DepartmentsComponent, DepartmentmenuComponent, BauernstubeComponent, BerglerStubeHubertusStubeComponent, WaeldlerStubeKristallStubeComponent, EdelweissKaminStubeComponent, TeestubeTeeloungeComponent, FormMenuComponent, NotizComponent, AlleComponent, SearchComponent
   ],
   imports: [
     FormsModule,
@@ -39,7 +41,8 @@ import { NotizComponent } from './components/digitalerTischplan/notiz/notiz.comp
     DragulaModule,
     ReactiveFormsModule,
     BrowserModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

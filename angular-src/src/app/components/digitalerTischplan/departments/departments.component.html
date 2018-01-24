@@ -1,5 +1,6 @@
-<app-bauernstube [tablesBauernstube]="tablesBauernstube" [showBauernStubnBool]="showBauernStubnBool" (occupied)="occupied($event)"></app-bauernstube>
-<app-bergler-stube-hubertus-stube [tablesBerglerStubeHubertusStube]="tablesBerglerStubeHubertusStube" [showBerglerBool]="showBerglerBool" (occupied)="occupied($event)"></app-bergler-stube-hubertus-stube>
-<app-edelweiss-kamin-stube [tablesEdelweissKaminStube]="tablesEdelweissKaminStube" [showEdelweissBool]="showEdelweissBool" (occupied)="occupied($event)"></app-edelweiss-kamin-stube>
-<app-teestube-teelounge [tablesTeestubeTeelounge]="tablesTeestubeTeelounge" [showTeeStubeBool]="showTeeStubeBool" (occupied)="occupied($event)"></app-teestube-teelounge>
-<app-waeldler-stube-kristall-stube [tablesWaeldlerStubeKristallStube]="tablesWaeldlerStubeKristallStube" [showWaeldlerBool]="showWaeldlerBool" (occupied)="occupied($event)"></app-waeldler-stube-kristall-stube>
+<app-bauernstube [term]="term" [tablesBauernstube]="tablesBauernstube" [showBauernStubnBool]="showBauernStubnBool" (occupied)="occupied($event)"></app-bauernstube>
+<app-bergler-stube-hubertus-stube [term]="term" [tablesBerglerStubeHubertusStube]="tablesBerglerStubeHubertusStube" [showBerglerBool]="showBerglerBool" (occupied)="occupied($event)"></app-bergler-stube-hubertus-stube>
+<app-edelweiss-kamin-stube [term]="term" [tablesEdelweissKaminStube]="tablesEdelweissKaminStube" [showEdelweissBool]="showEdelweissBool" (occupied)="occupied($event)"></app-edelweiss-kamin-stube>
+<app-teestube-teelounge  [term]="term" [tablesTeestubeTeelounge]="tablesTeestubeTeelounge" [showTeeStubeBool]="showTeeStubeBool" (occupied)="occupied($event)"></app-teestube-teelounge>
+<app-waeldler-stube-kristall-stube [term]="term" [tablesWaeldlerStubeKristallStube]="tablesWaeldlerStubeKristallStube" [showWaeldlerBool]="showWaeldlerBool" (occupied)="occupied($event)"></app-waeldler-stube-kristall-stube>
+<app-alle [term]="term" [tablesBauernstube]="tablesBauernstube" [tablesWaeldlerStubeKristallStube]="tablesWaeldlerStubeKristallStube" [tablesTeestubeTeelounge]="tablesTeestubeTeelounge" [tablesEdelweissKaminStube]="tablesEdelweissKaminStube" [tablesBerglerStubeHubertusStube]="tablesBerglerStubeHubertusStube" (occupied)="occupied($event)"></app-alle>

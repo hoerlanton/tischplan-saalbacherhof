@@ -20,6 +20,7 @@ export class DepartmentsComponent implements OnInit {
   @Input('showTeeStubeBool') showTeeStubeBool: boolean;
   @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
   @Input('showWaeldlerBool') showWaeldlerBool: boolean;
+  @Input('term') term: string;
   @Output()
   dispensedBauernstube:EventEmitter<any> = new EventEmitter();
   @Output()

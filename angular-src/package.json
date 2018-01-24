@@ -12,6 +12,8 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/core": "0.0.23",
+    "@angular-devkit/schematics": "0.0.42",
     "@angular/animations": "^4.0.0",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
@@ -29,13 +31,12 @@
     "js-yaml": "^3.10.0",
     "ng2-dragula": "^1.5.0",
     "ng2-dropdown": "0.0.21",
+    "ng2-search-filter": "^0.3.1",
     "ngx-bootstrap": "^2.0.0-rc.0",
     "renderkid": "^2.0.1",
     "rxjs": "^5.5.2",
     "web-animations-js": "^2.3.1",
-    "zone.js": "^0.8.14",
-    "@angular-devkit/schematics": "0.0.42",
-    "@angular-devkit/core": "0.0.23"
+    "zone.js": "^0.8.14"
   },
   "devDependencies": {
     "@angular/cli": "^1.6.5",

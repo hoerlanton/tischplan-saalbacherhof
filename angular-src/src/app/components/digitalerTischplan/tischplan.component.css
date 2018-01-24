@@ -25,7 +25,7 @@ html, body {
   border-bottom: solid 10px #0a7a74;
   position: absolute;
   right: 0px;
-  top: 115px;
+  top:95px;
 }
 
 
@@ -63,7 +63,6 @@ html, body {
 
 .row .table-col {
   min-height: 100vh;
-  max-height: 100vh;
   background-color: #f3efe4;
   padding: 20px 10px 20px 10px;
   border-left: 5px solid #0a7a74;
@@ -99,7 +98,6 @@ html, body {
 @media (min-width: 1200px) {
   .row .table-col {
     min-height: 100vh;
-    max-height: calc(100vh - 100px);
     background-color: #f3efe4;
     padding: 20px 10px 20px 10px;
     border-left: 5px solid #0a7a74;
@@ -112,7 +110,7 @@ html, body {
 @media (min-width: 1200px) {
   .row .inner-table {
     min-height: calc(100vh - 200px);
-    min-height: calc(100vh - 200px);
+    max-height: calc(100vh - 350px);
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }

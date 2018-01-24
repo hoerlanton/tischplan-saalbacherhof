@@ -59,4 +59,8 @@ export class NavigationComponent implements OnInit {
     popupWinindow.document.close();
   }
 
+  neuLaden() {
+    window.location.reload()
+  }
+
 }

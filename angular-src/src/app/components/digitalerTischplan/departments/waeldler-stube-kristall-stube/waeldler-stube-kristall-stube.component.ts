@@ -10,6 +10,7 @@ export class WaeldlerStubeKristallStubeComponent implements OnInit {
 
   @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
   @Input('showWaeldlerBool') showWaeldlerBool: boolean;
+  @Input('term') term: string;
   @Output()
   occupied:EventEmitter<any> = new EventEmitter();
 
