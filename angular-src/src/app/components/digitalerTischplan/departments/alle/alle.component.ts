@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Table } from '../../../../../../Table';
 
 @Component({
@@ -14,10 +14,26 @@ export class AlleComponent implements OnInit {
   @Input('tablesTeestubeTeelounge') tablesTeestubeTeelounge: Table[];
   @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
   @Input('term') term: string;
+  @Output()
+  occupied:EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
+
+
+  occupy(table, j) {
+    this.occupied.emit({table, j});
+  }
+
+  getStyle(j) {
+    if (j) {
+      return "solid 3px red";
+    } else {
+      return "";
+    }
+  }
+
 
 }

@@ -6,6 +6,7 @@
       <div class='cards-container' id='containerEdelweissKaminStube' [ngStyle]="{'background-color': + tableEdelweissKaminStube.bgColor}">
         <div class="table" [ngStyle]="{'background-color': '#' + tableEdelweissKaminStube.bgColor}">
           <div *ngIf="tableEdelweissKaminStube.isBesetzt === 'true'">
+            <div [style.border]="getStyle(tablesEdelweissKaminStube[j].trace)">
             <p style="background-color: #FFFFFF; padding: 10px">
               <b> Name:</b> {{tableEdelweissKaminStube.nameValue}}<br>
               <b> Zimmernummer:</b> {{tableEdelweissKaminStube.zimmernummerValue}}<br>
@@ -17,7 +18,9 @@
               <b> Trace:</b> {{tableEdelweissKaminStube.trace}}<br>
               <b> Bemerkung:</b> {{tableEdelweissKaminStube.bemerkungValue}}<br>
             </p>
+            </div>
             <div *ngIf="tableEdelweissKaminStube.nameValue2">
+              <div [style.border]="getStyle(tablesEdelweissKaminStube[j].trace2)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableEdelweissKaminStube.nameValue2}}<br>
                 <b> Zimmernummer:</b> {{tableEdelweissKaminStube.zimmernummerValue2}}<br>
@@ -29,8 +32,10 @@
                 <b> Trace:</b> {{tableEdelweissKaminStube.trace2}}<br>
                 <b> BemerkungValue:</b> {{tableEdelweissKaminStube.bemerkungValue2}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableEdelweissKaminStube.nameValue3">
+              <div [style.border]="getStyle(tablesEdelweissKaminStube[j].trace3)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableEdelweissKaminStube.nameValue3}}<br>
                 <b> Zimmernummer:</b> {{tableEdelweissKaminStube.zimmernummerValue3}}<br>
@@ -42,8 +47,10 @@
                 <b> Trace:</b> {{tableEdelweissKaminStube.trace3}}<br>
                 <b> BemerkungValue:</b> {{tableEdelweissKaminStube.bemerkungValue3}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableEdelweissKaminStube.nameValue4">
+              <div [style.border]="getStyle(tablesEdelweissKaminStube[j].trace4)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableEdelweissKaminStube.nameValue4}}<br>
                 <b> Zimmernummer:</b> {{tableEdelweissKaminStube.zimmernummerValue4}}<br>
@@ -55,8 +62,10 @@
                 <b> Trace:</b> {{tableEdelweissKaminStube.trace4}}<br>
                 <b> BemerkungValue:</b> {{tableEdelweissKaminStube.bemerkungValue4}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableEdelweissKaminStube.nameValue5">
+              <div [style.border]="getStyle(tablesEdelweissKaminStube[j].trace5)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableEdelweissKaminStube.nameValue5}}<br>
                 <b> Zimmernummer:</b> {{tableEdelweissKaminStube.zimmernummerValue5}}<br>
@@ -68,8 +77,10 @@
                 <b> Trace:</b> {{tableEdelweissKaminStube.trace5}}<br>
                 <b> BemerkungValue:</b> {{tableEdelweissKaminStube.bemerkungValue5}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableEdelweissKaminStube.nameValue6">
+              <div [style.border]="getStyle(tablesEdelweissKaminStube[j].trace6)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableEdelweissKaminStube.nameValue6}}<br>
                 <b> Zimmernummer:</b> {{tableEdelweissKaminStube.zimmernummerValue6}}<br>
@@ -81,8 +92,10 @@
                 <b> Trace:</b> {{tableEdelweissKaminStube.trace6}}<br>
                 <b> BemerkungValue:</b> {{tableEdelweissKaminStube.bemerkungValue6}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableEdelweissKaminStube.nameValue7">
+              <div [style.border]="getStyle(tablesEdelweissKaminStube[j].trace7)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableEdelweissKaminStube.nameValue7}}<br>
                 <b> Zimmernummer:</b> {{tableEdelweissKaminStube.zimmernummerValue7}}<br>
@@ -94,8 +107,10 @@
                 <b> Trace:</b> {{tableEdelweissKaminStube.trace7}}<br>
                 <b> BemerkungValue:</b> {{tableEdelweissKaminStube.bemerkungValue7}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableEdelweissKaminStube.nameValue8">
+              <div [style.border]="getStyle(tablesEdelweissKaminStube[j].trace8)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableEdelweissKaminStube.nameValue8}}<br>
                 <b> Zimmernummer:</b> {{tableEdelweissKaminStube.zimmernummerValue8}}<br>
@@ -107,8 +122,10 @@
                 <b> Trace:</b> {{tableEdelweissKaminStube.trace8}}<br>
                 <b> BemerkungValue:</b> {{tableEdelweissKaminStube.bemerkungValue8}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableEdelweissKaminStube.nameValue9">
+              <div [style.border]="getStyle(tablesEdelweissKaminStube[j].trace9)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableEdelweissKaminStube.nameValue9}}<br>
                 <b> Zimmernummer:</b> {{tableEdelweissKaminStube.zimmernummerValue9}}<br>
@@ -120,8 +137,10 @@
                 <b> Trace:</b> {{tableEdelweissKaminStube.trace9}}<br>
                 <b> BemerkungValue:</b> {{tableEdelweissKaminStube.bemerkungValue9}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableEdelweissKaminStube.nameValue10">
+              <div [style.border]="getStyle(tablesEdelweissKaminStube[j].trace10)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableEdelweissKaminStube.nameValue10}}<br>
                 <b> Zimmernummer:</b> {{tableEdelweissKaminStube.zimmernummerValue10}}<br>
@@ -133,8 +152,10 @@
                 <b> Trace:</b> {{tableEdelweissKaminStube.trace10}}<br>
                 <b> BemerkungValue:</b> {{tableEdelweissKaminStube.bemerkungValue10}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableEdelweissKaminStube.nameValue11">
+              <div [style.border]="getStyle(tablesEdelweissKaminStube[j].trace11)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableEdelweissKaminStube.nameValue11}}<br>
                 <b> Zimmernummer:</b> {{tableEdelweissKaminStube.zimmernummerValue11}}<br>
@@ -146,8 +167,10 @@
                 <b> Trace:</b> {{tableEdelweissKaminStube.trace11}}<br>
                 <b> BemerkungValue:</b> {{tableEdelweissKaminStube.bemerkungValue11}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableEdelweissKaminStube.nameValue12">
+              <div [style.border]="getStyle(tablesEdelweissKaminStube[j].trace12)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableEdelweissKaminStube.nameValue12}}<br>
                 <b> Zimmernummer:</b> {{tableEdelweissKaminStube.zimmernummerValue12}}<br>
@@ -159,8 +182,10 @@
                 <b> Trace:</b> {{tableEdelweissKaminStube.trace12}}<br>
                 <b> BemerkungValue:</b> {{tableEdelweissKaminStube.bemerkungValue12}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableEdelweissKaminStube.nameValue13">
+              <div [style.border]="getStyle(tablesEdelweissKaminStube[j].trace13)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableEdelweissKaminStube.nameValue13}}<br>
                 <b> Zimmernummer:</b> {{tableEdelweissKaminStube.zimmernummerValue13}}<br>
@@ -172,8 +197,10 @@
                 <b> Trace:</b> {{tableEdelweissKaminStube.trace13}}<br>
                 <b> BemerkungValue:</b> {{tableEdelweissKaminStube.bemerkungValue13}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableEdelweissKaminStube.nameValue14">
+              <div [style.border]="getStyle(tablesEdelweissKaminStube[j].trace14)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableEdelweissKaminStube.nameValue14}}<br>
                 <b> Zimmernummer:</b> {{tableEdelweissKaminStube.zimmernummerValue14}}<br>
@@ -185,8 +212,10 @@
                 <b> Trace:</b> {{tableEdelweissKaminStube.trace14}}<br>
                 <b> BemerkungValue:</b> {{tableEdelweissKaminStube.bemerkungValue14}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableEdelweissKaminStube.nameValue15">
+              <div [style.border]="getStyle(tablesEdelweissKaminStube[j].trace15)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableEdelweissKaminStube.nameValue15}}<br>
                 <b> Zimmernummer:</b> {{tableEdelweissKaminStube.zimmernummerValue15}}<br>
@@ -198,6 +227,7 @@
                 <b> Trace:</b> {{tableEdelweissKaminStube.trace15}}<br>
                 <b> BemerkungValue:</b> {{tableEdelweissKaminStube.bemerkungValue15}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableEdelweissKaminStube.newTraceName">
               <p style="background-color: #FFFFFF; border: solid 3px red">

@@ -6,6 +6,7 @@
       <div class='cards-container' id='containerBauernstube' [ngStyle]="{'background-color': + tableBauernstube.bgColor}">
         <div class="table" [ngStyle]="{'background-color': '#' + tableBauernstube.bgColor}">
           <div *ngIf="tableBauernstube.isBesetzt === 'true'">
+            <div [style.border]="getStyle(tablesBauernstube[j].trace)">
             <p style="background-color: #FFFFFF; padding: 10px">
               <b> Name:</b> {{tableBauernstube.nameValue}}<br>
               <b> Zimmernummer:</b> {{tableBauernstube.zimmernummerValue}}<br>
@@ -17,7 +18,9 @@
               <b> Trace:</b> {{tableBauernstube.trace}}<br>
               <b> Bemerkung:</b> {{tableBauernstube.bemerkungValue}}<br>
             </p>
+            </div>
             <div *ngIf="tableBauernstube.nameValue2">
+              <div [style.border]="getStyle(tablesBauernstube[j].trace2)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBauernstube.nameValue2}}<br>
                 <b> Zimmernummer:</b> {{tableBauernstube.zimmernummerValue2}}<br>
@@ -29,8 +32,10 @@
                 <b> Trace:</b> {{tableBauernstube.trace2}}<br>
                 <b> BemerkungValue:</b> {{tableBauernstube.bemerkungValue2}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBauernstube.nameValue3">
+              <div [style.border]="getStyle(tablesBauernstube[j].trace3)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBauernstube.nameValue3}}<br>
                 <b> Zimmernummer:</b> {{tableBauernstube.zimmernummerValue3}}<br>
@@ -42,8 +47,10 @@
                 <b> Trace:</b> {{tableBauernstube.trace3}}<br>
                 <b> BemerkungValue:</b> {{tableBauernstube.bemerkungValue3}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBauernstube.nameValue4">
+              <div [style.border]="getStyle(tablesBauernstube[j].trace4)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBauernstube.nameValue4}}<br>
                 <b> Zimmernummer:</b> {{tableBauernstube.zimmernummerValue4}}<br>
@@ -55,8 +62,10 @@
                 <b> Trace:</b> {{tableBauernstube.trace4}}<br>
                 <b> BemerkungValue:</b> {{tableBauernstube.bemerkungValue4}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBauernstube.nameValue5">
+              <div [style.border]="getStyle(tablesBauernstube[j].trace5)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBauernstube.nameValue5}}<br>
                 <b> Zimmernummer:</b> {{tableBauernstube.zimmernummerValue5}}<br>
@@ -68,8 +77,10 @@
                 <b> Trace:</b> {{tableBauernstube.trace5}}<br>
                 <b> BemerkungValue:</b> {{tableBauernstube.bemerkungValue5}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBauernstube.nameValue6">
+              <div [style.border]="getStyle(tablesBauernstube[j].trace6)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBauernstube.nameValue6}}<br>
                 <b> Zimmernummer:</b> {{tableBauernstube.zimmernummerValue6}}<br>
@@ -81,8 +92,10 @@
                 <b> Trace:</b> {{tableBauernstube.trace6}}<br>
                 <b> BemerkungValue:</b> {{tableBauernstube.bemerkungValue6}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBauernstube.nameValue7">
+              <div [style.border]="getStyle(tablesBauernstube[j].trace7)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBauernstube.nameValue7}}<br>
                 <b> Zimmernummer:</b> {{tableBauernstube.zimmernummerValue7}}<br>
@@ -94,8 +107,10 @@
                 <b> Trace:</b> {{tableBauernstube.trace7}}<br>
                 <b> BemerkungValue:</b> {{tableBauernstube.bemerkungValue7}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBauernstube.nameValue8">
+              <div [style.border]="getStyle(tablesBauernstube[j].trace8)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBauernstube.nameValue8}}<br>
                 <b> Zimmernummer:</b> {{tableBauernstube.zimmernummerValue8}}<br>
@@ -107,8 +122,10 @@
                 <b> Trace:</b> {{tableBauernstube.trace8}}<br>
                 <b> BemerkungValue:</b> {{tableBauernstube.bemerkungValue8}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBauernstube.nameValue9">
+              <div [style.border]="getStyle(tablesBauernstube[j].trace9)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBauernstube.nameValue9}}<br>
                 <b> Zimmernummer:</b> {{tableBauernstube.zimmernummerValue9}}<br>
@@ -122,6 +139,7 @@
               </p>
             </div>
             <div *ngIf="tableBauernstube.nameValue10">
+              <div [style.border]="getStyle(tablesBauernstube[j].trace10)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBauernstube.nameValue10}}<br>
                 <b> Zimmernummer:</b> {{tableBauernstube.zimmernummerValue10}}<br>
@@ -133,8 +151,10 @@
                 <b> Trace:</b> {{tableBauernstube.trace10}}<br>
                 <b> BemerkungValue:</b> {{tableBauernstube.bemerkungValue10}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBauernstube.nameValue11">
+              <div [style.border]="getStyle(tablesBauernstube[j].trace11)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBauernstube.nameValue11}}<br>
                 <b> Zimmernummer:</b> {{tableBauernstube.zimmernummerValue11}}<br>
@@ -146,8 +166,10 @@
                 <b> Trace:</b> {{tableBauernstube.trace11}}<br>
                 <b> BemerkungValue:</b> {{tableBauernstube.bemerkungValue11}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBauernstube.nameValue12">
+              <div [style.border]="getStyle(tablesBauernstube[j].trace12)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBauernstube.nameValue12}}<br>
                 <b> Zimmernummer:</b> {{tableBauernstube.zimmernummerValue12}}<br>
@@ -159,8 +181,10 @@
                 <b> Trace:</b> {{tableBauernstube.trace12}}<br>
                 <b> BemerkungValue:</b> {{tableBauernstube.bemerkungValue12}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBauernstube.nameValue13">
+              <div [style.border]="getStyle(tablesBauernstube[j].trace13)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBauernstube.nameValue13}}<br>
                 <b> Zimmernummer:</b> {{tableBauernstube.zimmernummerValue13}}<br>
@@ -172,8 +196,10 @@
                 <b> Trace:</b> {{tableBauernstube.trace13}}<br>
                 <b> BemerkungValue:</b> {{tableBauernstube.bemerkungValue13}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBauernstube.nameValue14">
+              <div [style.border]="getStyle(tablesBauernstube[j].trace14)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBauernstube.nameValue14}}<br>
                 <b> Zimmernummer:</b> {{tableBauernstube.zimmernummerValue14}}<br>
@@ -185,8 +211,10 @@
                 <b> Trace:</b> {{tableBauernstube.trace14}}<br>
                 <b> BemerkungValue:</b> {{tableBauernstube.bemerkungValue14}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBauernstube.nameValue15">
+              <div [style.border]="getStyle(tablesBauernstube[j].trace15)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBauernstube.nameValue15}}<br>
                 <b> Zimmernummer:</b> {{tableBauernstube.zimmernummerValue15}}<br>
@@ -198,6 +226,7 @@
                 <b> Trace:</b> {{tableBauernstube.trace15}}<br>
                 <b> BemerkungValue:</b> {{tableBauernstube.bemerkungValue15}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBauernstube.newTraceName">
               <p style="background-color: #FFFFFF; border: solid 3px red">

@@ -6,8 +6,9 @@
       <div class='cards-container' id='containerBerglerStubeHubertusStube'  [ngStyle]="{'background-color': + tableBerglerStubeHubertusStube.bgColor}">
         <div class="table" [ngStyle]="{'background-color': '#' + tableBerglerStubeHubertusStube.bgColor}">
           <div *ngIf="tableBerglerStubeHubertusStube.isBesetzt === 'true'">
+            <div [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace)">
             <p style="background-color: #FFFFFF; padding: 10px">
-              <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue}}<br>
+            <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue}}<br>
               <b> Zimmernummer:</b> {{tableBerglerStubeHubertusStube.zimmernummerValue}}<br>
               <b> Anreise Datum:</b> {{tableBerglerStubeHubertusStube.anreiseValue}}<br>
               <b> Abreise Datum:</b> {{tableBerglerStubeHubertusStube.abreiseValue}}<br>
@@ -17,7 +18,9 @@
               <b> Trace:</b> {{tableBerglerStubeHubertusStube.trace}}<br>
               <b> Bemerkung:</b> {{tableBerglerStubeHubertusStube.bemerkungValue}}<br>
             </p>
+            </div>
             <div *ngIf="tableBerglerStubeHubertusStube.nameValue2">
+              <div [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace2)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue2}}<br>
                 <b> Zimmernummer:</b> {{tableBerglerStubeHubertusStube.zimmernummerValue2}}<br>
@@ -29,8 +32,10 @@
                 <b> Trace:</b> {{tableBerglerStubeHubertusStube.trace2}}<br>
                 <b> BemerkungValue:</b> {{tableBerglerStubeHubertusStube.bemerkungValue2}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBerglerStubeHubertusStube.nameValue3">
+              <div [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace3)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue3}}<br>
                 <b> Zimmernummer:</b> {{tableBerglerStubeHubertusStube.zimmernummerValue3}}<br>
@@ -42,8 +47,10 @@
                 <b> Trace:</b> {{tableBerglerStubeHubertusStube.trace3}}<br>
                 <b> BemerkungValue:</b> {{tableBerglerStubeHubertusStube.bemerkungValue3}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBerglerStubeHubertusStube.nameValue4">
+              <div [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace4)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue4}}<br>
                 <b> Zimmernummer:</b> {{tableBerglerStubeHubertusStube.zimmernummerValue4}}<br>
@@ -55,8 +62,10 @@
                 <b> Trace:</b> {{tableBerglerStubeHubertusStube.trace4}}<br>
                 <b> BemerkungValue:</b> {{tableBerglerStubeHubertusStube.bemerkungValue4}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBerglerStubeHubertusStube.nameValue5">
+              <div [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace5)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue5}}<br>
                 <b> Zimmernummer:</b> {{tableBerglerStubeHubertusStube.zimmernummerValue5}}<br>
@@ -68,8 +77,10 @@
                 <b> Trace:</b> {{tableBerglerStubeHubertusStube.trace5}}<br>
                 <b> BemerkungValue:</b> {{tableBerglerStubeHubertusStube.bemerkungValue5}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBerglerStubeHubertusStube.nameValue6">
+              <div [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace6)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue6}}<br>
                 <b> Zimmernummer:</b> {{tableBerglerStubeHubertusStube.zimmernummerValue6}}<br>
@@ -81,8 +92,10 @@
                 <b> Trace:</b> {{tableBerglerStubeHubertusStube.trace6}}<br>
                 <b> BemerkungValue:</b> {{tableBerglerStubeHubertusStube.bemerkungValue6}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBerglerStubeHubertusStube.nameValue7">
+              <div [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace7)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue7}}<br>
                 <b> Zimmernummer:</b> {{tableBerglerStubeHubertusStube.zimmernummerValue7}}<br>
@@ -94,8 +107,10 @@
                 <b> Trace:</b> {{tableBerglerStubeHubertusStube.trace7}}<br>
                 <b> BemerkungValue:</b> {{tableBerglerStubeHubertusStube.bemerkungValue7}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBerglerStubeHubertusStube.nameValue8">
+              <div [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace8)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue8}}<br>
                 <b> Zimmernummer:</b> {{tableBerglerStubeHubertusStube.zimmernummerValue8}}<br>
@@ -107,8 +122,10 @@
                 <b> Trace:</b> {{tableBerglerStubeHubertusStube.trace8}}<br>
                 <b> BemerkungValue:</b> {{tableBerglerStubeHubertusStube.bemerkungValue8}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBerglerStubeHubertusStube.nameValue9">
+              <div [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace9)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue9}}<br>
                 <b> Zimmernummer:</b> {{tableBerglerStubeHubertusStube.zimmernummerValue9}}<br>
@@ -120,8 +137,10 @@
                 <b> Trace:</b> {{tableBerglerStubeHubertusStube.trace9}}<br>
                 <b> BemerkungValue:</b> {{tableBerglerStubeHubertusStube.bemerkungValue9}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBerglerStubeHubertusStube.nameValue10">
+              <div [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace10)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue10}}<br>
                 <b> Zimmernummer:</b> {{tableBerglerStubeHubertusStube.zimmernummerValue10}}<br>
@@ -133,8 +152,10 @@
                 <b> Trace:</b> {{tableBerglerStubeHubertusStube.trace10}}<br>
                 <b> BemerkungValue:</b> {{tableBerglerStubeHubertusStube.bemerkungValue10}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBerglerStubeHubertusStube.nameValue11">
+              <div [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace11)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue11}}<br>
                 <b> Zimmernummer:</b> {{tableBerglerStubeHubertusStube.zimmernummerValue11}}<br>
@@ -146,8 +167,10 @@
                 <b> Trace:</b> {{tableBerglerStubeHubertusStube.trace11}}<br>
                 <b> BemerkungValue:</b> {{tableBerglerStubeHubertusStube.bemerkungValue11}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBerglerStubeHubertusStube.nameValue12">
+              <div [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace12)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue12}}<br>
                 <b> Zimmernummer:</b> {{tableBerglerStubeHubertusStube.zimmernummerValue12}}<br>
@@ -159,8 +182,10 @@
                 <b> Trace:</b> {{tableBerglerStubeHubertusStube.trace12}}<br>
                 <b> BemerkungValue:</b> {{tableBerglerStubeHubertusStube.bemerkungValue12}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBerglerStubeHubertusStube.nameValue13">
+              <div [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace13)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue13}}<br>
                 <b> Zimmernummer:</b> {{tableBerglerStubeHubertusStube.zimmernummerValue13}}<br>
@@ -172,8 +197,10 @@
                 <b> Trace:</b> {{tableBerglerStubeHubertusStube.trace13}}<br>
                 <b> BemerkungValue:</b> {{tableBerglerStubeHubertusStube.bemerkungValue13}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBerglerStubeHubertusStube.nameValue14">
+              <div [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace14)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue14}}<br>
                 <b> Zimmernummer:</b> {{tableBerglerStubeHubertusStube.zimmernummerValue14}}<br>
@@ -185,8 +212,10 @@
                 <b> Trace:</b> {{tableBerglerStubeHubertusStube.trace14}}<br>
                 <b> BemerkungValue:</b> {{tableBerglerStubeHubertusStube.bemerkungValue14}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBerglerStubeHubertusStube.nameValue15">
+              <div [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace15)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableBerglerStubeHubertusStube.nameValue15}}<br>
                 <b> Zimmernummer:</b> {{tableBerglerStubeHubertusStube.zimmernummerValue15}}<br>
@@ -198,6 +227,7 @@
                 <b> Trace:</b> {{tableBerglerStubeHubertusStube.trace15}}<br>
                 <b> BemerkungValue:</b> {{tableBerglerStubeHubertusStube.bemerkungValue15}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableBerglerStubeHubertusStube.newTraceName">
               <p style="background-color: #FFFFFF; border: solid 3px red">

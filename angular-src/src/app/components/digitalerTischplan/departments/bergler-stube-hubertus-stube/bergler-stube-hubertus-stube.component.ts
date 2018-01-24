@@ -23,5 +23,13 @@ export class BerglerStubeHubertusStubeComponent implements OnInit {
     this.occupied.emit({table, j});
   }
 
+  getStyle(j) {
+    if (j) {
+      return "solid 3px red";
+    } else {
+      return "";
+    }
+  }
+
 }
 

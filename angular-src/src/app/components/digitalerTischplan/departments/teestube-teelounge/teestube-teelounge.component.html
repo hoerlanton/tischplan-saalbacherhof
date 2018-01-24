@@ -6,8 +6,9 @@
       <div class='cards-container' id='containerTeestubeTeelounge' [ngStyle]="{'background-color': + tableTeestubeTeelounge.bgColor}">
         <div class="table" [ngStyle]="{'background-color': '#' + tableTeestubeTeelounge.bgColor}">
           <div *ngIf="tableTeestubeTeelounge.isBesetzt === 'true'">
+            <div [style.border]="getStyle(tablesTeestubeTeelounge[j].trace)">
             <p style="background-color: #FFFFFF; padding: 10px">
-              <b> Name:</b> {{tableTeestubeTeelounge.nameValue}}<br>
+            <b> Name:</b> {{tableTeestubeTeelounge.nameValue}}<br>
               <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue}}<br>
               <b> Anreise Datum:</b> {{tableTeestubeTeelounge.anreiseValue}}<br>
               <b> Abreise Datum:</b> {{tableTeestubeTeelounge.abreiseValue}}<br>
@@ -17,7 +18,9 @@
               <b> Trace:</b> {{tableTeestubeTeelounge.trace}}<br>
               <b> Bemerkung:</b> {{tableTeestubeTeelounge.bemerkungValue}}<br>
             </p>
+            </div>
             <div *ngIf="tableTeestubeTeelounge.nameValue2">
+              <div [style.border]="getStyle(tablesTeestubeTeelounge[j].trace2)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableTeestubeTeelounge.nameValue2}}<br>
                 <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue2}}<br>
@@ -29,8 +32,10 @@
                 <b> Trace:</b> {{tableTeestubeTeelounge.trace2}}<br>
                 <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue2}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableTeestubeTeelounge.nameValue3">
+              <div [style.border]="getStyle(tablesTeestubeTeelounge[j].trace3)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableTeestubeTeelounge.nameValue3}}<br>
                 <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue3}}<br>
@@ -42,8 +47,10 @@
                 <b> Trace:</b> {{tableTeestubeTeelounge.trace3}}<br>
                 <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue3}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableTeestubeTeelounge.nameValue4">
+              <div [style.border]="getStyle(tablesTeestubeTeelounge[j].trace4)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableTeestubeTeelounge.nameValue4}}<br>
                 <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue4}}<br>
@@ -55,8 +62,10 @@
                 <b> Trace:</b> {{tableTeestubeTeelounge.trace4}}<br>
                 <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue4}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableTeestubeTeelounge.nameValue5">
+              <div [style.border]="getStyle(tablesTeestubeTeelounge[j].trace5)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableTeestubeTeelounge.nameValue5}}<br>
                 <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue5}}<br>
@@ -68,8 +77,10 @@
                 <b> Trace:</b> {{tableTeestubeTeelounge.trace5}}<br>
                 <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue5}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableTeestubeTeelounge.nameValue6">
+              <div [style.border]="getStyle(tablesTeestubeTeelounge[j].trace6)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableTeestubeTeelounge.nameValue6}}<br>
                 <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue6}}<br>
@@ -81,8 +92,10 @@
                 <b> Trace:</b> {{tableTeestubeTeelounge.trace6}}<br>
                 <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue6}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableTeestubeTeelounge.nameValue7">
+              <div [style.border]="getStyle(tablesTeestubeTeelounge[j].trace7)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableTeestubeTeelounge.nameValue7}}<br>
                 <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue7}}<br>
@@ -94,8 +107,10 @@
                 <b> Trace:</b> {{tableTeestubeTeelounge.trace7}}<br>
                 <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue7}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableTeestubeTeelounge.nameValue8">
+              <div [style.border]="getStyle(tablesTeestubeTeelounge[j].trace8)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableTeestubeTeelounge.nameValue8}}<br>
                 <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue8}}<br>
@@ -107,8 +122,10 @@
                 <b> Trace:</b> {{tableTeestubeTeelounge.trace8}}<br>
                 <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue8}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableTeestubeTeelounge.nameValue9">
+              <div [style.border]="getStyle(tablesTeestubeTeelounge[j].trace9)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableTeestubeTeelounge.nameValue9}}<br>
                 <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue9}}<br>
@@ -120,8 +137,10 @@
                 <b> Trace:</b> {{tableTeestubeTeelounge.trace9}}<br>
                 <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue9}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableTeestubeTeelounge.nameValue10">
+              <div [style.border]="getStyle(tablesTeestubeTeelounge[j].trace10)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableTeestubeTeelounge.nameValue10}}<br>
                 <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue10}}<br>
@@ -133,8 +152,10 @@
                 <b> Trace:</b> {{tableTeestubeTeelounge.trace10}}<br>
                 <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue10}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableTeestubeTeelounge.nameValue11">
+              <div [style.border]="getStyle(tablesTeestubeTeelounge[j].trace11)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableTeestubeTeelounge.nameValue11}}<br>
                 <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue11}}<br>
@@ -146,8 +167,10 @@
                 <b> Trace:</b> {{tableTeestubeTeelounge.trace11}}<br>
                 <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue11}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableTeestubeTeelounge.nameValue12">
+              <div [style.border]="getStyle(tablesTeestubeTeelounge[j].trace12)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableTeestubeTeelounge.nameValue12}}<br>
                 <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue12}}<br>
@@ -159,8 +182,10 @@
                 <b> Trace:</b> {{tableTeestubeTeelounge.trace12}}<br>
                 <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue12}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableTeestubeTeelounge.nameValue13">
+              <div [style.border]="getStyle(tablesTeestubeTeelounge[j].trace13)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableTeestubeTeelounge.nameValue13}}<br>
                 <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue13}}<br>
@@ -172,8 +197,10 @@
                 <b> Trace:</b> {{tableTeestubeTeelounge.trace13}}<br>
                 <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue13}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableTeestubeTeelounge.nameValue14">
+              <div [style.border]="getStyle(tablesTeestubeTeelounge[j].trace14)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableTeestubeTeelounge.nameValue14}}<br>
                 <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue14}}<br>
@@ -185,8 +212,10 @@
                 <b> Trace:</b> {{tableTeestubeTeelounge.trace14}}<br>
                 <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue14}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableTeestubeTeelounge.nameValue15">
+              <div [style.border]="getStyle(tablesTeestubeTeelounge[j].trace15)">
               <p style="background-color: #FFFFFF; padding: 10px">
                 <b> Name:</b> {{tableTeestubeTeelounge.nameValue15}}<br>
                 <b> Zimmernummer:</b> {{tableTeestubeTeelounge.zimmernummerValue15}}<br>
@@ -198,6 +227,7 @@
                 <b> Trace:</b> {{tableTeestubeTeelounge.trace15}}<br>
                 <b> BemerkungValue:</b> {{tableTeestubeTeelounge.bemerkungValue15}}<br>
               </p>
+              </div>
             </div>
             <div *ngIf="tableTeestubeTeelounge.newTraceName">
               <p style="background-color: #FFFFFF; border: solid 3px red">
