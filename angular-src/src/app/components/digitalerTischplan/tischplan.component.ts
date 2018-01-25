@@ -105,6 +105,10 @@ export class TischplanComponent {
   showNotizFormBool: boolean;
   notizElements: any[] = [];
   term: string;
+  dateTodayGenerated: any;
+  date: any[] = [];
+  parts: any[] = [];
+  parsedDate: any[] = [];
 
 
   constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, private dragulaService: DragulaService ) {
@@ -194,13 +198,18 @@ export class TischplanComponent {
             }
           }
         }
+
+
         console.log(this.tablesBauernstube);
         console.log(this.tablesEdelweissKaminStube);
         console.log(this.tablesBerglerStubeHubertusStube);
         console.log(this.tablesWaeldlerStubeKristallStube);
         console.log(this.tablesTeestubeTeelounge);
 
+
+
         this.tables = this.tables.concat(this.tablesBauernstube).concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube);
+        this.changeBgColorIfAnreise(tables);
         this.printComponent.formatAzListe(this.tables);
 
       });
@@ -350,6 +359,106 @@ export class TischplanComponent {
   delete(informationElement, j, event) {
     this.navigationComponent.delete(informationElement, j, event);
   }
+  changeBgColorIfAnreise(tables) {
+    console.log('=================================================changeBgColorIfAnreise');
+    this.dateTodayGenerated = new Date();
+
+    for (let a = 0; a < tables.length; a++) {
+      for (let b = 0; b < tables[a].tables.length; b++) {
+
+        if (tables[a].tables[b].anreiseValue) {
+          console.log('tables[a].tables[b].anreiseValue: ' + b + " " + tables[a].tables[b].anreiseValue);
+          this.parts[0] = tables[a].tables[b].anreiseValue.match(/(\d+)/g);} else {
+          this.parts[0] = "undefined";
+        }
+        if (tables[a].tables[b].anreiseValue2) {
+          this.parts[1] = tables[a].tables[b].anreiseValue2.match(/(\d+)/g);}else {
+          this.parts[1] = "undefined";
+        }
+        if (tables[a].tables[b].anreiseValue3) {
+          this.parts[2] = tables[a].tables[b].anreiseValue3.match(/(\d+)/g);}else {
+          this.parts[2] = "undefined";
+        }
+        if (tables[a].tables[b].anreiseValue4) {
+          this.parts[3] = tables[a].tables[b].anreiseValue4.match(/(\d+)/g);}else {
+          this.parts[3] = "undefined";
+        }
+        if (tables[a].tables[b].anreiseValue5) {
+          this.parts[4] = tables[a].tables[b].anreiseValue5.match(/(\d+)/g);}else {
+          this.parts[4] = "undefined";
+        }
+        if (tables[a].tables[b].anreiseValue6) {
+          this.parts[5] = tables[a].tables[b].anreiseValue6.match(/(\d+)/g);}else {
+          this.parts[5] = "undefined";
+        }
+        if (tables[a].tables[b].anreiseValue7) {
+          this.parts[6] = tables[a].tables[b].anreiseValue7.match(/(\d+)/g);}else {
+          this.parts[6] = "undefined";
+        }
+        if (tables[a].tables[b].anreiseValue8) {
+          this.parts[7] = tables[a].tables[b].anreiseValue8.match(/(\d+)/g);}else {
+          this.parts[7] = "undefined";
+        }
+        if (tables[a].tables[b].anreiseValue9) {
+          this.parts[8] = tables[a].tables[b].anreiseValue9.match(/(\d+)/g);}else {
+          this.parts[8] = "undefined";
+        }
+        if (tables[a].tables[b].anreiseValue10) {
+          this.parts[9] = tables[a].tables[b].anreiseValue10.match(/(\d+)/g);}else {
+          this.parts[9] = "undefined";
+        }
+        if (tables[a].tables[b].anreiseValue11) {
+          this.parts[10] = tables[a].tables[b].anreiseValue11.match(/(\d+)/g);}else {
+          this.parts[10] = "undefined";
+        }
+        if (tables[a].tables[b].anreiseValue12) {
+          this.parts[11] = tables[a].tables[b].anreiseValue12.match(/(\d+)/g);}else {
+          this.parts[11] = "undefined";
+        }
+        if (tables[a].tables[b].anreiseValue13) {
+          this.parts[12] = tables[a].tables[b].anreiseValue13.match(/(\d+)/g);}else {
+          this.parts[12] = "undefined";
+        }
+        if (tables[a].tables[b].anreiseValue14) {
+          this.parts[13] = tables[a].tables[b].anreiseValue14.match(/(\d+)/g);}else {
+          this.parts[13] = "undefined";
+        }
+        if (tables[a].tables[b].anreiseValue15) {
+          this.parts[14] = tables[a].tables[b].anreiseValue15.match(/(\d+)/g);}else {
+          this.parts[14] = "undefined";
+        }
+
+        for (let c = 0; c <= 14; c++) {
+          if (this.parts[c]) {
+            this.date[c] = new Date(2018, this.parts[c][1] - 1, this.parts[c][0]);
+            this.parsedDate[c] = String(this.date[c]).substring(0, 15);
+          }
+        }
+        // note parts[1]-1
+        //console.log('parts[2]' + parts[2] + 'parts[1]' + (parts[1] - 1) + 'parts[0]' + parts[0]);
+        // Mon May 31 2010 00:00:00
+        //this.tablesRestaurant[j].anreiseValue
+        let dateToday = String(this.dateTodayGenerated).substring(0, 15);
+        console.log('Parsed Date --->: ' + this.parsedDate[0]);
+        console.log('this.dateGenerated --->: ' + dateToday);
+        if (dateToday.indexOf(this.parsedDate[0] || this.parsedDate[1] || this.parsedDate[2] || this.parsedDate[3] || this.parsedDate[4] || this.parsedDate[5] || this.parsedDate[6] || this.parsedDate[7] || this.parsedDate[8] || this.parsedDate[9] || this.parsedDate[10] || this.parsedDate[11] || this.parsedDate[12] || this.parsedDate[13] || this.parsedDate[14] || this.parsedDate[15]) !== -1) {
+          if (tables[a].department === "berglerStubeHubertusStube") {
+            this.tablesBerglerStubeHubertusStube[b].bgColor = "#0a7a74";
+          }
+          else if (tables[a].department === "Bauernstube") {
+            this.tablesBauernstube[b].bgColor = "#0a7a74";
+          }
+          else if (tables[a].department === "waeldlerStubeKristallStube-Zirbn") {
+            this.tablesWaeldlerStubeKristallStube[b].bgColor = "#0a7a74";
+          }
+          else if (tables[a].department === "edelweissKaminStube") {
+            this.tablesEdelweissKaminStube[b].bgColor = "#0a7a74";
+          }
+          else if (tables[a].department === "teestubeTeelounge") {
+            this.tablesTeestubeTeelounge[b].bgColor = "#0a7a74";
+          }
+        }
+      }
+    }
+  }
 }
-
-

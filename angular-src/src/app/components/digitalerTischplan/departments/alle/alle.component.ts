@@ -16,6 +16,7 @@ export class AlleComponent implements OnInit {
   @Input('term') term: string;
   @Output()
   occupied:EventEmitter<any> = new EventEmitter();
+  @Input('showAlleBool') showAlleBool: boolean;
 
   constructor() { }
 

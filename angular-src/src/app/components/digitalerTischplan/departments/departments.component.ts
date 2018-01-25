@@ -21,6 +21,7 @@ export class DepartmentsComponent implements OnInit {
   @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
   @Input('showWaeldlerBool') showWaeldlerBool: boolean;
   @Input('term') term: string;
+  @Input('showAlleBool') showAlleBool: boolean;
   @Output()
   dispensedBauernstube:EventEmitter<any> = new EventEmitter();
   @Output()
@@ -31,7 +32,7 @@ export class DepartmentsComponent implements OnInit {
   dispensedTeestubeTeelounge:EventEmitter<any> = new EventEmitter();
   @Output()
   dispensedWaeldlerStubeKristallStube:EventEmitter<any> = new EventEmitter();
-
+  dateTodayGenerated: any;
   constructor(private tischplanService: TischplanService) {
   }
 
@@ -159,7 +160,6 @@ export class DepartmentsComponent implements OnInit {
       });
     //console.log("placeholder:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
   }
-
 
 
 }
