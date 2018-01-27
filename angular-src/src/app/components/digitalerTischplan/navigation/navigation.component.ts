@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 import { TischplanService } from '../../../services/tischplan.service';
 
 @Component({
@@ -10,6 +10,11 @@ export class NavigationComponent implements OnInit {
 
   @Input('newInformationElements') newInformationElements: any[] = [];
   @Input('tablesOccupied') tablesOccupied: number;
+  @Output()
+  umsetzenExport:EventEmitter<any> = new EventEmitter();
+
+  quellTisch: string;
+  zielTisch: string;
 
   constructor(private tischplanService: TischplanService) { }
 
@@ -61,6 +66,14 @@ export class NavigationComponent implements OnInit {
 
   neuLaden() {
     window.location.reload()
+  }
+
+  umsetzen(event){
+    event.preventDefault();
+    console.log("UMSETZTEN CALLED");
+    let quellTisch = this.quellTisch;
+    let zielTisch = this.zielTisch;
+    this.umsetzenExport.emit({quellTisch, zielTisch});
   }
 
 }

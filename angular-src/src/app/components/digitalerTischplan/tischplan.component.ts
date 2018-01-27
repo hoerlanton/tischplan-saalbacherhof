@@ -109,6 +109,9 @@ export class TischplanComponent {
   date: any[] = [];
   parts: any[] = [];
   parsedDate: any[] = [];
+  quellTisch: any;
+  zielTisch: any;
+  tableInformation: any[] = [];
 
 
   constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, private dragulaService: DragulaService ) {
@@ -449,7 +452,7 @@ export class TischplanComponent {
           else if (tables[a].department === "Bauernstube") {
             this.tablesBauernstube[b].bgColor = "#0a7a74";
           }
-          else if (tables[a].department === "waeldlerStubeKristallStube-Zirbn") {
+          else if (tables[a].department === "waeldlerStubeKristallStube") {
             this.tablesWaeldlerStubeKristallStube[b].bgColor = "#0a7a74";
           }
           else if (tables[a].department === "edelweissKaminStube") {
@@ -549,6 +552,87 @@ export class TischplanComponent {
         }
       }
     }
+  }
+
+
+  umsetzen() {
+
+    let targetTable = this.quellTisch.zielTisch;
+    let quellTischNumber = this.quellTisch.quellTisch;
+    let targetTableNumber = Number(this.quellTisch.zielTisch);
+    let quellTischNumberNumber = Number(this.quellTisch.quellTisch);
+    console.log('targetTable' + targetTable);
+    console.log('quellTischNumber' + quellTischNumber);
+    let tableToMove = {department: "Empty", number: "0", targetTable: "0", targetDepartment: "Empty"};
+    let j = 0;
+
+    if (Number(this.quellTisch.quellTisch) >= 30 && Number(this.quellTisch.quellTisch) <= 47) {
+      tableToMove.department = "berglerStubeHubertusStube";
+      j = 1;
+    } else if (Number(this.quellTisch.quellTisch) >= 10 && Number(this.quellTisch.quellTisch) <= 26) {
+      tableToMove.department = "Bauernstube";
+      j = 0;
+    } else if (Number(this.quellTisch.quellTisch) >= 50 && Number(this.quellTisch.quellTisch) <= 77) {
+      tableToMove.department = "waeldlerStubeKristallStube";
+      j = 4;
+    } else if (Number(this.quellTisch.quellTisch) >= 80 && Number(this.quellTisch.quellTisch) <= 99) {
+      tableToMove.department = "edelweissKaminStube";
+      j = 3;
+    } else if (Number(this.quellTisch.quellTisch) >= 1 && Number(this.quellTisch.quellTisch) <= 6) {
+      tableToMove.department = "teestubeTeelounge";
+      j = 2;
+    }
+
+    if (Number(this.quellTisch.zielTisch) >= 30 && Number(this.quellTisch.zielTisch) <= 47) {
+      tableToMove.department = "berglerStubeHubertusStube";
+    } else if (Number(this.quellTisch.zielTisch) >= 10 && Number(this.quellTisch.zielTisch) <= 26) {
+      tableToMove.department = "Bauernstube";
+    } else if (Number(this.quellTisch.zielTisch) >= 50 && Number(this.quellTisch.zielTisch) <= 77) {
+      tableToMove.department = "waeldlerStubeKristallStube";
+    } else if (Number(this.quellTisch.zielTisch) >= 80 && Number(this.quellTisch.zielTisch) <= 99) {
+      tableToMove.department = "edelweissKaminStube";
+    } else if (Number(this.quellTisch.zielTisch) >= 1 && Number(this.quellTisch.zielTisch) <= 6) {
+      tableToMove.department = "teestubeTeelounge";
+    }
+
+
+
+    let index = 0;
+    tableToMove.number = quellTischNumber;
+    tableToMove.targetTable = targetTable;
+    console.log(tableToMove);
+    this.tischplanService.getTables()
+      .subscribe(tables => {
+
+        for (let a = 0; a < tables.length; a++) {
+          for (let b = 0; b < tables[a].tables.length; b++) {
+            if (tables[a].department === tableToMove.department) {
+              console.log("YEEEES BEFORE");
+              if (tables[a].tables[b].number === tableToMove.number) {
+                console.log("YEEEEEEEESSSSS AFFFTEEEER!!!");
+                console.log(tables[a].tables[b]);
+                this.tableInformation.push(tables[a].tables[b]);
+                console.log(this.tableInformation);
+                console.log('index: ' + index);
+                this.tableInformation.push(tableToMove);
+              }
+            }
+          }
+        }
+        for (let a = 0; a < tables.length; a++) {
+          for (let b = 0; b < tables[a].tables.length; b++) {
+            if (tables[a].department === tableToMove.targetDepartment) {
+              if (tables[a].tables[b].number === tableToMove.targetTable) {
+                index = b;
+              }
+            }
+          }
+        }
+        this.departmentsComponent.addInformationToTable(this.tableInformation, index);
+        this.departmentsComponent.occupyTableOnDrop(tableToMove, index);
+        //this.departmentsComponent.umsetzen(this.tableInformation, index);
+      });
+    this.departmentsComponent.occupy(tableToMove, j);
   }
 
 }

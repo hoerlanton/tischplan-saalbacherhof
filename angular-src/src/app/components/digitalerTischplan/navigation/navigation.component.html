@@ -9,6 +9,23 @@
   </ul>
   <ul class="nav navbar-nav navbar-right" style="max-width: 100%">
     <div class="btn-group" style="height: 45px; width: auto; margin: 10px 25px 5px 25px; float: left; text-align: right; display:table-cell; vertical-align:middle;" dropdown>
+      <button dropdownToggle type="button" style=" background-color: #0a7a74; color: #FFFFFF" class="btn btn-primary dropdown-toggle">Umsetzen<span class="caret"></span>
+      </button>
+      <ul *dropdownMenu class="dropdown-menu" role="menu" style="overflow: auto; height: 350px; width: 200px; padding: 20px">
+        <form class="SendInformation" #myForm="ngForm" (submit)="umsetzen($event)">
+          <div class="form-group" (click)="none($event)">
+            <label for="quellTisch">Quell-Tisch:</label>
+            <input class="form-control" id="quellTisch" [(ngModel)]="quellTisch" name="quellTisch" placeholder="Von Tischnummer:" >
+          </div>
+          <div class="form-group" (click)="none($event)">
+            <label for="zielTisch">Ziel-Tisch</label>
+            <input class="form-control" id="zielTisch" [(ngModel)]="zielTisch" name="zielTisch" placeholder="Zu Tischnummer:" >
+          </div>
+          <button type="submit" class="btn btn-primary" style="background-color: #0a7a74; color: #FFFFFF; margin-left: 20px">Umsetzen</button>
+        </form>
+      </ul>
+    </div>
+    <div class="btn-group" style="height: 45px; width: auto; margin: 10px 25px 5px 25px; float: left; text-align: right; display:table-cell; vertical-align:middle;" dropdown>
       <button dropdownToggle type="button" style=" background-color: #0a7a74; color: #FFFFFF" class="btn btn-primary dropdown-toggle">
         Traces Box <span class="caret"></span>
       </button>

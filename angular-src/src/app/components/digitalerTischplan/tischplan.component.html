@@ -15,7 +15,8 @@
   <div class="container-fluid">
     <app-navigation [newInformationElements]="newInformationElements"
                     [tablesOccupied]="tablesOccupied"
-                    (getTablesOccupied)="tablesOccupied = $event">
+                    (getTablesOccupied)="tablesOccupied = $event"
+                    (umsetzenExport)="quellTisch = $event; umsetzen($event)">
     </app-navigation>
     <div class="col-xs-12 col-sm-8 col-lg-4 print-col">
       <app-form-menu style="min-height: 40px" [buttonBgColorInfoForm]="buttonBgColorInfoForm"

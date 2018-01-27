@@ -140,10 +140,10 @@ export class PrintComponent implements OnInit {
     this.tables = this.tables.sort(function(a, b) {
       let nameA = "";
       let nameB = "";
-      if (typeof a.nameValue !== "undefined" ) {
+      if (typeof a.nameValue !== "undefined" && a.nameValue !== null ) {
         nameA = a.nameValue.toUpperCase(); // ignore upper and lowercase
       }
-      if (typeof b.nameValue !== "undefined"   ) {
+      if (typeof b.nameValue !== "undefined"  && b.nameValue !== null ) {
         nameB = b.nameValue.toUpperCase(); // ignore upper and lowercase
       }
       if (nameA < nameB) {
