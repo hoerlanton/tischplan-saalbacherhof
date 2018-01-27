@@ -1721,7 +1721,7 @@ var _a;
 /***/ "../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default\" style=\"max-width: 100%\">\n  <ul class=\"nav navbar-nav\" style=\"max-width: 100%; margin-left: 20px\">\n    <li><img alt=\"Brand\" href=\"http://www.servicio.io\" src=\"http://servicio.io/wp-content/uploads/2016/05/servicio-logo-hellblau-auto-ohne-hintergrund-1.png\" style=\"height: 45px; width: auto; margin-top:15px; margin-right: 50px; text-align: left; display:table-cell; vertical-align:middle;\" (click)=\"neuLaden()\">Neu Laden</li>\n    <li class=\"anleitung\" ><a href=\"http://servicio.io/tester-info-3-2\" style=\"text-align: left; display:table-cell; vertical-align:middle; margin-bottom: 5px; margin-right: 0px; max-height: 15px\" >Anleitung</a></li>\n    <li class=\"printToCart1\"><button (click)=\"printToCart1('printSectionId1')\" style=\" display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px\" class=\"printToCart1\">Tisch Übersicht Drucken</button></li>\n    <li class=\"printToCart2\"><button (click)=\"printToCart2('printSectionId2')\" style=\"text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px\" class=\"printToCart2\">Tisch Plan Drucken</button></li>\n    <li class=\"printToCart3\"><button (click)=\"printToCart3('printSectionId3')\" style=\"text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px\" class=\"printToCart3\">A-Z Liste Drucken</button></li>\n    <li class=\"Belegte Tisch\" style=\"color: #0a7a74; vertical-align:middle; \"><h3>Belegte Tische: {{tablesOccupied}}</h3></li>\n  </ul>\n  <ul class=\"nav navbar-nav navbar-right\" style=\"max-width: 100%\">\n    <div class=\"btn-group\" style=\"height: 45px; width: auto; margin: 10px 25px 5px 25px; float: left; text-align: right; display:table-cell; vertical-align:middle;\" dropdown>\n      <button dropdownToggle type=\"button\" style=\" background-color: #0a7a74; color: #FFFFFF\" class=\"btn btn-primary dropdown-toggle\">\n        Traces Box <span class=\"caret\"></span>\n      </button>\n      <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\" style=\"overflow: auto; height: 350px; width: 200px\">\n        <div *ngFor=\"let newInformationElement of newInformationElements; let j = index;\" (click)=\"none($event)\">\n          <button style=\"float: right; background-color: #0a7a74; color: #FFFFFF; margin-right: 20px\" type=\"submit\" class=\"btn btn-send\" (click)=\"delete(newInformationElement, j, $event)\">x</button>\n          <li role=\"menuitem\" (click)=\"none($event)\" style=\"padding: 5px;\"> <b>Zimmer Nummer: </b> {{newInformationElement.roomNumber}} <br><b>Trace: </b> {{newInformationElement.text}} <br><b>Tisch: </b> {{newInformationElement.tableNumber}}<br><b>Datum: </b> {{newInformationElement.date}}<br><b>Name: </b> {{newInformationElement.name}}<br><b>Mitarbeiter: </b> {{newInformationElement.employee}}</li>\n          <li class=\"divider dropdown-divider\"></li>\n        </div>\n      </ul>\n    </div>\n    <li><img alt=\"Partner\" href=\"http://www.salzburgerhof.servicio.io/wlanlandingpage\" src=\"http://servicio.io/wp-content/uploads/2017/12/680001_160527_7E4EAE33_logo_779px.jpg\" style=\"height: 45px; width: auto; margin-top: 10px; margin-bottom: 5px; margin-right: 25px;float: right; text-align: right; display:table-cell; vertical-align:middle;\"></li>\n  </ul>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-default\" style=\"max-width: 100%\">\n  <ul class=\"nav navbar-nav\" style=\"max-width: 100%; margin-left: 20px\">\n    <li><img alt=\"Brand\" href=\"http://www.servicio.io\" src=\"http://servicio.io/wp-content/uploads/2016/05/servicio-logo-hellblau-auto-ohne-hintergrund-1.png\" style=\"height: 45px; width: auto; margin-top:15px; margin-right: 50px; text-align: left; display:table-cell; vertical-align:middle;\" (click)=\"neuLaden()\">Neu Laden</li>\n    <li class=\"anleitung\" ><a href=\"http://servicio.io/tester-info-3-2\" style=\"text-align: left; display:table-cell; vertical-align:middle; margin-bottom: 5px; margin-right: 0px; max-height: 15px\" >Anleitung</a></li>\n    <li class=\"printToCart1\"><button (click)=\"printToCart1('printSectionId1')\" style=\" display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px\" class=\"printToCart1\">Tisch Übersicht Drucken</button></li>\n    <li class=\"printToCart2\"><button (click)=\"printToCart2('printSectionId2')\" style=\"text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px\" class=\"printToCart2\">Tisch Plan Drucken</button></li>\n    <li class=\"printToCart3\"><button (click)=\"printToCart3('printSectionId3')\" style=\"text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px\" class=\"printToCart3\">A-Z Liste Drucken</button></li>\n    <li class=\"Belegte Tisch\" style=\"color: #0a7a74; vertical-align:middle; \"><h3>Belegte Tische: {{tablesOccupied}}</h3></li>\n  </ul>\n  <ul class=\"nav navbar-nav navbar-right\" style=\"max-width: 100%\">\n    <div class=\"btn-group\" style=\"height: 45px; width: auto; margin: 10px 25px 5px 25px; float: left; text-align: right; display:table-cell; vertical-align:middle;\" dropdown>\n      <button dropdownToggle type=\"button\" style=\" background-color: #0a7a74; color: #FFFFFF\" class=\"btn btn-primary dropdown-toggle\">Umsetzen<span class=\"caret\"></span>\n      </button>\n      <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\" style=\"overflow: auto; height: 350px; width: 200px; padding: 20px\">\n        <form class=\"SendInformation\" #myForm=\"ngForm\" (submit)=\"umsetzen($event)\">\n          <div class=\"form-group\" (click)=\"none($event)\">\n            <label for=\"quellTisch\">Quell-Tisch:</label>\n            <input class=\"form-control\" id=\"quellTisch\" [(ngModel)]=\"quellTisch\" name=\"quellTisch\" placeholder=\"Von Tischnummer:\" >\n          </div>\n          <div class=\"form-group\" (click)=\"none($event)\">\n            <label for=\"zielTisch\">Ziel-Tisch</label>\n            <input class=\"form-control\" id=\"zielTisch\" [(ngModel)]=\"zielTisch\" name=\"zielTisch\" placeholder=\"Zu Tischnummer:\" >\n          </div>\n          <button type=\"submit\" class=\"btn btn-primary\" style=\"background-color: #0a7a74; color: #FFFFFF; margin-left: 20px\">Umsetzen</button>\n        </form>\n      </ul>\n    </div>\n    <div class=\"btn-group\" style=\"height: 45px; width: auto; margin: 10px 25px 5px 25px; float: left; text-align: right; display:table-cell; vertical-align:middle;\" dropdown>\n      <button dropdownToggle type=\"button\" style=\" background-color: #0a7a74; color: #FFFFFF\" class=\"btn btn-primary dropdown-toggle\">\n        Traces Box <span class=\"caret\"></span>\n      </button>\n      <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\" style=\"overflow: auto; height: 350px; width: 200px\">\n        <div *ngFor=\"let newInformationElement of newInformationElements; let j = index;\" (click)=\"none($event)\">\n          <button style=\"float: right; background-color: #0a7a74; color: #FFFFFF; margin-right: 20px\" type=\"submit\" class=\"btn btn-send\" (click)=\"delete(newInformationElement, j, $event)\">x</button>\n          <li role=\"menuitem\" (click)=\"none($event)\" style=\"padding: 5px;\"> <b>Zimmer Nummer: </b> {{newInformationElement.roomNumber}} <br><b>Trace: </b> {{newInformationElement.text}} <br><b>Tisch: </b> {{newInformationElement.tableNumber}}<br><b>Datum: </b> {{newInformationElement.date}}<br><b>Name: </b> {{newInformationElement.name}}<br><b>Mitarbeiter: </b> {{newInformationElement.employee}}</li>\n          <li class=\"divider dropdown-divider\"></li>\n        </div>\n      </ul>\n    </div>\n    <li><img alt=\"Partner\" href=\"http://www.salzburgerhof.servicio.io/wlanlandingpage\" src=\"http://servicio.io/wp-content/uploads/2017/12/680001_160527_7E4EAE33_logo_779px.jpg\" style=\"height: 45px; width: auto; margin-top: 10px; margin-bottom: 5px; margin-right: 25px;float: right; text-align: right; display:table-cell; vertical-align:middle;\"></li>\n  </ul>\n</nav>\n"
 
 /***/ }),
 
@@ -1747,6 +1747,7 @@ var NavigationComponent = (function () {
     function NavigationComponent(tischplanService) {
         this.tischplanService = tischplanService;
         this.newInformationElements = [];
+        this.umsetzenExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
     NavigationComponent.prototype.ngOnInit = function () {
     };
@@ -1792,6 +1793,13 @@ var NavigationComponent = (function () {
     NavigationComponent.prototype.neuLaden = function () {
         window.location.reload();
     };
+    NavigationComponent.prototype.umsetzen = function (event) {
+        event.preventDefault();
+        console.log("UMSETZTEN CALLED");
+        var quellTisch = this.quellTisch;
+        var zielTisch = this.zielTisch;
+        this.umsetzenExport.emit({ quellTisch: quellTisch, zielTisch: zielTisch });
+    };
     return NavigationComponent;
 }());
 __decorate([
@@ -1802,16 +1810,20 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesOccupied'),
     __metadata("design:type", Number)
 ], NavigationComponent.prototype, "tablesOccupied", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+], NavigationComponent.prototype, "umsetzenExport", void 0);
 NavigationComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-navigation',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _b || Object])
 ], NavigationComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=navigation.component.js.map
 
 /***/ }),
@@ -2009,10 +2021,10 @@ var PrintComponent = (function () {
         this.tables = this.tables.sort(function (a, b) {
             var nameA = "";
             var nameB = "";
-            if (typeof a.nameValue !== "undefined") {
+            if (typeof a.nameValue !== "undefined" && a.nameValue !== null) {
                 nameA = a.nameValue.toUpperCase(); // ignore upper and lowercase
             }
-            if (typeof b.nameValue !== "undefined") {
+            if (typeof b.nameValue !== "undefined" && b.nameValue !== null) {
                 nameB = b.nameValue.toUpperCase(); // ignore upper and lowercase
             }
             if (nameA < nameB) {
@@ -2175,7 +2187,7 @@ var _a;
 /***/ "../../../../../src/app/components/digitalerTischplan/tableplan/tableplan.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"printSectionId2\" class=\"col-xs-12 printTwo\">\n  <div class=\"row\" style=\" border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;\" >\n    <div *ngIf=\"showBerglerBool\">\n      <div *ngFor=\"let tableBerglerStubeHubertusStube of tablesBerglerStubeHubertusStube; let j = index;\">\n        <div class=\"t{{tableBerglerStubeHubertusStube.number}} table-item\" (click)=\"moveTable(tableBerglerStubeHubertusStube, j)\" [ngStyle]=\"{'top': tableBerglerStubeHubertusStube.topValue + 'px', 'left': tableBerglerStubeHubertusStube.leftValue + 'px', 'background-color': + tableBerglerStubeHubertusStube.bgColor, 'height': + tableBerglerStubeHubertusStube.height + 'px', 'width': + tableBerglerStubeHubertusStube.width + 'px', 'border': + tableBerglerStubeHubertusStube.border}\">\n          <div *ngIf=\"tablesBerglerStubeHubertusStube[j] !== tablesBerglerStubeHubertusStube[j+1]\">\n            <p><b>{{tableBerglerStubeHubertusStube.number}} | {{tableBerglerStubeHubertusStube.personenAnzahlValue}} {{tableBerglerStubeHubertusStube.personenAnzahlValue2}} {{tableBerglerStubeHubertusStube.personenAnzahlValue3}} {{tableBerglerStubeHubertusStube.personenAnzahlValue4}} {{tableBerglerStubeHubertusStube.personenAnzahlValue5}} {{tableBerglerStubeHubertusStube.personenAnzahlValue6}} {{tableBerglerStubeHubertusStube.personenAnzahlValue7}} {{tableBerglerStubeHubertusStube.personenAnzahlValue8}} {{tableBerglerStubeHubertusStube.personenAnzahlValue9}} {{tableBerglerStubeHubertusStube.personenAnzahlValue10}} {{tableBerglerStubeHubertusStube.personenAnzahlValue11}} {{tableBerglerStubeHubertusStube.personenAnzahlValue12}} {{tableBerglerStubeHubertusStube.personenAnzahlValue13}} {{tableBerglerStubeHubertusStube.personenAnzahlValue14}} {{tableBerglerStubeHubertusStube.personenAnzahlValue15}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showBauernStubnBool\">\n      <div *ngFor=\"let tableBauernstube of tablesBauernstube; let j = index;\">\n        <div class=\"t{{tableBauernstube.number}} table-item\" (click)=\"moveTable(tableBauernstube, j)\" [ngStyle]=\"{'top': tableBauernstube.topValue + 'px', 'left': tableBauernstube.leftValue + 'px', 'background-color': + tableBauernstube.bgColor,  'height': + tableBauernstube.height + 'px', 'width': + tableBauernstube.width + 'px', 'border': + tableBauernstube.border}\">\n          <p><b>{{tableBauernstube.number}} | {{tableBauernstube.personenAnzahlValue}} {{tableBauernstube.personenAnzahlValue2}} {{tableBauernstube.personenAnzahlValue3}} {{tableBauernstube.personenAnzahlValue4}} {{tableBauernstube.personenAnzahlValue5}} {{tableBauernstube.personenAnzahlValue6}} {{tableBauernstube.personenAnzahlValue7}} {{tableBauernstube.personenAnzahlValue8}} {{tableBauernstube.personenAnzahlValue9}} {{tableBauernstube.personenAnzahlValue10}} {{tableBauernstube.personenAnzahlValue11}} {{tableBauernstube.personenAnzahlValue12}} {{tableBauernstube.personenAnzahlValue13}} {{tableBauernstube.personenAnzahlValue14}} {{tableBauernstube.personenAnzahlValue15}}</b></p>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showWaeldlerBool\">\n      <div *ngFor=\"let tableWaeldlerStubeKristallStube of tablesWaeldlerStubeKristallStube; let j = index;\">\n        <div class=\"t{{tableWaeldlerStubeKristallStube.number}} table-item\" (click)=\"moveTable(tableWaeldlerStubeKristallStube, j)\" [ngStyle]=\"{'top': tableWaeldlerStubeKristallStube.topValue + 'px', 'left': tableWaeldlerStubeKristallStube.leftValue + 'px', 'background-color': + tableWaeldlerStubeKristallStube.bgColor, 'height': + tableWaeldlerStubeKristallStube.height + 'px', 'width': + tableWaeldlerStubeKristallStube.width + 'px', 'border': + tableWaeldlerStubeKristallStube.border}\">\n          <div *ngIf=\"tablesWaeldlerStubeKristallStube[j] !== tablesWaeldlerStubeKristallStube[j+1]\">\n            <p><b>{{tableWaeldlerStubeKristallStube.number}} | {{tableWaeldlerStubeKristallStube.personenAnzahlValue}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue2}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue3}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue4}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue5}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue6}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue7}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue8}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue9}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue10}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue11}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue12}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue13}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue14}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue15}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showEdelweissBool\">\n      <div *ngFor=\"let tableEdelweissKaminStube of tablesEdelweissKaminStube; let j = index;\">\n        <div class=\"t{{tableEdelweissKaminStube.number}} table-item\" (click)=\"moveTable(tableEdelweissKaminStube, j)\" [ngStyle]=\"{'top': tableEdelweissKaminStube.topValue + 'px', 'left': tableEdelweissKaminStube.leftValue + 'px', 'background-color': + tableEdelweissKaminStube.bgColor,  'height': + tableEdelweissKaminStube.height + 'px', 'width': + tableEdelweissKaminStube.width + 'px', 'border': + tableEdelweissKaminStube.border, 'border-radius': + tableEdelweissKaminStube.borderRadius, 'transform':  + tableEdelweissKaminStube.transformValue}\">\n          <div *ngIf=\"tablesEdelweissKaminStube[j] !== tablesEdelweissKaminStube[j+1]\">\n            <p><b>{{tableEdelweissKaminStube.number}} | {{tableEdelweissKaminStube.personenAnzahlValue}} {{tableEdelweissKaminStube.personenAnzahlValue2}} {{tableEdelweissKaminStube.personenAnzahlValue3}} {{tableEdelweissKaminStube.personenAnzahlValue4}} {{tableEdelweissKaminStube.personenAnzahlValue5}} {{tableEdelweissKaminStube.personenAnzahlValue6}} {{tableEdelweissKaminStube.personenAnzahlValue7}} {{tableEdelweissKaminStube.personenAnzahlValue8}} {{tableEdelweissKaminStube.personenAnzahlValue9}} {{tableEdelweissKaminStube.personenAnzahlValue10}} {{tableEdelweissKaminStube.personenAnzahlValue11}} {{tableEdelweissKaminStube.personenAnzahlValue12}} {{tableEdelweissKaminStube.personenAnzahlValue13}} {{tableEdelweissKaminStube.personenAnzahlValue14}} {{tableEdelweissKaminStube.personenAnzahlValue15}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showTeeStubeBool\">\n      <div *ngFor=\"let tableTeestubeTeelounge  of tablesTeestubeTeelounge; let j = index;\">\n        <div class=\"t{{tableTeestubeTeelounge.number}} table-item\" (click)=\"moveTable(tableTeestubeTeelounge, j)\" [ngStyle]=\"{'top': tableTeestubeTeelounge.topValue + 'px', 'left': tableTeestubeTeelounge.leftValue + 'px', 'background-color': + tableTeestubeTeelounge.bgColor,  'height': + tableTeestubeTeelounge.height + 'px', 'width': + tableTeestubeTeelounge.width + 'px', 'border': + tableTeestubeTeelounge.border, 'border-radius': + tableTeestubeTeelounge.borderRadius, 'transform':  + tableTeestubeTeelounge.transformValue}\">\n          <div *ngIf=\"tablesTeestubeTeelounge[j] !== tablesTeestubeTeelounge[j+1]\">\n            <p><b>{{tableTeestubeTeelounge.number}} | {{tableTeestubeTeelounge.personenAnzahlValue}} {{tableTeestubeTeelounge.personenAnzahlValue2}} {{tableTeestubeTeelounge.personenAnzahlValue3}} {{tableTeestubeTeelounge.personenAnzahlValue4}} {{tableTeestubeTeelounge.personenAnzahlValue5}} {{tableTeestubeTeelounge.personenAnzahlValue6}} {{tableTeestubeTeelounge.personenAnzahlValue7}} {{tableTeestubeTeelounge.personenAnzahlValue8}} {{tableTeestubeTeelounge.personenAnzahlValue9}} {{tableTeestubeTeelounge.personenAnzahlValue10}} {{tableTeestubeTeelounge.personenAnzahlValue11}} {{tableTeestubeTeelounge.personenAnzahlValue12}} {{tableTeestubeTeelounge.personenAnzahlValue13}} {{tableTeestubeTeelounge.personenAnzahlValue14}} {{tableTeestubeTeelounge.personenAnzahlValue15}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showAlleBool\">\n      <br>\n      <br>\n      <br>\n      <h1 style=\"color: white\">Perfekt um eine Suche zu starten ;-)</h1>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div id=\"printSectionId2\" class=\"col-xs-12 printTwo\">\n  <div class=\"row\" style=\" border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;\" >\n    <div *ngIf=\"showBerglerBool\">\n      <div *ngFor=\"let tableBerglerStubeHubertusStube of tablesBerglerStubeHubertusStube; let j = index;\">\n        <div class=\"t{{tableBerglerStubeHubertusStube.number}} table-item\" (click)=\"moveTable(tableBerglerStubeHubertusStube, j)\" [ngStyle]=\"{'top': tableBerglerStubeHubertusStube.topValue + 'px', 'left': tableBerglerStubeHubertusStube.leftValue + 'px', 'background-color': + tableBerglerStubeHubertusStube.bgColor, 'height': + tableBerglerStubeHubertusStube.height + 'px', 'width': + tableBerglerStubeHubertusStube.width + 'px', 'border': + tableBerglerStubeHubertusStube.border}\" [style.border]=\"getStyle(tablesBerglerStubeHubertusStube[j].trace, tablesBerglerStubeHubertusStube[j].trace2, tablesBerglerStubeHubertusStube[j].trace3, tablesBerglerStubeHubertusStube[j].trace4, tablesBerglerStubeHubertusStube[j].trace5, tablesBerglerStubeHubertusStube[j].trace6, tablesBerglerStubeHubertusStube[j].trace7, tablesBerglerStubeHubertusStube[j].trace8, tablesBerglerStubeHubertusStube[j].trace9, tablesBerglerStubeHubertusStube[j].trace10, tablesBerglerStubeHubertusStube[j].trace11, tablesBerglerStubeHubertusStube[j].trace12, tablesBerglerStubeHubertusStube[j].trace13, tablesBerglerStubeHubertusStube[j].trace14, tablesBerglerStubeHubertusStube[j].trace15, tablesBerglerStubeHubertusStube[j].newTraceText)\">\n          <div *ngIf=\"tablesBerglerStubeHubertusStube[j] !== tablesBerglerStubeHubertusStube[j+1]\">\n            <p><b>{{tableBerglerStubeHubertusStube.number}} | {{tableBerglerStubeHubertusStube.personenAnzahlValue}} {{tableBerglerStubeHubertusStube.personenAnzahlValue2}} {{tableBerglerStubeHubertusStube.personenAnzahlValue3}} {{tableBerglerStubeHubertusStube.personenAnzahlValue4}} {{tableBerglerStubeHubertusStube.personenAnzahlValue5}} {{tableBerglerStubeHubertusStube.personenAnzahlValue6}} {{tableBerglerStubeHubertusStube.personenAnzahlValue7}} {{tableBerglerStubeHubertusStube.personenAnzahlValue8}} {{tableBerglerStubeHubertusStube.personenAnzahlValue9}} {{tableBerglerStubeHubertusStube.personenAnzahlValue10}} {{tableBerglerStubeHubertusStube.personenAnzahlValue11}} {{tableBerglerStubeHubertusStube.personenAnzahlValue12}} {{tableBerglerStubeHubertusStube.personenAnzahlValue13}} {{tableBerglerStubeHubertusStube.personenAnzahlValue14}} {{tableBerglerStubeHubertusStube.personenAnzahlValue15}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showBauernStubnBool\">\n      <div *ngFor=\"let tableBauernstube of tablesBauernstube; let j = index;\">\n        <div class=\"t{{tableBauernstube.number}} table-item\" (click)=\"moveTable(tableBauernstube, j)\" [ngStyle]=\"{'top': tableBauernstube.topValue + 'px', 'left': tableBauernstube.leftValue + 'px', 'background-color': + tableBauernstube.bgColor,  'height': + tableBauernstube.height + 'px', 'width': + tableBauernstube.width + 'px', 'border': + tableBauernstube.border}\" [style.border]=\"getStyle(tablesBauernstube[j].trace, tablesBauernstube[j].trace2, tablesBauernstube[j].trace3, tablesBauernstube[j].trace4, tablesBauernstube[j].trace5, tablesBauernstube[j].trace6, tablesBauernstube[j].trace7, tablesBauernstube[j].trace8, tablesBauernstube[j].trace9, tablesBauernstube[j].trace10, tablesBauernstube[j].trace11, tablesBauernstube[j].trace12, tablesBauernstube[j].trace13, tablesBauernstube[j].trace14, tablesBauernstube[j].trace15, tablesBauernstube[j].newTraceText)\">\n          <p><b>{{tableBauernstube.number}} | {{tableBauernstube.personenAnzahlValue}} {{tableBauernstube.personenAnzahlValue2}} {{tableBauernstube.personenAnzahlValue3}} {{tableBauernstube.personenAnzahlValue4}} {{tableBauernstube.personenAnzahlValue5}} {{tableBauernstube.personenAnzahlValue6}} {{tableBauernstube.personenAnzahlValue7}} {{tableBauernstube.personenAnzahlValue8}} {{tableBauernstube.personenAnzahlValue9}} {{tableBauernstube.personenAnzahlValue10}} {{tableBauernstube.personenAnzahlValue11}} {{tableBauernstube.personenAnzahlValue12}} {{tableBauernstube.personenAnzahlValue13}} {{tableBauernstube.personenAnzahlValue14}} {{tableBauernstube.personenAnzahlValue15}}</b></p>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showWaeldlerBool\">\n      <div *ngFor=\"let tableWaeldlerStubeKristallStube of tablesWaeldlerStubeKristallStube; let j = index;\">\n        <div class=\"t{{tableWaeldlerStubeKristallStube.number}} table-item\" (click)=\"moveTable(tableWaeldlerStubeKristallStube, j)\" [ngStyle]=\"{'top': tableWaeldlerStubeKristallStube.topValue + 'px', 'left': tableWaeldlerStubeKristallStube.leftValue + 'px', 'background-color': + tableWaeldlerStubeKristallStube.bgColor, 'height': + tableWaeldlerStubeKristallStube.height + 'px', 'width': + tableWaeldlerStubeKristallStube.width + 'px', 'border': + tableWaeldlerStubeKristallStube.border}\" [style.border]=\"getStyle(tablesWaeldlerStubeKristallStube[j].trace, tablesWaeldlerStubeKristallStube[j].trace2, tablesWaeldlerStubeKristallStube[j].trace3, tablesWaeldlerStubeKristallStube[j].trace4, tablesWaeldlerStubeKristallStube[j].trace5, tablesWaeldlerStubeKristallStube[j].trace6, tablesWaeldlerStubeKristallStube[j].trace7, tablesWaeldlerStubeKristallStube[j].trace8, tablesWaeldlerStubeKristallStube[j].trace9, tablesWaeldlerStubeKristallStube[j].trace10, tablesWaeldlerStubeKristallStube[j].trace11, tablesWaeldlerStubeKristallStube[j].trace12, tablesWaeldlerStubeKristallStube[j].trace13, tablesWaeldlerStubeKristallStube[j].trace14, tablesWaeldlerStubeKristallStube[j].trace15, tablesWaeldlerStubeKristallStube[j].newTraceText)\">\n          <div *ngIf=\"tablesWaeldlerStubeKristallStube[j] !== tablesWaeldlerStubeKristallStube[j+1]\">\n            <p><b>{{tableWaeldlerStubeKristallStube.number}} | {{tableWaeldlerStubeKristallStube.personenAnzahlValue}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue2}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue3}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue4}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue5}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue6}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue7}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue8}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue9}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue10}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue11}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue12}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue13}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue14}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue15}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showEdelweissBool\">\n      <div *ngFor=\"let tableEdelweissKaminStube of tablesEdelweissKaminStube; let j = index;\">\n        <div class=\"t{{tableEdelweissKaminStube.number}} table-item\" (click)=\"moveTable(tableEdelweissKaminStube, j)\" [ngStyle]=\"{'top': tableEdelweissKaminStube.topValue + 'px', 'left': tableEdelweissKaminStube.leftValue + 'px', 'background-color': + tableEdelweissKaminStube.bgColor,  'height': + tableEdelweissKaminStube.height + 'px', 'width': + tableEdelweissKaminStube.width + 'px', 'border': + tableEdelweissKaminStube.border, 'border-radius': + tableEdelweissKaminStube.borderRadius, 'transform':  + tableEdelweissKaminStube.transformValue}\" [style.border]=\"getStyle(tablesEdelweissKaminStube[j].trace, tablesEdelweissKaminStube[j].trace2, tablesEdelweissKaminStube[j].trace3, tablesEdelweissKaminStube[j].trace4, tablesEdelweissKaminStube[j].trace5, tablesEdelweissKaminStube[j].trace6, tablesEdelweissKaminStube[j].trace7, tablesEdelweissKaminStube[j].trace8, tablesEdelweissKaminStube[j].trace9, tablesEdelweissKaminStube[j].trace10, tablesEdelweissKaminStube[j].trace11, tablesEdelweissKaminStube[j].trace12, tablesEdelweissKaminStube[j].trace13, tablesEdelweissKaminStube[j].trace14, tablesEdelweissKaminStube[j].trace15, tablesEdelweissKaminStube[j].newTraceText)\">\n          <div *ngIf=\"tablesEdelweissKaminStube[j] !== tablesEdelweissKaminStube[j+1]\">\n            <p><b>{{tableEdelweissKaminStube.number}} | {{tableEdelweissKaminStube.personenAnzahlValue}} {{tableEdelweissKaminStube.personenAnzahlValue2}} {{tableEdelweissKaminStube.personenAnzahlValue3}} {{tableEdelweissKaminStube.personenAnzahlValue4}} {{tableEdelweissKaminStube.personenAnzahlValue5}} {{tableEdelweissKaminStube.personenAnzahlValue6}} {{tableEdelweissKaminStube.personenAnzahlValue7}} {{tableEdelweissKaminStube.personenAnzahlValue8}} {{tableEdelweissKaminStube.personenAnzahlValue9}} {{tableEdelweissKaminStube.personenAnzahlValue10}} {{tableEdelweissKaminStube.personenAnzahlValue11}} {{tableEdelweissKaminStube.personenAnzahlValue12}} {{tableEdelweissKaminStube.personenAnzahlValue13}} {{tableEdelweissKaminStube.personenAnzahlValue14}} {{tableEdelweissKaminStube.personenAnzahlValue15}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showTeeStubeBool\">\n      <div *ngFor=\"let tableTeestubeTeelounge  of tablesTeestubeTeelounge; let j = index;\">\n        <div class=\"t{{tableTeestubeTeelounge.number}} table-item\" (click)=\"moveTable(tableTeestubeTeelounge, j)\" [ngStyle]=\"{'top': tableTeestubeTeelounge.topValue + 'px', 'left': tableTeestubeTeelounge.leftValue + 'px', 'background-color': + tableTeestubeTeelounge.bgColor,  'height': + tableTeestubeTeelounge.height + 'px', 'width': + tableTeestubeTeelounge.width + 'px', 'border': + tableTeestubeTeelounge.border, 'border-radius': + tableTeestubeTeelounge.borderRadius, 'transform':  + tableTeestubeTeelounge.transformValue}\" [style.border]=\"getStyle(tablesTeestubeTeelounge[j].trace, tablesTeestubeTeelounge[j].trace2, tablesTeestubeTeelounge[j].trace3, tablesTeestubeTeelounge[j].trace4, tablesTeestubeTeelounge[j].trace5, tablesTeestubeTeelounge[j].trace6, tablesTeestubeTeelounge[j].trace7, tablesTeestubeTeelounge[j].trace8, tablesTeestubeTeelounge[j].trace9, tablesTeestubeTeelounge[j].trace10, tablesTeestubeTeelounge[j].trace11, tablesTeestubeTeelounge[j].trace12, tablesTeestubeTeelounge[j].trace13, tablesTeestubeTeelounge[j].trace14, tablesTeestubeTeelounge[j].trace15, tablesTeestubeTeelounge[j].newTraceText)\">\n          <div *ngIf=\"tablesTeestubeTeelounge[j] !== tablesTeestubeTeelounge[j+1]\">\n            <p><b>{{tableTeestubeTeelounge.number}} | {{tableTeestubeTeelounge.personenAnzahlValue}} {{tableTeestubeTeelounge.personenAnzahlValue2}} {{tableTeestubeTeelounge.personenAnzahlValue3}} {{tableTeestubeTeelounge.personenAnzahlValue4}} {{tableTeestubeTeelounge.personenAnzahlValue5}} {{tableTeestubeTeelounge.personenAnzahlValue6}} {{tableTeestubeTeelounge.personenAnzahlValue7}} {{tableTeestubeTeelounge.personenAnzahlValue8}} {{tableTeestubeTeelounge.personenAnzahlValue9}} {{tableTeestubeTeelounge.personenAnzahlValue10}} {{tableTeestubeTeelounge.personenAnzahlValue11}} {{tableTeestubeTeelounge.personenAnzahlValue12}} {{tableTeestubeTeelounge.personenAnzahlValue13}} {{tableTeestubeTeelounge.personenAnzahlValue14}} {{tableTeestubeTeelounge.personenAnzahlValue15}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showAlleBool\">\n      <br>\n      <br>\n      <br>\n      <h1 style=\"color: white\">Perfekt um eine Suche zu starten ;-)</h1>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2233,6 +2245,14 @@ var TableplanComponent = (function () {
                 _this.movedTeestubeTeelounge.emit(response[0].tables);
             }
         });
+    };
+    TableplanComponent.prototype.getStyle = function (j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y) {
+        if (j || k || l || m || n || o || p || q || r || s || t || u || v || w || x || y) {
+            return "solid 3px red";
+        }
+        else {
+            return "3px solid rgb(243, 239, 228)";
+        }
     };
     return TableplanComponent;
 }());
@@ -2343,7 +2363,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/digitalerTischplan/tischplan.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n<head>\n  <title>Dashboard</title>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  <script src=\"node_modules/core-js/client/shim.min.js\"></script>\n  <script src=\"<your-libs-directory>/object-assign.min.js\"></script>\n</head>\n<body>\n<div id=\"charge-error\" class=\"alert alert-danger <% if ( !errMsg ) { %> hidden <% } %>\">\n  <%= errMsg  %>\n</div>\n<div class=\"row\">\n  <div class=\"container-fluid\">\n    <app-navigation [newInformationElements]=\"newInformationElements\"\n                    [tablesOccupied]=\"tablesOccupied\"\n                    (getTablesOccupied)=\"tablesOccupied = $event\">\n    </app-navigation>\n    <div class=\"col-xs-12 col-sm-8 col-lg-4 print-col\">\n      <app-form-menu style=\"min-height: 40px\" [buttonBgColorInfoForm]=\"buttonBgColorInfoForm\"\n                     [buttonBgColorNotizForm]=\"buttonBgColorNotizForm\"\n                     [fontColorInfoForm]=\"fontColorInfoForm\"\n                     [fontColorNotizForm]=\"fontColorNotizForm\"\n                     [showNotizFormBool]=\"showNotizFormBool\"\n                     [showInfoFormBool]=\"showInfoFormBool\"\n                     (showInfoFormBoolChange)=\"showInfoFormBool=$event\"\n                     (showNotizFormBoolChange)=\"showNotizFormBool=$event\">\n      </app-form-menu>\n      <app-form [newInformationElements]=\"newInformationElements\"\n                [dateGenerated]=\"dateGenerated\"\n                [title]=\"title\"\n                [roomNumber]=\"roomNumber\"\n                [tableNumber]=\"tableNumber\"\n                [employee]=\"employee\"\n                [nameTraceInput]=\"nameTraceInput\"\n                [tablesBauernstube]=\"tablesBauernstube\"\n                [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                [showNotizFormBool]=\"showNotizFormBool\"\n                [showInfoFormBool]=\"showInfoFormBool\"\n                [notizElements]=\"notizElements\"\n                (notizResponse)=\"notizElements=$event\">\n      </app-form>\n      <app-departmentmenu\n        [buttonBgColor1]=\"buttonBgColor1\"\n        [buttonBgColor2]=\"buttonBgColor2\"\n        [buttonBgColor3]=\"buttonBgColor3\"\n        [buttonBgColor4]=\"buttonBgColor4\"\n        [buttonBgColor5]=\"buttonBgColor5\"\n        [buttonBgColor6]=\"buttonBgColor6\"\n        [fontColor1]=\"fontColor1\"\n        [fontColor2]=\"fontColor2\"\n        [fontColor3]=\"fontColor3\"\n        [fontColor4]=\"fontColor4\"\n        [fontColor5]=\"fontColor5\"\n        [fontColor6]=\"fontColor6\"\n        [showBauernStubnBool]=\"showBauernStubnBool\"\n        [showBerglerBool]=\"showBerglerBool\"\n        [showEdelweissBool]=\"showEdelweissBool\"\n        [showWaeldlerBool]=\"showWaeldlerBool\"\n        [showTeeStubeBool]=\"showTeeStubeBool\"\n        [showAlleBool]=\"showAlleBool\"\n        (showBauernStubnBoolChange)=\"showBauernStubnBool=$event\"\n        (showBerglerBoolChange)=\"showBerglerBool=$event\"\n        (showEdelweissBoolChange)=\"showEdelweissBool=$event\"\n        (showWaeldlerBoolChange)=\"showWaeldlerBool=$event\"\n        (showTeeStubeBoolChange)=\"showTeeStubeBool=$event\"\n        (showAlleBoolChange)=\"showAlleBool=$event\">\n      </app-departmentmenu>\n      <app-tableplan [tablesBauernstube]=\"tablesBauernstube\"\n                     [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                     [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                     [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                     [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                     [showBauernStubnBool]=\"showBauernStubnBool\"\n                     [showBerglerBool]=\"showBerglerBool\"\n                     [showEdelweissBool]=\"showEdelweissBool\"\n                     [showWaeldlerBool]=\"showWaeldlerBool\"\n                     [showTeeStubeBool]=\"showTeeStubeBool\"\n                     [showAlleBool]=\"showAlleBool\"\n                     (movedBauernstube)=\"tablesBauernstube = $event\"\n                     (movedBerglerStubeHubertusStube)=\"tablesBerglerStubeHubertusStube = $event\"\n                     (movedEdelweissKaminStube)=\"tablesEdelweissKaminStube = $event\"\n                     (movedTeestubeTeelounge)=\"tablesTeestubeTeelounge = $event\"\n                     (movedWaeldlerStubeKristallStube)=\"tablesWaeldlerStubeKristallStube = $event\">\n      </app-tableplan>\n    </div>\n    <div class=\"col-xs-12 col-lg-4 upload-col\">\n      <app-upload></app-upload>\n      <div class=\"outer-cards\">\n        <h3>Im-Haus-Liste</h3>\n        <app-im-haus-liste [imHausListeElemente]=\"imHausListeElemente\"></app-im-haus-liste>\n        <h3>Anreise-Liste</h3>\n        <app-anreise-liste [anreiseListeElemente]=\"anreiseListeElemente\"></app-anreise-liste>\n        <h3>Traces-Liste</h3>\n        <app-traces-liste [tracesListeElemente]=\"tracesListeElemente\" ></app-traces-liste>\n      </div>\n    </div>\n\n    <div class=\"col-xs-12 col-sm-4 col-lg-4 table-col\">\n      <app-search (termExport)=\"term = $event\"></app-search>\n      <app-notiz\n        [showBauernStubnBool]=\"showBauernStubnBool\"\n        [showBerglerBool]=\"showBerglerBool\"\n        [showEdelweissBool]=\"showEdelweissBool\"\n        [showWaeldlerBool]=\"showWaeldlerBool\"\n        [showTeeStubeBool]=\"showTeeStubeBool\"\n        [notizElements]=\"notizElements\"\n        [showAlleBool]=\"showAlleBool\">\n      </app-notiz>\n        <h3 style=\"margin-top: 20px\">Tisch Übersicht</h3>\n        <div class=\"inner-table\" style=\"padding: 0px 0px 0px 0px;\">\n          <div class=\"row3\">\n            <div class='wrapper' id=\"wrapper\">\n              <app-departments [tablesBauernstube]=\"tablesBauernstube\"\n                               [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                               [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                               [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                               [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                               [showBauernStubnBool]=\"showBauernStubnBool\"\n                               [showBerglerBool]=\"showBerglerBool\"\n                               [showEdelweissBool]=\"showEdelweissBool\"\n                               [showWaeldlerBool]=\"showWaeldlerBool\"\n                               [showTeeStubeBool]=\"showTeeStubeBool\"\n                               (dispensedBauernstube)=\"tablesBauernstube=$event\"\n                               (dispensedBerglerStubeHubertusStube)=\"tablesBerglerStubeHubertusStube=$event\"\n                               (dispensedEdelweissKaminStube)=\"tablesEdelweissKaminStube=$event\"\n                               (dispensedTeestubeTeelounge)=\"tablesTeestubeTeelounge=$event\"\n                               (dispensedWaeldlerStubeKristallStube)=\"tablesWaeldlerStubeKristallStube=$event\"\n                               [term]=\"term\"\n                               [showAlleBool]=\"showAlleBool\">\n              </app-departments>\n            </div>\n          </div>\n        </div>\n    </div>\n  </div>\n</div>\n</body>\n<app-print  [tables]=\"tables\"\n            [dateGeneratedListe]=\"dateGeneratedListe\"\n            [tablesBauernstube]=\"tablesBauernstube\"\n            [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n            [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n            [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n            [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n            [showBauernStubnBool]=\"showBauernStubnBool\"\n            [showBerglerBool]=\"showBerglerBool\"\n            [showEdelweissBool]=\"showEdelweissBool\"\n            [showWaeldlerBool]=\"showWaeldlerBool\"\n            [showTeeStubeBool]=\"showTeeStubeBool\"\n            (getTablesOccupied)=\"tablesOccupied = $event\"\n            (getTablesforAzListe)=\"tables = $event\">\n</app-print>\n</html>\n\n\n"
+module.exports = "<html>\n<head>\n  <title>Dashboard</title>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  <script src=\"node_modules/core-js/client/shim.min.js\"></script>\n  <script src=\"<your-libs-directory>/object-assign.min.js\"></script>\n</head>\n<body>\n<div id=\"charge-error\" class=\"alert alert-danger <% if ( !errMsg ) { %> hidden <% } %>\">\n  <%= errMsg  %>\n</div>\n<div class=\"row\">\n  <div class=\"container-fluid\">\n    <app-navigation [newInformationElements]=\"newInformationElements\"\n                    [tablesOccupied]=\"tablesOccupied\"\n                    (getTablesOccupied)=\"tablesOccupied = $event\"\n                    (umsetzenExport)=\"quellTisch = $event; umsetzen($event)\">\n    </app-navigation>\n    <div class=\"col-xs-12 col-sm-8 col-lg-4 print-col\">\n      <app-form-menu style=\"min-height: 40px\" [buttonBgColorInfoForm]=\"buttonBgColorInfoForm\"\n                     [buttonBgColorNotizForm]=\"buttonBgColorNotizForm\"\n                     [fontColorInfoForm]=\"fontColorInfoForm\"\n                     [fontColorNotizForm]=\"fontColorNotizForm\"\n                     [showNotizFormBool]=\"showNotizFormBool\"\n                     [showInfoFormBool]=\"showInfoFormBool\"\n                     (showInfoFormBoolChange)=\"showInfoFormBool=$event\"\n                     (showNotizFormBoolChange)=\"showNotizFormBool=$event\">\n      </app-form-menu>\n      <app-form [newInformationElements]=\"newInformationElements\"\n                [dateGenerated]=\"dateGenerated\"\n                [title]=\"title\"\n                [roomNumber]=\"roomNumber\"\n                [tableNumber]=\"tableNumber\"\n                [employee]=\"employee\"\n                [nameTraceInput]=\"nameTraceInput\"\n                [tablesBauernstube]=\"tablesBauernstube\"\n                [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                [showNotizFormBool]=\"showNotizFormBool\"\n                [showInfoFormBool]=\"showInfoFormBool\"\n                [notizElements]=\"notizElements\"\n                (notizResponse)=\"notizElements=$event\">\n      </app-form>\n      <app-departmentmenu\n        [buttonBgColor1]=\"buttonBgColor1\"\n        [buttonBgColor2]=\"buttonBgColor2\"\n        [buttonBgColor3]=\"buttonBgColor3\"\n        [buttonBgColor4]=\"buttonBgColor4\"\n        [buttonBgColor5]=\"buttonBgColor5\"\n        [buttonBgColor6]=\"buttonBgColor6\"\n        [fontColor1]=\"fontColor1\"\n        [fontColor2]=\"fontColor2\"\n        [fontColor3]=\"fontColor3\"\n        [fontColor4]=\"fontColor4\"\n        [fontColor5]=\"fontColor5\"\n        [fontColor6]=\"fontColor6\"\n        [showBauernStubnBool]=\"showBauernStubnBool\"\n        [showBerglerBool]=\"showBerglerBool\"\n        [showEdelweissBool]=\"showEdelweissBool\"\n        [showWaeldlerBool]=\"showWaeldlerBool\"\n        [showTeeStubeBool]=\"showTeeStubeBool\"\n        [showAlleBool]=\"showAlleBool\"\n        (showBauernStubnBoolChange)=\"showBauernStubnBool=$event\"\n        (showBerglerBoolChange)=\"showBerglerBool=$event\"\n        (showEdelweissBoolChange)=\"showEdelweissBool=$event\"\n        (showWaeldlerBoolChange)=\"showWaeldlerBool=$event\"\n        (showTeeStubeBoolChange)=\"showTeeStubeBool=$event\"\n        (showAlleBoolChange)=\"showAlleBool=$event\">\n      </app-departmentmenu>\n      <app-tableplan [tablesBauernstube]=\"tablesBauernstube\"\n                     [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                     [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                     [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                     [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                     [showBauernStubnBool]=\"showBauernStubnBool\"\n                     [showBerglerBool]=\"showBerglerBool\"\n                     [showEdelweissBool]=\"showEdelweissBool\"\n                     [showWaeldlerBool]=\"showWaeldlerBool\"\n                     [showTeeStubeBool]=\"showTeeStubeBool\"\n                     [showAlleBool]=\"showAlleBool\"\n                     (movedBauernstube)=\"tablesBauernstube = $event\"\n                     (movedBerglerStubeHubertusStube)=\"tablesBerglerStubeHubertusStube = $event\"\n                     (movedEdelweissKaminStube)=\"tablesEdelweissKaminStube = $event\"\n                     (movedTeestubeTeelounge)=\"tablesTeestubeTeelounge = $event\"\n                     (movedWaeldlerStubeKristallStube)=\"tablesWaeldlerStubeKristallStube = $event\">\n      </app-tableplan>\n    </div>\n    <div class=\"col-xs-12 col-lg-4 upload-col\">\n      <app-upload></app-upload>\n      <div class=\"outer-cards\">\n        <h3>Im-Haus-Liste</h3>\n        <app-im-haus-liste [imHausListeElemente]=\"imHausListeElemente\"></app-im-haus-liste>\n        <h3>Anreise-Liste</h3>\n        <app-anreise-liste [anreiseListeElemente]=\"anreiseListeElemente\"></app-anreise-liste>\n        <h3>Traces-Liste</h3>\n        <app-traces-liste [tracesListeElemente]=\"tracesListeElemente\" ></app-traces-liste>\n      </div>\n    </div>\n\n    <div class=\"col-xs-12 col-sm-4 col-lg-4 table-col\">\n      <app-search (termExport)=\"term = $event\"></app-search>\n      <app-notiz\n        [showBauernStubnBool]=\"showBauernStubnBool\"\n        [showBerglerBool]=\"showBerglerBool\"\n        [showEdelweissBool]=\"showEdelweissBool\"\n        [showWaeldlerBool]=\"showWaeldlerBool\"\n        [showTeeStubeBool]=\"showTeeStubeBool\"\n        [notizElements]=\"notizElements\"\n        [showAlleBool]=\"showAlleBool\">\n      </app-notiz>\n        <h3 style=\"margin-top: 20px\">Tisch Übersicht</h3>\n        <div class=\"inner-table\" style=\"padding: 0px 0px 0px 0px;\">\n          <div class=\"row3\">\n            <div class='wrapper' id=\"wrapper\">\n              <app-departments [tablesBauernstube]=\"tablesBauernstube\"\n                               [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                               [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                               [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                               [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                               [showBauernStubnBool]=\"showBauernStubnBool\"\n                               [showBerglerBool]=\"showBerglerBool\"\n                               [showEdelweissBool]=\"showEdelweissBool\"\n                               [showWaeldlerBool]=\"showWaeldlerBool\"\n                               [showTeeStubeBool]=\"showTeeStubeBool\"\n                               (dispensedBauernstube)=\"tablesBauernstube=$event\"\n                               (dispensedBerglerStubeHubertusStube)=\"tablesBerglerStubeHubertusStube=$event\"\n                               (dispensedEdelweissKaminStube)=\"tablesEdelweissKaminStube=$event\"\n                               (dispensedTeestubeTeelounge)=\"tablesTeestubeTeelounge=$event\"\n                               (dispensedWaeldlerStubeKristallStube)=\"tablesWaeldlerStubeKristallStube=$event\"\n                               [term]=\"term\"\n                               [showAlleBool]=\"showAlleBool\">\n              </app-departments>\n            </div>\n          </div>\n        </div>\n    </div>\n  </div>\n</div>\n</body>\n<app-print  [tables]=\"tables\"\n            [dateGeneratedListe]=\"dateGeneratedListe\"\n            [tablesBauernstube]=\"tablesBauernstube\"\n            [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n            [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n            [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n            [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n            [showBauernStubnBool]=\"showBauernStubnBool\"\n            [showBerglerBool]=\"showBerglerBool\"\n            [showEdelweissBool]=\"showEdelweissBool\"\n            [showWaeldlerBool]=\"showWaeldlerBool\"\n            [showTeeStubeBool]=\"showTeeStubeBool\"\n            (getTablesOccupied)=\"tablesOccupied = $event\"\n            (getTablesforAzListe)=\"tables = $event\">\n</app-print>\n</html>\n\n\n"
 
 /***/ }),
 
@@ -2422,6 +2442,7 @@ var TischplanComponent = (function () {
         this.date = [];
         this.parts = [];
         this.parsedDate = [];
+        this.tableInformation = [];
         this.buttonBgColorInfoForm = "0a7a74";
         this.buttonBgColorNotizForm = "0a7a74";
         this.fontColorInfoForm = "f3efe4";
@@ -2517,6 +2538,7 @@ var TischplanComponent = (function () {
             _this.tables = _this.tables.concat(_this.tablesBauernstube).concat(_this.tablesTeestubeTeelounge).concat(_this.tablesBerglerStubeHubertusStube).concat(_this.tablesEdelweissKaminStube).concat(_this.tablesWaeldlerStubeKristallStube);
             _this.changeBgColorIfAnreise(tables);
             _this.printComponent.formatAzListe(_this.tables);
+            _this.dispenseIfAbreise(tables);
         });
         this.tischplanService.getTracesListe()
             .subscribe(function (tracesListeElemente) {
@@ -2768,7 +2790,7 @@ var TischplanComponent = (function () {
                     else if (tables[a].department === "Bauernstube") {
                         this.tablesBauernstube[b].bgColor = "#0a7a74";
                     }
-                    else if (tables[a].department === "waeldlerStubeKristallStube-Zirbn") {
+                    else if (tables[a].department === "waeldlerStubeKristallStube") {
                         this.tablesWaeldlerStubeKristallStube[b].bgColor = "#0a7a74";
                     }
                     else if (tables[a].department === "edelweissKaminStube") {
@@ -2780,6 +2802,202 @@ var TischplanComponent = (function () {
                 }
             }
         }
+    };
+    TischplanComponent.prototype.dispenseIfAbreise = function (tables) {
+        console.log('=================================================dispenseIfAbreise');
+        this.dateTodayGenerated = new Date();
+        for (var a = 0; a < tables.length; a++) {
+            for (var b = 0; b < tables[a].tables.length; b++) {
+                if (tables[a].tables[b].abreiseValue) {
+                    console.log('tables[a].tables[b].abreiseValue: ' + b + " " + tables[a].tables[b].anreiseValue);
+                    this.parts[0] = tables[a].tables[b].abreiseValue.match(/(\d+)/g);
+                }
+                else {
+                    this.parts[0] = "undefined";
+                }
+                if (tables[a].tables[b].abreiseValue2) {
+                    this.parts[1] = tables[a].tables[b].abreiseValue2.match(/(\d+)/g);
+                }
+                else {
+                    this.parts[1] = "undefined";
+                }
+                if (tables[a].tables[b].abreiseValue3) {
+                    this.parts[2] = tables[a].tables[b].abreiseValue3.match(/(\d+)/g);
+                }
+                else {
+                    this.parts[2] = "undefined";
+                }
+                if (tables[a].tables[b].abreiseValue4) {
+                    this.parts[3] = tables[a].tables[b].abreiseValue4.match(/(\d+)/g);
+                }
+                else {
+                    this.parts[3] = "undefined";
+                }
+                if (tables[a].tables[b].abreiseValue4) {
+                    this.parts[4] = tables[a].tables[b].abreiseValue4.match(/(\d+)/g);
+                }
+                else {
+                    this.parts[4] = "undefined";
+                }
+                if (tables[a].tables[b].abreiseValue4) {
+                    this.parts[5] = tables[a].tables[b].abreiseValue4.match(/(\d+)/g);
+                }
+                else {
+                    this.parts[5] = "undefined";
+                }
+                if (tables[a].tables[b].abreiseValue7) {
+                    this.parts[6] = tables[a].tables[b].abreiseValue7.match(/(\d+)/g);
+                }
+                else {
+                    this.parts[6] = "undefined";
+                }
+                if (tables[a].tables[b].abreiseValue8) {
+                    this.parts[7] = tables[a].tables[b].abreiseValue8.match(/(\d+)/g);
+                }
+                else {
+                    this.parts[7] = "undefined";
+                }
+                if (tables[a].tables[b].abreiseValue9) {
+                    this.parts[8] = tables[a].tables[b].abreiseValue9.match(/(\d+)/g);
+                }
+                else {
+                    this.parts[8] = "undefined";
+                }
+                if (tables[a].tables[b].abreiseValue10) {
+                    this.parts[9] = tables[a].tables[b].abreiseValue10.match(/(\d+)/g);
+                }
+                else {
+                    this.parts[9] = "undefined";
+                }
+                if (tables[a].tables[b].abreiseValue11) {
+                    this.parts[10] = tables[a].tables[b].abreiseValue11.match(/(\d+)/g);
+                }
+                else {
+                    this.parts[10] = "undefined";
+                }
+                if (tables[a].tables[b].abreiseValue12) {
+                    this.parts[11] = tables[a].tables[b].abreiseValue12.match(/(\d+)/g);
+                }
+                else {
+                    this.parts[11] = "undefined";
+                }
+                if (tables[a].tables[b].abreiseValue13) {
+                    this.parts[12] = tables[a].tables[b].abreiseValue13.match(/(\d+)/g);
+                }
+                else {
+                    this.parts[12] = "undefined";
+                }
+                if (tables[a].tables[b].abreiseValue14) {
+                    this.parts[13] = tables[a].tables[b].abreiseValue14.match(/(\d+)/g);
+                }
+                else {
+                    this.parts[13] = "undefined";
+                }
+                if (tables[a].tables[b].abreiseValue15) {
+                    this.parts[14] = tables[a].tables[b].abreiseValue15.match(/(\d+)/g);
+                }
+                else {
+                    this.parts[14] = "undefined";
+                }
+                for (var c = 0; c <= 14; c++) {
+                    if (this.parts[c]) {
+                        this.date[c] = new Date(2018, this.parts[c][1] - 1, this.parts[c][0]);
+                        this.parsedDate[c] = String(this.date[c]).substring(0, 15);
+                    }
+                }
+                // note parts[1]-1
+                //console.log('parts[2]' + parts[2] + 'parts[1]' + (parts[1] - 1) + 'parts[0]' + parts[0]);
+                // Mon May 31 2010 00:00:00
+                //this.tablesRestaurant[j].anreiseValue
+                var dateToday = String(this.dateTodayGenerated).substring(0, 15);
+                console.log('Parsed Date --->: ' + this.parsedDate[0]);
+                console.log('this.dateGenerated --->: ' + dateToday);
+                if (dateToday.indexOf(this.parsedDate[0] || this.parsedDate[1] || this.parsedDate[2] || this.parsedDate[3] || this.parsedDate[4] || this.parsedDate[5] || this.parsedDate[6] || this.parsedDate[7] || this.parsedDate[8] || this.parsedDate[9] || this.parsedDate[10] || this.parsedDate[11] || this.parsedDate[12] || this.parsedDate[13] || this.parsedDate[14] || this.parsedDate[15]) !== -1) {
+                    this.departmentsComponent.occupy(tables[a].tables[b], b);
+                }
+            }
+        }
+    };
+    TischplanComponent.prototype.umsetzen = function () {
+        var _this = this;
+        var targetTable = this.quellTisch.zielTisch;
+        var quellTischNumber = this.quellTisch.quellTisch;
+        var targetTableNumber = Number(this.quellTisch.zielTisch);
+        var quellTischNumberNumber = Number(this.quellTisch.quellTisch);
+        console.log('targetTable' + targetTable);
+        console.log('quellTischNumber' + quellTischNumber);
+        var tableToMove = { department: "Empty", number: "0", targetTable: "0", targetDepartment: "Empty" };
+        var j = 0;
+        if (Number(this.quellTisch.quellTisch) >= 30 && Number(this.quellTisch.quellTisch) <= 47) {
+            tableToMove.department = "berglerStubeHubertusStube";
+            j = 1;
+        }
+        else if (Number(this.quellTisch.quellTisch) >= 10 && Number(this.quellTisch.quellTisch) <= 26) {
+            tableToMove.department = "Bauernstube";
+            j = 0;
+        }
+        else if (Number(this.quellTisch.quellTisch) >= 50 && Number(this.quellTisch.quellTisch) <= 77) {
+            tableToMove.department = "waeldlerStubeKristallStube";
+            j = 4;
+        }
+        else if (Number(this.quellTisch.quellTisch) >= 80 && Number(this.quellTisch.quellTisch) <= 99) {
+            tableToMove.department = "edelweissKaminStube";
+            j = 3;
+        }
+        else if (Number(this.quellTisch.quellTisch) >= 1 && Number(this.quellTisch.quellTisch) <= 6) {
+            tableToMove.department = "teestubeTeelounge";
+            j = 2;
+        }
+        if (Number(this.quellTisch.zielTisch) >= 30 && Number(this.quellTisch.zielTisch) <= 47) {
+            tableToMove.department = "berglerStubeHubertusStube";
+        }
+        else if (Number(this.quellTisch.zielTisch) >= 10 && Number(this.quellTisch.zielTisch) <= 26) {
+            tableToMove.department = "Bauernstube";
+        }
+        else if (Number(this.quellTisch.zielTisch) >= 50 && Number(this.quellTisch.zielTisch) <= 77) {
+            tableToMove.department = "waeldlerStubeKristallStube";
+        }
+        else if (Number(this.quellTisch.zielTisch) >= 80 && Number(this.quellTisch.zielTisch) <= 99) {
+            tableToMove.department = "edelweissKaminStube";
+        }
+        else if (Number(this.quellTisch.zielTisch) >= 1 && Number(this.quellTisch.zielTisch) <= 6) {
+            tableToMove.department = "teestubeTeelounge";
+        }
+        var index = 0;
+        tableToMove.number = quellTischNumber;
+        tableToMove.targetTable = targetTable;
+        console.log(tableToMove);
+        this.tischplanService.getTables()
+            .subscribe(function (tables) {
+            for (var a = 0; a < tables.length; a++) {
+                for (var b = 0; b < tables[a].tables.length; b++) {
+                    if (tables[a].department === tableToMove.department) {
+                        console.log("YEEEES BEFORE");
+                        if (tables[a].tables[b].number === tableToMove.number) {
+                            console.log("YEEEEEEEESSSSS AFFFTEEEER!!!");
+                            console.log(tables[a].tables[b]);
+                            _this.tableInformation.push(tables[a].tables[b]);
+                            console.log(_this.tableInformation);
+                            console.log('index: ' + index);
+                            _this.tableInformation.push(tableToMove);
+                        }
+                    }
+                }
+            }
+            for (var a = 0; a < tables.length; a++) {
+                for (var b = 0; b < tables[a].tables.length; b++) {
+                    if (tables[a].department === tableToMove.targetDepartment) {
+                        if (tables[a].tables[b].number === tableToMove.targetTable) {
+                            index = b;
+                        }
+                    }
+                }
+            }
+            _this.departmentsComponent.addInformationToTable(_this.tableInformation, index);
+            _this.departmentsComponent.occupyTableOnDrop(tableToMove, index);
+            //this.departmentsComponent.umsetzen(this.tableInformation, index);
+        });
+        this.departmentsComponent.occupy(tableToMove, j);
     };
     return TischplanComponent;
 }());

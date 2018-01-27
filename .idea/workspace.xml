@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b12636d-0934-43d0-9e11-bbac60639e35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/departments.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/departments.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/navigation/navigation.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/navigation/navigation.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/navigation/navigation.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/navigation/navigation.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/print/print.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/print/print.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tableplan/tableplan.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tableplan/tableplan.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tableplan/tableplan.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tableplan/tableplan.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/table.js" afterPath="$PROJECT_DIR$/routes/table.js" />
-    </list>
+    <list default="true" id="2b12636d-0934-43d0-9e11-bbac60639e35" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -116,8 +105,8 @@
       <file leaf-file-name="table.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="873" column="9" lean-forward="true" selection-start-line="873" selection-start-column="9" selection-end-line="873" selection-end-column="9" />
+            <state relative-caret-position="518">
+              <caret line="314" column="49" lean-forward="true" selection-start-line="314" selection-start-column="49" selection-end-line="314" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -646,12 +635,12 @@
       <workItem from="1516609462945" duration="769000" />
       <workItem from="1516610296987" duration="238000" />
       <workItem from="1516610590639" duration="27448000" />
-      <workItem from="1516883291452" duration="9026000" />
+      <workItem from="1516883291452" duration="9091000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="651982000" />
+    <option name="totallyTimeSpent" value="652047000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1107,8 +1096,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="873" column="9" lean-forward="true" selection-start-line="873" selection-start-column="9" selection-end-line="873" selection-end-column="9" />
+        <state relative-caret-position="518">
+          <caret line="314" column="49" lean-forward="true" selection-start-line="314" selection-start-column="49" selection-end-line="314" selection-end-column="49" />
           <folding />
         </state>
       </provider>
