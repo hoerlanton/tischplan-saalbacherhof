@@ -205,7 +205,8 @@ export class NavigationComponent implements OnInit {
 
   }
 
-  dispenseIfAbreise(tables) {
+  dispenseIfAbreise() {
+    let tables = this.tablesTempAbreise;
     console.log('=================================================dispenseIfAbreise');
     this.dateTodayGenerated = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
 

@@ -2304,7 +2304,8 @@ var NavigationComponent = (function () {
         })
             .subscribe(function (files) { return console.log('files', files); });
     };
-    NavigationComponent.prototype.dispenseIfAbreise = function (tables) {
+    NavigationComponent.prototype.dispenseIfAbreise = function () {
+        var tables = this.tablesTempAbreise;
         console.log('=================================================dispenseIfAbreise');
         this.dateTodayGenerated = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
         for (var a = 0; a < tables.length; a++) {
@@ -3047,6 +3048,7 @@ var TischplanComponent = (function () {
             console.log(_this.tablesBerglerStubeHubertusStube);
             console.log(_this.tablesWaeldlerStubeKristallStube);
             console.log(_this.tablesTeestubeTeelounge);
+            _this.tablesTempAbreise = tables;
             _this.tables = _this.tables.concat(_this.tablesBauernstube).concat(_this.tablesTeestubeTeelounge).concat(_this.tablesBerglerStubeHubertusStube).concat(_this.tablesEdelweissKaminStube).concat(_this.tablesWaeldlerStubeKristallStube);
             _this.changeBgColorIfAnreise(tables);
             _this.printComponent.formatAzListe(_this.tables);

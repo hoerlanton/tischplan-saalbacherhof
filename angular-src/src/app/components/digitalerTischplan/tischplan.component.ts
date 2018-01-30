@@ -213,7 +213,7 @@ export class TischplanComponent {
         console.log(this.tablesBerglerStubeHubertusStube);
         console.log(this.tablesWaeldlerStubeKristallStube);
         console.log(this.tablesTeestubeTeelounge);
-
+        this.tablesTempAbreise = tables;
 
         this.tables = this.tables.concat(this.tablesBauernstube).concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube);
         this.changeBgColorIfAnreise(tables);
