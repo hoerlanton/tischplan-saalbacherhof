@@ -17,7 +17,6 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { TableplanComponent } from './tableplan/tableplan.component';
 import { AnreiseListeComponent } from './anreise-liste/anreise-liste.component';
 import { TracesListeComponent } from './traces-liste/traces-liste.component';
-import { UploadComponent } from './upload/upload.component';
 import { DepartmentsComponent } from './departments/departments.component';
 
 @Component({
@@ -46,8 +45,6 @@ export class TischplanComponent {
   private anreiseListeComponent: AnreiseListeComponent;
   @ViewChild(TracesListeComponent)
   private tracesListeComponent: TracesListeComponent;
-  @ViewChild(UploadComponent)
-  private uploadComponent: UploadComponent;
 
   buttonBgColor1: string;
   buttonBgColor2: string;
@@ -75,7 +72,7 @@ export class TischplanComponent {
   tablesOccupied: number;
   tablesTemp: any[] = [];
   tempTablesArray: any[] = [];
-  tempTablesArray2:  any[] = [];
+  tempTablesArray2: any[] = [];
   tempTablesArray1: any[] = [];
   tempTablesArray3: any[] = [];
   tablesBerglerStubeHubertusStube: Table[] = [];
@@ -112,14 +109,22 @@ export class TischplanComponent {
   quellTisch: any;
   zielTisch: any;
   tableInformation: any[] = [];
+  tablesTempAbreise: any[] = [];
+  abreiseTablePlusIndex: any;
+  umsetzenInfoVar: any;
+  showTablePlanBool: boolean;
+  buttonBgColorShowTablePlan: string;
+  fontColorShowTablePlan: string;
 
 
-  constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, private dragulaService: DragulaService ) {
+  constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, private dragulaService: DragulaService) {
 
     this.buttonBgColorInfoForm = "0a7a74";
     this.buttonBgColorNotizForm = "0a7a74";
     this.fontColorInfoForm = "f3efe4";
     this.fontColorNotizForm = "f3efe4";
+    this.buttonBgColorShowTablePlan = "0a7a74";
+    this.fontColorShowTablePlan = "f3efe4";
     this.dateGeneratedListe = new Date();
     this.buttonBgColor1 = "0a7a74";
     this.buttonBgColor2 = "0a7a74";
@@ -145,9 +150,9 @@ export class TischplanComponent {
       .subscribe(imHausListeElemente => {
         //console.log('IM-HAUS-LISTE before:');
         //console.log(imHausListeElemente);
-        imHausListeElemente.sort(function(a, b){
-          if(a.name < b.name) return -1;
-          if(a.name > b.name) return 1;
+        imHausListeElemente.sort(function (a, b) {
+          if (a.name < b.name) return -1;
+          if (a.name > b.name) return 1;
           return 0;
         });
         this.imHausListeElemente = imHausListeElemente;
@@ -157,9 +162,9 @@ export class TischplanComponent {
 
     this.tischplanService.getAnreiseListe()
       .subscribe(anreiseListeElemente => {
-        anreiseListeElemente.sort(function(a, b){
-          if(a.name < b.name) return -1;
-          if(a.name > b.name) return 1;
+        anreiseListeElemente.sort(function (a, b) {
+          if (a.name < b.name) return -1;
+          if (a.name > b.name) return 1;
           return 0;
         });
         this.anreiseListeElemente = anreiseListeElemente;
@@ -168,7 +173,7 @@ export class TischplanComponent {
 
     this.tischplanService.getNotizElements()
       .subscribe(informationElemente => {
-        if(informationElemente === null) {
+        if (informationElemente === null) {
           return;
         } else {
           this.notizElements = informationElemente;
@@ -210,22 +215,20 @@ export class TischplanComponent {
         console.log(this.tablesTeestubeTeelounge);
 
 
-
         this.tables = this.tables.concat(this.tablesBauernstube).concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube);
         this.changeBgColorIfAnreise(tables);
         this.printComponent.formatAzListe(this.tables);
-        this.dispenseIfAbreise(tables);
+        //this.dispenseIfAbreise(tables);
 
       });
-
 
 
     this.tischplanService.getTracesListe()
       .subscribe(tracesListeElemente => {
         console.log(tracesListeElemente);
-        tracesListeElemente.sort(function(a, b){
-          if(a.name < b.name) return -1;
-          if(a.name > b.name) return 1;
+        tracesListeElemente.sort(function (a, b) {
+          if (a.name < b.name) return -1;
+          if (a.name > b.name) return 1;
           return 0;
         });
 
@@ -280,9 +283,9 @@ export class TischplanComponent {
     console.log("el = " + JSON.stringify(el));
 
     let information = args[0].innerText;
-      //console.log("information: " + information);
+    //console.log("information: " + information);
     let informationElements = information.split(/\n/);
-      //console.log(informationElements);
+    //console.log(informationElements);
     let informationElements2 = [];
     for (let s = 0; s < informationElements.length; s++) {
       informationElements2.push(informationElements[s].split(/:(.+)/)[1]);
@@ -290,19 +293,19 @@ export class TischplanComponent {
         informationElements2[s] = informationElements[s]
       }
     }
-      //console.log(informationElements2);
+    //console.log(informationElements2);
     let department = JSON.stringify(args[1].id);
-      //console.log("departement" + department);
+    //console.log("departement" + department);
     let departementSubstring = department.substring(1, department.length - 1);
-      //console.log("departementSubstring: " + departementSubstring);
+    //console.log("departementSubstring: " + departementSubstring);
     let tableNumber = args[1].innerText;
-      //console.log("tableNumber: " + tableNumber);
+    //console.log("tableNumber: " + tableNumber);
     let tableNumberSubstring = tableNumber.toString().match(/\d+/);
     let numbers = tableNumber.match(/\d+/g);
-      //console.log("numbers: " + numbers);
+    //console.log("numbers: " + numbers);
     let arrayIndex = numbers[1];
-      //console.log("arrayIndex: " + arrayIndex);
-      //console.log("tableNumberSubstring: " + tableNumberSubstring);
+    //console.log("arrayIndex: " + arrayIndex);
+    //console.log("tableNumberSubstring: " + tableNumberSubstring);
     let dataString = [];
     dataString.push(information + departementSubstring + tableNumberSubstring);
     let jBefore = tableNumber.toString().match(/\d+/g);
@@ -336,303 +339,55 @@ export class TischplanComponent {
     // this.renderer.invokeElementMethod(this.input.nativeElement, 'focus');
   }
 
-  upload() {
-    this.uploadComponent.upload();
-  }
-  showBauernStubn(){
+  showBauernStubn() {
     this.departmentmenuComponent.showBauernStubn();
   }
-  showBergler(){
+
+  showBergler() {
     this.departmentmenuComponent.showBergler();
   }
-  showWaeldler(){
+
+  showWaeldler() {
     this.departmentmenuComponent.showWaeldler();
   }
-  showEdelweiss(){
+
+  showEdelweiss() {
     this.departmentmenuComponent.showEdelweiss();
   }
-  showTeestube(){
+
+  showTeestube() {
     this.departmentmenuComponent.showTeestube();
   }
+
   moveTable(table, j) {
     this.tableplanComponent.moveTable(table, j);
   }
+
   sendInformation(event) {
     this.formComponent.sendInformation(event);
   }
+
   delete(informationElement, j, event) {
     this.navigationComponent.delete(informationElement, j, event);
   }
+
   changeBgColorIfAnreise(tables) {
-    console.log('=================================================changeBgColorIfAnreise');
-    this.dateTodayGenerated = new Date();
-
-    for (let a = 0; a < tables.length; a++) {
-      for (let b = 0; b < tables[a].tables.length; b++) {
-
-        if (tables[a].tables[b].anreiseValue) {
-          console.log('tables[a].tables[b].anreiseValue: ' + b + " " + tables[a].tables[b].anreiseValue);
-          this.parts[0] = tables[a].tables[b].anreiseValue.match(/(\d+)/g);} else {
-          this.parts[0] = "undefined";
-        }
-        if (tables[a].tables[b].anreiseValue2) {
-          this.parts[1] = tables[a].tables[b].anreiseValue2.match(/(\d+)/g);}else {
-          this.parts[1] = "undefined";
-        }
-        if (tables[a].tables[b].anreiseValue3) {
-          this.parts[2] = tables[a].tables[b].anreiseValue3.match(/(\d+)/g);}else {
-          this.parts[2] = "undefined";
-        }
-        if (tables[a].tables[b].anreiseValue4) {
-          this.parts[3] = tables[a].tables[b].anreiseValue4.match(/(\d+)/g);}else {
-          this.parts[3] = "undefined";
-        }
-        if (tables[a].tables[b].anreiseValue5) {
-          this.parts[4] = tables[a].tables[b].anreiseValue5.match(/(\d+)/g);}else {
-          this.parts[4] = "undefined";
-        }
-        if (tables[a].tables[b].anreiseValue6) {
-          this.parts[5] = tables[a].tables[b].anreiseValue6.match(/(\d+)/g);}else {
-          this.parts[5] = "undefined";
-        }
-        if (tables[a].tables[b].anreiseValue7) {
-          this.parts[6] = tables[a].tables[b].anreiseValue7.match(/(\d+)/g);}else {
-          this.parts[6] = "undefined";
-        }
-        if (tables[a].tables[b].anreiseValue8) {
-          this.parts[7] = tables[a].tables[b].anreiseValue8.match(/(\d+)/g);}else {
-          this.parts[7] = "undefined";
-        }
-        if (tables[a].tables[b].anreiseValue9) {
-          this.parts[8] = tables[a].tables[b].anreiseValue9.match(/(\d+)/g);}else {
-          this.parts[8] = "undefined";
-        }
-        if (tables[a].tables[b].anreiseValue10) {
-          this.parts[9] = tables[a].tables[b].anreiseValue10.match(/(\d+)/g);}else {
-          this.parts[9] = "undefined";
-        }
-        if (tables[a].tables[b].anreiseValue11) {
-          this.parts[10] = tables[a].tables[b].anreiseValue11.match(/(\d+)/g);}else {
-          this.parts[10] = "undefined";
-        }
-        if (tables[a].tables[b].anreiseValue12) {
-          this.parts[11] = tables[a].tables[b].anreiseValue12.match(/(\d+)/g);}else {
-          this.parts[11] = "undefined";
-        }
-        if (tables[a].tables[b].anreiseValue13) {
-          this.parts[12] = tables[a].tables[b].anreiseValue13.match(/(\d+)/g);}else {
-          this.parts[12] = "undefined";
-        }
-        if (tables[a].tables[b].anreiseValue14) {
-          this.parts[13] = tables[a].tables[b].anreiseValue14.match(/(\d+)/g);}else {
-          this.parts[13] = "undefined";
-        }
-        if (tables[a].tables[b].anreiseValue15) {
-          this.parts[14] = tables[a].tables[b].anreiseValue15.match(/(\d+)/g);}else {
-          this.parts[14] = "undefined";
-        }
-
-        for (let c = 0; c <= 14; c++) {
-          if (this.parts[c]) {
-            this.date[c] = new Date(2018, this.parts[c][1] - 1, this.parts[c][0]);
-            this.parsedDate[c] = String(this.date[c]).substring(0, 15);
-          }
-        }
-        // note parts[1]-1
-        //console.log('parts[2]' + parts[2] + 'parts[1]' + (parts[1] - 1) + 'parts[0]' + parts[0]);
-        // Mon May 31 2010 00:00:00
-        //this.tablesRestaurant[j].anreiseValue
-        let dateToday = String(this.dateTodayGenerated).substring(0, 15);
-        console.log('Parsed Date --->: ' + this.parsedDate[0]);
-        console.log('this.dateGenerated --->: ' + dateToday);
-        if (dateToday.indexOf(this.parsedDate[0] || this.parsedDate[1] || this.parsedDate[2] || this.parsedDate[3] || this.parsedDate[4] || this.parsedDate[5] || this.parsedDate[6] || this.parsedDate[7] || this.parsedDate[8] || this.parsedDate[9] || this.parsedDate[10] || this.parsedDate[11] || this.parsedDate[12] || this.parsedDate[13] || this.parsedDate[14] || this.parsedDate[15]) !== -1) {
-          if (tables[a].department === "berglerStubeHubertusStube") {
-            this.tablesBerglerStubeHubertusStube[b].bgColor = "#0a7a74";
-          }
-          else if (tables[a].department === "Bauernstube") {
-            this.tablesBauernstube[b].bgColor = "#0a7a74";
-          }
-          else if (tables[a].department === "waeldlerStubeKristallStube") {
-            this.tablesWaeldlerStubeKristallStube[b].bgColor = "#0a7a74";
-          }
-          else if (tables[a].department === "edelweissKaminStube") {
-            this.tablesEdelweissKaminStube[b].bgColor = "#0a7a74";
-          }
-          else if (tables[a].department === "teestubeTeelounge") {
-            this.tablesTeestubeTeelounge[b].bgColor = "#0a7a74";
-          }
-        }
-      }
-    }
+    this.departmentsComponent.changeBgColorIfAnreise(tables);
   }
-  dispenseIfAbreise(tables) {
-    console.log('=================================================dispenseIfAbreise');
-    this.dateTodayGenerated = new Date();
-
-    for (let a = 0; a < tables.length; a++) {
-      for (let b = 0; b < tables[a].tables.length; b++) {
-
-        if (tables[a].tables[b].abreiseValue) {
-          console.log('tables[a].tables[b].abreiseValue: ' + b + " " + tables[a].tables[b].anreiseValue);
-          this.parts[0] = tables[a].tables[b].abreiseValue.match(/(\d+)/g);} else {
-          this.parts[0] = "undefined";
-        }
-        if (tables[a].tables[b].abreiseValue2) {
-          this.parts[1] = tables[a].tables[b].abreiseValue2.match(/(\d+)/g);}else {
-          this.parts[1] = "undefined";
-        }
-        if (tables[a].tables[b].abreiseValue3) {
-          this.parts[2] = tables[a].tables[b].abreiseValue3.match(/(\d+)/g);}else {
-          this.parts[2] = "undefined";
-        }
-        if (tables[a].tables[b].abreiseValue4) {
-          this.parts[3] = tables[a].tables[b].abreiseValue4.match(/(\d+)/g);}else {
-          this.parts[3] = "undefined";
-        }
-        if (tables[a].tables[b].abreiseValue4) {
-          this.parts[4] = tables[a].tables[b].abreiseValue4.match(/(\d+)/g);}else {
-          this.parts[4] = "undefined";
-        }
-        if (tables[a].tables[b].abreiseValue4) {
-          this.parts[5] = tables[a].tables[b].abreiseValue4.match(/(\d+)/g);}else {
-          this.parts[5] = "undefined";
-        }
-        if (tables[a].tables[b].abreiseValue7) {
-          this.parts[6] = tables[a].tables[b].abreiseValue7.match(/(\d+)/g);}else {
-          this.parts[6] = "undefined";
-        }
-        if (tables[a].tables[b].abreiseValue8) {
-          this.parts[7] = tables[a].tables[b].abreiseValue8.match(/(\d+)/g);}else {
-          this.parts[7] = "undefined";
-        }
-        if (tables[a].tables[b].abreiseValue9) {
-          this.parts[8] = tables[a].tables[b].abreiseValue9.match(/(\d+)/g);}else {
-          this.parts[8] = "undefined";
-        }
-        if (tables[a].tables[b].abreiseValue10) {
-          this.parts[9] = tables[a].tables[b].abreiseValue10.match(/(\d+)/g);}else {
-          this.parts[9] = "undefined";
-        }
-        if (tables[a].tables[b].abreiseValue11) {
-          this.parts[10] = tables[a].tables[b].abreiseValue11.match(/(\d+)/g);}else {
-          this.parts[10] = "undefined";
-        }
-        if (tables[a].tables[b].abreiseValue12) {
-          this.parts[11] = tables[a].tables[b].abreiseValue12.match(/(\d+)/g);}else {
-          this.parts[11] = "undefined";
-        }
-        if (tables[a].tables[b].abreiseValue13) {
-          this.parts[12] = tables[a].tables[b].abreiseValue13.match(/(\d+)/g);}else {
-          this.parts[12] = "undefined";
-        }
-        if (tables[a].tables[b].abreiseValue14) {
-          this.parts[13] = tables[a].tables[b].abreiseValue14.match(/(\d+)/g);}else {
-          this.parts[13] = "undefined";
-        }
-        if (tables[a].tables[b].abreiseValue15) {
-          this.parts[14] = tables[a].tables[b].abreiseValue15.match(/(\d+)/g);}else {
-          this.parts[14] = "undefined";
-        }
-
-        for (let c = 0; c <= 14; c++) {
-          if (this.parts[c]) {
-            this.date[c] = new Date(2018, this.parts[c][1] - 1, this.parts[c][0]);
-            this.parsedDate[c] = String(this.date[c]).substring(0, 15);
-          }
-        }
-        // note parts[1]-1
-        //console.log('parts[2]' + parts[2] + 'parts[1]' + (parts[1] - 1) + 'parts[0]' + parts[0]);
-        // Mon May 31 2010 00:00:00
-        //this.tablesRestaurant[j].anreiseValue
-        let dateToday = String(this.dateTodayGenerated).substring(0, 15);
-        console.log('Parsed Date --->: ' + this.parsedDate[0]);
-        console.log('this.dateGenerated --->: ' + dateToday);
-        if (dateToday.indexOf(this.parsedDate[0] || this.parsedDate[1] || this.parsedDate[2] || this.parsedDate[3] || this.parsedDate[4] || this.parsedDate[5] || this.parsedDate[6] || this.parsedDate[7] || this.parsedDate[8] || this.parsedDate[9] || this.parsedDate[10] || this.parsedDate[11] || this.parsedDate[12] || this.parsedDate[13] || this.parsedDate[14] || this.parsedDate[15]) !== -1) {
-          this.departmentsComponent.occupy(tables[a].tables[b], b);
-        }
-      }
-    }
+  abreisenRemoval() {
+    this.departmentsComponent.occupy(this.abreiseTablePlusIndex.abreisenExport, this.abreiseTablePlusIndex.b);
   }
-
-
   umsetzen() {
-
-    let targetTable = this.quellTisch.zielTisch;
-    let quellTischNumber = this.quellTisch.quellTisch;
-    let targetTableNumber = Number(this.quellTisch.zielTisch);
-    let quellTischNumberNumber = Number(this.quellTisch.quellTisch);
-    console.log('targetTable' + targetTable);
-    console.log('quellTischNumber' + quellTischNumber);
-    let tableToMove = {department: "Empty", number: "0", targetTable: "0", targetDepartment: "Empty"};
-    let j = 0;
-
-    if (Number(this.quellTisch.quellTisch) >= 30 && Number(this.quellTisch.quellTisch) <= 47) {
-      tableToMove.department = "berglerStubeHubertusStube";
-      j = 1;
-    } else if (Number(this.quellTisch.quellTisch) >= 10 && Number(this.quellTisch.quellTisch) <= 26) {
-      tableToMove.department = "Bauernstube";
-      j = 0;
-    } else if (Number(this.quellTisch.quellTisch) >= 50 && Number(this.quellTisch.quellTisch) <= 77) {
-      tableToMove.department = "waeldlerStubeKristallStube";
-      j = 4;
-    } else if (Number(this.quellTisch.quellTisch) >= 80 && Number(this.quellTisch.quellTisch) <= 99) {
-      tableToMove.department = "edelweissKaminStube";
-      j = 3;
-    } else if (Number(this.quellTisch.quellTisch) >= 1 && Number(this.quellTisch.quellTisch) <= 6) {
-      tableToMove.department = "teestubeTeelounge";
-      j = 2;
-    }
-
-    if (Number(this.quellTisch.zielTisch) >= 30 && Number(this.quellTisch.zielTisch) <= 47) {
-      tableToMove.department = "berglerStubeHubertusStube";
-    } else if (Number(this.quellTisch.zielTisch) >= 10 && Number(this.quellTisch.zielTisch) <= 26) {
-      tableToMove.department = "Bauernstube";
-    } else if (Number(this.quellTisch.zielTisch) >= 50 && Number(this.quellTisch.zielTisch) <= 77) {
-      tableToMove.department = "waeldlerStubeKristallStube";
-    } else if (Number(this.quellTisch.zielTisch) >= 80 && Number(this.quellTisch.zielTisch) <= 99) {
-      tableToMove.department = "edelweissKaminStube";
-    } else if (Number(this.quellTisch.zielTisch) >= 1 && Number(this.quellTisch.zielTisch) <= 6) {
-      tableToMove.department = "teestubeTeelounge";
-    }
-
-
-
-    let index = 0;
-    tableToMove.number = quellTischNumber;
-    tableToMove.targetTable = targetTable;
-    console.log(tableToMove);
-    this.tischplanService.getTables()
-      .subscribe(tables => {
-
-        for (let a = 0; a < tables.length; a++) {
-          for (let b = 0; b < tables[a].tables.length; b++) {
-            if (tables[a].department === tableToMove.department) {
-              console.log("YEEEES BEFORE");
-              if (tables[a].tables[b].number === tableToMove.number) {
-                console.log("YEEEEEEEESSSSS AFFFTEEEER!!!");
-                console.log(tables[a].tables[b]);
-                this.tableInformation.push(tables[a].tables[b]);
-                console.log(this.tableInformation);
-                console.log('index: ' + index);
-                this.tableInformation.push(tableToMove);
-              }
-            }
-          }
-        }
-        for (let a = 0; a < tables.length; a++) {
-          for (let b = 0; b < tables[a].tables.length; b++) {
-            if (tables[a].department === tableToMove.targetDepartment) {
-              if (tables[a].tables[b].number === tableToMove.targetTable) {
-                index = b;
-              }
-            }
-          }
-        }
-        this.departmentsComponent.addInformationToTable(this.tableInformation, index);
-        this.departmentsComponent.occupyTableOnDrop(tableToMove, index);
-        //this.departmentsComponent.umsetzen(this.tableInformation, index);
-      });
-    this.departmentsComponent.occupy(tableToMove, j);
+    this.departmentsComponent.addInformationToTable(this.umsetzenInfoVar.tableInformationExport, this.umsetzenInfoVar.indexZiel);
+    this.departmentsComponent.occupyTableOnDrop(this.umsetzenInfoVar.tableToMove, this.umsetzenInfoVar.indexZiel);
+    setTimeout(() => {
+      this.departmentsComponent.occupy(this.umsetzenInfoVar.tableToMove, this.umsetzenInfoVar.indexQuell);
+    }, 2000);
   }
-
 }
+
+
+
+
+
+

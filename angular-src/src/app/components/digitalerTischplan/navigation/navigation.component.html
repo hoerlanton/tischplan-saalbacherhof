@@ -1,42 +1,67 @@
-<nav class="navbar navbar-default" style="max-width: 100%">
-  <ul class="nav navbar-nav" style="max-width: 100%; margin-left: 20px">
-    <li><img alt="Brand" href="http://www.servicio.io" src="http://servicio.io/wp-content/uploads/2016/05/servicio-logo-hellblau-auto-ohne-hintergrund-1.png" style="height: 45px; width: auto; margin-top:15px; margin-right: 50px; text-align: left; display:table-cell; vertical-align:middle;" (click)="neuLaden()">Neu Laden</li>
-    <li class="anleitung" ><a href="http://servicio.io/tester-info-3-2" style="text-align: left; display:table-cell; vertical-align:middle; margin-bottom: 5px; margin-right: 0px; max-height: 15px" >Anleitung</a></li>
-    <li class="printToCart1"><button (click)="printToCart1('printSectionId1')" style=" display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px" class="printToCart1">Tisch Übersicht Drucken</button></li>
-    <li class="printToCart2"><button (click)="printToCart2('printSectionId2')" style="text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px" class="printToCart2">Tisch Plan Drucken</button></li>
-    <li class="printToCart3"><button (click)="printToCart3('printSectionId3')" style="text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px" class="printToCart3">A-Z Liste Drucken</button></li>
-    <li class="Belegte Tisch" style="color: #0a7a74; vertical-align:middle; "><h3>Belegte Tische: {{tablesOccupied}}</h3></li>
-  </ul>
-  <ul class="nav navbar-nav navbar-right" style="max-width: 100%">
-    <div class="btn-group" style="height: 45px; width: auto; margin: 10px 25px 5px 25px; float: left; text-align: right; display:table-cell; vertical-align:middle;" dropdown>
-      <button dropdownToggle type="button" style=" background-color: #0a7a74; color: #FFFFFF" class="btn btn-primary dropdown-toggle">Umsetzen<span class="caret"></span>
-      </button>
-      <ul *dropdownMenu class="dropdown-menu" role="menu" style="overflow: auto; height: 350px; width: 200px; padding: 20px">
-        <form class="SendInformation" #myForm="ngForm" (submit)="umsetzen($event)">
-          <div class="form-group" (click)="none($event)">
-            <label for="quellTisch">Quell-Tisch:</label>
-            <input class="form-control" id="quellTisch" [(ngModel)]="quellTisch" name="quellTisch" placeholder="Von Tischnummer:" >
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li class="brand" ><img alt="Brand" href="http://www.servicio.io" src="http://servicio.io/wp-content/uploads/2018/01/servicio-logo-neu-laden-1.png" (click)="brandClick()" style="height: 45px; width: auto; margin-top:0px; margin-right: 10px; text-align: left; display:inline-block; vertical-align:middle;"></li>
+      <li class="Belegte Tisch" ><div class="TischDiv"><h3 class="TischH3">{{tablesOccupied}}</h3></div></li>
+      <div class="btn-group" dropdown>
+        <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle"><i class="fa fa-print" aria-hidden="true"></i><span class="caret"></span>
+        </button>
+        <ul *dropdownMenu class="dropdown-menu" role="menu">
+          <li class="printToCart1"><button (click)="printToCart1('printSectionId1')" style=" display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px" class="printToCart1">Tisch Übersicht Drucken</button></li>
+          <li class="printToCart2"><button (click)="printToCart2('printSectionId2')" style="text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px" class="printToCart2">Tisch Plan Drucken</button></li>
+          <li class="printToCart3"><button (click)="printToCart3('printSectionId3')" style="text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px" class="printToCart3">A-Z Liste Drucken</button></li>
+        </ul>
+      </div>
+      <div class="btn-group" dropdown>
+        <button dropdownToggle class="btn btn-primary dropdown-toggle" type="button">CSV<i class="fa fa-upload" aria-hidden="true"></i><span class="caret"></span>
+        </button>
+        <ul *dropdownMenu class="dropdown-menu" role="menu">
+          <div class="csv" (click)="none($event)" ><h6 >CSV-Datei hochladen</h6>
+            <form class="SendMessage" (submit)="sendMessage($event)">
+              <input type="file" (change)="fileChangeEvent($event)" placeholder="Upload file..." />
+              <button type="button" class="btn btn-send" (click)="upload()">CSV HOCHLADEN</button>
+            </form>
           </div>
-          <div class="form-group" (click)="none($event)">
-            <label for="zielTisch">Ziel-Tisch</label>
-            <input class="form-control" id="zielTisch" [(ngModel)]="zielTisch" name="zielTisch" placeholder="Zu Tischnummer:" >
+        </ul>
+      </div>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" >
+      <button type="button" class="btn btn-default" (click)="dispenseIfAbreise()">Abreisen entfernen</button>
+      <div class="btn-group" dropdown>
+        <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">Umsetzen<span class="caret"></span>
+        </button>
+        <ul *dropdownMenu class="dropdown-menu" role="menu" >
+          <form class="SendInformation" #myForm="ngForm" (submit)="umsetzen($event)">
+            <div class="form-group" (click)="none($event)">
+              <label for="quellTisch">Quell-Tisch:</label>
+              <input class="form-control" id="quellTisch" [(ngModel)]="quellTisch" name="quellTisch" placeholder="Von Tischnummer:" >
+            </div>
+            <div class="form-group" (click)="none($event)">
+              <label for="zielTisch">Ziel-Tisch</label>
+              <input class="form-control" id="zielTisch" [(ngModel)]="zielTisch" name="zielTisch" placeholder="Zu Tischnummer:" >
+            </div>
+            <button type="submit" class="btn btn-primary" >Umsetzen</button>
+          </form>
+        </ul>
+      </div>
+      <div class="btn-group"  dropdown>
+        <button dropdownToggle type="button"  class="btn btn-primary dropdown-toggle">Traces <i class="fa fa-folder-open" aria-hidden="true"></i> <span class="caret"></span>
+        </button>
+        <ul *dropdownMenu class="dropdown-menu" role="menu" >
+          <div *ngFor="let newInformationElement of newInformationElements; let j = index;">
+            <button type="submit" class="btn btn-send" (click)="delete(newInformationElement, j, $event)">x</button>
+            <li role="menuitem" class="menuitem" (click)="none($event)"> <b>Zimmer Nummer: </b> {{newInformationElement.roomNumber}} <br><b>Trace: </b> {{newInformationElement.text}} <br><b>Tisch: </b> {{newInformationElement.tableNumber}}<br><b>Datum: </b> {{newInformationElement.date}}<br><b>Name: </b> {{newInformationElement.name}}<br><b>Mitarbeiter: </b> {{newInformationElement.employee}}</li>
+            <li class="divider dropdown-divider"></li>
           </div>
-          <button type="submit" class="btn btn-primary" style="background-color: #0a7a74; color: #FFFFFF; margin-left: 20px">Umsetzen</button>
-        </form>
-      </ul>
-    </div>
-    <div class="btn-group" style="height: 45px; width: auto; margin: 10px 25px 5px 25px; float: left; text-align: right; display:table-cell; vertical-align:middle;" dropdown>
-      <button dropdownToggle type="button" style=" background-color: #0a7a74; color: #FFFFFF" class="btn btn-primary dropdown-toggle">
-        Traces Box <span class="caret"></span>
-      </button>
-      <ul *dropdownMenu class="dropdown-menu" role="menu" style="overflow: auto; height: 350px; width: 200px">
-        <div *ngFor="let newInformationElement of newInformationElements; let j = index;" (click)="none($event)">
-          <button style="float: right; background-color: #0a7a74; color: #FFFFFF; margin-right: 20px" type="submit" class="btn btn-send" (click)="delete(newInformationElement, j, $event)">x</button>
-          <li role="menuitem" (click)="none($event)" style="padding: 5px;"> <b>Zimmer Nummer: </b> {{newInformationElement.roomNumber}} <br><b>Trace: </b> {{newInformationElement.text}} <br><b>Tisch: </b> {{newInformationElement.tableNumber}}<br><b>Datum: </b> {{newInformationElement.date}}<br><b>Name: </b> {{newInformationElement.name}}<br><b>Mitarbeiter: </b> {{newInformationElement.employee}}</li>
-          <li class="divider dropdown-divider"></li>
+        </ul>
+      </div>
+      <form class="navbar-form navbar-left">
+        <div class="form-group" >
+          <input type="text" class="form-control" (keyup)="onKey($event)">
         </div>
-      </ul>
-    </div>
-    <li><img alt="Partner" href="http://www.salzburgerhof.servicio.io/wlanlandingpage" src="http://servicio.io/wp-content/uploads/2017/12/680001_160527_7E4EAE33_logo_779px.jpg" style="height: 45px; width: auto; margin-top: 10px; margin-bottom: 5px; margin-right: 25px;float: right; text-align: right; display:table-cell; vertical-align:middle;"></li>
-  </ul>
+        <button type="submit" class="btn search-btn-default" ><i class="fa fa-search" aria-hidden="true"></i></button>
+      </form>
+      <li class="partnerLi" ><img class="Partner" alt="Partner" href="http://www.salzburgerhof.servicio.io/wlanlandingpage" src="http://servicio.io/wp-content/uploads/2017/12/680001_160527_7E4EAE33_logo_779px.jpg" ></li>
+    </ul>
+  </div>
 </nav>

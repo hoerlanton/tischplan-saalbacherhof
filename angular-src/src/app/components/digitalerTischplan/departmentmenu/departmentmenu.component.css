@@ -1,0 +1,17 @@
+.row4 {
+  margin-top: 90px;
+}
+
+
+@media (min-width: 1200px) {
+  .btn-default {
+    display: inline-block;
+  }
+  .btn-send {
+    display: block;
+  }
+  .row4 {
+    margin-top: 0px;
+  }
+
+}

@@ -25,6 +25,12 @@ export class FormComponent implements OnInit {
   @Input('showInfoFormBool') showInfoFormBool: boolean;
   @Input('showNotizFormBool') showNotizFormBool: boolean;
   @Input('notizElements') notizElements: any;
+  @Input('showBauernStubnBool') showBauernStubnBool: boolean;
+  @Input('showBerglerBool') showBerglerBool: boolean;
+  @Input('showEdelweissBool') showEdelweissBool: boolean;
+  @Input('showWaeldlerBool') showWaeldlerBool: boolean;
+  @Input('showTeeStubeBool') showTeeStubeBool: boolean;
+  @Input('showAlleBool') showAlleBool: boolean;
   @Output()
   notizResponse:EventEmitter<any> = new EventEmitter();
 

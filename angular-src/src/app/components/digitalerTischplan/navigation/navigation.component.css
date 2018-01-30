@@ -1,0 +1,298 @@
+.navbar-fixed-top {
+  max-width: 100vw;
+  background-color: #0d2f2e;
+  border-radius: 0px;
+  max-height: 80px;
+  display: -webkit-box;
+}
+
+.container {
+  max-height: 80px;
+  display: -webkit-box;
+  padding: 0;
+  margin: 0
+}
+
+.navbar-nav {
+  max-width: 100%;
+  margin-left: 10px;
+  max-height:  80px;
+  display: -webkit-box;
+  min-width: 25%;
+}
+
+.brand {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 30%;
+}
+
+.Tisch {
+  color: #0a7a74;
+}
+
+.TischDiv{
+  background-color: #0a7a74;
+  border-radius: 50%;
+  min-height: 30px;
+  min-width: 30px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.TischH3 {
+  color: #eaf3f3;
+  margin: 10px 10px 5px 10px;
+  align-content: center;
+  align: center;
+}
+
+.dropdown-toggle {
+  background-color: #0a7a74;
+  color: #FFFFFF;
+
+}
+
+
+.dropdown-menu {
+  overflow: auto;
+  height: 350px;
+  width: 200px;
+  padding: 20px;
+}
+
+.csv {
+  width: 100%;
+  height: 100px;
+}
+
+.file {
+  float: left;
+  margin-top: 10px;
+  color: #0a7a74;
+}
+
+.btn-send {
+  background-color: #0a7a74;
+  float: right;
+  color: white;
+  margin-right: 10px;
+  display: none;
+}
+
+h6 {
+  color: #0a7a74;
+}
+
+.navbar-right{
+  display: inline;
+  max-width: 50%;
+}
+
+
+.btn-default {
+  background-color: #0a7a74;
+  color: #FFFFFF;
+  float: left;
+  vertical-align: middle;
+  margin: 10px 10px 5px 10px;
+  border: none;
+  display: none;
+}
+
+.btn-default:hover {
+  background-color: #1f5452;
+  color: #FFFFFF;
+}
+
+
+.btn-primary {
+  background-color: #0a7a74;
+  color: #FFFFFF;
+  margin-left: 20px;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #1f5452;
+  color: #FFFFFF;
+  margin-left: 20px;
+  border: none;
+}
+
+.btn-group {
+  height: 45px;
+  width: auto;
+  margin: 10px 10px 5px 10px;
+  float: left;
+  text-align: right;
+  display:none;
+  vertical-align:middle;
+}
+
+.menuitem {
+  padding: 5px;
+}
+
+.navbar-left {
+  margin-top: 0px;
+  max-width: 100%;
+  display: -webkit-inline-box;
+  float: right;
+}
+
+.form-group {
+  max-height: 45px;
+  margin: 0;
+  width: 50%;
+}
+
+.form-control {
+  background-color: #0a7a74;
+  color: #FFFFFF;
+  border: none;
+  opacity: 80;
+  width: 90%;
+  margin: 0px 0px 0px 0px;
+}
+
+.search-btn-default {
+  background-color: #0a7a74;
+  color: #FFFFFF;
+  border: none;
+}
+
+.Partner {
+  height: 40px;
+  width: auto;
+  margin-top: 4px;
+  margin-bottom: 5px;
+  margin-right: 25px;
+  float: right;
+  text-align: right;
+  display:none;
+  vertical-align:middle;
+}
+
+.csv {
+  margin-bottom: 30px;
+}
+
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+  background-color: #1f5452;
+  color: #FFFFFF;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  background-color: #0a7a74;
+  color: #FFFFFF;
+}
+
+
+@media (min-width: 700px) {
+  .Partner {
+    display: inline-block;
+    max-width: 100%;
+    float: right;
+  }
+
+  .form-group {
+    display: block;
+    margin-right: 5px;
+  }
+
+  .navbar-right {
+    max-width: 100%;
+    min-width: calc(100vw - 300px);
+  }
+
+  .container {
+    display: block;
+  }
+
+  .navbar-fixed-top {
+    max-height: 45px;
+    display: block;
+  }
+
+  .btn-group {
+    display:none;
+  }
+
+  .brand {
+    max-width: 100%;
+  }
+
+  .partnerLi {
+    float: right;
+  }
+
+  .navbar-left {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .search-btn-default {
+    float: right;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .btn-default {
+    display: block;
+  }
+
+  .btn-send {
+    display: block;
+  }
+
+  .row4 {
+    margin-top: 60px;
+  }
+
+  .print-col {
+    width: 32%
+  }
+
+  .search-btn-default {
+    display: block;
+  }
+
+  .btn-group {
+    display: block;
+  }
+
+  .navbar-nav {
+    display: block;
+    min-width: 40%;
+  }
+
+  .container {
+    display: block;
+    width: 100%;
+  }
+
+  .navbar-right {
+    max-width: 100%;
+    min-width: 50%;
+  }
+  .form-group {
+    margin: 0;
+    width: 70%;
+    max-height: 100%;
+    margin: 0 2px 20px 10px;
+  }
+
+  .form-control {
+    background-color: #0a7a74;
+    color: #FFFFFF;
+    border: none;
+    opacity: 80;
+    width: 130%;
+    margin: 0px 0px 0px 0px;
+  }
+
+
+}
+

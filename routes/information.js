@@ -20,7 +20,8 @@ module.exports = {
         console.log(JSON.stringify(informationElementToDelete));
         db.newInformationHubertus.remove({
 
-                roomNumber: informationElementToDelete.roomNumber
+                roomNumber: informationElementToDelete.roomNumber,
+                text: informationElementToDelete.text
             },
             {
                 justOne: true,

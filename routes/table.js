@@ -114,7 +114,7 @@ module.exports = {
             departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2.length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
             tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
             tableValue = tableValueArray[0];
-        } else if (infoElementString.indexOf(value) === -1) {
+        } else if (infoElementString.indexOf(value) === -1 && informationElements2.length > 1) {
             console.log("Anreise");
             departmentValue = informationElements2[informationElements2.length - 1][0].substring(1, informationElements2[informationElements2Length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
             tableValueArray = informationElements2[informationElements2.length - 1][0].toString().match(/\d+/);
@@ -376,7 +376,7 @@ module.exports = {
     addInformationToTable: function (req, res, db) {
         //JSON string is parsed to a JSON object
         console.log("addInformationToTable request made to /addInformationToTable");
-        console.log(JSON.stringify("-------->" + req.body));
+        console.log(JSON.stringify(req.body));
         let data = JSON.stringify(req.body),
             splitted = data.split("\\"),
             informationElements2 = [],
@@ -404,6 +404,8 @@ module.exports = {
         let abreiseValue3;
         let trace3;
         let notiz2Value3;
+        let notiz1Value3;
+        let bemerkungValue3;
 
         let zimmernummerValue2;
         let nameValue2;
@@ -412,6 +414,8 @@ module.exports = {
         let abreiseValue2;
         let trace2;
         let notiz2Value2;
+        let notiz1Value2;
+        let bemerkungValue2;
 
         let zimmernummerValue4;
         let nameValue4;
@@ -420,6 +424,8 @@ module.exports = {
         let abreiseValue4;
         let trace4;
         let notiz2Value4;
+        let notiz1Value4;
+        let bemerkungValue4;
 
         let zimmernummerValue5;
         let nameValue5;
@@ -428,6 +434,8 @@ module.exports = {
         let abreiseValue5;
         let trace5;
         let notiz2Value5;
+        let notiz1Value5;
+        let bemerkungValue5;
 
         let zimmernummerValue6;
         let nameValue6;
@@ -436,6 +444,8 @@ module.exports = {
         let abreiseValue6;
         let trace6;
         let notiz2Value6;
+        let notiz1Value6;
+        let bemerkungValue6;
 
         let zimmernummerValue7;
         let nameValue7;
@@ -444,6 +454,8 @@ module.exports = {
         let abreiseValue7;
         let trace7;
         let notiz2Value7;
+        let notiz1Value7;
+        let bemerkungValue7;
 
         let zimmernummerValue8;
         let nameValue8;
@@ -452,6 +464,8 @@ module.exports = {
         let abreiseValue8;
         let trace8;
         let notiz2Value8;
+        let notiz1Value8;
+        let bemerkungValue8;
 
         let zimmernummerValue9;
         let nameValue9;
@@ -460,6 +474,8 @@ module.exports = {
         let abreiseValue9;
         let trace9;
         let notiz2Value9;
+        let notiz1Value9;
+        let bemerkungValue9;
 
         let zimmernummerValue10;
         let nameValue10;
@@ -468,6 +484,8 @@ module.exports = {
         let abreiseValue10;
         let trace10;
         let notiz2Value10;
+        let notiz1Value10;
+        let bemerkungValue10;
 
         let zimmernummerValue11;
         let nameValue11;
@@ -476,6 +494,8 @@ module.exports = {
         let abreiseValue11;
         let trace11;
         let notiz2Value11;
+        let notiz1Value11;
+        let bemerkungValue11;
 
         let zimmernummerValue12;
         let nameValue12;
@@ -484,6 +504,8 @@ module.exports = {
         let abreiseValue12;
         let trace12;
         let notiz2Value12;
+        let notiz1Value12;
+        let bemerkungValue12;
 
         let zimmernummerValue13;
         let nameValue13;
@@ -492,6 +514,8 @@ module.exports = {
         let abreiseValue13;
         let trace13;
         let notiz2Value13;
+        let notiz1Value13;
+        let bemerkungValue13;
 
         let zimmernummerValue14;
         let nameValue14;
@@ -500,6 +524,8 @@ module.exports = {
         let abreiseValue14;
         let trace14;
         let notiz2Value14;
+        let notiz1Value14;
+        let bemerkungValue14;
 
         let zimmernummerValue15;
         let nameValue15;
@@ -508,6 +534,8 @@ module.exports = {
         let abreiseValue15;
         let trace15;
         let notiz2Value15;
+        let notiz1Value15;
+        let bemerkungValue15;
 
         for (let s = 0; s < splitted.length; s++) {
             informationElements2.push(splitted[s].split(/:(.+)/)[1]);
@@ -525,7 +553,7 @@ module.exports = {
         console.log(informationElements2.includes('nAnreise'));
 
 
-        console.log(informationElements2[3][1]);
+        //console.log(informationElements2[3][1]);
 
         if (infoElementString.indexOf(value) != -1) {
             console.log('!!!!!!!!!!!!<:::::::::::::::::::::::::::::::::::::::');
@@ -570,7 +598,7 @@ module.exports = {
             departmentValue = informationElements2[informationElements2.length - 1].substring(1, informationElements2[informationElements2.length - 1].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
             tableValueArray = informationElements2[informationElements2.length - 1].toString().match(/\d+/);
             tableValue = tableValueArray[0];
-        } else if (infoElementString.indexOf(value) === -1) {
+        } else if (infoElementString.indexOf(value) === -1 && informationElements2.length > 1) {
             console.log("Anreise Liste gedropped");
             nameValue = informationElements2[0].substring(1, informationElements2[0].length);
             zimmernummerValue = informationElements2[1].substring(1, informationElements2[1].length);
@@ -604,6 +632,8 @@ module.exports = {
             abreiseValue = test[0].abreiseValue;
             trace = test[0].trace;
             notiz2Value = test[0].notiz2Value;
+            notiz1Value = test[0].notiz1Value;
+            bemerkungValue = test[0].bemerkungValue;
             departmentValueDB = test[1].targetDepartment;
             tableValue = test[1].targetTable;
             test[0].department = test[1].targetDepartment;
@@ -615,6 +645,8 @@ module.exports = {
             abreiseValue2 = test[0].abreiseValue2;
             trace2 = test[0].trace2;
             notiz2Value2 = test[0].notiz2Value2;
+            notiz1Value2 = test[0].notiz1Value2;
+            bemerkungValue2 = test[0].bemerkungValue2;
 
             zimmernummerValue3 = test[0].zimmernummerValue3;
             nameValue3 = test[0].nameValue3;
@@ -623,6 +655,8 @@ module.exports = {
             abreiseValue3 = test[0].abreiseValue3;
             trace3 = test[0].trace3;
             notiz2Value3 = test[0].notiz2Value3;
+            notiz1Value3 = test[0].notiz1Value3;
+            bemerkungValue3 = test[0].bemerkungValue3;
 
             zimmernummerValue4 = test[0].zimmernummerValue4;
             nameValue4 = test[0].nameValue4;
@@ -631,6 +665,8 @@ module.exports = {
             abreiseValue4 = test[0].abreiseValue4;
             trace4 = test[0].trace4;
             notiz2Value4 = test[0].notiz2Value4;
+            notiz1Value4 = test[0].notiz1Value4;
+            bemerkungValue4 = test[0].bemerkungValue4;
 
             zimmernummerValue5 = test[0].zimmernummerValue5;
             nameValue5 = test[0].nameValue5;
@@ -639,6 +675,8 @@ module.exports = {
             abreiseValue5 = test[0].abreiseValue5;
             trace5 = test[0].trace5;
             notiz2Value5 = test[0].notiz2Value5;
+            notiz1Value5 = test[0].notiz1Value5;
+            bemerkungValue5 = test[0].bemerkungValue5;
 
             zimmernummerValue6 = test[0].zimmernummerValue6;
             nameValue6 = test[0].nameValue6;
@@ -647,6 +685,8 @@ module.exports = {
             abreiseValue6 = test[0].abreiseValue6;
             trace6 = test[0].trace6;
             notiz2Value6 = test[0].notiz2Value6;
+            notiz1Value6 = test[0].notiz1Value6;
+            bemerkungValue6 = test[0].bemerkungValue6;
 
             zimmernummerValue7 = test[0].zimmernummerValue7;
             nameValue7 = test[0].nameValue7;
@@ -655,6 +695,8 @@ module.exports = {
             abreiseValue7 = test[0].abreiseValue7;
             trace7 = test[0].trace7;
             notiz2Value7 = test[0].notiz2Value7;
+            notiz1Value7 = test[0].notiz1Value7;
+            bemerkungValue7 = test[0].bemerkungValue7;
 
             zimmernummerValue8 = test[0].zimmernummerValue8;
             nameValue8 = test[0].nameValue8;
@@ -663,6 +705,8 @@ module.exports = {
             abreiseValue8 = test[0].abreiseValue8;
             trace8 = test[0].trace8;
             notiz2Value8 = test[0].notiz2Value8;
+            notiz1Value8 = test[0].notiz1Value8;
+            bemerkungValue8 = test[0].bemerkungValue8;
 
             zimmernummerValue9 = test[0].zimmernummerValue9;
             nameValue9 = test[0].nameValue9;
@@ -671,6 +715,8 @@ module.exports = {
             abreiseValue9 = test[0].abreiseValue9;
             trace9 = test[0].trace9;
             notiz2Value9 = test[0].notiz2Value9;
+            notiz1Value9 = test[0].notiz1Value9;
+            bemerkungValue9 = test[0].bemerkungValue9;
 
             zimmernummerValue10 = test[0].zimmernummerValue10;
             nameValue10 = test[0].nameValue10;
@@ -679,6 +725,8 @@ module.exports = {
             abreiseValue10 = test[0].abreiseValue10;
             trace10 = test[0].trace10;
             notiz2Value10 = test[0].notiz2Value10;
+            notiz1Value10 = test[0].notiz1Value10;
+            bemerkungValue10 = test[0].bemerkungValue10;
 
             zimmernummerValue11 = test[0].zimmernummerValue11;
             nameValue11 = test[0].nameValue11;
@@ -687,6 +735,8 @@ module.exports = {
             abreiseValue11 = test[0].abreiseValue11;
             trace11 = test[0].trace11;
             notiz2Value11 = test[0].notiz2Value11;
+            notiz1Value11 = test[0].notiz1Value11;
+            bemerkungValue11 = test[0].bemerkungValue11;
 
             zimmernummerValue12 = test[0].zimmernummerValue12;
             nameValue12 = test[0].nameValue12;
@@ -695,6 +745,8 @@ module.exports = {
             abreiseValue12 = test[0].abreiseValue12;
             trace12 = test[0].trace12;
             notiz2Value12 = test[0].notiz2Value12;
+            notiz1Value12 = test[0].notiz1Value12;
+            bemerkungValue12 = test[0].bemerkungValue12;
 
             zimmernummerValue13 = test[0].zimmernummerValue13;
             nameValue13 = test[0].nameValue13;
@@ -703,7 +755,8 @@ module.exports = {
             abreiseValue13 = test[0].abreiseValue13;
             trace13 = test[0].trace13;
             notiz2Value13 = test[0].notiz2Value13;
-
+            notiz1Value13 = test[0].notiz1Value13;
+            bemerkungValue13 = test[0].bemerkungValue13;
 
             zimmernummerValue14 = test[0].zimmernummerValue14;
             nameValue14 = test[0].nameValue14;
@@ -712,6 +765,8 @@ module.exports = {
             abreiseValue14 = test[0].abreiseValue14;
             trace14 = test[0].trace14;
             notiz2Value14 = test[0].notiz2Value14;
+            notiz1Value14 = test[0].notiz1Value14;
+            bemerkungValue14 = test[0].bemerkungValue14;
 
             zimmernummerValue15 = test[0].zimmernummerValue15;
             nameValue15 = test[0].nameValue15;
@@ -720,6 +775,8 @@ module.exports = {
             abreiseValue15 = test[0].abreiseValue15;
             trace15 = test[0].trace15;
             notiz2Value15 = test[0].notiz2Value15;
+            notiz1Value15 = test[0].notiz1Value15;
+            bemerkungValue15 = test[0].bemerkungValue15;
 
             setTimeout(function () {
                 db.tables.findOne(
@@ -871,6 +928,11 @@ module.exports = {
                         }
                     });
             });
+
+
+            //preistypValue = informationElements2[0].substring(1, informationElements2[2].length);
+
+
         }
         //preistypValue = informationElements2[0].substring(1, informationElements2[2].length);
         console.log(" nameValue " + nameValue + " zimmernummerValue " + zimmernummerValue + " anreiseValue " + anreiseValue + " abreiseValue " + abreiseValue + " personenAnzahlValue " + personenAnzahlValue + " notiz1Value " + notiz1Value + " notiz2Value " + notiz2Value + " bemerkungValue " + bemerkungValue + "tableValue" + tableValue + "departmentvalue" + departmentValue);
@@ -1274,23 +1336,19 @@ module.exports = {
                     }
                 });
         }, 200);
-
         setTimeout(function () {
-            db.hubertusTables.findOne(
+            db.hubertusTables.find(
                 {
                     department: departmentValueDB,
                     "tables.number": tableValue
-                },
-                {
-                    "tables.$": 1,
-                },
-                function (err, tables) {
+                }, function (err, tables) {
                     if (err) {
                         res.send(err);
                     }
                     res.json(tables);
+                    console.log("Add information to table response");
                     console.log(JSON.stringify(tables));
                 });
-        }, 700);
+        }, 1000);
     }
 };

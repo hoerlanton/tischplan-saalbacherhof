@@ -16,35 +16,12 @@
     <app-navigation [newInformationElements]="newInformationElements"
                     [tablesOccupied]="tablesOccupied"
                     (getTablesOccupied)="tablesOccupied = $event"
-                    (umsetzenExport)="quellTisch = $event; umsetzen($event)">
-    </app-navigation>
+                    (umsetzenExport)="umsetzenInfoVar = $event; umsetzen($event)"
+                    [tablesTempAbreise]="tablesTempAbreise"
+                    (abreisenExport)="abreiseTablePlusIndex = $event; abreisenRemoval($event)"
+                    (termExport)="term = $event">
+    </app-navigation><flash-messages></flash-messages>
     <div class="col-xs-12 col-sm-8 col-lg-4 print-col">
-      <app-form-menu style="min-height: 40px" [buttonBgColorInfoForm]="buttonBgColorInfoForm"
-                     [buttonBgColorNotizForm]="buttonBgColorNotizForm"
-                     [fontColorInfoForm]="fontColorInfoForm"
-                     [fontColorNotizForm]="fontColorNotizForm"
-                     [showNotizFormBool]="showNotizFormBool"
-                     [showInfoFormBool]="showInfoFormBool"
-                     (showInfoFormBoolChange)="showInfoFormBool=$event"
-                     (showNotizFormBoolChange)="showNotizFormBool=$event">
-      </app-form-menu>
-      <app-form [newInformationElements]="newInformationElements"
-                [dateGenerated]="dateGenerated"
-                [title]="title"
-                [roomNumber]="roomNumber"
-                [tableNumber]="tableNumber"
-                [employee]="employee"
-                [nameTraceInput]="nameTraceInput"
-                [tablesBauernstube]="tablesBauernstube"
-                [tablesBerglerStubeHubertusStube]="tablesBerglerStubeHubertusStube"
-                [tablesEdelweissKaminStube]="tablesEdelweissKaminStube"
-                [tablesTeestubeTeelounge]="tablesTeestubeTeelounge"
-                [tablesWaeldlerStubeKristallStube]="tablesWaeldlerStubeKristallStube"
-                [showNotizFormBool]="showNotizFormBool"
-                [showInfoFormBool]="showInfoFormBool"
-                [notizElements]="notizElements"
-                (notizResponse)="notizElements=$event">
-      </app-form>
       <app-departmentmenu
         [buttonBgColor1]="buttonBgColor1"
         [buttonBgColor2]="buttonBgColor2"
@@ -69,8 +46,43 @@
         (showEdelweissBoolChange)="showEdelweissBool=$event"
         (showWaeldlerBoolChange)="showWaeldlerBool=$event"
         (showTeeStubeBoolChange)="showTeeStubeBool=$event"
-        (showAlleBoolChange)="showAlleBool=$event">
-      </app-departmentmenu>
+        (showAlleBoolChange)="showAlleBool=$event"
+        [buttonBgColorInfoForm]="buttonBgColorInfoForm"
+        [buttonBgColorNotizForm]="buttonBgColorNotizForm"
+        [fontColorInfoForm]="fontColorInfoForm"
+        [fontColorNotizForm]="fontColorNotizForm"
+        [showNotizFormBool]="showNotizFormBool"
+        [showInfoFormBool]="showInfoFormBool"
+        (showInfoFormBoolChange)="showInfoFormBool=$event"
+        (showNotizFormBoolChange)="showNotizFormBool=$event"
+        (showTablePlanBoolChange)="showTablePlanBool=$event"
+        [showTablePlanBool]="showTablePlanBool"
+        [buttonBgColorShowTablePlan]="buttonBgColorShowTablePlan"
+        [fontColorShowTablePlan]="fontColorShowTablePlan">
+      </app-departmentmenu><flash-messages></flash-messages>
+      <app-form [newInformationElements]="newInformationElements"
+                [dateGenerated]="dateGenerated"
+                [title]="title"
+                [roomNumber]="roomNumber"
+                [tableNumber]="tableNumber"
+                [employee]="employee"
+                [nameTraceInput]="nameTraceInput"
+                [tablesBauernstube]="tablesBauernstube"
+                [tablesBerglerStubeHubertusStube]="tablesBerglerStubeHubertusStube"
+                [tablesEdelweissKaminStube]="tablesEdelweissKaminStube"
+                [tablesTeestubeTeelounge]="tablesTeestubeTeelounge"
+                [tablesWaeldlerStubeKristallStube]="tablesWaeldlerStubeKristallStube"
+                [showNotizFormBool]="showNotizFormBool"
+                [showInfoFormBool]="showInfoFormBool"
+                [notizElements]="notizElements"
+                (notizResponse)="notizElements=$event"
+                [showBauernStubnBool]="showBauernStubnBool"
+                [showBerglerBool]="showBerglerBool"
+                [showEdelweissBool]="showEdelweissBool"
+                [showWaeldlerBool]="showWaeldlerBool"
+                [showTeeStubeBool]="showTeeStubeBool"
+                [showAlleBool]="showAlleBool">
+      </app-form>
       <app-tableplan [tablesBauernstube]="tablesBauernstube"
                      [tablesBerglerStubeHubertusStube]="tablesBerglerStubeHubertusStube"
                      [tablesEdelweissKaminStube]="tablesEdelweissKaminStube"
@@ -86,11 +98,11 @@
                      (movedBerglerStubeHubertusStube)="tablesBerglerStubeHubertusStube = $event"
                      (movedEdelweissKaminStube)="tablesEdelweissKaminStube = $event"
                      (movedTeestubeTeelounge)="tablesTeestubeTeelounge = $event"
-                     (movedWaeldlerStubeKristallStube)="tablesWaeldlerStubeKristallStube = $event">
+                     (movedWaeldlerStubeKristallStube)="tablesWaeldlerStubeKristallStube = $event"
+                     [showTablePlanBool]="showTablePlanBool">
       </app-tableplan>
     </div>
     <div class="col-xs-12 col-lg-4 upload-col">
-      <app-upload></app-upload>
       <div class="outer-cards">
         <h3>Im-Haus-Liste</h3>
         <app-im-haus-liste [imHausListeElemente]="imHausListeElemente"></app-im-haus-liste>
@@ -102,17 +114,7 @@
     </div>
 
     <div class="col-xs-12 col-sm-4 col-lg-4 table-col">
-      <app-search (termExport)="term = $event"></app-search>
-      <app-notiz
-        [showBauernStubnBool]="showBauernStubnBool"
-        [showBerglerBool]="showBerglerBool"
-        [showEdelweissBool]="showEdelweissBool"
-        [showWaeldlerBool]="showWaeldlerBool"
-        [showTeeStubeBool]="showTeeStubeBool"
-        [notizElements]="notizElements"
-        [showAlleBool]="showAlleBool">
-      </app-notiz>
-        <h3 style="margin-top: 20px">Tisch Übersicht</h3>
+      <h3 >Tisch Übersicht</h3>
         <div class="inner-table" style="padding: 0px 0px 0px 0px;">
           <div class="row3">
             <div class='wrapper' id="wrapper">
@@ -131,6 +133,11 @@
                                (dispensedEdelweissKaminStube)="tablesEdelweissKaminStube=$event"
                                (dispensedTeestubeTeelounge)="tablesTeestubeTeelounge=$event"
                                (dispensedWaeldlerStubeKristallStube)="tablesWaeldlerStubeKristallStube=$event"
+                               (infoAddedBauernstube)="tablesBauernstube=$event"
+                               (infoAddedBerglerStubeHubertusStube)="tablesBerglerStubeHubertusStube=$event"
+                               (infoAddedEdelweissKaminStube)="tablesEdelweissKaminStube=$event"
+                               (infoAddedTeestubeTeelounge)="tablesTeestubeTeelounge=$event"
+                               (infoAddedWaeldlerStubeKristallStube)="tablesWaeldlerStubeKristallStube=$event"
                                [term]="term"
                                [showAlleBool]="showAlleBool">
               </app-departments>

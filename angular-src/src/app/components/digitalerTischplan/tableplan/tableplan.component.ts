@@ -22,6 +22,7 @@ export class TableplanComponent implements OnInit {
   @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
   @Input('showWaeldlerBool') showWaeldlerBool: boolean;
   @Input('showAlleBool') showAlleBool: boolean;
+  @Input('showTablePlanBool') showTablePlanBool: boolean;
   @Output()
   movedBerglerStubeHubertusStube:EventEmitter<any> = new EventEmitter();
   @Output()
@@ -67,7 +68,7 @@ export class TableplanComponent implements OnInit {
     if (j || k || l || m || n || o || p || q || r || s || t || u || v || w || x || y) {
       return "solid 3px red";
     } else {
-      return "3px solid rgb(243, 239, 228)";
+      return "solid 3px rgb(243, 239, 228)";
     }
   }
 

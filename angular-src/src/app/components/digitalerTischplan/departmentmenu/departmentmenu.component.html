@@ -1,20 +1,67 @@
-<div class="row4">
-  <div class="col-md-2 col-xs-2" style="height: 50px; width: 16.6%;" (click)="showBauernStubn()" [ngStyle]="{'background-color': '#' + buttonBgColor1}">
-    <h6 [ngStyle]="{'color': '#' + fontColor1}">Bauernstube</h6>
+<div class="row4" style="min-height: 40px;">
+  <div class="col-md-3 col-xs-3" style="width: 35%">
+    <div class="btn-group-departments" style="height: 45px; width: auto; margin: 0px 10px 5px 0px; float: left; text-align: right; display:table-cell; vertical-align:middle;" dropdown>
+      <button dropdownToggle type="button" style=" color: #FFFFFF; border: none" [ngStyle]="{'background-color': '#' + buttonBgColorDropdownToggle}"   (mouseenter)="mouseEnterDropdownToggle()"  (mouseleave)="mouseLeaveDropdownToggle()" class="btn btn-group-departments">
+        <div *ngIf="showAbteilungen">
+          Abteilungen <i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
+        </div>
+        <div *ngIf="showAlleBool">
+          Alle <i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
+        </div>
+        <div *ngIf="showBauernStubnBool">
+          Bauernstube <i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
+        </div>
+        <div *ngIf="showBerglerBool">
+          Berglerstube<br>HUBERTUS Stube <i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
+        </div>
+        <div *ngIf="showWaeldlerBool">
+          Wäldlerstube<br>Kristallstube <i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
+        </div>
+        <div *ngIf="showEdelweissBool">
+          EDELWEISS<br>Kaminstube <i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
+        </div>
+        <div *ngIf="showTeeStubeBool">
+          TeeStube<br>Teelounge <i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
+        </div>
+      </button>
+      <ul *dropdownMenu class="dropdown-menu"  role="menu" style="overflow: auto; margin: 0px; width: 200px;">
+        <li role="menuitem" class="showBauernStubn" style="padding: 10px"  (click)="showBauernStubn()" (mouseenter)="mouseEnterBauernStubn()"  (mouseleave)="mouseLeaveBauernStubn()" [ngStyle]="{'background-color': '#' + buttonBgColor1}">
+          <p [ngStyle]="{'color': '#' + fontColor1}">Bauernstube</p>
+        </li>
+        <li style="margin: 0px" class="divider dropdown-divider"></li>
+        <li role="menuitem" class="showBergler" style="padding: 10px"  (click)="showBergler()" (mouseenter)="mouseEnterBergler()"  (mouseleave)="mouseLeaveBergler()" [ngStyle]="{'background-color': '#' + buttonBgColor2}">
+          <p [ngStyle]="{'color': '#' + fontColor2}">Berglerstube<br>HUBERTUS Stube</p>
+        </li>
+        <li style="margin: 0px" class="divider dropdown-divider"></li>
+        <li role="menuitem" class="showWaeldler" style="padding: 10px"  (click)="showWaeldler()" (mouseenter)="mouseEnterWaeldler()"  (mouseleave)="mouseLeaveWaeldler()" [ngStyle]="{'background-color': '#' + buttonBgColor3}">
+          <p [ngStyle]="{'color': '#' + fontColor3}">Wäldlerstube<br>Kristallstube</p>
+        </li>
+        <li style="margin: 0px" class="divider dropdown-divider"></li>
+        <li role="menuitem" class="showEdelweiss" style="padding: 10px" (click)="showEdelweiss()" (mouseenter)="mouseEnterEdelweiss()"  (mouseleave)="mouseLeaveEdelweiss()" [ngStyle]="{'background-color': '#' + buttonBgColor4}">
+          <p [ngStyle]="{'color': '#' + fontColor4}">EDELWEISS<br>Kaminstube</p>
+        </li>
+        <li style="margin: 0px" class="divider dropdown-divider"></li>
+        <li role="menuitem" class="showTeestube" style="padding: 10px"  (click)="showTeestube()" (mouseenter)="mouseEnterTeestube()"  (mouseleave)="mouseLeaveTeestube()" [ngStyle]="{'background-color': '#' + buttonBgColor5}">
+          <p [ngStyle]="{'color': '#' + fontColor5}">TeeStube<br>Teelounge</p>
+        </li>
+        <li style="margin: 0px" class="divider dropdown-divider"></li>
+        <li role="menuitem" class="showAlle" style="padding: 10px"  (click)="showAlle()" (mouseenter)="mouseEnterAlle()"  (mouseleave)="mouseLeaveAlle()" [ngStyle]="{'background-color': '#' + buttonBgColor6}">
+          <p [ngStyle]="{'color': '#' + fontColor6}">Alle</p>
+        </li>
+        <li style="margin: 0px" class="divider dropdown-divider"></li>
+      </ul>
+    </div>
   </div>
-  <div class="col-md-2 col-xs-2"  style="height: 50px; width: 16.6%;" (click)="showBergler()" [ngStyle]="{'background-color': '#' + buttonBgColor2}">
-    <h6 [ngStyle]="{'color': '#' + fontColor2}">Berglerstube<br>HUBERTUS Stube</h6>
+  <div class="col-md-3 col-xs-3" style="min-height: 40px; width: 21%; border-radius: 3px" (click)="showInfoForm()"  (mouseenter)="mouseEnterShowInfoForm()"  (mouseleave)="mouseLeaveShowInfoForm()" [ngStyle]="{'background-color': '#' + buttonBgColorInfoForm}">
+    <p style="margin: 8px 0px 0px 0px; text-align: center" [ngStyle]="{'color': '#' + fontColorInfoForm}">Trace</p>
   </div>
-  <div class="col-md-2 col-xs-2" style="height: 50px; width: 16.6%;" (click)="showWaeldler()" [ngStyle]="{'background-color': '#' + buttonBgColor3}">
-    <h6 [ngStyle]="{'color': '#' + fontColor3}">Wäldlerstube<br>Kristallstube</h6>
+  <div class="col-md-3 col-xs-3"  style="min-height: 40px; width: 21%; border-radius: 3px" (click)="showNotizForm()"  (mouseenter)="mouseEnterShowNotizForm()"  (mouseleave)="mouseLeaveShowNotizForm()" [ngStyle]="{'background-color': '#' + buttonBgColorNotizForm}">
+    <p style="margin: 8px 0px 0px 0px; text-align: center" [ngStyle]="{'color': '#' + fontColorNotizForm}">Notiz</p>
   </div>
-  <div class="col-md-2 col-xs-2" style="height: 50px; width: 16.6%;" (click)="showEdelweiss()" [ngStyle]="{'background-color': '#' + buttonBgColor4}">
-    <h6 [ngStyle]="{'color': '#' + fontColor4}">EDELWEISS<br>Kaminstube</h6>
-  </div>
-  <div class="col-md-2 col-xs-2" style="height: 50px; width: 16.6%;" (click)="showTeestube()" [ngStyle]="{'background-color': '#' + buttonBgColor5}">
-    <h6 [ngStyle]="{'color': '#' + fontColor5}">TeeStube<br>Teelounge</h6>
-  </div>
-  <div class="col-md-2 col-xs-2" style="height: 50px; width: 16.9%;" (click)="showAlle()" [ngStyle]="{'background-color': '#' + buttonBgColor6}">
-    <h6 [ngStyle]="{'color': '#' + fontColor6}">Alle</h6>
+  <div class="col-md-3 col-xs-3"  style="min-height: 40px; width: 21%; border-radius: 3px" (click)="showTablePlan()"  (mouseenter)="mouseEnterShowTablePlan()"  (mouseleave)="mouseLeaveShowTablePlan()" [ngStyle]="{'background-color': '#' + buttonBgColorShowTablePlan}">
+    <p style="margin: 8px 0px 0px 0px; text-align: center" [ngStyle]="{'color': '#' + fontColorShowTablePlan}">Tischplan</p>
   </div>
 </div>
+
+
+

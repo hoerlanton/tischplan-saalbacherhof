@@ -9,7 +9,6 @@ import { DragulaModule } from 'ng2-dragula';
 import {NgClass} from '@angular/common';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import {DropdownModule} from "ng2-dropdown";
-import { UploadComponent } from './components/digitalerTischplan/upload/upload.component';
 import { TracesListeComponent } from './components/digitalerTischplan/traces-liste/traces-liste.component';
 import { ImHausListeComponent } from './components/digitalerTischplan/im-haus-liste/im-haus-liste.component';
 import { AnreiseListeComponent } from './components/digitalerTischplan/anreise-liste/anreise-liste.component';
@@ -24,15 +23,12 @@ import { BerglerStubeHubertusStubeComponent } from './components/digitalerTischp
 import { WaeldlerStubeKristallStubeComponent } from './components/digitalerTischplan/departments/waeldler-stube-kristall-stube/waeldler-stube-kristall-stube.component';
 import { EdelweissKaminStubeComponent } from './components/digitalerTischplan/departments/edelweiss-kamin-stube/edelweiss-kamin-stube.component';
 import { TeestubeTeeloungeComponent } from './components/digitalerTischplan/departments/teestube-teelounge/teestube-teelounge.component';
-import { FormMenuComponent } from './components/digitalerTischplan/form-menu/form-menu.component';
-import { NotizComponent } from './components/digitalerTischplan/notiz/notiz.component';
 import { AlleComponent } from './components/digitalerTischplan/departments/alle/alle.component';
-import { SearchComponent } from './components/digitalerTischplan/search/search.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
-    AppComponent, TischplanComponent, UploadComponent, TracesListeComponent, ImHausListeComponent, AnreiseListeComponent, TableplanComponent, NavigationComponent, PrintComponent, FormComponent, DepartmentsComponent, DepartmentmenuComponent, BauernstubeComponent, BerglerStubeHubertusStubeComponent, WaeldlerStubeKristallStubeComponent, EdelweissKaminStubeComponent, TeestubeTeeloungeComponent, FormMenuComponent, NotizComponent, AlleComponent, SearchComponent
+    AppComponent, TischplanComponent, TracesListeComponent, ImHausListeComponent, AnreiseListeComponent, TableplanComponent, NavigationComponent, PrintComponent, FormComponent, DepartmentsComponent, DepartmentmenuComponent, BauernstubeComponent, BerglerStubeHubertusStubeComponent, WaeldlerStubeKristallStubeComponent, EdelweissKaminStubeComponent, TeestubeTeeloungeComponent, AlleComponent
   ],
   imports: [
     FormsModule,

@@ -41,19 +41,19 @@ module.exports = {
             tableValue = tableValueArray[0];
         }
 
-        if(departmentValue === "BerglerStubeHubertusStube") {
+        if(departmentValue === "BerglerStubeHubertusStube" || departmentValue === "berglerStubeHubertusStube") {
             departmentValueDB = "berglerStubeHubertusStube";
         }
-        else if(departmentValue === "Bauernstube") {
+        else if(departmentValue === "Bauernstube" || departmentValue === "Bauernstube") {
             departmentValueDB = "Bauernstube";
         }
-        else if(departmentValue === "WaeldlerStubeKristallStube") {
+        else if(departmentValue === "WaeldlerStubeKristallStube" || departmentValue === "waeldlerStubeKristallStube") {
             departmentValueDB = "waeldlerStubeKristallStube";
         }
-        else if(departmentValue === "EdelweissKaminStube") {
+        else if(departmentValue === "EdelweissKaminStube" || departmentValue === "edelweissKaminStube") {
             departmentValueDB = "edelweissKaminStube";
         }
-        else if(departmentValue === "TeestubeTeelounge") {
+        else if(departmentValue === "TeestubeTeelounge" || departmentValue === "teestubeTeelounge") {
             departmentValueDB = "teestubeTeelounge";
         }
 

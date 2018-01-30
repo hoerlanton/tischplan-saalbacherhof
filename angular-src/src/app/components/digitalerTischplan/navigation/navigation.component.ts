@@ -1,22 +1,34 @@
-import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { TischplanService } from '../../../services/tischplan.service';
+import { Http } from '@angular/http';
+import { FlashMessagesService } from 'angular2-flash-messages';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: 'navigation.component.html',
-  styleUrls: ['../tischplan.component.css']
+  styleUrls: ['navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-
+  filesToUpload: Array<File> = [];
+  @Input('tablesTempAbreise') tablesTempAbreise: any[] = [];
   @Input('newInformationElements') newInformationElements: any[] = [];
   @Input('tablesOccupied') tablesOccupied: number;
   @Output()
   umsetzenExport:EventEmitter<any> = new EventEmitter();
+  @Output()
+  abreisenExport:EventEmitter<any> = new EventEmitter();
+  term: string;
+  @Output()
+  termExport:EventEmitter<any> = new EventEmitter();
+  dateTodayGenerated: any;
+  date: any[] = [];
+  parts: any[] = [];
+  parsedDate: any[] = [];
+  quellTisch: any;
+  zielTisch: any;
+  tableInformation: any[] = [];
 
-  quellTisch: string;
-  zielTisch: string;
-
-  constructor(private tischplanService: TischplanService) { }
+  constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService) { }
 
   ngOnInit() {
   }
@@ -68,12 +80,219 @@ export class NavigationComponent implements OnInit {
     window.location.reload()
   }
 
-  umsetzen(event){
-    event.preventDefault();
-    console.log("UMSETZTEN CALLED");
-    let quellTisch = this.quellTisch;
-    let zielTisch = this.zielTisch;
-    this.umsetzenExport.emit({quellTisch, zielTisch});
+
+  umsetzen() {
+      event.preventDefault();
+      console.log("UMSETZTEN CALLED");
+      let quellTisch = this.quellTisch;
+      let zielTisch = this.zielTisch;
+      //this.umsetzenExport.emit({quellTisch, zielTisch});
+
+    // let targetTable = this.quellTisch.zielTisch;
+    // let quellTischNumber = this.quellTisch.quellTisch;
+    // let targetTableNumber = Number(this.quellTisch.zielTisch);
+    // let quellTischNumberNumber = Number(this.quellTisch.quellTisch);
+    console.log('targetTable' + zielTisch);
+    console.log('quellTischNumber' + quellTisch);
+    let tableToMove = {department: "Empty", number: "0", targetTable: "0", targetDepartment: "Empty"};
+    let j = 0;
+
+    if (Number(this.quellTisch) >= 30 && Number(this.quellTisch) <= 47) {
+      tableToMove.department = "berglerStubeHubertusStube";
+      j = 1;
+    } else if (Number(this.quellTisch) >= 10 && Number(this.quellTisch) <= 26) {
+      tableToMove.department = "Bauernstube";
+      j = 0;
+    } else if (Number(this.quellTisch) >= 50 && Number(this.quellTisch) <= 77) {
+      tableToMove.department = "waeldlerStubeKristallStube";
+      j = 4;
+    } else if (Number(this.quellTisch) >= 80 && Number(this.quellTisch) <= 99) {
+      tableToMove.department = "edelweissKaminStube";
+      j = 3;
+    } else if (Number(this.quellTisch) >= 1 && Number(this.quellTisch) <= 6) {
+      tableToMove.department = "teestubeTeelounge";
+      j = 2;
+    }
+
+    if (Number(this.zielTisch) >= 30 && Number(this.zielTisch) <= 47) {
+      tableToMove.targetDepartment = "berglerStubeHubertusStube";
+    } else if (Number(this.zielTisch) >= 10 && Number(this.zielTisch) <= 26) {
+      tableToMove.targetDepartment = "Bauernstube";
+    } else if (Number(this.zielTisch) >= 50 && Number(this.zielTisch) <= 77) {
+      tableToMove.targetDepartment = "waeldlerStubeKristallStube";
+    } else if (Number(this.zielTisch) >= 80 && Number(this.zielTisch) <= 99) {
+      tableToMove.targetDepartment = "edelweissKaminStube";
+    } else if (Number(this.zielTisch) >= 1 && Number(this.zielTisch) <= 6) {
+      tableToMove.targetDepartment = "teestubeTeelounge";
+    }
+    let indexZiel = 0;
+    let indexQuell = 0;
+
+    tableToMove.number = this.quellTisch;
+    tableToMove.targetTable = this.zielTisch;
+    console.log(tableToMove);
+    this.tischplanService.getTables()
+      .subscribe(tables => {
+
+        for (let a = 0; a < tables.length; a++) {
+          for (let b = 0; b < tables[a].tables.length; b++) {
+            if (tables[a].department === tableToMove.department) {
+              console.log("YEEEES BEFORE");
+              if (tables[a].tables[b].number === tableToMove.number) {
+                console.log("YEEEEEEEESSSSS AFFFTEEEER!!!");
+                console.log(tables[a].tables[b]);
+                this.tableInformation.push(tables[a].tables[b]);
+                console.log(this.tableInformation);
+                this.tableInformation.push(tableToMove);
+              }
+            }
+          }
+        }
+        for (let a = 0; a < tables.length; a++) {
+          for (let b = 0; b < tables[a].tables.length; b++) {
+            if (tables[a].department === tableToMove.targetDepartment) {
+              if (tables[a].tables[b].number === tableToMove.targetTable) {
+                indexZiel = b;
+              }
+            }
+          }
+        }
+        for (let a = 0; a < tables.length; a++) {
+          for (let b = 0; b < tables[a].tables.length; b++) {
+            if (tables[a].department === tableToMove.department) {
+              if (tables[a].tables[b].number === tableToMove.number) {
+                indexQuell = b;
+              }
+            }
+          }
+        }
+        let tableInformationExport = this.tableInformation;
+        this.umsetzenExport.emit({tableToMove, indexZiel, indexQuell, tableInformationExport});
+      });
+    //this.departmentsComponent.umsetzen(this.tableInformation, index);
+  };
+
+  keyDownFunction(event) {
+    if(event.keyCode == 13) {
+      //alert('you just clicked enter');
+      this.termExport.emit(this.term);
+    }
+  }
+
+  onKey(event: any) { // without type in
+    this.term = event.target.value;
+    console.log(this.term);
+    this.termExport.emit(this.term);
+
+  }
+
+  fileChangeEvent(fileInput: any) {
+    this.filesToUpload = <Array<File>>fileInput.target.files;
+  }
+
+  upload(){
+    const formData: any = new FormData();
+    const files: Array<File> = this.filesToUpload;
+
+    formData.append('uploads[]', files[0], files[0]['name']);
+
+    this.http.post('/upload', formData)
+      .map(files => files.json()).map(res =>
+      // 1st parameter is a flash message text
+      // 2nd parameter is optional. You can pass object with options.
+      this._flashMessagesService.show('Erfolgreich CSV Datei hochgeladen', {cssClass: 'alert-success', timeout: 10000}))
+      .subscribe(files => console.log('files', files));
+
+  }
+
+  dispenseIfAbreise(tables) {
+    console.log('=================================================dispenseIfAbreise');
+    this.dateTodayGenerated = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+
+    for (let a = 0; a < tables.length; a++) {
+      for (let b = 0; b < tables[a].tables.length; b++) {
+
+        if (tables[a].tables[b].abreiseValue) {
+          console.log('tables[a].tables[b].abreiseValue: ' + b + " " + tables[a].tables[b].anreiseValue);
+          this.parts[0] = tables[a].tables[b].abreiseValue.match(/(\d+)/g);} else {
+          this.parts[0] = "undefined";
+        }
+        if (tables[a].tables[b].abreiseValue2) {
+          this.parts[1] = tables[a].tables[b].abreiseValue2.match(/(\d+)/g);}else {
+          this.parts[1] = "undefined";
+        }
+        if (tables[a].tables[b].abreiseValue3) {
+          this.parts[2] = tables[a].tables[b].abreiseValue3.match(/(\d+)/g);}else {
+          this.parts[2] = "undefined";
+        }
+        if (tables[a].tables[b].abreiseValue4) {
+          this.parts[3] = tables[a].tables[b].abreiseValue4.match(/(\d+)/g);}else {
+          this.parts[3] = "undefined";
+        }
+        if (tables[a].tables[b].abreiseValue4) {
+          this.parts[4] = tables[a].tables[b].abreiseValue4.match(/(\d+)/g);}else {
+          this.parts[4] = "undefined";
+        }
+        if (tables[a].tables[b].abreiseValue4) {
+          this.parts[5] = tables[a].tables[b].abreiseValue4.match(/(\d+)/g);}else {
+          this.parts[5] = "undefined";
+        }
+        if (tables[a].tables[b].abreiseValue7) {
+          this.parts[6] = tables[a].tables[b].abreiseValue7.match(/(\d+)/g);}else {
+          this.parts[6] = "undefined";
+        }
+        if (tables[a].tables[b].abreiseValue8) {
+          this.parts[7] = tables[a].tables[b].abreiseValue8.match(/(\d+)/g);}else {
+          this.parts[7] = "undefined";
+        }
+        if (tables[a].tables[b].abreiseValue9) {
+          this.parts[8] = tables[a].tables[b].abreiseValue9.match(/(\d+)/g);}else {
+          this.parts[8] = "undefined";
+        }
+        if (tables[a].tables[b].abreiseValue10) {
+          this.parts[9] = tables[a].tables[b].abreiseValue10.match(/(\d+)/g);}else {
+          this.parts[9] = "undefined";
+        }
+        if (tables[a].tables[b].abreiseValue11) {
+          this.parts[10] = tables[a].tables[b].abreiseValue11.match(/(\d+)/g);}else {
+          this.parts[10] = "undefined";
+        }
+        if (tables[a].tables[b].abreiseValue12) {
+          this.parts[11] = tables[a].tables[b].abreiseValue12.match(/(\d+)/g);}else {
+          this.parts[11] = "undefined";
+        }
+        if (tables[a].tables[b].abreiseValue13) {
+          this.parts[12] = tables[a].tables[b].abreiseValue13.match(/(\d+)/g);}else {
+          this.parts[12] = "undefined";
+        }
+        if (tables[a].tables[b].abreiseValue14) {
+          this.parts[13] = tables[a].tables[b].abreiseValue14.match(/(\d+)/g);}else {
+          this.parts[13] = "undefined";
+        }
+        if (tables[a].tables[b].abreiseValue15) {
+          this.parts[14] = tables[a].tables[b].abreiseValue15.match(/(\d+)/g);}else {
+          this.parts[14] = "undefined";
+        }
+
+        for (let c = 0; c <= 14; c++) {
+          if (this.parts[c]) {
+            this.date[c] = new Date(2018, this.parts[c][1] - 1, this.parts[c][0]);
+            this.parsedDate[c] = String(this.date[c]).substring(0, 15);
+          }
+        }
+        // note parts[1]-1
+        //console.log('parts[2]' + parts[2] + 'parts[1]' + (parts[1] - 1) + 'parts[0]' + parts[0]);
+        // Mon May 31 2010 00:00:00
+        //this.tablesRestaurant[j].anreiseValue
+        let dateToday = String(this.dateTodayGenerated).substring(0, 15);
+        console.log('Parsed Date --->: ' + this.parsedDate[0]);
+        console.log('this.dateGenerated --->: ' + dateToday);
+        let abreisenExport = tables[a].tables[b];
+        if (dateToday.indexOf(this.parsedDate[0] || this.parsedDate[1] || this.parsedDate[2] || this.parsedDate[3] || this.parsedDate[4] || this.parsedDate[5] || this.parsedDate[6] || this.parsedDate[7] || this.parsedDate[8] || this.parsedDate[9] || this.parsedDate[10] || this.parsedDate[11] || this.parsedDate[12] || this.parsedDate[13] || this.parsedDate[14] || this.parsedDate[15]) !== -1) {
+          this.abreisenExport.emit({abreisenExport, b});
+        }
+      }
+    }
   }
 
 }
