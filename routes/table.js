@@ -124,7 +124,7 @@ module.exports = {
             console.log("UMSETZEN! occupy");
             console.log(test);
             departmentValueDB = test.targetDepartment;
-            tableValue = test.targetTable;
+            tableValue = test.number;
             console.log(tableValue);
             console.log(departmentValueDB);
             //test[0].department = test[1].targetDepartment;

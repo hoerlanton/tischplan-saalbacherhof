@@ -72,4 +72,8 @@ export class TableplanComponent implements OnInit {
     }
   }
 
+  none(event) {
+    event.stopPropagation();
+  }
+
 }
