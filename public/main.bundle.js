@@ -1246,6 +1246,7 @@ var DepartmentsComponent = (function () {
                     _this.dispensedTeestubeTeelounge.emit(response[0].tables);
                 }
             }
+            _this.updateAzList.emit();
         });
         this.tischplanService.addPlaceholder(table).subscribe(function (response) {
             console.log("Add placeholder!");
@@ -1303,6 +1304,7 @@ var DepartmentsComponent = (function () {
             }
             // console.log(this.tablesBerglerStubeHubertusStube[arrayIndex]);
         });
+        this.updateAzList.emit();
     };
     DepartmentsComponent.prototype.occupyTableOnDrop = function (dataString, arrayIndex) {
         var _this = this;
@@ -1333,7 +1335,6 @@ var DepartmentsComponent = (function () {
                     _this.tablesTeestubeTeelounge[arrayIndex] = response.tables[0];
                 }
             }
-            _this.updateAzList.emit();
             //console.log("bgColor:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
         });
         //console.log("placeholder:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
@@ -2515,6 +2516,7 @@ var PrintComponent = (function () {
     };
     PrintComponent.prototype.formatAzListe = function (tables) {
         this.tables = tables;
+        this.tableNumbers = [];
         function filterByID(obj) {
             if ('nameValue2' in obj || 'nameValue3' in obj) {
                 return true;
@@ -3186,10 +3188,15 @@ var TischplanComponent = (function () {
     };
     TischplanComponent.prototype.updateAzList = function () {
         var _this = this;
-        this.getTables();
         setTimeout(function () {
-            _this.printComponent.formatAzListe(_this.tables);
-        }, 2000);
+            _this.getTables();
+            setTimeout(function () {
+                _this.tables = _this.tablesBauernstube.concat(_this.tablesTeestubeTeelounge).concat(_this.tablesBerglerStubeHubertusStube).concat(_this.tablesEdelweissKaminStube).concat(_this.tablesWaeldlerStubeKristallStube);
+                console.log('this.tables: in updateAzList');
+                console.log(_this.tables);
+                _this.printComponent.formatAzListe(_this.tables);
+            }, 3000);
+        }, 1000);
     };
     TischplanComponent.prototype.getTables = function () {
         var _this = this;
@@ -3225,7 +3232,7 @@ var TischplanComponent = (function () {
             console.log(_this.tablesWaeldlerStubeKristallStube);
             console.log(_this.tablesTeestubeTeelounge);
             _this.tablesTempAbreise = tables;
-            _this.tables = _this.tables.concat(_this.tablesBauernstube).concat(_this.tablesTeestubeTeelounge).concat(_this.tablesBerglerStubeHubertusStube).concat(_this.tablesEdelweissKaminStube).concat(_this.tablesWaeldlerStubeKristallStube);
+            _this.tables = _this.tablesBauernstube.concat(_this.tablesTeestubeTeelounge).concat(_this.tablesBerglerStubeHubertusStube).concat(_this.tablesEdelweissKaminStube).concat(_this.tablesWaeldlerStubeKristallStube);
             _this.changeBgColorIfAnreise(tables);
             _this.printComponent.formatAzListe(_this.tables);
             //this.dispenseIfAbreise(tables);

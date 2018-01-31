@@ -349,10 +349,15 @@ export class TischplanComponent {
       });
   }
   updateAzList(){
-    this.getTables();
     setTimeout(() => {
-      this.printComponent.formatAzListe(this.tables);
-    }, 2000);
+      this.getTables();
+      setTimeout(() => {
+        this.tables = this.tablesBauernstube.concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube);
+        console.log('this.tables: in updateAzList');
+        console.log(this.tables);
+        this.printComponent.formatAzListe(this.tables);
+      }, 3000);
+    }, 1000);
   }
 
   getTables(){
@@ -389,7 +394,7 @@ export class TischplanComponent {
         console.log(this.tablesTeestubeTeelounge);
         this.tablesTempAbreise = tables;
 
-        this.tables = this.tables.concat(this.tablesBauernstube).concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube);
+        this.tables = this.tablesBauernstube.concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube);
         this.changeBgColorIfAnreise(tables);
         this.printComponent.formatAzListe(this.tables);
         //this.dispenseIfAbreise(tables);

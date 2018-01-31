@@ -45,7 +45,7 @@ export class PrintComponent implements OnInit {
 
 
     this.tables = tables;
-
+    this.tableNumbers = [];
     function filterByID(obj) {
       if ('nameValue2' in obj || 'nameValue3' in obj) {
         return true;

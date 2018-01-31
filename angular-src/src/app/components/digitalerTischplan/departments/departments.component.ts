@@ -79,6 +79,7 @@ export class DepartmentsComponent implements OnInit {
           this.dispensedTeestubeTeelounge.emit(response[0].tables);
         }
       }
+      this.updateAzList.emit();
     });
 
     this.tischplanService.addPlaceholder(table).subscribe(response => {
@@ -133,8 +134,9 @@ export class DepartmentsComponent implements OnInit {
             //this.tablesTeestubeTeelounge[arrayIndex] = response.tables[0];
           }
         }
-// console.log(this.tablesBerglerStubeHubertusStube[arrayIndex]);
+        // console.log(this.tablesBerglerStubeHubertusStube[arrayIndex]);
       });
+    this.updateAzList.emit();
   }
 
 
@@ -165,7 +167,7 @@ export class DepartmentsComponent implements OnInit {
             this.tablesTeestubeTeelounge[arrayIndex] = response.tables[0];
           }
         }
-          this.updateAzList.emit();
+
         //console.log("bgColor:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
       });
     //console.log("placeholder:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
