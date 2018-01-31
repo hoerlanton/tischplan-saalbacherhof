@@ -26,7 +26,16 @@
       </div>
     </ul>
     <ul class="nav navbar-nav navbar-right" >
-      <button type="button" class="btn btn-default" (click)="dispenseIfAbreise()">Abreisen entfernen</button>
+      <div class="btn-group" dropdown>
+        <button dropdownToggle class="btn btn-primary dropdown-toggle" type="button">Abreisen entfernen <i class="fa fa-calendar-check-o" aria-hidden="true"></i><span class="caret"></span>
+        </button>
+        <ul *dropdownMenu class="dropdown-menu" role="menu" style="max-height: 100px; padding: 0">
+          <li role="menuitem" class="menuitem" style="color: black;">Abbrechen</li>
+          <li class="divider dropdown-divider" style="margin: 0"></li>
+          <li role="menuitem" class="menuitem" style="background-color: red; color: white;" (click)="dispenseIfAbreise()"><b> Abreisen für Morgen entfernen</b></li>
+          <li class="divider dropdown-divider" style="margin: 0"></li>
+        </ul>
+      </div>
       <div class="btn-group" dropdown>
         <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">Umsetzen<span class="caret"></span>
         </button>
