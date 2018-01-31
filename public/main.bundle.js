@@ -2291,6 +2291,9 @@ var NavigationComponent = (function () {
             this.termExport.emit(this.term);
         }
     };
+    NavigationComponent.prototype.brandClick = function () {
+        window.location.reload();
+    };
     NavigationComponent.prototype.onKey = function (event) {
         this.term = event.target.value;
         console.log(this.term);

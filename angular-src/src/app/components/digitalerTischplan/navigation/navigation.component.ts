@@ -181,6 +181,11 @@ export class NavigationComponent implements OnInit {
     }
   }
 
+  brandClick() {
+    window.location.reload()
+  }
+
+
   onKey(event: any) { // without type in
     this.term = event.target.value;
     console.log(this.term);
