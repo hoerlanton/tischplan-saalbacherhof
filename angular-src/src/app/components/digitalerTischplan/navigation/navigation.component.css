@@ -1,5 +1,5 @@
 .navbar-fixed-top {
-  max-width: 100vw;
+  max-width: 100%;
   background-color: #0d2f2e;
   border-radius: 0px;
   max-height: 80px;
@@ -203,7 +203,6 @@ h6 {
 
   .navbar-right {
     max-width: 100%;
-    min-width: calc(100vw - 300px);
   }
 
   .container {

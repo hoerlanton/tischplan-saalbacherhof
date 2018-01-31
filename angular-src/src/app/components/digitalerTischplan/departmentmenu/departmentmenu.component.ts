@@ -260,7 +260,7 @@ export class DepartmentmenuComponent implements OnInit {
     this.showAlleBool = true;
 
     if (this.buttonBgColor6 === "154846") {
-      this.buttonBgColor6 = "f3efe4";
+      this.buttonBgColor6 = "0d2f2e";
       this.buttonBgColor1 = "0a7a74";
       this.buttonBgColor2 = "0a7a74";
       this.buttonBgColor3 = "0a7a74";
