@@ -146,31 +146,6 @@ export class TischplanComponent {
     this.showEdelweissBool = false;
     this.showTeeStubeBool = false;
 
-    this.tischplanService.getImHausListe()
-      .subscribe(imHausListeElemente => {
-        //console.log('IM-HAUS-LISTE before:');
-        //console.log(imHausListeElemente);
-        imHausListeElemente.sort(function (a, b) {
-          if (a.name < b.name) return -1;
-          if (a.name > b.name) return 1;
-          return 0;
-        });
-        this.imHausListeElemente = imHausListeElemente;
-        console.log('IM-HAUS-LISTE:');
-        console.log(this.imHausListeElemente);
-      });
-
-    this.tischplanService.getAnreiseListe()
-      .subscribe(anreiseListeElemente => {
-        anreiseListeElemente.sort(function (a, b) {
-          if (a.name < b.name) return -1;
-          if (a.name > b.name) return 1;
-          return 0;
-        });
-        this.anreiseListeElemente = anreiseListeElemente;
-        console.log(this.anreiseListeElemente);
-      });
-
     this.tischplanService.getNotizElements()
       .subscribe(informationElemente => {
         if (informationElemente === null) {
@@ -181,63 +156,8 @@ export class TischplanComponent {
         }
       });
 
-    this.tischplanService.getTables()
-      .subscribe(tables => {
-        console.log("TABLES LENGTH: " + tables.length);
-        if (tables === null) {
-          return;
-        } else {
-          for (let a = 0; a < tables.length; a++) {
-            if (tables[a].department === "Bauernstube") {
-              this.tablesBauernstube = tables[a].tables;
-            }
-            else if (tables[a].department === "edelweissKaminStube") {
-              this.tablesEdelweissKaminStube = tables[a].tables;
-              console.log('Test' + JSON.stringify(this.tablesEdelweissKaminStube));
-            }
-            else if (tables[a].department === "berglerStubeHubertusStube") {
-              this.tablesBerglerStubeHubertusStube = tables[a].tables;
-            }
-            else if (tables[a].department === "waeldlerStubeKristallStube") {
-              this.tablesWaeldlerStubeKristallStube = tables[a].tables;
-            }
-            else if (tables[a].department === "teestubeTeelounge") {
-              this.tablesTeestubeTeelounge = tables[a].tables;
-            }
-          }
-        }
-
-
-        console.log(this.tablesBauernstube);
-        console.log(this.tablesEdelweissKaminStube);
-        console.log(this.tablesBerglerStubeHubertusStube);
-        console.log(this.tablesWaeldlerStubeKristallStube);
-        console.log(this.tablesTeestubeTeelounge);
-        this.tablesTempAbreise = tables;
-
-        this.tables = this.tables.concat(this.tablesBauernstube).concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube);
-        this.changeBgColorIfAnreise(tables);
-        this.printComponent.formatAzListe(this.tables);
-        //this.dispenseIfAbreise(tables);
-
-      });
-
-
-    this.tischplanService.getTracesListe()
-      .subscribe(tracesListeElemente => {
-        console.log(tracesListeElemente);
-        tracesListeElemente.sort(function (a, b) {
-          if (a.name < b.name) return -1;
-          if (a.name > b.name) return 1;
-          return 0;
-        });
-
-        //console.log("2:" + tracesListeElemente[0].data[0]);
-        //console.log(tracesListeElemente[0].data.length);
-        //this.tracesListeElemente = tracesListeElemente[0].data;
-        this.tracesListeElemente = tracesListeElemente;
-        //this.formatTracesListeElements(tracesListeElemente);
-      });
+    this.getTables();
+    this.reloadLists();
 
     this.tischplanService.getInformationElements()
       .subscribe(informationElemente => {
@@ -383,6 +303,98 @@ export class TischplanComponent {
     setTimeout(() => {
       this.departmentsComponent.occupy(this.umsetzenInfoVar.tableToMove, this.umsetzenInfoVar.indexQuell);
     }, 2000);
+  }
+
+  reloadLists(){
+    this.tischplanService.getImHausListe()
+      .subscribe(imHausListeElemente => {
+        //console.log('IM-HAUS-LISTE before:');
+        //console.log(imHausListeElemente);
+        imHausListeElemente.sort(function (a, b) {
+          if (a.name < b.name) return -1;
+          if (a.name > b.name) return 1;
+          return 0;
+        });
+        this.imHausListeElemente = imHausListeElemente;
+        console.log('IM-HAUS-LISTE:');
+        console.log(this.imHausListeElemente);
+      });
+
+    this.tischplanService.getAnreiseListe()
+      .subscribe(anreiseListeElemente => {
+        anreiseListeElemente.sort(function (a, b) {
+          if (a.name < b.name) return -1;
+          if (a.name > b.name) return 1;
+          return 0;
+        });
+        this.anreiseListeElemente = anreiseListeElemente;
+        console.log(this.anreiseListeElemente);
+      });
+
+
+    this.tischplanService.getTracesListe()
+      .subscribe(tracesListeElemente => {
+        console.log(tracesListeElemente);
+        tracesListeElemente.sort(function (a, b) {
+          if (a.name < b.name) return -1;
+          if (a.name > b.name) return 1;
+          return 0;
+        });
+
+        //console.log("2:" + tracesListeElemente[0].data[0]);
+        //console.log(tracesListeElemente[0].data.length);
+        //this.tracesListeElemente = tracesListeElemente[0].data;
+        this.tracesListeElemente = tracesListeElemente;
+        //this.formatTracesListeElements(tracesListeElemente);
+      });
+  }
+  updateAzList(){
+    this.getTables();
+    setTimeout(() => {
+      this.printComponent.formatAzListe(this.tables);
+    }, 2000);
+  }
+
+  getTables(){
+    this.tischplanService.getTables()
+      .subscribe(tables => {
+        console.log("TABLES LENGTH: " + tables.length);
+        if (tables === null) {
+          return;
+        } else {
+          for (let a = 0; a < tables.length; a++) {
+            if (tables[a].department === "Bauernstube") {
+              this.tablesBauernstube = tables[a].tables;
+            }
+            else if (tables[a].department === "edelweissKaminStube") {
+              this.tablesEdelweissKaminStube = tables[a].tables;
+              console.log('Test' + JSON.stringify(this.tablesEdelweissKaminStube));
+            }
+            else if (tables[a].department === "berglerStubeHubertusStube") {
+              this.tablesBerglerStubeHubertusStube = tables[a].tables;
+            }
+            else if (tables[a].department === "waeldlerStubeKristallStube") {
+              this.tablesWaeldlerStubeKristallStube = tables[a].tables;
+            }
+            else if (tables[a].department === "teestubeTeelounge") {
+              this.tablesTeestubeTeelounge = tables[a].tables;
+            }
+          }
+        }
+
+        console.log(this.tablesBauernstube);
+        console.log(this.tablesEdelweissKaminStube);
+        console.log(this.tablesBerglerStubeHubertusStube);
+        console.log(this.tablesWaeldlerStubeKristallStube);
+        console.log(this.tablesTeestubeTeelounge);
+        this.tablesTempAbreise = tables;
+
+        this.tables = this.tables.concat(this.tablesBauernstube).concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube);
+        this.changeBgColorIfAnreise(tables);
+        this.printComponent.formatAzListe(this.tables);
+        //this.dispenseIfAbreise(tables);
+
+      });
   }
 }
 

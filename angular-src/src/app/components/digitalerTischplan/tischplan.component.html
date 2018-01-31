@@ -19,7 +19,8 @@
                     (umsetzenExport)="umsetzenInfoVar = $event; umsetzen($event)"
                     [tablesTempAbreise]="tablesTempAbreise"
                     (abreisenExport)="abreiseTablePlusIndex = $event; abreisenRemoval($event)"
-                    (termExport)="term = $event">
+                    (termExport)="term = $event"
+                    (reloadLists)="reloadLists($event)">
     </app-navigation><flash-messages></flash-messages>
     <div class="col-xs-12 col-sm-8 col-lg-6 print-col">
       <app-departmentmenu
@@ -105,11 +106,14 @@
     <div class="col-xs-12 col-lg-3 upload-col">
       <div class="outer-cards">
         <h3>Im-Haus-Liste</h3>
-        <app-im-haus-liste [imHausListeElemente]="imHausListeElemente"></app-im-haus-liste>
+        <app-im-haus-liste [imHausListeElemente]="imHausListeElemente">
+        </app-im-haus-liste>
         <h3>Anreise-Liste</h3>
-        <app-anreise-liste [anreiseListeElemente]="anreiseListeElemente"></app-anreise-liste>
+        <app-anreise-liste [anreiseListeElemente]="anreiseListeElemente">
+        </app-anreise-liste>
         <h3>Traces-Liste</h3>
-        <app-traces-liste [tracesListeElemente]="tracesListeElemente" ></app-traces-liste>
+        <app-traces-liste [tracesListeElemente]="tracesListeElemente">
+        </app-traces-liste>
       </div>
     </div>
 
@@ -139,7 +143,8 @@
                                (infoAddedTeestubeTeelounge)="tablesTeestubeTeelounge=$event"
                                (infoAddedWaeldlerStubeKristallStube)="tablesWaeldlerStubeKristallStube=$event"
                                [term]="term"
-                               [showAlleBool]="showAlleBool">
+                                [showAlleBool]="showAlleBool"
+                                (updateAzList)="updateAzList($event)">
               </app-departments>
             </div>
           </div>

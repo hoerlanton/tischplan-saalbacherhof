@@ -32,6 +32,8 @@ export class DepartmentsComponent implements OnInit {
   dispensedTeestubeTeelounge:EventEmitter<any> = new EventEmitter();
   @Output()
   dispensedWaeldlerStubeKristallStube:EventEmitter<any> = new EventEmitter();
+  @Output()
+  updateAzList:EventEmitter<any> = new EventEmitter();
   dateTodayGenerated: any;
   parts: any[] = [];
   date: any[] = [];
@@ -163,7 +165,7 @@ export class DepartmentsComponent implements OnInit {
             this.tablesTeestubeTeelounge[arrayIndex] = response.tables[0];
           }
         }
-
+          this.updateAzList.emit();
         //console.log("bgColor:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
       });
     //console.log("placeholder:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));

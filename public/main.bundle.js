@@ -1204,6 +1204,7 @@ var DepartmentsComponent = (function () {
         this.dispensedEdelweissKaminStube = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.dispensedTeestubeTeelounge = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.dispensedWaeldlerStubeKristallStube = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.updateAzList = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.parts = [];
         this.date = [];
         this.parsedDate = [];
@@ -1332,6 +1333,7 @@ var DepartmentsComponent = (function () {
                     _this.tablesTeestubeTeelounge[arrayIndex] = response.tables[0];
                 }
             }
+            _this.updateAzList.emit();
             //console.log("bgColor:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
         });
         //console.log("placeholder:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
@@ -1535,16 +1537,20 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
     __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _e || Object)
 ], DepartmentsComponent.prototype, "dispensedWaeldlerStubeKristallStube", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _f || Object)
+], DepartmentsComponent.prototype, "updateAzList", void 0);
 DepartmentsComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-departments',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/departments.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _f || Object])
+    __metadata("design:paramtypes", [typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _g || Object])
 ], DepartmentsComponent);
 
-var _a, _b, _c, _d, _e, _f;
+var _a, _b, _c, _d, _e, _f, _g;
 //# sourceMappingURL=departments.component.js.map
 
 /***/ }),
@@ -2137,6 +2143,7 @@ var NavigationComponent = (function () {
         this.parts = [];
         this.parsedDate = [];
         this.tableInformation = [];
+        this.reloadLists = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
     NavigationComponent.prototype.ngOnInit = function () {
     };
@@ -2303,6 +2310,9 @@ var NavigationComponent = (function () {
             return _this._flashMessagesService.show('Erfolgreich CSV Datei hochgeladen', { cssClass: 'alert-success', timeout: 10000 });
         })
             .subscribe(function (files) { return console.log('files', files); });
+        setTimeout(function () {
+            _this.reloadLists.emit();
+        }, 3000);
     };
     NavigationComponent.prototype.dispenseIfAbreise = function () {
         var tables = this.tablesTempAbreise;
@@ -2447,16 +2457,20 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
     __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
 ], NavigationComponent.prototype, "termExport", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _d || Object)
+], NavigationComponent.prototype, "reloadLists", void 0);
 NavigationComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-navigation',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _f || Object])
+    __metadata("design:paramtypes", [typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _g || Object])
 ], NavigationComponent);
 
-var _a, _b, _c, _d, _e, _f;
+var _a, _b, _c, _d, _e, _f, _g;
 //# sourceMappingURL=navigation.component.js.map
 
 /***/ }),
@@ -2878,7 +2892,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/digitalerTischplan/tischplan.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n<head>\n  <title>Dashboard</title>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  <script src=\"node_modules/core-js/client/shim.min.js\"></script>\n  <script src=\"<your-libs-directory>/object-assign.min.js\"></script>\n</head>\n<body>\n<div id=\"charge-error\" class=\"alert alert-danger <% if ( !errMsg ) { %> hidden <% } %>\">\n  <%= errMsg  %>\n</div>\n<div class=\"row\">\n  <div class=\"container-fluid\">\n    <app-navigation [newInformationElements]=\"newInformationElements\"\n                    [tablesOccupied]=\"tablesOccupied\"\n                    (getTablesOccupied)=\"tablesOccupied = $event\"\n                    (umsetzenExport)=\"umsetzenInfoVar = $event; umsetzen($event)\"\n                    [tablesTempAbreise]=\"tablesTempAbreise\"\n                    (abreisenExport)=\"abreiseTablePlusIndex = $event; abreisenRemoval($event)\"\n                    (termExport)=\"term = $event\">\n    </app-navigation><flash-messages></flash-messages>\n    <div class=\"col-xs-12 col-sm-8 col-lg-6 print-col\">\n      <app-departmentmenu\n        [buttonBgColor1]=\"buttonBgColor1\"\n        [buttonBgColor2]=\"buttonBgColor2\"\n        [buttonBgColor3]=\"buttonBgColor3\"\n        [buttonBgColor4]=\"buttonBgColor4\"\n        [buttonBgColor5]=\"buttonBgColor5\"\n        [buttonBgColor6]=\"buttonBgColor6\"\n        [fontColor1]=\"fontColor1\"\n        [fontColor2]=\"fontColor2\"\n        [fontColor3]=\"fontColor3\"\n        [fontColor4]=\"fontColor4\"\n        [fontColor5]=\"fontColor5\"\n        [fontColor6]=\"fontColor6\"\n        [showBauernStubnBool]=\"showBauernStubnBool\"\n        [showBerglerBool]=\"showBerglerBool\"\n        [showEdelweissBool]=\"showEdelweissBool\"\n        [showWaeldlerBool]=\"showWaeldlerBool\"\n        [showTeeStubeBool]=\"showTeeStubeBool\"\n        [showAlleBool]=\"showAlleBool\"\n        (showBauernStubnBoolChange)=\"showBauernStubnBool=$event\"\n        (showBerglerBoolChange)=\"showBerglerBool=$event\"\n        (showEdelweissBoolChange)=\"showEdelweissBool=$event\"\n        (showWaeldlerBoolChange)=\"showWaeldlerBool=$event\"\n        (showTeeStubeBoolChange)=\"showTeeStubeBool=$event\"\n        (showAlleBoolChange)=\"showAlleBool=$event\"\n        [buttonBgColorInfoForm]=\"buttonBgColorInfoForm\"\n        [buttonBgColorNotizForm]=\"buttonBgColorNotizForm\"\n        [fontColorInfoForm]=\"fontColorInfoForm\"\n        [fontColorNotizForm]=\"fontColorNotizForm\"\n        [showNotizFormBool]=\"showNotizFormBool\"\n        [showInfoFormBool]=\"showInfoFormBool\"\n        (showInfoFormBoolChange)=\"showInfoFormBool=$event\"\n        (showNotizFormBoolChange)=\"showNotizFormBool=$event\"\n        (showTablePlanBoolChange)=\"showTablePlanBool=$event\"\n        [showTablePlanBool]=\"showTablePlanBool\"\n        [buttonBgColorShowTablePlan]=\"buttonBgColorShowTablePlan\"\n        [fontColorShowTablePlan]=\"fontColorShowTablePlan\">\n      </app-departmentmenu><flash-messages></flash-messages>\n      <app-form [newInformationElements]=\"newInformationElements\"\n                [dateGenerated]=\"dateGenerated\"\n                [title]=\"title\"\n                [roomNumber]=\"roomNumber\"\n                [tableNumber]=\"tableNumber\"\n                [employee]=\"employee\"\n                [nameTraceInput]=\"nameTraceInput\"\n                [tablesBauernstube]=\"tablesBauernstube\"\n                [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                [showNotizFormBool]=\"showNotizFormBool\"\n                [showInfoFormBool]=\"showInfoFormBool\"\n                [notizElements]=\"notizElements\"\n                (notizResponse)=\"notizElements=$event\"\n                [showBauernStubnBool]=\"showBauernStubnBool\"\n                [showBerglerBool]=\"showBerglerBool\"\n                [showEdelweissBool]=\"showEdelweissBool\"\n                [showWaeldlerBool]=\"showWaeldlerBool\"\n                [showTeeStubeBool]=\"showTeeStubeBool\"\n                [showAlleBool]=\"showAlleBool\">\n      </app-form>\n      <app-tableplan [tablesBauernstube]=\"tablesBauernstube\"\n                     [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                     [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                     [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                     [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                     [showBauernStubnBool]=\"showBauernStubnBool\"\n                     [showBerglerBool]=\"showBerglerBool\"\n                     [showEdelweissBool]=\"showEdelweissBool\"\n                     [showWaeldlerBool]=\"showWaeldlerBool\"\n                     [showTeeStubeBool]=\"showTeeStubeBool\"\n                     [showAlleBool]=\"showAlleBool\"\n                     (movedBauernstube)=\"tablesBauernstube = $event\"\n                     (movedBerglerStubeHubertusStube)=\"tablesBerglerStubeHubertusStube = $event\"\n                     (movedEdelweissKaminStube)=\"tablesEdelweissKaminStube = $event\"\n                     (movedTeestubeTeelounge)=\"tablesTeestubeTeelounge = $event\"\n                     (movedWaeldlerStubeKristallStube)=\"tablesWaeldlerStubeKristallStube = $event\"\n                     [showTablePlanBool]=\"showTablePlanBool\">\n      </app-tableplan>\n    </div>\n    <div class=\"col-xs-12 col-lg-3 upload-col\">\n      <div class=\"outer-cards\">\n        <h3>Im-Haus-Liste</h3>\n        <app-im-haus-liste [imHausListeElemente]=\"imHausListeElemente\"></app-im-haus-liste>\n        <h3>Anreise-Liste</h3>\n        <app-anreise-liste [anreiseListeElemente]=\"anreiseListeElemente\"></app-anreise-liste>\n        <h3>Traces-Liste</h3>\n        <app-traces-liste [tracesListeElemente]=\"tracesListeElemente\" ></app-traces-liste>\n      </div>\n    </div>\n\n    <div class=\"col-xs-12 col-sm-4 col-lg-3 table-col\">\n      <h3 >Tisch Übersicht</h3>\n        <div class=\"inner-table\" style=\"padding: 0px 0px 0px 0px;\">\n          <div class=\"row3\">\n            <div class='wrapper' id=\"wrapper\">\n              <app-departments [tablesBauernstube]=\"tablesBauernstube\"\n                               [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                               [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                               [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                               [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                               [showBauernStubnBool]=\"showBauernStubnBool\"\n                               [showBerglerBool]=\"showBerglerBool\"\n                               [showEdelweissBool]=\"showEdelweissBool\"\n                               [showWaeldlerBool]=\"showWaeldlerBool\"\n                               [showTeeStubeBool]=\"showTeeStubeBool\"\n                               (dispensedBauernstube)=\"tablesBauernstube=$event\"\n                               (dispensedBerglerStubeHubertusStube)=\"tablesBerglerStubeHubertusStube=$event\"\n                               (dispensedEdelweissKaminStube)=\"tablesEdelweissKaminStube=$event\"\n                               (dispensedTeestubeTeelounge)=\"tablesTeestubeTeelounge=$event\"\n                               (dispensedWaeldlerStubeKristallStube)=\"tablesWaeldlerStubeKristallStube=$event\"\n                               (infoAddedBauernstube)=\"tablesBauernstube=$event\"\n                               (infoAddedBerglerStubeHubertusStube)=\"tablesBerglerStubeHubertusStube=$event\"\n                               (infoAddedEdelweissKaminStube)=\"tablesEdelweissKaminStube=$event\"\n                               (infoAddedTeestubeTeelounge)=\"tablesTeestubeTeelounge=$event\"\n                               (infoAddedWaeldlerStubeKristallStube)=\"tablesWaeldlerStubeKristallStube=$event\"\n                               [term]=\"term\"\n                               [showAlleBool]=\"showAlleBool\">\n              </app-departments>\n            </div>\n          </div>\n        </div>\n    </div>\n  </div>\n</div>\n</body>\n<app-print  [tables]=\"tables\"\n            [dateGeneratedListe]=\"dateGeneratedListe\"\n            [tablesBauernstube]=\"tablesBauernstube\"\n            [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n            [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n            [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n            [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n            [showBauernStubnBool]=\"showBauernStubnBool\"\n            [showBerglerBool]=\"showBerglerBool\"\n            [showEdelweissBool]=\"showEdelweissBool\"\n            [showWaeldlerBool]=\"showWaeldlerBool\"\n            [showTeeStubeBool]=\"showTeeStubeBool\"\n            (getTablesOccupied)=\"tablesOccupied = $event\"\n            (getTablesforAzListe)=\"tables = $event\">\n</app-print>\n</html>\n\n\n"
+module.exports = "<html>\n<head>\n  <title>Dashboard</title>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n  <script src=\"node_modules/core-js/client/shim.min.js\"></script>\n  <script src=\"<your-libs-directory>/object-assign.min.js\"></script>\n</head>\n<body>\n<div id=\"charge-error\" class=\"alert alert-danger <% if ( !errMsg ) { %> hidden <% } %>\">\n  <%= errMsg  %>\n</div>\n<div class=\"row\">\n  <div class=\"container-fluid\">\n    <app-navigation [newInformationElements]=\"newInformationElements\"\n                    [tablesOccupied]=\"tablesOccupied\"\n                    (getTablesOccupied)=\"tablesOccupied = $event\"\n                    (umsetzenExport)=\"umsetzenInfoVar = $event; umsetzen($event)\"\n                    [tablesTempAbreise]=\"tablesTempAbreise\"\n                    (abreisenExport)=\"abreiseTablePlusIndex = $event; abreisenRemoval($event)\"\n                    (termExport)=\"term = $event\"\n                    (reloadLists)=\"reloadLists($event)\">\n    </app-navigation><flash-messages></flash-messages>\n    <div class=\"col-xs-12 col-sm-8 col-lg-6 print-col\">\n      <app-departmentmenu\n        [buttonBgColor1]=\"buttonBgColor1\"\n        [buttonBgColor2]=\"buttonBgColor2\"\n        [buttonBgColor3]=\"buttonBgColor3\"\n        [buttonBgColor4]=\"buttonBgColor4\"\n        [buttonBgColor5]=\"buttonBgColor5\"\n        [buttonBgColor6]=\"buttonBgColor6\"\n        [fontColor1]=\"fontColor1\"\n        [fontColor2]=\"fontColor2\"\n        [fontColor3]=\"fontColor3\"\n        [fontColor4]=\"fontColor4\"\n        [fontColor5]=\"fontColor5\"\n        [fontColor6]=\"fontColor6\"\n        [showBauernStubnBool]=\"showBauernStubnBool\"\n        [showBerglerBool]=\"showBerglerBool\"\n        [showEdelweissBool]=\"showEdelweissBool\"\n        [showWaeldlerBool]=\"showWaeldlerBool\"\n        [showTeeStubeBool]=\"showTeeStubeBool\"\n        [showAlleBool]=\"showAlleBool\"\n        (showBauernStubnBoolChange)=\"showBauernStubnBool=$event\"\n        (showBerglerBoolChange)=\"showBerglerBool=$event\"\n        (showEdelweissBoolChange)=\"showEdelweissBool=$event\"\n        (showWaeldlerBoolChange)=\"showWaeldlerBool=$event\"\n        (showTeeStubeBoolChange)=\"showTeeStubeBool=$event\"\n        (showAlleBoolChange)=\"showAlleBool=$event\"\n        [buttonBgColorInfoForm]=\"buttonBgColorInfoForm\"\n        [buttonBgColorNotizForm]=\"buttonBgColorNotizForm\"\n        [fontColorInfoForm]=\"fontColorInfoForm\"\n        [fontColorNotizForm]=\"fontColorNotizForm\"\n        [showNotizFormBool]=\"showNotizFormBool\"\n        [showInfoFormBool]=\"showInfoFormBool\"\n        (showInfoFormBoolChange)=\"showInfoFormBool=$event\"\n        (showNotizFormBoolChange)=\"showNotizFormBool=$event\"\n        (showTablePlanBoolChange)=\"showTablePlanBool=$event\"\n        [showTablePlanBool]=\"showTablePlanBool\"\n        [buttonBgColorShowTablePlan]=\"buttonBgColorShowTablePlan\"\n        [fontColorShowTablePlan]=\"fontColorShowTablePlan\">\n      </app-departmentmenu><flash-messages></flash-messages>\n      <app-form [newInformationElements]=\"newInformationElements\"\n                [dateGenerated]=\"dateGenerated\"\n                [title]=\"title\"\n                [roomNumber]=\"roomNumber\"\n                [tableNumber]=\"tableNumber\"\n                [employee]=\"employee\"\n                [nameTraceInput]=\"nameTraceInput\"\n                [tablesBauernstube]=\"tablesBauernstube\"\n                [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                [showNotizFormBool]=\"showNotizFormBool\"\n                [showInfoFormBool]=\"showInfoFormBool\"\n                [notizElements]=\"notizElements\"\n                (notizResponse)=\"notizElements=$event\"\n                [showBauernStubnBool]=\"showBauernStubnBool\"\n                [showBerglerBool]=\"showBerglerBool\"\n                [showEdelweissBool]=\"showEdelweissBool\"\n                [showWaeldlerBool]=\"showWaeldlerBool\"\n                [showTeeStubeBool]=\"showTeeStubeBool\"\n                [showAlleBool]=\"showAlleBool\">\n      </app-form>\n      <app-tableplan [tablesBauernstube]=\"tablesBauernstube\"\n                     [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                     [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                     [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                     [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                     [showBauernStubnBool]=\"showBauernStubnBool\"\n                     [showBerglerBool]=\"showBerglerBool\"\n                     [showEdelweissBool]=\"showEdelweissBool\"\n                     [showWaeldlerBool]=\"showWaeldlerBool\"\n                     [showTeeStubeBool]=\"showTeeStubeBool\"\n                     [showAlleBool]=\"showAlleBool\"\n                     (movedBauernstube)=\"tablesBauernstube = $event\"\n                     (movedBerglerStubeHubertusStube)=\"tablesBerglerStubeHubertusStube = $event\"\n                     (movedEdelweissKaminStube)=\"tablesEdelweissKaminStube = $event\"\n                     (movedTeestubeTeelounge)=\"tablesTeestubeTeelounge = $event\"\n                     (movedWaeldlerStubeKristallStube)=\"tablesWaeldlerStubeKristallStube = $event\"\n                     [showTablePlanBool]=\"showTablePlanBool\">\n      </app-tableplan>\n    </div>\n    <div class=\"col-xs-12 col-lg-3 upload-col\">\n      <div class=\"outer-cards\">\n        <h3>Im-Haus-Liste</h3>\n        <app-im-haus-liste [imHausListeElemente]=\"imHausListeElemente\">\n        </app-im-haus-liste>\n        <h3>Anreise-Liste</h3>\n        <app-anreise-liste [anreiseListeElemente]=\"anreiseListeElemente\">\n        </app-anreise-liste>\n        <h3>Traces-Liste</h3>\n        <app-traces-liste [tracesListeElemente]=\"tracesListeElemente\">\n        </app-traces-liste>\n      </div>\n    </div>\n\n    <div class=\"col-xs-12 col-sm-4 col-lg-3 table-col\">\n      <h3 >Tisch Übersicht</h3>\n        <div class=\"inner-table\" style=\"padding: 0px 0px 0px 0px;\">\n          <div class=\"row3\">\n            <div class='wrapper' id=\"wrapper\">\n              <app-departments [tablesBauernstube]=\"tablesBauernstube\"\n                               [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n                               [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n                               [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n                               [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n                               [showBauernStubnBool]=\"showBauernStubnBool\"\n                               [showBerglerBool]=\"showBerglerBool\"\n                               [showEdelweissBool]=\"showEdelweissBool\"\n                               [showWaeldlerBool]=\"showWaeldlerBool\"\n                               [showTeeStubeBool]=\"showTeeStubeBool\"\n                               (dispensedBauernstube)=\"tablesBauernstube=$event\"\n                               (dispensedBerglerStubeHubertusStube)=\"tablesBerglerStubeHubertusStube=$event\"\n                               (dispensedEdelweissKaminStube)=\"tablesEdelweissKaminStube=$event\"\n                               (dispensedTeestubeTeelounge)=\"tablesTeestubeTeelounge=$event\"\n                               (dispensedWaeldlerStubeKristallStube)=\"tablesWaeldlerStubeKristallStube=$event\"\n                               (infoAddedBauernstube)=\"tablesBauernstube=$event\"\n                               (infoAddedBerglerStubeHubertusStube)=\"tablesBerglerStubeHubertusStube=$event\"\n                               (infoAddedEdelweissKaminStube)=\"tablesEdelweissKaminStube=$event\"\n                               (infoAddedTeestubeTeelounge)=\"tablesTeestubeTeelounge=$event\"\n                               (infoAddedWaeldlerStubeKristallStube)=\"tablesWaeldlerStubeKristallStube=$event\"\n                               [term]=\"term\"\n                                [showAlleBool]=\"showAlleBool\"\n                                (updateAzList)=\"updateAzList($event)\">\n              </app-departments>\n            </div>\n          </div>\n        </div>\n    </div>\n  </div>\n</div>\n</body>\n<app-print  [tables]=\"tables\"\n            [dateGeneratedListe]=\"dateGeneratedListe\"\n            [tablesBauernstube]=\"tablesBauernstube\"\n            [tablesBerglerStubeHubertusStube]=\"tablesBerglerStubeHubertusStube\"\n            [tablesEdelweissKaminStube]=\"tablesEdelweissKaminStube\"\n            [tablesTeestubeTeelounge]=\"tablesTeestubeTeelounge\"\n            [tablesWaeldlerStubeKristallStube]=\"tablesWaeldlerStubeKristallStube\"\n            [showBauernStubnBool]=\"showBauernStubnBool\"\n            [showBerglerBool]=\"showBerglerBool\"\n            [showEdelweissBool]=\"showEdelweissBool\"\n            [showWaeldlerBool]=\"showWaeldlerBool\"\n            [showTeeStubeBool]=\"showTeeStubeBool\"\n            (getTablesOccupied)=\"tablesOccupied = $event\"\n            (getTablesforAzListe)=\"tables = $event\">\n</app-print>\n</html>\n\n\n"
 
 /***/ }),
 
@@ -2983,33 +2997,6 @@ var TischplanComponent = (function () {
         this.showWaeldlerBool = false;
         this.showEdelweissBool = false;
         this.showTeeStubeBool = false;
-        this.tischplanService.getImHausListe()
-            .subscribe(function (imHausListeElemente) {
-            //console.log('IM-HAUS-LISTE before:');
-            //console.log(imHausListeElemente);
-            imHausListeElemente.sort(function (a, b) {
-                if (a.name < b.name)
-                    return -1;
-                if (a.name > b.name)
-                    return 1;
-                return 0;
-            });
-            _this.imHausListeElemente = imHausListeElemente;
-            console.log('IM-HAUS-LISTE:');
-            console.log(_this.imHausListeElemente);
-        });
-        this.tischplanService.getAnreiseListe()
-            .subscribe(function (anreiseListeElemente) {
-            anreiseListeElemente.sort(function (a, b) {
-                if (a.name < b.name)
-                    return -1;
-                if (a.name > b.name)
-                    return 1;
-                return 0;
-            });
-            _this.anreiseListeElemente = anreiseListeElemente;
-            console.log(_this.anreiseListeElemente);
-        });
         this.tischplanService.getNotizElements()
             .subscribe(function (informationElemente) {
             if (informationElemente === null) {
@@ -3020,59 +3007,8 @@ var TischplanComponent = (function () {
                 console.log(_this.notizElements);
             }
         });
-        this.tischplanService.getTables()
-            .subscribe(function (tables) {
-            console.log("TABLES LENGTH: " + tables.length);
-            if (tables === null) {
-                return;
-            }
-            else {
-                for (var a = 0; a < tables.length; a++) {
-                    if (tables[a].department === "Bauernstube") {
-                        _this.tablesBauernstube = tables[a].tables;
-                    }
-                    else if (tables[a].department === "edelweissKaminStube") {
-                        _this.tablesEdelweissKaminStube = tables[a].tables;
-                        console.log('Test' + JSON.stringify(_this.tablesEdelweissKaminStube));
-                    }
-                    else if (tables[a].department === "berglerStubeHubertusStube") {
-                        _this.tablesBerglerStubeHubertusStube = tables[a].tables;
-                    }
-                    else if (tables[a].department === "waeldlerStubeKristallStube") {
-                        _this.tablesWaeldlerStubeKristallStube = tables[a].tables;
-                    }
-                    else if (tables[a].department === "teestubeTeelounge") {
-                        _this.tablesTeestubeTeelounge = tables[a].tables;
-                    }
-                }
-            }
-            console.log(_this.tablesBauernstube);
-            console.log(_this.tablesEdelweissKaminStube);
-            console.log(_this.tablesBerglerStubeHubertusStube);
-            console.log(_this.tablesWaeldlerStubeKristallStube);
-            console.log(_this.tablesTeestubeTeelounge);
-            _this.tablesTempAbreise = tables;
-            _this.tables = _this.tables.concat(_this.tablesBauernstube).concat(_this.tablesTeestubeTeelounge).concat(_this.tablesBerglerStubeHubertusStube).concat(_this.tablesEdelweissKaminStube).concat(_this.tablesWaeldlerStubeKristallStube);
-            _this.changeBgColorIfAnreise(tables);
-            _this.printComponent.formatAzListe(_this.tables);
-            //this.dispenseIfAbreise(tables);
-        });
-        this.tischplanService.getTracesListe()
-            .subscribe(function (tracesListeElemente) {
-            console.log(tracesListeElemente);
-            tracesListeElemente.sort(function (a, b) {
-                if (a.name < b.name)
-                    return -1;
-                if (a.name > b.name)
-                    return 1;
-                return 0;
-            });
-            //console.log("2:" + tracesListeElemente[0].data[0]);
-            //console.log(tracesListeElemente[0].data.length);
-            //this.tracesListeElemente = tracesListeElemente[0].data;
-            _this.tracesListeElemente = tracesListeElemente;
-            //this.formatTracesListeElements(tracesListeElemente);
-        });
+        this.getTables();
+        this.reloadLists();
         this.tischplanService.getInformationElements()
             .subscribe(function (informationElemente) {
             if (informationElemente === null) {
@@ -3201,6 +3137,99 @@ var TischplanComponent = (function () {
         setTimeout(function () {
             _this.departmentsComponent.occupy(_this.umsetzenInfoVar.tableToMove, _this.umsetzenInfoVar.indexQuell);
         }, 2000);
+    };
+    TischplanComponent.prototype.reloadLists = function () {
+        var _this = this;
+        this.tischplanService.getImHausListe()
+            .subscribe(function (imHausListeElemente) {
+            //console.log('IM-HAUS-LISTE before:');
+            //console.log(imHausListeElemente);
+            imHausListeElemente.sort(function (a, b) {
+                if (a.name < b.name)
+                    return -1;
+                if (a.name > b.name)
+                    return 1;
+                return 0;
+            });
+            _this.imHausListeElemente = imHausListeElemente;
+            console.log('IM-HAUS-LISTE:');
+            console.log(_this.imHausListeElemente);
+        });
+        this.tischplanService.getAnreiseListe()
+            .subscribe(function (anreiseListeElemente) {
+            anreiseListeElemente.sort(function (a, b) {
+                if (a.name < b.name)
+                    return -1;
+                if (a.name > b.name)
+                    return 1;
+                return 0;
+            });
+            _this.anreiseListeElemente = anreiseListeElemente;
+            console.log(_this.anreiseListeElemente);
+        });
+        this.tischplanService.getTracesListe()
+            .subscribe(function (tracesListeElemente) {
+            console.log(tracesListeElemente);
+            tracesListeElemente.sort(function (a, b) {
+                if (a.name < b.name)
+                    return -1;
+                if (a.name > b.name)
+                    return 1;
+                return 0;
+            });
+            //console.log("2:" + tracesListeElemente[0].data[0]);
+            //console.log(tracesListeElemente[0].data.length);
+            //this.tracesListeElemente = tracesListeElemente[0].data;
+            _this.tracesListeElemente = tracesListeElemente;
+            //this.formatTracesListeElements(tracesListeElemente);
+        });
+    };
+    TischplanComponent.prototype.updateAzList = function () {
+        var _this = this;
+        this.getTables();
+        setTimeout(function () {
+            _this.printComponent.formatAzListe(_this.tables);
+        }, 2000);
+    };
+    TischplanComponent.prototype.getTables = function () {
+        var _this = this;
+        this.tischplanService.getTables()
+            .subscribe(function (tables) {
+            console.log("TABLES LENGTH: " + tables.length);
+            if (tables === null) {
+                return;
+            }
+            else {
+                for (var a = 0; a < tables.length; a++) {
+                    if (tables[a].department === "Bauernstube") {
+                        _this.tablesBauernstube = tables[a].tables;
+                    }
+                    else if (tables[a].department === "edelweissKaminStube") {
+                        _this.tablesEdelweissKaminStube = tables[a].tables;
+                        console.log('Test' + JSON.stringify(_this.tablesEdelweissKaminStube));
+                    }
+                    else if (tables[a].department === "berglerStubeHubertusStube") {
+                        _this.tablesBerglerStubeHubertusStube = tables[a].tables;
+                    }
+                    else if (tables[a].department === "waeldlerStubeKristallStube") {
+                        _this.tablesWaeldlerStubeKristallStube = tables[a].tables;
+                    }
+                    else if (tables[a].department === "teestubeTeelounge") {
+                        _this.tablesTeestubeTeelounge = tables[a].tables;
+                    }
+                }
+            }
+            console.log(_this.tablesBauernstube);
+            console.log(_this.tablesEdelweissKaminStube);
+            console.log(_this.tablesBerglerStubeHubertusStube);
+            console.log(_this.tablesWaeldlerStubeKristallStube);
+            console.log(_this.tablesTeestubeTeelounge);
+            _this.tablesTempAbreise = tables;
+            _this.tables = _this.tables.concat(_this.tablesBauernstube).concat(_this.tablesTeestubeTeelounge).concat(_this.tablesBerglerStubeHubertusStube).concat(_this.tablesEdelweissKaminStube).concat(_this.tablesWaeldlerStubeKristallStube);
+            _this.changeBgColorIfAnreise(tables);
+            _this.printComponent.formatAzListe(_this.tables);
+            //this.dispenseIfAbreise(tables);
+        });
     };
     return TischplanComponent;
 }());

@@ -27,6 +27,8 @@ export class NavigationComponent implements OnInit {
   quellTisch: any;
   zielTisch: any;
   tableInformation: any[] = [];
+  @Output()
+  reloadLists:EventEmitter<any> = new EventEmitter();
 
   constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService) { }
 
@@ -202,6 +204,10 @@ export class NavigationComponent implements OnInit {
       // 2nd parameter is optional. You can pass object with options.
       this._flashMessagesService.show('Erfolgreich CSV Datei hochgeladen', {cssClass: 'alert-success', timeout: 10000}))
       .subscribe(files => console.log('files', files));
+    setTimeout(() => {
+      this.reloadLists.emit();
+    }, 3000);
+
 
   }
 
