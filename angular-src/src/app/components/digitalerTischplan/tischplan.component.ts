@@ -290,11 +290,11 @@ export class TischplanComponent {
   delete(informationElement, j, event) {
     this.navigationComponent.delete(informationElement, j, event);
   }
-/*
+
   changeBgColorIfAnreise(tables) {
     this.departmentsComponent.changeBgColorIfAnreise(tables);
   }
-  */
+
   abreisenRemoval() {
     this.departmentsComponent.occupy(this.abreiseTablePlusIndex.abreisenExport, this.abreiseTablePlusIndex.b);
   }
@@ -396,7 +396,7 @@ export class TischplanComponent {
         this.tablesTempAbreise = tables;
 
         this.tables = this.tablesBauernstube.concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube);
-        //this.changeBgColorIfAnreise(tables);
+        this.changeBgColorIfAnreise(tables);
         this.printComponent.formatAzListe(this.tables);
         //this.dispenseIfAbreise(tables);
 

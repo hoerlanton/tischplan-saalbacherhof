@@ -295,9 +295,9 @@ export class NavigationComponent implements OnInit {
           }
         }
         // note parts[1]-1
-        //console.log('parts[2]' + parts[2] + 'parts[1]' + (parts[1] - 1) + 'parts[0]' + parts[0]);
+        // console.log('parts[2]' + parts[2] + 'parts[1]' + (parts[1] - 1) + 'parts[0]' + parts[0]);
         // Mon May 31 2010 00:00:00
-        //this.tablesRestaurant[j].anreiseValue
+        // this.tablesRestaurant[j].anreiseValue
         let dateToday = String(this.dateTodayGenerated).substring(0, 15);
         console.log('Parsed Date --->: ' + this.parsedDate[0]);
         console.log('this.dateGenerated --->: ' + dateToday);
