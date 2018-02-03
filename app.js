@@ -9,9 +9,13 @@ const   bodyParser = require('body-parser'),
     request = require('request'),
     http = require('http'),
     fs = require("fs"),
-    config = require('config');
-
-const csv=require('csvtojson');
+    config = require('config'),
+    cors = require('cors'),
+    csv = require('csvtojson'),
+    passport = require('passport'),
+    mongoose = require('mongoose'),
+    configDatabase = require('./config/database'),
+    users = require('./routes/users');
 
 //Bodyparser middleware
 app.use(bodyParser.urlencoded({ extended: false}));
@@ -23,8 +27,12 @@ app.use(bodyParser.json());
 //Setting port
 app.set('port', process.env.PORT || 8000);
 
+// CORS Middleware
+app.use(cors());
+
+
 //Set Public folder as static folder
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // le dice a express que el directorio 'uploads', es estatico.
 app.use("/uploads", express.static(path.join(__dirname, 'uploads')));
@@ -49,6 +57,31 @@ let storage = multer.diskStorage({
 
 let upload = multer({ storage: storage });
 let csvDatei = "";
+
+// Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+require('./config/passport')(passport);
+
+
+// Connect To Database
+mongoose.connect(configDatabase.database, { useMongoClient: true });
+
+// On Connection
+mongoose.connection.once('open', () => {
+    console.log('Connected to database '+configDatabase.database);
+});
+
+// On Error
+mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+});
+
+//app.use('/users', users);
+
 
 //source: https://gist.github.com/aitoribanez/8b2d38601f6916139f5754aae5bcc15f
 //New file got attached to message

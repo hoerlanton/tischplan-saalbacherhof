@@ -11,17 +11,18 @@
 <div id="charge-error" class="alert alert-danger <% if ( !errMsg ) { %> hidden <% } %>">
   <%= errMsg  %>
 </div>
+<app-navigation [newInformationElements]="newInformationElements"
+                [tablesOccupied]="tablesOccupied"
+                (getTablesOccupied)="tablesOccupied = $event"
+                (umsetzenExport)="umsetzenInfoVar = $event; umsetzen($event)"
+                [tablesTempAbreise]="tablesTempAbreise"
+                (abreisenExport)="abreiseTablePlusIndex = $event; abreisenRemoval($event)"
+                (termExport)="term = $event"
+                (reloadLists)="reloadLists($event)">
+</app-navigation>
 <div class="row">
   <div class="container-fluid">
-    <app-navigation [newInformationElements]="newInformationElements"
-                    [tablesOccupied]="tablesOccupied"
-                    (getTablesOccupied)="tablesOccupied = $event"
-                    (umsetzenExport)="umsetzenInfoVar = $event; umsetzen($event)"
-                    [tablesTempAbreise]="tablesTempAbreise"
-                    (abreisenExport)="abreiseTablePlusIndex = $event; abreisenRemoval($event)"
-                    (termExport)="term = $event"
-                    (reloadLists)="reloadLists($event)">
-    </app-navigation><flash-messages></flash-messages>
+   <flash-messages></flash-messages>
     <div class="col-xs-12 col-sm-8 col-lg-6 print-col">
       <app-departmentmenu
         [buttonBgColor1]="buttonBgColor1"
@@ -143,6 +144,7 @@
                                (infoAddedTeestubeTeelounge)="tablesTeestubeTeelounge=$event"
                                (infoAddedWaeldlerStubeKristallStube)="tablesWaeldlerStubeKristallStube=$event"
                                [term]="term"
+                               [tablesTempAbreise]="tablesTempAbreise"
                                 [showAlleBool]="showAlleBool"
                                 (updateAzList)="updateAzList($event)">
               </app-departments>

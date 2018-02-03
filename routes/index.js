@@ -3,6 +3,10 @@ const   express = require('express'),
     bodyParser = require('body-parser'),
     mongojs = require('mongojs'),
     cors = require('cors'),
+    passport = require('passport'),
+    jwt = require('jsonwebtoken'),
+    config = require('../config/database'),
+    User = require('../models/user'),
     db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['hubertusTracesListe', 'hubertusAnreiseListe', 'hubertusImHausListe', 'hubertusTables', 'newInformationHubertus', 'newNotizHubertusDb']),
     moveTablesBauernstube = require('./moveTablesBauernstube.js'),
     moveTablesBerglerStubeHubertusStube = require('./moveTablesBerglerStubeHubertusStube.js'),
@@ -15,7 +19,8 @@ const   express = require('express'),
     information = require('./information.js'),
     placeholder = require('./placeholder.js'),
     table = require('./table.js'),
-    notiz = require('./notiz.js');
+    notiz = require('./notiz.js'),
+    users = require('./users.js');
 
 
 //Bodyparser middleware
@@ -94,5 +99,13 @@ notiz.getNotiz(req, res, db)});
 //newNotiz
 router.post('/newNotiz', function(req, res, next) {
 notiz.newNotiz(req, res, db)});
-
+//GetInformation Employees
+router.post('/authenticate', function(req, res, next) {
+users.authenticate(req, res, db)});
+//GetInformation Employees
+router.post('/register', function(req, res, next) {
+users.register(req, res, db)});
+//GetInformation Employees
+router.get('/profile', passport.authenticate('jwt', {session:false}), function(req, res, next) {
+users.profile(req, res, db)});
 module.exports = router;

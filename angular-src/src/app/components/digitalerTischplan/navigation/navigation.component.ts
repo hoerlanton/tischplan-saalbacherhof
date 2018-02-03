@@ -2,6 +2,8 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angu
 import { TischplanService } from '../../../services/tischplan.service';
 import { Http } from '@angular/http';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { AuthService } from '../../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -30,7 +32,7 @@ export class NavigationComponent implements OnInit {
   @Output()
   reloadLists:EventEmitter<any> = new EventEmitter();
 
-  constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService) { }
+  constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -305,6 +307,16 @@ export class NavigationComponent implements OnInit {
         }
       }
     }
+  }
+
+  onLogoutClick() {
+    this.authService.logout();
+    //this._flashMessagesService.show('You are logged out', {
+    //  cssClass: 'alert-success',
+    //  timeout: 3000
+    //});
+    this.router.navigate(['/login']);
+    return false;
   }
 
 }

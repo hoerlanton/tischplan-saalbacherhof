@@ -2,23 +2,22 @@
   max-width: 100%;
   background-color: #0d2f2e;
   border-radius: 0px;
-  max-height: 80px;
-  display: -webkit-box;
+  max-height: 120px;
+  display: block;
 }
 
 .container {
-  max-height: 80px;
-  display: -webkit-box;
+  max-height: 120px;
+  display: block;
   padding: 0;
   margin: 0
 }
 
 .navbar-nav {
-  max-width: 100%;
+  max-width: 35%;
   margin-left: 10px;
-  max-height:  80px;
-  display: -webkit-box;
-  min-width: 25%;
+  max-height:  40px;
+  display: -webkit-inline-box;
 }
 
 .brand {
@@ -38,6 +37,8 @@
   min-width: 30px;
   text-align: center;
   margin-top: 12px;
+  margin-left: 48px;
+  max-width: 50px;
 }
 
 .TischH3 {
@@ -50,9 +51,7 @@
 .dropdown-toggle {
   background-color: #0a7a74;
   color: #FFFFFF;
-
 }
-
 
 .dropdown-menu {
   overflow: auto;
@@ -72,6 +71,10 @@
   color: #0a7a74;
 }
 
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border: none;
+}
+
 .btn-send {
   background-color: #0a7a74;
   float: right;
@@ -89,7 +92,6 @@ h6 {
   max-width: 50%;
 }
 
-
 .btn-default {
   background-color: #0a7a74;
   color: #FFFFFF;
@@ -105,7 +107,6 @@ h6 {
   color: #FFFFFF;
 }
 
-
 .btn-primary {
   background-color: #0a7a74;
   color: #FFFFFF;
@@ -118,6 +119,16 @@ h6 {
   color: #FFFFFF;
   margin-left: 20px;
   border: none;
+}
+
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+  background-color: #1f5452;
+  color: #FFFFFF;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  background-color: #0a7a74;
+  color: #FFFFFF;
 }
 
 .btn-group {
@@ -135,10 +146,11 @@ h6 {
 }
 
 .navbar-left {
-  margin-top: 0px;
+  margin-top: 40px;
   max-width: 100%;
   display: -webkit-inline-box;
   float: right;
+  border: none;
 }
 
 .form-group {
@@ -152,7 +164,7 @@ h6 {
   color: #FFFFFF;
   border: none;
   opacity: 80;
-  width: 90%;
+  width: 110%;
   margin: 0px 0px 0px 0px;
 }
 
@@ -160,10 +172,15 @@ h6 {
   background-color: #0a7a74;
   color: #FFFFFF;
   border: none;
+  float: right;
+  margin-top: -39px;
+  margin-right: 20px;
+  min-width: 30px;
+  min-height: 30px;
 }
 
 .Partner {
-  height: 40px;
+  height: 45px;
   width: auto;
   margin-top: 4px;
   margin-bottom: 5px;
@@ -178,20 +195,68 @@ h6 {
   margin-bottom: 30px;
 }
 
-.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
-  background-color: #1f5452;
-  color: #FFFFFF;
+@media (max-width: 500px) {
+
+  .navbar-left {
+    margin-top: 0px;
+    display: block;
+  }
 }
 
-.btn-primary.focus, .btn-primary:focus {
-  background-color: #0a7a74;
-  color: #FFFFFF;
+@media (min-width: 766px ) and  (max-width: 774px) {
+  .navbar-right {
+    margin-top: -23px;
+  }
+
+  .search-btn-default {
+    margin-top: 0px;
+    margin-left: 40px;
+    min-width: 30px;
+    min-height: 30px;
+  }
 }
 
+@media (min-width: 500px ) and  (max-width: 774px) {
+  .navbar-fixed-top {
+    display: block;
+    max-height: 56px;
+  }
+  .container {
+    display: flex;
+    width: auto;
+    max-height: 55px;
+  }
+  .navbar-nav {
+    margin-top: 0;
+    max-width: 79%;
+    display: inline-flex;
+    max-height: 50px;
+  }
+  .navbar-right{
+    display: inline-flex;
+    max-width: 79%;
+    margin-top: -32px;
+    margin-right: 10px;
 
-@media (min-width: 700px) {
+  }
+  .navbar-left{
+    display: inline-flex;
+    margin-top: 31px;
+  }
+  .form-group {
+    display: inline-flex;
+  }
+  .form-control{
+    width: 110%;
+  }
+  .search-btn-default {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 775px) {
   .Partner {
-    display: inline-block;
+    display: none;
     max-width: 100%;
     float: right;
   }
@@ -203,10 +268,12 @@ h6 {
 
   .navbar-right {
     max-width: 100%;
+    margin-right: 10px;
   }
 
   .container {
     display: block;
+    width: auto;
   }
 
   .navbar-fixed-top {
@@ -228,16 +295,26 @@ h6 {
 
   .navbar-left {
     display: block;
-    margin-top: 10px;
+    margin-top: 11px;
   }
 
   .search-btn-default {
     float: right;
+    margin-top: 0px;
   }
+
+  .TischDiv{
+    margin-left: 35px;
+  }
+  .navbar-nav {
+    max-width: 300px;
+    min-width: 300px;
+  }
+
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
   .btn-default {
     display: block;
   }
@@ -264,7 +341,7 @@ h6 {
 
   .navbar-nav {
     display: block;
-    min-width: 25%;
+    min-width: 36%;
   }
 
   .container {
@@ -273,7 +350,7 @@ h6 {
   }
 
   .navbar-right {
-    max-width: 100%;
+    max-width: 65%;
     min-width: 50%;
   }
   .form-group {
@@ -288,10 +365,21 @@ h6 {
     color: #FFFFFF;
     border: none;
     opacity: 80;
-    width: 130%;
+    width: 135px;
     margin: 0px 0px 0px 0px;
   }
 
+  .TischDiv{
+    margin-left: 0px;
+  }
+}
 
+
+@media (min-width: 1650px) {
+  .Partner {
+    display: inline-block;
+    max-width: 100%;
+    float: right;
+  }
 }
 

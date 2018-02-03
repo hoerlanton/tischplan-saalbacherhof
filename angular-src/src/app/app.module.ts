@@ -25,10 +25,48 @@ import { EdelweissKaminStubeComponent } from './components/digitalerTischplan/de
 import { TeestubeTeeloungeComponent } from './components/digitalerTischplan/departments/teestube-teelounge/teestube-teelounge.component';
 import { AlleComponent } from './components/digitalerTischplan/departments/alle/alle.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './components/digitalerTischplan/login/login.component';
+import { RegisterComponent } from './components/digitalerTischplan/register/register.component';
+import { HomeComponent } from './components/digitalerTischplan/home/home.component';
+import { ProfileComponent } from './components/digitalerTischplan/profile/profile.component';
+
+import { AuthGuard } from './guards/auth.guard';
+import { ValidateService } from './services/validate.service';
+import { AuthService } from './services/auth.service';
+
+
+const appRoutes: Routes =  [
+  {path: '', component: LoginComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'dashboard', component: TischplanComponent, canActivate: [AuthGuard]},
+  {path: 'register', component: RegisterComponent},
+  {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]}
+];
+
 
 @NgModule({
   declarations: [
-    AppComponent, TischplanComponent, TracesListeComponent, ImHausListeComponent, AnreiseListeComponent, TableplanComponent, NavigationComponent, PrintComponent, FormComponent, DepartmentsComponent, DepartmentmenuComponent, BauernstubeComponent, BerglerStubeHubertusStubeComponent, WaeldlerStubeKristallStubeComponent, EdelweissKaminStubeComponent, TeestubeTeeloungeComponent, AlleComponent
+    AppComponent,
+    TischplanComponent,
+    TracesListeComponent,
+    ImHausListeComponent,
+    AnreiseListeComponent,
+    TableplanComponent,
+    NavigationComponent,
+    PrintComponent,
+    FormComponent,
+    DepartmentsComponent,
+    DepartmentmenuComponent,
+    BauernstubeComponent,
+    BerglerStubeHubertusStubeComponent,
+    WaeldlerStubeKristallStubeComponent,
+    EdelweissKaminStubeComponent,
+    TeestubeTeeloungeComponent,
+    AlleComponent,
+    LoginComponent,
+    RegisterComponent,
+    ProfileComponent
   ],
   imports: [
     FormsModule,
@@ -38,9 +76,10 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     ReactiveFormsModule,
     BrowserModule,
     BsDropdownModule.forRoot(),
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ValidateService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
