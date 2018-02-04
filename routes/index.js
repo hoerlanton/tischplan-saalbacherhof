@@ -8,11 +8,6 @@ const   express = require('express'),
     config = require('../config/database'),
     User = require('../models/user'),
     db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['hubertusTracesListe', 'hubertusAnreiseListe', 'hubertusImHausListe', 'hubertusTables', 'newInformationHubertus', 'newNotizHubertusDb']),
-    moveTablesBauernstube = require('./moveTablesBauernstube.js'),
-    moveTablesBerglerStubeHubertusStube = require('./moveTablesBerglerStubeHubertusStube.js'),
-    moveTablesEdelweissKaminStube = require('./moveTablesEdelweissKaminStube.js'),
-    moveTablesTeestubeTeelounge = require('./moveTablesTeestubeTeelounge.js'),
-    moveTablesWaeldlerStubeKristallStube = require('./moveTablesWaeldlerStubeKristallStube.js'),
     anreiseliste = require('./anreiseListe.js'),
     imHausListe = require('./imHausListe.js'),
     traceListe = require('./traceListe.js'),
@@ -81,9 +76,12 @@ placeholder.addPlaceholder(req, res, db)});
 //Get Tables
 router.get('/tables', function(req, res, next) {
 table.getTable(req, res, db)});
-//moveTable
-router.post('/moveTable', function(req, res, next) {
-table.moveTable(req, res, db)});
+//addTable
+router.post('/addTable', function(req, res, next) {
+table.addTable(req, res, db)});
+//removeTable
+router.post('/removeTable', function(req, res, next) {
+table.removeTable(req, res, db)});
 //occupyTable
 router.post('/occupyTable', function(req, res, next) {
 table.occupyTable(req, res, db)});

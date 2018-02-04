@@ -3,8 +3,7 @@
  */
 
 module.exports = {
-    moveTable: function (db, tableNumber, departmentValue, topValue, leftValue, height, width) {
-
+    addTable: function (db, tableNumber, departmentValue, topValue, leftValue, height, width) {
         if (tableNumber === '1' && topValue === '510' && leftValue === '160' && height === '65') {
             db.hubertusTables.update(
                 {
@@ -144,148 +143,6 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '1' && topValue === '140' && leftValue === '160' && height === '325') {
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                    "tables.number": tableNumber
-                },
-                {
-                    $set: {
-                        "tables.$.height": "65",
-                        "tables.$.topValue": "510",
-                    }
-                }, function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("moveTable Update successful");
-                });
-
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                }, {
-                    $push: {
-                        tables: {
-                            $each: [{
-                                "arrayIndex": 4,
-                                "department": "teestubeTeelounge",
-                                "number": "5",
-                                "topValue": "140",
-                                "leftValue": "160",
-                                "bgColor": "#ffffff",
-                                "isBesetzt": "false",
-                                "placeholder": "true",
-                                "border": "solid 3px #f3efe4",
-                                "width": "85",
-                                "height": "65"
-                            }],
-                            $sort: {number: 1}
-                        }
-                    }
-                },
-                {multi: true},
-                function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("addTable Update successful");
-                });
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                }, {
-                    $push: {
-                        tables: {
-                            $each: [{
-                                "arrayIndex": 3,
-                                "department": "teestubeTeelounge",
-                                "number": "4",
-                                "topValue": "225",
-                                "leftValue": "160",
-                                "bgColor": "#ffffff",
-                                "isBesetzt": "false",
-                                "placeholder": "true",
-                                "border": "solid 3px #f3efe4",
-                                "width": "85",
-                                "height": "65"
-                            }],
-                            $sort: {number: 1}
-                        }
-                    }
-                },
-                {multi: true},
-                function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("addTable Update successful");
-                });
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                }, {
-                    $push: {
-                        tables: {
-                            $each: [{
-                                "arrayIndex": 2,
-                                "department": "teestubeTeelounge",
-                                "number": "3",
-                                "topValue": "325",
-                                "leftValue": "160",
-                                "bgColor": "#ffffff",
-                                "isBesetzt": "false",
-                                "placeholder": "true",
-                                "border": "solid 3px #f3efe4",
-                                "width": "85",
-                                "height": "65"
-                            }],
-                            $sort: {number: 1}
-                        }
-                    }
-                },
-                {multi: true},
-                function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("addTable Update successful");
-                });
-
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                }, {
-                    $push: {
-                        tables: {
-                            $each: [{
-                                "arrayIndex": 1,
-                                "department": "teestubeTeelounge",
-                                "number": "2",
-                                "topValue": "420",
-                                "leftValue": "160",
-                                "bgColor": "#ffffff",
-                                "isBesetzt": "false",
-                                "placeholder": "true",
-                                "border": "solid 3px #f3efe4",
-                                "width": "85",
-                                "height": "65"
-                            }],
-                            $sort: {number: 1}
-                        }
-                    }
-                },
-                {multi: true},
-                function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("addTable Update successful");
-                });
-
-            //2
-
         } else if (tableNumber === '2' && topValue === '420' && leftValue === '160' && height === '65') {
             db.hubertusTables.update(
                 {
@@ -390,116 +247,6 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '2' && topValue === '140' && leftValue === '160' && height === '260') {
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                    "tables.number": tableNumber
-                },
-                {
-                    $set: {
-                        "tables.$.height": "65",
-                        "tables.$.topValue": "420",
-                    }
-                }, function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("moveTable Update successful");
-                });
-
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                }, {
-                    $push: {
-                        tables: {
-                            $each: [{
-                                "arrayIndex": 4,
-                                "department": "teestubeTeelounge",
-                                "number": "5",
-                                "topValue": "140",
-                                "leftValue": "160",
-                                "bgColor": "#ffffff",
-                                "isBesetzt": "false",
-                                "placeholder": "true",
-                                "border": "solid 3px #f3efe4",
-                                "width": "85",
-                                "height": "65"
-                            }],
-                            $sort: {number: 1}
-                        }
-                    }
-                },
-                {multi: true},
-                function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("addTable Update successful");
-                });
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                }, {
-                    $push: {
-                        tables: {
-                            $each: [{
-                                "arrayIndex": 3,
-                                "department": "teestubeTeelounge",
-                                "number": "4",
-                                "topValue": "225",
-                                "leftValue": "160",
-                                "bgColor": "#ffffff",
-                                "isBesetzt": "false",
-                                "placeholder": "true",
-                                "border": "solid 3px #f3efe4",
-                                "width": "85",
-                                "height": "65"
-                            }],
-                            $sort: {number: 1}
-                        }
-                    }
-                },
-                {multi: true},
-                function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("addTable Update successful");
-                });
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                }, {
-                    $push: {
-                        tables: {
-                            $each: [{
-                                "arrayIndex": 2,
-                                "department": "teestubeTeelounge",
-                                "number": "3",
-                                "topValue": "325",
-                                "leftValue": "160",
-                                "bgColor": "#ffffff",
-                                "isBesetzt": "false",
-                                "placeholder": "true",
-                                "border": "solid 3px #f3efe4",
-                                "width": "85",
-                                "height": "65"
-                            }],
-                            $sort: {number: 1}
-                        }
-                    }
-                },
-                {multi: true},
-                function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("addTable Update successful");
-                });
-
-
         } else if (tableNumber === '3' && topValue === '325' && leftValue === '160' && height === '65') {
             db.hubertusTables.update(
                 {
@@ -587,70 +334,6 @@ module.exports = {
                     }
                     console.log("moveTable Update successful");
                 });
-
-
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                }, {
-                    $push: {
-                        tables: {
-                            $each: [{
-                                "arrayIndex": 4,
-                                "department": "teestubeTeelounge",
-                                "number": "5",
-                                "topValue": "140",
-                                "leftValue": "160",
-                                "bgColor": "#ffffff",
-                                "isBesetzt": "false",
-                                "placeholder": "true",
-                                "border": "solid 3px #f3efe4",
-                                "width": "85",
-                                "height": "65"
-                            }],
-                            $sort: {number: 1}
-                        }
-                    }
-                },
-                {multi: true},
-                function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("addTable Update successful");
-                });
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                }, {
-                    $push: {
-                        tables: {
-                            $each: [{
-                                "arrayIndex": 3,
-                                "department": "teestubeTeelounge",
-                                "number": "4",
-                                "topValue": "225",
-                                "leftValue": "160",
-                                "bgColor": "#ffffff",
-                                "isBesetzt": "false",
-                                "placeholder": "true",
-                                "border": "solid 3px #f3efe4",
-                                "width": "85",
-                                "height": "65"
-                            }],
-                            $sort: {number: 1}
-                        }
-                    }
-                },
-                {multi: true},
-                function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("addTable Update successful");
-                });
-
-
         } else if (tableNumber === '4' && topValue === '225' && leftValue === '160' && height === '65') {
             db.hubertusTables.update(
                 {
@@ -685,8 +368,7 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-
-        } else if (tableNumber === '4' && topValue === '140' && leftValue === '160' && height === '130') {
+        } else if (tableNumber === '86' && topValue === '85' && leftValue === '250' && width === '40') {
             db.hubertusTables.update(
                 {
                     department: departmentValue,
@@ -694,9 +376,8 @@ module.exports = {
                 },
                 {
                     $set: {
-                        "tables.$.height": "65",
-                        "tables.$.topValue": "225",
-
+                        "tables.$.width": "120",
+                        "tables.$.leftValue": "280",
                     }
                 }, function (err, tables) {
                     if (err) {
@@ -704,37 +385,56 @@ module.exports = {
                     }
                     console.log("moveTable Update successful");
                 });
-
-
             db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                }, {
-                    $push: {
+                {}, {
+                    $pull: {
                         tables: {
-                            $each: [{
-                                "arrayIndex": 4,
-                                "department": "teestubeTeelounge",
-                                "number": "5",
-                                "topValue": "140",
-                                "leftValue": "160",
-                                "bgColor": "#ffffff",
-                                "isBesetzt": "false",
-                                "placeholder": "true",
-                                "border": "solid 3px #f3efe4",
-                                "width": "85",
-                                "height": "65"
-                            }],
-                            $sort: {number: 1}
+                            "number": "90",
                         }
                     }
                 },
-                {multi: true},
-                function (err, tables) {
+                {
+                    multi: true
+                }, function (err, tables) {
                     if (err) {
                         console.log("Error");
                     }
-                    console.log("addTable Update successful");
+                    console.log("removeTable Update successful");
+                    console.log(tables);
+                });
+        } else if (tableNumber === '70' && topValue === '330' && leftValue === '458' && width === '40') {
+            db.hubertusTables.update(
+                {
+                    department: departmentValue,
+                    "tables.number": tableNumber
+                },
+                {
+                    $set: {
+                        "tables.$.width": "80",
+                        "tables.$.leftValue": "500",
+                    }
+                }, function (err, tables) {
+                    if (err) {
+                        console.log("Error");
+                    }
+                    console.log("moveTable Update successful");
+                });
+            db.hubertusTables.update(
+                {}, {
+                    $pull: {
+                        tables: {
+                            "number": "71",
+                        }
+                    }
+                },
+                {
+                    multi: true
+                }, function (err, tables) {
+                    if (err) {
+                        console.log("Error");
+                    }
+                    console.log("removeTable Update successful");
+                    console.log(tables);
                 });
         }
     }

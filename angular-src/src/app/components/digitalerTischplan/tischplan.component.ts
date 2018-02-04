@@ -279,9 +279,11 @@ export class TischplanComponent {
     this.departmentmenuComponent.showTeestube();
   }
 
+  /*
   moveTable(table, j) {
     this.tableplanComponent.moveTable(table, j);
   }
+  */
 
   sendInformation(event) {
     this.formComponent.sendInformation(event);

@@ -41,10 +41,17 @@ export class TischplanService {
       .map(res => res.json());
   }
 
-  moveTable(dataString) {
+  addTable(dataString) {
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('moveTable', dataString, {headers: headers})
+    return this.http.post('addTable', dataString, {headers: headers})
+      .map(res => res.json());
+  }
+
+  removeTable(dataString) {
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('removeTable', dataString, {headers: headers})
       .map(res => res.json());
   }
 

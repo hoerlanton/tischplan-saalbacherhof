@@ -1,6 +1,6 @@
 <div *ngIf="showTablePlanBool">
   <div id="printSectionId2" class="col-xs-12 printTwo">
-    <div class="row" style=" border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;" >
+    <div class="row" style=" border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;">
       <div *ngIf="showBerglerBool">
         <div *ngFor="let tableBerglerStubeHubertusStube of tablesBerglerStubeHubertusStube; let j = index;">
           <div dropdownToggle type="button" class="t{{tableBerglerStubeHubertusStube.number}} table-item" [ngStyle]="{'top': tableBerglerStubeHubertusStube.topValue + 'px', 'left': tableBerglerStubeHubertusStube.leftValue + 'px', 'background-color': + tableBerglerStubeHubertusStube.bgColor, 'height': + tableBerglerStubeHubertusStube.height + 'px', 'width': + tableBerglerStubeHubertusStube.width + 'px', 'border': + tableBerglerStubeHubertusStube.border}" [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].trace, tablesBerglerStubeHubertusStube[j].trace2, tablesBerglerStubeHubertusStube[j].trace3, tablesBerglerStubeHubertusStube[j].trace4, tablesBerglerStubeHubertusStube[j].trace5, tablesBerglerStubeHubertusStube[j].trace6, tablesBerglerStubeHubertusStube[j].trace7, tablesBerglerStubeHubertusStube[j].trace8, tablesBerglerStubeHubertusStube[j].trace9, tablesBerglerStubeHubertusStube[j].trace10, tablesBerglerStubeHubertusStube[j].trace11, tablesBerglerStubeHubertusStube[j].trace12, tablesBerglerStubeHubertusStube[j].trace13, tablesBerglerStubeHubertusStube[j].trace14, tablesBerglerStubeHubertusStube[j].trace15, tablesBerglerStubeHubertusStube[j].newTraceText)" dropdown>
@@ -8,8 +8,15 @@
               <p><b>{{tableBerglerStubeHubertusStube.number}} | {{tableBerglerStubeHubertusStube.personenAnzahlValue}} {{tableBerglerStubeHubertusStube.personenAnzahlValue2}} {{tableBerglerStubeHubertusStube.personenAnzahlValue3}} {{tableBerglerStubeHubertusStube.personenAnzahlValue4}} {{tableBerglerStubeHubertusStube.personenAnzahlValue5}} {{tableBerglerStubeHubertusStube.personenAnzahlValue6}} {{tableBerglerStubeHubertusStube.personenAnzahlValue7}} {{tableBerglerStubeHubertusStube.personenAnzahlValue8}} {{tableBerglerStubeHubertusStube.personenAnzahlValue9}} {{tableBerglerStubeHubertusStube.personenAnzahlValue10}} {{tableBerglerStubeHubertusStube.personenAnzahlValue11}} {{tableBerglerStubeHubertusStube.personenAnzahlValue12}} {{tableBerglerStubeHubertusStube.personenAnzahlValue13}} {{tableBerglerStubeHubertusStube.personenAnzahlValue14}} {{tableBerglerStubeHubertusStube.personenAnzahlValue15}}</b></p>
             </div>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px" class="dropdowndropdown" dropdown><b>Infos anzeigen</b>
+              <div dropdownToggle type="button" style="background-color: red; color: white; padding: 10px;"  (click)="none($event)" class="dropdownMoveTable" dropdown><b>Tisch verschieben</b>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
+                  <li class="dropdown-item" (click)="addTable(tableBerglerStubeHubertusStube, j)" style="color: black"><b>Tisch hinzufügen</b></li>
+                  <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
+                  <li class="dropdown-item" (click)="removeTable(tableBerglerStubeHubertusStube, j)" style="color: black"><b>Tisch entfernen</b></li>
+                </div>
+              </div>
+              <li class="divider dropdown-divider" style="padding: 0 0 0 0; margin: 0;"></li>
+              <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px" class="dropdownShowinfo" dropdown><b>Infos anzeigen</b>
                   <div *ngIf="tableBerglerStubeHubertusStube.nameValue">
                     <div class="dropdown-item"><b>Name:</b> {{tableBerglerStubeHubertusStube.nameValue}}<br><b>Sprache:</b> {{tableBerglerStubeHubertusStube.spracheValue}}<br><b>Zimmer Nummer: </b>{{tableBerglerStubeHubertusStube.zimmernummerValue}}<br><b>Preistyp: </b>{{tableBerglerStubeHubertusStube.preistypValue}}<br><b>Anreise: </b>{{tableBerglerStubeHubertusStube.anreiseValue}}<br><b>Abreise:</b> {{tableBerglerStubeHubertusStube.abreiseValue}}<br><b>Personen Anzahl:</b>{{tableBerglerStubeHubertusStube.personenAnzahlValue}}<br><b>Reisebüro: </b>{{tableBerglerStubeHubertusStube.rbsouValue}}<br><b>Notiz2:</b> {{tableBerglerStubeHubertusStube.notiz2Value}}<b>Trace:</b> {{tableBerglerStubeHubertusStube.trace}}</div>
                     <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
@@ -70,10 +77,7 @@
                     <div class="dropdown-item"><b>Name:</b> {{tableBerglerStubeHubertusStube.nameValue15}}<br><b>Sprache:</b> {{tableBerglerStubeHubertusStube.spracheValue15}}<br><b>Zimmer Nummer: </b>{{tableBerglerStubeHubertusStube.zimmernummerValue15}}<br><b>Preistyp: </b>{{tableBerglerStubeHubertusStube.preistypValue15}}<br><b>Anreise: </b>{{tableBerglerStubeHubertusStube.anreiseValue15}}<br><b>Abreise:</b> {{tableBerglerStubeHubertusStube.abreiseValue15}}<br><b>Personen Anzahl:</b>{{tableBerglerStubeHubertusStube.personenAnzahlValue15}}<br><b>Reisebüro: </b>{{tableBerglerStubeHubertusStube.rbsouValue15}}<br><b>Notiz2:</b> {{tableBerglerStubeHubertusStube.notiz2Value15}}<b>Trace:</b> {{tableBerglerStubeHubertusStube.trace15}}</div>
                     <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
                   </div>
-                </div>
               </div>
-              <li class="divider dropdown-divider" style="padding: 0 0 0 0; margin: 0;"></li>
-              <li class="dropdown-item" style="background-color: red; color: white; padding: 10px;" (click)="moveTable(tableBerglerStubeHubertusStube, j)"><b>Tisch verschieben</b></li>
             </div>
           </div>
         </div>
@@ -83,8 +87,15 @@
           <div dropdownToggle type="button" class="t{{tableBauernstube.number}} table-item" [ngStyle]="{'top': tableBauernstube.topValue + 'px', 'left': tableBauernstube.leftValue + 'px', 'background-color': + tableBauernstube.bgColor,  'height': + tableBauernstube.height + 'px', 'width': + tableBauernstube.width + 'px', 'border': + tableBauernstube.border}" [style.border]="getStyle(tablesBauernstube[j].trace, tablesBauernstube[j].trace2, tablesBauernstube[j].trace3, tablesBauernstube[j].trace4, tablesBauernstube[j].trace5, tablesBauernstube[j].trace6, tablesBauernstube[j].trace7, tablesBauernstube[j].trace8, tablesBauernstube[j].trace9, tablesBauernstube[j].trace10, tablesBauernstube[j].trace11, tablesBauernstube[j].trace12, tablesBauernstube[j].trace13, tablesBauernstube[j].trace14, tablesBauernstube[j].trace15, tablesBauernstube[j].newTraceText)" dropdown>
             <p><b>{{tableBauernstube.number}} | {{tableBauernstube.personenAnzahlValue}} {{tableBauernstube.personenAnzahlValue2}} {{tableBauernstube.personenAnzahlValue3}} {{tableBauernstube.personenAnzahlValue4}} {{tableBauernstube.personenAnzahlValue5}} {{tableBauernstube.personenAnzahlValue6}} {{tableBauernstube.personenAnzahlValue7}} {{tableBauernstube.personenAnzahlValue8}} {{tableBauernstube.personenAnzahlValue9}} {{tableBauernstube.personenAnzahlValue10}} {{tableBauernstube.personenAnzahlValue11}} {{tableBauernstube.personenAnzahlValue12}} {{tableBauernstube.personenAnzahlValue13}} {{tableBauernstube.personenAnzahlValue14}} {{tableBauernstube.personenAnzahlValue15}}</b></p>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px" class="dropdowndropdown" dropdown><b>Infos anzeigen</b>
+            <div dropdownToggle type="button" style="background-color: red; color: white; padding: 10px;"  (click)="none($event)" class="dropdownMoveTable" dropdown><b>Tisch verschieben</b>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
+                <li class="dropdown-item" (click)="addTable(tableBauernstube, j)" style="color: black"><b>Tisch hinzufügen</b></li>
+                <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
+                <li class="dropdown-item" (click)="removeTable(tableBauernstube, j)" style="color: black"><b>Tisch entfernen</b></li>
+              </div>
+            </div>
+            <li class="divider dropdown-divider" style="padding: 0 0 0 0; margin: 0;"></li>
+            <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px" class="dropdownShowinfo" dropdown><b>Infos anzeigen</b>
                 <div *ngIf="tableBauernstube.nameValue">
                   <div class="dropdown-item"><b>Name:</b> {{tableBauernstube.nameValue}}<br><b>Sprache:</b> {{tableBauernstube.spracheValue}}<br><b>Zimmer Nummer: </b>{{tableBauernstube.zimmernummerValue}}<br><b>Preistyp: </b>{{tableBauernstube.preistypValue}}<br><b>Anreise: </b>{{tableBauernstube.anreiseValue}}<br><b>Abreise:</b> {{tableBauernstube.abreiseValue}}<br><b>Personen Anzahl:</b>{{tableBauernstube.personenAnzahlValue}}<br><b>Reisebüro: </b>{{tableBauernstube.rbsouValue}}<br><b>Notiz2:</b> {{tableBauernstube.notiz2Value}}<b>Trace:</b> {{tableBauernstube.trace}}</div>
                   <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
@@ -147,12 +158,7 @@
                 </div>
               </div>
             </div>
-            <li class="divider dropdown-divider" style="padding: 0 0 0 0; margin: 0;"></li>
-            <li class="dropdown-item" style="background-color: red; color: white; padding: 10px;" (click)="moveTable(tableBauernstube, j)"><b>Tisch verschieben</b></li>
           </div>
-          </div>
-
-
         </div>
       </div>
       <div *ngIf="showWaeldlerBool">
@@ -162,8 +168,15 @@
               <p><b>{{tableWaeldlerStubeKristallStube.number}} | {{tableWaeldlerStubeKristallStube.personenAnzahlValue}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue2}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue3}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue4}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue5}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue6}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue7}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue8}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue9}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue10}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue11}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue12}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue13}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue14}} {{tableWaeldlerStubeKristallStube.personenAnzahlValue15}}</b></p>
             </div>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px" class="dropdowndropdown" dropdown><b>Infos anzeigen</b>
+              <div dropdownToggle type="button" style="background-color: red; color: white; padding: 10px;"  (click)="none($event)" class="dropdownMoveTable" dropdown><b>Tisch verschieben</b>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
+                  <li class="dropdown-item" (click)="addTable(tableWaeldlerStubeKristallStube, j)" style="color: black"><b>Tisch hinzufügen</b></li>
+                  <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
+                  <li class="dropdown-item" (click)="removeTable(tableWaeldlerStubeKristallStube, j)" style="color: black"><b>Tisch entfernen</b></li>
+                </div>
+              </div>
+              <li class="divider dropdown-divider" style="padding: 0 0 0 0; margin: 0;"></li>
+              <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px" class="dropdownShowinfo" dropdown><b>Infos anzeigen</b>
                   <div *ngIf="tableWaeldlerStubeKristallStube.nameValue">
                     <div class="dropdown-item"><b>Name:</b> {{tableWaeldlerStubeKristallStube.nameValue}}<br><b>Sprache:</b> {{tableWaeldlerStubeKristallStube.spracheValue}}<br><b>Zimmer Nummer: </b>{{tableWaeldlerStubeKristallStube.zimmernummerValue}}<br><b>Preistyp: </b>{{tableWaeldlerStubeKristallStube.preistypValue}}<br><b>Anreise: </b>{{tableWaeldlerStubeKristallStube.anreiseValue}}<br><b>Abreise:</b> {{tableWaeldlerStubeKristallStube.abreiseValue}}<br><b>Personen Anzahl:</b>{{tableWaeldlerStubeKristallStube.personenAnzahlValue}}<br><b>Reisebüro: </b>{{tableWaeldlerStubeKristallStube.rbsouValue}}<br><b>Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz2Value}}<b>Trace:</b> {{tableWaeldlerStubeKristallStube.trace}}</div>
                     <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
@@ -226,8 +239,6 @@
                   </div>
                 </div>
               </div>
-              <li class="divider dropdown-divider" style="padding: 0 0 0 0; margin: 0;"></li>
-              <li class="dropdown-item" style="background-color: red; color: white; padding: 10px;" (click)="moveTable(tableWaeldlerStubeKristallStube, j)"><b>Tisch verschieben</b></li>
             </div>
           </div>
         </div>
@@ -239,7 +250,15 @@
               <p><b>{{tableEdelweissKaminStube.number}} | {{tableEdelweissKaminStube.personenAnzahlValue}} {{tableEdelweissKaminStube.personenAnzahlValue2}} {{tableEdelweissKaminStube.personenAnzahlValue3}} {{tableEdelweissKaminStube.personenAnzahlValue4}} {{tableEdelweissKaminStube.personenAnzahlValue5}} {{tableEdelweissKaminStube.personenAnzahlValue6}} {{tableEdelweissKaminStube.personenAnzahlValue7}} {{tableEdelweissKaminStube.personenAnzahlValue8}} {{tableEdelweissKaminStube.personenAnzahlValue9}} {{tableEdelweissKaminStube.personenAnzahlValue10}} {{tableEdelweissKaminStube.personenAnzahlValue11}} {{tableEdelweissKaminStube.personenAnzahlValue12}} {{tableEdelweissKaminStube.personenAnzahlValue13}} {{tableEdelweissKaminStube.personenAnzahlValue14}} {{tableEdelweissKaminStube.personenAnzahlValue15}}</b></p>
             </div>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px" class="dropdowndropdown" dropdown><b>Infos anzeigen</b>
+              <div dropdownToggle type="button" style="background-color: red; color: white; padding: 10px;"  (click)="none($event)" class="dropdownMoveTable" dropdown><b>Tisch verschieben</b>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
+                  <li class="dropdown-item" (click)="addTable(tableEdelweissKaminStube, j)" style="color: black"><b>Tisch hinzufügen</b></li>
+                  <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
+                  <li class="dropdown-item" (click)="removeTable(tableEdelweissKaminStube, j)" style="color: black"><b>Tisch entfernen</b></li>
+                </div>
+              </div>
+              <li class="divider dropdown-divider" style="padding: 0 0 0 0; margin: 0;"></li>
+              <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px" class="dropdownShowinfo" dropdown><b>Infos anzeigen</b>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
                   <div *ngIf="tableEdelweissKaminStube.nameValue">
                     <div class="dropdown-item"><b>Name:</b> {{tableEdelweissKaminStube.nameValue}}<br><b>Sprache:</b> {{tableEdelweissKaminStube.spracheValue}}<br><b>Zimmer Nummer: </b>{{tableEdelweissKaminStube.zimmernummerValue}}<br><b>Preistyp: </b>{{tableEdelweissKaminStube.preistypValue}}<br><b>Anreise: </b>{{tableEdelweissKaminStube.anreiseValue}}<br><b>Abreise:</b> {{tableEdelweissKaminStube.abreiseValue}}<br><b>Personen Anzahl:</b>{{tableEdelweissKaminStube.personenAnzahlValue}}<br><b>Reisebüro: </b>{{tableEdelweissKaminStube.rbsouValue}}<br><b>Notiz2:</b> {{tableEdelweissKaminStube.notiz2Value}}<b>Trace:</b> {{tableEdelweissKaminStube.trace}}</div>
@@ -303,21 +322,26 @@
                   </div>
                 </div>
               </div>
-              <li class="divider dropdown-divider" style="padding: 0 0 0 0; margin: 0;"></li>
-              <li class="dropdown-item" style="background-color: red; color: white; padding: 10px;" (click)="moveTable(tableEdelweissKaminStube, j)"><b>Tisch verschieben</b></li>
             </div>
-
           </div>
         </div>
       </div>
       <div *ngIf="showTeeStubeBool">
-        <div *ngFor="let tableTeestubeTeelounge  of tablesTeestubeTeelounge; let j = index;">
+        <div *ngFor="let tableTeestubeTeelounge of tablesTeestubeTeelounge; let j = index;">
           <div dropdownToggle type="button" class="t{{tableTeestubeTeelounge.number}} table-item" [ngStyle]="{'top': tableTeestubeTeelounge.topValue + 'px', 'left': tableTeestubeTeelounge.leftValue + 'px', 'background-color': + tableTeestubeTeelounge.bgColor,  'height': + tableTeestubeTeelounge.height + 'px', 'width': + tableTeestubeTeelounge.width + 'px', 'border': + tableTeestubeTeelounge.border, 'border-radius': + tableTeestubeTeelounge.borderRadius, 'transform':  + tableTeestubeTeelounge.transformValue}" [style.border]="getStyle(tablesTeestubeTeelounge[j].trace, tablesTeestubeTeelounge[j].trace2, tablesTeestubeTeelounge[j].trace3, tablesTeestubeTeelounge[j].trace4, tablesTeestubeTeelounge[j].trace5, tablesTeestubeTeelounge[j].trace6, tablesTeestubeTeelounge[j].trace7, tablesTeestubeTeelounge[j].trace8, tablesTeestubeTeelounge[j].trace9, tablesTeestubeTeelounge[j].trace10, tablesTeestubeTeelounge[j].trace11, tablesTeestubeTeelounge[j].trace12, tablesTeestubeTeelounge[j].trace13, tablesTeestubeTeelounge[j].trace14, tablesTeestubeTeelounge[j].trace15, tablesTeestubeTeelounge[j].newTraceText)" dropdown>
             <div *ngIf="tablesTeestubeTeelounge[j] !== tablesTeestubeTeelounge[j+1]">
               <p><b>{{tableTeestubeTeelounge.number}} | {{tableTeestubeTeelounge.personenAnzahlValue}} {{tableTeestubeTeelounge.personenAnzahlValue2}} {{tableTeestubeTeelounge.personenAnzahlValue3}} {{tableTeestubeTeelounge.personenAnzahlValue4}} {{tableTeestubeTeelounge.personenAnzahlValue5}} {{tableTeestubeTeelounge.personenAnzahlValue6}} {{tableTeestubeTeelounge.personenAnzahlValue7}} {{tableTeestubeTeelounge.personenAnzahlValue8}} {{tableTeestubeTeelounge.personenAnzahlValue9}} {{tableTeestubeTeelounge.personenAnzahlValue10}} {{tableTeestubeTeelounge.personenAnzahlValue11}} {{tableTeestubeTeelounge.personenAnzahlValue12}} {{tableTeestubeTeelounge.personenAnzahlValue13}} {{tableTeestubeTeelounge.personenAnzahlValue14}} {{tableTeestubeTeelounge.personenAnzahlValue15}}</b></p>
             </div>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px" class="dropdowndropdown" dropdown><b>Infos anzeigen</b>
+              <div dropdownToggle type="button" style="background-color: red; color: white; padding: 10px;"  (click)="none($event)" class="dropdownMoveTable" dropdown><b>Tisch verschieben</b>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
+                  <li class="dropdown-item" (click)="addTable(tableTeestubeTeelounge, j)" style="color: black"><b>Tisch hinzufügen</b></li>
+                  <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
+                  <li class="dropdown-item" (click)="removeTable(tableTeestubeTeelounge, j)" style="color: black"><b>Tisch entfernen</b></li>
+                </div>
+              </div>
+              <li class="divider dropdown-divider" style="padding: 0 0 0 0; margin: 0;"></li>
+              <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px" class="dropdownShowinfo" dropdown><b>Infos anzeigen</b>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
                   <div *ngIf="tableTeestubeTeelounge.nameValue">
                     <div class="dropdown-item"><b>Name:</b> {{tableTeestubeTeelounge.nameValue}}<br><b>Sprache:</b> {{tableTeestubeTeelounge.spracheValue}}<br><b>Zimmer Nummer: </b>{{tableTeestubeTeelounge.zimmernummerValue}}<br><b>Preistyp: </b>{{tableTeestubeTeelounge.preistypValue}}<br><b>Anreise: </b>{{tableTeestubeTeelounge.anreiseValue}}<br><b>Abreise:</b> {{tableTeestubeTeelounge.abreiseValue}}<br><b>Personen Anzahl:</b>{{tableTeestubeTeelounge.personenAnzahlValue}}<br><b>Reisebüro: </b>{{tableTeestubeTeelounge.rbsouValue}}<br><b>Notiz2:</b> {{tableTeestubeTeelounge.notiz2Value}}<b>Trace:</b> {{tableTeestubeTeelounge.trace}}</div>
@@ -381,10 +405,7 @@
                   </div>
                 </div>
               </div>
-              <li class="divider dropdown-divider" style="padding: 0 0 0 0; margin: 0;"></li>
-              <li class="dropdown-item" style="background-color: red; color: white; padding: 10px;" (click)="moveTable(tableTeestubeTeelounge, j)"><b>Tisch verschieben</b></li>
             </div>
-
           </div>
         </div>
       </div>
@@ -394,6 +415,5 @@
         <br>
         <h1 style="color: white">Perfekt um eine Suche zu starten ;-)</h1>
       </div>
-    </div>
   </div>
 </div>
