@@ -13,11 +13,16 @@
   margin: 0
 }
 
-.navbar-nav {
-  max-width: 35%;
+ul.navbar-nav {
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   margin-left: 10px;
   max-height:  40px;
-  display: -webkit-inline-box;
+}
+
+.navbar-logout {
+  float: right;
 }
 
 .brand {
@@ -28,13 +33,15 @@
 
 .Tisch {
   color: #0a7a74;
+  float: right;
+  margin-right: 10px;
 }
 
 .TischDiv{
   background-color: #0a7a74;
   border-radius: 50%;
-  min-height: 30px;
-  min-width: 30px;
+  height: 30px;
+  width: 30px;
   text-align: center;
   margin-top: 12px;
   margin-left: 48px;
@@ -43,7 +50,9 @@
 
 .TischH3 {
   color: #eaf3f3;
-  margin: 10px 10px 5px 10px;
+  margin: 0;
+  line-height: 29px;
+  font-size: 20px;
   align-content: center;
   align: center;
 }
@@ -75,6 +84,12 @@
   border: none;
 }
 
+.navbar-form {
+  margin: 11px 0 0 0;
+  box-shadow: none;
+  padding: 0;
+}
+
 .btn-send {
   background-color: #0a7a74;
   float: right;
@@ -88,8 +103,7 @@ h6 {
 }
 
 .navbar-right{
-  display: inline;
-  max-width: 50%;
+
 }
 
 .btn-default {
@@ -146,25 +160,27 @@ h6 {
 }
 
 .navbar-left {
-  margin-top: 40px;
   max-width: 100%;
   display: -webkit-inline-box;
-  float: right;
   border: none;
 }
 
 .form-group {
   max-height: 45px;
-  margin: 0;
-  width: 50%;
+  margin: 0 5px 0 0;
+}
+
+.form-group-search {
+  float: left;
+  width: calc(100% - 52px);
 }
 
 .form-control {
   background-color: #0a7a74;
   color: #FFFFFF;
   border: none;
+  height: 32px;
   opacity: 80;
-  width: 110%;
   margin: 0px 0px 0px 0px;
 }
 
@@ -173,10 +189,9 @@ h6 {
   color: #FFFFFF;
   border: none;
   float: right;
-  margin-top: -39px;
-  margin-right: 20px;
+  margin-right: 10px;
   min-width: 30px;
-  min-height: 30px;
+  height: 32px;
 }
 
 .Partner {
@@ -198,7 +213,6 @@ h6 {
 @media (max-width: 500px) {
 
   .navbar-left {
-    margin-top: 0px;
     display: block;
   }
 }
@@ -228,26 +242,24 @@ h6 {
   }
   .navbar-nav {
     margin-top: 0;
-    max-width: 79%;
+
     display: inline-flex;
     max-height: 50px;
   }
   .navbar-right{
     display: inline-flex;
     max-width: 79%;
-    margin-top: -32px;
     margin-right: 10px;
 
   }
   .navbar-left{
     display: inline-flex;
-    margin-top: 31px;
   }
   .form-group {
     display: inline-flex;
   }
   .form-control{
-    width: 110%;
+
   }
   .search-btn-default {
     margin-top: 0px;
@@ -263,7 +275,15 @@ h6 {
 
   .form-group {
     display: block;
-    margin-right: 5px;
+  }
+
+  .form-group-search {
+    float: none;
+    width: auto;
+  }
+
+  .navbar-left {
+    float: right;
   }
 
   .navbar-right {
@@ -300,15 +320,19 @@ h6 {
 
   .search-btn-default {
     float: right;
+    margin-right: 20px;
     margin-top: 0px;
+  }
+
+  .Tisch {
+    margin-right: 0px;
   }
 
   .TischDiv{
     margin-left: 35px;
   }
   .navbar-nav {
-    max-width: 300px;
-    min-width: 300px;
+
   }
 
 }
@@ -341,7 +365,7 @@ h6 {
 
   .navbar-nav {
     display: block;
-    min-width: 36%;
+
   }
 
   .container {
