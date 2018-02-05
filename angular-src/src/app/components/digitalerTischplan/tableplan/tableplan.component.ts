@@ -33,8 +33,17 @@ export class TableplanComponent implements OnInit {
   movedEdelweissKaminStube:EventEmitter<any> = new EventEmitter();
   @Output()
   movedTeestubeTeelounge:EventEmitter<any> = new EventEmitter();
+  buttonMoveTable: string;
+  buttonInfo: string;
+  buttonHinzufuegen: string;
+  buttonEntfernen: string;
 
-  constructor(private tischplanService: TischplanService) { }
+  constructor(private tischplanService: TischplanService) {
+    this.buttonMoveTable = "ff0000";
+    this.buttonInfo = "ffffff";
+    this.buttonHinzufuegen = "ffffff";
+    this.buttonEntfernen = "ffffff";
+  }
 
   ngOnInit() {
   }
@@ -95,6 +104,66 @@ export class TableplanComponent implements OnInit {
 
   none(event) {
     event.stopPropagation();
+  }
+
+  mouseEnterMoveTableButton() {
+    console.log("mouse enter : ");
+    if (this.buttonMoveTable === "ff0000") {
+      console.log('mouse enter1 :');
+      this.buttonMoveTable = "bc0000";
+    }
+  }
+
+  mouseLeaveMoveTableButton() {
+    if (this.buttonMoveTable === "bc0000") {
+      console.log('mouse leave1 :');
+      this.buttonMoveTable = "ff0000";
+    }
+  }
+
+  mouseEnterInfoButton() {
+    console.log("mouse enter : ");
+    if (this.buttonInfo === "ffffff") {
+      console.log('mouse enter1 :');
+      this.buttonInfo = "cfcfcf";
+    }
+  }
+
+  mouseLeaveInfoButton() {
+    if (this.buttonInfo === "cfcfcf") {
+      console.log('mouse leave1 :');
+      this.buttonInfo = "ffffff";
+    }
+  }
+
+  mouseEnterHinzufuegenButton() {
+    console.log("mouse enter : ");
+    if (this.buttonHinzufuegen === "ffffff") {
+      console.log('mouse enter1 :');
+      this.buttonHinzufuegen = "cfcfcf";
+    }
+  }
+
+  mouseLeaveHinzufuegenButton() {
+    if (this.buttonHinzufuegen === "cfcfcf") {
+      console.log('mouse leave1 :');
+      this.buttonHinzufuegen = "ffffff";
+    }
+  }
+
+  mouseEnterEntfernenButton() {
+    console.log("mouse enter : ");
+    if (this.buttonEntfernen === "ffffff") {
+      console.log('mouse enter1 :');
+      this.buttonEntfernen = "cfcfcf";
+    }
+  }
+
+  mouseLeaveEntfernenButton() {
+    if (this.buttonEntfernen === "cfcfcf") {
+      console.log('mouse leave1 :');
+      this.buttonEntfernen = "ffffff";
+    }
   }
 
 }

@@ -658,9 +658,9 @@ module.exports = {
             anreiseValue = informationElements2[3].substring(1, informationElements2[3].length);
             abreiseValue = informationElements2[4].substring(1, informationElements2[4].length);
             trace = informationElements2[5].substring(1, informationElements2[5].length);
-            if (informationElements2.length > 7) {
-                trace = trace + informationElements2[6].substring(1, informationElements2[6].length);
-            }
+            for (let i = 5; i < informationElements2.length - 1; i++) {
+                trace += informationElements2[i].substring(1, informationElements2[i].length) + ", ";
+            };
             departmentValue = informationElements2[informationElements2.length - 1].substring(1, informationElements2[informationElements2.length - 1].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
             tableValueArray = informationElements2[informationElements2.length - 1].toString().match(/\d+/);
             tableValue = tableValueArray[0];

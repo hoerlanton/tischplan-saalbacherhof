@@ -26,7 +26,7 @@
       </div>
       <li class="navbar-logout" *ngIf="authService.loggedIn()"><a (click)="onLogoutClick()" href="/">LOGOUT</a></li>
     </ul>
-    <ul class="nav navbar-nav navbar-right" >
+    <ul class="nav navbar-nav navbar-right">
       <div class="btn-group" dropdown>
         <button dropdownToggle class="btn btn-primary dropdown-toggle" type="button">Abreisen entfernen <i class="fa fa-calendar-check-o" aria-hidden="true"></i><span class="caret"></span>
         </button>
@@ -54,8 +54,8 @@
           </form>
         </ul>
       </div>
-      <div class="btn-group"  dropdown>
-        <button dropdownToggle type="button"  class="btn btn-primary dropdown-toggle">Traces <i class="fa fa-folder-open" aria-hidden="true"></i> <span class="caret"></span>
+      <div class="btn-group" dropdown>
+        <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">Traces <i class="fa fa-folder-open" aria-hidden="true"></i> <span class="caret"></span>
         </button>
         <ul *dropdownMenu class="dropdown-menu" role="menu" >
           <div *ngFor="let newInformationElement of newInformationElements; let j = index;">
