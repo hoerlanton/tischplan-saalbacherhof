@@ -33,6 +33,8 @@ export class TableplanComponent implements OnInit {
   movedEdelweissKaminStube:EventEmitter<any> = new EventEmitter();
   @Output()
   movedTeestubeTeelounge:EventEmitter<any> = new EventEmitter();
+  @Output()
+  changeBgColorIfAnreise:EventEmitter<any> = new EventEmitter();
   buttonMoveTable: string;
   buttonInfo: string;
   buttonHinzufuegen: string;
@@ -69,6 +71,7 @@ export class TableplanComponent implements OnInit {
       } else if (response[0].tables[j].department === "teestubeTeelounge") {
         this.movedTeestubeTeelounge.emit(response[0].tables);
       }
+      this.changeBgColorIfAnreise.emit();
     });
   }
     removeTable(table, j) {
@@ -91,6 +94,7 @@ export class TableplanComponent implements OnInit {
         } else if (response[0].tables[j].department === "teestubeTeelounge") {
           this.movedTeestubeTeelounge.emit(response[0].tables);
         }
+        this.changeBgColorIfAnreise.emit();
       });
     }
 

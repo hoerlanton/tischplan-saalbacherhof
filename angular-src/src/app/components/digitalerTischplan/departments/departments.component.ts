@@ -175,7 +175,7 @@ export class DepartmentsComponent  {
     //console.log("placeholder:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
   }
 
-  changeBgColorIfAnreise(tables) {
+  changeBgColorIfAnreise() {
     setTimeout(() => {
       this.tables = this.tablesTempAbreise;
       console.log('=================================================changeBgColorIfAnreise');

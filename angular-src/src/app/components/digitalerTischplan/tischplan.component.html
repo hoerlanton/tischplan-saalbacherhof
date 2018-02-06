@@ -101,7 +101,8 @@
                      (movedEdelweissKaminStube)="tablesEdelweissKaminStube = $event"
                      (movedTeestubeTeelounge)="tablesTeestubeTeelounge = $event"
                      (movedWaeldlerStubeKristallStube)="tablesWaeldlerStubeKristallStube = $event"
-                     [showTablePlanBool]="showTablePlanBool">
+                     [showTablePlanBool]="showTablePlanBool"
+                     (changeBgColorIfAnreise)="changeBgColorIfAnreise($event)">
       </app-tableplan>
     </div>
     <div class="col-xs-12 col-lg-3 upload-col">
