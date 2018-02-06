@@ -6,20 +6,22 @@
       <div class="btn-group" dropdown>
         <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle"><i class="fa fa-print" aria-hidden="true"></i><span class="caret"></span>
         </button>
-        <ul *dropdownMenu class="dropdown-menu" role="menu">
-          <li class="printToCart1"><button (click)="printToCart1('printSectionId1')" style=" display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px" class="printToCart1">Tisch Übersicht Drucken</button></li>
-          <li class="printToCart2"><button (click)="printToCart2('printSectionId2')" style="text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px" class="printToCart2">Tisch Plan Drucken</button></li>
-          <li class="printToCart3"><button (click)="printToCart3('printSectionId3')" style="text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px" class="printToCart3">A-Z Liste Drucken</button></li>
+        <ul *dropdownMenu class="dropdown-menu" style="height: auto; padding: 0" role="menu">
+          <li class="printToCart1" (click)="printToCart1('printSectionId1')" style=" display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px; padding: 10px" class="printToCart1">Tisch Übersicht Drucken</li>
+          <li class="divider dropdown-divider" style="margin: 0"></li>
+          <li class="printToCart2" (click)="printToCart2('printSectionId2')" style="text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px; padding: 10px" class="printToCart2">Tisch Plan Drucken</li>
+          <li class="divider dropdown-divider" style="margin: 0"></li>
+          <li class="printToCart3" (click)="printToCart3('printSectionId3')" style="text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px; padding: 10px" class="printToCart3">A-Z Liste Drucken</li>
         </ul>
       </div>
       <div class="btn-group" dropdown>
         <button dropdownToggle class="btn btn-primary dropdown-toggle" type="button">CSV<i class="fa fa-upload" aria-hidden="true"></i><span class="caret"></span>
         </button>
-        <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <ul *dropdownMenu class="dropdown-menu" style="padding: 10px; height: auto" role="menu">
           <div class="csv" (click)="none($event)" ><h6 >CSV-Datei hochladen</h6>
             <form class="SendMessage" (submit)="sendMessage($event)">
-              <input type="file" (change)="fileChangeEvent($event)" placeholder="Upload file..." />
-              <button type="button" class="btn btn-send" (click)="upload()">CSV HOCHLADEN</button>
+              <input type="file" style="max-width: 160px; min-height: 50px" (change)="fileChangeEvent($event)" placeholder="Upload file..." />
+              <button type="button" class="btn btn-send" (click)="upload()">CSV hochladen</button>
             </form>
           </div>
         </ul>
@@ -40,7 +42,7 @@
       <div class="btn-group" dropdown>
         <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">Umsetzen <i class="fa fa-exchange" aria-hidden="true"></i><span class="caret"></span>
         </button>
-        <ul *dropdownMenu class="dropdown-menu" role="menu" >
+        <ul *dropdownMenu class="dropdown-menu" role="menu" style="height: auto">
           <form class="SendInformation" #myForm="ngForm" (submit)="umsetzen($event)">
             <div class="form-group" (click)="none($event)">
               <label for="quellTisch">Quell-Tisch:</label>
@@ -57,10 +59,10 @@
       <div class="btn-group" dropdown>
         <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">Traces <i class="fa fa-folder-open" aria-hidden="true"></i> <span class="caret"></span>
         </button>
-        <ul *dropdownMenu class="dropdown-menu" role="menu" >
+        <ul *dropdownMenu class="dropdown-menu" role="menu" style="padding: 0">
           <div *ngFor="let newInformationElement of newInformationElements; let j = index;">
-            <button type="submit" class="btn btn-send" (click)="delete(newInformationElement, j, $event)">x</button>
-            <li role="menuitem" class="menuitem" (click)="none($event)"> <b>Zimmer Nummer: </b> {{newInformationElement.roomNumber}} <br><b>Trace: </b> {{newInformationElement.text}} <br><b>Tisch: </b> {{newInformationElement.tableNumber}}<br><b>Datum: </b> {{newInformationElement.date}}<br><b>Name: </b> {{newInformationElement.name}}<br><b>Mitarbeiter: </b> {{newInformationElement.employee}}</li>
+            <button type="submit" style="margin: 10px" class="btn btn-send" (click)="delete(newInformationElement, j, $event)">x</button>
+            <li role="menuitem" style="padding: 10px;" class="menuitem" (click)="none($event)"> <b>Zimmer Nummer: </b> {{newInformationElement.roomNumber}} <br><b>Trace: </b> {{newInformationElement.text}} <br><b>Tisch: </b> {{newInformationElement.tableNumber}}<br><b>Datum: </b> {{newInformationElement.date}}<br><b>Name: </b> {{newInformationElement.name}}<br><b>Mitarbeiter: </b> {{newInformationElement.employee}}</li>
             <li class="divider dropdown-divider"></li>
           </div>
         </ul>
