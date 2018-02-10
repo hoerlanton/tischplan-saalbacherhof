@@ -14,6 +14,7 @@ const   express = require('express'),
     information = require('./information.js'),
     placeholder = require('./placeholder.js'),
     table = require('./table.js'),
+    tableAddInformation = require('./tableAddInformation.js'),
     notiz = require('./notiz.js'),
     users = require('./users.js');
 
@@ -90,8 +91,8 @@ router.post('/dispenseTable', function(req, res, next) {
 table.dispenseTable(req, res, db)});
 //addInformationToTable
 router.post('/addInformationToTable', function(req, res, next) {
-table.addInformationToTable(req, res, db)});
-+//getNotiz
+tableAddInformation.addInformationToTable(req, res, db)});
+//getNotiz
 router.get('/getNotiz', function(req, res, next) {
 notiz.getNotiz(req, res, db)});
 //newNotiz

@@ -36,87 +36,27 @@ module.exports = {
         console.log(req.body);
         let newInformation = req.body;
 
-        setTimeout(function () {
-            db.hubertusTables.findOne(
+            db.hubertusTables.update(
                 {
-                    "tables.number": newInformation.tableNumber
-                }, {
-                    "tables.$": 1,
+                    "tables.number": newInformation.tableNumber,
                 },
-                function (err, tablesfirst) {
+                {
+                    $push: {
+                        "tables.$.groups": {
+                            "newTraceText": newInformation.text,
+                            "newTraceRoomNumber": newInformation.roomNumber,
+                            "newTraceName": newInformation.name,
+                            "newTraceEmployee": newInformation.employee,
+                            "newTraceDate": newInformation.date,
+                            "newTraceTableNumber": newInformation.tableNumber
+                        }
+                    }
+                }, function (err, tables) {
                     if (err) {
-                        res.send(err);
+                        console.log("Error");
                     }
-                    if (tablesfirst === null) {
-                        console.log("tablesfirst is null");
-                        return;
-                    }
-                    console.log("Länge tables firstplace" + JSON.stringify(tablesfirst.tables[0]).length);
-                    if (!("newTraceText" in tablesfirst.tables[0])) {
-                        db.hubertusTables.update(
-                            {
-                                "tables.number": newInformation.tableNumber,
-                            },
-                            {
-                                $set: {
-                                    "tables.$.newTraceText": newInformation.text,
-                                    "tables.$.newTraceRoomNumber": newInformation.roomNumber,
-                                    "tables.$.newTraceName": newInformation.name,
-                                    "tables.$.newTraceEmployee": newInformation.employee,
-                                    "tables.$.newTraceDate": newInformation.date,
-                                    "tables.$.newTraceTableNumber": newInformation.tableNumber
-                                }
-                            }, function (err, tables) {
-                                if (err) {
-                                    console.log("Error");
-                                }
-                                console.log("addInformationToTable updated successfully");
-                            });
-                    } else if (!("newTraceText1" in tablesfirst.tables[0])) {
-
-                        db.hubertusTables.update(
-                            {
-                                "tables.number": newInformation.tableNumber,
-                            },
-                            {
-                                $set: {
-                                    "tables.$.newTraceText1": newInformation.text,
-                                    "tables.$.newTraceRoomNumber1": newInformation.roomNumber,
-                                    "tables.$.newTraceName1": newInformation.name,
-                                    "tables.$.newTraceEmployee1": newInformation.employee,
-                                    "tables.$.newTraceDate1": newInformation.date,
-                                    "tables.$.newTraceTableNumber1": newInformation.tableNumber
-                                }
-                            }, function (err, tables) {
-                                if (err) {
-                                    console.log("Error");
-                                }
-                                console.log("addInformationToTable updated successfully");
-                            });
-                    } else if (!("newTraceText2" in tablesfirst.tables[0])) {
-
-                        db.hubertusTables.update(
-                            {
-                                "tables.number": newInformation.tableNumber,
-                            },
-                            {
-                                $set: {
-                                    "tables.$.newTraceText2": newInformation.text,
-                                    "tables.$.newTraceRoomNumber2": newInformation.roomNumber,
-                                    "tables.$.newTraceName2": newInformation.name,
-                                    "tables.$.newTraceEmployee2": newInformation.employee,
-                                    "tables.$.newTraceDate2": newInformation.date,
-                                    "tables.$.newTraceTableNumber2": newInformation.tableNumber
-                                }
-                            }, function (err, tables) {
-                                if (err) {
-                                    console.log("Error");
-                                }
-                                console.log("addInformationToTable updated successfully");
-                            });
-                    }
-                }, 300);
-        });
+                    console.log("addInformationToTable updated successfully");
+                });
 
         setTimeout(function () {
             db.hubertusTables.findOne(

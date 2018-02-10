@@ -39,12 +39,14 @@ export class TableplanComponent implements OnInit {
   buttonInfo: string;
   buttonHinzufuegen: string;
   buttonEntfernen: string;
+  trace: boolean;
 
   constructor(private tischplanService: TischplanService) {
     this.buttonMoveTable = "ff0000";
     this.buttonInfo = "ffffff";
     this.buttonHinzufuegen = "ffffff";
     this.buttonEntfernen = "ffffff";
+    this.trace = false;
   }
 
   ngOnInit() {
@@ -98,11 +100,25 @@ export class TableplanComponent implements OnInit {
       });
     }
 
-  getStyle(j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y ) {
-    if (j || k || l || m || n || o || p || q || r || s || t || u || v || w || x || y) {
-      return "solid 3px red";
-    } else {
+  getStyle(a) {
+    //console.log("a");
+    //console.log(a);
+    if (typeof a === "undefined") {
       return "solid 3px rgb(243, 239, 228)";
+    } else {
+      for (let b = 0; b < a.length; b++) {
+        //console.log("LOOOOOOOOOOOOOOP");
+        //console.log(a[b].traceValue);
+        if (a[b].traceValue != "Empty" || a[b].newTraceText) {
+          this.trace = true;
+        }
+      }
+      if (this.trace) {
+        this.trace = false;
+        return "solid 3px red";
+      } else {
+        return "solid 3px rgb(243, 239, 228)";
+      }
     }
   }
 
@@ -171,7 +187,7 @@ export class TableplanComponent implements OnInit {
   }
 
   getStyleTrace(j) {
-    if (j) {
+    if (j != "Empty") {
       return "solid 3px red";
     } else {
       return "";

@@ -9,9 +9,7 @@ import { DragulaModule } from 'ng2-dragula';
 import {NgClass} from '@angular/common';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import {DropdownModule} from "ng2-dropdown";
-import { TracesListeComponent } from './components/digitalerTischplan/traces-liste/traces-liste.component';
 import { ImHausListeComponent } from './components/digitalerTischplan/im-haus-liste/im-haus-liste.component';
-import { AnreiseListeComponent } from './components/digitalerTischplan/anreise-liste/anreise-liste.component';
 import { TableplanComponent } from './components/digitalerTischplan/tableplan/tableplan.component';
 import { NavigationComponent } from './components/digitalerTischplan/navigation/navigation.component';
 import { PrintComponent } from './components/digitalerTischplan/print/print.component';
@@ -49,9 +47,7 @@ const appRoutes: Routes =  [
   declarations: [
     AppComponent,
     TischplanComponent,
-    TracesListeComponent,
     ImHausListeComponent,
-    AnreiseListeComponent,
     TableplanComponent,
     NavigationComponent,
     PrintComponent,

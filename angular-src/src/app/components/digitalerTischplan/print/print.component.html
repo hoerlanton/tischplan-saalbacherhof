@@ -7,6 +7,12 @@
       <th style="border: solid 1px black; border-collapse: collapse;">Zimmernummer</th>
       <th style="border: solid 1px black; border-collapse: collapse;">Name</th>
       <th style="border: solid 1px black; border-collapse: collapse;">PAX</th>
+      <th style="border: solid 1px black; border-collapse: collapse;">Nation</th>
+      <th style="border: solid 1px black; border-collapse: collapse;">Kategorie</th>
+      <th style="border: solid 1px black; border-collapse: collapse;">Preis Typ</th>
+      <th style="border: solid 1px black; border-collapse: collapse;">Reisebüro</th>
+      <th style="border: solid 1px black; border-collapse: collapse;">Sprache</th>
+      <th style="border: solid 1px black; border-collapse: collapse;">Anreise</th>
       <th style="border: solid 1px black; border-collapse: collapse;">Abreise</th>
       <th style="border: solid 1px black; border-collapse: collapse;">GRP</th>
       <th style="border: solid 1px black; border-collapse: collapse;">Tisch</th>
@@ -18,17 +24,23 @@
     <div *ngFor="let table of tables">
       <tr style="border: solid 1px black;">
         <div *ngIf="table.nameValue">
-          <td style="border: solid 1px black; border-collapse: collapse;">{{table.zimmernummerValue}}</td>
-          <td style="border: solid 1px black; border-collapse: collapse;">{{table.nameValue}}</td>
-          <td style="border: solid 1px black; border-collapse: collapse;">{{table.personenAnzahlValue}}</td>
-          <td style="border: solid 1px black; border-collapse: collapse;">{{table.abreiseValue}}</td>
-          <td style="border: solid 1px black; border-collapse: collapse;"></td>
-          <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
-          <td style="border: solid 1px black; border-collapse: collapse;">{{table.bemerkungValue}}</td>
-          <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz1Value}}</td>
-          <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz2Value}}</td>
-          <td style="border: solid 1px black; border-collapse: collapse;">{{table.trace}}</td>
-        </div>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{table.zimmernummerValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{table.nameValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{table.personenAnzahlValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{table.nationValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{table.kategorieValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{table.preisTypValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{table.reisebueroValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{table.spracheValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{table.anreiseValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{table.abreiseValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;"></td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{table.bemerkungValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz1Value}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz2Value}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{table.traceValue}}</td>
+          </div>
       </tr>
     </div>
   </table>
@@ -46,6 +58,12 @@
         <th style="border: solid 1px black; border-collapse: collapse;">Zimmernummer</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Name</th>
         <th style="border: solid 1px black; border-collapse: collapse;">PAX</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Nation</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Kategorie</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Preis Typ</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Reisebüro</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Sprache</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Anreise</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Abreise</th>
         <th style="border: solid 1px black; border-collapse: collapse;">GRP</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Tisch</th>
@@ -55,47 +73,45 @@
         <th style="border: solid 1px black; border-collapse: collapse;">Trace</th>
       </tr>
       <div *ngFor="let table of tablesBauernstube">
+        <div *ngFor="let group of table.groups">
         <tr style="border: solid 1px black;">
-          <div *ngIf="table.nameValue">
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.zimmernummerValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.nameValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.personenAnzahlValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.abreiseValue}}</td>
+          <div *ngIf="group.nameValue">
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.zimmernummerValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.nameValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.personenAnzahlValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.nationValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.kategorieValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.preisTypValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.reisebueroValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.spracheValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.anreiseValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.abreiseValue}}</td>
             <td style="border: solid 1px black; border-collapse: collapse;"></td>
             <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.bemerkungValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz1Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz2Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.trace}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.bemerkungValue}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.notiz1Value}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.notiz2Value}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.traceValue}}</td>
+          </div>
+          <div *ngIf="group.newTraceText">
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceRoomNumber}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceName}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;"></td>
+            <td style="border: solid 1px black; border-collapse: collapse;"></td>
+            <td style="border: solid 1px black; border-collapse: collapse;"></td>
+            <td style="border: solid 1px black; border-collapse: collapse;"></td>
+            <td style="border: solid 1px black; border-collapse: collapse;"></td>
+            <td style="border: solid 1px black; border-collapse: collapse;"></td>
+            <td style="border: solid 1px black; border-collapse: collapse;"></td>
+            <td style="border: solid 1px black; border-collapse: collapse;"></td>
+            <td style="border: solid 1px black; border-collapse: collapse;"></td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceTableNumber}}</td>
+            <td style="border: solid 1px black; border-collapse: collapse;"></td>
+            <td style="border: solid 1px black; border-collapse: collapse;"></td>
+            <td style="border: solid 1px black; border-collapse: collapse;"></td>
+            <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceText}} {{group.newTraceDate}} {{table.newTraceEmployee}}</td>
           </div>
         </tr>
-        <div *ngIf="table.nameValue2">
-          <tr style="border: solid 1px black;">
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.zimmernummerValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.nameValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.personenAnzahlValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.abreiseValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;"></td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.bemerkungValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz3Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz4Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.trace2}}</td>
-          </tr>
-        </div>
-        <div *ngIf="table.nameValue3">
-          <tr style="border: solid 1px black;">
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.zimmernummerValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.nameValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.personenAnzahlValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.abreiseValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;"></td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.bemerkungValue6}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz5Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz6Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.trace}}</td>
-          </tr>
         </div>
       </div>
     </table>
@@ -112,6 +128,12 @@
         <th style="border: solid 1px black; border-collapse: collapse;">Zimmernummer</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Name</th>
         <th style="border: solid 1px black; border-collapse: collapse;">PAX</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Nation</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Kategorie</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Preis Typ</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Reisebüro</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Sprache</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Anreise</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Abreise</th>
         <th style="border: solid 1px black; border-collapse: collapse;">GRP</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Tisch</th>
@@ -119,48 +141,47 @@
         <th style="border: solid 1px black; border-collapse: collapse;">Notiz1</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Notiz2</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Trace</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Neuer Trace</th>
       </tr>
       <div *ngFor="let table of tablesWaeldlerStubeKristallStube">
-        <tr style="border: solid 1px black;">
-          <div *ngIf="table.nameValue">
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.zimmernummerValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.nameValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.personenAnzahlValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.abreiseValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;"></td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.bemerkungValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz1Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz2Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.trace}}</td>
-          </div>
-        </tr>
-        <div *ngIf="table.nameValue2">
+        <div *ngFor="let group of table.groups">
           <tr style="border: solid 1px black;">
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.zimmernummerValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.nameValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.personenAnzahlValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.abreiseValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;"></td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.bemerkungValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz3Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz4Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.trace2}}</td>
-          </tr>
-        </div>
-        <div *ngIf="table.nameValue3">
-          <tr style="border: solid 1px black;">
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.zimmernummerValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.nameValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.personenAnzahlValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.abreiseValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;"></td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.bemerkungValue6}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz5Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz6Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.trace}}</td>
+            <div *ngIf="group.nameValue">
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.zimmernummerValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.nameValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.personenAnzahlValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.nationValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.kategorieValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.preisTypValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.reisebueroValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.spracheValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.anreiseValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.abreiseValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.bemerkungValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.notiz1Value}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.notiz2Value}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.traceValue}}</td>
+            </div>
+            <div *ngIf="group.newTraceText">
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceRoomNumber}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceName}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceTableNumber}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceText}} {{group.newTraceDate}} {{table.newTraceEmployee}}</td>
+            </div>
           </tr>
         </div>
       </div>
@@ -178,6 +199,12 @@
         <th style="border: solid 1px black; border-collapse: collapse;">Zimmernummer</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Name</th>
         <th style="border: solid 1px black; border-collapse: collapse;">PAX</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Nation</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Kategorie</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Preis Typ</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Reisebüro</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Sprache</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Anreise</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Abreise</th>
         <th style="border: solid 1px black; border-collapse: collapse;">GRP</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Tisch</th>
@@ -185,48 +212,47 @@
         <th style="border: solid 1px black; border-collapse: collapse;">Notiz1</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Notiz2</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Trace</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Neuer Trace</th>
       </tr>
       <div *ngFor="let table of tablesBerglerStubeHubertusStube">
-        <tr style="border: solid 1px black;">
-          <div *ngIf="table.nameValue">
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.zimmernummerValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.nameValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.personenAnzahlValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.abreiseValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;"></td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.bemerkungValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz1Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz2Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.trace}}</td>
-          </div>
-        </tr>
-        <div *ngIf="table.nameValue2">
+        <div *ngFor="let group of table.groups">
           <tr style="border: solid 1px black;">
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.zimmernummerValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.nameValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.personenAnzahlValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.abreiseValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;"></td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.bemerkungValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz3Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz4Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.trace2}}</td>
-          </tr>
-        </div>
-        <div *ngIf="table.nameValue3">
-          <tr style="border: solid 1px black;">
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.zimmernummerValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.nameValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.personenAnzahlValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.abreiseValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;"></td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.bemerkungValue6}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz5Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz6Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.trace}}</td>
+            <div *ngIf="group.nameValue">
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.zimmernummerValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.nameValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.personenAnzahlValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.nationValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.kategorieValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.preisTypValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.reisebueroValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.spracheValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.anreiseValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.abreiseValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.bemerkungValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.notiz1Value}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.notiz2Value}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.traceValue}}</td>
+            </div>
+            <div *ngIf="group.newTraceText">
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceRoomNumber}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceName}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceTableNumber}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceText}} {{group.newTraceDate}} {{table.newTraceEmployee}}</td>
+            </div>
           </tr>
         </div>
       </div>
@@ -244,6 +270,12 @@
         <th style="border: solid 1px black; border-collapse: collapse;">Zimmernummer</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Name</th>
         <th style="border: solid 1px black; border-collapse: collapse;">PAX</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Nation</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Kategorie</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Preis Typ</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Reisebüro</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Sprache</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Anreise</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Abreise</th>
         <th style="border: solid 1px black; border-collapse: collapse;">GRP</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Tisch</th>
@@ -251,6 +283,7 @@
         <th style="border: solid 1px black; border-collapse: collapse;">Notiz1</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Notiz2</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Trace</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Neuer Trace</th>
       </tr>
       <div *ngFor="let table of tablesEdelweissKaminStube">
         <tr style="border: solid 1px black;">
@@ -310,6 +343,12 @@
         <th style="border: solid 1px black; border-collapse: collapse;">Zimmernummer</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Name</th>
         <th style="border: solid 1px black; border-collapse: collapse;">PAX</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Nation</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Kategorie</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Preis Typ</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Reisebüro</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Sprache</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Anreise</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Abreise</th>
         <th style="border: solid 1px black; border-collapse: collapse;">GRP</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Tisch</th>
@@ -317,51 +356,105 @@
         <th style="border: solid 1px black; border-collapse: collapse;">Notiz1</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Notiz2</th>
         <th style="border: solid 1px black; border-collapse: collapse;">Trace</th>
+        <th style="border: solid 1px black; border-collapse: collapse;">Neuer Trace</th>
       </tr>
       <div *ngFor="let table of tablesTeestubeTeelounge">
-        <tr style="border: solid 1px black;">
-          <div *ngIf="table.nameValue">
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.zimmernummerValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.nameValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.personenAnzahlValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.abreiseValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;"></td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.bemerkungValue}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz1Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz2Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.trace}}</td>
-          </div>
-        </tr>
-        <div *ngIf="table.nameValue2">
+        <div *ngFor="let group of table.groups">
           <tr style="border: solid 1px black;">
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.zimmernummerValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.nameValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.personenAnzahlValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.abreiseValue2}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;"></td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.bemerkungValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz3Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz4Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.trace2}}</td>
-          </tr>
-        </div>
-        <div *ngIf="table.nameValue3">
-          <tr style="border: solid 1px black;">
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.zimmernummerValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.nameValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.personenAnzahlValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.abreiseValue3}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;"></td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.bemerkungValue6}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz5Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.notiz6Value}}</td>
-            <td style="border: solid 1px black; border-collapse: collapse;">{{table.trace}}</td>
+            <div *ngIf="group.nameValue">
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.zimmernummerValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.nameValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.personenAnzahlValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.nationValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.kategorieValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.preisTypValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.reisebueroValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.spracheValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.anreiseValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.abreiseValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{table.number}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.bemerkungValue}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.notiz1Value}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.notiz2Value}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.traceValue}}</td>
+            </div>
+            <div *ngIf="group.newTraceText">
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceRoomNumber}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceName}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceTableNumber}}</td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;"></td>
+              <td style="border: solid 1px black; border-collapse: collapse;">{{group.newTraceText}} {{group.newTraceDate}} {{table.newTraceEmployee}}</td>
+            </div>
           </tr>
         </div>
       </div>
     </table>
   </div>
 </div>
+<div id="printSectionId2" class="section2">
+  <div class="row" style=" border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;">
+    <div *ngIf="showBerglerBool">
+      <div *ngFor="let tableBerglerStubeHubertusStube of tablesBerglerStubeHubertusStube; let j = index;">
+        <div dropdownToggle type="button" class="t{{tableBerglerStubeHubertusStube.number}} table-item" [ngStyle]="{'top': tableBerglerStubeHubertusStube.topValue + 'px', 'left': tableBerglerStubeHubertusStube.leftValue + 'px', 'background-color': + tableBerglerStubeHubertusStube.bgColor, 'height': + tableBerglerStubeHubertusStube.height + 'px', 'width': + tableBerglerStubeHubertusStube.width + 'px', 'border': + tableBerglerStubeHubertusStube.border}" [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].groups)" dropdown>
+          <div *ngIf="tablesBerglerStubeHubertusStube[j] !== tablesBerglerStubeHubertusStube[j+1]">
+            <p><b>{{tableBerglerStubeHubertusStube.number}}</b></p>
+            <div *ngFor="let group of tableBerglerStubeHubertusStube.groups"><b>{{group.personenAnzahlValue}}</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="showBauernStubnBool">
+      <div *ngFor="let tableBauernstube of tablesBauernstube; let j = index;">
+        <div dropdownToggle type="button" class="t{{tableBauernstube.number}} table-item" [ngStyle]="{'top': tableBauernstube.topValue + 'px', 'left': tableBauernstube.leftValue + 'px', 'background-color': + tableBauernstube.bgColor, 'height': + tableBauernstube.height + 'px', 'width': + tableBauernstube.width + 'px', 'border': + tableBauernstube.border}" [style.border]="getStyle(tablesBauernstube[j].groups)" dropdown>
+          <div *ngIf="tablesBauernstube[j] !== tablesBauernstube[j+1]">
+            <p><b>{{tableBauernstube.number}}</b></p>
+            <div *ngFor="let group of tableBauernstube.groups"><b>{{group.personenAnzahlValue}}</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="showWaeldlerBool">
+      <div *ngFor="let tableWaeldlerStubeKristallStube of tablesWaeldlerStubeKristallStube; let j = index;">
+        <div dropdownToggle type="button" class="t{{tableWaeldlerStubeKristallStube.number}} table-item" [ngStyle]="{'top': tableWaeldlerStubeKristallStube.topValue + 'px', 'left': tableWaeldlerStubeKristallStube.leftValue + 'px', 'background-color': + tableWaeldlerStubeKristallStube.bgColor, 'height': + tableWaeldlerStubeKristallStube.height + 'px', 'width': + tableWaeldlerStubeKristallStube.width + 'px', 'border': + tableWaeldlerStubeKristallStube.border}" [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].groups)" dropdown>
+          <div *ngIf="tablesWaeldlerStubeKristallStube[j] !== tablesWaeldlerStubeKristallStube[j+1]">
+            <p><b>{{tableWaeldlerStubeKristallStube.number}}</b></p>
+            <div *ngFor="let group of tableWaeldlerStubeKristallStube.groups"><b>{{group.personenAnzahlValue}}</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="showEdelweissBool">
+      <div *ngFor="let tableEdelweissKaminStube of tablesEdelweissKaminStube; let j = index;">
+        <div dropdownToggle type="button" class="t{{tableEdelweissKaminStube.number}} table-item" [ngStyle]="{'top': tableEdelweissKaminStube.topValue + 'px', 'left': tableEdelweissKaminStube.leftValue + 'px', 'background-color': + tableEdelweissKaminStube.bgColor, 'height': + tableEdelweissKaminStube.height + 'px', 'width': + tableEdelweissKaminStube.width + 'px', 'border': + tableEdelweissKaminStube.border}" [style.border]="getStyle(tablesEdelweissKaminStube[j].groups)" dropdown>
+          <div *ngIf="tablesEdelweissKaminStube[j] !== tablesEdelweissKaminStube[j+1]">
+            <p><b>{{tableEdelweissKaminStube.number}}</b></p>
+            <div *ngFor="let group of tableEdelweissKaminStube.groups"><b>{{group.personenAnzahlValue}}</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="showTeeStubeBool">
+      <div *ngFor="let tableTeestubeTeelounge of tablesTeestubeTeelounge; let j = index;">
+        <div dropdownToggle type="button" class="t{{tableTeestubeTeelounge.number}} table-item" [ngStyle]="{'top': tableTeestubeTeelounge.topValue + 'px', 'left': tableTeestubeTeelounge.leftValue + 'px', 'background-color': + tableTeestubeTeelounge.bgColor, 'height': + tableTeestubeTeelounge.height + 'px', 'width': + tableTeestubeTeelounge.width + 'px', 'border': + tableTeestubeTeelounge.border}" [style.border]="getStyle(tablesTeestubeTeelounge[j].groups)" dropdown>
+          <div *ngIf="tablesTeestubeTeelounge[j] !== tablesTeestubeTeelounge[j+1]">
+            <p><b>{{tableTeestubeTeelounge.number}}</b></p>
+            <div *ngFor="let group of tableTeestubeTeelounge.groups"><b>{{group.personenAnzahlValue}}</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

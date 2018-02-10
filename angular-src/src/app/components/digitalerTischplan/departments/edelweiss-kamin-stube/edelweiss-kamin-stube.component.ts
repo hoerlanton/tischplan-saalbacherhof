@@ -24,7 +24,7 @@ export class EdelweissKaminStubeComponent implements OnInit {
   }
 
   getStyle(j) {
-    if (j) {
+    if (j != "Empty") {
       return "solid 3px red";
     } else {
       return "";

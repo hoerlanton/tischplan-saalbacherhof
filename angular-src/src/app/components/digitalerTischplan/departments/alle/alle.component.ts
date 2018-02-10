@@ -8,6 +8,7 @@ import { Table } from '../../../../../../Table';
 })
 export class AlleComponent implements OnInit {
 
+  @Input('tables') tables: any;
   @Input('tablesBauernstube') tablesBauernstube: Table[];
   @Input('tablesBerglerStubeHubertusStube') tablesBerglerStubeHubertusStube: Table[];
   @Input('tablesEdelweissKaminStube') tablesEdelweissKaminStube: Table[];
@@ -29,7 +30,7 @@ export class AlleComponent implements OnInit {
   }
 
   getStyle(j) {
-    if (j) {
+    if (j != "Empty") {
       return "solid 3px red";
     } else {
       return "";

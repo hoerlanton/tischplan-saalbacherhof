@@ -108,15 +108,8 @@
     </div>
     <div class="col-xs-12 col-lg-3 upload-col">
       <div class="outer-cards">
-        <h3>Im-Haus-Liste</h3>
         <app-im-haus-liste [imHausListeElemente]="imHausListeElemente">
         </app-im-haus-liste>
-        <h3>Anreise-Liste</h3>
-        <app-anreise-liste [anreiseListeElemente]="anreiseListeElemente">
-        </app-anreise-liste>
-        <h3>Traces-Liste</h3>
-        <app-traces-liste [tracesListeElemente]="tracesListeElemente">
-        </app-traces-liste>
       </div>
     </div>
 
@@ -125,7 +118,8 @@
         <div class="inner-table" style="padding: 0px 0px 0px 0px;">
           <div class="row3">
             <div class='wrapper' id="wrapper">
-              <app-departments [tablesBauernstube]="tablesBauernstube"
+              <app-departments [tables]="tables"
+                                [tablesBauernstube]="tablesBauernstube"
                                [tablesBerglerStubeHubertusStube]="tablesBerglerStubeHubertusStube"
                                [tablesEdelweissKaminStube]="tablesEdelweissKaminStube"
                                [tablesTeestubeTeelounge]="tablesTeestubeTeelounge"

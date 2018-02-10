@@ -23,9 +23,8 @@ export class TeestubeTeeloungeComponent implements OnInit {
     this.occupied.emit({table, j});
   }
 
-
   getStyle(j) {
-    if (j) {
+    if (j != "Empty") {
       return "solid 3px red";
     } else {
       return "";

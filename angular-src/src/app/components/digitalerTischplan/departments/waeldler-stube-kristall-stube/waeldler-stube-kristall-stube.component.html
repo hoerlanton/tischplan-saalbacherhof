@@ -6,244 +6,32 @@
       <div class='cards-container' id='containerWaeldlerStubeKristallStube' [ngStyle]="{'background-color': + tableWaeldlerStubeKristallStube.bgColor}">
         <div class="table" [ngStyle]="{'background-color': '#' + tableWaeldlerStubeKristallStube.bgColor}">
           <div *ngIf="tableWaeldlerStubeKristallStube.isBesetzt === 'true'">
-            <div [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].trace1)">
-            <p style="background-color: #FFFFFF; padding: 10px">
-              <b> Name:</b> {{tableWaeldlerStubeKristallStube.nameValue}}<br>
-              <b> Zimmernummer:</b> {{tableWaeldlerStubeKristallStube.zimmernummerValue}}<br>
-              <b> Anreise Datum:</b> {{tableWaeldlerStubeKristallStube.anreiseValue}}<br>
-              <b> Abreise Datum:</b> {{tableWaeldlerStubeKristallStube.abreiseValue}}<br>
-              <b> Personenanzahl:</b> {{tableWaeldlerStubeKristallStube.personenAnzahlValue}}<br>
-              <b> Notiz1:</b> {{tableWaeldlerStubeKristallStube.notiz1Value}}<br>
-              <b> Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz2Value}}<br>
-              <b> Trace:</b> {{tableWaeldlerStubeKristallStube.trace}}<br>
-              <b> Bemerkung:</b> {{tableWaeldlerStubeKristallStube.bemerkungValue}}<br>
-            </p>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.nameValue2">
-              <div [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].trace2)">
-              <p style="background-color: #FFFFFF; padding: 10px">
-                <b> Name:</b> {{tableWaeldlerStubeKristallStube.nameValue2}}<br>
-                <b> Zimmernummer:</b> {{tableWaeldlerStubeKristallStube.zimmernummerValue2}}<br>
-                <b> Anreise Datum:</b> {{tableWaeldlerStubeKristallStube.anreiseValue2}}<br>
-                <b> Abreise Datum:</b> {{tableWaeldlerStubeKristallStube.abreiseValue2}}<br>
-                <b> Personenanzahl:</b> {{tableWaeldlerStubeKristallStube.personenAnzahlValue2}}<br>
-                <b> Notiz1:</b> {{tableWaeldlerStubeKristallStube.notiz1Value2}}<br>
-                <b> Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz2Value2}}<br>
-                <b> Trace:</b> {{tableWaeldlerStubeKristallStube.trace2}}<br>
-                <b> BemerkungValue:</b> {{tableWaeldlerStubeKristallStube.bemerkungValue2}}<br>
-              </p>
+            <div *ngFor="let group of tableWaeldlerStubeKristallStube.groups | filter:term; let j = index;">
+              <div [style.border]="getStyle(group.traceValue)">
+                <div *ngIf="group.nameValue">
+                  <p style="background-color: #FFFFFF; padding: 10px">
+                    <b> Name:</b> {{group.nameValue}}<br>
+                    <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>
+                    <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
+                    <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
+                    <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
+                    <b> Nation:</b> {{group.nationValue}}<br>
+                    <b> Sprache:</b> {{group.spracheValue}}<br>
+                    <b> Preis Typ:</b> {{group.preisTypValue}}<br>
+                    <b> Reisebüro:</b> {{group.notiz1Value}}<br>
+                    <b> Kategorie:</b> {{group.kategorieValue}}<br>
+                    <b> Notiz1:</b> {{group.notiz1Value}}<br>
+                    <b> Notiz2:</b> {{group.notiz2Value}}<br>
+                    <b> Trace:</b> {{group.traceValue}}<br>
+                    <b> Bemerkung:</b> {{group.bemerkungValue}}<br>
+                  </p>
+                </div>
               </div>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.nameValue3">
-              <div [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].trace3)">
-              <p style="background-color: #FFFFFF; padding: 10px">
-                <b> Name:</b> {{tableWaeldlerStubeKristallStube.nameValue3}}<br>
-                <b> Zimmernummer:</b> {{tableWaeldlerStubeKristallStube.zimmernummerValue3}}<br>
-                <b> Anreise Datum:</b> {{tableWaeldlerStubeKristallStube.anreiseValue3}}<br>
-                <b> Abreise Datum:</b> {{tableWaeldlerStubeKristallStube.abreiseValue3}}<br>
-                <b> Personenanzahl:</b> {{tableWaeldlerStubeKristallStube.personenAnzahlValue3}}<br>
-                <b> Notiz1:</b> {{tableWaeldlerStubeKristallStube.notiz1Value3}}<br>
-                <b> Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz2Value3}}<br>
-                <b> Trace:</b> {{tableWaeldlerStubeKristallStube.trace3}}<br>
-                <b> BemerkungValue:</b> {{tableWaeldlerStubeKristallStube.bemerkungValue3}}<br>
-              </p>
+              <div *ngIf="group.newTraceName">
+                <p style="background-color: #FFFFFF; border: solid 3px red">
+                  <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}
+                </p>
               </div>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.nameValue4">
-              <div [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].trace4)">
-              <p style="background-color: #FFFFFF; padding: 10px">
-                <b> Name:</b> {{tableWaeldlerStubeKristallStube.nameValue4}}<br>
-                <b> Zimmernummer:</b> {{tableWaeldlerStubeKristallStube.zimmernummerValue4}}<br>
-                <b> Anreise Datum:</b> {{tableWaeldlerStubeKristallStube.anreiseValue4}}<br>
-                <b> Abreise Datum:</b> {{tableWaeldlerStubeKristallStube.abreiseValue4}}<br>
-                <b> Personenanzahl:</b> {{tableWaeldlerStubeKristallStube.personenAnzahlValue4}}<br>
-                <b> Notiz1:</b> {{tableWaeldlerStubeKristallStube.notiz1Value4}}<br>
-                <b> Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz1Value4}}<br>
-                <b> Trace:</b> {{tableWaeldlerStubeKristallStube.trace4}}<br>
-                <b> BemerkungValue:</b> {{tableWaeldlerStubeKristallStube.bemerkungValue4}}<br>
-              </p>
-              </div>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.nameValue5">
-              <div [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].trace5)">
-              <p style="background-color: #FFFFFF; padding: 10px">
-                <b> Name:</b> {{tableWaeldlerStubeKristallStube.nameValue5}}<br>
-                <b> Zimmernummer:</b> {{tableWaeldlerStubeKristallStube.zimmernummerValue5}}<br>
-                <b> Anreise Datum:</b> {{tableWaeldlerStubeKristallStube.anreiseValue5}}<br>
-                <b> Abreise Datum:</b> {{tableWaeldlerStubeKristallStube.abreiseValue5}}<br>
-                <b> Personenanzahl:</b> {{tableWaeldlerStubeKristallStube.personenAnzahlValue5}}<br>
-                <b> Notiz1:</b> {{tableWaeldlerStubeKristallStube.notiz1Value5}}<br>
-                <b> Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz2Value5}}<br>
-                <b> Trace:</b> {{tableWaeldlerStubeKristallStube.trace5}}<br>
-                <b> BemerkungValue:</b> {{tableWaeldlerStubeKristallStube.bemerkungValue5}}<br>
-              </p>
-              </div>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.nameValue6">
-              <div [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].trace6)">
-              <p style="background-color: #FFFFFF; padding: 10px">
-                <b> Name:</b> {{tableWaeldlerStubeKristallStube.nameValue6}}<br>
-                <b> Zimmernummer:</b> {{tableWaeldlerStubeKristallStube.zimmernummerValue6}}<br>
-                <b> Anreise Datum:</b> {{tableWaeldlerStubeKristallStube.anreiseValue6}}<br>
-                <b> Abreise Datum:</b> {{tableWaeldlerStubeKristallStube.abreiseValue6}}<br>
-                <b> Personenanzahl:</b> {{tableWaeldlerStubeKristallStube.personenAnzahlValue6}}<br>
-                <b> Notiz1:</b> {{tableWaeldlerStubeKristallStube.notiz1Value6}}<br>
-                <b> Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz2Value6}}<br>
-                <b> Trace:</b> {{tableWaeldlerStubeKristallStube.trace6}}<br>
-                <b> BemerkungValue:</b> {{tableWaeldlerStubeKristallStube.bemerkungValue6}}<br>
-              </p>
-              </div>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.nameValue7">
-              <div [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].trace7)">
-              <p style="background-color: #FFFFFF; padding: 10px">
-                <b> Name:</b> {{tableWaeldlerStubeKristallStube.nameValue7}}<br>
-                <b> Zimmernummer:</b> {{tableWaeldlerStubeKristallStube.zimmernummerValue7}}<br>
-                <b> Anreise Datum:</b> {{tableWaeldlerStubeKristallStube.anreiseValue7}}<br>
-                <b> Abreise Datum:</b> {{tableWaeldlerStubeKristallStube.abreiseValue7}}<br>
-                <b> Personenanzahl:</b> {{tableWaeldlerStubeKristallStube.personenAnzahlValue7}}<br>
-                <b> Notiz1:</b> {{tableWaeldlerStubeKristallStube.notiz1Value7}}<br>
-                <b> Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz2Value7}}<br>
-                <b> Trace:</b> {{tableWaeldlerStubeKristallStube.trace7}}<br>
-                <b> BemerkungValue:</b> {{tableWaeldlerStubeKristallStube.bemerkungValue7}}<br>
-              </p>
-              </div>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.nameValue8">
-              <div [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].trace8)">
-              <p style="background-color: #FFFFFF; padding: 10px">
-                <b> Name:</b> {{tableWaeldlerStubeKristallStube.nameValue8}}<br>
-                <b> Zimmernummer:</b> {{tableWaeldlerStubeKristallStube.zimmernummerValue8}}<br>
-                <b> Anreise Datum:</b> {{tableWaeldlerStubeKristallStube.anreiseValue8}}<br>
-                <b> Abreise Datum:</b> {{tableWaeldlerStubeKristallStube.abreiseValue8}}<br>
-                <b> Personenanzahl:</b> {{tableWaeldlerStubeKristallStube.personenAnzahlValue8}}<br>
-                <b> Notiz1:</b> {{tableWaeldlerStubeKristallStube.notiz1Value8}}<br>
-                <b> Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz2Value8}}<br>
-                <b> Trace:</b> {{tableWaeldlerStubeKristallStube.trace8}}<br>
-                <b> BemerkungValue:</b> {{tableWaeldlerStubeKristallStube.bemerkungValue8}}<br>
-              </p>
-              </div>
-            </div>
-
-            <div *ngIf="tableWaeldlerStubeKristallStube.nameValue9">
-              <div [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].trace9)">
-
-              <p style="background-color: #FFFFFF; padding: 10px">
-                <b> Name:</b> {{tableWaeldlerStubeKristallStube.nameValue9}}<br>
-                <b> Zimmernummer:</b> {{tableWaeldlerStubeKristallStube.zimmernummerValue9}}<br>
-                <b> Anreise Datum:</b> {{tableWaeldlerStubeKristallStube.anreiseValue9}}<br>
-                <b> Abreise Datum:</b> {{tableWaeldlerStubeKristallStube.abreiseValue9}}<br>
-                <b> Personenanzahl:</b> {{tableWaeldlerStubeKristallStube.personenAnzahlValue9}}<br>
-                <b> Notiz1:</b> {{tableWaeldlerStubeKristallStube.notiz1Value9}}<br>
-                <b> Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz1Value9}}<br>
-                <b> Trace:</b> {{tableWaeldlerStubeKristallStube.trace9}}<br>
-                <b> BemerkungValue:</b> {{tableWaeldlerStubeKristallStube.bemerkungValue9}}<br>
-              </p>
-              </div>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.nameValue10">
-              <div [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].trace10)">
-              <p style="background-color: #FFFFFF; padding: 10px">
-                <b> Name:</b> {{tableWaeldlerStubeKristallStube.nameValue10}}<br>
-                <b> Zimmernummer:</b> {{tableWaeldlerStubeKristallStube.zimmernummerValue10}}<br>
-                <b> Anreise Datum:</b> {{tableWaeldlerStubeKristallStube.anreiseValue10}}<br>
-                <b> Abreise Datum:</b> {{tableWaeldlerStubeKristallStube.abreiseValue10}}<br>
-                <b> Personenanzahl:</b> {{tableWaeldlerStubeKristallStube.personenAnzahlValue10}}<br>
-                <b> Notiz1:</b> {{tableWaeldlerStubeKristallStube.notiz1Value10}}<br>
-                <b> Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz2Value10}}<br>
-                <b> Trace:</b> {{tableWaeldlerStubeKristallStube.trace10}}<br>
-                <b> BemerkungValue:</b> {{tableWaeldlerStubeKristallStube.bemerkungValue10}}<br>
-              </p>
-              </div>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.nameValue11">
-              <div [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].trace11)">
-              <p style="background-color: #FFFFFF; padding: 10px">
-                <b> Name:</b> {{tableWaeldlerStubeKristallStube.nameValue11}}<br>
-                <b> Zimmernummer:</b> {{tableWaeldlerStubeKristallStube.zimmernummerValue11}}<br>
-                <b> Anreise Datum:</b> {{tableWaeldlerStubeKristallStube.anreiseValue11}}<br>
-                <b> Abreise Datum:</b> {{tableWaeldlerStubeKristallStube.abreiseValue11}}<br>
-                <b> Personenanzahl:</b> {{tableWaeldlerStubeKristallStube.personenAnzahlValue11}}<br>
-                <b> Notiz1:</b> {{tableWaeldlerStubeKristallStube.notiz1Value11}}<br>
-                <b> Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz2Value11}}<br>
-                <b> Trace:</b> {{tableWaeldlerStubeKristallStube.trace11}}<br>
-                <b> BemerkungValue:</b> {{tableWaeldlerStubeKristallStube.bemerkungValue11}}<br>
-              </p>
-              </div>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.nameValue12">
-              <div [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].trace12)">
-              <p style="background-color: #FFFFFF; padding: 10px">
-                <b> Name:</b> {{tableWaeldlerStubeKristallStube.nameValue12}}<br>
-                <b> Zimmernummer:</b> {{tableWaeldlerStubeKristallStube.zimmernummerValue12}}<br>
-                <b> Anreise Datum:</b> {{tableWaeldlerStubeKristallStube.anreiseValue12}}<br>
-                <b> Abreise Datum:</b> {{tableWaeldlerStubeKristallStube.abreiseValue12}}<br>
-                <b> Personenanzahl:</b> {{tableWaeldlerStubeKristallStube.personenAnzahlValue12}}<br>
-                <b> Notiz1:</b> {{tableWaeldlerStubeKristallStube.notiz1Value12}}<br>
-                <b> Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz2Value12}}<br>
-                <b> Trace:</b> {{tableWaeldlerStubeKristallStube.trace12}}<br>
-                <b> BemerkungValue:</b> {{tableWaeldlerStubeKristallStube.bemerkungValue12}}<br>
-              </p>
-              </div>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.nameValue13">
-              <div [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].trace13)">
-              <p style="background-color: #FFFFFF; padding: 10px">
-                <b> Name:</b> {{tableWaeldlerStubeKristallStube.nameValue13}}<br>
-                <b> Zimmernummer:</b> {{tableWaeldlerStubeKristallStube.zimmernummerValue13}}<br>
-                <b> Anreise Datum:</b> {{tableWaeldlerStubeKristallStube.anreiseValue13}}<br>
-                <b> Abreise Datum:</b> {{tableWaeldlerStubeKristallStube.abreiseValue13}}<br>
-                <b> Personenanzahl:</b> {{tableWaeldlerStubeKristallStube.personenAnzahlValue13}}<br>
-                <b> Notiz1:</b> {{tableWaeldlerStubeKristallStube.notiz1Value13}}<br>
-                <b> Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz2Value13}}<br>
-                <b> Trace:</b> {{tableWaeldlerStubeKristallStube.trace13}}<br>
-                <b> BemerkungValue:</b> {{tableWaeldlerStubeKristallStube.bemerkungValue13}}<br>
-              </p>
-              </div>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.nameValue14">
-              <div [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].trace14)">
-              <p style="background-color: #FFFFFF; padding: 10px">
-                <b> Name:</b> {{tableWaeldlerStubeKristallStube.nameValue14}}<br>
-                <b> Zimmernummer:</b> {{tableWaeldlerStubeKristallStube.zimmernummerValue14}}<br>
-                <b> Anreise Datum:</b> {{tableWaeldlerStubeKristallStube.anreiseValue14}}<br>
-                <b> Abreise Datum:</b> {{tableWaeldlerStubeKristallStube.abreiseValue14}}<br>
-                <b> Personenanzahl:</b> {{tableWaeldlerStubeKristallStube.personenAnzahlValue14}}<br>
-                <b> Notiz1:</b> {{tableWaeldlerStubeKristallStube.notiz1Value14}}<br>
-                <b> Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz2Value14}}<br>
-                <b> Trace:</b> {{tableWaeldlerStubeKristallStube.trace14}}<br>
-                <b> BemerkungValue:</b> {{tableWaeldlerStubeKristallStube.bemerkungValue14}}<br>
-              </p>
-              </div>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.nameValue15">
-              <div [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].trace15)">
-              <p style="background-color: #FFFFFF; padding: 10px">
-                <b> Name:</b> {{tableWaeldlerStubeKristallStube.nameValue15}}<br>
-                <b> Zimmernummer:</b> {{tableWaeldlerStubeKristallStube.zimmernummerValue15}}<br>
-                <b> Anreise Datum:</b> {{tableWaeldlerStubeKristallStube.anreiseValue15}}<br>
-                <b> Abreise Datum:</b> {{tableWaeldlerStubeKristallStube.abreiseValue15}}<br>
-                <b> Personenanzahl:</b> {{tableWaeldlerStubeKristallStube.personenAnzahlValue15}}<br>
-                <b> Notiz1:</b> {{tableWaeldlerStubeKristallStube.notiz1Value15}}<br>
-                <b> Notiz2:</b> {{tableWaeldlerStubeKristallStube.notiz2Value15}}<br>
-                <b> Trace:</b> {{tableWaeldlerStubeKristallStube.trace15}}<br>
-                <b> BemerkungValue:</b> {{tableWaeldlerStubeKristallStube.bemerkungValue15}}<br>
-              </p>
-              </div>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.newTraceName">
-              <p style="background-color: #FFFFFF; border: solid 3px red">
-                <b> Zimmernummer: </b>{{tableWaeldlerStubeKristallStube.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{tableWaeldlerStubeKristallStube.newTraceText}} <br> <b> Tischnummer: </b>{{tableWaeldlerStubeKristallStube.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{tableWaeldlerStubeKristallStube.newTraceEmployee}} <br> <b> Name: </b>{{tableWaeldlerStubeKristallStube.newTraceName}} <br> <b> Datum: </b>{{tableWaeldlerStubeKristallStube.newTraceDate}}
-              </p>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.newTraceName1">
-              <p style="background-color: #FFFFFF; border: solid 3px red">
-                <b> Zimmernummer: </b>{{tableWaeldlerStubeKristallStube.newTraceRoomNumber1}}<br> <b> Neuer Trace: </b>{{tableWaeldlerStubeKristallStube.newTraceText1}} <br> <b> Tischnummer: </b>{{tableWaeldlerStubeKristallStube.newTraceTableNumber1}} <br> <b> Mitarbeiter: </b>{{tableWaeldlerStubeKristallStube.newTraceEmployee1}} <br> <b> Name: </b>{{tableWaeldlerStubeKristallStube.newTraceName1}} <br> <b> Datum: </b>{{tableWaeldlerStubeKristallStube.newTraceDate1}}                            </p>
-            </div>
-            <div *ngIf="tableWaeldlerStubeKristallStube.newTraceName2">
-              <p style="background-color: #FFFFFF; border: solid 3px red">
-                <b> Zimmernummer: </b>{{tableWaeldlerStubeKristallStube.newTraceRoomNumber2}}<br> <b> Neuer Trace: </b>{{tableWaeldlerStubeKristallStube.newTraceText2}} <br> <b> Tischnummer: </b>{{tableWaeldlerStubeKristallStube.newTraceTableNumber2}} <br> <b> Mitarbeiter: </b>{{tableWaeldlerStubeKristallStube.newTraceEmployee2}} <br> <b> Name: </b>{{tableWaeldlerStubeKristallStube.newTraceName2}} <br> <b> Datum: </b>{{tableWaeldlerStubeKristallStube.newTraceDate2}}
-              </p>
             </div>
 
           </div>

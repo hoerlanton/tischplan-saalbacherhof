@@ -70,7 +70,7 @@ html, body {
   padding: 0;
   min-height: auto;
   box-sizing: border-box;
-  z-index: 0;
+  z-index: 2;
 }
 
 .row .upload-col {
@@ -80,11 +80,17 @@ html, body {
   min-height: calc(100vh - 70px);
   max-height: calc(100vh - 70px);
   border-radius: 3px;
+  z-index: 1;
 }
 
 .section3 {
   display: none;
 }
+
+.section2 {
+  display: none;
+}
+
 
 .row1 {
   height: calc((100vh - 180px) / 3);
@@ -161,8 +167,11 @@ html, body {
   position: relative;
 }
 
-.row .container-fluid .upload-col .csv h3 {
-  margin: 0;
+
+body html .row .container-fluid .upload-col .outer-cards h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #0a7a74;
 }
 
 .row1 .col {

@@ -15,8 +15,6 @@ import { FormComponent }  from './form/form.component';
 import { ImHausListeComponent } from './im-haus-liste/im-haus-liste.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { TableplanComponent } from './tableplan/tableplan.component';
-import { AnreiseListeComponent } from './anreise-liste/anreise-liste.component';
-import { TracesListeComponent } from './traces-liste/traces-liste.component';
 import { DepartmentsComponent } from './departments/departments.component';
 
 @Component({
@@ -41,10 +39,6 @@ export class TischplanComponent {
   private navigationComponent: NavigationComponent;
   @ViewChild(TableplanComponent)
   private tableplanComponent: TableplanComponent;
-  @ViewChild(AnreiseListeComponent)
-  private anreiseListeComponent: AnreiseListeComponent;
-  @ViewChild(TracesListeComponent)
-  private tracesListeComponent: TracesListeComponent;
 
   buttonBgColor1: string;
   buttonBgColor2: string;
@@ -241,8 +235,6 @@ export class TischplanComponent {
     this.departmentsComponent.addInformationToTable(dataString, arrayIndex);
     this.departmentsComponent.occupyTableOnDrop(dataString, arrayIndex);
     this.imHausListeComponent.updateImHausListeElement(informationElements2);
-    this.anreiseListeComponent.updateAnreiseListeElement(informationElements2);
-    this.tracesListeComponent.updateTracesListeElement(informationElements2);
   }
 
   private onOver(args) {
@@ -313,6 +305,7 @@ export class TischplanComponent {
       .subscribe(imHausListeElemente => {
         //console.log('IM-HAUS-LISTE before:');
         //console.log(imHausListeElemente);
+
         imHausListeElemente.sort(function (a, b) {
           if (a.name < b.name) return -1;
           if (a.name > b.name) return 1;
@@ -321,6 +314,9 @@ export class TischplanComponent {
         this.imHausListeElemente = imHausListeElemente;
         console.log('IM-HAUS-LISTE:');
         console.log(this.imHausListeElemente);
+        setTimeout(() => {
+          this.imHausListeComponent.sortList();
+        }, 3000);
       });
 
     this.tischplanService.getAnreiseListe()
