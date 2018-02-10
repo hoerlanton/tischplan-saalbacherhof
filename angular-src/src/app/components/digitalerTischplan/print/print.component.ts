@@ -38,8 +38,8 @@ export class PrintComponent implements OnInit {
   tableTemp: any[] = [];
   object: any;
   constructor() {
-    this.trace = false;
 
+    this.trace = false;
   }
 
   ngOnInit() {
@@ -50,6 +50,8 @@ export class PrintComponent implements OnInit {
 
     this.tables = tables;
     this.tableNumbers = [];
+    this.uniqueTables = [];
+    this.tableTemp = [];
 
     //(<any>Object).assign( this.photos, photos )
 
