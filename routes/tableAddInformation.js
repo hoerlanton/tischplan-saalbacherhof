@@ -40,7 +40,7 @@ module.exports = {
         console.log('informationElements2 length: -> ' + informationElements2.length);
         console.log(informationElements2);
 
-        if (informationElements2.length > 1) {
+        if (informationElements2.length > 2) {
             console.log("Liste dropped");
 
             nameValue.push(informationElements2[0].substring(1, informationElements2[0].length));
@@ -115,6 +115,7 @@ module.exports = {
         } else {
             console.log("umsetzen addInformationToTable");
             let umsetzen = JSON.parse(data);
+            console.log("umsetzen");
             console.log(umsetzen);
             for (let i = 0; i < umsetzen[0].groups.length; i++) {
                 zimmernummerValue.push(umsetzen[0].groups[i].zimmernummerValue);

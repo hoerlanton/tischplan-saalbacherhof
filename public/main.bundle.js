@@ -1242,6 +1242,8 @@ var DepartmentsComponent = (function () {
     };
     DepartmentsComponent.prototype.addInformationToTable = function (dataString, arrayIndex) {
         var _this = this;
+        console.log("dataString");
+        console.log(dataString);
         this.tischplanService.addInformationToTable(dataString)
             .subscribe(function (response) {
             // let arrayIndex = response[1];
@@ -2213,6 +2215,7 @@ var NavigationComponent = (function () {
         console.log("UMSETZTEN CALLED");
         var quellTisch = this.quellTisch;
         var zielTisch = this.zielTisch;
+        this.tableInformation = [];
         //this.umsetzenExport.emit({quellTisch, zielTisch});
         // let targetTable = this.quellTisch.zielTisch;
         // let quellTischNumber = this.quellTisch.quellTisch;
@@ -2274,6 +2277,7 @@ var NavigationComponent = (function () {
                             _this.tableInformation.push(tables[a].tables[b]);
                             console.log(_this.tableInformation);
                             _this.tableInformation.push(tableToMove);
+                            console.log(_this.tableInformation);
                         }
                     }
                 }
@@ -2296,10 +2300,10 @@ var NavigationComponent = (function () {
                     }
                 }
             }
+            console.log("this.tableInformation IIIIIIIII");
             var tableInformationExport = _this.tableInformation;
             _this.umsetzenExport.emit({ tableToMove: tableToMove, indexZiel: indexZiel, indexQuell: indexQuell, tableInformationExport: tableInformationExport });
         });
-        //this.departmentsComponent.umsetzen(this.tableInformation, index);
     };
     ;
     NavigationComponent.prototype.keyDownFunction = function (event) {

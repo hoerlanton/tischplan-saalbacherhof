@@ -113,6 +113,8 @@ export class DepartmentsComponent  {
   }
 
   addInformationToTable(dataString, arrayIndex) {
+    console.log("dataString");
+    console.log(dataString);
     this.tischplanService.addInformationToTable(dataString)
       .subscribe(response => {
         // let arrayIndex = response[1];

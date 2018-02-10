@@ -90,6 +90,7 @@ export class NavigationComponent implements OnInit {
       console.log("UMSETZTEN CALLED");
       let quellTisch = this.quellTisch;
       let zielTisch = this.zielTisch;
+      this.tableInformation = [];
       //this.umsetzenExport.emit({quellTisch, zielTisch});
 
     // let targetTable = this.quellTisch.zielTisch;
@@ -148,6 +149,7 @@ export class NavigationComponent implements OnInit {
                 this.tableInformation.push(tables[a].tables[b]);
                 console.log(this.tableInformation);
                 this.tableInformation.push(tableToMove);
+                console.log(this.tableInformation);
               }
             }
           }
@@ -170,10 +172,10 @@ export class NavigationComponent implements OnInit {
             }
           }
         }
+        console.log("this.tableInformation IIIIIIIII");
         let tableInformationExport = this.tableInformation;
         this.umsetzenExport.emit({tableToMove, indexZiel, indexQuell, tableInformationExport});
       });
-    //this.departmentsComponent.umsetzen(this.tableInformation, index);
   };
 
   keyDownFunction(event) {
