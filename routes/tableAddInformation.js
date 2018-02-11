@@ -40,7 +40,7 @@ module.exports = {
         console.log('informationElements2 length: -> ' + informationElements2.length);
         console.log(informationElements2);
 
-        if (informationElements2.length > 2) {
+        if (informationElements2.length === 14) {
             console.log("Liste dropped");
 
             nameValue.push(informationElements2[0].substring(1, informationElements2[0].length));

@@ -5,7 +5,6 @@ import { Http } from '@angular/http';
 import { OnInit } from '@angular/core';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { ImHausListe } from '../../../../ImHausListe';
-import { AnreiseListe } from '../../../../AnreiseListe';
 import { Table } from '../../../../Table';
 import { LeftValue } from '../../../../LeftValue';
 import {Pipe, PipeTransform} from '@angular/core';
@@ -58,8 +57,6 @@ export class TischplanComponent {
   dateGeneratedListe: any;
   newInformationElements: any[] = [];
   imHausListeElemente: ImHausListe[];
-  anreiseListeElemente: AnreiseListe[];
-  tracesListeElemente: any[] = [];
   tables: any[] = [];
   uniqueTables: any[] = [];
   tableNumbers: any[] = [];
@@ -139,6 +136,7 @@ export class TischplanComponent {
     this.showWaeldlerBool = false;
     this.showEdelweissBool = false;
     this.showTeeStubeBool = false;
+    this.term = "";
 
     this.tischplanService.getNotizElements()
       .subscribe(informationElemente => {
@@ -299,6 +297,9 @@ export class TischplanComponent {
       this.departmentsComponent.occupy(this.umsetzenInfoVar.tableToMove, this.umsetzenInfoVar.indexQuell);
     }, 2000);
   }
+  transform(term){
+    this.departmentsComponent.transform(term);
+  }
 
   reloadLists(){
     this.tischplanService.getImHausListe()
@@ -317,34 +318,6 @@ export class TischplanComponent {
         setTimeout(() => {
           this.imHausListeComponent.sortList();
         }, 3000);
-      });
-
-    this.tischplanService.getAnreiseListe()
-      .subscribe(anreiseListeElemente => {
-        anreiseListeElemente.sort(function (a, b) {
-          if (a.name < b.name) return -1;
-          if (a.name > b.name) return 1;
-          return 0;
-        });
-        this.anreiseListeElemente = anreiseListeElemente;
-        console.log(this.anreiseListeElemente);
-      });
-
-
-    this.tischplanService.getTracesListe()
-      .subscribe(tracesListeElemente => {
-        console.log(tracesListeElemente);
-        tracesListeElemente.sort(function (a, b) {
-          if (a.name < b.name) return -1;
-          if (a.name > b.name) return 1;
-          return 0;
-        });
-
-        //console.log("2:" + tracesListeElemente[0].data[0]);
-        //console.log(tracesListeElemente[0].data.length);
-        //this.tracesListeElemente = tracesListeElemente[0].data;
-        this.tracesListeElemente = tracesListeElemente;
-        //this.formatTracesListeElements(tracesListeElemente);
       });
   }
   updateAzList(){

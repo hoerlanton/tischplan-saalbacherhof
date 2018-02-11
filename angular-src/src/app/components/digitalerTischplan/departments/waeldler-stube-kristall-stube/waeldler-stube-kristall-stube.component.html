@@ -6,7 +6,7 @@
       <div class='cards-container' id='containerWaeldlerStubeKristallStube' [ngStyle]="{'background-color': + tableWaeldlerStubeKristallStube.bgColor}">
         <div class="table" [ngStyle]="{'background-color': '#' + tableWaeldlerStubeKristallStube.bgColor}">
           <div *ngIf="tableWaeldlerStubeKristallStube.isBesetzt === 'true'">
-            <div *ngFor="let group of tableWaeldlerStubeKristallStube.groups | filter:term; let j = index;">
+            <div *ngFor="let group of tableWaeldlerStubeKristallStube.groups; let j = index;">
               <div [style.border]="getStyle(group.traceValue)">
                 <div *ngIf="group.nameValue">
                   <p style="background-color: #FFFFFF; padding: 10px">

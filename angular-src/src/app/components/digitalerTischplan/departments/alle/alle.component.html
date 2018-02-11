@@ -1,8 +1,7 @@
 <div *ngIf="showAlleBool">
-  <div *ngFor="let table of tables | filter:term; let j = index;">
-    <div *ngIf="tablesBauernstube[j] !== tablesBauernstube[j+1]">
+  <div *ngFor="let table of tables; let j = index;">
       <h4><b> Tisch:</b>{{table.number}} </h4><br>
-      <div class='cards-container' id='containerBauernstube' [ngStyle]="{'background-color': + table.bgColor}">
+      <div class='cards-container' id='containerTables' [ngStyle]="{'background-color': + table.bgColor}">
         <div class="table" [ngStyle]="{'background-color': '#' + table.bgColor}">
           <div *ngIf="table.isBesetzt === 'true'">
             <div [style.border]="getStyle(table.traceValue)">
@@ -33,9 +32,8 @@
           </div>
         </div>
         <div *ngIf="table.placeholder === 'true'">
-          <p [dragula]='"evented-bag"' id="Bauernstube" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{table.number}} {{table.department}} {{j}}</p>
+          <p [dragula]='"evented-bag"' id="tables" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{table.number}} {{table.department}} {{j}}</p>
         </div>
       </div>
-    </div>
   </div>
 </div>

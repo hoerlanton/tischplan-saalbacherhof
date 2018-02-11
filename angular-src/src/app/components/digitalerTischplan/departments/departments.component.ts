@@ -1,6 +1,12 @@
 import { Component, OnInit, Input, ViewChild, Output, EventEmitter, Injectable, AfterViewChecked } from '@angular/core';
 import { Table } from '../../../../../Table';
 import { TischplanService } from '../../../services/tischplan.service';
+import {WaeldlerStubeKristallStubeComponent} from "./waeldler-stube-kristall-stube/waeldler-stube-kristall-stube.component";
+import {TeestubeTeeloungeComponent} from "./teestube-teelounge/teestube-teelounge.component";
+import {EdelweissKaminStubeComponent} from "./edelweiss-kamin-stube/edelweiss-kamin-stube.component";
+import {BerglerStubeHubertusStubeComponent} from "./bergler-stube-hubertus-stube/bergler-stube-hubertus-stube.component";
+import {BauernstubeComponent} from "./bauernstube/bauernstube.component";
+import {AlleComponent} from "./alle/alle.component";
 
 @Component({
   selector: 'app-departments',
@@ -41,6 +47,25 @@ export class DepartmentsComponent  {
   date: any[] = [];
   parsedDate: any[] = [];
   tablesChangeBgColorIfAnreise: any;
+
+
+  @ViewChild(AlleComponent)
+  private alleComponent: AlleComponent;
+
+  @ViewChild(WaeldlerStubeKristallStubeComponent)
+  private waeldlerStubeKristallStubeComponent: WaeldlerStubeKristallStubeComponent;
+
+  @ViewChild(TeestubeTeeloungeComponent)
+  private teestubeTeeloungeComponent: TeestubeTeeloungeComponent;
+
+  @ViewChild(EdelweissKaminStubeComponent)
+  private edelweissKaminStubeComponent: EdelweissKaminStubeComponent;
+
+  @ViewChild(BerglerStubeHubertusStubeComponent)
+  private berglerStubeHubertusStubeComponent: BerglerStubeHubertusStubeComponent;
+
+  @ViewChild(BauernstubeComponent)
+  private bauernstubeComponent: BauernstubeComponent;
 
   constructor(private tischplanService: TischplanService) {
   }
@@ -184,6 +209,10 @@ export class DepartmentsComponent  {
       console.log('=================================================changeBgColorIfAnreise');
       console.log(this.tablesChangeBgColorIfAnreise);
       this.dateTodayGenerated = new Date();
+      this.parts = [];
+      this.parsedDate = [];
+      this.date = [];
+
 
       for (let a = 0; a < this.tablesChangeBgColorIfAnreise.length; a++) {
         for (let b = 0; b < this.tablesChangeBgColorIfAnreise[a].tables.length; b++) {
@@ -208,19 +237,29 @@ export class DepartmentsComponent  {
               console.log('this.dateGenerated --->: ' + dateToday);
               if (dateToday.indexOf(this.parsedDate[0]) !== -1) {
                 if (this.tablesChangeBgColorIfAnreise[a].department === "berglerStubeHubertusStube") {
-                  this.tablesBerglerStubeHubertusStube[b].bgColor = "#0a7a74";
+                  if (this.tablesChangeBgColorIfAnreise[b]) {
+                    this.tablesBerglerStubeHubertusStube[b].bgColor = "#0a7a74";
+                  }
                 }
                 else if (this.tablesChangeBgColorIfAnreise[a].department === "Bauernstube") {
-                  this.tablesBauernstube[b].bgColor = "#0a7a74";
+                  if (this.tablesBauernstube[b]) {
+                    this.tablesBauernstube[b].bgColor = "#0a7a74";
+                  }
                 }
                 else if (this.tablesChangeBgColorIfAnreise[a].department === "waeldlerStubeKristallStube") {
-                  this.tablesWaeldlerStubeKristallStube[b].bgColor = "#0a7a74";
+                  if (this.tablesWaeldlerStubeKristallStube[b]) {
+                    this.tablesWaeldlerStubeKristallStube[b].bgColor = "#0a7a74";
+                  }
                 }
                 else if (this.tablesChangeBgColorIfAnreise[a].department === "edelweissKaminStube") {
-                  this.tablesEdelweissKaminStube[b].bgColor = "#0a7a74";
+                  if (this.tablesEdelweissKaminStube[b]) {
+                    this.tablesEdelweissKaminStube[b].bgColor = "#0a7a74";
+                  }
                 }
                 else if (this.tablesChangeBgColorIfAnreise[a].department === "teestubeTeelounge") {
-                  this.tablesTeestubeTeelounge[b].bgColor = "#0a7a74";
+                  if (this.tablesTeestubeTeelounge[b]) {
+                    this.tablesTeestubeTeelounge[b].bgColor = "#0a7a74";
+                  }
                 }
               }
             }
@@ -228,5 +267,22 @@ export class DepartmentsComponent  {
         }
       }
     }, 1000);
+  }
+
+  transform(term) {
+    if (this.showAlleBool) {
+      this.alleComponent.transform(this.tables, term);
+    } else if (this.showBauernStubnBool) {
+      this.bauernstubeComponent.transform(this.tablesBauernstube, term);
+    } else if (this.showBerglerBool) {
+      this.berglerStubeHubertusStubeComponent.transform(this.tablesBerglerStubeHubertusStube, term);
+    } else if (this.showEdelweissBool) {
+      this.edelweissKaminStubeComponent.transform(this.tablesEdelweissKaminStube, term);
+    } else if (this.showTeeStubeBool) {
+      this.teestubeTeeloungeComponent.transform(this.tablesTeestubeTeelounge, term);
+    } else if (this.showWaeldlerBool) {
+      this.waeldlerStubeKristallStubeComponent.transform(this.tablesWaeldlerStubeKristallStube, term);
+
+    }
   }
 }

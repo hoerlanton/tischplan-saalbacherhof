@@ -187,7 +187,7 @@ export class TableplanComponent implements OnInit {
   }
 
   getStyleTrace(j) {
-    if (j != "Empty") {
+    if (j != "-") {
       return "solid 3px red";
     } else {
       return "";

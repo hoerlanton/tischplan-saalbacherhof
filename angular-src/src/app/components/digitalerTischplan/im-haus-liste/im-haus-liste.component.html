@@ -2,7 +2,7 @@
 <div class="row1">
   <div class='wrapper'>
     <div *ngFor="let imHausListeElement of imHausListeElemente">
-          <div *ngIf="imHausListeElement.trace === 'Empty' && !imHausListeElement.isAnreise">
+          <div *ngIf="imHausListeElement.trace === '-' && !imHausListeElement.isAnreise">
             <div class='cards-container' id='container1' [dragula]='"evented-bag"'>
               <div class="card" id="card1" [ngStyle]="{'background-color': '#' + imHausListeElement.bgColor}">
             <p> <b>Name:</b> {{imHausListeElement.name}}<br>
@@ -64,7 +64,7 @@
 <div class="row1">
   <div class='wrapper'>
     <div *ngFor="let imHausListeElement of imHausListeElemente">
-          <div *ngIf="imHausListeElement.trace != 'Empty'">
+          <div *ngIf="imHausListeElement.trace != '-'">
             <div class='cards-container' id='container3' [dragula]='"evented-bag"'>
               <div class="card" id="card3" [ngStyle]="{'background-color': '#' + imHausListeElement.bgColor}">
             <p> <b>Name:</b> {{imHausListeElement.name}}<br>
