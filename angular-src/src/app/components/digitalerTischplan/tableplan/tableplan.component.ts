@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, AfterViewChecked } from '@angular/core';
 import { Table } from '../../../../../Table';
 import { TischplanService } from '../../../services/tischplan.service';
 
@@ -7,7 +7,7 @@ import { TischplanService } from '../../../services/tischplan.service';
   templateUrl: 'tableplan.component.html',
   styleUrls: ['../tischplan.component.css']
 })
-export class TableplanComponent implements OnInit {
+export class TableplanComponent implements AfterViewChecked {
 
   @Input('tables') tables: Table[];
   @Input('dateGeneratedListe') dateGeneratedListe: string;
@@ -40,6 +40,16 @@ export class TableplanComponent implements OnInit {
   buttonHinzufuegen: string;
   buttonEntfernen: string;
   trace: boolean;
+  erwBauernstube: any[] = [];
+  kiBauernstube: any[] = [];
+  erwEdelweiss: any[] = [];
+  kiEdelweiss: any[] = [];
+  erwWaeldlerStubeKristallStube: any[] = [];
+  kiWaeldlerStubeKristallStube: any[] = [];
+  erwBerglerStubeHubertusStube: any[] = [];
+  kiBerglerStubeHubertusStube: any[] = [];
+  erwTeestubeTeelounge: any[] = [];
+  kiTeestubeTeelounge: any[] = [];
 
   constructor(private tischplanService: TischplanService) {
     this.buttonMoveTable = "ff0000";
@@ -49,8 +59,9 @@ export class TableplanComponent implements OnInit {
     this.trace = false;
   }
 
-  ngOnInit() {
-  }
+  ngAfterViewChecked() {
+    this.sumUpPersonenAnzahl();
+    }
 
   addTable(table, j) {
 
@@ -193,5 +204,125 @@ export class TableplanComponent implements OnInit {
       return "";
     }
   }
+
+  sumUpPersonenAnzahl(){
+    console.log("sumUpPersonenAnzahl called");
+    if (this.tablesTeestubeTeelounge) {
+      for (let p = 0; p < this.tablesTeestubeTeelounge.length; p++) {
+        this.erwTeestubeTeelounge[p] = 0;
+        this.kiTeestubeTeelounge[p] = 0;
+        if (this.tablesTeestubeTeelounge[p].groups) {
+          for (let g = 0; g < this.tablesTeestubeTeelounge[p].groups.length; g++) {
+            if (this.tablesTeestubeTeelounge[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesTeestubeTeelounge[p].groups[g].personenAnzahlValue.match(/\d+/g);
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.erwTeestubeTeelounge[p] = this.erwTeestubeTeelounge[p] + Number(erwKi[0]);
+                //console.log(this.erw[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.kiTeestubeTeelounge[p] = this.kiTeestubeTeelounge[p] + Number(erwKi[1]);
+                //console.log(this.ki[p]);
+              }
+            }
+          }
+        }
+      }
+    }
+    if (this.tablesEdelweissKaminStube) {
+      for (let p = 0; p < this.tablesEdelweissKaminStube.length; p++) {
+        this.erwEdelweiss[p] = 0;
+        this.kiEdelweiss[p] = 0;
+        if (this.tablesEdelweissKaminStube[p].groups) {
+          for (let g = 0; g < this.tablesEdelweissKaminStube[p].groups.length; g++) {
+            if (this.tablesEdelweissKaminStube[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesEdelweissKaminStube[p].groups[g].personenAnzahlValue.match(/\d+/g);
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.erwEdelweiss[p] = this.erwEdelweiss[p] + Number(erwKi[0]);
+                //console.log(this.erw[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.kiEdelweiss[p] = this.kiEdelweiss[p] + Number(erwKi[1]);
+                //console.log(this.ki[p]);
+              }
+            }
+          }
+        }
+      }
+    }
+    if (this.tablesBauernstube) {
+      for (let p = 0; p < this.tablesBauernstube.length; p++) {
+        this.erwBauernstube[p] = 0;
+        this.kiBauernstube[p] = 0;
+        if (this.tablesBauernstube[p].groups) {
+          for (let g = 0; g < this.tablesBauernstube[p].groups.length; g++) {
+            if (this.tablesBauernstube[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesBauernstube[p].groups[g].personenAnzahlValue.match(/\d+/g);
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.erwBauernstube[p] = this.erwBauernstube[p] + Number(erwKi[0]);
+                //console.log(this.erw[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.kiBauernstube[p] = this.kiBauernstube[p] + Number(erwKi[1]);
+                //console.log(this.ki[p]);
+              }
+            }
+          }
+        }
+      }
+    }
+    if (this.tablesBerglerStubeHubertusStube) {
+      for (let p = 0; p < this.tablesBerglerStubeHubertusStube.length; p++) {
+        this.erwBerglerStubeHubertusStube[p] = 0;
+        this.kiBerglerStubeHubertusStube[p] = 0;
+        if (this.tablesBerglerStubeHubertusStube[p].groups) {
+          for (let g = 0; g < this.tablesBerglerStubeHubertusStube[p].groups.length; g++) {
+            if (this.tablesBerglerStubeHubertusStube[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesBerglerStubeHubertusStube[p].groups[g].personenAnzahlValue.match(/\d+/g);
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.erwBerglerStubeHubertusStube[p] = this.erwBerglerStubeHubertusStube[p] + Number(erwKi[0]);
+                //console.log(this.erw[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.kiBerglerStubeHubertusStube[p] = this.kiBerglerStubeHubertusStube[p] + Number(erwKi[1]);
+                //console.log(this.ki[p]);
+              }
+            }
+          }
+        }
+      }
+    }
+    if (this.tablesWaeldlerStubeKristallStube) {
+      for (let p = 0; p < this.tablesWaeldlerStubeKristallStube.length; p++) {
+        this.erwWaeldlerStubeKristallStube[p] = 0;
+        this.kiWaeldlerStubeKristallStube[p] = 0;
+        if (this.tablesWaeldlerStubeKristallStube[p].groups) {
+          for (let g = 0; g < this.tablesWaeldlerStubeKristallStube[p].groups.length; g++) {
+            if (this.tablesWaeldlerStubeKristallStube[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesWaeldlerStubeKristallStube[p].groups[g].personenAnzahlValue.match(/\d+/g);
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.erwWaeldlerStubeKristallStube[p] = this.erwWaeldlerStubeKristallStube[p] + Number(erwKi[0]);
+                //console.log(this.erw[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.kiWaeldlerStubeKristallStube[p] = this.kiWaeldlerStubeKristallStube[p] + Number(erwKi[1]);
+                //console.log(this.ki[p]);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 
 }
