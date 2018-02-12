@@ -25,27 +25,27 @@ export class ImHausListeComponent implements OnInit {
     this.tischplanService.updateImHausListeElement(informationElements2)
       .subscribe(response => {
         //this.imHausListeElemente = response;
-        console.log('updateImHausListeElement response: ');
-        console.log(response);
+        //console.log('updateImHausListeElement response: ');
+        //console.log(response);
       });
   }
 
   sortList() {
     this.dateTodayGenerated = new Date();
     let dateToday = String(this.dateTodayGenerated).substring(0, 15);
-    console.log("===========================ANREISEN===============================");
-    console.log(dateToday);
+    //console.log("===========================ANREISEN===============================");
+    //console.log(dateToday);
     for (let i = 0; i < this.imHausListeElemente.length; i++) {
       this.imHausListeElemente[i].isAnreise = false;
       if (this.imHausListeElemente[i].anreise) {
         this.parts = this.imHausListeElemente[i].anreise.match(/(\d+)/g);
-        console.log(this.parts);
+        //console.log(this.parts);
       }
       if (this.parts) {
         this.date = new Date(2018, this.parts[1] - 1, this.parts[0]);
-        console.log(this.date);
+        //console.log(this.date);
         this.parsedDate = String(this.date).substring(0, 15);
-        console.log(this.parsedDate);
+        //console.log(this.parsedDate);
       }
       if (dateToday.indexOf(this.parsedDate) !== -1) {
         this.imHausListeElemente[i].isAnreise = true;

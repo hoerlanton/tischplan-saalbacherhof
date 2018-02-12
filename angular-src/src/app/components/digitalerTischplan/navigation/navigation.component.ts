@@ -31,8 +31,20 @@ export class NavigationComponent implements OnInit {
   tableInformation: any[] = [];
   @Output()
   reloadLists:EventEmitter<any> = new EventEmitter();
+  printToCart1Button: string;
+  printToCart2Button: string;
+  printToCart3Button: string;
+  abreiseAbbrechenButton: string;
+  abreiseAusfuehrenButton: string;
 
-  constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, public authService: AuthService, private router: Router) { }
+  constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, public authService: AuthService, private router: Router) {
+
+    this.printToCart1Button = "ffffff";
+    this.printToCart2Button = "ffffff";
+    this.printToCart3Button = "ffffff";
+    this.abreiseAbbrechenButton = "ffffff";
+    this.abreiseAusfuehrenButton = "ff0000";
+  }
 
   ngOnInit() {
   }
@@ -266,4 +278,78 @@ export class NavigationComponent implements OnInit {
     return false;
   }
 
+  mouseEnterprintToCart1Button() {
+    //console.log("mouse enter : ");
+    if (this.printToCart1Button === "ffffff") {
+      //console.log('mouse enter1 :');
+      this.printToCart1Button = "cfcfcf";
+    }
+  }
+
+  mouseLeaveprintToCart1Button() {
+    if (this.printToCart1Button === "cfcfcf") {
+      //console.log('mouse leave1 :');
+      this.printToCart1Button = "ffffff";
+    }
+  }
+
+  mouseEnterprintToCart2Button() {
+    //console.log("mouse enter : ");
+    if (this.printToCart2Button === "ffffff") {
+      //console.log('mouse enter1 :');
+      this.printToCart2Button = "cfcfcf";
+    }
+  }
+
+  mouseLeaveprintToCart2Button() {
+    if (this.printToCart2Button === "cfcfcf") {
+      //console.log('mouse leave1 :');
+      this.printToCart2Button = "ffffff";
+    }
+  }
+
+  mouseEnterprintToCart3Button() {
+    //console.log("mouse enter : ");
+    if (this.printToCart3Button === "ffffff") {
+      //console.log('mouse enter1 :');
+      this.printToCart3Button = "cfcfcf";
+    }
+  }
+
+  mouseLeaveprintToCart3Button() {
+    if (this.printToCart3Button === "cfcfcf") {
+      //console.log('mouse leave1 :');
+      this.printToCart3Button = "ffffff";
+    }
+  }
+
+  mouseEnterAbreiseAusfuehrenButton() {
+    //console.log("mouse enter : ");
+    if (this.abreiseAusfuehrenButton === "ff0000") {
+      //console.log('mouse enter1 :');
+      this.abreiseAusfuehrenButton = "a00000";
+    }
+  }
+
+  mouseLeaveAbreiseAusfuehrenButton() {
+    if (this.abreiseAusfuehrenButton === "a00000") {
+      //console.log('mouse leave1 :');
+      this.abreiseAusfuehrenButton = "ff0000";
+    }
+  }
+
+  mouseEnterAbreiseAbbrechenButton() {
+    //console.log("mouse enter : ");
+    if (this.abreiseAbbrechenButton === "ffffff") {
+      //console.log('mouse enter1 :');
+      this.abreiseAbbrechenButton = "cfcfcf";
+    }
+  }
+
+  mouseLeaveAbreiseAbbrechenButton() {
+    if (this.abreiseAbbrechenButton === "cfcfcf") {
+      //console.log('mouse leave1 :');
+      this.abreiseAbbrechenButton = "ffffff";
+    }
+  }
 }

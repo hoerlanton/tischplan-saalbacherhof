@@ -69,15 +69,15 @@ export class PrintComponent implements OnInit {
         };
           //console.log(this.tables[i].number);
           this.object = Object.assign(this.tables[i].groups[j], tempObject);
-          console.log("this.object");
-          console.log(this.object);
+          //console.log("this.object");
+          //console.log(this.object);
           this.tableTemp.push(this.object);
         }
       }
     }
 
-    console.log("this.tableTemp");
-    console.log(this.tableTemp);
+    //console.log("this.tableTemp");
+    //console.log(this.tableTemp);
 
 
     this.tables =  this.tableTemp.sort(function(a, b) {
@@ -118,11 +118,11 @@ export class PrintComponent implements OnInit {
     this.getTablesOccupied.emit(this.tablesOccupied);
     this.getTablesforAzListe.emit(this.tables);
 
-    console.log(this.tableTemp);
-    console.log(this.tables);
-    console.log("this.tablesOccupied" + this.tablesOccupied);
+    //console.log(this.tableTemp);
+    //console.log(this.tables);
+    //console.log("this.tablesOccupied" + this.tablesOccupied);
 
-    console.log(tables);
+    //console.log(tables);
 
     /*
     function filterByID(obj) {

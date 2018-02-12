@@ -7,11 +7,11 @@
         <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle"><i class="fa fa-print" aria-hidden="true"></i><span class="caret"></span>
         </button>
         <ul *dropdownMenu class="dropdown-menu" style="height: auto; padding: 0" role="menu">
-          <li class="printToCart1" (click)="printToCart1('printSectionId1')" style=" display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px; padding: 10px" class="printToCart1">Tisch Übersicht Drucken</li>
+          <li class="printToCart1" (click)="printToCart1('printSectionId1')" (mouseenter)="mouseEnterprintToCart1Button()"  (mouseleave)="mouseLeaveprintToCart1Button()" [ngStyle]="{'background-color': '#' + printToCart1Button}"  style=" display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 0px; padding: 10px; width:200px;" >Tisch Übersicht Drucken</li>
           <li class="divider dropdown-divider" style="margin: 0"></li>
-          <li class="printToCart2" (click)="printToCart2('printSectionId2')" style="text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px; padding: 10px" class="printToCart2">Tisch Plan Drucken</li>
+          <li class="printToCart2" (click)="printToCart2('printSectionId2')" (mouseenter)="mouseEnterprintToCart2Button()"  (mouseleave)="mouseLeaveprintToCart2Button()" [ngStyle]="{'background-color': '#' + printToCart2Button}"  style="text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 0px; padding: 10px; width:200px;" class="printToCart2">Tisch Plan Drucken</li>
           <li class="divider dropdown-divider" style="margin: 0"></li>
-          <li class="printToCart3" (click)="printToCart3('printSectionId3')" style="text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 20px; padding: 10px" class="printToCart3">A-Z Liste Drucken</li>
+          <li class="printToCart3" (click)="printToCart3('printSectionId3')" (mouseenter)="mouseEnterprintToCart3Button()"  (mouseleave)="mouseLeaveprintToCart3Button()" [ngStyle]="{'background-color': '#' + printToCart3Button}"  style="text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 0px; padding: 10px; width:200px;" class="printToCart3">A-Z Liste Drucken</li>
         </ul>
       </div>
       <div class="btn-group" dropdown>
@@ -33,9 +33,9 @@
         <button dropdownToggle class="btn btn-primary dropdown-toggle" type="button">Abreisen entfernen <i class="fa fa-calendar-check-o" aria-hidden="true"></i><span class="caret"></span>
         </button>
         <ul *dropdownMenu class="dropdown-menu" role="menu" style="max-height: 100px; padding: 0">
-          <li role="menuitem" class="menuitem" style="color: black;">Abbrechen</li>
+          <li role="menuitem" class="menuitem" (mouseenter)="mouseEnterAbreiseAbbrechenButton()"  (mouseleave)="mouseLeaveAbreiseAbbrechenButton()" [ngStyle]="{'background-color': '#' + abreiseAbbrechenButton}" style="color: black;">Abbrechen</li>
           <li class="divider dropdown-divider" style="margin: 0"></li>
-          <li role="menuitem" class="menuitem" style="background-color: red; color: white;" (click)="dispenseIfAbreise()"><b> Abreisen für Morgen entfernen</b></li>
+          <li role="menuitem" class="menuitem" style="background-color: red; color: white;" (mouseenter)="mouseEnterAbreiseAusfuehrenButton()"  (mouseleave)="mouseLeaveAbreiseAusfuehrenButton()" [ngStyle]="{'background-color': '#' + abreiseAusfuehrenButton}" style="color: white;" (click)="dispenseIfAbreise()"><b> Abreisen für Morgen entfernen</b></li>
           <li class="divider dropdown-divider" style="margin: 0"></li>
         </ul>
       </div>
