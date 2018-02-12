@@ -58,17 +58,61 @@ module.exports = {
                 trace[counter - 1] = imHausListeData.data[accessorNameH].w;
                 continue;
             } else {
-                if (imHausListeData.data[accessorNameA]) name.push(imHausListeData.data[accessorNameA].w);
-                if (imHausListeData.data[accessorNameC]) nation.push(imHausListeData.data[accessorNameC].w);
-                if (imHausListeData.data[accessorNameD]) sprache.push(imHausListeData.data[accessorNameD].w);
-                if (imHausListeData.data[accessorNameE]) zimmerNummer.push(imHausListeData.data[accessorNameE].w);
-                if (imHausListeData.data[accessorNameF]) kat.push(imHausListeData.data[accessorNameF].w);
-                if (imHausListeData.data[accessorNameG]) pTyp.push(imHausListeData.data[accessorNameG].w);
-                if (imHausListeData.data[accessorNameH]) anreise.push(imHausListeData.data[accessorNameH].w);
-                if (imHausListeData.data[accessorNameI]) abreise.push(imHausListeData.data[accessorNameI].w);
-                if (imHausListeData.data[accessorNameJ]) erwKi.push(imHausListeData.data[accessorNameJ].w);
-                if (imHausListeData.data[accessorNameK]) rbSou.push(imHausListeData.data[accessorNameK].w);
-                if (imHausListeData.data[accessorNameL]) notiz2.push(imHausListeData.data[accessorNameL].w);
+                if (imHausListeData.data[accessorNameA]) {
+                    name.push(imHausListeData.data[accessorNameA].w);
+                } else {
+                    name.push("-");
+                }
+                if (imHausListeData.data[accessorNameC]) {
+                    nation.push(imHausListeData.data[accessorNameC].w);
+                } else {
+                    nation.push("-");
+                }
+                if (imHausListeData.data[accessorNameD]) {
+                    sprache.push(imHausListeData.data[accessorNameD].w);
+                } else {
+                    sprache.push("-");
+                }
+                if (imHausListeData.data[accessorNameE]) {
+                    zimmerNummer.push(imHausListeData.data[accessorNameE].w);
+                } else {
+                    zimmerNummer.push("-");
+                }
+                if (imHausListeData.data[accessorNameF]) {
+                    kat.push(imHausListeData.data[accessorNameF].w);
+                } else {
+                    kat.push("-");
+                }
+                if (imHausListeData.data[accessorNameG]) {
+                    pTyp.push(imHausListeData.data[accessorNameG].w);
+                } else {
+                    pTyp.push("-");
+                }
+                if (imHausListeData.data[accessorNameH]) {
+                    anreise.push(imHausListeData.data[accessorNameH].w);
+                } else {
+                    anreise.push("-");
+                }
+                if (imHausListeData.data[accessorNameI]) {
+                    abreise.push(imHausListeData.data[accessorNameI].w);
+                } else {
+                    abreise.push("-");
+                }
+                if (imHausListeData.data[accessorNameJ]) {
+                    erwKi.push(imHausListeData.data[accessorNameJ].w);
+                } else {
+                    erwKi.push("-");
+                }
+                if (imHausListeData.data[accessorNameK]) {
+                    rbSou.push(imHausListeData.data[accessorNameK].w);
+                } else {
+                    rbSou.push("-");
+                }
+                if (imHausListeData.data[accessorNameL]) {
+                    notiz2.push(imHausListeData.data[accessorNameL].w);
+                } else {
+                    notiz2.push("-");
+                }
                 trace.push("Empty");
             }
                 counter++;
