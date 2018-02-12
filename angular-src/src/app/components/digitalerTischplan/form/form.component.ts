@@ -37,6 +37,7 @@ export class FormComponent implements OnInit {
   notizInput: string;
   departmentNotizInput: string;
   departments: any[] = [];
+  notizDate: any;
 
   constructor(private tischplanService: TischplanService, private _flashMessagesService: FlashMessagesService) {
     this.departments = ["Bauernstube", "BerglerStubeHubertusStube", "EdelweissKaminStube", "WaeldlerStubeKristallStube", "TeestubeTeelounge" ];
@@ -124,9 +125,13 @@ export class FormComponent implements OnInit {
   }
   sendNotiz(event) {
     event.preventDefault();
+
+    this.notizDate = String(new Date()).substring(0, 15);
+
     let newNotiz = {
       notizInput: this.notizInput,
       departmentNotizInput: this.departmentNotizInput,
+      date: this.notizDate
     };
     if (newNotiz.notizInput === undefined) {
       this._flashMessagesService.show('Die Nachricht ist leer ... ',
