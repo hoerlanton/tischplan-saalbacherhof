@@ -8,7 +8,7 @@ module.exports = {
 //JSON string is parsed to a JSON object
 
         console.log("JSON.stringify(req.body)");
-        //console.log(JSON.stringify(req.body));
+        console.log(JSON.stringify(req.body));
 
         let imHausListeData = {
             data: "",
@@ -29,12 +29,17 @@ module.exports = {
         let erwKi = [];
         let rbSou = [];
         let notiz2 = [];
+        let notiz1 = [];
+        let bemerkung = [];
         let trace = [];
+        let preis = [];
+        let vip = [];
+        let resStatus = [];
         let counter = 0;
         console.log(imHausListeData.data.length);
         //console.log(imHausListeData.data);
-
-        for (let row = 22; row < 10000; row += 3 ) {
+        let row = 21;
+        for (row; row < 10000; row += 2) {
             let accessorNameA = "A" + row;
             let accessorNameC = "C" + row;
             let accessorNameD = "D" + row;
@@ -45,18 +50,47 @@ module.exports = {
             let accessorNameI = "I" + row;
             let accessorNameJ = "J" + row;
             let accessorNameK = "K" + row;
-            let accessorNameL = "L" + row;
 
             //console.log(accessorNameA);
             //console.log(accessorNameC);
 
-            if (imHausListeData.data[accessorNameA] == null) {
-                break;
-            } else if (imHausListeData.data[accessorNameA].w === "Traces:" && !imHausListeData.data[accessorNameH]) {
-                continue;
-            } else if (imHausListeData.data[accessorNameA].w === "Traces:" && imHausListeData.data[accessorNameH]) {
-                trace[counter - 1] = imHausListeData.data[accessorNameH].w;
-                continue;
+            if (imHausListeData.data[accessorNameA] === "Gesamt:") { break; }
+            //console.log(imHausListeData.data[accessorNameC]);
+            if (imHausListeData.data[accessorNameA] == null && imHausListeData.data[accessorNameC] == null && imHausListeData.data[accessorNameD] == null) {continue;}
+            if (imHausListeData.data[accessorNameI] == null) {
+                if(imHausListeData.data[accessorNameA]) {
+                    if (imHausListeData.data[accessorNameA].w === "Notiz 1" && imHausListeData.data[accessorNameD]) {
+                        notiz1[counter - 1] = imHausListeData.data[accessorNameD].w;
+                    } else {
+                        notiz1.push("-");
+                    }
+                    if (imHausListeData.data[accessorNameA].w === "Notiz 2" && imHausListeData.data[accessorNameD]) {
+                        notiz2[counter -1] = imHausListeData.data[accessorNameD].w;
+                    } else {
+                        notiz2.push("-");
+                    }
+                    //console.log(imHausListeData.data[accessorNameA].w);
+                    //console.log(imHausListeData.data[accessorNameD]);
+                    if (imHausListeData.data[accessorNameA].w === "Bemerkung" && imHausListeData.data[accessorNameD]) {
+                        bemerkung[counter-1] = imHausListeData.data[accessorNameD].w;
+                    } else {
+                        bemerkung.push("-");
+                    }
+                    if(imHausListeData.data[accessorNameA]) {
+                        if (imHausListeData.data[accessorNameA].w === "Traces:" && imHausListeData.data[accessorNameH]) {
+                            //console.log(imHausListeData.data[accessorNameH]);
+                            trace[counter-1] = imHausListeData.data[accessorNameH].w;
+                            console.log(imHausListeData.data["H" + (row + 2)]);
+                            if (imHausListeData.data["H" + (row + 2)] != null) {
+                                trace[counter-1] += ", " + imHausListeData.data["H" + (row + 2)].w;
+                            } else {
+                                row += 1;
+                            }
+                        } else {
+                            trace.push("-");
+                        }
+                    }
+                }
             } else {
                 if (imHausListeData.data[accessorNameA]) {
                     name.push(imHausListeData.data[accessorNameA].w);
@@ -64,64 +98,60 @@ module.exports = {
                     name.push("-");
                 }
                 if (imHausListeData.data[accessorNameC]) {
-                    nation.push(imHausListeData.data[accessorNameC].w);
-                } else {
-                    nation.push("-");
-                }
-                if (imHausListeData.data[accessorNameD]) {
-                    sprache.push(imHausListeData.data[accessorNameD].w);
-                } else {
-                    sprache.push("-");
-                }
-                if (imHausListeData.data[accessorNameE]) {
-                    zimmerNummer.push(imHausListeData.data[accessorNameE].w);
+                    zimmerNummer.push(imHausListeData.data[accessorNameC].w);
                 } else {
                     zimmerNummer.push("-");
                 }
-                if (imHausListeData.data[accessorNameF]) {
-                    kat.push(imHausListeData.data[accessorNameF].w);
+                if (imHausListeData.data[accessorNameD]) {
+                    kat.push(imHausListeData.data[accessorNameD].w);
                 } else {
                     kat.push("-");
                 }
-                if (imHausListeData.data[accessorNameG]) {
-                    pTyp.push(imHausListeData.data[accessorNameG].w);
-                } else {
-                    pTyp.push("-");
-                }
-                if (imHausListeData.data[accessorNameH]) {
-                    anreise.push(imHausListeData.data[accessorNameH].w);
+                if (imHausListeData.data[accessorNameE]) {
+                    anreise.push(imHausListeData.data[accessorNameE].w);
                 } else {
                     anreise.push("-");
                 }
-                if (imHausListeData.data[accessorNameI]) {
-                    abreise.push(imHausListeData.data[accessorNameI].w);
+                if (imHausListeData.data[accessorNameF]) {
+                    abreise.push(imHausListeData.data[accessorNameF].w);
                 } else {
                     abreise.push("-");
                 }
-                if (imHausListeData.data[accessorNameJ]) {
-                    erwKi.push(imHausListeData.data[accessorNameJ].w);
+                if (imHausListeData.data[accessorNameG]) {
+                    erwKi.push(imHausListeData.data[accessorNameG].w);
                 } else {
                     erwKi.push("-");
                 }
+                if (imHausListeData.data[accessorNameH]) {
+                    pTyp.push(imHausListeData.data[accessorNameH].w);
+                } else {
+                    pTyp.push("-");
+                }
+                if (imHausListeData.data[accessorNameI]) {
+                    preis.push(imHausListeData.data[accessorNameI].w);
+                } else {
+                    preis.push("-");
+                }
+                if (imHausListeData.data[accessorNameJ]) {
+                    vip.push(imHausListeData.data[accessorNameJ].w);
+                } else {
+                    vip.push("-");
+                }
                 if (imHausListeData.data[accessorNameK]) {
-                    rbSou.push(imHausListeData.data[accessorNameK].w);
+                    resStatus.push(imHausListeData.data[accessorNameK].w);
                 } else {
-                    rbSou.push("-");
+                    resStatus.push("-");
                 }
-                if (imHausListeData.data[accessorNameL]) {
-                    notiz2.push(imHausListeData.data[accessorNameL].w);
-                } else {
-                    notiz2.push("-");
-                }
-                trace.push("Empty");
-            }
                 counter++;
-        }
+            }
+
+            }
+
 
 
         console.log("trace");
         //console.log(JSON.stringify(name));
-        console.log(JSON.stringify(trace));
+        //console.log(JSON.stringify(trace));
         //console.log(nation);
 
         for (let i = 0; i < counter; i++) {
@@ -130,21 +160,23 @@ module.exports = {
 
             imHausListe.push({
                 "name": name[i],
-                "nation": nation[i],
-                "sprache": sprache[i],
                 "zimmernummer": zimmerNummer[i],
                 "kat": kat[i],
-                "pTyp": pTyp[i],
                 "anreise": anreise[i],
                 "abreise": abreise[i],
                 "erwKi": erwKi[i],
-                "rbSou": rbSou[i],
+                "pTyp": pTyp[i],
+                "preis": preis[i],
+                "vip": vip[i],
+                "resStatus": resStatus[i],
+                "notiz1": notiz1[i],
                 "notiz2": notiz2[i],
+                "bemerkung": bemerkung[i],
                 "trace": trace[i]
             });
         };
 
-        //console.log(imHausListe);
+        console.log(JSON.stringify(imHausListe));
 
         //+3 ist nächste Zeile
         //Wenn A+3 === Traces: && H+3 != „null“ dann Trace gehört zu A-3

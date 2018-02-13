@@ -112,7 +112,7 @@ app.post("/upload", upload.array("uploads[]", 12), function (req, res) {
     //console.log(JSON.stringify(workbook.Workbook));
     /* DO SOMETHING WITH workbook HERE */
     imHausListe = JSON.stringify(workbook.Sheets[workbook.SheetNames[0]]);
-    //console.log(JSON.stringify(workbook2));
+    console.log(imHausListe);
     postImHausListeToDB();
 });
     //data = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]], {header:1});
