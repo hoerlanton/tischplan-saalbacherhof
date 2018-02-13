@@ -60,8 +60,8 @@ export class TableplanComponent implements AfterViewChecked {
   }
 
   ngAfterViewChecked() {
-    this.sumUpPersonenAnzahl();
-    }
+
+  }
 
   addTable(table, j) {
 

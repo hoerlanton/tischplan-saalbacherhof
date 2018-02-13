@@ -233,6 +233,7 @@ export class TischplanComponent {
     this.departmentsComponent.addInformationToTable(dataString, arrayIndex);
     this.departmentsComponent.occupyTableOnDrop(dataString, arrayIndex);
     this.imHausListeComponent.updateImHausListeElement(informationElements2);
+    this.tableplanComponent.sumUpPersonenAnzahl();
   }
 
   private onOver(args) {
@@ -370,6 +371,9 @@ export class TischplanComponent {
         this.changeBgColorIfAnreise();
         this.printComponent.formatAzListe(this.tables);
         //this.dispenseIfAbreise(tables);
+        setTimeout(() => {
+          this.tableplanComponent.sumUpPersonenAnzahl();
+        }, 1000);
 
       });
   }

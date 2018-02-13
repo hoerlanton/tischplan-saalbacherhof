@@ -40,7 +40,7 @@ module.exports = {
         console.log('informationElements2 length: -> ' + informationElements2.length);
         console.log(informationElements2);
 
-        if (informationElements2.length === 14) {
+        if (informationElements2.length > 12) {
             console.log("Liste dropped");
 
             nameValue.push(informationElements2[0].substring(1, informationElements2[0].length));
@@ -55,8 +55,8 @@ module.exports = {
             reisebueroValue.push(informationElements2[9].substring(1, informationElements2[9].length));
             notiz1Value.push(informationElements2[10].substring(1, informationElements2[10].length));
             notiz2Value.push(informationElements2[11].substring(1, informationElements2[11].length));
-            traceValue.push(informationElements2[12].substring(1, informationElements2[12].length));
-            bemerkungValue.push(informationElements2[13].substring(1, informationElements2[13].length));
+            traceValue.push(informationElements2[informationElements2.length - 3].substring(1, informationElements2[informationElements2.length - 3].length));
+            bemerkungValue.push(informationElements2[informationElements2.length - 2].substring(1, informationElements2[informationElements2.length - 2].length));
 
             departmentValue = informationElements2[informationElements2.length - 1].substring(1, informationElements2[informationElements2.length - 1].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
             tableValueArray = informationElements2[informationElements2.length - 1].toString().match(/\d+/);
@@ -81,7 +81,7 @@ module.exports = {
             else if (departmentValue === "TeestubeTeelounge") {
                 departmentValueDB = "teestubeTeelounge";
             }
-
+            setTimeout(function () {
                 db.hubertusTables.update(
                     {
                         department: departmentValueDB,
@@ -112,6 +112,7 @@ module.exports = {
                         }
                         console.log("addInformationToTable updated successfully");
                     });
+            }, 200);
         } else {
             console.log("umsetzen addInformationToTable");
             let umsetzen = JSON.parse(data);
@@ -187,20 +188,20 @@ module.exports = {
                         }
                     });
             }, 200);
-            setTimeout(function () {
-                db.hubertusTables.find(
-                    {
-                        department: departmentValueDB,
-                        "tables.number": tableValue
-                    }, function (err, tables) {
-                        if (err) {
-                            res.send(err);
-                        }
-                        res.json(tables);
-                        console.log("Add information to table response");
-                        console.log(JSON.stringify(tables));
-                    });
-            }, 1000);
         }
+        setTimeout(function () {
+            db.hubertusTables.find(
+                {
+                    department: departmentValueDB,
+                    "tables.number": tableValue
+                }, function (err, tables) {
+                    if (err) {
+                        res.send(err);
+                    }
+                    res.json(tables);
+                    console.log("Add information to table response");
+                    console.log(JSON.stringify(tables));
+                });
+        }, 1000);
     }
 };
