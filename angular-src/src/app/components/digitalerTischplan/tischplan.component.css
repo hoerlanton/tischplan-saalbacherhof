@@ -97,7 +97,7 @@ span {
 
 
 .row1 {
-  height: calc((100vh - 180px) / 3);
+  height: calc((100vh - 195px) / 3);
   overflow: auto;
 }
 

@@ -33,7 +33,6 @@ export class PrintComponent implements OnInit {
   @Input('kiWaeldlerStubeKristallStube') kiWaeldlerStubeKristallStube: any;
   @Input('erwEdelweiss') erwEdelweiss: any;
 
-
   @Output()
   getTablesOccupied:EventEmitter<number> = new EventEmitter();
   @Output()

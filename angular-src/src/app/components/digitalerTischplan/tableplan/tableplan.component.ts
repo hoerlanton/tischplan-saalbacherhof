@@ -47,7 +47,7 @@ export class TableplanComponent implements AfterViewChecked {
   @Output()
   exportKiBerglerStubeHubertusStube:EventEmitter<any> = new EventEmitter();
   @Output()
-  exporErwBerglerStubeHubertusStube:EventEmitter<any> = new EventEmitter();
+  exportErwBerglerStubeHubertusStube:EventEmitter<any> = new EventEmitter();
   @Output()
   exportKiEdelweiss:EventEmitter<any> = new EventEmitter();
   @Output()
@@ -348,7 +348,7 @@ export class TableplanComponent implements AfterViewChecked {
     this.exportKiWaeldlerStubeKristallStube.emit(this.kiWaeldlerStubeKristallStube);
     this.exportErwWaeldlerStubeKristallStube.emit(this.erwWaeldlerStubeKristallStube);
     this.exportKiBerglerStubeHubertusStube.emit(this.kiBerglerStubeHubertusStube);
-    this.exporErwBerglerStubeHubertusStube.emit(this.erwBerglerStubeHubertusStube);
+    this.exportErwBerglerStubeHubertusStube.emit(this.erwBerglerStubeHubertusStube);
     this.exportKiEdelweiss.emit(this.kiEdelweiss);
     this.exportErwEdelweiss.emit(this.erwEdelweiss);
     this.exportKiBauernstube.emit(this.kiBauernstube);
