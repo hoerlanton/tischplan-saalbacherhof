@@ -2274,7 +2274,7 @@ var _a, _b, _c;
 /***/ "../../../../../src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h3 style=\"margin-top: 0;margin-bottom: 0;color: #0a7a74;\">Im-Haus</h3>\n<div class=\"row1\">\n  <div class='wrapper'>\n    <div *ngFor=\"let imHausListeElement of imHausListeElemente\">\n          <div *ngIf=\"imHausListeElement.trace === '-' && !imHausListeElement.isAnreise\">\n            <div class='cards-container' id='container1' [dragula]='\"evented-bag\"'>\n              <div class=\"card\" id=\"card1\" [ngStyle]=\"{'background-color': '#' + imHausListeElement.bgColor}\">\n            <p>\n              <b>Name:</b> {{imHausListeElement.name}}<br>\n              <b>Kategorie:</b> {{imHausListeElement.kat}}<br>\n              <b>Zimmernummer:</b> {{imHausListeElement.zimmernummer}}<br>\n              <b>Preis Typ:</b> {{imHausListeElement.pTyp}}<br>\n              <b>Anreise:</b> {{imHausListeElement.anreise}}<br>\n              <b>Abreise:</b> {{imHausListeElement.abreise}}<br>\n              <b>Personen Anzahl:</b> {{imHausListeElement.erwKi}}<br>\n              <b>Notiz1:</b> {{imHausListeElement.notiz1}}<br>\n              <b>Notiz2:</b> {{imHausListeElement.notiz2}}<br>\n              <b>Trace:</b> {{imHausListeElement.trace}}<br>\n              <b>Bemerkung:</b> {{imHausListeElement.bemerkung}}<br>\n              <b>Preis:</b> {{imHausListeElement.preis}}<br>\n              <b>VIP:</b> {{imHausListeElement.vip}}<br>\n              <b>Res Status:</b> {{imHausListeElement.resStatus}}<br>\n            </p>\n            <div *ngIf=\"imHausListeElement.bgColor === '0a7a74'\">\n              <i class=\"fa fa-check\" style=\"float: right; color: white\"></i>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<h3 style=\"margin-top: 0;margin-bottom: 0;color: #0a7a74;\">Anreisen für Morgen</h3>\n<div class=\"row1\">\n  <div class='wrapper'>\n    <div *ngFor=\"let imHausListeElement of imHausListeElemente\">\n          <div *ngIf=\"imHausListeElement.isAnreise\">\n            <div class='cards-container' id='container2' [dragula]='\"evented-bag\"'>\n              <div class=\"card\" id=\"card2\" [ngStyle]=\"{'background-color': '#' + imHausListeElement.bgColor}\">\n            <p>\n              <b>Name:</b> {{imHausListeElement.name}}<br>\n              <b>Kategorie:</b> {{imHausListeElement.kat}}<br>\n              <b>Zimmernummer:</b> {{imHausListeElement.zimmernummer}}<br>\n              <b>Preis Typ:</b> {{imHausListeElement.pTyp}}<br>\n              <b>Anreise:</b> {{imHausListeElement.anreise}}<br>\n              <b>Abreise:</b> {{imHausListeElement.abreise}}<br>\n              <b>Personen Anzahl:</b> {{imHausListeElement.erwKi}}<br>\n              <b>Notiz1:</b> {{imHausListeElement.notiz1}}<br>\n              <b>Notiz2:</b> {{imHausListeElement.notiz2}}<br>\n              <b>Trace:</b> {{imHausListeElement.trace}}<br>\n              <b>Bemerkung:</b> {{imHausListeElement.bemerkung}}<br>\n              <b>Preis:</b> {{imHausListeElement.preis}}<br>\n              <b>VIP:</b> {{imHausListeElement.vip}}<br>\n              <b>Res Status:</b> {{imHausListeElement.resStatus}}<br>\n            </p>\n            <div *ngIf=\"imHausListeElement.bgColor === '0a7a74'\">\n              <i class=\"fa fa-check\" style=\"float: right; color: white\"></i>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<h3 style=\"margin-top: 0;margin-bottom: 0;color: #0a7a74;\">Traces</h3>\n<div class=\"row1\">\n  <div class='wrapper'>\n    <div *ngFor=\"let imHausListeElement of imHausListeElemente\">\n          <div *ngIf=\"imHausListeElement.trace != '-'\">\n            <div class='cards-container' id='container3' [dragula]='\"evented-bag\"'>\n              <div class=\"card\" id=\"card3\" [ngStyle]=\"{'background-color': '#' + imHausListeElement.bgColor}\">\n            <p>\n              <b>Name:</b> {{imHausListeElement.name}}<br>\n              <b>Kategorie:</b> {{imHausListeElement.kat}}<br>\n              <b>Zimmernummer:</b> {{imHausListeElement.zimmernummer}}<br>\n              <b>Preis Typ:</b> {{imHausListeElement.pTyp}}<br>\n              <b>Anreise:</b> {{imHausListeElement.anreise}}<br>\n              <b>Abreise:</b> {{imHausListeElement.abreise}}<br>\n              <b>Personen Anzahl:</b> {{imHausListeElement.erwKi}}<br>\n              <b>Notiz1:</b> {{imHausListeElement.notiz1}}<br>\n              <b>Notiz2:</b> {{imHausListeElement.notiz2}}<br>\n              <b>Trace:</b> {{imHausListeElement.trace}}<br>\n              <b>Bemerkung:</b> {{imHausListeElement.bemerkung}}<br>\n              <b>Preis:</b> {{imHausListeElement.preis}}<br>\n              <b>VIP:</b> {{imHausListeElement.vip}}<br>\n              <b>Res Status:</b> {{imHausListeElement.resStatus}}<br>\n            </p>\n            <div *ngIf=\"imHausListeElement.bgColor === '0a7a74'\">\n              <i class=\"fa fa-check\" style=\"float: right; color: white\"></i>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<h3 style=\"margin-top: 0;margin-bottom: 0;color: #0a7a74;\">Im-Haus</h3>\n<div class=\"row1\">\n  <div class='wrapper'>\n    <div *ngFor=\"let imHausListeElement of imHausListeElemente\">\n          <div *ngIf=\"imHausListeElement.trace === '-' && !imHausListeElement.isAnreise\">\n            <div class='cards-container' id='container1' [dragula]='\"evented-bag\"'>\n              <div class=\"card\" id=\"card1\" [ngStyle]=\"{'background-color': '#' + imHausListeElement.bgColor}\">\n            <p>\n              <b>Name:</b> {{imHausListeElement.name}}<br>\n              <b>Kategorie:</b> {{imHausListeElement.kat}}<br>\n              <b>Zimmernummer:</b> {{imHausListeElement.zimmernummer}}<br>\n              <b>Preis Typ:</b> {{imHausListeElement.pTyp}}<br>\n              <b>Anreise:</b> {{imHausListeElement.anreise}}<br>\n              <b>Abreise:</b> {{imHausListeElement.abreise}}<br>\n              <b>Personen Anzahl:</b> {{imHausListeElement.erwKi}}<br>\n              <b>Notiz1:</b> {{imHausListeElement.notiz1}}<br>\n              <b>Notiz2:</b> {{imHausListeElement.notiz2}}<br>\n              <b>Trace:</b> {{imHausListeElement.trace}}<br>\n              <b>Bemerkung:</b> {{imHausListeElement.bemerkung}}<br>\n              <b>Preis:</b> {{imHausListeElement.preis}}<br>\n              <b>VIP:</b> {{imHausListeElement.vip}}<br>\n              <b>Res Status:</b> {{imHausListeElement.resStatus}}<br>\n            </p>\n            <div *ngIf=\"imHausListeElement.bgColor === '0a7a74'\">\n              <i class=\"fa fa-check\" style=\"float: right; color: white\"></i>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"anreiseTextButton\" style=\"height: 45px\">\n  <h3 style=\"margin-top: 0;margin-bottom: 0;color: #0a7a74; max-width: 50%; float: left\">Anreisen</h3><div class=\"btn-group\" style=\"float: right\" dropdown>\n  <button style=\"margin: 10px 0 0 0\" dropdownToggle class=\"btn btn-primary dropdown-toggle\" type=\"button\">Heute/Morgen<span class=\"caret\"></span></button>\n  <ul *dropdownMenu class=\"dropdown-menu\" style=\"padding: 0px; height: auto\" role=\"menu\">\n    <div style=\"margin: 0 0 0 0; padding: 10px\" class=\"changeToday\" (mouseenter)=\"mouseEnterChangeTodayButton()\"  (mouseleave)=\"mouseLeaveChangeTodayButton()\" (click)=\"changeDay($event); sortList($event)\" [ngStyle]=\"{'background-color': '#' + bgColorToday}\"><p >Heute</p></div>\n    <div style=\"margin: 0 0 0 0; padding: 10px\" class=\"changeTomorrow\" (mouseenter)=\"mouseEnterChangeTomorrowButton()\"  (mouseleave)=\"mouseLeaveChangeTomorrowButton()\" (click)=\"changeDay($event); sortList($event)\" [ngStyle]=\"{'background-color': '#' + bgColorTomorrow}\"><p >Morgen</p></div>\n  </ul>\n</div>\n</div>\n<div class=\"row1\">\n  <div class='wrapper'>\n    <div *ngFor=\"let imHausListeElement of imHausListeElemente\">\n          <div *ngIf=\"imHausListeElement.isAnreise\">\n            <div class='cards-container' id='container2' [dragula]='\"evented-bag\"'>\n              <div class=\"card\" id=\"card2\" [ngStyle]=\"{'background-color': '#' + imHausListeElement.bgColor}\">\n            <p>\n              <b>Name:</b> {{imHausListeElement.name}}<br>\n              <b>Kategorie:</b> {{imHausListeElement.kat}}<br>\n              <b>Zimmernummer:</b> {{imHausListeElement.zimmernummer}}<br>\n              <b>Preis Typ:</b> {{imHausListeElement.pTyp}}<br>\n              <b>Anreise:</b> {{imHausListeElement.anreise}}<br>\n              <b>Abreise:</b> {{imHausListeElement.abreise}}<br>\n              <b>Personen Anzahl:</b> {{imHausListeElement.erwKi}}<br>\n              <b>Notiz1:</b> {{imHausListeElement.notiz1}}<br>\n              <b>Notiz2:</b> {{imHausListeElement.notiz2}}<br>\n              <b>Trace:</b> {{imHausListeElement.trace}}<br>\n              <b>Bemerkung:</b> {{imHausListeElement.bemerkung}}<br>\n              <b>Preis:</b> {{imHausListeElement.preis}}<br>\n              <b>VIP:</b> {{imHausListeElement.vip}}<br>\n              <b>Res Status:</b> {{imHausListeElement.resStatus}}<br>\n            </p>\n            <div *ngIf=\"imHausListeElement.bgColor === '0a7a74'\">\n              <i class=\"fa fa-check\" style=\"float: right; color: white\"></i>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<h3 style=\"margin-top: 0;margin-bottom: 0;color: #0a7a74;\">Traces</h3>\n<div class=\"row1\">\n  <div class='wrapper'>\n    <div *ngFor=\"let imHausListeElement of imHausListeElemente\">\n          <div *ngIf=\"imHausListeElement.trace != '-'\">\n            <div class='cards-container' id='container3' [dragula]='\"evented-bag\"'>\n              <div class=\"card\" id=\"card3\" [ngStyle]=\"{'background-color': '#' + imHausListeElement.bgColor}\">\n            <p>\n              <b>Name:</b> {{imHausListeElement.name}}<br>\n              <b>Kategorie:</b> {{imHausListeElement.kat}}<br>\n              <b>Zimmernummer:</b> {{imHausListeElement.zimmernummer}}<br>\n              <b>Preis Typ:</b> {{imHausListeElement.pTyp}}<br>\n              <b>Anreise:</b> {{imHausListeElement.anreise}}<br>\n              <b>Abreise:</b> {{imHausListeElement.abreise}}<br>\n              <b>Personen Anzahl:</b> {{imHausListeElement.erwKi}}<br>\n              <b>Notiz1:</b> {{imHausListeElement.notiz1}}<br>\n              <b>Notiz2:</b> {{imHausListeElement.notiz2}}<br>\n              <b>Trace:</b> {{imHausListeElement.trace}}<br>\n              <b>Bemerkung:</b> {{imHausListeElement.bemerkung}}<br>\n              <b>Preis:</b> {{imHausListeElement.preis}}<br>\n              <b>VIP:</b> {{imHausListeElement.vip}}<br>\n              <b>Res Status:</b> {{imHausListeElement.resStatus}}<br>\n            </p>\n            <div *ngIf=\"imHausListeElement.bgColor === '0a7a74'\">\n              <i class=\"fa fa-check\" style=\"float: right; color: white\"></i>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2300,6 +2300,9 @@ var ImHausListeComponent = (function () {
     function ImHausListeComponent(tischplanService) {
         this.tischplanService = tischplanService;
         this.parts = [];
+        this.tomorrow = false;
+        this.bgColorTomorrow = "ffffff";
+        this.bgColorToday = "ffffff";
     }
     ImHausListeComponent.prototype.ngOnInit = function () {
     };
@@ -2311,8 +2314,67 @@ var ImHausListeComponent = (function () {
             //console.log(response);
         });
     };
+    ImHausListeComponent.prototype.changeDay = function () {
+        if (this.tomorrow == null) {
+            this.tomorrow = true;
+            this.bgColorTomorrow = "0a7a74";
+            this.bgColorToday = "ffffff";
+        }
+        else {
+            this.tomorrow = null;
+            this.bgColorTomorrow = "ffffff";
+            this.bgColorToday = "0a7a74";
+        }
+    };
+    ImHausListeComponent.prototype.mouseEnterChangeTodayButton = function () {
+        //console.log("mouse enter : ");
+        if (this.bgColorToday === "ffffff") {
+            //console.log('mouse enter1 :');
+            this.bgColorToday = "bdbdbd";
+        }
+        if (this.bgColorToday === "0a7a74") {
+            //console.log('mouse enter1 :');
+            this.bgColorToday = "05504c";
+        }
+    };
+    ImHausListeComponent.prototype.mouseLeaveChangeTodayButton = function () {
+        if (this.bgColorToday === "bdbdbd") {
+            //console.log('mouse leave1 :');
+            this.bgColorToday = "ffffff";
+        }
+        if (this.bgColorToday === "05504c") {
+            //console.log('mouse enter1 :');
+            this.bgColorToday = "0a7a74";
+        }
+    };
+    ImHausListeComponent.prototype.mouseEnterChangeTomorrowButton = function () {
+        //console.log("mouse enter : ");
+        if (this.bgColorTomorrow === "ffffff") {
+            //console.log('mouse enter1 :');
+            this.bgColorTomorrow = "bdbdbd";
+        }
+        if (this.bgColorTomorrow === "0a7a74") {
+            //console.log('mouse enter1 :');
+            this.bgColorTomorrow = "05504c";
+        }
+    };
+    ImHausListeComponent.prototype.mouseLeaveChangeTomorrowButton = function () {
+        if (this.bgColorTomorrow === "bdbdbd") {
+            //console.log('mouse leave1 :');
+            this.bgColorTomorrow = "ffffff";
+        }
+        if (this.bgColorTomorrow === "05504c") {
+            //console.log('mouse enter1 :');
+            this.bgColorTomorrow = "0a7a74";
+        }
+    };
     ImHausListeComponent.prototype.sortList = function () {
-        this.dateTodayGenerated = new Date();
+        if (this.tomorrow) {
+            this.dateTodayGenerated = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+        }
+        else {
+            this.dateTodayGenerated = new Date();
+        }
         var dateToday = String(this.dateTodayGenerated).substring(0, 15);
         //console.log("===========================ANREISEN===============================");
         //console.log(dateToday);
