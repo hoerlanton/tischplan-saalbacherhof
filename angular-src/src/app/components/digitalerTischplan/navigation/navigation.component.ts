@@ -31,6 +31,8 @@ export class NavigationComponent implements OnInit {
   tableInformation: any[] = [];
   @Output()
   reloadLists:EventEmitter<any> = new EventEmitter();
+  @Output()
+  transformExport: EventEmitter<any> = new EventEmitter();
   printToCart1Button: string;
   printToCart2Button: string;
   printToCart3Button: string;
@@ -206,6 +208,8 @@ export class NavigationComponent implements OnInit {
     this.term = event.target.value;
     console.log(this.term);
     this.termExport.emit(this.term);
+    this.transformExport.emit(this.term);
+
 
   }
 

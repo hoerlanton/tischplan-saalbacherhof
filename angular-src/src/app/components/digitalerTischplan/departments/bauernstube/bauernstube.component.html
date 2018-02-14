@@ -6,7 +6,7 @@
       <div class='cards-container' id='containerBauernstube' [ngStyle]="{'background-color': + tableBauernstube.bgColor}">
         <div class="table" [ngStyle]="{'background-color': '#' + tableBauernstube.bgColor}">
           <div *ngIf="tableBauernstube.isBesetzt === 'true'">
-            <div *ngFor="let group of tableBauernstube.groups | filter:term; let j = index;">
+            <div *ngFor="let group of tableBauernstube.groups; let j = index;">
               <div [style.border]="getStyle(group.traceValue)">
                 <div *ngIf="group.nameValue">
                   <p style="background-color: #FFFFFF; padding: 10px">
@@ -15,11 +15,11 @@
                     <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
                     <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
                     <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
-                    <b> Nation:</b> {{group.nationValue}}<br>
-                    <b> Sprache:</b> {{group.spracheValue}}<br>
                     <b> Preis Typ:</b> {{group.preisTypValue}}<br>
-                    <b> Reisebüro:</b> {{group.notiz1Value}}<br>
                     <b> Kategorie:</b> {{group.kategorieValue}}<br>
+                    <b> Preis:</b> {{group.preisValue}}<br>
+                    <b> VIP:</b> {{group.vipValue}}<br>
+                    <b> Res Status:</b> {{group.resStatusValue}}<br>
                     <b> Notiz1:</b> {{group.notiz1Value}}<br>
                     <b> Notiz2:</b> {{group.notiz2Value}}<br>
                     <b> Trace:</b> {{group.traceValue}}<br>

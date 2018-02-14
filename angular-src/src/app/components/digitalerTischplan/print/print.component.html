@@ -407,8 +407,7 @@
       <div *ngFor="let tableBerglerStubeHubertusStube of tablesBerglerStubeHubertusStube; let j = index;">
         <div dropdownToggle type="button" class="t{{tableBerglerStubeHubertusStube.number}} table-item" [ngStyle]="{'top': tableBerglerStubeHubertusStube.topValue + 'px', 'left': tableBerglerStubeHubertusStube.leftValue + 'px', 'background-color': + tableBerglerStubeHubertusStube.bgColor, 'height': + tableBerglerStubeHubertusStube.height + 'px', 'width': + tableBerglerStubeHubertusStube.width + 'px', 'border': + tableBerglerStubeHubertusStube.border}" [style.border]="getStyle(tablesBerglerStubeHubertusStube[j].groups)" dropdown>
           <div *ngIf="tablesBerglerStubeHubertusStube[j] !== tablesBerglerStubeHubertusStube[j+1]">
-            <p><b>{{tableBerglerStubeHubertusStube.number}}</b></p>
-            <div *ngFor="let group of tableBerglerStubeHubertusStube.groups"><b>{{group.personenAnzahlValue}}</b></div>
+            <p><b>{{tableBerglerStubeHubertusStube.number}} <br>{{erwBerglerStubeHubertusStube[j]}}/{{kiBerglerStubeHubertusStube[j]}}</b></p>
           </div>
         </div>
       </div>
@@ -417,8 +416,7 @@
       <div *ngFor="let tableBauernstube of tablesBauernstube; let j = index;">
         <div dropdownToggle type="button" class="t{{tableBauernstube.number}} table-item" [ngStyle]="{'top': tableBauernstube.topValue + 'px', 'left': tableBauernstube.leftValue + 'px', 'background-color': + tableBauernstube.bgColor, 'height': + tableBauernstube.height + 'px', 'width': + tableBauernstube.width + 'px', 'border': + tableBauernstube.border}" [style.border]="getStyle(tablesBauernstube[j].groups)" dropdown>
           <div *ngIf="tablesBauernstube[j] !== tablesBauernstube[j+1]">
-            <p><b>{{tableBauernstube.number}}</b></p>
-            <div *ngFor="let group of tableBauernstube.groups"><b>{{group.personenAnzahlValue}}</b></div>
+            <p><b>{{tableBauernstube.number}} <br>{{erwBauernstube[j]}}/{{kiBauernstube[j]}}</b></p>
           </div>
         </div>
       </div>
@@ -427,8 +425,7 @@
       <div *ngFor="let tableWaeldlerStubeKristallStube of tablesWaeldlerStubeKristallStube; let j = index;">
         <div dropdownToggle type="button" class="t{{tableWaeldlerStubeKristallStube.number}} table-item" [ngStyle]="{'top': tableWaeldlerStubeKristallStube.topValue + 'px', 'left': tableWaeldlerStubeKristallStube.leftValue + 'px', 'background-color': + tableWaeldlerStubeKristallStube.bgColor, 'height': + tableWaeldlerStubeKristallStube.height + 'px', 'width': + tableWaeldlerStubeKristallStube.width + 'px', 'border': + tableWaeldlerStubeKristallStube.border}" [style.border]="getStyle(tablesWaeldlerStubeKristallStube[j].groups)" dropdown>
           <div *ngIf="tablesWaeldlerStubeKristallStube[j] !== tablesWaeldlerStubeKristallStube[j+1]">
-            <p><b>{{tableWaeldlerStubeKristallStube.number}}</b></p>
-            <div *ngFor="let group of tableWaeldlerStubeKristallStube.groups"><b>{{group.personenAnzahlValue}}</b></div>
+            <p><b>{{tableWaeldlerStubeKristallStube.number}} <br>{{erwWaeldlerStubeKristallStube[j]}}/{{kiWaeldlerStubeKristallStube[j]}}</b></p>
           </div>
         </div>
       </div>
@@ -437,8 +434,7 @@
       <div *ngFor="let tableEdelweissKaminStube of tablesEdelweissKaminStube; let j = index;">
         <div dropdownToggle type="button" class="t{{tableEdelweissKaminStube.number}} table-item" [ngStyle]="{'top': tableEdelweissKaminStube.topValue + 'px', 'left': tableEdelweissKaminStube.leftValue + 'px', 'background-color': + tableEdelweissKaminStube.bgColor, 'height': + tableEdelweissKaminStube.height + 'px', 'width': + tableEdelweissKaminStube.width + 'px', 'border': + tableEdelweissKaminStube.border}" [style.border]="getStyle(tablesEdelweissKaminStube[j].groups)" dropdown>
           <div *ngIf="tablesEdelweissKaminStube[j] !== tablesEdelweissKaminStube[j+1]">
-            <p><b>{{tableEdelweissKaminStube.number}}</b></p>
-            <div *ngFor="let group of tableEdelweissKaminStube.groups"><b>{{group.personenAnzahlValue}}</b></div>
+            <p><b>{{tableEdelweissKaminStube.number}} <br>{{erwEdelweiss[j]}}/{{kiEdelweiss[j]}}</b></p>
           </div>
         </div>
       </div>
@@ -447,8 +443,7 @@
       <div *ngFor="let tableTeestubeTeelounge of tablesTeestubeTeelounge; let j = index;">
         <div dropdownToggle type="button" class="t{{tableTeestubeTeelounge.number}} table-item" [ngStyle]="{'top': tableTeestubeTeelounge.topValue + 'px', 'left': tableTeestubeTeelounge.leftValue + 'px', 'background-color': + tableTeestubeTeelounge.bgColor, 'height': + tableTeestubeTeelounge.height + 'px', 'width': + tableTeestubeTeelounge.width + 'px', 'border': + tableTeestubeTeelounge.border}" [style.border]="getStyle(tablesTeestubeTeelounge[j].groups)" dropdown>
           <div *ngIf="tablesTeestubeTeelounge[j] !== tablesTeestubeTeelounge[j+1]">
-            <p><b>{{tableTeestubeTeelounge.number}}</b></p>
-            <div *ngFor="let group of tableTeestubeTeelounge.groups"><b>{{group.personenAnzahlValue}}</b></div>
+            <p><b>{{tableTeestubeTeelounge.number}} <br>{{erwTeestubeTeelounge[j]}}/{{kiTeestubeTeelounge[j]}}</b></p>
           </div>
         </div>
       </div>

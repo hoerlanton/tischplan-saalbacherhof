@@ -237,7 +237,7 @@ export class DepartmentsComponent  {
               console.log('this.dateGenerated --->: ' + dateToday);
               if (dateToday.indexOf(this.parsedDate[0]) !== -1) {
                 if (this.tablesChangeBgColorIfAnreise[a].department === "berglerStubeHubertusStube") {
-                  if (this.tablesChangeBgColorIfAnreise[b]) {
+                  if (this.tablesBerglerStubeHubertusStube[b]) {
                     this.tablesBerglerStubeHubertusStube[b].bgColor = "#0a7a74";
                   }
                 }

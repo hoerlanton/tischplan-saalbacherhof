@@ -35,6 +35,28 @@ export class TableplanComponent implements AfterViewChecked {
   movedTeestubeTeelounge:EventEmitter<any> = new EventEmitter();
   @Output()
   changeBgColorIfAnreise:EventEmitter<any> = new EventEmitter();
+
+  @Output()
+  exportKiTeestubeTeelounge:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportErwTeestubeTeelounge:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKiWaeldlerStubeKristallStube:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportErwWaeldlerStubeKristallStube:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKiBerglerStubeHubertusStube:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exporErwBerglerStubeHubertusStube:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKiEdelweiss:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportErwEdelweiss:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKiBauernstube:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportErwBauernstube:EventEmitter<any> = new EventEmitter();
+
   buttonMoveTable: string;
   buttonInfo: string;
   buttonHinzufuegen: string;
@@ -60,7 +82,6 @@ export class TableplanComponent implements AfterViewChecked {
   }
 
   ngAfterViewChecked() {
-
   }
 
   addTable(table, j) {
@@ -322,7 +343,15 @@ export class TableplanComponent implements AfterViewChecked {
         }
       }
     }
+    this.exportKiTeestubeTeelounge.emit(this.kiTeestubeTeelounge);
+    this.exportErwTeestubeTeelounge.emit(this.erwTeestubeTeelounge);
+    this.exportKiWaeldlerStubeKristallStube.emit(this.kiWaeldlerStubeKristallStube);
+    this.exportErwWaeldlerStubeKristallStube.emit(this.erwWaeldlerStubeKristallStube);
+    this.exportKiBerglerStubeHubertusStube.emit(this.kiBerglerStubeHubertusStube);
+    this.exporErwBerglerStubeHubertusStube.emit(this.erwBerglerStubeHubertusStube);
+    this.exportKiEdelweiss.emit(this.kiEdelweiss);
+    this.exportErwEdelweiss.emit(this.erwEdelweiss);
+    this.exportKiBauernstube.emit(this.kiBauernstube);
+    this.exportErwBauernstube.emit(this.erwBauernstube);
   }
-
-
 }

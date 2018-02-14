@@ -15,18 +15,17 @@ export class Table {
   groups: [{
     nameValue: string;
     zimmernummerValue: string;
+    kategorieValue: string;
     anreiseValue: string;
     abreiseValue: string;
     personenAnzahlValue: string;
+    preisTypValue: string;
+    preisValue: string;
+    vipValue: string;
+    resStatusValue: string;
     notiz1Value: string;
     notiz2Value: string;
-    trace: string;
     bemerkungValue: string;
-    nationValue: string;
-    kategorieValue: string;
-    preisTypValue: string;
-    reisebueroValue: string;
-    spracheValue: string;
     departmentValue: string;
     traceValue: string;
     newTraceText: string;

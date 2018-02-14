@@ -106,6 +106,16 @@ export class TischplanComponent {
   showTablePlanBool: boolean;
   buttonBgColorShowTablePlan: string;
   fontColorShowTablePlan: string;
+  erwBauernstube: any[] = [];
+  kiBauernstube: any[] = [];
+  erwEdelweiss: any[] = [];
+  kiEdelweiss: any[] = [];
+  erwWaeldlerStubeKristallStube: any[] = [];
+  kiWaeldlerStubeKristallStube: any[] = [];
+  erwBerglerStubeHubertusStube: any[] = [];
+  kiBerglerStubeHubertusStube: any[] = [];
+  erwTeestubeTeelounge: any[] = [];
+  kiTeestubeTeelounge: any[] = [];
 
 
   constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, private dragulaService: DragulaService) {

@@ -14,11 +14,8 @@ module.exports = {
             departmentValueDB = "",
             nameValue = [],
             zimmernummerValue = [],
-            nationValue = [],
             kategorieValue = [],
             preisTypValue = [],
-            reisebueroValue = [],
-            spracheValue = [],
             anreiseValue = [],
             abreiseValue = [],
             personenAnzahlValue = [],
@@ -28,7 +25,10 @@ module.exports = {
             tableValue = "",
             tableValueArray = [],
             traceValue = [],
-            bemerkungValue = [];
+            bemerkungValue = [],
+            preisValue = [],
+            vipValue = [],
+            resStatusValue = [];
 
         for (let s = 0; s < splitted.length; s++) {
             informationElements2.push(splitted[s].split(/:(.+)/)[1]);
@@ -44,19 +44,19 @@ module.exports = {
             console.log("Liste dropped");
 
             nameValue.push(informationElements2[0].substring(1, informationElements2[0].length));
-            nationValue.push(informationElements2[1].substring(1, informationElements2[1].length));
-            spracheValue.push(informationElements2[2].substring(1, informationElements2[2].length));
-            kategorieValue.push(informationElements2[3].substring(1, informationElements2[3].length));
-            zimmernummerValue.push(informationElements2[4].substring(1, informationElements2[4].length));
-            preisTypValue.push(informationElements2[5].substring(1, informationElements2[5].length));
-            anreiseValue.push(informationElements2[6].substring(1, informationElements2[6].length));
-            abreiseValue.push(informationElements2[7].substring(1, informationElements2[7].length));
-            personenAnzahlValue.push(informationElements2[8].substring(1, informationElements2[8].length));
-            reisebueroValue.push(informationElements2[9].substring(1, informationElements2[9].length));
-            notiz1Value.push(informationElements2[10].substring(1, informationElements2[10].length));
-            notiz2Value.push(informationElements2[11].substring(1, informationElements2[11].length));
-            traceValue.push(informationElements2[informationElements2.length - 3].substring(1, informationElements2[informationElements2.length - 3].length));
-            bemerkungValue.push(informationElements2[informationElements2.length - 2].substring(1, informationElements2[informationElements2.length - 2].length));
+            kategorieValue.push(informationElements2[1].substring(1, informationElements2[1].length));
+            zimmernummerValue.push(informationElements2[2].substring(1, informationElements2[2].length));
+            preisTypValue.push(informationElements2[3].substring(1, informationElements2[3].length));
+            anreiseValue.push(informationElements2[4].substring(1, informationElements2[4].length));
+            abreiseValue.push(informationElements2[5].substring(1, informationElements2[5].length));
+            personenAnzahlValue.push(informationElements2[6].substring(1, informationElements2[6].length));
+            notiz1Value.push(informationElements2[7].substring(1, informationElements2[7].length));
+            notiz2Value.push(informationElements2[8].substring(1, informationElements2[8].length));
+            traceValue.push(informationElements2[9].substring(1, informationElements2[9].length));
+            bemerkungValue.push(informationElements2[10].substring(1, informationElements2[10].length));
+            preisValue.push(informationElements2[11].substring(1, informationElements2[11].length));
+            vipValue.push(informationElements2[informationElements2.length - 3].substring(1, informationElements2[informationElements2.length - 3].length));
+            resStatusValue.push(informationElements2[informationElements2.length - 2].substring(1, informationElements2[informationElements2.length - 2].length));
 
             departmentValue = informationElements2[informationElements2.length - 1].substring(1, informationElements2[informationElements2.length - 1].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
             tableValueArray = informationElements2[informationElements2.length - 1].toString().match(/\d+/);
@@ -97,11 +97,11 @@ module.exports = {
                                 "personenAnzahlValue": personenAnzahlValue[0],
                                 "notiz2Value": notiz2Value[0],
                                 "notiz1Value": notiz1Value[0],
-                                "nationValue": nationValue[0],
+                                "preisValue": preisValue[0],
                                 "kategorieValue": kategorieValue[0],
                                 "preisTypValue": preisTypValue[0],
-                                "reisebueroValue": reisebueroValue[0],
-                                "spracheValue": spracheValue[0],
+                                "vipValue": vipValue[0],
+                                "resStatusValue": resStatusValue[0],
                                 "traceValue": traceValue[0],
                                 "bemerkungValue": bemerkungValue[0],
                             }
@@ -128,6 +128,9 @@ module.exports = {
                 notiz2Value.push(umsetzen[0].groups[i].notiz2Value);
                 notiz1Value.push(umsetzen[0].groups[i].notiz1Value);
                 bemerkungValue.push(umsetzen[0].groups[i].bemerkungValue);
+                vipValue.push(umsetzen[0].groups[i].vipValue);
+                resStatusValue.push(umsetzen[0].groups[i].resStatusValue);
+                preisValue.push(umsetzen[0].groups[i].preisValue);
                 departmentValueDB = umsetzen[1].targetDepartment;
                 tableValue = umsetzen[1].targetTable;
                 umsetzen[0].department = umsetzen[1].targetDepartment;
@@ -170,11 +173,11 @@ module.exports = {
                                             "personenAnzahlValue": personenAnzahlValue[i],
                                             "notiz2Value": notiz2Value[i],
                                             "notiz1Value": notiz1Value[i],
-                                            "nationValue": nationValue[i],
+                                            "preisValue": preisValue[i],
                                             "kategorieValue": kategorieValue[i],
                                             "preisTypValue": preisTypValue[i],
-                                            "reisebueroValue": reisebueroValue[i],
-                                            "spracheValue": spracheValue[i],
+                                            "vipValue": vipValue[i],
+                                            "resStatusValue": resStatusValue[i],
                                             "traceValue": traceValue[i],
                                             "bemerkungValue": bemerkungValue[i],
                                         }

@@ -18,6 +18,7 @@
                 (umsetzenExport)="umsetzenInfoVar = $event; umsetzen($event)"
                 [tablesTempAbreise]="tablesTempAbreise"
                 (abreisenExport)="abreiseTablePlusIndex = $event; abreisenRemoval($event)"
+                (transformExport)="term = $event; transform($event)"
                 (termExport)="term = $event"
                 (reloadLists)="reloadLists($event)">
 </app-navigation>
@@ -103,7 +104,17 @@
                      (movedTeestubeTeelounge)="tablesTeestubeTeelounge = $event"
                      (movedWaeldlerStubeKristallStube)="tablesWaeldlerStubeKristallStube = $event"
                      [showTablePlanBool]="showTablePlanBool"
-                     (changeBgColorIfAnreise)="changeBgColorIfAnreise($event)">
+                     (changeBgColorIfAnreise)="changeBgColorIfAnreise($event)"
+                     (exportErwBerglerStubeHubertusStube)="erwBerglerStubeHubertusStube = $event"
+                     (exportKiBerglerStubeHubertusStube)="kiBerglerStubeHubertusStube = $event"
+                     (exportErwBauernstube)="erwBauernstube = $event"
+                     (exportKiBauernstube)="kiBauernstube = $event"
+                     (exportErwEdelweiss)="erwEdelweiss = $event"
+                     (exportKiEdelweiss)="kiEdelweiss = $event"
+                     (exportErwTeestubeTeelounge)="erwTeestubeTeelounge = $event"
+                     (exportKiTeestubeTeelounge)="kiTeestubeTeelounge = $event"
+                     (exportErwWaeldlerStubeKristallStube)="erwWaeldlerStubeKristallStube = $event"
+                     (exportKiWaeldlerStubeKristallStube)="kiWaeldlerStubeKristallStube = $event">
       </app-tableplan>
     </div>
     <div class="col-xs-12 col-lg-3 upload-col">
@@ -164,7 +175,17 @@
             [showWaeldlerBool]="showWaeldlerBool"
             [showTeeStubeBool]="showTeeStubeBool"
             (getTablesOccupied)="tablesOccupied = $event"
-            (getTablesforAzListe)="tables = $event">
+            (getTablesforAzListe)="tables = $event"
+            [erwBerglerStubeHubertusStube]="erwBerglerStubeHubertusStube"
+            [kiBerglerStubeHubertusStube]="kiBerglerStubeHubertusStube"
+            [erwBauernstube]="erwBauernstube"
+            [kiBauernstube]="kiBauernstube"
+            [erwEdelweiss]="erwEdelweiss"
+            [kiEdelweiss]="kiEdelweiss"
+            [erwTeestubeTeelounge]="erwTeestubeTeelounge"
+            [kiTeestubeTeelounge]="kiTeestubeTeelounge"
+            [erwWaeldlerStubeKristallStube]="erwWaeldlerStubeKristallStube"
+            [kiWaeldlerStubeKristallStube]="kiWaeldlerStubeKristallStube">
 </app-print>
 </html>
 

@@ -22,6 +22,18 @@ export class PrintComponent implements OnInit {
   @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
   @Input('showWaeldlerBool') showWaeldlerBool: boolean;
 
+  @Input('erwBerglerStubeHubertusStube') erwBerglerStubeHubertusStube: any;
+  @Input('kiBerglerStubeHubertusStube') kiBerglerStubeHubertusStube: any;
+  @Input('erwBauernstube') erwBauernstube: any;
+  @Input('kiBauernstube') kiBauernstube: any;
+  @Input('kiEdelweiss') kiEdelweiss: any;
+  @Input('erwTeestubeTeelounge') erwTeestubeTeelounge: any;
+  @Input('kiTeestubeTeelounge') kiTeestubeTeelounge: any;
+  @Input('erwWaeldlerStubeKristallStube') erwWaeldlerStubeKristallStube: any;
+  @Input('kiWaeldlerStubeKristallStube') kiWaeldlerStubeKristallStube: any;
+  @Input('erwEdelweiss') erwEdelweiss: any;
+
+
   @Output()
   getTablesOccupied:EventEmitter<number> = new EventEmitter();
   @Output()
@@ -281,6 +293,7 @@ export class PrintComponent implements OnInit {
     console.log(tables);
     */
   }
+
   getStyle(a) {
     //console.log("a");
     //console.log(a);
@@ -290,7 +303,7 @@ export class PrintComponent implements OnInit {
       for (let b = 0; b < a.length; b++) {
         //console.log("LOOOOOOOOOOOOOOP");
         //console.log(a[b].traceValue);
-        if (a[b].traceValue != "Empty" || a[b].newTraceText) {
+        if (a[b].traceValue != "-" || a[b].newTraceText) {
           this.trace = true;
         }
       }

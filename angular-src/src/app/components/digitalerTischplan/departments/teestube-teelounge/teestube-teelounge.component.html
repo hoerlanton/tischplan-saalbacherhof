@@ -1,5 +1,5 @@
 <div *ngIf="showTeeStubeBool">
-  <div *ngFor="let tableTeestubeTeelounge of tablesTeestubeTeelounge | filter:term; let j = index;">
+  <div *ngFor="let tableTeestubeTeelounge of tablesTeestubeTeelounge; let j = index;">
     <div *ngIf="tablesTeestubeTeelounge[j] !== tablesTeestubeTeelounge[j+1]">
       <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableTeestubeTeelounge, j)">{{tableTeestubeTeelounge.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
       <h4><b> Tisch:</b>{{tableTeestubeTeelounge.number}} </h4><br>
@@ -15,11 +15,11 @@
                     <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
                     <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
                     <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
-                    <b> Nation:</b> {{group.nationValue}}<br>
-                    <b> Sprache:</b> {{group.spracheValue}}<br>
                     <b> Preis Typ:</b> {{group.preisTypValue}}<br>
-                    <b> Reisebüro:</b> {{group.notiz1Value}}<br>
                     <b> Kategorie:</b> {{group.kategorieValue}}<br>
+                    <b> Preis:</b> {{group.preisValue}}<br>
+                    <b> VIP:</b> {{group.vipValue}}<br>
+                    <b> Res Status:</b> {{group.resStatusValue}}<br>
                     <b> Notiz1:</b> {{group.notiz1Value}}<br>
                     <b> Notiz2:</b> {{group.notiz2Value}}<br>
                     <b> Trace:</b> {{group.traceValue}}<br>
