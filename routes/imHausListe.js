@@ -54,7 +54,13 @@ module.exports = {
             //console.log(accessorNameA);
             //console.log(accessorNameC);
 
-            if (imHausListeData.data[accessorNameA] === "Gesamt:") { break; }
+            console.log(imHausListeData.data[accessorNameA]);
+            if (imHausListeData.data[accessorNameA]) {
+                if (imHausListeData.data[accessorNameA].w === "Gesamt:") {
+                    console.log("BREAK!!");
+                    break;
+                }
+            }
             //console.log(imHausListeData.data[accessorNameC]);
             if (imHausListeData.data[accessorNameA] == null && imHausListeData.data[accessorNameC] == null && imHausListeData.data[accessorNameD] == null) {continue;}
             if (imHausListeData.data[accessorNameI] == null) {
@@ -83,6 +89,7 @@ module.exports = {
                             console.log(imHausListeData.data["H" + (row + 2)]);
                             if (imHausListeData.data["H" + (row + 2)] != null) {
                                 trace[counter-1] += ", " + imHausListeData.data["H" + (row + 2)].w;
+                                row += 1;
                             } else {
                                 row += 1;
                             }
@@ -212,9 +219,10 @@ module.exports = {
         console.log("Post request made to /updateImHausListeElement");
 
         let informationElements = req.body;
+        console.log(informationElements);
 
         let nameValue = informationElements[0].substring(1, informationElements[0].length);
-        let zimmernummerValue = informationElements[4].substring(1, informationElements[4].length);
+        let zimmernummerValue = informationElements[2].substring(1, informationElements[2].length);
 
         console.log(nameValue);
         console.log(zimmernummerValue);
@@ -254,7 +262,7 @@ module.exports = {
     },
     getImHausListe: function (req, res, db) {
         console.log("imHausListe get called");
-//Get guests from Mongo DB
+    //Get guests from Mongo DB
         db.hubertusImHausListe.find(function (err, imHausListe) {
             if (err) {
                 res.send(err);

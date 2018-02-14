@@ -59,8 +59,16 @@ module.exports = {
             resStatusValue.push(informationElements2[informationElements2.length - 2].substring(1, informationElements2[informationElements2.length - 2].length));
 
             departmentValue = informationElements2[informationElements2.length - 1].substring(1, informationElements2[informationElements2.length - 1].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
-            tableValueArray = informationElements2[informationElements2.length - 1].toString().match(/\d+/);
-            tableValue = tableValueArray[0];
+            tableValueArray = informationElements2[informationElements2.length - 1].toString().match(/\d+/g);
+            if (tableValueArray[1] === "1" || tableValueArray[1] === "2" || tableValueArray[1] === "3" || tableValueArray[1] === "4") {
+                console.log("HOIOI");
+                tableValue = tableValueArray.join(".");
+            } else {
+                tableValue = tableValueArray[0];
+            }
+
+            console.log(tableValueArray);
+            console.log(tableValue);
 
             console.log(nameValue[0]);
             console.log(tableValue + " " + departmentValue);

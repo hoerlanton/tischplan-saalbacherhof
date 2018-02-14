@@ -221,16 +221,25 @@ export class TischplanComponent {
     let departementSubstring = department.substring(1, department.length - 1);
     //console.log("departementSubstring: " + departementSubstring);
     let tableNumber = args[1].innerText;
+    console.log(tableNumber);
     //console.log("tableNumber: " + tableNumber);
     let tableNumberSubstring = tableNumber.toString().match(/\d+/);
     let numbers = tableNumber.match(/\d+/g);
+    let arrayIndex = [];
+    console.log(tableNumber.substring(33, 34));
+    if (tableNumber.substring(33, 34) === ".") {
+      arrayIndex = numbers[2];
+      tableNumberSubstring = numbers[0] + "." + numbers[1];
+    } else {
+      arrayIndex = numbers[1];
+    }
     //console.log("numbers: " + numbers);
-    let arrayIndex = numbers[1];
     //console.log("arrayIndex: " + arrayIndex);
     //console.log("tableNumberSubstring: " + tableNumberSubstring);
     let dataString = [];
     dataString.push(information + departementSubstring + tableNumberSubstring);
     let jBefore = tableNumber.toString().match(/\d+/g);
+    console.log(jBefore);
     let j = jBefore[1];
     //let j = jArray[1];
     let addPlaceholderDataString = [];

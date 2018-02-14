@@ -172,8 +172,13 @@ module.exports = {
             console.log(informationElements2[informationElements2Length - 1][0]);
 
             departmentValue = informationElements2[informationElements2Length - 1][0].substring(1, informationElements2[informationElements2Length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
-            tableValueArray = informationElements2[informationElements2Length - 1][0].toString().match(/\d+/);
+            tableValueArray = informationElements2[informationElements2Length - 1][0].toString().match(/\d+/g);
             tableValue = tableValueArray[0];
+            if (tableValueArray[1] === "1" || tableValueArray[1] === "2" || tableValueArray[1] === "3" || tableValueArray[1] === "4") {
+                tableValue = tableValueArray.join(".");
+            } else {
+                tableValue = tableValueArray[0];
+            }
 
         } else {
             let umsetzen = JSON.parse(data);

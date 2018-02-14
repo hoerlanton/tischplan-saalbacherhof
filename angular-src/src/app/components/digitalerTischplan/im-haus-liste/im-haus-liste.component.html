@@ -7,19 +7,14 @@
               <div class="card" id="card1" [ngStyle]="{'background-color': '#' + imHausListeElement.bgColor}">
             <p>
               <b>Name:</b> {{imHausListeElement.name}}<br>
-              <b>Kategorie:</b> {{imHausListeElement.kat}}<br>
+              <b>Personen Anzahl:</b> {{imHausListeElement.erwKi}}<br>
               <b>Zimmernummer:</b> {{imHausListeElement.zimmernummer}}<br>
-              <b>Preis Typ:</b> {{imHausListeElement.pTyp}}<br>
               <b>Anreise:</b> {{imHausListeElement.anreise}}<br>
               <b>Abreise:</b> {{imHausListeElement.abreise}}<br>
-              <b>Personen Anzahl:</b> {{imHausListeElement.erwKi}}<br>
               <b>Notiz1:</b> {{imHausListeElement.notiz1}}<br>
               <b>Notiz2:</b> {{imHausListeElement.notiz2}}<br>
               <b>Trace:</b> {{imHausListeElement.trace}}<br>
               <b>Bemerkung:</b> {{imHausListeElement.bemerkung}}<br>
-              <b>Preis:</b> {{imHausListeElement.preis}}<br>
-              <b>VIP:</b> {{imHausListeElement.vip}}<br>
-              <b>Res Status:</b> {{imHausListeElement.resStatus}}<br>
             </p>
             <div *ngIf="imHausListeElement.bgColor === '0a7a74'">
               <i class="fa fa-check" style="float: right; color: white"></i>
@@ -42,7 +37,7 @@
 <div class="row1">
   <div class='wrapper'>
     <div *ngFor="let imHausListeElement of imHausListeElemente">
-          <div *ngIf="imHausListeElement.isAnreise">
+          <div *ngIf="imHausListeElement.trace === '-' && imHausListeElement.isAnreise">
             <div class='cards-container' id='container2' [dragula]='"evented-bag"'>
               <div class="card" id="card2" [ngStyle]="{'background-color': '#' + imHausListeElement.bgColor}">
             <p>
