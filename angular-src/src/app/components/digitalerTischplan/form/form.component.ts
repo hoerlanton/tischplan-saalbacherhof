@@ -33,6 +33,8 @@ export class FormComponent implements OnInit {
   @Input('showAlleBool') showAlleBool: boolean;
   @Output()
   notizResponse:EventEmitter<any> = new EventEmitter();
+  @Output()
+  changeColorIfAnreiseExport:EventEmitter<any> = new EventEmitter();
 
   notizInput: string;
   departmentNotizInput: string;
@@ -110,6 +112,7 @@ export class FormComponent implements OnInit {
               }
             }
           });
+        this.changeColorIfAnreiseExport.emit();
       }
       this.tischplanService.sendInformationToBox(newInformation)
         .subscribe(Information => {

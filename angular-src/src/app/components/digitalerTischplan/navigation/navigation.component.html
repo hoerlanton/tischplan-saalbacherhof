@@ -35,7 +35,7 @@
         <ul *dropdownMenu class="dropdown-menu" role="menu" style="max-height: 100px; padding: 0">
           <li role="menuitem" class="menuitem" (mouseenter)="mouseEnterAbreiseAbbrechenButton()"  (mouseleave)="mouseLeaveAbreiseAbbrechenButton()" [ngStyle]="{'background-color': '#' + abreiseAbbrechenButton}" style="color: black;">Abbrechen</li>
           <li class="divider dropdown-divider" style="margin: 0"></li>
-          <li role="menuitem" class="menuitem" style="background-color: red; color: white;" (mouseenter)="mouseEnterAbreiseAusfuehrenButton()"  (mouseleave)="mouseLeaveAbreiseAusfuehrenButton()" [ngStyle]="{'background-color': '#' + abreiseAusfuehrenButton}" style="color: white;" (click)="dispenseIfAbreise()"><b> Abreisen für Morgen entfernen</b></li>
+          <li role="menuitem" class="menuitem" style="background-color: red; color: white;" (mouseenter)="mouseEnterAbreiseAusfuehrenButton()"  (mouseleave)="mouseLeaveAbreiseAusfuehrenButton()" [ngStyle]="{'background-color': '#' + abreiseAusfuehrenButton}" style="color: white;" (click)="dispenseIfAbreise()"><b> Abreisen für Heute entfernen</b></li>
           <li class="divider dropdown-divider" style="margin: 0"></li>
         </ul>
       </div>

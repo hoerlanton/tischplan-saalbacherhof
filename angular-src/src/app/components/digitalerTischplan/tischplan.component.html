@@ -85,7 +85,8 @@
                 [showEdelweissBool]="showEdelweissBool"
                 [showWaeldlerBool]="showWaeldlerBool"
                 [showTeeStubeBool]="showTeeStubeBool"
-                [showAlleBool]="showAlleBool">
+                [showAlleBool]="showAlleBool"
+                (changeColorIfAnreiseExport)="changeBgColorIfAnreise($event)">
       </app-form>
       <app-tableplan [tablesBauernstube]="tablesBauernstube"
                      [tablesBerglerStubeHubertusStube]="tablesBerglerStubeHubertusStube"
