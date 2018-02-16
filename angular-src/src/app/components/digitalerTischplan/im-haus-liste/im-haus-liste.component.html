@@ -29,8 +29,8 @@
   <h3 style="margin-top: 0;margin-bottom: 0;color: #0a7a74; max-width: 50%; float: left">Anreisen</h3><div class="btn-group" style="float: right" dropdown>
   <button style="margin: 10px 0 0 0" dropdownToggle class="btn btn-primary dropdown-toggle" type="button">Heute/Morgen<span class="caret"></span></button>
   <ul *dropdownMenu class="dropdown-menu" style="padding: 0px; height: auto" role="menu">
-    <div style="margin: 0 0 0 0; padding: 10px" class="changeToday" (mouseenter)="mouseEnterChangeTodayButton()"  (mouseleave)="mouseLeaveChangeTodayButton()" (click)="changeDay($event); sortList($event)" [ngStyle]="{'background-color': '#' + bgColorToday}"><p >Heute</p></div>
-    <div style="margin: 0 0 0 0; padding: 10px" class="changeTomorrow" (mouseenter)="mouseEnterChangeTomorrowButton()"  (mouseleave)="mouseLeaveChangeTomorrowButton()" (click)="changeDay($event); sortList($event)" [ngStyle]="{'background-color': '#' + bgColorTomorrow}"><p >Morgen</p></div>
+    <div style="margin: 0 0 0 0; padding: 10px" class="changeToday" (mouseenter)="mouseEnterChangeTodayButton()"  (mouseleave)="mouseLeaveChangeTodayButton()" (click)="changeDayToToday($event); sortList($event)" [ngStyle]="{'background-color': '#' + bgColorToday}"><p >Heute</p></div>
+    <div style="margin: 0 0 0 0; padding: 10px" class="changeTomorrow" (mouseenter)="mouseEnterChangeTomorrowButton()"  (mouseleave)="mouseLeaveChangeTomorrowButton()" (click)="changeDayToTomorrow($event); sortList($event)" [ngStyle]="{'background-color': '#' + bgColorTomorrow}"><p >Morgen</p></div>
   </ul>
 </div>
 </div>

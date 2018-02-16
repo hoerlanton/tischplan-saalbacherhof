@@ -39,16 +39,17 @@ export class ImHausListeComponent implements OnInit {
   }
 
 
-  changeDay(){
-    if (this.tomorrow == null) {
-      this.tomorrow = true;
-      this.bgColorTomorrow = "0a7a74";
-      this.bgColorToday = "ffffff";
-    } else {
-      this.tomorrow = null;
-      this.bgColorTomorrow = "ffffff";
-      this.bgColorToday = "0a7a74";
-    }
+  changeDayToToday(){
+    this.tomorrow = null;
+    this.bgColorTomorrow = "ffffff";
+    this.bgColorToday = "0a7a74";
+  }
+
+  changeDayToTomorrow() {
+    this.tomorrow = true;
+    this.bgColorTomorrow = "0a7a74";
+    this.bgColorToday = "ffffff";
+
   }
 
   mouseEnterChangeTodayButton() {
