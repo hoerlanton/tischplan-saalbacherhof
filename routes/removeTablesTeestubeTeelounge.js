@@ -5,7 +5,7 @@
 module.exports = {
     removeTable: function (db, tableNumber, departmentValue, topValue, leftValue, height, width) {
 
-        if (tableNumber === '1' && topValue === '410' && leftValue === '160' && height === '130') {
+        if (tableNumber === 'Tee1' && topValue === '410' && leftValue === '160' && height === '130') {
                 db.hubertusTables.update(
                     {
                         department: departmentValue,
@@ -32,7 +32,7 @@ module.exports = {
                                 $each: [{
                                     "arrayIndex": 1,
                                     "department": "teestubeTeelounge",
-                                    "number": "2",
+                                    "number": "Tee2",
                                     "topValue": "420",
                                     "leftValue": "160",
                                     "bgColor": "#ffffff",
@@ -53,7 +53,7 @@ module.exports = {
                         }
                         console.log("addTable Update successful");
                     });
-        } else if (tableNumber === '1' && topValue === '310' && leftValue === '160' && height === '195') {
+        } else if (tableNumber === 'Tee1' && topValue === '310' && leftValue === '160' && height === '195') {
             db.hubertusTables.update(
                 {
                     department: departmentValue,
@@ -80,7 +80,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": 2,
                                 "department": "teestubeTeelounge",
-                                "number": "3",
+                                "number": "Tee3",
                                 "topValue": "325",
                                 "leftValue": "160",
                                 "bgColor": "#ffffff",
@@ -101,7 +101,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '1' && topValue === '210' && leftValue === '160' && height === '260') {
+        } else if (tableNumber === 'Tee1' && topValue === '210' && leftValue === '160' && height === '260') {
             db.hubertusTables.update(
                 {
                     department: departmentValue,
@@ -128,7 +128,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": 3,
                                 "department": "teestubeTeelounge",
-                                "number": "4",
+                                "number": "Tee4",
                                 "topValue": "225",
                                 "leftValue": "160",
                                 "bgColor": "#ffffff",
@@ -149,7 +149,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '1' && topValue === '140' && leftValue === '160' && height === '325') {
+        } else if (tableNumber === 'Tee1' && topValue === '140' && leftValue === '160' && height === '325') {
             db.hubertusTables.update(
                 {
                     department: departmentValue,
@@ -176,7 +176,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": 4,
                                 "department": "teestubeTeelounge",
-                                "number": "5",
+                                "number": "Tee5",
                                 "topValue": "140",
                                 "leftValue": "160",
                                 "bgColor": "#ffffff",
@@ -197,7 +197,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '2' && topValue === '310' && leftValue === '160' && height === '130') {
+        } else if (tableNumber === 'Tee2' && topValue === '310' && leftValue === '160' && height === '130') {
             db.hubertusTables.update(
                 {
                     department: departmentValue,
@@ -224,7 +224,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": 2,
                                 "department": "teestubeTeelounge",
-                                "number": "3",
+                                "number": "Tee3",
                                 "topValue": "325",
                                 "leftValue": "160",
                                 "bgColor": "#ffffff",
@@ -245,7 +245,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '2' && topValue === '210' && leftValue === '160' && height === '195') {
+        } else if (tableNumber === 'Tee2' && topValue === '210' && leftValue === '160' && height === '195') {
             db.hubertusTables.update(
                 {
                     department: departmentValue,
@@ -272,7 +272,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": 3,
                                 "department": "teestubeTeelounge",
-                                "number": "4",
+                                "number": "Tee4",
                                 "topValue": "225",
                                 "leftValue": "160",
                                 "bgColor": "#ffffff",
@@ -293,7 +293,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '2' && topValue === '140' && leftValue === '160' && height === '260') {
+        } else if (tableNumber === 'Tee2' && topValue === '140' && leftValue === '160' && height === '260') {
             db.hubertusTables.update(
                 {
                     department: departmentValue,
@@ -320,7 +320,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": 4,
                                 "department": "teestubeTeelounge",
-                                "number": "5",
+                                "number": "Tee5",
                                 "topValue": "140",
                                 "leftValue": "160",
                                 "bgColor": "#ffffff",
@@ -341,7 +341,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '4' && topValue === '140' && leftValue === '160' && height === '130') {
+        } else if (tableNumber === 'Tee4' && topValue === '140' && leftValue === '160' && height === '130') {
             db.hubertusTables.update(
                 {
                     department: departmentValue,
@@ -370,7 +370,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": 4,
                                 "department": "teestubeTeelounge",
-                                "number": "5",
+                                "number": "Tee5",
                                 "topValue": "140",
                                 "leftValue": "160",
                                 "bgColor": "#ffffff",
@@ -391,7 +391,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '3' && topValue === '140' && leftValue === '160' && height === '195') {
+        } else if (tableNumber === 'Tee3' && topValue === '140' && leftValue === '160' && height === '195') {
             db.hubertusTables.update(
                 {
                     department: departmentValue,
@@ -418,7 +418,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": 4,
                                 "department": "teestubeTeelounge",
-                                "number": "5",
+                                "number": "Tee5",
                                 "topValue": "140",
                                 "leftValue": "160",
                                 "bgColor": "#ffffff",
@@ -439,7 +439,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '3' && topValue === '210' && leftValue === '160' && height === '130') {
+        } else if (tableNumber === 'Tee3' && topValue === '210' && leftValue === '160' && height === '130') {
             db.hubertusTables.update(
                 {
                     department: departmentValue,
@@ -466,7 +466,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": 3,
                                 "department": "teestubeTeelounge",
-                                "number": "4",
+                                "number": "Tee4",
                                 "topValue": "225",
                                 "leftValue": "160",
                                 "bgColor": "#ffffff",

@@ -463,147 +463,51 @@ module.exports = {
 
         } else if (tableNumber === '97' && topValue === '290' && leftValue === '187' && height === '70') {
 
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                    "tables.number": tableNumber
-                },
-                {
-                    $set: {
-                        "tables.$.height": "35",
-                    }
-                }, function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("moveTable Update successful");
-                });
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                }, {
-                    $push: {
-                        tables: {
-                            $each: [{
-                                "arrayIndex": 15,
-                                "department": "edelweissKaminStube",
-                                "number": "98",
-                                "topValue": "355",
-                                "leftValue": "187",
-                                "bgColor": "#ffffff",
-                                "isBesetzt": "false",
-                                "placeholder": "true",
-                                "border": "solid 3px #f3efe4",
-                                "width": "40",
-                                "height": "35"
-                            }],
-                            $sort: {number: 1}
-                        }
-                    }
-                },
-                {multi: true},
-                function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("addTable Update successful");
-                });
-        } else if (tableNumber === '73' && topValue === '481' && leftValue === '500' && width === '80') {
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                    "tables.number": tableNumber
-                },
-                {
-                    $set: {
-                        "tables.$.width": "40",
-                        "tables.$.leftValue": "559",
-                    }
-                }, function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("moveTable Update successful");
-                });
-
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                }, {
-                    $push: {
-                        tables: {
-                            $each: [{
-                                "arrayIndex": 18,
-                                "department": "waeldlerStubeKristallStube",
-                                "number": "74",
-                                "topValue": "481",
-                                "leftValue": "456",
-                                "bgColor": "#ffffff",
-                                "isBesetzt": "false",
-                                "placeholder": "true",
-                                "border": "solid 3px #f3efe4",
-                                "width": "40",
-                                "height": "35"
-                            }],
-                            $sort: {number: 1}
-                        }
-                    }
-                },
-                {multi: true},
-                function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("addTable Update successful");
-                });
-        } else if (tableNumber === '70' && topValue === '330' && leftValue === '500' && width === '80') {
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                    "tables.number": tableNumber
-                },
-                {
-                    $set: {
-                        "tables.$.width": "40",
-                        "tables.$.leftValue": "458",
-                    }
-                }, function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("moveTable Update successful");
-                });
-
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                }, {
-                    $push: {
-                        tables: {
-                            $each: [{
-                                "arrayIndex": 16,
-                                "department": "waeldlerStubeKristallStube",
-                                "number": "71",
-                                "topValue": "330",
-                                "leftValue": "550",
-                                "bgColor": "#ffffff",
-                                "isBesetzt": "false",
-                                "placeholder": "true",
-                                "border": "solid 3px #f3efe4",
-                                "width": "40",
-                                "height": "35"
-                            }],
-                            $sort: {number: 1}
-                        }
-                    }
-                },
-                {multi: true},
-                function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("addTable Update successful");
-                });
-        }
+             db.hubertusTables.update(
+                 {
+                     department: departmentValue,
+                     "tables.number": tableNumber
+                 },
+                 {
+                     $set: {
+                         "tables.$.height": "35",
+                     }
+                 }, function (err, tables) {
+                     if (err) {
+                         console.log("Error");
+                     }
+                     console.log("moveTable Update successful");
+                 });
+             db.hubertusTables.update(
+                 {
+                     department: departmentValue,
+                 }, {
+                     $push: {
+                         tables: {
+                             $each: [{
+                                 "arrayIndex": 15,
+                                 "department": "edelweissKaminStube",
+                                 "number": "98",
+                                 "topValue": "355",
+                                 "leftValue": "187",
+                                 "bgColor": "#ffffff",
+                                 "isBesetzt": "false",
+                                 "placeholder": "true",
+                                 "border": "solid 3px #f3efe4",
+                                 "width": "40",
+                                 "height": "35"
+                             }],
+                             $sort: {number: 1}
+                         }
+                     }
+                 },
+                 {multi: true},
+                 function (err, tables) {
+                     if (err) {
+                         console.log("Error");
+                     }
+                     console.log("addTable Update successful");
+                 });
+         }
     }
 };

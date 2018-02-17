@@ -32,9 +32,10 @@ export class ImHausListeComponent implements OnInit {
   updateImHausListeElement(informationElements2) {
     this.tischplanService.updateImHausListeElement(informationElements2)
       .subscribe(response => {
-        //this.imHausListeElemente = response;
+        this.imHausListeElemente = response;
         //console.log('updateImHausListeElement response: ');
         //console.log(response);
+        this.sortList();
       });
   }
 

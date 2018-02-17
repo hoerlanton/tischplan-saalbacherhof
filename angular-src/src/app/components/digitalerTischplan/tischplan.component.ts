@@ -251,8 +251,8 @@ export class TischplanComponent {
     //console.log(tableNumberSubstring);
     this.departmentsComponent.addInformationToTable(dataString, arrayIndex);
     this.departmentsComponent.occupyTableOnDrop(dataString, arrayIndex);
-    this.imHausListeComponent.updateImHausListeElement(informationElements2);
     this.tableplanComponent.sumUpPersonenAnzahl();
+    this.updateImHausListeElement(informationElements2);
   }
 
   private onOver(args) {
@@ -287,6 +287,10 @@ export class TischplanComponent {
 
   showTeestube() {
     this.departmentmenuComponent.showTeestube();
+  }
+
+  updateImHausListeElement(x) {
+    this.imHausListeComponent.updateImHausListeElement(x);
   }
 
   /*

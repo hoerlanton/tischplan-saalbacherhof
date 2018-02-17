@@ -143,7 +143,40 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-
+        } else if (tableNumber === '86' && topValue === '85' && leftValue === '250' && width === '40') {
+            db.hubertusTables.update(
+                {
+                    department: departmentValue,
+                    "tables.number": tableNumber
+                },
+                {
+                    $set: {
+                        "tables.$.width": "120",
+                        "tables.$.leftValue": "280",
+                    }
+                }, function (err, tables) {
+                    if (err) {
+                        console.log("Error");
+                    }
+                    console.log("moveTable Update successful");
+                });
+            db.hubertusTables.update(
+                {}, {
+                    $pull: {
+                        tables: {
+                            "number": "90",
+                        }
+                    }
+                },
+                {
+                    multi: true
+                }, function (err, tables) {
+                    if (err) {
+                        console.log("Error");
+                    }
+                    console.log("removeTable Update successful");
+                    console.log(tables);
+                });
         } else if (tableNumber === '96' && topValue === '228' && leftValue === '187' && height === '35') {
             db.hubertusTables.update(
                 {
@@ -336,40 +369,6 @@ module.exports = {
                     $pull: {
                         tables: {
                             "number": "98",
-                        }
-                    }
-                },
-                {
-                    multi: true
-                }, function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("removeTable Update successful");
-                    console.log(tables);
-                });
-        } else if (tableNumber === '73' && topValue === '481' && leftValue === '559' && width === '40') {
-            db.hubertusTables.update(
-                {
-                    department: departmentValue,
-                    "tables.number": tableNumber
-                },
-                {
-                    $set: {
-                        "tables.$.width": "80",
-                        "tables.$.leftValue": "500",
-                    }
-                }, function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("moveTable Update successful");
-                });
-            db.hubertusTables.update(
-                {}, {
-                    $pull: {
-                        tables: {
-                            "number": "74",
                         }
                     }
                 },

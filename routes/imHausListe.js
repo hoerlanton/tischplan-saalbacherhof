@@ -217,48 +217,75 @@ module.exports = {
     updateImHausListe: function (req, res, db) {
 
         console.log("Post request made to /updateImHausListeElement");
+        console.log(req.body);
+
+        let nameValueArray = [];
+        let zimmernummerValueArray = [];
 
         let informationElements = req.body;
         console.log(informationElements);
 
-        let nameValue = informationElements[0].substring(1, informationElements[0].length);
-        let zimmernummerValue = informationElements[2].substring(1, informationElements[2].length);
+        let informationElementsString = JSON.stringify(informationElements);
 
-        console.log(nameValue);
-        console.log(zimmernummerValue);
+        if (informationElementsString.indexOf("leftValue") != -1) {
+            for (let i = 0; i < informationElements.groups.length; i++) {
+                 nameValueArray.push(informationElements.groups[i].nameValue);
+                 zimmernummerValueArray.push(informationElements.groups[i].zimmernummerValue);
 
-        db.hubertusImHausListe.update(
-            {
-                name: nameValue,
-                "zimmernummer": zimmernummerValue
-            },
-            {
-                $set: {
-                    "bgColor": "0a7a74",
-                }
-            }, function (err, tables) {
-                if (err) {
-                    console.log("Error");
-                }
-                console.log("occupyTable Update successful");
-            });
+                db.hubertusImHausListe.update(
+                    {
+                        name: nameValueArray[i],
+                        "zimmernummer": zimmernummerValueArray[i]
+                    },
+                    {
+                        $set: {
+                            "bgColor": "ffffff",
+                        }
+                    }, function (err, tables) {
+                        if (err) {
+                            console.log("Error");
+                        }
+                        console.log("occupyTable Update successful");
+                    });
 
+            }
+        } else {
+            nameValueArray.push(informationElements[0].substring(1, informationElements[0].length));
+            zimmernummerValueArray.push(informationElements[2].substring(1, informationElements[2].length));
 
-        setTimeout(function () {
-            db.hubertusImHausListe.findOne(
+            console.log(nameValueArray[0]);
+            console.log(zimmernummerValueArray[0]);
+
+            db.hubertusImHausListe.update(
                 {
-                    name: nameValue,
-                    "zimmernummer": zimmernummerValue
+                    name: nameValueArray[0],
+                    "zimmernummer": zimmernummerValueArray[0]
                 },
-                function (err, hubertusImHausListe) {
-                    if (err) {
-                        res.send(err);
+                {
+                    $set: {
+                        "bgColor": "0a7a74",
                     }
-                    res.json(hubertusImHausListe);
-                    console.log('hubertusImHausListe');
-                    console.log(JSON.stringify(hubertusImHausListe));
+                }, function (err, tables) {
+                    if (err) {
+                        console.log("Error");
+                    }
+                    console.log("occupyTable Update successful");
                 });
-        }, 700);
+        }
+
+            setTimeout(function () {
+                db.hubertusImHausListe.find(
+                    {},
+                    function (err, hubertusImHausListe) {
+                        if (err) {
+                            res.send(err);
+                        }
+                        res.json(hubertusImHausListe);
+                        console.log('hubertusImHausListe');
+                        console.log(JSON.stringify(hubertusImHausListe));
+                    });
+            }, 700);
+
     },
     getImHausListe: function (req, res, db) {
         console.log("imHausListe get called");
