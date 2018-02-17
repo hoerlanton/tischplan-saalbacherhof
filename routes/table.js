@@ -156,6 +156,7 @@ module.exports = {
         let splitted = data.split("\\");
         let informationElements2 = [];
         let value = "nAnreise";
+        let teeString = "Tee";
         for (let s = 0; s < splitted.length; s++) {
             informationElements2.push(splitted[s].split(":"));
         }
@@ -174,7 +175,12 @@ module.exports = {
             departmentValue = informationElements2[informationElements2Length - 1][0].substring(1, informationElements2[informationElements2Length - 1][0].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
             tableValueArray = informationElements2[informationElements2Length - 1][0].toString().match(/\d+/g);
             tableValue = tableValueArray[0];
-            if (tableValueArray[1] === "1" || tableValueArray[1] === "2" || tableValueArray[1] === "3" || tableValueArray[1] === "4") {
+            if (tableValueArray[0] === "1" || tableValueArray[0] === "2" || tableValueArray[0] === "3" || tableValueArray[0] === "4" || tableValueArray[0] === "5" || tableValueArray[0] === "6") {
+                console.log("TEE ---------------------");
+                console.log(teeString);
+                console.log(tableValueArray[0]);
+                tableValue =  teeString + tableValueArray[0];
+            } else if (tableValueArray[1] === "1" || tableValueArray[1] === "2" || tableValueArray[1] === "3" || tableValueArray[1] === "4") {
                 tableValue = tableValueArray.join(".");
             } else {
                 tableValue = tableValueArray[0];

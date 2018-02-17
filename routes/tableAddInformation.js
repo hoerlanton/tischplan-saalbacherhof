@@ -32,7 +32,8 @@ module.exports = {
             newTraceName = [],
             newTraceEmployee = [],
             newTraceDate = [],
-            newTraceTableNumber = [];
+            newTraceTableNumber = [],
+            teeString = "Tee";
             //vipValue = [],
             //resStatusValue = [];
 
@@ -66,8 +67,12 @@ module.exports = {
             //resStatusValue.push(informationElements2[informationElements2.length - 2].substring(1, informationElements2[informationElements2.length - 2].length));
             departmentValue = informationElements2[informationElements2.length - 1].substring(1, informationElements2[informationElements2.length - 1].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '');
             tableValueArray = informationElements2[informationElements2.length - 1].toString().match(/\d+/g);
-            if (tableValueArray[1] === "1" || tableValueArray[1] === "2" || tableValueArray[1] === "3" || tableValueArray[1] === "4") {
-                console.log("HOIOI");
+            if (tableValueArray[0] === "1" || tableValueArray[0] === "2" || tableValueArray[0] === "3" || tableValueArray[0] === "4" || tableValueArray[0] === "5" || tableValueArray[0] === "6") {
+                console.log("TEE ---------------------");
+                console.log(teeString);
+                console.log(tableValueArray[0]);
+                tableValue =  teeString + tableValueArray[0];
+            } else if (tableValueArray[1] === "1" || tableValueArray[1] === "2" || tableValueArray[1] === "3" || tableValueArray[1] === "4") {
                 tableValue = tableValueArray.join(".");
             } else {
                 tableValue = tableValueArray[0];

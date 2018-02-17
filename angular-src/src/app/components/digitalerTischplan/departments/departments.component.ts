@@ -14,8 +14,6 @@ import {AlleComponent} from "./alle/alle.component";
   styleUrls: ['../tischplan.component.css']
 })
 export class DepartmentsComponent  {
-
-
   @Input('tablesBauernstube') tablesBauernstube: Table[];
   @Input('showBauernStubnBool') showBauernStubnBool: boolean;
   @Input('tablesEdelweissKaminStube') tablesEdelweissKaminStube: Table[];

@@ -2322,6 +2322,13 @@ var ImHausListeComponent = (function () {
         var _this = this;
         this.tischplanService.updateImHausListeElement(informationElements2)
             .subscribe(function (response) {
+            response.sort(function (a, b) {
+                if (a.name < b.name)
+                    return -1;
+                if (a.name > b.name)
+                    return 1;
+                return 0;
+            });
             _this.imHausListeElemente = response;
             //console.log('updateImHausListeElement response: ');
             //console.log(response);
@@ -4132,14 +4139,16 @@ var TischplanComponent = (function () {
         //console.log("departement" + department);
         var departementSubstring = department.substring(1, department.length - 1);
         //console.log("departementSubstring: " + departementSubstring);
-        var tableNumber = args[1].innerText;
-        console.log(tableNumber);
+        var innerText = args[1].innerText;
+        console.log(innerText);
         //console.log("tableNumber: " + tableNumber);
-        var tableNumberSubstring = tableNumber.toString().match(/\d+/);
-        var numbers = tableNumber.match(/\d+/g);
+        var tableNumberSubstring = innerText.toString().match(/\d+/);
+        console.log('tableNumberSubstring');
+        console.log(tableNumberSubstring);
+        var numbers = innerText.match(/\d+/g);
         var arrayIndex = [];
-        console.log(tableNumber.substring(33, 34));
-        if (tableNumber.substring(33, 34) === ".") {
+        console.log(innerText.substring(33, 34));
+        if (innerText.substring(33, 34) === ".") {
             arrayIndex = numbers[2];
             tableNumberSubstring = numbers[0] + "." + numbers[1];
         }
@@ -4151,7 +4160,7 @@ var TischplanComponent = (function () {
         //console.log("tableNumberSubstring: " + tableNumberSubstring);
         var dataString = [];
         dataString.push(information + departementSubstring + tableNumberSubstring);
-        var jBefore = tableNumber.toString().match(/\d+/g);
+        var jBefore = innerText.toString().match(/\d+/g);
         console.log(jBefore);
         var j = jBefore[1];
         //let j = jArray[1];
