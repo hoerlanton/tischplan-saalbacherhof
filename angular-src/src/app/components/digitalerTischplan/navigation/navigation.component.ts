@@ -217,23 +217,31 @@ export class NavigationComponent implements OnInit {
     this.filesToUpload = <Array<File>>fileInput.target.files;
   }
 
-  upload(){
+  upload() {
     const formData: any = new FormData();
     const files: Array<File> = this.filesToUpload;
 
     formData.append('uploads[]', files[0], files[0]['name']);
 
     this.http.post('/upload', formData)
-      .map(files => files.json()).map(res =>
+      .map(files => files.json()).map(res => {
       // 1st parameter is a flash message text
       // 2nd parameter is optional. You can pass object with options.
-      this._flashMessagesService.show('Erfolgreich CSV Datei hochgeladen', {cssClass: 'alert-success', timeout: 10000}))
-      .subscribe(files => console.log('files', files));
+      if (res[0].originalname) {
+        this._flashMessagesService.show('Erfolgreich ' + JSON.stringify(res[0].originalname) + " hochgeladen", {
+          cssClass: 'alert-success',
+          timeout: 10000
+        })} else {
+        this._flashMessagesService.show(JSON.stringify(res), {
+          cssClass: 'alert-danger',
+          timeout: 10000
+        })
+      }})
+
+      .subscribe(files => console.log("files", files));
     setTimeout(() => {
       this.reloadLists.emit();
     }, 3000);
-
-
   }
 
   dispenseIfAbreise() {

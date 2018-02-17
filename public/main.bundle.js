@@ -2771,9 +2771,20 @@ var NavigationComponent = (function () {
             .map(function (files) { return files.json(); }).map(function (res) {
             // 1st parameter is a flash message text
             // 2nd parameter is optional. You can pass object with options.
-            return _this._flashMessagesService.show('Erfolgreich CSV Datei hochgeladen', { cssClass: 'alert-success', timeout: 10000 });
+            if (res[0].originalname) {
+                _this._flashMessagesService.show('Erfolgreich ' + JSON.stringify(res[0].originalname) + " hochgeladen", {
+                    cssClass: 'alert-success',
+                    timeout: 10000
+                });
+            }
+            else {
+                _this._flashMessagesService.show(JSON.stringify(res), {
+                    cssClass: 'alert-danger',
+                    timeout: 10000
+                });
+            }
         })
-            .subscribe(function (files) { return console.log('files', files); });
+            .subscribe(function (files) { return console.log("files", files); });
         setTimeout(function () {
             _this.reloadLists.emit();
         }, 3000);

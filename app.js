@@ -103,17 +103,23 @@ app.post("/upload", upload.array("uploads[]", 12), function (req, res) {
 
     //let workbook2 = XLSX.utils.sheet_to_json(String("./uploads/" + uploadedFileName));
 
-    let workbook = XLSX.readFile(String("./uploads/" + uploadedFileName));
+    if (uploadedFileName.indexOf("xls") != -1){
 
-    //console.log(JSON.stringify(workbook.Props));
-    //console.log(JSON.stringify(workbook.SheetNames));
-    //console.log(JSON.stringify(workbook.Sheets[workbook.SheetNames[0]]));
-    //console.log(JSON.stringify(workbook.vbaraw));
-    //console.log(JSON.stringify(workbook.Workbook));
-    /* DO SOMETHING WITH workbook HERE */
-    imHausListe = JSON.stringify(workbook.Sheets[workbook.SheetNames[0]]);
-    console.log(imHausListe);
-    postImHausListeToDB();
+        let workbook = XLSX.readFile(String("./uploads/" + uploadedFileName));
+
+        //console.log(JSON.stringify(workbook.Props));
+        //console.log(JSON.stringify(workbook.SheetNames));
+        //console.log(JSON.stringify(workbook.Sheets[workbook.SheetNames[0]]));
+        //console.log(JSON.stringify(workbook.vbaraw));
+        //console.log(JSON.stringify(workbook.Workbook));
+        /* DO SOMETHING WITH workbook HERE */
+        imHausListe = JSON.stringify(workbook.Sheets[workbook.SheetNames[0]]);
+        //console.log(JSON.stringify(workbook2));
+        postImHausListeToDB();
+        res.send(req.files);
+    } else {
+        res.send(JSON.stringify("Error, falscher Datentyp"));
+    }
 });
     //data = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]], {header:1});
     //console.log(data);
