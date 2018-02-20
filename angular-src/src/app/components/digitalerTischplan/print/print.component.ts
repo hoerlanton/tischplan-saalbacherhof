@@ -112,9 +112,9 @@ export class PrintComponent implements OnInit {
     });
 
     for (let i: number = 0; i < this.tables.length; i++) {
-      console.log(i);
+      //console.log(i);
       if ("nameValue" in this.tables[i]) {
-        console.log("--->" + i);
+        //console.log("--->" + i);
         this.tableNumbers.push(this.tables[i].number);
       }
     }

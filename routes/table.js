@@ -275,7 +275,7 @@ module.exports = {
                 for (let i = 0; i < dispenseTable.group.length; i++) {
                     if (dispenseTable.groups.length > dispenseTable.group.length) {
                         console.log("111111111111");
-                        db.tables.findAndModify({
+                        db.hubertusTables.findAndModify({
                             query: {department: dispenseTable.department, "tables.number": dispenseTable.number},
                             update: {
                                 $unset: {
@@ -290,7 +290,7 @@ module.exports = {
                             console.log("No Error");
                         });
                         setTimeout(function () {
-                            db.tables.findAndModify({
+                            db.hubertusTables.findAndModify({
                                 query: {department: dispenseTable.department, "tables.number": dispenseTable.number},
                                 update: {
                                     $pull: {
@@ -307,7 +307,7 @@ module.exports = {
 
                         }, 100);
                     } else if (dispenseTable.groups.length === dispenseTable.group.length) {
-                        db.tables.findAndModify({
+                        db.hubertusTables.findAndModify({
                             query: {department: dispenseTable.department, "tables.number": dispenseTable.number},
                             update: {
                                 $set: {
@@ -326,7 +326,7 @@ module.exports = {
                         });
                     }
                     setTimeout(function () {
-                        db.tables.findAndModify({
+                        db.hubertusTables.findAndModify({
                             query: {department: dispenseTable.department, "tables.number": dispenseTable.number,},
                             update: {
                                 $pull: {
@@ -343,7 +343,7 @@ module.exports = {
                     }, 100);
                 }
             } else {
-                db.tables.findAndModify({
+                db.hubertusTables.findAndModify({
                     query: {department: dispenseTable.department, "tables.number": dispenseTable.number},
                     update: {
                         $set: {
@@ -362,7 +362,7 @@ module.exports = {
                 });
             }
         } else {
-            db.tables.findAndModify({
+            db.hubertusTables.findAndModify({
                 query: {department: dispenseTable.department, "tables.number": dispenseTable.number},
                 update: {
                     $set: {
@@ -382,7 +382,7 @@ module.exports = {
 
         }
         setTimeout(function () {
-            db.tables.find(
+            db.hubertusTables.find(
                 {
                     department: dispenseTable.department,
                     "tables.number": dispenseTable.number

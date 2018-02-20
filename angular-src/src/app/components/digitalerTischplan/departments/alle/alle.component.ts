@@ -45,13 +45,13 @@ export class AlleComponent implements PipeTransform {
   }
 
   transform(tables: Array<any>, term: any) {
-    console.log("term");
-    console.log(term);
+    //console.log("term");
+    //console.log(term);
     if (Array.isArray(tables) && tables.length && term && term.length) {
       this.tables = tables.filter(item => {
-        console.log(item);
+        //console.log(item);
         let keys = Object.keys(item);
-        console.log(keys);
+        //console.log(keys);
         if (Array.isArray(keys) && keys.length) {
           for (let key of keys) {
             if (item.hasOwnProperty(key) && item[key] && item[key].length && (item[key].toString().toLowerCase().replace(/ /g, '')).includes((term.toString().toLowerCase().replace(/ /g, '')))) {

@@ -942,13 +942,13 @@ var AlleComponent = (function () {
         }
     };
     AlleComponent.prototype.transform = function (tables, term) {
-        console.log("term");
-        console.log(term);
+        //console.log("term");
+        //console.log(term);
         if (Array.isArray(tables) && tables.length && term && term.length) {
             this.tables = tables.filter(function (item) {
-                console.log(item);
+                //console.log(item);
                 var keys = Object.keys(item);
-                console.log(keys);
+                //console.log(keys);
                 if (Array.isArray(keys) && keys.length) {
                     for (var _i = 0, keys_1 = keys; _i < keys_1.length; _i++) {
                         var key = keys_1[_i];
@@ -1320,20 +1320,20 @@ var DepartmentsComponent = (function () {
     DepartmentsComponent.prototype.ngOnInit = function () {
     };
     DepartmentsComponent.prototype.occupied = function (table) {
-        console.log("table.j");
-        console.log(table.j);
-        console.log("table.table");
-        console.log(table.table);
+        //console.log("table.j");
+        //console.log(table.j);
+        //console.log("table.table");
+        //console.log(table.table);
         this.occupy(table.table, table.j);
     };
     DepartmentsComponent.prototype.occupy = function (table, j) {
         var _this = this;
         this.tischplanService.dispenseTable(table).subscribe(function (response) {
-            console.log("Dispense Table:");
-            console.log(j);
-            console.log("bgColor:" + JSON.stringify(response));
-            console.log("bgColor:" + JSON.stringify(response[0].tables[j].bgColor));
-            console.log("isBesetzt:" + JSON.stringify(response[0].tables[j].isBesetzt));
+            //console.log("Dispense Table:");
+            //console.log(j);
+            //console.log("bgColor:" + JSON.stringify(response));
+            //console.log("bgColor:" + JSON.stringify(response[0].tables[j].bgColor));
+            //console.log("isBesetzt:" + JSON.stringify(response[0].tables[j].isBesetzt));
             if (response === null) {
                 return;
             }
@@ -1358,9 +1358,9 @@ var DepartmentsComponent = (function () {
             _this.updateImHausListeElement.emit(table);
         });
         this.tischplanService.addPlaceholder(table).subscribe(function (response) {
-            console.log("Add placeholder!");
-            console.log("Add placeholder! table ... " + JSON.stringify(table));
-            console.log("placeholder:" + JSON.stringify(response[0].tables[j].placeholder));
+            //console.log("Add placeholder!");
+            //console.log("Add placeholder! table ... " + JSON.stringify(table));
+            //console.log("placeholder:" + JSON.stringify(response[0].tables[j].placeholder));
             if (response === null) {
                 return;
             }
@@ -1386,12 +1386,12 @@ var DepartmentsComponent = (function () {
     };
     DepartmentsComponent.prototype.addInformationToTable = function (dataString, arrayIndex) {
         var _this = this;
-        console.log("dataString");
-        console.log(dataString);
+        //console.log("dataString");
+        //console.log(dataString);
         this.tischplanService.addInformationToTable(dataString)
             .subscribe(function (response) {
             // let arrayIndex = response[1];
-            console.log("RESPONSE addInformationToTable:" + JSON.stringify(response));
+            //console.log("RESPONSE addInformationToTable:" + JSON.stringify(response));
             if (response === null) {
                 return;
             }
@@ -1413,19 +1413,19 @@ var DepartmentsComponent = (function () {
                     //this.tablesTeestubeTeelounge[arrayIndex] = response.tables[0];
                 }
             }
-            // console.log(this.tablesBerglerStubeHubertusStube[arrayIndex]);
+            // //console.log(this.tablesBerglerStubeHubertusStube[arrayIndex]);
         });
         this.updateAzList.emit();
     };
     DepartmentsComponent.prototype.occupyTableOnDrop = function (dataString, arrayIndex) {
         var _this = this;
-        console.log("Occupy Table!");
+        //console.log("Occupy Table!");
         this.tischplanService.occupyTable(dataString)
             .subscribe(function (response) {
             //let arrayIndex = response[1];
             //console.log("arrayIndex:" + arrayIndex);
             //console.log("bgColor:" + JSON.stringify(response[0].tables[arrayIndex].bgColor));
-            console.log("Response occupyTable:" + JSON.stringify(response));
+            //console.log("Response occupyTable:" + JSON.stringify(response));
             if (response === null) {
                 return;
             }
@@ -1454,8 +1454,8 @@ var DepartmentsComponent = (function () {
         var _this = this;
         setTimeout(function () {
             _this.tablesChangeBgColorIfAnreise = _this.tablesTempAbreise;
-            console.log('=================================================changeBgColorIfAnreise');
-            console.log(_this.tablesChangeBgColorIfAnreise);
+            //console.log('=================================================changeBgColorIfAnreise');
+            //console.log(this.tablesChangeBgColorIfAnreise);
             _this.dateTodayGenerated = new Date();
             _this.parts = [];
             _this.parsedDate = [];
@@ -1465,7 +1465,7 @@ var DepartmentsComponent = (function () {
                     if (_this.tablesChangeBgColorIfAnreise[a].tables[b].groups) {
                         for (var c = 0; c < _this.tablesChangeBgColorIfAnreise[a].tables[b].groups.length; c++) {
                             if (_this.tablesChangeBgColorIfAnreise[a].tables[b].groups[c].anreiseValue) {
-                                console.log('tablesChangeBgColorIfAnreise[a].tables[b].groups[c].anreiseValue: ' + c + " " + _this.tablesChangeBgColorIfAnreise[a].tables[b].groups[c].anreiseValue);
+                                //console.log('tablesChangeBgColorIfAnreise[a].tables[b].groups[c].anreiseValue: ' + c + " " + this.tablesChangeBgColorIfAnreise[a].tables[b].groups[c].anreiseValue);
                                 _this.parts[0] = _this.tablesChangeBgColorIfAnreise[a].tables[b].groups[c].anreiseValue.match(/(\d+)/g);
                             }
                             else {
@@ -1476,12 +1476,12 @@ var DepartmentsComponent = (function () {
                                 _this.parsedDate[0] = String(_this.date[0]).substring(0, 15);
                             }
                             // note parts[1]-1
-                            // console.log('parts[2]' + parts[2] + 'parts[1]' + (parts[1] - 1) + 'parts[0]' + parts[0]);
+                            // //console.log('parts[2]' + parts[2] + 'parts[1]' + (parts[1] - 1) + 'parts[0]' + parts[0]);
                             // Mon May 31 2010 00:00:00
                             // this.tablesRestaurant[j].anreiseValue
                             var dateToday = String(_this.dateTodayGenerated).substring(0, 15);
-                            console.log('Parsed Date --->: ' + _this.parsedDate[0]);
-                            console.log('this.dateGenerated --->: ' + dateToday);
+                            //console.log('Parsed Date --->: ' + this.parsedDate[0]);
+                            //console.log('this.dateGenerated --->: ' + dateToday);
                             if (dateToday.indexOf(_this.parsedDate[0]) !== -1) {
                                 if (_this.tablesChangeBgColorIfAnreise[a].department === "berglerStubeHubertusStube") {
                                     if (_this.tablesBerglerStubeHubertusStube[b]) {
@@ -2793,7 +2793,8 @@ var NavigationComponent = (function () {
         var tables = this.tablesTempAbreise;
         var splittedGroups = 0;
         console.log('=================================================dispenseIfAbreise');
-        this.dateTodayGenerated = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+        this.dateTodayGenerated = new Date(); //Today
+        //Tomorrow new Date().getTime() + 24 * 60 * 60 * 1000
         for (var a = 0; a < tables.length; a++) {
             for (var b = 0; b < tables[a].tables.length; b++) {
                 if (tables[a].tables[b].groups) {
@@ -3031,9 +3032,9 @@ var PrintComponent = (function () {
             //}
         });
         for (var i = 0; i < this.tables.length; i++) {
-            console.log(i);
+            //console.log(i);
             if ("nameValue" in this.tables[i]) {
-                console.log("--->" + i);
+                //console.log("--->" + i);
                 this.tableNumbers.push(this.tables[i].number);
             }
         }
