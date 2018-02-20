@@ -226,11 +226,9 @@ module.exports = {
         console.log(informationElements);
 
         let informationElementsString = JSON.stringify(informationElements);
-        if (informationElementsString.indexOf("targetTable") != -1) {
+        if (informationElementsString.indexOf("targetTable") != -1 && informationElementsString.indexOf("nameValue") === -1) {
             console.log("BUG I GONNA KILL YOU !!!!")
         } else {
-
-
         if (informationElementsString.indexOf("leftValue") != -1) {
             for (let i = 0; i < informationElements.groups.length; i++) {
                  nameValueArray.push(informationElements.groups[i].nameValue);
@@ -251,7 +249,6 @@ module.exports = {
                         }
                         console.log("occupyTable Update successful");
                     });
-
             }
         } else {
             nameValueArray.push(informationElements[0].substring(1, informationElements[0].length));

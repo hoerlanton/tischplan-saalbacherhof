@@ -132,6 +132,7 @@ module.exports = {
             let umsetzen = JSON.parse(data);
             console.log("umsetzen");
             console.log(umsetzen);
+
             for (let i = 0; i < umsetzen[0].groups.length; i++) {
                 zimmernummerValue.push(umsetzen[0].groups[i].zimmernummerValue);
                 nameValue.push(umsetzen[0].groups[i].nameValue);
@@ -155,6 +156,16 @@ module.exports = {
                 tableValue = umsetzen[1].targetTable;
                 umsetzen[0].department = umsetzen[1].targetDepartment;
             }
+
+
+            if (tableValue === "1" || tableValue === "2" || tableValue === "3" || tableValue === "4" || tableValue === "5" || tableValue === "6") {
+                console.log("TEE ---------------------");
+                console.log(teeString);
+                console.log(umsetzen.targetTable);
+                tableValue = teeString + tableValue;
+                console.log(tableValue);
+            }
+
             //console.log(" nameValue " + nameValue + " zimmernummerValue " + zimmernummerValue + " anreiseValue " + anreiseValue + " abreiseValue " + abreiseValue + " personenAnzahlValue " + personenAnzahlValue + " notiz1Value " + notiz1Value + " notiz2Value " + notiz2Value + " bemerkungValue " + bemerkungValue + "tableValue" + tableValue + "departmentvalue" + departmentValue);
 
 

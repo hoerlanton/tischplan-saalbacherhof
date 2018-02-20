@@ -2679,7 +2679,7 @@ var NavigationComponent = (function () {
             tableToMove.department = "edelweissKaminStube";
             j = 3;
         }
-        else if (Number(this.quellTisch) >= 1 && Number(this.quellTisch) <= 6) {
+        else if ((Number(this.quellTisch) >= 1 && Number(this.quellTisch) <= 6) || this.quellTisch === "Tee1" || this.quellTisch === "Tee2" || this.quellTisch === "Tee3" || this.quellTisch === "Tee4" || this.quellTisch === "Tee5" || this.quellTisch === "Tee6") {
             tableToMove.department = "teestubeTeelounge";
             j = 2;
         }
@@ -2695,7 +2695,7 @@ var NavigationComponent = (function () {
         else if (Number(this.zielTisch) >= 80 && Number(this.zielTisch) <= 99) {
             tableToMove.targetDepartment = "edelweissKaminStube";
         }
-        else if (Number(this.zielTisch) >= 1 && Number(this.zielTisch) <= 6) {
+        else if ((Number(this.zielTisch) >= 1 && Number(this.zielTisch) <= 6) || this.zielTisch === "Tee1" || this.zielTisch === "Tee2" || this.zielTisch === "Tee3" || this.zielTisch === "Tee4" || this.zielTisch === "Tee5" || this.zielTisch === "Tee6") {
             tableToMove.targetDepartment = "teestubeTeelounge";
         }
         var indexZiel = 0;

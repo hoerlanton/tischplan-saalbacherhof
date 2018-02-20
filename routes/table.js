@@ -189,11 +189,22 @@ module.exports = {
         } else {
             let umsetzen = JSON.parse(data);
 
+            console.log(umsetzen.targetTable)
+            if (umsetzen.targetTable === "1" || umsetzen.targetTable === "2" || umsetzen.targetTable === "3" || umsetzen.targetTable === "4" || umsetzen.targetTable === "5" || umsetzen.targetTable === "6") {
+                console.log("TEE ---------------------");
+                console.log(teeString);
+                console.log(umsetzen.targetTable);
+                tableValue =  teeString + umsetzen.targetTable;
+                console.log(tableValue);
+            } else {
+                tableValue = umsetzen.targetTable;
+            }
+
             console.log("Umsetzen in occupyTable function");
             console.log(umsetzen);
 
             departmentValueDB = umsetzen.targetDepartment;
-            tableValue = umsetzen.targetTable;
+
 
             console.log(tableValue);
             console.log(departmentValueDB);
