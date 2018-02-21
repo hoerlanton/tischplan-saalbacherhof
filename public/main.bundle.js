@@ -1464,48 +1464,50 @@ var DepartmentsComponent = (function () {
                 for (var b = 0; b < _this.tablesChangeBgColorIfAnreise[a].tables.length; b++) {
                     if (_this.tablesChangeBgColorIfAnreise[a].tables[b].groups) {
                         for (var c = 0; c < _this.tablesChangeBgColorIfAnreise[a].tables[b].groups.length; c++) {
-                            if (_this.tablesChangeBgColorIfAnreise[a].tables[b].groups[c].anreiseValue) {
-                                //console.log('tablesChangeBgColorIfAnreise[a].tables[b].groups[c].anreiseValue: ' + c + " " + this.tablesChangeBgColorIfAnreise[a].tables[b].groups[c].anreiseValue);
-                                _this.parts[0] = _this.tablesChangeBgColorIfAnreise[a].tables[b].groups[c].anreiseValue.match(/(\d+)/g);
-                            }
-                            else {
-                                _this.parts[0] = "undefined";
-                            }
-                            if (_this.parts[0]) {
-                                _this.date[0] = new Date(2018, _this.parts[0][1] - 1, _this.parts[0][0]);
-                                _this.parsedDate[0] = String(_this.date[0]).substring(0, 15);
-                            }
-                            // note parts[1]-1
-                            // //console.log('parts[2]' + parts[2] + 'parts[1]' + (parts[1] - 1) + 'parts[0]' + parts[0]);
-                            // Mon May 31 2010 00:00:00
-                            // this.tablesRestaurant[j].anreiseValue
-                            var dateToday = String(_this.dateTodayGenerated).substring(0, 15);
-                            //console.log('Parsed Date --->: ' + this.parsedDate[0]);
-                            //console.log('this.dateGenerated --->: ' + dateToday);
-                            if (dateToday.indexOf(_this.parsedDate[0]) !== -1) {
-                                if (_this.tablesChangeBgColorIfAnreise[a].department === "berglerStubeHubertusStube") {
-                                    if (_this.tablesBerglerStubeHubertusStube[b]) {
-                                        _this.tablesBerglerStubeHubertusStube[b].bgColor = "#0a7a74";
-                                    }
+                            if (_this.tablesChangeBgColorIfAnreise[a].tables[b].groups[c]) {
+                                if (_this.tablesChangeBgColorIfAnreise[a].tables[b].groups[c].anreiseValue) {
+                                    //console.log('tablesChangeBgColorIfAnreise[a].tables[b].groups[c].anreiseValue: ' + c + " " + this.tablesChangeBgColorIfAnreise[a].tables[b].groups[c].anreiseValue);
+                                    _this.parts[0] = _this.tablesChangeBgColorIfAnreise[a].tables[b].groups[c].anreiseValue.match(/(\d+)/g);
                                 }
-                                else if (_this.tablesChangeBgColorIfAnreise[a].department === "Bauernstube") {
-                                    if (_this.tablesBauernstube[b]) {
-                                        _this.tablesBauernstube[b].bgColor = "#0a7a74";
-                                    }
+                                else {
+                                    _this.parts[0] = "undefined";
                                 }
-                                else if (_this.tablesChangeBgColorIfAnreise[a].department === "waeldlerStubeKristallStube") {
-                                    if (_this.tablesWaeldlerStubeKristallStube[b]) {
-                                        _this.tablesWaeldlerStubeKristallStube[b].bgColor = "#0a7a74";
-                                    }
+                                if (_this.parts[0]) {
+                                    _this.date[0] = new Date(2018, _this.parts[0][1] - 1, _this.parts[0][0]);
+                                    _this.parsedDate[0] = String(_this.date[0]).substring(0, 15);
                                 }
-                                else if (_this.tablesChangeBgColorIfAnreise[a].department === "edelweissKaminStube") {
-                                    if (_this.tablesEdelweissKaminStube[b]) {
-                                        _this.tablesEdelweissKaminStube[b].bgColor = "#0a7a74";
+                                // note parts[1]-1
+                                // console.log('parts[2]' + parts[2] + 'parts[1]' + (parts[1] - 1) + 'parts[0]' + parts[0]);
+                                // Mon May 31 2010 00:00:00
+                                // this.tablesRestaurant[j].anreiseValue
+                                var dateToday = String(_this.dateTodayGenerated).substring(0, 15);
+                                //console.log('Parsed Date --->: ' + this.parsedDate[0]);
+                                //console.log('this.dateGenerated --->: ' + dateToday);
+                                if (dateToday.indexOf(_this.parsedDate[0]) !== -1) {
+                                    if (_this.tablesChangeBgColorIfAnreise[a].department === "berglerStubeHubertusStube") {
+                                        if (_this.tablesBerglerStubeHubertusStube[b]) {
+                                            _this.tablesBerglerStubeHubertusStube[b].bgColor = "#0a7a74";
+                                        }
                                     }
-                                }
-                                else if (_this.tablesChangeBgColorIfAnreise[a].department === "teestubeTeelounge") {
-                                    if (_this.tablesTeestubeTeelounge[b]) {
-                                        _this.tablesTeestubeTeelounge[b].bgColor = "#0a7a74";
+                                    else if (_this.tablesChangeBgColorIfAnreise[a].department === "Bauernstube") {
+                                        if (_this.tablesBauernstube[b]) {
+                                            _this.tablesBauernstube[b].bgColor = "#0a7a74";
+                                        }
+                                    }
+                                    else if (_this.tablesChangeBgColorIfAnreise[a].department === "waeldlerStubeKristallStube") {
+                                        if (_this.tablesWaeldlerStubeKristallStube[b]) {
+                                            _this.tablesWaeldlerStubeKristallStube[b].bgColor = "#0a7a74";
+                                        }
+                                    }
+                                    else if (_this.tablesChangeBgColorIfAnreise[a].department === "edelweissKaminStube") {
+                                        if (_this.tablesEdelweissKaminStube[b]) {
+                                            _this.tablesEdelweissKaminStube[b].bgColor = "#0a7a74";
+                                        }
+                                    }
+                                    else if (_this.tablesChangeBgColorIfAnreise[a].department === "teestubeTeelounge") {
+                                        if (_this.tablesTeestubeTeelounge[b]) {
+                                            _this.tablesTeestubeTeelounge[b].bgColor = "#0a7a74";
+                                        }
                                     }
                                 }
                             }
@@ -1590,7 +1592,7 @@ __decorate([
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showAlleBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTempAbreise'),
     __metadata("design:type", Object)
 ], DepartmentsComponent.prototype, "tablesTempAbreise", void 0);
 __decorate([
@@ -3003,10 +3005,13 @@ var PrintComponent = (function () {
                         border: this.tables[i].border,
                     };
                     //console.log(this.tables[i].number);
-                    this.object = Object.assign(this.tables[i].groups[j], tempObject);
-                    //console.log("this.object");
-                    //console.log(this.object);
-                    this.tableTemp.push(this.object);
+                    if (this.tables[i].groups[j]) {
+                        console.log(this.tables[i].groups[j]);
+                        this.object = Object.assign(this.tables[i].groups[j], tempObject);
+                        //console.log("this.object");
+                        //console.log(this.object);
+                        this.tableTemp.push(this.object);
+                    }
                 }
             }
         }
@@ -3741,17 +3746,19 @@ var TableplanComponent = (function () {
                 this.kiBauernstube[p] = 0;
                 if (this.tablesBauernstube[p].groups) {
                     for (var g = 0; g < this.tablesBauernstube[p].groups.length; g++) {
-                        if (this.tablesBauernstube[p].groups[g].personenAnzahlValue) {
-                            var erwKi = this.tablesBauernstube[p].groups[g].personenAnzahlValue.match(/\d+/g);
-                            if (erwKi != null) {
-                                //console.log(erwKi);
-                                this.erwBauernstube[p] = this.erwBauernstube[p] + Number(erwKi[0]);
-                                //console.log(this.erw[p]);
-                            }
-                            if (erwKi != null) {
-                                //console.log(erwKi);
-                                this.kiBauernstube[p] = this.kiBauernstube[p] + Number(erwKi[1]);
-                                //console.log(this.ki[p]);
+                        if (this.tablesBauernstube[p].groups[g]) {
+                            if (this.tablesBauernstube[p].groups[g].personenAnzahlValue) {
+                                var erwKi = this.tablesBauernstube[p].groups[g].personenAnzahlValue.match(/\d+/g);
+                                if (erwKi != null) {
+                                    //console.log(erwKi);
+                                    this.erwBauernstube[p] = this.erwBauernstube[p] + Number(erwKi[0]);
+                                    //console.log(this.erw[p]);
+                                }
+                                if (erwKi != null) {
+                                    //console.log(erwKi);
+                                    this.kiBauernstube[p] = this.kiBauernstube[p] + Number(erwKi[1]);
+                                    //console.log(this.ki[p]);
+                                }
                             }
                         }
                     }
@@ -4311,6 +4318,7 @@ var TischplanComponent = (function () {
             console.log(_this.tablesTeestubeTeelounge);
             _this.tablesTempAbreise = tables;
             _this.tables = _this.tablesBauernstube.concat(_this.tablesTeestubeTeelounge).concat(_this.tablesBerglerStubeHubertusStube).concat(_this.tablesEdelweissKaminStube).concat(_this.tablesWaeldlerStubeKristallStube);
+            console.log(_this.tables);
             _this.changeBgColorIfAnreise();
             _this.printComponent.formatAzListe(_this.tables);
             //this.dispenseIfAbreise(tables);

@@ -393,7 +393,7 @@ module.exports = {
                     res.json(tables);
                     //  console.log("Dispense Table: " + JSON.stringify(tables));
                 });
-        }, 500);
+        }, 100);
 
     },
 };

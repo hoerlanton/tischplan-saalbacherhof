@@ -394,6 +394,7 @@ export class TischplanComponent {
         this.tablesTempAbreise = tables;
 
         this.tables = this.tablesBauernstube.concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube);
+        console.log(this.tables);
         this.changeBgColorIfAnreise();
         this.printComponent.formatAzListe(this.tables);
         //this.dispenseIfAbreise(tables);
