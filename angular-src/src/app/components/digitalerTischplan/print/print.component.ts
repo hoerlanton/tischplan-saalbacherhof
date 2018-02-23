@@ -49,7 +49,6 @@ export class PrintComponent implements OnInit {
   tableTemp: any[] = [];
   object: any;
   constructor() {
-
     this.trace = false;
   }
 
@@ -80,7 +79,7 @@ export class PrintComponent implements OnInit {
         };
           //console.log(this.tables[i].number);
           if (this.tables[i].groups[j]) {
-            console.log(this.tables[i].groups[j]);
+            //console.log(this.tables[i].groups[j]);
             this.object = Object.assign(this.tables[i].groups[j], tempObject);
             //console.log("this.object");
             //console.log(this.object);

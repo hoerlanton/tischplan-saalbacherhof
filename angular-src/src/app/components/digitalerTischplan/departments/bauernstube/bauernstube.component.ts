@@ -13,14 +13,18 @@ export class BauernstubeComponent implements OnInit {
   @Input('term') term: string;
   @Output()
   occupied:EventEmitter<any> = new EventEmitter();
+  t: any;
 
-  constructor() { }
+  constructor() {
+    this.t = 1;
+  }
 
   ngOnInit() {
   }
 
-  occupy(table, j) {
-    this.occupied.emit({table, j});
+  occupy(table) {
+    let t = this.t;
+    this.occupied.emit({table, t});
   }
 
   getStyle(j) {

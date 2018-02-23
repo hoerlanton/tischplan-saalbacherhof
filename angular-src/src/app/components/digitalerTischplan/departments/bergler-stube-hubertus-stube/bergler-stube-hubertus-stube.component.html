@@ -1,25 +1,27 @@
 <div *ngIf="showBerglerBool">
   <div *ngFor="let tableBerglerStubeHubertusStube of tablesBerglerStubeHubertusStube; let j = index;">
     <div *ngIf="tablesBerglerStubeHubertusStube[j] !== tablesBerglerStubeHubertusStube[j+1]">
-      <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableBerglerStubeHubertusStube, j)">{{tableBerglerStubeHubertusStube.isBesetzt === 'true' ? 'FREI MACHEN' : '' }}</button>
+      <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableBerglerStubeHubertusStube)">{{tableBerglerStubeHubertusStube.isBesetzt === 'true' ? 'FREI MACHEN' : '' }}</button>
       <h4><b> Tisch: </b>{{tableBerglerStubeHubertusStube.number}} </h4><br>
       <div class='cards-container' id='containerBerglerStubeHubertusStube'  [ngStyle]="{'background-color': + tableBerglerStubeHubertusStube.bgColor}">
         <div class="table" [ngStyle]="{'background-color': '#' + tableBerglerStubeHubertusStube.bgColor}">
           <div *ngIf="tableBerglerStubeHubertusStube.isBesetzt === 'true'">
             <div *ngFor="let group of tableBerglerStubeHubertusStube.groups; let j = index;">
               <div [style.border]="getStyle(group.traceValue)">
-                <div *ngIf="group.nameValue">
-                  <p style="background-color: #FFFFFF; padding: 10px">
-                    <b> Name:</b> {{group.nameValue}}<br>
-                    <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>
-                    <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
-                    <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
-                    <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
-                    <b> Notiz1:</b> {{group.notiz1Value}}<br>
-                    <b> Notiz2:</b> {{group.notiz2Value}}<br>
-                    <b> Trace:</b> {{group.traceValue}}<br>
-                    <b> Bemerkung:</b> {{group.bemerkungValue}}<br>
-                  </p>
+                <div *ngIf="group">
+                  <div *ngIf="group.nameValue">
+                    <p style="background-color: #FFFFFF; padding: 10px">
+                      <b> Name:</b> {{group.nameValue}}<br>
+                      <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>
+                      <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
+                      <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
+                      <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
+                      <b> Notiz1:</b> {{group.notiz1Value}}<br>
+                      <b> Notiz2:</b> {{group.notiz2Value}}<br>
+                      <b> Trace:</b> {{group.traceValue}}<br>
+                      <b> Bemerkung:</b> {{group.bemerkungValue}}<br>
+                    </p>
+                  </div>
                 </div>
               </div>
               <div *ngIf="group.newTraceText">

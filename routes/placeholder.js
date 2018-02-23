@@ -120,8 +120,6 @@ module.exports = {
             setTimeout(function () {
                 db.hubertusTables.find(
                     {
-                        department: department,
-                        "tables.number": tableNumber
                     }, function (err, tables) {
                         if (err) {
                             res.send(err);
@@ -149,8 +147,6 @@ module.exports = {
             setTimeout(function () {
                 db.hubertusTables.find(
                     {
-                        department: addPlaceholder.department,
-                        "tables.number": addPlaceholder.number
                     }, function (err, tables) {
                         if (err) {
                             res.send(err);
@@ -161,5 +157,4 @@ module.exports = {
             }, 100);
         }
     }
-
 }

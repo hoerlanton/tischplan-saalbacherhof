@@ -19,13 +19,15 @@
               <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px; " (mouseenter)="mouseEnterInfoButton()"  (mouseleave)="mouseLeaveInfoButton()" [ngStyle]="{'background-color': '#' + buttonInfo}" class="dropdownShowinfo"  class="dropdownShowinfo" dropdown><b>Infos anzeigen</b>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
                   <div *ngFor="let group of tableBerglerStubeHubertusStube.groups">
-                    <div *ngIf="group.nameValue">
-                      <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
-                      <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
-                    </div>
-                    <div *ngIf="group.newTraceText">
-                      <div class="dropdown-item"  style="background-color: #FFFFFF; border: solid 3px red">
-                        <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}
+                    <div *ngIf="group">
+                      <div *ngIf="group.nameValue">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
+                        <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
+                      </div>
+                      <div *ngIf="group.newTraceText">
+                        <div class="dropdown-item"  style="background-color: #FFFFFF; border: solid 3px red">
+                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -53,13 +55,15 @@
               <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px; " (mouseenter)="mouseEnterInfoButton()"  (mouseleave)="mouseLeaveInfoButton()" [ngStyle]="{'background-color': '#' + buttonInfo}" class="dropdownShowinfo"  class="dropdownShowinfo" dropdown><b>Infos anzeigen</b>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
                   <div *ngFor="let group of tableBauernstube.groups">
-                    <div *ngIf="group.nameValue">
-                      <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
-                      <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
-                    </div>
-                    <div *ngIf="group.newTraceText">
-                      <div class="dropdown-item"  style="background-color: #FFFFFF; border: solid 3px red">
-                        <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}
+                    <div *ngIf="group">
+                      <div *ngIf="group.nameValue">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
+                        <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
+                      </div>
+                      <div *ngIf="group.newTraceText">
+                        <div class="dropdown-item"  style="background-color: #FFFFFF; border: solid 3px red">
+                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -87,13 +91,15 @@
               <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px; " (mouseenter)="mouseEnterInfoButton()"  (mouseleave)="mouseLeaveInfoButton()" [ngStyle]="{'background-color': '#' + buttonInfo}" class="dropdownShowinfo"  class="dropdownShowinfo" dropdown><b>Infos anzeigen</b>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
                   <div *ngFor="let group of tableWaeldlerStubeKristallStube.groups">
-                    <div *ngIf="group.nameValue">
-                      <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
-                      <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
-                    </div>
-                    <div *ngIf="group.newTraceText">
-                      <div class="dropdown-item"  style="background-color: #FFFFFF; border: solid 3px red">
-                        <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}
+                    <div *ngIf="group">
+                      <div *ngIf="group.nameValue">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
+                        <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
+                      </div>
+                      <div *ngIf="group.newTraceText">
+                        <div class="dropdown-item"  style="background-color: #FFFFFF; border: solid 3px red">
+                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -121,13 +127,15 @@
               <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px; " (mouseenter)="mouseEnterInfoButton()"  (mouseleave)="mouseLeaveInfoButton()" [ngStyle]="{'background-color': '#' + buttonInfo}" class="dropdownShowinfo"  class="dropdownShowinfo" dropdown><b>Infos anzeigen</b>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
                   <div *ngFor="let group of tableEdelweissKaminStube.groups">
-                    <div *ngIf="group.nameValue">
-                      <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
-                      <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
-                    </div>
-                    <div *ngIf="group.newTraceText">
-                      <div class="dropdown-item"  style="background-color: #FFFFFF; border: solid 3px red">
-                        <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}
+                    <div *ngIf="group">
+                      <div *ngIf="group.nameValue">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
+                        <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
+                      </div>
+                      <div *ngIf="group.newTraceText">
+                        <div class="dropdown-item"  style="background-color: #FFFFFF; border: solid 3px red">
+                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -155,13 +163,15 @@
               <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px; " (mouseenter)="mouseEnterInfoButton()"  (mouseleave)="mouseLeaveInfoButton()" [ngStyle]="{'background-color': '#' + buttonInfo}" class="dropdownShowinfo"  class="dropdownShowinfo" dropdown><b>Infos anzeigen</b>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
                   <div *ngFor="let group of tableTeestubeTeelounge.groups">
-                    <div *ngIf="group.nameValue">
-                      <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
-                      <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
-                    </div>
-                    <div *ngIf="group.newTraceText">
-                      <div class="dropdown-item"  style="background-color: #FFFFFF; border: solid 3px red">
-                        <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}
+                    <div *ngIf="group">
+                      <div *ngIf="group.nameValue">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
+                        <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
+                      </div>
+                      <div *ngIf="group.newTraceText">
+                        <div class="dropdown-item"  style="background-color: #FFFFFF; border: solid 3px red">
+                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}
+                        </div>
                       </div>
                     </div>
                   </div>

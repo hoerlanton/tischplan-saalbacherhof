@@ -79,63 +79,69 @@ export class DepartmentsComponent  {
     //console.log(table.j);
     //console.log("table.table");
     //console.log(table.table);
-    this.occupy(table.table, table.j);
+    this.occupy(table.table, table.t);
   }
 
   occupy(table, j) {
     this.tischplanService.dispenseTable(table).subscribe(response => {
-      //console.log("Dispense Table:");
+      console.log(JSON.stringify(response));
+      console.log(j);
       //console.log(j);
       //console.log("bgColor:" + JSON.stringify(response));
       //console.log("bgColor:" + JSON.stringify(response[0].tables[j].bgColor));
       //console.log("isBesetzt:" + JSON.stringify(response[0].tables[j].isBesetzt));
-      if (response === null) {
+      if (typeof response == null || typeof response[j] == null || JSON.stringify(response).indexOf("null") != -1) {
         return;
       } else {
-        if (response[0].tables[j].department === "berglerStubeHubertusStube") {
-          this.dispensedBerglerStubeHubertusStube.emit(response[0].tables);
+        if (response[j].department === "berglerStubeHubertusStube") {
+          this.dispensedBerglerStubeHubertusStube.emit(response[j].tables);
         }
-        else if (response[0].tables[j].department === "Bauernstube") {
-          this.dispensedBauernstube.emit(response[0].tables);
+        else if (response[j].department === "Bauernstube") {
+          this.dispensedBauernstube.emit(response[j].tables);
         }
-        else if (response[0].tables[j].department === "waeldlerStubeKristallStube") {
-          this.dispensedWaeldlerStubeKristallStube.emit(response[0].tables);
+        else if (response[j].department === "waeldlerStubeKristallStube") {
+          this.dispensedWaeldlerStubeKristallStube.emit(response[j].tables);
         }
-        else if (response[0].tables[j].department === "edelweissKaminStube") {
-          this.dispensedEdelweissKaminStube.emit(response[0].tables);
+        else if (response[j].department === "edelweissKaminStube") {
+          this.dispensedEdelweissKaminStube.emit(response[j].tables);
         }
-        else if (response[0].tables[j].department === "teestubeTeelounge") {
-          this.dispensedTeestubeTeelounge.emit(response[0].tables);
+        else if (response[j].department === "teestubeTeelounge") {
+          this.dispensedTeestubeTeelounge.emit(response[j].tables);
         }
+
       }
-      this.updateAzList.emit();
-      this.updateImHausListeElement.emit(table);
-    });
+    },
+      error => console.log("Error: ", error),
+      () => {
+        this.updateAzList.emit();
+        this.updateImHausListeElement.emit(table);
+      });
 
     this.tischplanService.addPlaceholder(table).subscribe(response => {
-      //console.log("Add placeholder!");
+      console.log("Add placeholder!");
       //console.log("Add placeholder! table ... " + JSON.stringify(table));
-      //console.log("placeholder:" + JSON.stringify(response[0].tables[j].placeholder));
-      if (response === null) {
+      //console.log("placeholder:" + JSON.stringify(response));
+      /*
+      if (typeof response == null) {
         return;
       } else {
-        //console.log(this.tablesBerglerStubeHubertusStube[j].placeholder);
-        if (response[0].tables[j].department === "berglerStubeHubertusStube") {
-          this.tablesBerglerStubeHubertusStube[j].placeholder = response[0].tables[j].placeholder;
+        if (response[j].department === "berglerStubeHubertusStube") {
+          this.dispensedBerglerStubeHubertusStube.emit(response[j].tables);
         }
-        else if (response[0].tables[j].department === "Bauernstube") {
-          this.tablesBauernstube[j].placeholder = response[0].tables[j].placeholder;
+        else if (response[j].department === "Bauernstube") {
+          this.dispensedBauernstube.emit(response[j].tables);
         }
-        else if (response[0].tables[j].department === "waeldlerStubeKristallStube") {
-          this.tablesWaeldlerStubeKristallStube[j].placeholder = response[0].tables[j].placeholder;
+        else if (response[j].department === "waeldlerStubeKristallStube") {
+          this.dispensedWaeldlerStubeKristallStube.emit(response[j].tables);
         }
-        else if (response[0].tables[j].department === "edelweissKaminStube") {
-          this.tablesEdelweissKaminStube[j].placeholder = response[0].tables[j].placeholder;
+        else if (response[j].department === "edelweissKaminStube") {
+          this.dispensedEdelweissKaminStube.emit(response[j].tables);
         }
-        else if (response[0].tables[j].department === "teestubeTeelounge") {
-          this.tablesTeestubeTeelounge[j].placeholder = response[0].tables[j].placeholder;
+        else if (response[j].department === "teestubeTeelounge") {
+          this.dispensedTeestubeTeelounge.emit(response[j].tables);
         }
       }
+      */
     });
   }
 

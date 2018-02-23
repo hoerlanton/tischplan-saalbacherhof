@@ -1,7 +1,7 @@
 <div *ngIf="showEdelweissBool">
   <div *ngFor="let tableEdelweissKaminStube of tablesEdelweissKaminStube; let j = index;">
     <div *ngIf="tablesEdelweissKaminStube[j] !== tablesEdelweissKaminStube[j+1]">
-      <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableEdelweissKaminStube, j)">{{tableEdelweissKaminStube.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
+      <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableEdelweissKaminStube)">{{tableEdelweissKaminStube.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
       <h4><b> Tisch:</b>{{tableEdelweissKaminStube.number}} </h4><br>
       <div class='cards-container' id='containerEdelweissKaminStube' [ngStyle]="{'background-color': + tableEdelweissKaminStube.bgColor}">
         <div class="table" [ngStyle]="{'background-color': '#' + tableEdelweissKaminStube.bgColor}">

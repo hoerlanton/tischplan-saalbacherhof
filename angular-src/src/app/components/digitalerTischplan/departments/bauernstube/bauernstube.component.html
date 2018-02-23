@@ -1,7 +1,7 @@
 <div *ngIf="showBauernStubnBool">
   <div *ngFor="let tableBauernstube of tablesBauernstube; let j = index;">
     <div *ngIf="tablesBauernstube[j] !== tablesBauernstube[j+1]">
-      <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF"  type="button" class="btn btn-send" (click)="occupy(tableBauernstube, j)">{{tableBauernstube.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
+      <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF"  type="button" class="btn btn-send" (click)="occupy(tableBauernstube)">{{tableBauernstube.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
       <h4><b> Tisch:</b>{{tableBauernstube.number}} </h4><br>
       <div class='cards-container' id='containerBauernstube' [ngStyle]="{'background-color': + tableBauernstube.bgColor}">
         <div class="table" [ngStyle]="{'background-color': '#' + tableBauernstube.bgColor}">

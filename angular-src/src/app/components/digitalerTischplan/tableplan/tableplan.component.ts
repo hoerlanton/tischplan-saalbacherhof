@@ -135,14 +135,16 @@ export class TableplanComponent implements AfterViewChecked {
   getStyle(a) {
     //console.log("a");
     //console.log(a);
-    if (typeof a === "undefined") {
+    if (typeof a == null || typeof a === "undefined") {
       return "solid 3px rgb(243, 239, 228)";
     } else {
       for (let b = 0; b < a.length; b++) {
         //console.log("LOOOOOOOOOOOOOOP");
         //console.log(a[b].traceValue);
-        if (a[b].traceValue != "-" || a[b].newTraceText) {
-          this.trace = true;
+        if (typeof a[b] != null) {
+          if (a[b].traceValue != "-" || a[b].newTraceText) {
+            this.trace = true;
+          }
         }
       }
       if (this.trace) {
@@ -280,19 +282,17 @@ export class TableplanComponent implements AfterViewChecked {
         this.kiBauernstube[p] = 0;
         if (this.tablesBauernstube[p].groups) {
           for (let g = 0; g < this.tablesBauernstube[p].groups.length; g++) {
-            if (this.tablesBauernstube[p].groups[g]) {
-              if (this.tablesBauernstube[p].groups[g].personenAnzahlValue) {
-                let erwKi = this.tablesBauernstube[p].groups[g].personenAnzahlValue.match(/\d+/g);
-                if (erwKi != null) {
-                  //console.log(erwKi);
-                  this.erwBauernstube[p] = this.erwBauernstube[p] + Number(erwKi[0]);
-                  //console.log(this.erw[p]);
-                }
-                if (erwKi != null) {
-                  //console.log(erwKi);
-                  this.kiBauernstube[p] = this.kiBauernstube[p] + Number(erwKi[1]);
-                  //console.log(this.ki[p]);
-                }
+            if (this.tablesBauernstube[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesBauernstube[p].groups[g].personenAnzahlValue.match(/\d+/g);
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.erwBauernstube[p] = this.erwBauernstube[p] + Number(erwKi[0]);
+                //console.log(this.erw[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.kiBauernstube[p] = this.kiBauernstube[p] + Number(erwKi[1]);
+                //console.log(this.ki[p]);
               }
             }
           }

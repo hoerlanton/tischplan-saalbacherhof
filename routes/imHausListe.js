@@ -183,7 +183,7 @@ module.exports = {
             });
         };
 
-        console.log(JSON.stringify(imHausListe));
+        //console.log(JSON.stringify(imHausListe));
 
         //+3 ist nächste Zeile
         //Wenn A+3 === Traces: && H+3 != „null“ dann Trace gehört zu A-3
@@ -217,17 +217,17 @@ module.exports = {
     updateImHausListe: function (req, res, db) {
 
         console.log("Post request made to /updateImHausListeElement");
-        console.log(req.body);
+        //console.log(req.body);
 
         let nameValueArray = [];
         let zimmernummerValueArray = [];
 
         let informationElements = req.body;
-        console.log(informationElements);
+        //console.log(informationElements);
 
         let informationElementsString = JSON.stringify(informationElements);
         if (informationElementsString.indexOf("targetTable") != -1 && informationElementsString.indexOf("nameValue") === -1) {
-            console.log("BUG I GONNA KILL YOU !!!!")
+            //console.log("BUG I GONNA KILL YOU !!!!")
         } else {
         if (informationElementsString.indexOf("leftValue") != -1) {
             for (let i = 0; i < informationElements.groups.length; i++) {
@@ -247,15 +247,15 @@ module.exports = {
                         if (err) {
                             console.log("Error");
                         }
-                        console.log("occupyTable Update successful");
+                        console.log("updateImHausListe Update successful");
                     });
             }
         } else {
             nameValueArray.push(informationElements[0].substring(1, informationElements[0].length));
             zimmernummerValueArray.push(informationElements[2].substring(1, informationElements[2].length));
 
-            console.log(nameValueArray[0]);
-            console.log(zimmernummerValueArray[0]);
+            //console.log(nameValueArray[0]);
+            //console.log(zimmernummerValueArray[0]);
 
             db.hubertusImHausListe.update(
                 {
@@ -270,7 +270,7 @@ module.exports = {
                     if (err) {
                         console.log("Error");
                     }
-                    console.log("occupyTable Update successful");
+                    console.log("updateImHausListe Update successful");
                 });
         }}
 
@@ -282,8 +282,8 @@ module.exports = {
                             res.send(err);
                         }
                         res.json(hubertusImHausListe);
-                        console.log('hubertusImHausListe');
-                        console.log(JSON.stringify(hubertusImHausListe));
+                        //console.log('hubertusImHausListe');
+                        //console.log(JSON.stringify(hubertusImHausListe));
                     });
             }, 700);
 

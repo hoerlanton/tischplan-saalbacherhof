@@ -1,7 +1,7 @@
 <div *ngIf="showWaeldlerBool">
   <div *ngFor="let tableWaeldlerStubeKristallStube of tablesWaeldlerStubeKristallStube; let j = index;">
     <div *ngIf="tablesWaeldlerStubeKristallStube[j] !== tablesWaeldlerStubeKristallStube[j+1]">
-      <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableWaeldlerStubeKristallStube, j)">{{tableWaeldlerStubeKristallStube.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
+      <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableWaeldlerStubeKristallStube)">{{tableWaeldlerStubeKristallStube.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
       <h4><b> Tisch:</b>{{tableWaeldlerStubeKristallStube.number}} </h4><br>
       <div class='cards-container' id='containerWaeldlerStubeKristallStube' [ngStyle]="{'background-color': + tableWaeldlerStubeKristallStube.bgColor}">
         <div class="table" [ngStyle]="{'background-color': '#' + tableWaeldlerStubeKristallStube.bgColor}">
