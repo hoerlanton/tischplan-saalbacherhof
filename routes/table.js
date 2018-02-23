@@ -286,7 +286,7 @@ module.exports = {
                                         ["tables.$.groups." + dispenseTable.group[i]]: 1,
                                     }
                                 },
-                                new: false
+                                multi: true
                             }, function (err, tables) {
                                 if (err) {
                                     console.log("Error");
@@ -307,7 +307,7 @@ module.exports = {
                                     "tables.$.groups": null
                                 }
                             },
-                            new: false
+                            multi: true
                         }, function (err, tables) {
                             if (err) {
                                 console.log("Error");
@@ -324,10 +324,10 @@ module.exports = {
                                 }
                                 res.json(tables);
                             })
+                        }, 400);
                     }).catch(reason => {
                         console.log(reason)
                     });
-                    }, 400);
                 } else if (dispenseTable.groups.length === dispenseTable.group.length) {
                     new Promise(function(resolve, reject) {
                         db.hubertusTables.findAndModify({
