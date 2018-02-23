@@ -363,7 +363,7 @@ export class TischplanComponent {
   getTables(){
     this.tischplanService.getTables()
       .subscribe(tables => {
-        //console.log("TABLES LENGTH: " + tables.length);
+        console.log("TABLES LENGTH: " + tables.length);
         if (typeof tables == null) {
           return;
         } else {
@@ -387,11 +387,11 @@ export class TischplanComponent {
           }
         }
 
-        //console.log(this.tablesBauernstube);
-        //console.log(this.tablesEdelweissKaminStube);
-        //console.log(this.tablesBerglerStubeHubertusStube);
-        //console.log(this.tablesWaeldlerStubeKristallStube);
-        //console.log(this.tablesTeestubeTeelounge);
+        console.log(this.tablesBauernstube);
+        console.log(this.tablesEdelweissKaminStube);
+        console.log(this.tablesBerglerStubeHubertusStube);
+        console.log(this.tablesWaeldlerStubeKristallStube);
+        console.log(this.tablesTeestubeTeelounge);
         this.tablesTempAbreise = tables;
 
         this.tables = this.tablesBauernstube.concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube);

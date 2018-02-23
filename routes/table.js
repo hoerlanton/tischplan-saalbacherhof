@@ -389,7 +389,7 @@ module.exports = {
                             res.json(tables);
                             //console.log("Dispense Table: " + JSON.stringify(tables));
                         });
-                }, 100);
+                }, 300);
             }
         } else {
             db.hubertusTables.findAndModify({
@@ -419,7 +419,7 @@ module.exports = {
                         res.json(tables);
                         //console.log("Dispense Table: ++++++++++++++++++++++++++++++++++++++++++++++ " + JSON.stringify(tables));
                     });
-            }, 100);
+            }, 300);
         }
 
     }

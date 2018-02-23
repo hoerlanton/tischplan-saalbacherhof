@@ -114,38 +114,43 @@ export class NavigationComponent implements OnInit {
     console.log('targetTable' + zielTisch);
     console.log('quellTischNumber' + quellTisch);
     let tableToMove = {department: "Empty", number: "0", targetTable: "0", targetDepartment: "Empty"};
-    let j = 0;
+    let indexZiel = 0;
+    let indexQuell = 0;
 
     if (Number(this.quellTisch) >= 30 && Number(this.quellTisch) <= 47) {
       tableToMove.department = "berglerStubeHubertusStube";
-      j = 1;
+      indexQuell = 3;
     } else if (Number(this.quellTisch) >= 10 && Number(this.quellTisch) <= 26) {
       tableToMove.department = "Bauernstube";
-      j = 0;
+      indexQuell = 2;
     } else if (Number(this.quellTisch) >= 50 && Number(this.quellTisch) <= 77) {
       tableToMove.department = "waeldlerStubeKristallStube";
-      j = 4;
+      indexQuell = 1;
     } else if (Number(this.quellTisch) >= 80 && Number(this.quellTisch) <= 99) {
       tableToMove.department = "edelweissKaminStube";
-      j = 3;
+      indexQuell = 4;
     } else if ((Number(this.quellTisch) >= 1 && Number(this.quellTisch) <= 6) || this.quellTisch === "Tee1" || this.quellTisch === "Tee2" || this.quellTisch === "Tee3" || this.quellTisch === "Tee4" || this.quellTisch === "Tee5" || this.quellTisch === "Tee6") {
       tableToMove.department = "teestubeTeelounge";
-      j = 2;
+      indexQuell = 0;
     }
 
     if (Number(this.zielTisch) >= 30 && Number(this.zielTisch) <= 47) {
       tableToMove.targetDepartment = "berglerStubeHubertusStube";
+      indexZiel = 3;
     } else if (Number(this.zielTisch) >= 10 && Number(this.zielTisch) <= 26) {
       tableToMove.targetDepartment = "Bauernstube";
+      indexZiel = 2;
     } else if (Number(this.zielTisch) >= 50 && Number(this.zielTisch) <= 77) {
       tableToMove.targetDepartment = "waeldlerStubeKristallStube";
+      indexZiel = 1;
     } else if (Number(this.zielTisch) >= 80 && Number(this.zielTisch) <= 99) {
       tableToMove.targetDepartment = "edelweissKaminStube";
+      indexZiel = 4;
     } else if ((Number(this.zielTisch) >= 1 && Number(this.zielTisch) <= 6) || this.zielTisch === "Tee1" || this.zielTisch === "Tee2" || this.zielTisch === "Tee3" || this.zielTisch === "Tee4" || this.zielTisch === "Tee5" || this.zielTisch === "Tee6") {
       tableToMove.targetDepartment = "teestubeTeelounge";
+      indexZiel = 0;
     }
-    let indexZiel = 0;
-    let indexQuell = 0;
+
 
     tableToMove.number = this.quellTisch;
     tableToMove.targetTable = this.zielTisch;
@@ -168,24 +173,7 @@ export class NavigationComponent implements OnInit {
             }
           }
         }
-        for (let a = 0; a < tables.length; a++) {
-          for (let b = 0; b < tables[a].tables.length; b++) {
-            if (tables[a].department === tableToMove.targetDepartment) {
-              if (tables[a].tables[b].number === tableToMove.targetTable) {
-                indexZiel = b;
-              }
-            }
-          }
-        }
-        for (let a = 0; a < tables.length; a++) {
-          for (let b = 0; b < tables[a].tables.length; b++) {
-            if (tables[a].department === tableToMove.department) {
-              if (tables[a].tables[b].number === tableToMove.number) {
-                indexQuell = b;
-              }
-            }
-          }
-        }
+
         console.log("this.tableInformation IIIIIIIII");
         let tableInformationExport = this.tableInformation;
         this.umsetzenExport.emit({tableToMove, indexZiel, indexQuell, tableInformationExport});

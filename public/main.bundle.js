@@ -2676,44 +2676,48 @@ var NavigationComponent = (function () {
         console.log('targetTable' + zielTisch);
         console.log('quellTischNumber' + quellTisch);
         var tableToMove = { department: "Empty", number: "0", targetTable: "0", targetDepartment: "Empty" };
-        var j = 0;
+        var indexZiel = 0;
+        var indexQuell = 0;
         if (Number(this.quellTisch) >= 30 && Number(this.quellTisch) <= 47) {
             tableToMove.department = "berglerStubeHubertusStube";
-            j = 1;
+            indexQuell = 3;
         }
         else if (Number(this.quellTisch) >= 10 && Number(this.quellTisch) <= 26) {
             tableToMove.department = "Bauernstube";
-            j = 0;
+            indexQuell = 2;
         }
         else if (Number(this.quellTisch) >= 50 && Number(this.quellTisch) <= 77) {
             tableToMove.department = "waeldlerStubeKristallStube";
-            j = 4;
+            indexQuell = 1;
         }
         else if (Number(this.quellTisch) >= 80 && Number(this.quellTisch) <= 99) {
             tableToMove.department = "edelweissKaminStube";
-            j = 3;
+            indexQuell = 4;
         }
         else if ((Number(this.quellTisch) >= 1 && Number(this.quellTisch) <= 6) || this.quellTisch === "Tee1" || this.quellTisch === "Tee2" || this.quellTisch === "Tee3" || this.quellTisch === "Tee4" || this.quellTisch === "Tee5" || this.quellTisch === "Tee6") {
             tableToMove.department = "teestubeTeelounge";
-            j = 2;
+            indexQuell = 0;
         }
         if (Number(this.zielTisch) >= 30 && Number(this.zielTisch) <= 47) {
             tableToMove.targetDepartment = "berglerStubeHubertusStube";
+            indexZiel = 3;
         }
         else if (Number(this.zielTisch) >= 10 && Number(this.zielTisch) <= 26) {
             tableToMove.targetDepartment = "Bauernstube";
+            indexZiel = 2;
         }
         else if (Number(this.zielTisch) >= 50 && Number(this.zielTisch) <= 77) {
             tableToMove.targetDepartment = "waeldlerStubeKristallStube";
+            indexZiel = 1;
         }
         else if (Number(this.zielTisch) >= 80 && Number(this.zielTisch) <= 99) {
             tableToMove.targetDepartment = "edelweissKaminStube";
+            indexZiel = 4;
         }
         else if ((Number(this.zielTisch) >= 1 && Number(this.zielTisch) <= 6) || this.zielTisch === "Tee1" || this.zielTisch === "Tee2" || this.zielTisch === "Tee3" || this.zielTisch === "Tee4" || this.zielTisch === "Tee5" || this.zielTisch === "Tee6") {
             tableToMove.targetDepartment = "teestubeTeelounge";
+            indexZiel = 0;
         }
-        var indexZiel = 0;
-        var indexQuell = 0;
         tableToMove.number = this.quellTisch;
         tableToMove.targetTable = this.zielTisch;
         console.log(tableToMove);
@@ -2730,24 +2734,6 @@ var NavigationComponent = (function () {
                             console.log(_this.tableInformation);
                             _this.tableInformation.push(tableToMove);
                             console.log(_this.tableInformation);
-                        }
-                    }
-                }
-            }
-            for (var a = 0; a < tables.length; a++) {
-                for (var b = 0; b < tables[a].tables.length; b++) {
-                    if (tables[a].department === tableToMove.targetDepartment) {
-                        if (tables[a].tables[b].number === tableToMove.targetTable) {
-                            indexZiel = b;
-                        }
-                    }
-                }
-            }
-            for (var a = 0; a < tables.length; a++) {
-                for (var b = 0; b < tables[a].tables.length; b++) {
-                    if (tables[a].department === tableToMove.department) {
-                        if (tables[a].tables[b].number === tableToMove.number) {
-                            indexQuell = b;
                         }
                     }
                 }
@@ -4300,7 +4286,7 @@ var TischplanComponent = (function () {
         var _this = this;
         this.tischplanService.getTables()
             .subscribe(function (tables) {
-            //console.log("TABLES LENGTH: " + tables.length);
+            console.log("TABLES LENGTH: " + tables.length);
             if (typeof tables == null) {
                 return;
             }
@@ -4324,11 +4310,11 @@ var TischplanComponent = (function () {
                     }
                 }
             }
-            //console.log(this.tablesBauernstube);
-            //console.log(this.tablesEdelweissKaminStube);
-            //console.log(this.tablesBerglerStubeHubertusStube);
-            //console.log(this.tablesWaeldlerStubeKristallStube);
-            //console.log(this.tablesTeestubeTeelounge);
+            console.log(_this.tablesBauernstube);
+            console.log(_this.tablesEdelweissKaminStube);
+            console.log(_this.tablesBerglerStubeHubertusStube);
+            console.log(_this.tablesWaeldlerStubeKristallStube);
+            console.log(_this.tablesTeestubeTeelounge);
             _this.tablesTempAbreise = tables;
             _this.tables = _this.tablesBauernstube.concat(_this.tablesTeestubeTeelounge).concat(_this.tablesBerglerStubeHubertusStube).concat(_this.tablesEdelweissKaminStube).concat(_this.tablesWaeldlerStubeKristallStube);
             //console.log(this.tables);
