@@ -364,7 +364,7 @@ export class TischplanComponent {
     this.tischplanService.getTables()
       .subscribe(tables => {
         //console.log("TABLES LENGTH: " + tables.length);
-        if (typeof tables == null || JSON.stringify(tables).indexOf("null") != -1) {
+        if (typeof tables == null) {
           return;
         } else {
           for (let a = 0; a < tables.length; a++) {
