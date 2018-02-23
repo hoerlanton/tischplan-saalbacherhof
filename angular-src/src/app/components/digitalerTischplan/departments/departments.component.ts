@@ -90,7 +90,7 @@ export class DepartmentsComponent  {
       //console.log("bgColor:" + JSON.stringify(response));
       //console.log("bgColor:" + JSON.stringify(response[0].tables[j].bgColor));
       //console.log("isBesetzt:" + JSON.stringify(response[0].tables[j].isBesetzt));
-      if (typeof response == null || typeof response[j] == null || JSON.stringify(response).indexOf("null") != -1) {
+      if (typeof response == null || typeof response[j] == null) {
         return;
       } else {
         if (response[j].department === "berglerStubeHubertusStube") {

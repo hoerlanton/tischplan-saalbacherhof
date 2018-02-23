@@ -1339,7 +1339,7 @@ var DepartmentsComponent = (function () {
             //console.log("bgColor:" + JSON.stringify(response));
             //console.log("bgColor:" + JSON.stringify(response[0].tables[j].bgColor));
             //console.log("isBesetzt:" + JSON.stringify(response[0].tables[j].isBesetzt));
-            if (typeof response == null || typeof response[j] == null || JSON.stringify(response).indexOf("null") != -1) {
+            if (typeof response == null || typeof response[j] == null) {
                 return;
             }
             else {
@@ -4301,7 +4301,7 @@ var TischplanComponent = (function () {
         this.tischplanService.getTables()
             .subscribe(function (tables) {
             //console.log("TABLES LENGTH: " + tables.length);
-            if (typeof tables == null || JSON.stringify(tables).indexOf("null") != -1) {
+            if (typeof tables == null) {
                 return;
             }
             else {
