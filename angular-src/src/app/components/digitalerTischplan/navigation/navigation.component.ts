@@ -223,7 +223,6 @@ export class NavigationComponent implements OnInit {
           timeout: 10000
         })
       }})
-
       .subscribe(files => console.log("files", files));
     setTimeout(() => {
       this.reloadLists.emit();
