@@ -330,9 +330,11 @@ module.exports = {
                     });
                 }
             }).then(function () { // (**)
-                for (let h = 0; h < departments.length; h++) {
-                    db.hubertusTables.save(tablesTemp3[0][h]);
-                }
+                db.hubertusTables.save(tablesTemp3[0][0]);
+                db.hubertusTables.save(tablesTemp3[0][1]);
+                db.hubertusTables.save(tablesTemp3[0][2]);
+                db.hubertusTables.save(tablesTemp3[0][3]);
+                db.hubertusTables.save(tablesTemp3[0][4]);
             });
         } else {
             db.hubertusTables.findAndModify({
