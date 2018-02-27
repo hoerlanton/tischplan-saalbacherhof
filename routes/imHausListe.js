@@ -89,10 +89,29 @@ module.exports = {
                             console.log(imHausListeData.data["H" + (row + 2)]);
                             if (imHausListeData.data["H" + (row + 2)] != null) {
                                 trace[counter-1] += ", " + imHausListeData.data["H" + (row + 2)].w;
-                                row += 1;
-                            } else {
-                                row += 1;
+                                row += 2;
                             }
+                            if (imHausListeData.data["H" + (row + 2)] != null) {
+                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row + 2)].w;
+                                row += 2;
+                            }
+                            if (imHausListeData.data["H" + (row + 2)] != null ) {
+                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row + 2)].w;
+                                row += 2;
+                            }
+                            if (imHausListeData.data["H" + (row + 2)] != null ) {
+                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row + 2)].w;
+                                row += 2;
+                            }
+                            if (imHausListeData.data["H" + (row + 2)] != null ) {
+                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row + 2)].w;
+                                row += 2;
+                            }
+                            if (imHausListeData.data["H" + (row + 2)] != null ) {
+                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row + 2)].w;
+                                row += 2;
+                            }
+                            row++;
                         } else {
                             trace.push("-");
                         }
