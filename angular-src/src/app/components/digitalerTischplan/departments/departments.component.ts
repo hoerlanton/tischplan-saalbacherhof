@@ -83,6 +83,8 @@ export class DepartmentsComponent  {
   }
 
   occupy(table, j) {
+    console.log("occupy called");
+    console.log(table);
     this.tischplanService.dispenseTable(table).subscribe(response => {
       console.log(JSON.stringify(response));
       console.log(j);
@@ -90,6 +92,7 @@ export class DepartmentsComponent  {
       //console.log("bgColor:" + JSON.stringify(response));
       //console.log("bgColor:" + JSON.stringify(response[0].tables[j].bgColor));
       //console.log("isBesetzt:" + JSON.stringify(response[0].tables[j].isBesetzt));
+
       if (typeof response == null || typeof response[j] == null) {
         return;
       } else {
@@ -113,8 +116,16 @@ export class DepartmentsComponent  {
     },
       error => console.log("Error: ", error),
       () => {
+      console.log(table);
         this.updateAzList.emit();
-        this.updateImHausListeElement.emit(table);
+        if (table.length > 1) {
+          for (let i = 0; i < table.length; i++) {
+            this.updateImHausListeElement.emit(table[i].table);
+          }
+        } else {
+          this.updateImHausListeElement.emit(table);
+
+        }
       });
 
     this.tischplanService.addPlaceholder(table).subscribe(response => {

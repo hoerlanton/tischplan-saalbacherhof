@@ -387,6 +387,7 @@ export class TischplanComponent {
           }
         }
 
+        console.log(JSON.stringify(tables));
         console.log(this.tablesBauernstube);
         console.log(this.tablesEdelweissKaminStube);
         console.log(this.tablesBerglerStubeHubertusStube);

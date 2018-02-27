@@ -95,7 +95,7 @@ module.exports = {
         //JSON string is parsed to a JSON object
         console.log("addPlaceholder request made to /addPlaceholder");
         let addPlaceholder = req.body;
-        console.log(addPlaceholder);
+        //console.log(addPlaceholder);
         if (addPlaceholder.length === 2) {
             let department = addPlaceholder[0];
             let tableNumber = addPlaceholder[1];
@@ -125,7 +125,7 @@ module.exports = {
                             res.send(err);
                         }
                         res.json(tables);
-                        console.log('Response tables addPlaceholder' + JSON.stringify(tables));
+                        //console.log('Response tables addPlaceholder' + JSON.stringify(tables));
                     });
             }, 200);
         } else {
@@ -152,7 +152,7 @@ module.exports = {
                             res.send(err);
                         }
                         res.json(tables);
-                        console.log(JSON.stringify(tables));
+                        //console.log(JSON.stringify(tables));
                     });
             }, 100);
         }

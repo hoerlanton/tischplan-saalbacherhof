@@ -13,7 +13,8 @@ const
     addTablesEdelweissKaminStube = require('./addTablesEdelweissKaminStube.js'),
     addTablesWaeldlerStubeKristallStube = require('./addTablesWaeldlerStubeKristallStube.js'),
     addTablesTeestubeTeelounge = require('./addTablesTeestubeTeelounge.js'),
-    Promise = require('promise');
+    Promise = require('promise'),
+    dateFns = require('date-fns');
 
 
 module.exports = {
@@ -264,133 +265,75 @@ module.exports = {
     dispenseTable: function (req, res, db) {
         console.log("dispenseTable request made to /dispenseTable");
         let dispenseTable = req.body;
-        //console.log(dispenseTable);
-        //console.log(dispenseTable.groups.length);
-        //console.log(dispenseTable.group );
-        //console.log("dispenseTable" + JSON.stringify(dispenseTable));
-        if (dispenseTable.groups != null) {
-            if (dispenseTable.group) {
-                if (dispenseTable.groups.length > dispenseTable.group.length) {
-                    new Promise(function(resolve, reject) {
-                        for (let i = 0; i < dispenseTable.group.length; i++) {
-                            if (dispenseTable.group.length === 1 && dispenseTable.groups[dispenseTable.group[i]].newTraceText) {
-                                break;
-                            }
-                            db.hubertusTables.findAndModify({
-                                query: {
-                                    department: dispenseTable.department,
-                                    "tables.number": dispenseTable.number
-                                },
-                                update: {
-                                    $unset: {
-                                        ["tables.$.groups." + dispenseTable.group[i]]: 1,
-                                    }
-                                },
-                                multi: true
-                            }, function (err, tables) {
-                                if (err) {
-                                    console.log("Error");
-                                }
-                            });
-                            if ( i === (dispenseTable.group.length - 1)) {  resolve(); }
-                        }
-                    }).then(function() { // (**)
-                        console.log("removeNulls promise");
-                        setTimeout(function () {
-                        db.hubertusTables.findAndModify({
-                            query: {
-                                department: dispenseTable.department,
-                                "tables.number": dispenseTable.number
-                            },
-                            update: {
-                                $pull: {
-                                    "tables.$.groups": null
-                                }
-                            },
-                            multi: true
-                        }, function (err, tables) {
-                            if (err) {
-                                console.log("Error");
-                            }
-                        });
-                        }, 200);
-                    }).then(function() { // (***)
-                        console.log("ALL RESOLVED");
-                        setTimeout(function () {
-                            db.hubertusTables.find(
-                            {}, function (err, tables) {
-                                if (err) {
-                                    res.send(err);
-                                }
-                                res.json(tables);
-                            })
-                        }, 400);
-                    }).catch(reason => {
-                        console.log(reason)
-                    });
-                } else if (dispenseTable.groups.length === dispenseTable.group.length) {
-                    new Promise(function(resolve, reject) {
-                        db.hubertusTables.findAndModify({
-                        query: {department: dispenseTable.department, "tables.number": dispenseTable.number},
-                        update: {
-                            $set: {
-                                "tables.$.bgColor": "#ffffff",
-                                "tables.$.isBesetzt": "false",
-                            }, $unset: {
-                                "tables.$.groups" : 1,
-                            }
-                        },
-                        new: false
-                    }, function (err, tables) {
-                        if (err) {
-                            console.log("Error");
-                        }
-                        console.log("No Error");
-                        resolve(); // (*)
-                    });
-                    }).then(function() { // (**)
-                    setTimeout(function () {
-                        db.hubertusTables.find(
-                            {
-                            }, function (err, tables) {
-                                if (err) {
-                                    res.send(err);
-                                }
-                                res.json(tables);
-                                //console.log("Dispense Table: " + JSON.stringify(tables));
-                            });
-                    }, 500);
-                    });
-            } } else {
-                db.hubertusTables.findAndModify({
-                    query: {department: dispenseTable.department, "tables.number": dispenseTable.number},
-                    update: {
-                        $set: {
-                            "tables.$.bgColor": "#ffffff",
-                            "tables.$.isBesetzt": "false",
-                        }, $unset: {
-                            "tables.$.groups" : 1,
-                        }
-                    },
-                    new: false
+        let today = dateFns.format(new Date(), 'DD.MM.YYYY');
+        console.log(today);
+        let tablesTemp3 = [];
+        let departments = [ "berglerStubeHubertusStube", "Bauernstube", "waeldlerStubeKristallStube", "edelweissKaminStube", "teestubeTeelounge"];
+        new Promise(function (resolve, reject) {
+            if (dispenseTable.constructor === Array) {
+            console.log("dispenseTable[h].table.groups.length > dispenseTable[h].group.length");
+            new Promise(function (resolve, reject) {
+                db.hubertusTables.find({
                 }, function (err, tables) {
                     if (err) {
-                        console.log("Error");
+                        res.send(err);
+                    } else {
+                        tablesTemp3.push(tables);
+                        //console.log(tables);
+                        //tablesTemp3.push(tables);
+                        //console.log(tablesTemp3);
+                        //return tablesTemp3;
+                        setTimeout(() => resolve(), 1000);
                     }
-                    console.log("No Error");
                 });
-                setTimeout(function () {
-                    db.hubertusTables.find(
-                        {
-                        }, function (err, tables) {
-                            if (err) {
-                                res.send(err);
+            }).then(function () { // (**)
+                console.log("---------------------");
+                console.log(JSON.stringify(tablesTemp3[0]));
+                for (let i = tablesTemp3[0].length - 1; i >= 0; i--) {
+                    for (let k = tablesTemp3[0][i].tables.length - 1; k >= 0; k--) {
+                        if (tablesTemp3[0][i].tables[k].groups) {
+                            console.log(tablesTemp3[0][i].tables[k].groups);
+                            for (let j = tablesTemp3[0][i].tables[k].groups.length - 1; j >= 0; j--) {
+                                console.log("+");
+                                //console.log(tablesTemp2[0].tables[i]);
+                                if (tablesTemp3[0][i].tables[k].groups[j].abreiseValue === String(today)) {
+                                    //console.log(tablesTemp2[0].tables[i].groups[j].abreiseValue);
+                                    console.log(tablesTemp3[0][i].tables[k].groups[j].abreiseValue);
+                                    tablesTemp3[0][i].tables[k].groups.splice(j, 1);
+                                    console.log(tablesTemp3[0][i].tables[k].groups.length);
+                                    console.log(tablesTemp3[0][i].tables[k].groups);
+                                    if (tablesTemp3[0][i].tables[k].groups.length === 0) {
+                                        tablesTemp3[0][i].tables[k].bgColor = "#ffffff";
+                                        tablesTemp3[0][i].tables[k].isBesetzt = "false";
+                                        //delete tablesTemp3[0][i].tables[k]['groups'];
+                                    }
+                                }
                             }
-                            res.json(tables);
-                            //console.log("Dispense Table: " + JSON.stringify(tables));
-                        });
-                }, 300);
-            }
+                            for (let j = tablesTemp3[0][i].tables[k].groups.length - 1; j >= 0; j--) {
+                                //console.log(tablesTemp2[0].tables[i]);
+                                console.log("*");
+                                if (tablesTemp3[0][i].tables[k].groups.length === 1 && tablesTemp3[0][i].tables[k].groups[j].newTraceText) {
+                                    tablesTemp3[0][i].tables[k].groups.splice(j, 1);
+                                    tablesTemp3[0][i].tables[k].bgColor = "#ffffff";
+                                    tablesTemp3[0][i].tables[k].isBesetzt = "false";
+                                }
+                            }
+                        }
+                    }
+                }
+                console.log("tablesTemp3 after");
+                console.log(JSON.stringify(tablesTemp3[0]));
+            }).then(function () { // (**)
+                for (let h = 0; h < departments.length; h++) {
+                    db.hubertusTables.remove({
+                        department: departments[h]
+                    });
+                }
+            }).then(function () { // (**)
+                for (let h = 0; h < departments.length; h++) {
+                    db.hubertusTables.save(tablesTemp3[0][h]);
+                }
+            });
         } else {
             db.hubertusTables.findAndModify({
                 query: {department: dispenseTable.department, "tables.number": dispenseTable.number},
@@ -409,18 +352,281 @@ module.exports = {
                 }
                 console.log("No Error");
             });
+        }
+        resolve();
+        }).then(function () { // (**)
             setTimeout(function () {
+                console.log("Dispense Table2: ");
                 db.hubertusTables.find(
-                    {
-                    }, function (err, tables) {
+                    {}, function (err, tables) {
                         if (err) {
                             res.send(err);
                         }
+                        console.log(tables);
                         res.json(tables);
-                        //console.log("Dispense Table: ++++++++++++++++++++++++++++++++++++++++++++++ " + JSON.stringify(tables));
+                        //console.log("Dispense Table: " + JSON.stringify(tables));
                     });
-            }, 300);
-        }
-
+            }, 500);
+        });
     }
 };
+
+
+
+
+
+
+//console.log(dispenseTable);
+//console.log(dispenseTable.groups.length);
+//console.log(dispenseTable.group );
+//console.log("dispenseTable" + JSON.stringify(dispenseTable));
+/*
+ }
+ for (let i = 0; i < dispenseTable[h].group.length; i++) {
+ if (dispenseTable[h].group.length === 1 && dispenseTable[h].groups[dispenseTable[h].group[i]].newTraceText) {
+ break;
+ }
+ */
+
+
+/*
+ db.hubertusTables.findAndModify({
+ query: {
+ department: dispenseTable[h].table.department,
+ "tables.number": dispenseTable[h].table.number
+
+ },
+ update: {
+ $pull: { "tables.$[element].groups": { "abreiseValue": "26.02.2018" } }
+ },
+ arrayFilters: [
+ { "element.number": dispenseTable[h].table.number }
+ ]
+ });
+
+
+ db.hubertusTables.findAndModify({
+ query: {
+ department: dispenseTable[h].table.department,
+ },
+ update: {
+ $pull: { "tables.$[element].groups": { "abreiseValue": "26.02.2018" } }  },
+ arrayFilters: [
+ { "element.number": dispenseTable[h].table.number }
+ ]
+ }, function (err, tables) {
+ if (err) {
+ console.log("Error dispenseTable.group[i]]: 1");
+ console.log(err);
+ } else {
+ console.log("tables dispenseTable.group[i]]: 1");
+ console.log(JSON.stringify(tables));
+ }
+ }};
+
+
+ db.hubertusTables.findAndModify({
+ query: {department: dispenseTable[h].table.department, "tables.number": dispenseTable[h].table.number},
+ update: {
+ $set: {
+ "tables.$.bgColor": "#ffffff",
+ "tables.$.isBesetzt": "false",
+ }, $unset: {
+ "tables.$.groups" : 1,
+ }
+ },
+ new: false
+ }, function (err, tables) {
+ if (err) {
+ console.log("Error");
+ }
+ console.log("No Error");
+ resolve(); // (*)
+ });
+ */
+/*
+ }).then(function (tablesTemp3) { // (**)
+ db.hubertusTables.find({
+ department:  "waeldlerStubeKristallStube",
+ }, function (err, tables) {
+ if (err) {
+ res.send(err);
+ } else {
+ console.log(tables);
+
+ //tablesTemp3.push(tables);
+ //console.log(tablesTemp3);
+ //return tablesTemp3;
+ }
+ });
+ }).then(function (tablesTemp3) { // (**)
+ db.hubertusTables.find({
+ department:  "Bauernstube",
+ }, function (err, tables) {
+ if (err) {
+ res.send(err);
+ } else {
+ console.log(tables);
+
+ //tablesTemp3.push(tables);
+ //console.log(tablesTemp3);
+ //return tablesTemp3;
+ }
+ });
+ }).then(function (tablesTemp3) { // (**)
+ db.hubertusTables.find({
+ department:  "berglerStubeHubertusStube",
+ }, function (err, tables) {
+ if (err) {
+ res.send(err);
+ } else {
+ console.log(tables);
+
+ //tablesTemp3.push(tables);
+ //console.log(tablesTemp3);
+ //return tablesTemp3;
+
+ }
+ });
+ }).then(function (tablesTemp3) { // (**)
+ db.hubertusTables.find({
+ department:  "teestubeTeelounge",
+ }, function (err, tables) {
+ if (err) {
+ res.send(err);
+ } else {
+ console.log(tables);
+
+ //tablesTemp3.push(tables);
+ //console.log(tablesTemp3);
+ //return tablesTemp3;
+ }
+ });
+ */
+
+
+//let foo = db.hubertusTables.find().toArray();
+//let bar = db.hubertusTables.find().forEach(printjson);
+
+
+
+//let documentArray = myCursor.toArray();
+
+//console.log(documentArray);
+
+
+/*
+ function (err, tables) {
+ if (err) {
+ res.send(err);
+ } else {
+ //console.log(tables);
+ let tablesTemp = JSON.stringify(tables);
+ tablesTemp2 = JSON.parse(tablesTemp);
+ //console.log("tablesTemp");
+ //console.log(tablesTemp);
+ console.log("tablesTemp2 before");
+ console.log(JSON.stringify(tablesTemp2));
+ //console.log(tables[0]);
+ //console.log(typeof tables);
+ //console.log(tablesTemp2[0].tables.length);
+ //console.log(tablesTemp[0].tables.length);
+ //console.log(tables[0].tables.length);
+ */
+
+
+
+
+
+/*
+ db.hubertusTables.findAndModify({
+ query: {
+ department: dispenseTable[h].table.department,
+ "tables.number": dispenseTable[h].table.number
+ },
+ update:
+ { $pull: { groups: { $elemMatch: { "abreiseValue": "26.02.2018" } } } } },
+ function (err, tables) {
+ if (err) {
+ console.log("Error dispenseTable.group[i]]: 1");
+ console.log(err);
+ } else {
+ console.log("tables dispenseTable.group[i]]: 1");
+ console.log(JSON.stringify(tables));
+ }
+ });
+
+
+ if ( i === (dispenseTable[h].group.length - 1)) {  resolve(); }
+ }
+ }).then(function() { // (**)
+ console.log("removeNulls promise");
+ setTimeout(function () {
+ db.hubertusTables.findAndModify({
+ query: {
+ department: dispenseTable[h].table.department,
+ "tables.number": dispenseTable[h].table.number
+ },
+ update: {
+ $pull: {
+ "tables.$.groups": null
+ }
+ },
+ multi: true
+ }, function (err, tables) {
+ if (err) {
+ console.log("Error tables.$.groups removeNulls");
+ console.log(err);
+ } else {
+ console.log("tables tables.$.groups removeNulls");
+ console.log(tables);
+ }
+ });
+ }, 200);
+ });
+
+ let p2 = new Promise(function (resolve, reject) {
+ for (let h = 0; h < dispenseTable.length; h++) {
+ setTimeout(function () {
+ if (dispenseTable[h].table.groups.length === dispenseTable[h].group.length) {
+ console.log("dispenseTable[h].table.groups.length === dispenseTable[h].group.length");
+ console.log(dispenseTable[h].table.department);
+ console.log(dispenseTable[h].table.number);
+ db.hubertusTables.findAndModify({
+ query: {department: dispenseTable[h].table.department, "tables.number": dispenseTable[h].table.number},
+ update: {
+ $set: {
+ "tables.$.bgColor": "#ffffff",
+ "tables.$.isBesetzt": "false",
+ }, $unset: {
+ "tables.$.groups" : 1,
+ }
+ },
+ }, function (err, tables) {
+ if (err) {
+ console.log("Error");
+ }
+ console.log("No Error dispenseTable[h].table.groups.length === dispenseTable[h].group.length");
+ //console.log(tables);
+ });
+ }
+ }, 100);
+ }
+ setTimeout(() => resolve(), 1000);
+ });
+ */
+
+
+//console.log("departments[h]");
+//console.log(departments[h]);
+
+
+
+
+
+
+
+
+
+
+
