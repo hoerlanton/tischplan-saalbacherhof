@@ -324,17 +324,20 @@ module.exports = {
                 console.log("tablesTemp3 after");
                 console.log(JSON.stringify(tablesTemp3[0]));
             }).then(function () { // (**)
-                for (let h = 0; h < departments.length; h++) {
                     db.hubertusTables.remove({
-                        department: departments[h]
+                    }, function (err, tables) {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            console.log("removed");
+                            console.log(tables);
+                            db.hubertusTables.save(tablesTemp3[0][0]);
+                            db.hubertusTables.save(tablesTemp3[0][1]);
+                            db.hubertusTables.save(tablesTemp3[0][2]);
+                            db.hubertusTables.save(tablesTemp3[0][3]);
+                            db.hubertusTables.save(tablesTemp3[0][4]);
+                        }
                     });
-                }
-            }).then(function () { // (**)
-                db.hubertusTables.save(tablesTemp3[0][0]);
-                db.hubertusTables.save(tablesTemp3[0][1]);
-                db.hubertusTables.save(tablesTemp3[0][2]);
-                db.hubertusTables.save(tablesTemp3[0][3]);
-                db.hubertusTables.save(tablesTemp3[0][4]);
             });
         } else {
             db.hubertusTables.findAndModify({
