@@ -265,8 +265,6 @@ module.exports = {
     dispenseTable: function (req, res, db) {
         console.log("dispenseTable request made to /dispenseTable");
         let dispenseTable = req.body;
-        let today = dateFns.format(dispenseTable[0].date, 'DD.MM.YYYY');
-        console.log(today);
         let tablesTemp3 = [];
         let departments = [ "berglerStubeHubertusStube", "Bauernstube", "waeldlerStubeKristallStube", "edelweissKaminStube", "teestubeTeelounge"];
         new Promise(function (resolve, reject) {
@@ -287,7 +285,8 @@ module.exports = {
                     }
                 });
             }).then(function () { // (**)
-                console.log("---------------------");
+                let today = dateFns.format(dispenseTable[0].date, 'DD.MM.YYYY');
+                console.log(today);
                 console.log(JSON.stringify(tablesTemp3[0]));
                 for (let i = tablesTemp3[0].length - 1; i >= 0; i--) {
                     for (let k = tablesTemp3[0][i].tables.length - 1; k >= 0; k--) {

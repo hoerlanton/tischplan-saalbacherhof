@@ -2676,8 +2676,8 @@ var NavigationComponent = (function () {
         var _this = this;
         event.preventDefault();
         console.log("UMSETZTEN CALLED");
-        var quellTisch = this.quellTisch;
-        var zielTisch = this.zielTisch;
+        var quellTisch = this.quellTisch.charAt(0).toUpperCase() + this.quellTisch.slice(1);
+        var zielTisch = this.zielTisch.charAt(0).toUpperCase() + this.zielTisch.slice(1);
         this.tableInformation = [];
         //this.umsetzenExport.emit({quellTisch, zielTisch});
         // let targetTable = this.quellTisch.zielTisch;
@@ -2689,48 +2689,48 @@ var NavigationComponent = (function () {
         var tableToMove = { department: "Empty", number: "0", targetTable: "0", targetDepartment: "Empty" };
         var indexZiel = 0;
         var indexQuell = 0;
-        if (Number(this.quellTisch) >= 30 && Number(this.quellTisch) <= 47) {
+        if (Number(quellTisch) >= 30 && Number(quellTisch) <= 47) {
             tableToMove.department = "berglerStubeHubertusStube";
             indexQuell = 3;
         }
-        else if (Number(this.quellTisch) >= 10 && Number(this.quellTisch) <= 26) {
+        else if (Number(quellTisch) >= 10 && Number(quellTisch) <= 26) {
             tableToMove.department = "Bauernstube";
             indexQuell = 2;
         }
-        else if (Number(this.quellTisch) >= 50 && Number(this.quellTisch) <= 77) {
+        else if (Number(quellTisch) >= 50 && Number(quellTisch) <= 77) {
             tableToMove.department = "waeldlerStubeKristallStube";
             indexQuell = 1;
         }
-        else if (Number(this.quellTisch) >= 80 && Number(this.quellTisch) <= 99) {
+        else if (Number(quellTisch) >= 80 && Number(quellTisch) <= 99) {
             tableToMove.department = "edelweissKaminStube";
             indexQuell = 4;
         }
-        else if ((Number(this.quellTisch) >= 1 && Number(this.quellTisch) <= 6) || this.quellTisch === "Tee1" || this.quellTisch === "Tee2" || this.quellTisch === "Tee3" || this.quellTisch === "Tee4" || this.quellTisch === "Tee5" || this.quellTisch === "Tee6") {
+        else if ((Number(quellTisch) >= 1 && Number(quellTisch) <= 6) || quellTisch === "Tee1" || quellTisch === "Tee2" || quellTisch === "Tee3" || quellTisch === "Tee4" || quellTisch === "Tee5" || quellTisch === "Tee6") {
             tableToMove.department = "teestubeTeelounge";
             indexQuell = 0;
         }
-        if (Number(this.zielTisch) >= 30 && Number(this.zielTisch) <= 47) {
+        if (Number(zielTisch) >= 30 && Number(zielTisch) <= 47) {
             tableToMove.targetDepartment = "berglerStubeHubertusStube";
             indexZiel = 3;
         }
-        else if (Number(this.zielTisch) >= 10 && Number(this.zielTisch) <= 26) {
+        else if (Number(zielTisch) >= 10 && Number(zielTisch) <= 26) {
             tableToMove.targetDepartment = "Bauernstube";
             indexZiel = 2;
         }
-        else if (Number(this.zielTisch) >= 50 && Number(this.zielTisch) <= 77) {
+        else if (Number(zielTisch) >= 50 && Number(zielTisch) <= 77) {
             tableToMove.targetDepartment = "waeldlerStubeKristallStube";
             indexZiel = 1;
         }
-        else if (Number(this.zielTisch) >= 80 && Number(this.zielTisch) <= 99) {
+        else if (Number(zielTisch) >= 80 && Number(zielTisch) <= 99) {
             tableToMove.targetDepartment = "edelweissKaminStube";
             indexZiel = 4;
         }
-        else if ((Number(this.zielTisch) >= 1 && Number(this.zielTisch) <= 6) || this.zielTisch === "Tee1" || this.zielTisch === "Tee2" || this.zielTisch === "Tee3" || this.zielTisch === "Tee4" || this.zielTisch === "Tee5" || this.zielTisch === "Tee6") {
+        else if ((Number(zielTisch) >= 1 && Number(zielTisch) <= 6) || zielTisch === "Tee1" || zielTisch === "Tee2" || zielTisch === "Tee3" || zielTisch === "Tee4" || zielTisch === "Tee5" || zielTisch === "Tee6") {
             tableToMove.targetDepartment = "teestubeTeelounge";
             indexZiel = 0;
         }
-        tableToMove.number = this.quellTisch;
-        tableToMove.targetTable = this.zielTisch;
+        tableToMove.number = quellTisch;
+        tableToMove.targetTable = zielTisch;
         console.log(tableToMove);
         this.tischplanService.getTables()
             .subscribe(function (tables) {
