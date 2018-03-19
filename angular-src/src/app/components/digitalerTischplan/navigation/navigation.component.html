@@ -32,10 +32,12 @@
       <div class="btn-group" dropdown>
         <button dropdownToggle class="btn btn-primary dropdown-toggle" type="button">Abreisen entfernen <i class="fa fa-calendar-check-o" aria-hidden="true"></i><span class="caret"></span>
         </button>
-        <ul *dropdownMenu class="dropdown-menu" role="menu" style="max-height: 100px; padding: 0">
+        <ul *dropdownMenu class="dropdown-menu" role="menu" style="max-height: 130px; padding: 0">
           <li role="menuitem" class="menuitem" (mouseenter)="mouseEnterAbreiseAbbrechenButton()"  (mouseleave)="mouseLeaveAbreiseAbbrechenButton()" [ngStyle]="{'background-color': '#' + abreiseAbbrechenButton}" style="color: black;">Abbrechen</li>
           <li class="divider dropdown-divider" style="margin: 0"></li>
-          <li role="menuitem" class="menuitem" style="background-color: red; color: white;" (mouseenter)="mouseEnterAbreiseAusfuehrenButton()"  (mouseleave)="mouseLeaveAbreiseAusfuehrenButton()" [ngStyle]="{'background-color': '#' + abreiseAusfuehrenButton}" style="color: white;" (click)="dispenseIfAbreise()"><b> Abreisen für Heute entfernen</b></li>
+          <li role="menuitem" class="menuitem" style="background-color: red; color: white;" (mouseenter)="mouseEnterAbreiseAusfuehrenButton()"  (mouseleave)="mouseLeaveAbreiseAusfuehrenButton()" [ngStyle]="{'background-color': '#' + abreiseAusfuehrenButton}" style="color: white;" (click)="dispenseIfAbreiseHeute()"><b> Abreisen für Heute entfernen</b></li>
+          <li class="divider dropdown-divider" style="margin: 0"></li>
+          <li role="menuitem" class="menuitem" style="background-color: red; color: white;" (mouseenter)="mouseEnterAbreiseMorgenAusfuehrenButton()"  (mouseleave)="mouseLeaveAbreiseMorgenAusfuehrenButton()" [ngStyle]="{'background-color': '#' + abreiseAusfuehrenMorgenButton}" style="color: white;" (click)="dispenseIfAbreiseMorgen()"><b> Abreisen für Morgen entfernen</b></li>
           <li class="divider dropdown-divider" style="margin: 0"></li>
         </ul>
       </div>
@@ -68,7 +70,7 @@
         </ul>
       </div>
       <form class="navbar-form navbar-left">
-        <div class="form-group form-group-search" >
+        <div class="form-group form-group-search">
           <input type="text" class="form-control" (keyup)="onKey($event)">
         </div>
         <button type="submit" class="btn search-btn-default" ><i class="fa fa-search" aria-hidden="true"></i></button>

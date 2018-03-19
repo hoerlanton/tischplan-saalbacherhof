@@ -265,7 +265,7 @@ module.exports = {
     dispenseTable: function (req, res, db) {
         console.log("dispenseTable request made to /dispenseTable");
         let dispenseTable = req.body;
-        let today = dateFns.format(new Date(), 'DD.MM.YYYY');
+        let today = dateFns.format(dispenseTable[0].date, 'DD.MM.YYYY');
         console.log(today);
         let tablesTemp3 = [];
         let departments = [ "berglerStubeHubertusStube", "Bauernstube", "waeldlerStubeKristallStube", "edelweissKaminStube", "teestubeTeelounge"];
