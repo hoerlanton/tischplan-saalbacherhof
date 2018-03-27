@@ -55,10 +55,10 @@ export class TischplanService {
       .map(res => res.json());
   }
 
-  dispenseTable(tableSonnbergZirbn) {
+  dispenseTable(table) {
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('dispenseTable', tableSonnbergZirbn, {headers: headers})
+    return this.http.post('dispenseTable', table, {headers: headers})
       .map(res => res.json()
       );
   }

@@ -87,29 +87,16 @@ module.exports = {
                             //console.log(imHausListeData.data[accessorNameH]);
                             trace[counter-1] = imHausListeData.data[accessorNameH].w;
                             console.log(imHausListeData.data["H" + (row + 2)]);
-                            if (imHausListeData.data["H" + (row + 2)] != null) {
-                                trace[counter-1] += ", " + imHausListeData.data["H" + (row + 2)].w;
-                                row += 2;
-                            }
-                            if (imHausListeData.data["H" + (row + 2)] != null) {
-                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row + 2)].w;
-                                row += 2;
-                            }
-                            if (imHausListeData.data["H" + (row + 2)] != null ) {
-                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row + 2)].w;
-                                row += 2;
-                            }
-                            if (imHausListeData.data["H" + (row + 2)] != null ) {
-                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row + 2)].w;
-                                row += 2;
-                            }
-                            if (imHausListeData.data["H" + (row + 2)] != null ) {
-                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row + 2)].w;
-                                row += 2;
-                            }
-                            if (imHausListeData.data["H" + (row + 2)] != null ) {
-                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row + 2)].w;
-                                row += 2;
+                            for (row; row < 10000; row + 2) {
+                                console.log(row);
+                                if (imHausListeData.data["H" + (row + 2)] != null) {
+                                    trace[counter-1] += ", " + imHausListeData.data["H" + (row + 2)].w;
+                                    row += 2;
+                                }
+                                if (imHausListeData.data["A" + (row + 2)] == null && imHausListeData.data["H" + (row + 2)] == null) {
+                                    console.log("break");
+                                    break;
+                                }
                             }
                             row++;
                         } else {
