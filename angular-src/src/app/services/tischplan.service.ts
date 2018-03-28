@@ -33,7 +33,6 @@ export class TischplanService {
       .map(res => res.json());
   }
 
-
   occupyTable(dataString) {
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
@@ -59,32 +58,28 @@ export class TischplanService {
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post('dispenseTable', table, {headers: headers})
-      .map(res => res.json()
-      );
+      .map(res => res.json());
   }
 
   removePlaceholder(dataString) {
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post('removePlaceholder', dataString, {headers: headers})
-      .map(res => res.json()
-      );
+      .map(res => res.json());
   }
 
   addPlaceholder(tableSonnbergZirbn) {
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post('addPlaceholder', tableSonnbergZirbn, {headers: headers})
-      .map(res => res.json()
-      );
+      .map(res => res.json());
   }
 
   addInformationToTable(dataString) {
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post('addInformationToTable', dataString, {headers: headers})
-      .map(res => res.json()
-      );
+      .map(res => res.json());
   }
   sendInformation(newInformation) {
     var headers = new Headers();
@@ -134,6 +129,7 @@ export class TischplanService {
     return this.http.post('updateTracesListeElement', informationElements2, {headers: headers})
       .map(res => res.json());
   }
+
   sendInformationToNotizBlock(newInformation) {
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
