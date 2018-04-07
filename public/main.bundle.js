@@ -1370,7 +1370,13 @@ var DepartmentsComponent = (function () {
                 }
             }
             else {
-                _this.updateImHausListeElement.emit(table);
+                if (table.constructor === Array) {
+                    console.log("isarray");
+                    _this.updateImHausListeElement.emit(table[0].table);
+                }
+                else {
+                    _this.updateImHausListeElement.emit(table);
+                }
             }
         });
         this.tischplanService.addPlaceholder(table).subscribe(function (response) {
@@ -4615,10 +4621,10 @@ var TischplanService = (function () {
         return this.http.post('removeTable', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
-    TischplanService.prototype.dispenseTable = function (tableSonnbergZirbn) {
+    TischplanService.prototype.dispenseTable = function (table) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('dispenseTable', tableSonnbergZirbn, { headers: headers })
+        return this.http.post('dispenseTable', table, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.removePlaceholder = function (dataString) {

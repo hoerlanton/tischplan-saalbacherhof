@@ -123,7 +123,12 @@ export class DepartmentsComponent  {
             this.updateImHausListeElement.emit(table[i].table);
           }
         } else {
-          this.updateImHausListeElement.emit(table);
+          if (table.constructor === Array) {
+            console.log("isarray");
+            this.updateImHausListeElement.emit(table[0].table);
+          } else {
+            this.updateImHausListeElement.emit(table);
+          }
 
         }
       });
