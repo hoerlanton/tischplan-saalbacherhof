@@ -37,8 +37,8 @@
       <file leaf-file-name="print.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/print/print.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-439">
-              <caret line="355" column="106" lean-forward="false" selection-start-line="355" selection-start-column="106" selection-end-line="355" selection-end-column="106" />
+            <state relative-caret-position="702">
+              <caret line="368" column="15" lean-forward="false" selection-start-line="368" selection-start-column="15" selection-end-line="368" selection-end-column="15" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#tr#0;n#div#0;n#div#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -61,11 +61,11 @@
                 <element signature="n#style#0;n#td#1;n#tr#0;n#div#0;n#div#0;n#table#0;n#div#3;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#tr#0;n#div#1;n#div#0;n#table#0;n#div#3;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#0;n#tr#0;n#div#1;n#div#0;n#table#0;n#div#3;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#tr#0;n#div#0;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#div#0;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#div#0;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#tr#0;n#div#1;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#div#1;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#div#1;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#div#1;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -794,12 +794,12 @@
       <workItem from="1524809105701" duration="297000" />
       <workItem from="1526803919593" duration="1187000" />
       <workItem from="1526924284538" duration="1637000" />
-      <workItem from="1526977390659" duration="5690000" />
+      <workItem from="1526977390659" duration="6031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1194988000" />
+    <option name="totallyTimeSpent" value="1195329000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -820,7 +820,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19689119" sideWeight="0.52028334" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15544042" sideWeight="0.483023" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20990099" sideWeight="0.4797167" order="10" side_tool="false" content_ui="tabs" x="17" y="174" width="1280" height="773" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46930692" sideWeight="0.4797167" order="10" side_tool="false" content_ui="tabs" x="17" y="174" width="1280" height="773" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1244,8 +1244,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/print/print.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-439">
-          <caret line="355" column="106" lean-forward="false" selection-start-line="355" selection-start-column="106" selection-end-line="355" selection-end-column="106" />
+        <state relative-caret-position="702">
+          <caret line="368" column="15" lean-forward="false" selection-start-line="368" selection-start-column="15" selection-end-line="368" selection-end-column="15" />
           <folding>
             <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#0;n#div#0;n#div#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -1268,11 +1268,11 @@
             <element signature="n#style#0;n#td#1;n#tr#0;n#div#0;n#div#0;n#table#0;n#div#3;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#0;n#div#1;n#div#0;n#table#0;n#div#3;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#div#1;n#div#0;n#table#0;n#div#3;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#0;n#div#0;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#div#0;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#div#0;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#0;n#div#1;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#div#1;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#div#0;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#div#1;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#div#1;n#div#0;n#table#0;n#div#4;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
