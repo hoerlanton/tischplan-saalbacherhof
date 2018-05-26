@@ -93,6 +93,10 @@ module.exports = {
                                     trace[counter-1] += ", " + imHausListeData.data["H" + (row + 2)].w;
                                     row += 2;
                                 }
+                                if (imHausListeData.data["D" + (row + 1)] != null) {
+                                    trace[counter-1] += ", " + imHausListeData.data["D" + (row + 1)].w;
+                                    row += 1;
+                                }
                                 if (imHausListeData.data["A" + (row + 2)] == null && imHausListeData.data["H" + (row + 2)] == null) {
                                     console.log("break");
                                     break;
