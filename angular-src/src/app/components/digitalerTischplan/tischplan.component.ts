@@ -45,12 +45,14 @@ export class TischplanComponent {
   buttonBgColor4: string;
   buttonBgColor5: string;
   buttonBgColor6: string;
+  buttonBgColor7: string;
   fontColor1: string;
   fontColor2: string;
   fontColor3: string;
   fontColor4: string;
   fontColor5: string;
   fontColor6: string;
+  fontColor7: string;
   leftValues: LeftValue[];
   topValues: any[] = [];
   dateGenerated: any;
@@ -71,6 +73,7 @@ export class TischplanComponent {
   tablesWaeldlerStubeKristallStube: Table[] = [];
   tablesEdelweissKaminStube: Table[] = [];
   tablesTeestubeTeelounge: Table[] = [];
+  tablesTerasse: Table[] = [];
   title: string;
   filesToUpload: Array<File> = [];
   isDropped: any[] = [];
@@ -79,6 +82,7 @@ export class TischplanComponent {
   showWaeldlerBool: boolean;
   showEdelweissBool: boolean;
   showTeeStubeBool: boolean;
+  showTerasseBool: boolean;
   showAlleBool: boolean;
   roomNumber: string;
   tableNumber: string;
@@ -116,6 +120,8 @@ export class TischplanComponent {
   kiBerglerStubeHubertusStube: any[] = [];
   erwTeestubeTeelounge: any[] = [];
   kiTeestubeTeelounge: any[] = [];
+  erwTerasse: any[] = [];
+  kiTerasse: any[] = [];
 
 
   constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, private dragulaService: DragulaService) {
@@ -133,12 +139,14 @@ export class TischplanComponent {
     this.buttonBgColor4 = "0a7a74";
     this.buttonBgColor5 = "0a7a74";
     this.buttonBgColor6 = "0a7a74";
+    this.buttonBgColor7 = "0a7a74";
     this.fontColor1 = "f3efe4";
     this.fontColor2 = "f3efe4";
     this.fontColor3 = "f3efe4";
     this.fontColor4 = "f3efe4";
     this.fontColor5 = "f3efe4";
     this.fontColor6 = "f3efe4";
+    this.fontColor7 = "f3efe4";
     this.tablesOccupied = 0;
     this.backgroundColor = "ffffff";
     this.showBauernStubnBool = false;
@@ -146,6 +154,7 @@ export class TischplanComponent {
     this.showWaeldlerBool = false;
     this.showEdelweissBool = false;
     this.showTeeStubeBool = false;
+    this.showTerasseBool = false;
     this.term = "";
 
     this.tischplanService.getNotizElements()
@@ -384,18 +393,22 @@ export class TischplanComponent {
             else if (tables[a].department === "teestubeTeelounge") {
               this.tablesTeestubeTeelounge = tables[a].tables;
             }
+            else if (tables[a].department === "terasse") {
+              this.tablesTerasse = tables[a].tables;
+            }
           }
         }
 
-        console.log(JSON.stringify(tables));
+        //console.log(JSON.stringify(tables));
         console.log(this.tablesBauernstube);
         console.log(this.tablesEdelweissKaminStube);
         console.log(this.tablesBerglerStubeHubertusStube);
         console.log(this.tablesWaeldlerStubeKristallStube);
         console.log(this.tablesTeestubeTeelounge);
+        console.log(this.tablesTerasse);
         this.tablesTempAbreise = tables;
 
-        this.tables = this.tablesBauernstube.concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube);
+        this.tables = this.tablesBauernstube.concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube).concat(this.tablesTerasse);
         //console.log(this.tables);
         this.changeBgColorIfAnreise();
         this.printComponent.formatAzListe(this.tables);

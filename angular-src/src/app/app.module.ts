@@ -21,6 +21,7 @@ import { BerglerStubeHubertusStubeComponent } from './components/digitalerTischp
 import { WaeldlerStubeKristallStubeComponent } from './components/digitalerTischplan/departments/waeldler-stube-kristall-stube/waeldler-stube-kristall-stube.component';
 import { EdelweissKaminStubeComponent } from './components/digitalerTischplan/departments/edelweiss-kamin-stube/edelweiss-kamin-stube.component';
 import { TeestubeTeeloungeComponent } from './components/digitalerTischplan/departments/teestube-teelounge/teestube-teelounge.component';
+import { TerasseComponent } from './components/digitalerTischplan/departments/terasse/terasse.component';
 import { AlleComponent } from './components/digitalerTischplan/departments/alle/alle.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { RouterModule, Routes } from '@angular/router';
@@ -55,6 +56,7 @@ const appRoutes: Routes =  [
     DepartmentsComponent,
     DepartmentmenuComponent,
     BauernstubeComponent,
+    TerasseComponent,
     BerglerStubeHubertusStubeComponent,
     WaeldlerStubeKristallStubeComponent,
     EdelweissKaminStubeComponent,

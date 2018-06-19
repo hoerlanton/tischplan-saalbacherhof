@@ -100,6 +100,9 @@ module.exports = {
             else if (departmentValue === "TeestubeTeelounge") {
                 departmentValueDB = "teestubeTeelounge";
             }
+            else if (departmentValue === "Terasse") {
+                departmentValueDB = "terasse";
+            }
             setTimeout(function () {
                 db.hubertusTables.update(
                     {

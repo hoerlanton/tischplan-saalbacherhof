@@ -6,6 +6,7 @@ import {TeestubeTeeloungeComponent} from "./teestube-teelounge/teestube-teeloung
 import {EdelweissKaminStubeComponent} from "./edelweiss-kamin-stube/edelweiss-kamin-stube.component";
 import {BerglerStubeHubertusStubeComponent} from "./bergler-stube-hubertus-stube/bergler-stube-hubertus-stube.component";
 import {BauernstubeComponent} from "./bauernstube/bauernstube.component";
+import {TerasseComponent} from "./terasse/terasse.component";
 import {AlleComponent} from "./alle/alle.component";
 
 @Component({
@@ -15,6 +16,8 @@ import {AlleComponent} from "./alle/alle.component";
 })
 export class DepartmentsComponent  {
   @Input('tablesBauernstube') tablesBauernstube: Table[];
+  @Input('tablesTerasse') tablesTerasse: Table[];
+  @Input('showTerasseBool') showTerasseBool: boolean;
   @Input('showBauernStubnBool') showBauernStubnBool: boolean;
   @Input('tablesEdelweissKaminStube') tablesEdelweissKaminStube: Table[];
   @Input('showEdelweissBool') showEdelweissBool: boolean;
@@ -36,6 +39,8 @@ export class DepartmentsComponent  {
   dispensedEdelweissKaminStube:EventEmitter<any> = new EventEmitter();
   @Output()
   dispensedTeestubeTeelounge:EventEmitter<any> = new EventEmitter();
+  @Output()
+  dispensedTerasse:EventEmitter<any> = new EventEmitter();
   @Output()
   dispensedWaeldlerStubeKristallStube:EventEmitter<any> = new EventEmitter();
   @Output()
@@ -67,6 +72,9 @@ export class DepartmentsComponent  {
 
   @ViewChild(BauernstubeComponent)
   private bauernstubeComponent: BauernstubeComponent;
+
+  @ViewChild(TerasseComponent)
+  private terasseComponent: TerasseComponent;
 
   constructor(private tischplanService: TischplanService) {
   }
@@ -110,6 +118,9 @@ export class DepartmentsComponent  {
         }
         else if (response[j].department === "teestubeTeelounge") {
           this.dispensedTeestubeTeelounge.emit(response[j].tables);
+        }
+        else if (response[j].department === "terasse") {
+          this.dispensedTerasse.emit(response[j].tables);
         }
 
       }
@@ -187,6 +198,10 @@ export class DepartmentsComponent  {
             this.dispensedTeestubeTeelounge.emit(response[0].tables);
             //this.tablesTeestubeTeelounge[arrayIndex] = response.tables[0];
           }
+          else if (response[0].department === "terasse") {
+            this.dispensedTerasse.emit(response[0].tables);
+            //this.tablesTeestubeTeelounge[arrayIndex] = response.tables[0];
+          }
         }
         // //console.log(this.tablesBerglerStubeHubertusStube[arrayIndex]);
       });
@@ -219,6 +234,9 @@ export class DepartmentsComponent  {
           }
           else if (response.tables[0].department === "teestubeTeelounge") {
             this.tablesTeestubeTeelounge[arrayIndex] = response.tables[0];
+          }
+          else if (response.tables[0].department === "terasse") {
+            this.tablesTerasse[arrayIndex] = response.tables[0];
           }
         }
 
@@ -286,6 +304,11 @@ export class DepartmentsComponent  {
                       this.tablesTeestubeTeelounge[b].bgColor = "#0a7a74";
                     }
                   }
+                  else if (this.tablesChangeBgColorIfAnreise[a].department === "terasse") {
+                    if (this.tablesTerasse[b]) {
+                      this.tablesTerasse[b].bgColor = "#0a7a74";
+                    }
+                  }
                 }
               }
             }
@@ -308,7 +331,8 @@ export class DepartmentsComponent  {
       this.teestubeTeeloungeComponent.transform(this.tablesTeestubeTeelounge, term);
     } else if (this.showWaeldlerBool) {
       this.waeldlerStubeKristallStubeComponent.transform(this.tablesWaeldlerStubeKristallStube, term);
-
+    } else if (this.showTerasseBool) {
+      this.terasseComponent.transform(this.tablesTerasse, term);
     }
   }
 }

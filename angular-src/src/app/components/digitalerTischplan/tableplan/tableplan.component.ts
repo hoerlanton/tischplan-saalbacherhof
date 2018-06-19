@@ -12,6 +12,7 @@ export class TableplanComponent implements AfterViewChecked {
   @Input('tables') tables: Table[];
   @Input('dateGeneratedListe') dateGeneratedListe: string;
   @Input('tablesBauernstube') tablesBauernstube: Table[];
+  @Input('tablesTerasse') tablesTerasse: Table[];
   @Input('showBauernStubnBool') showBauernStubnBool: boolean;
   @Input('tablesEdelweissKaminStube') tablesEdelweissKaminStube: Table[];
   @Input('showEdelweissBool') showEdelweissBool: boolean;
@@ -21,6 +22,7 @@ export class TableplanComponent implements AfterViewChecked {
   @Input('showTeeStubeBool') showTeeStubeBool: boolean;
   @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
   @Input('showWaeldlerBool') showWaeldlerBool: boolean;
+  @Input('showTerasseBool') showTerasseBool: boolean;
   @Input('showAlleBool') showAlleBool: boolean;
   @Input('showTablePlanBool') showTablePlanBool: boolean;
   @Output()
@@ -33,6 +35,8 @@ export class TableplanComponent implements AfterViewChecked {
   movedEdelweissKaminStube:EventEmitter<any> = new EventEmitter();
   @Output()
   movedTeestubeTeelounge:EventEmitter<any> = new EventEmitter();
+  @Output()
+  movedTerasse:EventEmitter<any> = new EventEmitter();
   @Output()
   changeBgColorIfAnreise:EventEmitter<any> = new EventEmitter();
 
@@ -56,6 +60,10 @@ export class TableplanComponent implements AfterViewChecked {
   exportKiBauernstube:EventEmitter<any> = new EventEmitter();
   @Output()
   exportErwBauernstube:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKiTerasse:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportErwTerasse:EventEmitter<any> = new EventEmitter();
 
   buttonMoveTable: string;
   buttonInfo: string;
@@ -72,6 +80,8 @@ export class TableplanComponent implements AfterViewChecked {
   kiBerglerStubeHubertusStube: any[] = [];
   erwTeestubeTeelounge: any[] = [];
   kiTeestubeTeelounge: any[] = [];
+  erwTerasse: any[] = [];
+  kiTerasse: any[] = [];
 
   constructor(private tischplanService: TischplanService) {
     this.buttonMoveTable = "ff0000";
@@ -104,6 +114,8 @@ export class TableplanComponent implements AfterViewChecked {
         this.movedEdelweissKaminStube.emit(response[0].tables);
       } else if (response[0].tables[j].department === "teestubeTeelounge") {
         this.movedTeestubeTeelounge.emit(response[0].tables);
+      } else if (response[0].tables[j].department === "terasse") {
+        this.movedTerasse.emit(response[0].tables);
       }
       this.changeBgColorIfAnreise.emit();
     });
@@ -127,6 +139,8 @@ export class TableplanComponent implements AfterViewChecked {
           this.movedEdelweissKaminStube.emit(response[0].tables);
         } else if (response[0].tables[j].department === "teestubeTeelounge") {
           this.movedTeestubeTeelounge.emit(response[0].tables);
+        } else if (response[0].tables[j].department === "terasse") {
+          this.movedTerasse.emit(response[0].tables);
         }
         this.changeBgColorIfAnreise.emit();
       });
@@ -345,6 +359,29 @@ export class TableplanComponent implements AfterViewChecked {
         }
       }
     }
+    if (this.tablesTerasse) {
+      for (let p = 0; p < this.tablesTerasse.length; p++) {
+        this.erwTerasse[p] = 0;
+        this.kiTerasse[p] = 0;
+        if (this.tablesTerasse[p].groups) {
+          for (let g = 0; g < this.tablesTerasse[p].groups.length; g++) {
+            if (this.tablesTerasse[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesTerasse[p].groups[g].personenAnzahlValue.match(/\d+/g);
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.erwTerasse[p] = this.erwTerasse[p] + Number(erwKi[0]);
+                //console.log(this.erw[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.kiTerasse[p] = this.kiTerasse[p] + Number(erwKi[1]);
+                //console.log(this.ki[p]);
+              }
+            }
+          }
+        }
+      }
+    }
     this.exportKiTeestubeTeelounge.emit(this.kiTeestubeTeelounge);
     this.exportErwTeestubeTeelounge.emit(this.erwTeestubeTeelounge);
     this.exportKiWaeldlerStubeKristallStube.emit(this.kiWaeldlerStubeKristallStube);
@@ -355,5 +392,7 @@ export class TableplanComponent implements AfterViewChecked {
     this.exportErwEdelweiss.emit(this.erwEdelweiss);
     this.exportKiBauernstube.emit(this.kiBauernstube);
     this.exportErwBauernstube.emit(this.erwBauernstube);
+    this.exportErwTerasse.emit(this.erwTerasse);
+    this.exportKiTerasse.emit(this.kiTerasse);
   }
 }

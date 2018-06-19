@@ -23,6 +23,9 @@
         <div *ngIf="showTeeStubeBool">
           TeeStube<br>Teelounge <br><i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
         </div>
+        <div *ngIf="showTerasseBool">
+          Terasse <i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
+        </div>
       </button>
       <ul *dropdownMenu class="dropdown-menu"  role="menu" style="overflow: auto; margin: 0 0 0 20px; width: 200px;">
         <li role="menuitem" class="showBauernStubn" style="padding: 10px"  (click)="showBauernStubn()" (mouseenter)="mouseEnterBauernStubn()"  (mouseleave)="mouseLeaveBauernStubn()" [ngStyle]="{'background-color': '#' + buttonBgColor1}">
@@ -45,8 +48,12 @@
           <p [ngStyle]="{'color': '#' + fontColor5}">TeeStube<br>Teelounge</p>
         </li>
         <li style="margin: 0px" class="divider dropdown-divider"></li>
-        <li role="menuitem" class="showAlle" style="padding: 10px"  (click)="showAlle()" (mouseenter)="mouseEnterAlle()"  (mouseleave)="mouseLeaveAlle()" [ngStyle]="{'background-color': '#' + buttonBgColor6}">
-          <p [ngStyle]="{'color': '#' + fontColor6}">Alle</p>
+        <li role="menuitem" class="showTerasse" style="padding: 10px"  (click)="showTerasse()" (mouseenter)="mouseEnterTerasse()"  (mouseleave)="mouseLeaveTerasse()" [ngStyle]="{'background-color': '#' + buttonBgColor6}">
+          <p [ngStyle]="{'color': '#' + fontColor6}">Terasse</p>
+        </li>
+        <li style="margin: 0px" class="divider dropdown-divider"></li>
+        <li role="menuitem" class="showAlle" style="padding: 10px"  (click)="showAlle()" (mouseenter)="mouseEnterAlle()"  (mouseleave)="mouseLeaveAlle()" [ngStyle]="{'background-color': '#' + buttonBgColor7}">
+          <p [ngStyle]="{'color': '#' + fontColor7}">Alle</p>
         </li>
         <li style="margin: 0px" class="divider dropdown-divider"></li>
       </ul>

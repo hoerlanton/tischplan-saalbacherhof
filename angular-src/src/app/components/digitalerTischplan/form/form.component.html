@@ -46,6 +46,15 @@
           </div>
         </div>
       </div>
+      <div *ngIf="showTerasseBool">
+        <div *ngFor="let notizElement of notizElements">
+          <div *ngIf="notizElement.departmentNotizInput === 'Terasse'">
+            <div style="border: solid 3px greenyellow; padding: 10px; margin: 10px;">
+              <p  style="color: white"> {{notizElement.notizInput === '' ? "Keine Notiz" : notizElement.notizInput}} <br><b>  Datum: </b> {{notizElement.notizInput === '' ? "" : notizElement.date}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <form class="SendNotiz"  #myForm="ngForm" (submit)="sendNotiz($event); myForm.reset() ">

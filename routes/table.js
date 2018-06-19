@@ -226,6 +226,9 @@ module.exports = {
         else if (departmentValue === "TeestubeTeelounge") {
             departmentValueDB = "teestubeTeelounge";
         }
+        else if (departmentValue === "Terasse") {
+            departmentValueDB = "terasse";
+        }
 
         db.hubertusTables.update(
             {
@@ -266,7 +269,7 @@ module.exports = {
         console.log("dispenseTable request made to /dispenseTable");
         let dispenseTable = req.body;
         let tablesTemp3 = [];
-        let departments = [ "berglerStubeHubertusStube", "Bauernstube", "waeldlerStubeKristallStube", "edelweissKaminStube", "teestubeTeelounge"];
+        let departments = [ "berglerStubeHubertusStube", "Bauernstube", "waeldlerStubeKristallStube", "edelweissKaminStube", "teestubeTeelounge", "terasse"];
         new Promise(function (resolve, reject) {
             if (dispenseTable.constructor === Array) {
             console.log("dispenseTable[h].table.groups.length > dispenseTable[h].group.length");
@@ -335,6 +338,7 @@ module.exports = {
                             db.hubertusTables.save(tablesTemp3[0][2]);
                             db.hubertusTables.save(tablesTemp3[0][3]);
                             db.hubertusTables.save(tablesTemp3[0][4]);
+                            db.hubertusTables.save(tablesTemp3[0][5]);
                         }
                     });
             });

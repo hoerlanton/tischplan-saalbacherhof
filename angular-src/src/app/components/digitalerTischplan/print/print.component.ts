@@ -21,7 +21,8 @@ export class PrintComponent implements OnInit {
   @Input('showTeeStubeBool') showTeeStubeBool: boolean;
   @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
   @Input('showWaeldlerBool') showWaeldlerBool: boolean;
-
+  @Input('showTerasseBool') showTerasseBool: boolean;
+  @Input('tablesTerasse') tablesTerasse: Table[];
   @Input('erwBerglerStubeHubertusStube') erwBerglerStubeHubertusStube: any;
   @Input('kiBerglerStubeHubertusStube') kiBerglerStubeHubertusStube: any;
   @Input('erwBauernstube') erwBauernstube: any;
@@ -32,6 +33,9 @@ export class PrintComponent implements OnInit {
   @Input('erwWaeldlerStubeKristallStube') erwWaeldlerStubeKristallStube: any;
   @Input('kiWaeldlerStubeKristallStube') kiWaeldlerStubeKristallStube: any;
   @Input('erwEdelweiss') erwEdelweiss: any;
+  @Input('erwTerasse') erwTerasse: any;
+  @Input('kiTerasse') kiTerasse: any;
+
 
   @Output()
   getTablesOccupied:EventEmitter<number> = new EventEmitter();

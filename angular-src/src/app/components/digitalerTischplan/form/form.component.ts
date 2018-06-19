@@ -18,6 +18,7 @@ export class FormComponent implements OnInit {
   @Input('nameTraceInput') nameTraceInput: string;
   @Input('employee') employee: string;
   @Input('tablesBauernstube') tablesBauernstube: Table[];
+  @Input('tablesTerasse') tablesTerasse: Table[];
   @Input('tablesBerglerStubeHubertusStube') tablesBerglerStubeHubertusStube: Table[];
   @Input('tablesEdelweissKaminStube') tablesEdelweissKaminStube: Table[];
   @Input('tablesTeestubeTeelounge') tablesTeestubeTeelounge: Table[];
@@ -30,6 +31,7 @@ export class FormComponent implements OnInit {
   @Input('showEdelweissBool') showEdelweissBool: boolean;
   @Input('showWaeldlerBool') showWaeldlerBool: boolean;
   @Input('showTeeStubeBool') showTeeStubeBool: boolean;
+  @Input('showTerasseBool') showTerasseBool: boolean;
   @Input('showAlleBool') showAlleBool: boolean;
   @Output()
   notizResponse:EventEmitter<any> = new EventEmitter();
@@ -42,7 +44,7 @@ export class FormComponent implements OnInit {
   notizDate: any;
 
   constructor(private tischplanService: TischplanService, private _flashMessagesService: FlashMessagesService) {
-    this.departments = ["Bauernstube", "BerglerStubeHubertusStube", "EdelweissKaminStube", "WaeldlerStubeKristallStube", "TeestubeTeelounge" ];
+    this.departments = ["Bauernstube", "BerglerStubeHubertusStube", "EdelweissKaminStube", "WaeldlerStubeKristallStube", "TeestubeTeelounge", "Terasse" ];
   }
 
   ngOnInit() {
@@ -109,8 +111,13 @@ export class FormComponent implements OnInit {
                     this.tablesTeestubeTeelounge[i] = Information.tables[0];
                   }
                 }
-              }
-            }
+              } else if (Information.tables[0].department === "terasse") {
+                for (let i = 0; i < this.tablesTerasse.length; i++) {
+                  if (this.tablesTerasse[i].number === Information.tables[0].number) {
+                    this.tablesTerasse[i] = Information.tables[0];
+                  }
+                }
+              }            }
           });
         this.changeColorIfAnreiseExport.emit();
       }
