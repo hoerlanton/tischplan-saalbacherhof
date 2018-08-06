@@ -103,6 +103,10 @@ module.exports = {
             else if (departmentValue === "Terasse") {
                 departmentValueDB = "terasse";
             }
+            else if (departmentValue === "TerrasseEdelweiss") {
+                departmentValueDB = "terrasseEdelweiss";
+            }
+
             setTimeout(function () {
                 db.hubertusTables.update(
                     {

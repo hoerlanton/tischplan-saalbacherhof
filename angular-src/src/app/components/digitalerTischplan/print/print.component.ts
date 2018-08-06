@@ -22,7 +22,10 @@ export class PrintComponent implements OnInit {
   @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
   @Input('showWaeldlerBool') showWaeldlerBool: boolean;
   @Input('showTerasseBool') showTerasseBool: boolean;
+  @Input('showTerrasseEdelweissBool') showTerrasseEdelweissBool: boolean;
   @Input('tablesTerasse') tablesTerasse: Table[];
+  @Input('tablesTerrasseEdelweiss') tablesTerrasseEdelweiss: Table[];
+  @Input('tablesTerrasse') tablesTerrasse: Table[];
   @Input('erwBerglerStubeHubertusStube') erwBerglerStubeHubertusStube: any;
   @Input('kiBerglerStubeHubertusStube') kiBerglerStubeHubertusStube: any;
   @Input('erwBauernstube') erwBauernstube: any;
@@ -34,7 +37,9 @@ export class PrintComponent implements OnInit {
   @Input('kiWaeldlerStubeKristallStube') kiWaeldlerStubeKristallStube: any;
   @Input('erwEdelweiss') erwEdelweiss: any;
   @Input('erwTerasse') erwTerasse: any;
+  @Input('erwTerrasseEdelweiss') erwTerrasseEdelweiss: any;
   @Input('kiTerasse') kiTerasse: any;
+  @Input('kiTerrasseEdelweiss') kiTerrasseEdelweiss: any;
 
 
   @Output()

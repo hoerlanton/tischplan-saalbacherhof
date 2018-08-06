@@ -17,6 +17,7 @@ export class AlleComponent implements PipeTransform {
   @Input('tables') tables: any;
   @Input('tablesBauernstube') tablesBauernstube: Table[];
   @Input('tablesTerasse') tablesTerasse: Table[];
+  @Input('tablesTerrasseEdelweiss') tablesTerrasseEdelweiss: Table[];
   @Input('tablesBerglerStubeHubertusStube') tablesBerglerStubeHubertusStube: Table[];
   @Input('tablesEdelweissKaminStube') tablesEdelweissKaminStube: Table[];
   @Input('tablesTeestubeTeelounge') tablesTeestubeTeelounge: Table[];

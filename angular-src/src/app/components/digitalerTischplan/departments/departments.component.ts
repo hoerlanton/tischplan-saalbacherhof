@@ -7,6 +7,7 @@ import {EdelweissKaminStubeComponent} from "./edelweiss-kamin-stube/edelweiss-ka
 import {BerglerStubeHubertusStubeComponent} from "./bergler-stube-hubertus-stube/bergler-stube-hubertus-stube.component";
 import {BauernstubeComponent} from "./bauernstube/bauernstube.component";
 import {TerasseComponent} from "./terasse/terasse.component";
+import {TerrasseEdelweissComponent} from "./terrasse-edelweiss/terrasse-edelweiss.component";
 import {AlleComponent} from "./alle/alle.component";
 
 @Component({
@@ -18,6 +19,8 @@ export class DepartmentsComponent  {
   @Input('tablesBauernstube') tablesBauernstube: Table[];
   @Input('tablesTerasse') tablesTerasse: Table[];
   @Input('showTerasseBool') showTerasseBool: boolean;
+  @Input('tablesTerrasseEdelweiss') tablesTerrasseEdelweiss: Table[];
+  @Input('showTerrasseEdelweissBool') showTerrasseEdelweissBool: boolean;
   @Input('showBauernStubnBool') showBauernStubnBool: boolean;
   @Input('tablesEdelweissKaminStube') tablesEdelweissKaminStube: Table[];
   @Input('showEdelweissBool') showEdelweissBool: boolean;
@@ -41,6 +44,8 @@ export class DepartmentsComponent  {
   dispensedTeestubeTeelounge:EventEmitter<any> = new EventEmitter();
   @Output()
   dispensedTerasse:EventEmitter<any> = new EventEmitter();
+  @Output()
+  dispensedTerrasseEdelweiss:EventEmitter<any> = new EventEmitter();
   @Output()
   dispensedWaeldlerStubeKristallStube:EventEmitter<any> = new EventEmitter();
   @Output()
@@ -75,6 +80,9 @@ export class DepartmentsComponent  {
 
   @ViewChild(TerasseComponent)
   private terasseComponent: TerasseComponent;
+
+  @ViewChild(TerrasseEdelweissComponent)
+  private terrasseEdelweissComponent: TerrasseEdelweissComponent;
 
   constructor(private tischplanService: TischplanService) {
   }
@@ -122,6 +130,9 @@ export class DepartmentsComponent  {
         else if (response[j].department === "terasse") {
           this.dispensedTerasse.emit(response[j].tables);
         }
+        else if (response[j].department === "terrasseEdelweiss") {
+            this.dispensedTerrasseEdelweiss.emit(response[j].tables);
+          }
 
       }
     },
@@ -200,7 +211,9 @@ export class DepartmentsComponent  {
           }
           else if (response[0].department === "terasse") {
             this.dispensedTerasse.emit(response[0].tables);
-            //this.tablesTeestubeTeelounge[arrayIndex] = response.tables[0];
+          }
+          else if (response[0].department === "terrasseEdelweiss") {
+            this.dispensedTerrasseEdelweiss.emit(response[0].tables);
           }
         }
         // //console.log(this.tablesBerglerStubeHubertusStube[arrayIndex]);
@@ -237,6 +250,9 @@ export class DepartmentsComponent  {
           }
           else if (response.tables[0].department === "terasse") {
             this.tablesTerasse[arrayIndex] = response.tables[0];
+          }
+          else if (response.tables[0].department === "terrasseEdelweiss") {
+            this.tablesTerrasseEdelweiss[arrayIndex] = response.tables[0];
           }
         }
 
@@ -309,6 +325,11 @@ export class DepartmentsComponent  {
                       this.tablesTerasse[b].bgColor = "#0a7a74";
                     }
                   }
+                  else if (this.tablesChangeBgColorIfAnreise[a].department === "terrasseEdelweiss") {
+                    if (this.tablesTerrasseEdelweiss[b]) {
+                      this.tablesTerrasseEdelweiss[b].bgColor = "#0a7a74";
+                    }
+                  }
                 }
               }
             }
@@ -333,6 +354,7 @@ export class DepartmentsComponent  {
       this.waeldlerStubeKristallStubeComponent.transform(this.tablesWaeldlerStubeKristallStube, term);
     } else if (this.showTerasseBool) {
       this.terasseComponent.transform(this.tablesTerasse, term);
-    }
-  }
+    } else if (this.showTerrasseEdelweissBool) {
+      this.terrasseEdelweissComponent.transform(this.tablesTerrasseEdelweiss, term);
+    }  }
 }

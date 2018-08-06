@@ -13,6 +13,7 @@ export class TableplanComponent implements AfterViewChecked {
   @Input('dateGeneratedListe') dateGeneratedListe: string;
   @Input('tablesBauernstube') tablesBauernstube: Table[];
   @Input('tablesTerasse') tablesTerasse: Table[];
+  @Input('tablesTerrasseEdelweiss') tablesTerrasseEdelweiss: Table[];
   @Input('showBauernStubnBool') showBauernStubnBool: boolean;
   @Input('tablesEdelweissKaminStube') tablesEdelweissKaminStube: Table[];
   @Input('showEdelweissBool') showEdelweissBool: boolean;
@@ -23,6 +24,7 @@ export class TableplanComponent implements AfterViewChecked {
   @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
   @Input('showWaeldlerBool') showWaeldlerBool: boolean;
   @Input('showTerasseBool') showTerasseBool: boolean;
+  @Input('showTerrasseEdelweissBool') showTerrasseEdelweissBool: boolean;
   @Input('showAlleBool') showAlleBool: boolean;
   @Input('showTablePlanBool') showTablePlanBool: boolean;
   @Output()
@@ -37,6 +39,8 @@ export class TableplanComponent implements AfterViewChecked {
   movedTeestubeTeelounge:EventEmitter<any> = new EventEmitter();
   @Output()
   movedTerasse:EventEmitter<any> = new EventEmitter();
+  @Output()
+  movedTerrasseEdelweiss:EventEmitter<any> = new EventEmitter();
   @Output()
   changeBgColorIfAnreise:EventEmitter<any> = new EventEmitter();
 
@@ -63,7 +67,11 @@ export class TableplanComponent implements AfterViewChecked {
   @Output()
   exportKiTerasse:EventEmitter<any> = new EventEmitter();
   @Output()
+  exportKiTerrasseEdelweiss:EventEmitter<any> = new EventEmitter();
+  @Output()
   exportErwTerasse:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportErwTerrasseEdelweiss:EventEmitter<any> = new EventEmitter();
 
   buttonMoveTable: string;
   buttonInfo: string;
@@ -82,6 +90,8 @@ export class TableplanComponent implements AfterViewChecked {
   kiTeestubeTeelounge: any[] = [];
   erwTerasse: any[] = [];
   kiTerasse: any[] = [];
+  erwTerrasseEdelweiss: any[] = [];
+  kiTerrasseEdelweiss: any[] = [];
 
   constructor(private tischplanService: TischplanService) {
     this.buttonMoveTable = "ff0000";
@@ -116,8 +126,9 @@ export class TableplanComponent implements AfterViewChecked {
         this.movedTeestubeTeelounge.emit(response[0].tables);
       } else if (response[0].tables[j].department === "terasse") {
         this.movedTerasse.emit(response[0].tables);
-      }
-      this.changeBgColorIfAnreise.emit();
+      } else if (response[0].tables[j].department === "terreasseEdelweiss") {
+        this.movedTerrasseEdelweiss.emit(response[0].tables);
+      }      this.changeBgColorIfAnreise.emit();
     });
   }
     removeTable(table, j) {
@@ -141,8 +152,9 @@ export class TableplanComponent implements AfterViewChecked {
           this.movedTeestubeTeelounge.emit(response[0].tables);
         } else if (response[0].tables[j].department === "terasse") {
           this.movedTerasse.emit(response[0].tables);
-        }
-        this.changeBgColorIfAnreise.emit();
+        } else if (response[0].tables[j].department === "terasse") {
+          this.movedTerrasseEdelweiss.emit(response[0].tables);
+        }        this.changeBgColorIfAnreise.emit();
       });
     }
 
@@ -382,6 +394,29 @@ export class TableplanComponent implements AfterViewChecked {
         }
       }
     }
+    if (this.tablesTerrasseEdelweiss) {
+      for (let p = 0; p < this.tablesTerrasseEdelweiss.length; p++) {
+        this.erwTerrasseEdelweiss[p] = 0;
+        this.kiTerrasseEdelweiss[p] = 0;
+        if (this.tablesTerrasseEdelweiss[p].groups) {
+          for (let g = 0; g < this.tablesTerrasseEdelweiss[p].groups.length; g++) {
+            if (this.tablesTerrasseEdelweiss[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesTerrasseEdelweiss[p].groups[g].personenAnzahlValue.match(/\d+/g);
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.erwTerrasseEdelweiss[p] = this.erwTerrasseEdelweiss[p] + Number(erwKi[0]);
+                //console.log(this.erw[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.kiTerrasseEdelweiss[p] = this.kiTerrasseEdelweiss[p] + Number(erwKi[1]);
+                //console.log(this.ki[p]);
+              }
+            }
+          }
+        }
+      }
+    }
     this.exportKiTeestubeTeelounge.emit(this.kiTeestubeTeelounge);
     this.exportErwTeestubeTeelounge.emit(this.erwTeestubeTeelounge);
     this.exportKiWaeldlerStubeKristallStube.emit(this.kiWaeldlerStubeKristallStube);
@@ -394,5 +429,7 @@ export class TableplanComponent implements AfterViewChecked {
     this.exportErwBauernstube.emit(this.erwBauernstube);
     this.exportErwTerasse.emit(this.erwTerasse);
     this.exportKiTerasse.emit(this.kiTerasse);
+    this.exportErwTerrasseEdelweiss.emit(this.erwTerrasseEdelweiss);
+    this.exportKiTerrasseEdelweiss.emit(this.kiTerrasseEdelweiss);
   }
 }

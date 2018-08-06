@@ -46,6 +46,7 @@ export class TischplanComponent {
   buttonBgColor5: string;
   buttonBgColor6: string;
   buttonBgColor7: string;
+  buttonBgColor8: string;
   fontColor1: string;
   fontColor2: string;
   fontColor3: string;
@@ -53,6 +54,7 @@ export class TischplanComponent {
   fontColor5: string;
   fontColor6: string;
   fontColor7: string;
+  fontColor8: string;
   leftValues: LeftValue[];
   topValues: any[] = [];
   dateGenerated: any;
@@ -74,6 +76,7 @@ export class TischplanComponent {
   tablesEdelweissKaminStube: Table[] = [];
   tablesTeestubeTeelounge: Table[] = [];
   tablesTerasse: Table[] = [];
+  tablesTerrasseEdelweiss: Table[] = [];
   title: string;
   filesToUpload: Array<File> = [];
   isDropped: any[] = [];
@@ -83,6 +86,7 @@ export class TischplanComponent {
   showEdelweissBool: boolean;
   showTeeStubeBool: boolean;
   showTerasseBool: boolean;
+  showTerrasseEdelweissBool: boolean;
   showAlleBool: boolean;
   roomNumber: string;
   tableNumber: string;
@@ -122,6 +126,8 @@ export class TischplanComponent {
   kiTeestubeTeelounge: any[] = [];
   erwTerasse: any[] = [];
   kiTerasse: any[] = [];
+  erwTerrasseEdelweiss: any[] = [];
+  kiTerrasseEdelweiss: any[] = [];
 
 
   constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, private dragulaService: DragulaService) {
@@ -140,6 +146,8 @@ export class TischplanComponent {
     this.buttonBgColor5 = "0a7a74";
     this.buttonBgColor6 = "0a7a74";
     this.buttonBgColor7 = "0a7a74";
+    this.buttonBgColor8 = "0a7a74";
+
     this.fontColor1 = "f3efe4";
     this.fontColor2 = "f3efe4";
     this.fontColor3 = "f3efe4";
@@ -147,6 +155,8 @@ export class TischplanComponent {
     this.fontColor5 = "f3efe4";
     this.fontColor6 = "f3efe4";
     this.fontColor7 = "f3efe4";
+    this.fontColor8 = "f3efe4";
+
     this.tablesOccupied = 0;
     this.backgroundColor = "ffffff";
     this.showBauernStubnBool = false;
@@ -155,6 +165,7 @@ export class TischplanComponent {
     this.showEdelweissBool = false;
     this.showTeeStubeBool = false;
     this.showTerasseBool = false;
+    this.showTerrasseEdelweissBool = false;
     this.term = "";
 
     this.tischplanService.getNotizElements()
@@ -361,7 +372,7 @@ export class TischplanComponent {
       console.log("gettables in updateAzList");
       this.getTables();
       setTimeout(() => {
-        this.tables = this.tablesBauernstube.concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube);
+        this.tables = this.tablesBauernstube.concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube).concat(this.tablesTerasse).concat(this.tablesTerrasseEdelweiss);;
         //console.log('this.tables: in updateAzList');
         //console.log(this.tables);
         this.printComponent.formatAzListe(this.tables);
@@ -396,6 +407,9 @@ export class TischplanComponent {
             else if (tables[a].department === "terasse") {
               this.tablesTerasse = tables[a].tables;
             }
+            else if (tables[a].department === "terrasseEdelweiss") {
+              this.tablesTerrasseEdelweiss = tables[a].tables;
+            }
           }
         }
 
@@ -406,9 +420,10 @@ export class TischplanComponent {
         console.log(this.tablesWaeldlerStubeKristallStube);
         console.log(this.tablesTeestubeTeelounge);
         console.log(this.tablesTerasse);
+        console.log(this.tablesTerrasseEdelweiss);
         this.tablesTempAbreise = tables;
 
-        this.tables = this.tablesBauernstube.concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube).concat(this.tablesTerasse);
+        this.tables = this.tablesBauernstube.concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube).concat(this.tablesTerasse).concat(this.tablesTerrasseEdelweiss);
         //console.log(this.tables);
         this.changeBgColorIfAnreise();
         this.printComponent.formatAzListe(this.tables);

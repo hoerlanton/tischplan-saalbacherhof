@@ -19,6 +19,7 @@ export class FormComponent implements OnInit {
   @Input('employee') employee: string;
   @Input('tablesBauernstube') tablesBauernstube: Table[];
   @Input('tablesTerasse') tablesTerasse: Table[];
+  @Input('tablesTerrasseEdelweiss') tablesTerrasseEdelweiss: Table[];
   @Input('tablesBerglerStubeHubertusStube') tablesBerglerStubeHubertusStube: Table[];
   @Input('tablesEdelweissKaminStube') tablesEdelweissKaminStube: Table[];
   @Input('tablesTeestubeTeelounge') tablesTeestubeTeelounge: Table[];
@@ -32,6 +33,7 @@ export class FormComponent implements OnInit {
   @Input('showWaeldlerBool') showWaeldlerBool: boolean;
   @Input('showTeeStubeBool') showTeeStubeBool: boolean;
   @Input('showTerasseBool') showTerasseBool: boolean;
+  @Input('showTerrasseEdelweissBool') showTerrasseEdelweissBool: boolean;
   @Input('showAlleBool') showAlleBool: boolean;
   @Output()
   notizResponse:EventEmitter<any> = new EventEmitter();
@@ -44,7 +46,7 @@ export class FormComponent implements OnInit {
   notizDate: any;
 
   constructor(private tischplanService: TischplanService, private _flashMessagesService: FlashMessagesService) {
-    this.departments = ["Bauernstube", "BerglerStubeHubertusStube", "EdelweissKaminStube", "WaeldlerStubeKristallStube", "TeestubeTeelounge", "Terasse" ];
+    this.departments = ["Bauernstube", "BerglerStubeHubertusStube", "EdelweissKaminStube", "WaeldlerStubeKristallStube", "TeestubeTeelounge", "Terasse", "TerrasseEdelweiss" ];
   }
 
   ngOnInit() {
@@ -117,7 +119,14 @@ export class FormComponent implements OnInit {
                     this.tablesTerasse[i] = Information.tables[0];
                   }
                 }
-              }            }
+              } else if (Information.tables[0].department === "terrasseEdelweiss") {
+                for (let i = 0; i < this.tablesTerrasseEdelweiss.length; i++) {
+                  if (this.tablesTerrasseEdelweiss[i].number === Information.tables[0].number) {
+                    this.tablesTerrasseEdelweiss[i] = Information.tables[0];
+                  }
+                }
+              }
+            }
           });
         this.changeColorIfAnreiseExport.emit();
       }

@@ -217,6 +217,42 @@
           </div>
         </div>
       </div>
+      <div *ngIf="showTerrasseEdelweissBool">
+        <div *ngFor="let tableTerrasseEdelweiss of tablesTerrasseEdelweiss; let j = index;">
+          <div dropdownToggle type="button" class="t{{tableTerrasseEdelweiss.number}} table-item" [ngStyle]="{'top': tableTerrasseEdelweiss.topValue + 'px', 'left': tableTerrasseEdelweiss.leftValue + 'px', 'background-color': + tableTerrasseEdelweiss.bgColor, 'height': + tableTerrasseEdelweiss.height + 'px', 'width': + tableTerrasseEdelweiss.width + 'px', 'border': + tableTerrasseEdelweiss.border, 'border-radius': + tableTerrasseEdelweiss.borderRadius}" [style.border]="getStyle(tablesTerrasseEdelweiss[j].groups)" dropdown>
+            <div *ngIf="tablesTerrasseEdelweiss[j] !== tablesTerrasseEdelweiss[j+1]">
+              <p><b>{{tableTerrasseEdelweiss.number}} <br>{{erwTerrasseEdelweiss[j]}}/{{kiTerrasseEdelweiss[j]}}</b></p>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div dropdownToggle type="button" style="color: white; padding: 10px;" (mouseenter)="mouseEnterMoveTableButton()"  (mouseleave)="mouseLeaveMoveTableButton()" [ngStyle]="{'background-color': '#' + buttonMoveTable}" (click)="none($event)" class="dropdownMoveTable" dropdown><b>Tisch verschieben</b>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; margin: 0px;  padding: 0px; overflow: auto">
+                  <li class="dropdown-item" (click)="addTable(tableTerrasseEdelweiss, j)" style="color: black; padding: 10px;" (mouseenter)="mouseEnterHinzufuegenButton()"  (mouseleave)="mouseLeaveHinzufuegenButton()" [ngStyle]="{'background-color': '#' + buttonHinzufuegen}" ><b>Tisch hinzufügen</b></li>
+                  <li class="divider dropdown-divider" style="padding: 0 0 0 0; margin: 0; "></li>
+                  <li class="dropdown-item" (click)="removeTable(tableTerrasseEdelweiss, j)" (mouseenter)="mouseEnterEntfernenButton()"  (mouseleave)="mouseLeaveEntfernenButton()" [ngStyle]="{'background-color': '#' + buttonEntfernen}" style="color: black; padding: 10px"><b>Tisch entfernen</b></li>
+                </div>
+              </div>
+              <li class="divider dropdown-divider" style="padding: 0 0 0 0; margin: 0;"></li>
+              <div dropdownToggle type="button" (click)="none($event)" style="padding: 10px; " (mouseenter)="mouseEnterInfoButton()"  (mouseleave)="mouseLeaveInfoButton()" [ngStyle]="{'background-color': '#' + buttonInfo}" class="dropdownShowinfo"  class="dropdownShowinfo" dropdown><b>Infos anzeigen</b>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
+                  <div *ngFor="let group of tableTerrasseEdelweiss.groups">
+                    <div *ngIf="group">
+                      <div *ngIf="group.nameValue">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
+                        <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
+                      </div>
+                      <div *ngIf="group.newTraceText">
+                        <div class="dropdown-item"  style="background-color: #FFFFFF; border: solid 3px red">
+                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div *ngIf="showAlleBool">
         <br>
         <br>
