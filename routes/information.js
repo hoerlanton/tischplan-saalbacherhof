@@ -6,7 +6,7 @@ module.exports = {
     getInformation: function (req, res, db) {
         console.log("tables get called");
         //Get guests from Mongo DB
-        db.newInformationHubertus.find(function (err, information) {
+        db.newInformationSaalbacherhof.find(function (err, information) {
             if (err) {
                 res.send(err);
             }
@@ -18,7 +18,7 @@ module.exports = {
         console.log("Delete request made to /deleteInformationElement");
         let informationElementToDelete = req.body;
         console.log(JSON.stringify(informationElementToDelete));
-        db.newInformationHubertus.remove({
+        db.newInformationSaalbacherhof.remove({
 
                 roomNumber: informationElementToDelete.roomNumber,
                 text: informationElementToDelete.text
@@ -36,7 +36,7 @@ module.exports = {
         console.log(req.body);
         let newInformation = req.body;
 
-            db.hubertusTables.update(
+            db.saalbacherhofTables.update(
                 {
                     "tables.number": newInformation.tableNumber,
                 },
@@ -59,7 +59,7 @@ module.exports = {
                 });
 
         setTimeout(function () {
-            db.hubertusTables.findOne(
+            db.saalbacherhofTables.findOne(
                 {
                     "tables.number": newInformation.tableNumber
                 },
@@ -80,7 +80,7 @@ module.exports = {
         //Get guests from Mongo DB
         console.log(req.body);
         let newInformation = req.body;
-        db.newInformationHubertus.save(newInformation, function (err, newInformation) {
+        db.newInformationSaalbacherhof.save(newInformation, function (err, newInformation) {
             if (err) {
                 res.send(err);
             }

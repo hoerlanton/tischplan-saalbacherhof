@@ -11,87 +11,67 @@ export class TableplanComponent implements AfterViewChecked {
 
   @Input('tables') tables: Table[];
   @Input('dateGeneratedListe') dateGeneratedListe: string;
-  @Input('tablesBauernstube') tablesBauernstube: Table[];
-  @Input('tablesTerasse') tablesTerasse: Table[];
-  @Input('tablesTerrasseEdelweiss') tablesTerrasseEdelweiss: Table[];
-  @Input('showBauernStubnBool') showBauernStubnBool: boolean;
-  @Input('tablesEdelweissKaminStube') tablesEdelweissKaminStube: Table[];
-  @Input('showEdelweissBool') showEdelweissBool: boolean;
-  @Input('tablesBerglerStubeHubertusStube') tablesBerglerStubeHubertusStube: Table[];
-  @Input('showBerglerBool') showBerglerBool: boolean;
-  @Input('tablesTeestubeTeelounge') tablesTeestubeTeelounge: Table[];
-  @Input('showTeeStubeBool') showTeeStubeBool: boolean;
-  @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
-  @Input('showWaeldlerBool') showWaeldlerBool: boolean;
-  @Input('showTerasseBool') showTerasseBool: boolean;
-  @Input('showTerrasseEdelweissBool') showTerrasseEdelweissBool: boolean;
+  @Input('tablesErde') tablesErde: Table[];
+  @Input('showErdeBool') showErdeBool: boolean;
+  @Input('tablesFeuer') tablesFeuer: Table[];
+  @Input('showFeuerBool') showFeuerBool: boolean;
+  @Input('tablesMetall') tablesMetall: Table[];
+  @Input('showMetallBool') showMetallBool: boolean;
+  @Input('tablesWasser') tablesWasser: Table[];
+  @Input('showWasserBool') showWasserBool: boolean;
+  @Input('tablesLuft') tablesLuft: Table[];
+  @Input('showLuftBool') showLuftBool: boolean;
   @Input('showAlleBool') showAlleBool: boolean;
   @Input('showTablePlanBool') showTablePlanBool: boolean;
   @Output()
-  movedBerglerStubeHubertusStube:EventEmitter<any> = new EventEmitter();
+  movedMetall:EventEmitter<any> = new EventEmitter();
   @Output()
-  movedBauernstube:EventEmitter<any> = new EventEmitter();
+  movedErde:EventEmitter<any> = new EventEmitter();
   @Output()
-  movedWaeldlerStubeKristallStube:EventEmitter<any> = new EventEmitter();
+  movedLuft:EventEmitter<any> = new EventEmitter();
   @Output()
-  movedEdelweissKaminStube:EventEmitter<any> = new EventEmitter();
+  movedFeuer:EventEmitter<any> = new EventEmitter();
   @Output()
-  movedTeestubeTeelounge:EventEmitter<any> = new EventEmitter();
-  @Output()
-  movedTerasse:EventEmitter<any> = new EventEmitter();
-  @Output()
-  movedTerrasseEdelweiss:EventEmitter<any> = new EventEmitter();
+  movedWasser:EventEmitter<any> = new EventEmitter();
   @Output()
   changeBgColorIfAnreise:EventEmitter<any> = new EventEmitter();
 
   @Output()
-  exportKiTeestubeTeelounge:EventEmitter<any> = new EventEmitter();
+  exportKiWasser:EventEmitter<any> = new EventEmitter();
   @Output()
-  exportErwTeestubeTeelounge:EventEmitter<any> = new EventEmitter();
+  exportErwWasser:EventEmitter<any> = new EventEmitter();
   @Output()
-  exportKiWaeldlerStubeKristallStube:EventEmitter<any> = new EventEmitter();
+  exportKiLuft:EventEmitter<any> = new EventEmitter();
   @Output()
-  exportErwWaeldlerStubeKristallStube:EventEmitter<any> = new EventEmitter();
+  exportErwLuft:EventEmitter<any> = new EventEmitter();
   @Output()
-  exportKiBerglerStubeHubertusStube:EventEmitter<any> = new EventEmitter();
+  exportKiMetall:EventEmitter<any> = new EventEmitter();
   @Output()
-  exportErwBerglerStubeHubertusStube:EventEmitter<any> = new EventEmitter();
+  exportErwMetall:EventEmitter<any> = new EventEmitter();
   @Output()
-  exportKiEdelweiss:EventEmitter<any> = new EventEmitter();
+  exportKiFeuer:EventEmitter<any> = new EventEmitter();
   @Output()
-  exportErwEdelweiss:EventEmitter<any> = new EventEmitter();
+  exportErwFeuer:EventEmitter<any> = new EventEmitter();
   @Output()
-  exportKiBauernstube:EventEmitter<any> = new EventEmitter();
+  exportKiErde:EventEmitter<any> = new EventEmitter();
   @Output()
-  exportErwBauernstube:EventEmitter<any> = new EventEmitter();
-  @Output()
-  exportKiTerasse:EventEmitter<any> = new EventEmitter();
-  @Output()
-  exportKiTerrasseEdelweiss:EventEmitter<any> = new EventEmitter();
-  @Output()
-  exportErwTerasse:EventEmitter<any> = new EventEmitter();
-  @Output()
-  exportErwTerrasseEdelweiss:EventEmitter<any> = new EventEmitter();
+  exportErwErde:EventEmitter<any> = new EventEmitter();
 
   buttonMoveTable: string;
   buttonInfo: string;
   buttonHinzufuegen: string;
   buttonEntfernen: string;
   trace: boolean;
-  erwBauernstube: any[] = [];
-  kiBauernstube: any[] = [];
-  erwEdelweiss: any[] = [];
-  kiEdelweiss: any[] = [];
-  erwWaeldlerStubeKristallStube: any[] = [];
-  kiWaeldlerStubeKristallStube: any[] = [];
-  erwBerglerStubeHubertusStube: any[] = [];
-  kiBerglerStubeHubertusStube: any[] = [];
-  erwTeestubeTeelounge: any[] = [];
-  kiTeestubeTeelounge: any[] = [];
-  erwTerasse: any[] = [];
-  kiTerasse: any[] = [];
-  erwTerrasseEdelweiss: any[] = [];
-  kiTerrasseEdelweiss: any[] = [];
+  erwErde: any[] = [];
+  kiErde: any[] = [];
+  erwFeuer: any[] = [];
+  kiFeuer: any[] = [];
+  erwLuft: any[] = [];
+  kiLuft: any[] = [];
+  erwMetall: any[] = [];
+  kiMetall: any[] = [];
+  erwWasser: any[] = [];
+  kiWasser: any[] = [];
 
   constructor(private tischplanService: TischplanService) {
     this.buttonMoveTable = "ff0000";
@@ -114,21 +94,18 @@ export class TableplanComponent implements AfterViewChecked {
       console.log("topValue:" + JSON.stringify(response[0].tables[j].topValue));
       console.log("leftValue:" + JSON.stringify(response[0].tables[j].leftValue));
 
-      if (response[0].tables[j].department === "berglerStubeHubertusStube") {
-        this.movedBerglerStubeHubertusStube.emit(response[0].tables);
-      } else if (response[0].tables[j].department === "Bauernstube") {
-        this.movedBauernstube.emit(response[0].tables);
-      } else if (response[0].tables[j].department === "waeldlerStubeKristallStube") {
-        this.movedWaeldlerStubeKristallStube.emit(response[0].tables);
-      } else if (response[0].tables[j].department === "edelweissKaminStube") {
-        this.movedEdelweissKaminStube.emit(response[0].tables);
-      } else if (response[0].tables[j].department === "teestubeTeelounge") {
-        this.movedTeestubeTeelounge.emit(response[0].tables);
-      } else if (response[0].tables[j].department === "terasse") {
-        this.movedTerasse.emit(response[0].tables);
-      } else if (response[0].tables[j].department === "terreasseEdelweiss") {
-        this.movedTerrasseEdelweiss.emit(response[0].tables);
-      }      this.changeBgColorIfAnreise.emit();
+      if (response[0].tables[j].department === "metall") {
+        this.movedMetall.emit(response[0].tables);
+      } else if (response[0].tables[j].department === "erde") {
+        this.movedErde.emit(response[0].tables);
+      } else if (response[0].tables[j].department === "luft") {
+        this.movedLuft.emit(response[0].tables);
+      } else if (response[0].tables[j].department === "feuer") {
+        this.movedFeuer.emit(response[0].tables);
+      } else if (response[0].tables[j].department === "wasser") {
+        this.movedWasser.emit(response[0].tables);
+      }
+      this.changeBgColorIfAnreise.emit();
     });
   }
     removeTable(table, j) {
@@ -140,21 +117,18 @@ export class TableplanComponent implements AfterViewChecked {
         //console.log("topValue:" + JSON.stringify(response[0].tables[0].topValue));
         console.log("topValue:" + JSON.stringify(response[0].tables[j].topValue));
         console.log("leftValue:" + JSON.stringify(response[0].tables[j].leftValue));
-        if (response[0].tables[j].department === "berglerStubeHubertusStube") {
-          this.movedBerglerStubeHubertusStube.emit(response[0].tables);
-        } else if (response[0].tables[j].department === "Bauernstube") {
-          this.movedBauernstube.emit(response[0].tables);
-        } else if (response[0].tables[j].department === "waeldlerStubeKristallStube") {
-          this.movedWaeldlerStubeKristallStube.emit(response[0].tables);
-        } else if (response[0].tables[j].department === "edelweissKaminStube") {
-          this.movedEdelweissKaminStube.emit(response[0].tables);
-        } else if (response[0].tables[j].department === "teestubeTeelounge") {
-          this.movedTeestubeTeelounge.emit(response[0].tables);
-        } else if (response[0].tables[j].department === "terasse") {
-          this.movedTerasse.emit(response[0].tables);
-        } else if (response[0].tables[j].department === "terasse") {
-          this.movedTerrasseEdelweiss.emit(response[0].tables);
-        }        this.changeBgColorIfAnreise.emit();
+        if (response[0].tables[j].department === "metall") {
+          this.movedMetall.emit(response[0].tables);
+        } else if (response[0].tables[j].department === "erde") {
+          this.movedErde.emit(response[0].tables);
+        } else if (response[0].tables[j].department === "luft") {
+          this.movedLuft.emit(response[0].tables);
+        } else if (response[0].tables[j].department === "feuer") {
+          this.movedFeuer.emit(response[0].tables);
+        } else if (response[0].tables[j].department === "wasser") {
+          this.movedWasser.emit(response[0].tables);
+        }
+        this.changeBgColorIfAnreise.emit();
       });
     }
 
@@ -256,22 +230,22 @@ export class TableplanComponent implements AfterViewChecked {
 
   sumUpPersonenAnzahl(){
     console.log("sumUpPersonenAnzahl called");
-    if (this.tablesTeestubeTeelounge) {
-      for (let p = 0; p < this.tablesTeestubeTeelounge.length; p++) {
-        this.erwTeestubeTeelounge[p] = 0;
-        this.kiTeestubeTeelounge[p] = 0;
-        if (this.tablesTeestubeTeelounge[p].groups) {
-          for (let g = 0; g < this.tablesTeestubeTeelounge[p].groups.length; g++) {
-            if (this.tablesTeestubeTeelounge[p].groups[g].personenAnzahlValue) {
-              let erwKi = this.tablesTeestubeTeelounge[p].groups[g].personenAnzahlValue.match(/\d+/g);
+    if (this.tablesWasser) {
+      for (let p = 0; p < this.tablesWasser.length; p++) {
+        this.erwWasser[p] = 0;
+        this.kiWasser[p] = 0;
+        if (this.tablesWasser[p].groups) {
+          for (let g = 0; g < this.tablesWasser[p].groups.length; g++) {
+            if (this.tablesWasser[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesWasser[p].groups[g].personenAnzahlValue.match(/\d+/g);
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.erwTeestubeTeelounge[p] = this.erwTeestubeTeelounge[p] + Number(erwKi[0]);
+                this.erwWasser[p] = this.erwWasser[p] + Number(erwKi[0]);
                 //console.log(this.erw[p]);
               }
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.kiTeestubeTeelounge[p] = this.kiTeestubeTeelounge[p] + Number(erwKi[1]);
+                this.kiWasser[p] = this.kiWasser[p] + Number(erwKi[1]);
                 //console.log(this.ki[p]);
               }
             }
@@ -279,22 +253,22 @@ export class TableplanComponent implements AfterViewChecked {
         }
       }
     }
-    if (this.tablesEdelweissKaminStube) {
-      for (let p = 0; p < this.tablesEdelweissKaminStube.length; p++) {
-        this.erwEdelweiss[p] = 0;
-        this.kiEdelweiss[p] = 0;
-        if (this.tablesEdelweissKaminStube[p].groups) {
-          for (let g = 0; g < this.tablesEdelweissKaminStube[p].groups.length; g++) {
-            if (this.tablesEdelweissKaminStube[p].groups[g].personenAnzahlValue) {
-              let erwKi = this.tablesEdelweissKaminStube[p].groups[g].personenAnzahlValue.match(/\d+/g);
+    if (this.tablesFeuer) {
+      for (let p = 0; p < this.tablesFeuer.length; p++) {
+        this.erwFeuer[p] = 0;
+        this.kiFeuer[p] = 0;
+        if (this.tablesFeuer[p].groups) {
+          for (let g = 0; g < this.tablesFeuer[p].groups.length; g++) {
+            if (this.tablesFeuer[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesFeuer[p].groups[g].personenAnzahlValue.match(/\d+/g);
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.erwEdelweiss[p] = this.erwEdelweiss[p] + Number(erwKi[0]);
+                this.erwFeuer[p] = this.erwFeuer[p] + Number(erwKi[0]);
                 //console.log(this.erw[p]);
               }
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.kiEdelweiss[p] = this.kiEdelweiss[p] + Number(erwKi[1]);
+                this.kiFeuer[p] = this.kiFeuer[p] + Number(erwKi[1]);
                 //console.log(this.ki[p]);
               }
             }
@@ -302,22 +276,22 @@ export class TableplanComponent implements AfterViewChecked {
         }
       }
     }
-    if (this.tablesBauernstube) {
-      for (let p = 0; p < this.tablesBauernstube.length; p++) {
-        this.erwBauernstube[p] = 0;
-        this.kiBauernstube[p] = 0;
-        if (this.tablesBauernstube[p].groups) {
-          for (let g = 0; g < this.tablesBauernstube[p].groups.length; g++) {
-            if (this.tablesBauernstube[p].groups[g].personenAnzahlValue) {
-              let erwKi = this.tablesBauernstube[p].groups[g].personenAnzahlValue.match(/\d+/g);
+    if (this.tablesErde) {
+      for (let p = 0; p < this.tablesErde.length; p++) {
+        this.erwErde[p] = 0;
+        this.kiErde[p] = 0;
+        if (this.tablesErde[p].groups) {
+          for (let g = 0; g < this.tablesErde[p].groups.length; g++) {
+            if (this.tablesErde[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesErde[p].groups[g].personenAnzahlValue.match(/\d+/g);
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.erwBauernstube[p] = this.erwBauernstube[p] + Number(erwKi[0]);
+                this.erwErde[p] = this.erwErde[p] + Number(erwKi[0]);
                 //console.log(this.erw[p]);
               }
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.kiBauernstube[p] = this.kiBauernstube[p] + Number(erwKi[1]);
+                this.kiErde[p] = this.kiErde[p] + Number(erwKi[1]);
                 //console.log(this.ki[p]);
               }
             }
@@ -325,22 +299,22 @@ export class TableplanComponent implements AfterViewChecked {
         }
       }
     }
-    if (this.tablesBerglerStubeHubertusStube) {
-      for (let p = 0; p < this.tablesBerglerStubeHubertusStube.length; p++) {
-        this.erwBerglerStubeHubertusStube[p] = 0;
-        this.kiBerglerStubeHubertusStube[p] = 0;
-        if (this.tablesBerglerStubeHubertusStube[p].groups) {
-          for (let g = 0; g < this.tablesBerglerStubeHubertusStube[p].groups.length; g++) {
-            if (this.tablesBerglerStubeHubertusStube[p].groups[g].personenAnzahlValue) {
-              let erwKi = this.tablesBerglerStubeHubertusStube[p].groups[g].personenAnzahlValue.match(/\d+/g);
+    if (this.tablesMetall) {
+      for (let p = 0; p < this.tablesMetall.length; p++) {
+        this.erwMetall[p] = 0;
+        this.kiMetall[p] = 0;
+        if (this.tablesMetall[p].groups) {
+          for (let g = 0; g < this.tablesMetall[p].groups.length; g++) {
+            if (this.tablesMetall[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesMetall[p].groups[g].personenAnzahlValue.match(/\d+/g);
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.erwBerglerStubeHubertusStube[p] = this.erwBerglerStubeHubertusStube[p] + Number(erwKi[0]);
+                this.erwMetall[p] = this.erwMetall[p] + Number(erwKi[0]);
                 //console.log(this.erw[p]);
               }
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.kiBerglerStubeHubertusStube[p] = this.kiBerglerStubeHubertusStube[p] + Number(erwKi[1]);
+                this.kiMetall[p] = this.kiMetall[p] + Number(erwKi[1]);
                 //console.log(this.ki[p]);
               }
             }
@@ -348,22 +322,22 @@ export class TableplanComponent implements AfterViewChecked {
         }
       }
     }
-    if (this.tablesWaeldlerStubeKristallStube) {
-      for (let p = 0; p < this.tablesWaeldlerStubeKristallStube.length; p++) {
-        this.erwWaeldlerStubeKristallStube[p] = 0;
-        this.kiWaeldlerStubeKristallStube[p] = 0;
-        if (this.tablesWaeldlerStubeKristallStube[p].groups) {
-          for (let g = 0; g < this.tablesWaeldlerStubeKristallStube[p].groups.length; g++) {
-            if (this.tablesWaeldlerStubeKristallStube[p].groups[g].personenAnzahlValue) {
-              let erwKi = this.tablesWaeldlerStubeKristallStube[p].groups[g].personenAnzahlValue.match(/\d+/g);
+    if (this.tablesLuft) {
+      for (let p = 0; p < this.tablesLuft.length; p++) {
+        this.erwLuft[p] = 0;
+        this.kiLuft[p] = 0;
+        if (this.tablesLuft[p].groups) {
+          for (let g = 0; g < this.tablesLuft[p].groups.length; g++) {
+            if (this.tablesLuft[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesLuft[p].groups[g].personenAnzahlValue.match(/\d+/g);
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.erwWaeldlerStubeKristallStube[p] = this.erwWaeldlerStubeKristallStube[p] + Number(erwKi[0]);
+                this.erwLuft[p] = this.erwLuft[p] + Number(erwKi[0]);
                 //console.log(this.erw[p]);
               }
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.kiWaeldlerStubeKristallStube[p] = this.kiWaeldlerStubeKristallStube[p] + Number(erwKi[1]);
+                this.kiLuft[p] = this.kiLuft[p] + Number(erwKi[1]);
                 //console.log(this.ki[p]);
               }
             }
@@ -371,65 +345,15 @@ export class TableplanComponent implements AfterViewChecked {
         }
       }
     }
-    if (this.tablesTerasse) {
-      for (let p = 0; p < this.tablesTerasse.length; p++) {
-        this.erwTerasse[p] = 0;
-        this.kiTerasse[p] = 0;
-        if (this.tablesTerasse[p].groups) {
-          for (let g = 0; g < this.tablesTerasse[p].groups.length; g++) {
-            if (this.tablesTerasse[p].groups[g].personenAnzahlValue) {
-              let erwKi = this.tablesTerasse[p].groups[g].personenAnzahlValue.match(/\d+/g);
-              if (erwKi != null) {
-                //console.log(erwKi);
-                this.erwTerasse[p] = this.erwTerasse[p] + Number(erwKi[0]);
-                //console.log(this.erw[p]);
-              }
-              if (erwKi != null) {
-                //console.log(erwKi);
-                this.kiTerasse[p] = this.kiTerasse[p] + Number(erwKi[1]);
-                //console.log(this.ki[p]);
-              }
-            }
-          }
-        }
-      }
-    }
-    if (this.tablesTerrasseEdelweiss) {
-      for (let p = 0; p < this.tablesTerrasseEdelweiss.length; p++) {
-        this.erwTerrasseEdelweiss[p] = 0;
-        this.kiTerrasseEdelweiss[p] = 0;
-        if (this.tablesTerrasseEdelweiss[p].groups) {
-          for (let g = 0; g < this.tablesTerrasseEdelweiss[p].groups.length; g++) {
-            if (this.tablesTerrasseEdelweiss[p].groups[g].personenAnzahlValue) {
-              let erwKi = this.tablesTerrasseEdelweiss[p].groups[g].personenAnzahlValue.match(/\d+/g);
-              if (erwKi != null) {
-                //console.log(erwKi);
-                this.erwTerrasseEdelweiss[p] = this.erwTerrasseEdelweiss[p] + Number(erwKi[0]);
-                //console.log(this.erw[p]);
-              }
-              if (erwKi != null) {
-                //console.log(erwKi);
-                this.kiTerrasseEdelweiss[p] = this.kiTerrasseEdelweiss[p] + Number(erwKi[1]);
-                //console.log(this.ki[p]);
-              }
-            }
-          }
-        }
-      }
-    }
-    this.exportKiTeestubeTeelounge.emit(this.kiTeestubeTeelounge);
-    this.exportErwTeestubeTeelounge.emit(this.erwTeestubeTeelounge);
-    this.exportKiWaeldlerStubeKristallStube.emit(this.kiWaeldlerStubeKristallStube);
-    this.exportErwWaeldlerStubeKristallStube.emit(this.erwWaeldlerStubeKristallStube);
-    this.exportKiBerglerStubeHubertusStube.emit(this.kiBerglerStubeHubertusStube);
-    this.exportErwBerglerStubeHubertusStube.emit(this.erwBerglerStubeHubertusStube);
-    this.exportKiEdelweiss.emit(this.kiEdelweiss);
-    this.exportErwEdelweiss.emit(this.erwEdelweiss);
-    this.exportKiBauernstube.emit(this.kiBauernstube);
-    this.exportErwBauernstube.emit(this.erwBauernstube);
-    this.exportErwTerasse.emit(this.erwTerasse);
-    this.exportKiTerasse.emit(this.kiTerasse);
-    this.exportErwTerrasseEdelweiss.emit(this.erwTerrasseEdelweiss);
-    this.exportKiTerrasseEdelweiss.emit(this.kiTerrasseEdelweiss);
+    this.exportKiWasser.emit(this.kiWasser);
+    this.exportErwWasser.emit(this.erwWasser);
+    this.exportKiLuft.emit(this.kiLuft);
+    this.exportErwLuft.emit(this.erwLuft);
+    this.exportKiMetall.emit(this.kiMetall);
+    this.exportErwMetall.emit(this.erwMetall);
+    this.exportKiFeuer.emit(this.kiFeuer);
+    this.exportErwFeuer.emit(this.erwFeuer);
+    this.exportKiErde.emit(this.kiErde);
+    this.exportErwErde.emit(this.erwErde);
   }
 }

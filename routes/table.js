@@ -3,16 +3,16 @@
  */
 
 const
-    removeTablesBauernstube = require('./removeTablesBauernstube.js'),
-    removeTablesBerglerStubeHubertusStube = require('./removeTablesBerglerStubeHubertusStube.js'),
-    removeTablesEdelweissKaminStube = require('./removeTablesEdelweissKaminStube.js'),
-    removeTablesTeestubeTeelounge = require('./removeTablesTeestubeTeelounge.js'),
-    removeTablesWaeldlerStubeKristallStube = require('./removeTablesWaeldlerStubeKristallStube.js'),
-    addTablesBauernstube = require('./addTablesBauernstube.js'),
-    addTablesBerglerStubeHubertusStube = require('./addTablesBerglerStubeHubertusStube.js'),
-    addTablesEdelweissKaminStube = require('./addTablesEdelweissKaminStube.js'),
-    addTablesWaeldlerStubeKristallStube = require('./addTablesWaeldlerStubeKristallStube.js'),
-    addTablesTeestubeTeelounge = require('./addTablesTeestubeTeelounge.js'),
+    removeTablesErde = require('./removeTablesErde.js'),
+    removeTablesFeuer = require('./removeFeuer.js'),
+    removeTablesLuft = require('./removeLuft.js'),
+    removeTablesWasser = require('./removeWasser.js'),
+    removeTablesMetall = require('./removeMetall.js'),
+    addTablesErde = require('./addTablesErde.js'),
+    addTablesFeuer = require('./addFeuer.js'),
+    addTablesLuft = require('./addTablesLuft.js'),
+    addTablesMetall = require('./addMetall.js'),
+    addTablesWasser = require('./addWasser.js'),
     Promise = require('promise'),
     dateFns = require('date-fns');
 
@@ -28,8 +28,8 @@ module.exports = {
         let splitted = data.split(",");
         let tableNumberBefore = splitted[2];
         let departmentValueBefore = splitted[1];
-        let topValueBefore = splitted[3];
-        let leftValueBefore = splitted[4];
+        let topValueBefore = splitted[4];
+        let leftValueBefore = splitted[3];
         let widthValueBefore = splitted[9];
         let heightValueBefore = splitted[10];
 
@@ -58,14 +58,14 @@ module.exports = {
         console.log('topValue' + topValue);
         console.log('leftValue' + leftValue);
 
-        removeTablesEdelweissKaminStube.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        removeTablesTeestubeTeelounge.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        removeTablesWaeldlerStubeKristallStube.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        removeTablesBauernstube.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        removeTablesBerglerStubeHubertusStube.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        removeTablesErde.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        removeTablesFeuer.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        removeTablesLuft.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        removeTablesMetall.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        removeTablesWasser.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
 
         setTimeout(function () {
-            db.hubertusTables.find(
+            db.saalbacherhofTables.find(
                 {
                     "department": departmentValue,
                 },
@@ -88,8 +88,8 @@ module.exports = {
         let splitted = data.split(",");
         let tableNumberBefore = splitted[2];
         let departmentValueBefore = splitted[1];
-        let topValueBefore = splitted[3];
-        let leftValueBefore = splitted[4];
+        let topValueBefore = splitted[4];
+        let leftValueBefore = splitted[3];
         let widthValueBefore = splitted[9];
         let heightValueBefore = splitted[10];
 
@@ -117,14 +117,14 @@ module.exports = {
         console.log('topValue' + topValue);
         console.log('leftValue' + leftValue);
 
-        addTablesBauernstube.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        addTablesBerglerStubeHubertusStube.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        addTablesEdelweissKaminStube.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        addTablesTeestubeTeelounge.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        addTablesWaeldlerStubeKristallStube.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        addTablesErde.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        addTablesFeuer.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        addTablesLuft.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        addTablesMetall.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        addTablesWasser.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
 
         setTimeout(function () {
-            db.hubertusTables.find(
+            db.saalbacherhofTables.find(
                 {
                     "department": departmentValue,
                 },
@@ -140,7 +140,7 @@ module.exports = {
     getTable: function (req, res, db) {
         console.log("tables get called");
         //Get guests from Mongo DB
-        db.hubertusTables.find(function (err, tables) {
+        db.saalbacherhofTables.find(function (err, tables) {
             if (err) {
                 res.send(err);
             }
@@ -211,29 +211,23 @@ module.exports = {
             console.log(departmentValueDB);
         }
 
-        if (departmentValue === "BerglerStubeHubertusStube") {
-            departmentValueDB = "berglerStubeHubertusStube";
+        if (departmentValue === "Wasser") {
+            departmentValueDB = "wasser";
         }
-        else if (departmentValue === "Bauernstube") {
-            departmentValueDB = "Bauernstube";
+        else if (departmentValue === "Erde") {
+            departmentValueDB = "erde";
         }
-        else if (departmentValue === "WaeldlerStubeKristallStube") {
-            departmentValueDB = "waeldlerStubeKristallStube";
+        else if (departmentValue === "Feuer") {
+            departmentValueDB = "feuer";
         }
-        else if (departmentValue === "EdelweissKaminStube") {
-            departmentValueDB = "edelweissKaminStube";
+        else if (departmentValue === "Luft") {
+            departmentValueDB = "luft";
         }
-        else if (departmentValue === "TeestubeTeelounge") {
-            departmentValueDB = "teestubeTeelounge";
-        }
-        else if (departmentValue === "Terasse") {
-            departmentValueDB = "terasse";
-        }
-        else if (departmentValue === "TerrasseEdelweiss") {
-                departmentValueDB = "terrasseEdelweiss";
+        else if (departmentValue === "Metall") {
+            departmentValueDB = "metall";
         }
 
-        db.hubertusTables.update(
+        db.saalbacherhofTables.update(
             {
                 department: departmentValueDB,
                 "tables.number": tableValue
@@ -251,7 +245,7 @@ module.exports = {
             });
 
         setTimeout(function () {
-            db.hubertusTables.findOne(
+            db.saalbacherhofTables.findOne(
                 {
                     "department": departmentValueDB,
                     "tables.number": tableValue
@@ -272,12 +266,12 @@ module.exports = {
         console.log("dispenseTable request made to /dispenseTable");
         let dispenseTable = req.body;
         let tablesTemp3 = [];
-        let departments = [ "berglerStubeHubertusStube", "Bauernstube", "waeldlerStubeKristallStube", "edelweissKaminStube", "teestubeTeelounge", "terasse", "terrasseEdelweiss"];
+        let departments = [ "berglerStubesaalbacherhofStube", "Bauernstube", "waeldlerStubeKristallStube", "edelweissKaminStube", "teestubeTeelounge", "terasse", "terrasseEdelweiss"];
         new Promise(function (resolve, reject) {
             if (dispenseTable.constructor === Array) {
             console.log("dispenseTable[h].table.groups.length > dispenseTable[h].group.length");
             new Promise(function (resolve, reject) {
-                db.hubertusTables.find({
+                db.saalbacherhofTables.find({
                 }, function (err, tables) {
                     if (err) {
                         res.send(err);
@@ -329,25 +323,23 @@ module.exports = {
                 console.log("tablesTemp3 after");
                 console.log(JSON.stringify(tablesTemp3[0]));
             }).then(function () { // (**)
-                    db.hubertusTables.remove({
+                    db.saalbacherhofTables.remove({
                     }, function (err, tables) {
                         if (err) {
                             console.log(err);
                         } else {
                             console.log("removed");
                             console.log(tables);
-                            db.hubertusTables.save(tablesTemp3[0][0]);
-                            db.hubertusTables.save(tablesTemp3[0][1]);
-                            db.hubertusTables.save(tablesTemp3[0][2]);
-                            db.hubertusTables.save(tablesTemp3[0][3]);
-                            db.hubertusTables.save(tablesTemp3[0][4]);
-                            db.hubertusTables.save(tablesTemp3[0][5]);
-                            db.hubertusTables.save(tablesTemp3[0][6]);
+                            db.saalbacherhofTables.save(tablesTemp3[0][0]);
+                            db.saalbacherhofTables.save(tablesTemp3[0][1]);
+                            db.saalbacherhofTables.save(tablesTemp3[0][2]);
+                            db.saalbacherhofTables.save(tablesTemp3[0][3]);
+                            db.saalbacherhofTables.save(tablesTemp3[0][4]);
                         }
                     });
             });
         } else {
-            db.hubertusTables.findAndModify({
+            db.saalbacherhofTables.findAndModify({
                 query: {department: dispenseTable.department, "tables.number": dispenseTable.number},
                 update: {
                     $set: {
@@ -369,7 +361,7 @@ module.exports = {
         }).then(function () { // (**)
             setTimeout(function () {
                 console.log("Dispense Table2: ");
-                db.hubertusTables.find(
+                db.saalbacherhofTables.find(
                     {}, function (err, tables) {
                         if (err) {
                             res.send(err);
@@ -402,7 +394,7 @@ module.exports = {
 
 
 /*
- db.hubertusTables.findAndModify({
+ db.saalbacherhofTables.findAndModify({
  query: {
  department: dispenseTable[h].table.department,
  "tables.number": dispenseTable[h].table.number
@@ -417,7 +409,7 @@ module.exports = {
  });
 
 
- db.hubertusTables.findAndModify({
+ db.saalbacherhofTables.findAndModify({
  query: {
  department: dispenseTable[h].table.department,
  },
@@ -437,7 +429,7 @@ module.exports = {
  }};
 
 
- db.hubertusTables.findAndModify({
+ db.saalbacherhofTables.findAndModify({
  query: {department: dispenseTable[h].table.department, "tables.number": dispenseTable[h].table.number},
  update: {
  $set: {
@@ -458,7 +450,7 @@ module.exports = {
  */
 /*
  }).then(function (tablesTemp3) { // (**)
- db.hubertusTables.find({
+ db.saalbacherhofTables.find({
  department:  "waeldlerStubeKristallStube",
  }, function (err, tables) {
  if (err) {
@@ -472,7 +464,7 @@ module.exports = {
  }
  });
  }).then(function (tablesTemp3) { // (**)
- db.hubertusTables.find({
+ db.saalbacherhofTables.find({
  department:  "Bauernstube",
  }, function (err, tables) {
  if (err) {
@@ -486,8 +478,8 @@ module.exports = {
  }
  });
  }).then(function (tablesTemp3) { // (**)
- db.hubertusTables.find({
- department:  "berglerStubeHubertusStube",
+ db.saalbacherhofTables.find({
+ department:  "berglerStubesaalbacherhofStube",
  }, function (err, tables) {
  if (err) {
  res.send(err);
@@ -501,7 +493,7 @@ module.exports = {
  }
  });
  }).then(function (tablesTemp3) { // (**)
- db.hubertusTables.find({
+ db.saalbacherhofTables.find({
  department:  "teestubeTeelounge",
  }, function (err, tables) {
  if (err) {
@@ -517,8 +509,8 @@ module.exports = {
  */
 
 
-//let foo = db.hubertusTables.find().toArray();
-//let bar = db.hubertusTables.find().forEach(printjson);
+//let foo = db.saalbacherhofTables.find().toArray();
+//let bar = db.saalbacherhofTables.find().forEach(printjson);
 
 
 
@@ -551,7 +543,7 @@ module.exports = {
 
 
 /*
- db.hubertusTables.findAndModify({
+ db.saalbacherhofTables.findAndModify({
  query: {
  department: dispenseTable[h].table.department,
  "tables.number": dispenseTable[h].table.number
@@ -574,7 +566,7 @@ module.exports = {
  }).then(function() { // (**)
  console.log("removeNulls promise");
  setTimeout(function () {
- db.hubertusTables.findAndModify({
+ db.saalbacherhofTables.findAndModify({
  query: {
  department: dispenseTable[h].table.department,
  "tables.number": dispenseTable[h].table.number
@@ -604,7 +596,7 @@ module.exports = {
  console.log("dispenseTable[h].table.groups.length === dispenseTable[h].group.length");
  console.log(dispenseTable[h].table.department);
  console.log(dispenseTable[h].table.number);
- db.hubertusTables.findAndModify({
+ db.saalbacherhofTables.findAndModify({
  query: {department: dispenseTable[h].table.department, "tables.number": dispenseTable[h].table.number},
  update: {
  $set: {

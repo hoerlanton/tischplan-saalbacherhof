@@ -17,23 +17,19 @@ export class FormComponent implements OnInit {
   @Input('tableNumber') tableNumber: string;
   @Input('nameTraceInput') nameTraceInput: string;
   @Input('employee') employee: string;
-  @Input('tablesBauernstube') tablesBauernstube: Table[];
-  @Input('tablesTerasse') tablesTerasse: Table[];
-  @Input('tablesTerrasseEdelweiss') tablesTerrasseEdelweiss: Table[];
-  @Input('tablesBerglerStubeHubertusStube') tablesBerglerStubeHubertusStube: Table[];
-  @Input('tablesEdelweissKaminStube') tablesEdelweissKaminStube: Table[];
-  @Input('tablesTeestubeTeelounge') tablesTeestubeTeelounge: Table[];
-  @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
+  @Input('tablesErde') tablesErde: Table[];
+  @Input('tablesLuft') tablesLuft: Table[];
+  @Input('tablesFeuer') tablesFeuer: Table[];
+  @Input('tablesMetall') tablesMetall: Table[];
+  @Input('tablesWasser') tablesWasser: Table[];
   @Input('showInfoFormBool') showInfoFormBool: boolean;
   @Input('showNotizFormBool') showNotizFormBool: boolean;
   @Input('notizElements') notizElements: any;
-  @Input('showBauernStubnBool') showBauernStubnBool: boolean;
-  @Input('showBerglerBool') showBerglerBool: boolean;
-  @Input('showEdelweissBool') showEdelweissBool: boolean;
-  @Input('showWaeldlerBool') showWaeldlerBool: boolean;
-  @Input('showTeeStubeBool') showTeeStubeBool: boolean;
-  @Input('showTerasseBool') showTerasseBool: boolean;
-  @Input('showTerrasseEdelweissBool') showTerrasseEdelweissBool: boolean;
+  @Input('showErdeBool') showErdeBool: boolean;
+  @Input('showLuftBool') showLuftBool: boolean;
+  @Input('showFeuerBool') showFeuerBool: boolean;
+  @Input('showWasserBool') showWasserBool: boolean;
+  @Input('showMetallBool') showMetallBool: boolean;
   @Input('showAlleBool') showAlleBool: boolean;
   @Output()
   notizResponse:EventEmitter<any> = new EventEmitter();
@@ -46,7 +42,7 @@ export class FormComponent implements OnInit {
   notizDate: any;
 
   constructor(private tischplanService: TischplanService, private _flashMessagesService: FlashMessagesService) {
-    this.departments = ["Bauernstube", "BerglerStubeHubertusStube", "EdelweissKaminStube", "WaeldlerStubeKristallStube", "TeestubeTeelounge", "Terasse", "TerrasseEdelweiss" ];
+    this.departments = ["Erde", "Luft", "Feuer", "Wasser", "Metall" ];
   }
 
   ngOnInit() {
@@ -83,46 +79,34 @@ export class FormComponent implements OnInit {
             if (Information === null) {
               return;
             } else {
-              if (Information.tables[0].department === "Bauernstube") {
-                for (let i = 0; i < this.tablesBauernstube.length; i++) {
-                  if (this.tablesBauernstube[i].number === Information.tables[0].number) {
-                    this.tablesBauernstube[i] = Information.tables[0];
+              if (Information.tables[0].department === "Erde") {
+                for (let i = 0; i < this.tablesErde.length; i++) {
+                  if (this.tablesErde[i].number === Information.tables[0].number) {
+                    this.tablesErde[i] = Information.tables[0];
                   }
                 }
-              } else if (Information.tables[0].department === "waeldlerStubeKristallStube") {
-                for (let i = 0; i < this.tablesWaeldlerStubeKristallStube.length; i++) {
-                  if (this.tablesWaeldlerStubeKristallStube[i].number === Information.tables[0].number) {
-                    this.tablesWaeldlerStubeKristallStube[i] = Information.tables[0];
+              } else if (Information.tables[0].department === "Wasser") {
+                for (let i = 0; i < this.tablesWasser.length; i++) {
+                  if (this.tablesWasser[i].number === Information.tables[0].number) {
+                    this.tablesWasser[i] = Information.tables[0];
                   }
                 }
-              } else if (Information.tables[0].department === "berglerStubeHubertusStube") {
-                for (let i = 0; i < this.tablesBerglerStubeHubertusStube.length; i++) {
-                  if (this.tablesBerglerStubeHubertusStube[i].number === Information.tables[0].number) {
-                    this.tablesBerglerStubeHubertusStube[i] = Information.tables[0];
+              } else if (Information.tables[0].department === "Luft") {
+                for (let i = 0; i < this.tablesLuft.length; i++) {
+                  if (this.tablesLuft[i].number === Information.tables[0].number) {
+                    this.tablesLuft[i] = Information.tables[0];
                   }
                 }
-              } else if (Information.tables[0].department === "edelweissKaminStube") {
-                for (let i = 0; i < this.tablesEdelweissKaminStube.length; i++) {
-                  if (this.tablesEdelweissKaminStube[i].number === Information.tables[0].number) {
-                    this.tablesEdelweissKaminStube[i] = Information.tables[0];
+              } else if (Information.tables[0].department === "Feuer") {
+                for (let i = 0; i < this.tablesFeuer.length; i++) {
+                  if (this.tablesFeuer[i].number === Information.tables[0].number) {
+                    this.tablesFeuer[i] = Information.tables[0];
                   }
                 }
-              } else if (Information.tables[0].department === "teestubeTeelounge") {
-                for (let i = 0; i < this.tablesTeestubeTeelounge.length; i++) {
-                  if (this.tablesTeestubeTeelounge[i].number === Information.tables[0].number) {
-                    this.tablesTeestubeTeelounge[i] = Information.tables[0];
-                  }
-                }
-              } else if (Information.tables[0].department === "terasse") {
-                for (let i = 0; i < this.tablesTerasse.length; i++) {
-                  if (this.tablesTerasse[i].number === Information.tables[0].number) {
-                    this.tablesTerasse[i] = Information.tables[0];
-                  }
-                }
-              } else if (Information.tables[0].department === "terrasseEdelweiss") {
-                for (let i = 0; i < this.tablesTerrasseEdelweiss.length; i++) {
-                  if (this.tablesTerrasseEdelweiss[i].number === Information.tables[0].number) {
-                    this.tablesTerrasseEdelweiss[i] = Information.tables[0];
+              } else if (Information.tables[0].department === "Metall") {
+                for (let i = 0; i < this.tablesMetall.length; i++) {
+                  if (this.tablesMetall[i].number === Information.tables[0].number) {
+                    this.tablesMetall[i] = Information.tables[0];
                   }
                 }
               }

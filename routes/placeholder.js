@@ -41,8 +41,8 @@ module.exports = {
             tableValue = tableValueArray[0];
         }
 
-        if(departmentValue === "BerglerStubeHubertusStube" || departmentValue === "berglerStubeHubertusStube") {
-            departmentValueDB = "berglerStubeHubertusStube";
+        if(departmentValue === "BerglerStubeSaalbacherhofStube" || departmentValue === "berglerStubeSaalbacherhofStube") {
+            departmentValueDB = "berglerStubeSaalbacherhofStube";
         }
         else if(departmentValue === "Bauernstube" || departmentValue === "Bauernstube") {
             departmentValueDB = "Bauernstube";
@@ -60,7 +60,7 @@ module.exports = {
         console.log('removePlaceholder:' + departmentValue);
         console.log('removePlaceholder:' + tableValue);
 
-        db.hubertusTables.update(
+        db.saalbacherhofTables.update(
             {
                 department: departmentValueDB,
                 "tables.number": tableValue
@@ -75,7 +75,7 @@ module.exports = {
             });
 
         setTimeout(function() {
-            db.hubertusTables.findOne(
+            db.saalbacherhofTables.findOne(
                 {
                     department: departmentValueDB,
                     "tables.number": tableValue
@@ -101,7 +101,7 @@ module.exports = {
             let tableNumber = addPlaceholder[1];
             console.log("department: " + department + ' ' + tableNumber);
             setTimeout(function () {
-                db.hubertusTables.update(
+                db.saalbacherhofTables.update(
                     {
                         department: department,
                         "tables.number": tableNumber
@@ -118,7 +118,7 @@ module.exports = {
                     });
             }, 100);
             setTimeout(function () {
-                db.hubertusTables.find(
+                db.saalbacherhofTables.find(
                     {
                     }, function (err, tables) {
                         if (err) {
@@ -129,7 +129,7 @@ module.exports = {
                     });
             }, 200);
         } else {
-            db.hubertusTables.update(
+            db.saalbacherhofTables.update(
                 {
                     department: addPlaceholder.department,
                     "tables.number": addPlaceholder.number
@@ -145,7 +145,7 @@ module.exports = {
                     console.log("No Error");
                 });
             setTimeout(function () {
-                db.hubertusTables.find(
+                db.saalbacherhofTables.find(
                     {
                     }, function (err, tables) {
                         if (err) {

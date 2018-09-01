@@ -11,35 +11,26 @@ export class PrintComponent implements OnInit {
 
   @Input('tables') tables: Table[];
   @Input('dateGeneratedListe') dateGeneratedListe: string;
-  @Input('tablesBauernstube') tablesBauernstube: Table[];
-  @Input('showBauernStubnBool') showBauernStubnBool: boolean;
-  @Input('tablesEdelweissKaminStube') tablesEdelweissKaminStube: Table[];
-  @Input('showEdelweissBool') showEdelweissBool: boolean;
-  @Input('tablesBerglerStubeHubertusStube') tablesBerglerStubeHubertusStube: Table[];
-  @Input('showBerglerBool') showBerglerBool: boolean;
-  @Input('tablesTeestubeTeelounge') tablesTeestubeTeelounge: Table[];
-  @Input('showTeeStubeBool') showTeeStubeBool: boolean;
-  @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
-  @Input('showWaeldlerBool') showWaeldlerBool: boolean;
-  @Input('showTerasseBool') showTerasseBool: boolean;
-  @Input('showTerrasseEdelweissBool') showTerrasseEdelweissBool: boolean;
-  @Input('tablesTerasse') tablesTerasse: Table[];
-  @Input('tablesTerrasseEdelweiss') tablesTerrasseEdelweiss: Table[];
-  @Input('tablesTerrasse') tablesTerrasse: Table[];
-  @Input('erwBerglerStubeHubertusStube') erwBerglerStubeHubertusStube: any;
-  @Input('kiBerglerStubeHubertusStube') kiBerglerStubeHubertusStube: any;
-  @Input('erwBauernstube') erwBauernstube: any;
-  @Input('kiBauernstube') kiBauernstube: any;
-  @Input('kiEdelweiss') kiEdelweiss: any;
-  @Input('erwTeestubeTeelounge') erwTeestubeTeelounge: any;
-  @Input('kiTeestubeTeelounge') kiTeestubeTeelounge: any;
-  @Input('erwWaeldlerStubeKristallStube') erwWaeldlerStubeKristallStube: any;
-  @Input('kiWaeldlerStubeKristallStube') kiWaeldlerStubeKristallStube: any;
-  @Input('erwEdelweiss') erwEdelweiss: any;
-  @Input('erwTerasse') erwTerasse: any;
-  @Input('erwTerrasseEdelweiss') erwTerrasseEdelweiss: any;
-  @Input('kiTerasse') kiTerasse: any;
-  @Input('kiTerrasseEdelweiss') kiTerrasseEdelweiss: any;
+  @Input('tablesErde') tablesErde: Table[];
+  @Input('showErdeBool') showErdeBool: boolean;
+  @Input('tablesFeuer') tablesFeuer: Table[];
+  @Input('showFeuerBool') showFeuerBool: boolean;
+  @Input('tablesWasser') tablesWasser: Table[];
+  @Input('showWasserBool') showWasserBool: boolean;
+  @Input('tablesLuft') tablesLuft: Table[];
+  @Input('showLuftBool') showLuftBool: boolean;
+  @Input('tablesMetall') tablesMetall: Table[];
+  @Input('showMetallBool') showMetallBool: boolean;
+  @Input('erwWasser') erwWasser: any;
+  @Input('kiWasser') kiWasser: any;
+  @Input('erwErde') erwErde: any;
+  @Input('kiErde') kiErde: any;
+  @Input('kiFeuer') kiFeuer: any;
+  @Input('erwLuft') erwLuft: any;
+  @Input('kiLuft') kiLuft: any;
+  @Input('erwFeuer') erwFeuer: any;
+  @Input('kiMetall') kiMetall: any;
+  @Input('erwMetall') erwMetall: any;
 
 
   @Output()

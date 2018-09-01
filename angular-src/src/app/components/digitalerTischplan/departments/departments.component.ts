@@ -1,13 +1,11 @@
 import { Component, OnInit, Input, ViewChild, Output, EventEmitter, Injectable, AfterViewChecked } from '@angular/core';
 import { Table } from '../../../../../Table';
 import { TischplanService } from '../../../services/tischplan.service';
-import {WaeldlerStubeKristallStubeComponent} from "./waeldler-stube-kristall-stube/waeldler-stube-kristall-stube.component";
-import {TeestubeTeeloungeComponent} from "./teestube-teelounge/teestube-teelounge.component";
-import {EdelweissKaminStubeComponent} from "./edelweiss-kamin-stube/edelweiss-kamin-stube.component";
-import {BerglerStubeHubertusStubeComponent} from "./bergler-stube-hubertus-stube/bergler-stube-hubertus-stube.component";
-import {BauernstubeComponent} from "./bauernstube/bauernstube.component";
-import {TerasseComponent} from "./terasse/terasse.component";
-import {TerrasseEdelweissComponent} from "./terrasse-edelweiss/terrasse-edelweiss.component";
+import {MetallComponent} from "./metall/metall.component";
+import {WasserComponent} from "./wasser/wasser.component";
+import {LuftComponent} from "./luft/luft.component";
+import {ErdeComponent} from "./erde/erde.component";
+import {FeuerComponent} from "./feuer/feuer.component";
 import {AlleComponent} from "./alle/alle.component";
 
 @Component({
@@ -16,38 +14,34 @@ import {AlleComponent} from "./alle/alle.component";
   styleUrls: ['../tischplan.component.css']
 })
 export class DepartmentsComponent  {
-  @Input('tablesBauernstube') tablesBauernstube: Table[];
+  @Input('tablesErde') tablesErde: Table[];
   @Input('tablesTerasse') tablesTerasse: Table[];
   @Input('showTerasseBool') showTerasseBool: boolean;
-  @Input('tablesTerrasseEdelweiss') tablesTerrasseEdelweiss: Table[];
-  @Input('showTerrasseEdelweissBool') showTerrasseEdelweissBool: boolean;
-  @Input('showBauernStubnBool') showBauernStubnBool: boolean;
-  @Input('tablesEdelweissKaminStube') tablesEdelweissKaminStube: Table[];
-  @Input('showEdelweissBool') showEdelweissBool: boolean;
-  @Input('tablesBerglerStubeHubertusStube') tablesBerglerStubeHubertusStube: Table[];
-  @Input('showBerglerBool') showBerglerBool: boolean;
-  @Input('tablesTeestubeTeelounge') tablesTeestubeTeelounge: Table[];
-  @Input('showTeeStubeBool') showTeeStubeBool: boolean;
-  @Input('tablesWaeldlerStubeKristallStube') tablesWaeldlerStubeKristallStube: Table[];
-  @Input('showWaeldlerBool') showWaeldlerBool: boolean;
+  @Input('tablesTerrasseLuft') tablesTerrasseLuft: Table[];
+  @Input('showTerrasseLuftBool') showTerrasseLuftBool: boolean;
+  @Input('showErdeBool') showErdeBool: boolean;
+  @Input('tablesLuft') tablesLuft: Table[];
+  @Input('showLuftBool') showLuftBool: boolean;
+  @Input('tablesFeuer') tablesFeuer: Table[];
+  @Input('showFeuerBool') showFeuerBool: boolean;
+  @Input('tablesMetall') tablesMetall: Table[];
+  @Input('showMetallBool') showMetallBool: boolean;
+  @Input('tablesWasser') tablesWasser: Table[];
+  @Input('showWasserBool') showWasserBool: boolean;
   @Input('tables') tables: any;
   @Input('term') term: string;
   @Input('showAlleBool') showAlleBool: boolean;
   @Input('tablesTempAbreise') tablesTempAbreise: any;
   @Output()
-  dispensedBauernstube:EventEmitter<any> = new EventEmitter();
+  dispensedErde:EventEmitter<any> = new EventEmitter();
   @Output()
-  dispensedBerglerStubeHubertusStube:EventEmitter<any> = new EventEmitter();
+  dispensedFeuer:EventEmitter<any> = new EventEmitter();
   @Output()
-  dispensedEdelweissKaminStube:EventEmitter<any> = new EventEmitter();
+  dispensedLuft:EventEmitter<any> = new EventEmitter();
   @Output()
-  dispensedTeestubeTeelounge:EventEmitter<any> = new EventEmitter();
+  dispensedMetall:EventEmitter<any> = new EventEmitter();
   @Output()
-  dispensedTerasse:EventEmitter<any> = new EventEmitter();
-  @Output()
-  dispensedTerrasseEdelweiss:EventEmitter<any> = new EventEmitter();
-  @Output()
-  dispensedWaeldlerStubeKristallStube:EventEmitter<any> = new EventEmitter();
+  dispensedWasser:EventEmitter<any> = new EventEmitter();
   @Output()
   updateAzList:EventEmitter<any> = new EventEmitter();
   @Output()
@@ -63,26 +57,20 @@ export class DepartmentsComponent  {
   @ViewChild(AlleComponent)
   private alleComponent: AlleComponent;
 
-  @ViewChild(WaeldlerStubeKristallStubeComponent)
-  private waeldlerStubeKristallStubeComponent: WaeldlerStubeKristallStubeComponent;
+  @ViewChild(WasserComponent)
+  private waeldlerStubeKristallStubeComponent: WasserComponent;
 
-  @ViewChild(TeestubeTeeloungeComponent)
-  private teestubeTeeloungeComponent: TeestubeTeeloungeComponent;
+  @ViewChild(MetallComponent)
+  private teestubeTeeloungeComponent: MetallComponent;
 
-  @ViewChild(EdelweissKaminStubeComponent)
-  private edelweissKaminStubeComponent: EdelweissKaminStubeComponent;
+  @ViewChild(LuftComponent)
+  private edelweissKaminStubeComponent: LuftComponent;
 
-  @ViewChild(BerglerStubeHubertusStubeComponent)
-  private berglerStubeHubertusStubeComponent: BerglerStubeHubertusStubeComponent;
+  @ViewChild(FeuerComponent)
+  private berglerStubeHubertusStubeComponent: FeuerComponent;
 
-  @ViewChild(BauernstubeComponent)
-  private bauernstubeComponent: BauernstubeComponent;
-
-  @ViewChild(TerasseComponent)
-  private terasseComponent: TerasseComponent;
-
-  @ViewChild(TerrasseEdelweissComponent)
-  private terrasseEdelweissComponent: TerrasseEdelweissComponent;
+  @ViewChild(ErdeComponent)
+  private bauernstubeComponent: ErdeComponent;
 
   constructor(private tischplanService: TischplanService) {
   }
@@ -112,28 +100,21 @@ export class DepartmentsComponent  {
       if (typeof response == null || typeof response[j] == null) {
         return;
       } else {
-        if (response[j].department === "berglerStubeHubertusStube") {
-          this.dispensedBerglerStubeHubertusStube.emit(response[j].tables);
+        if (response[j].department === "feuer") {
+          this.dispensedFeuer.emit(response[j].tables);
         }
-        else if (response[j].department === "Bauernstube") {
-          this.dispensedBauernstube.emit(response[j].tables);
+        else if (response[j].department === "erde") {
+          this.dispensedErde.emit(response[j].tables);
         }
-        else if (response[j].department === "waeldlerStubeKristallStube") {
-          this.dispensedWaeldlerStubeKristallStube.emit(response[j].tables);
+        else if (response[j].department === "wasser") {
+          this.dispensedWasser.emit(response[j].tables);
         }
-        else if (response[j].department === "edelweissKaminStube") {
-          this.dispensedEdelweissKaminStube.emit(response[j].tables);
+        else if (response[j].department === "luft") {
+          this.dispensedLuft.emit(response[j].tables);
         }
-        else if (response[j].department === "teestubeTeelounge") {
-          this.dispensedTeestubeTeelounge.emit(response[j].tables);
+        else if (response[j].department === "metall") {
+          this.dispensedMetall.emit(response[j].tables);
         }
-        else if (response[j].department === "terasse") {
-          this.dispensedTerasse.emit(response[j].tables);
-        }
-        else if (response[j].department === "terrasseEdelweiss") {
-            this.dispensedTerrasseEdelweiss.emit(response[j].tables);
-          }
-
       }
     },
       error => console.log("Error: ", error),
@@ -164,19 +145,19 @@ export class DepartmentsComponent  {
         return;
       } else {
         if (response[j].department === "berglerStubeHubertusStube") {
-          this.dispensedBerglerStubeHubertusStube.emit(response[j].tables);
+          this.dispensedFeuer.emit(response[j].tables);
         }
-        else if (response[j].department === "Bauernstube") {
-          this.dispensedBauernstube.emit(response[j].tables);
+        else if (response[j].department === "Erde") {
+          this.dispensedErde.emit(response[j].tables);
         }
         else if (response[j].department === "waeldlerStubeKristallStube") {
-          this.dispensedWaeldlerStubeKristallStube.emit(response[j].tables);
+          this.dispensedWasser.emit(response[j].tables);
         }
         else if (response[j].department === "edelweissKaminStube") {
-          this.dispensedEdelweissKaminStube.emit(response[j].tables);
+          this.dispensedLuft.emit(response[j].tables);
         }
         else if (response[j].department === "teestubeTeelounge") {
-          this.dispensedTeestubeTeelounge.emit(response[j].tables);
+          this.dispensedMetall.emit(response[j].tables);
         }
       }
       */
@@ -193,30 +174,24 @@ export class DepartmentsComponent  {
         if (response === null) {
           return;
         } else {
-          if (response[0].department === "berglerStubeHubertusStube") {
-            this.dispensedBerglerStubeHubertusStube.emit(response[0].tables);
+          if (response[0].department === "feuer") {
+            this.dispensedFeuer.emit(response[0].tables);
           }
-          else if (response[0].department === "Bauernstube") {
-            this.dispensedBauernstube.emit(response[0].tables);
+          else if (response[0].department === "erde") {
+            this.dispensedErde.emit(response[0].tables);
           }
-          else if (response[0].department === "waeldlerStubeKristallStube") {
-            this.dispensedWaeldlerStubeKristallStube.emit(response[0].tables);
+          else if (response[0].department === "wasser") {
+            this.dispensedWasser.emit(response[0].tables);
           }
-          else if (response[0].department === "edelweissKaminStube") {
-            this.dispensedEdelweissKaminStube.emit(response[0].tables);
+          else if (response[0].department === "luft") {
+            this.dispensedLuft.emit(response[0].tables);
           }
-          else if (response[0].department === "teestubeTeelounge") {
-            this.dispensedTeestubeTeelounge.emit(response[0].tables);
-            //this.tablesTeestubeTeelounge[arrayIndex] = response.tables[0];
-          }
-          else if (response[0].department === "terasse") {
-            this.dispensedTerasse.emit(response[0].tables);
-          }
-          else if (response[0].department === "terrasseEdelweiss") {
-            this.dispensedTerrasseEdelweiss.emit(response[0].tables);
+          else if (response[0].department === "metall") {
+            this.dispensedMetall.emit(response[0].tables);
+            //this.tablesMetall[arrayIndex] = response.tables[0];
           }
         }
-        // //console.log(this.tablesBerglerStubeHubertusStube[arrayIndex]);
+        // //console.log(this.tablesFeuer[arrayIndex]);
       });
     this.updateAzList.emit();
   }
@@ -233,32 +208,26 @@ export class DepartmentsComponent  {
         if (response === null) {
           return;
         } else {
-          if (response.tables[0].department === "berglerStubeHubertusStube") {
-            this.tablesBerglerStubeHubertusStube[arrayIndex] = response.tables[0];
+          if (response.tables[0].department === "feuer") {
+            this.tablesFeuer[arrayIndex] = response.tables[0];
           }
-          else if (response.tables[0].department === "Bauernstube") {
-            this.tablesBauernstube[arrayIndex] = response.tables[0];
+          else if (response.tables[0].department === "erde") {
+            this.tablesErde[arrayIndex] = response.tables[0];
           }
-          else if (response.tables[0].department === "waeldlerStubeKristallStube") {
-            this.tablesWaeldlerStubeKristallStube[arrayIndex] = response.tables[0];
+          else if (response.tables[0].department === "wasser") {
+            this.tablesWasser[arrayIndex] = response.tables[0];
           }
-          else if (response.tables[0].department === "edelweissKaminStube") {
-            this.tablesEdelweissKaminStube[arrayIndex] = response.tables[0];
+          else if (response.tables[0].department === "luft") {
+            this.tablesLuft[arrayIndex] = response.tables[0];
           }
-          else if (response.tables[0].department === "teestubeTeelounge") {
-            this.tablesTeestubeTeelounge[arrayIndex] = response.tables[0];
-          }
-          else if (response.tables[0].department === "terasse") {
-            this.tablesTerasse[arrayIndex] = response.tables[0];
-          }
-          else if (response.tables[0].department === "terrasseEdelweiss") {
-            this.tablesTerrasseEdelweiss[arrayIndex] = response.tables[0];
+          else if (response.tables[0].department === "metall") {
+            this.tablesMetall[arrayIndex] = response.tables[0];
           }
         }
 
-        //console.log("bgColor:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
+        //console.log("bgColor:" + JSON.stringify(this.tablesFeuer[arrayIndex]));
       });
-    //console.log("placeholder:" + JSON.stringify(this.tablesBerglerStubeHubertusStube[arrayIndex]));
+    //console.log("placeholder:" + JSON.stringify(this.tablesFeuer[arrayIndex]));
   }
 
   changeBgColorIfAnreise() {
@@ -295,39 +264,29 @@ export class DepartmentsComponent  {
                 //console.log('Parsed Date --->: ' + this.parsedDate[0]);
                 //console.log('this.dateGenerated --->: ' + dateToday);
                 if (dateToday.indexOf(this.parsedDate[0]) !== -1) {
-                  if (this.tablesChangeBgColorIfAnreise[a].department === "berglerStubeHubertusStube") {
-                    if (this.tablesBerglerStubeHubertusStube[b]) {
-                      this.tablesBerglerStubeHubertusStube[b].bgColor = "#0a7a74";
+                  if (this.tablesChangeBgColorIfAnreise[a].department === "feuer") {
+                    if (this.tablesFeuer[b]) {
+                      this.tablesFeuer[b].bgColor = "#0a7a74";
                     }
                   }
-                  else if (this.tablesChangeBgColorIfAnreise[a].department === "Bauernstube") {
-                    if (this.tablesBauernstube[b]) {
-                      this.tablesBauernstube[b].bgColor = "#0a7a74";
+                  else if (this.tablesChangeBgColorIfAnreise[a].department === "erde") {
+                    if (this.tablesErde[b]) {
+                      this.tablesErde[b].bgColor = "#0a7a74";
                     }
                   }
-                  else if (this.tablesChangeBgColorIfAnreise[a].department === "waeldlerStubeKristallStube") {
-                    if (this.tablesWaeldlerStubeKristallStube[b]) {
-                      this.tablesWaeldlerStubeKristallStube[b].bgColor = "#0a7a74";
+                  else if (this.tablesChangeBgColorIfAnreise[a].department === "wasser") {
+                    if (this.tablesWasser[b]) {
+                      this.tablesWasser[b].bgColor = "#0a7a74";
                     }
                   }
-                  else if (this.tablesChangeBgColorIfAnreise[a].department === "edelweissKaminStube") {
-                    if (this.tablesEdelweissKaminStube[b]) {
-                      this.tablesEdelweissKaminStube[b].bgColor = "#0a7a74";
+                  else if (this.tablesChangeBgColorIfAnreise[a].department === "luft") {
+                    if (this.tablesLuft[b]) {
+                      this.tablesLuft[b].bgColor = "#0a7a74";
                     }
                   }
-                  else if (this.tablesChangeBgColorIfAnreise[a].department === "teestubeTeelounge") {
-                    if (this.tablesTeestubeTeelounge[b]) {
-                      this.tablesTeestubeTeelounge[b].bgColor = "#0a7a74";
-                    }
-                  }
-                  else if (this.tablesChangeBgColorIfAnreise[a].department === "terasse") {
-                    if (this.tablesTerasse[b]) {
-                      this.tablesTerasse[b].bgColor = "#0a7a74";
-                    }
-                  }
-                  else if (this.tablesChangeBgColorIfAnreise[a].department === "terrasseEdelweiss") {
-                    if (this.tablesTerrasseEdelweiss[b]) {
-                      this.tablesTerrasseEdelweiss[b].bgColor = "#0a7a74";
+                  else if (this.tablesChangeBgColorIfAnreise[a].department === "metall") {
+                    if (this.tablesMetall[b]) {
+                      this.tablesMetall[b].bgColor = "#0a7a74";
                     }
                   }
                 }
@@ -342,19 +301,16 @@ export class DepartmentsComponent  {
   transform(term) {
     if (this.showAlleBool) {
       this.alleComponent.transform(this.tables, term);
-    } else if (this.showBauernStubnBool) {
-      this.bauernstubeComponent.transform(this.tablesBauernstube, term);
-    } else if (this.showBerglerBool) {
-      this.berglerStubeHubertusStubeComponent.transform(this.tablesBerglerStubeHubertusStube, term);
-    } else if (this.showEdelweissBool) {
-      this.edelweissKaminStubeComponent.transform(this.tablesEdelweissKaminStube, term);
-    } else if (this.showTeeStubeBool) {
-      this.teestubeTeeloungeComponent.transform(this.tablesTeestubeTeelounge, term);
-    } else if (this.showWaeldlerBool) {
-      this.waeldlerStubeKristallStubeComponent.transform(this.tablesWaeldlerStubeKristallStube, term);
-    } else if (this.showTerasseBool) {
-      this.terasseComponent.transform(this.tablesTerasse, term);
-    } else if (this.showTerrasseEdelweissBool) {
-      this.terrasseEdelweissComponent.transform(this.tablesTerrasseEdelweiss, term);
-    }  }
+    } else if (this.showErdeBool) {
+      this.bauernstubeComponent.transform(this.tablesErde, term);
+    } else if (this.showFeuerBool) {
+      this.berglerStubeHubertusStubeComponent.transform(this.tablesFeuer, term);
+    } else if (this.showLuftBool) {
+      this.edelweissKaminStubeComponent.transform(this.tablesLuft, term);
+    } else if (this.showMetallBool) {
+      this.teestubeTeeloungeComponent.transform(this.tablesMetall, term);
+    } else if (this.showWasserBool) {
+      this.waeldlerStubeKristallStubeComponent.transform(this.tablesWasser, term);
+    }
+  }
 }

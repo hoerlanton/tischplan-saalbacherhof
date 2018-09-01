@@ -128,9 +128,9 @@ module.exports = {
             }
         }
 
-        db.hubertusTracesListe.remove({});
+        db.saalbacherhofTracesListe.remove({});
         setTimeout(function () {
-            db.hubertusTracesListe.save(tracesListe, function (err, tracesListe) {
+            db.saalbacherhofTracesListe.save(tracesListe, function (err, tracesListe) {
                 if (err) {
                     res.send(err);
                 }
@@ -150,7 +150,7 @@ module.exports = {
         console.log(nameValue);
         console.log(zimmernummerValue);
 
-        db.hubertusTracesListe.update(
+        db.saalbacherhofTracesListe.update(
             {
                 name: nameValue,
                 "zimmernummer": zimmernummerValue
@@ -168,25 +168,25 @@ module.exports = {
 
 
         setTimeout(function () {
-            db.hubertusTracesListe.findOne(
+            db.saalbacherhofTracesListe.findOne(
                 {
                     name: nameValue,
                     "zimmernummer": zimmernummerValue
                 },
-                function (err, hubertusTracesListe) {
+                function (err, saalbacherhofTracesListe) {
                     if (err) {
                         res.send(err);
                     }
-                    res.json(hubertusTracesListe);
-                    console.log('hubertusTracesListe');
-                    console.log(JSON.stringify(hubertusTracesListe));
+                    res.json(saalbacherhofTracesListe);
+                    console.log('saalbacherhofTracesListe');
+                    console.log(JSON.stringify(saalbacherhofTracesListe));
                 });
         }, 700);
     },
     getTraceListe: function (req, res, db) {
         console.log("tracesListe get called");
 //Get guests from Mongo DB
-        db.hubertusTracesListe.find(function (err, tracesListe) {
+        db.saalbacherhofTracesListe.find(function (err, tracesListe) {
             if (err) {
                 res.send(err);
             }

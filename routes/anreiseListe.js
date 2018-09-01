@@ -37,10 +37,10 @@ module.exports = {
 
         console.log(anreiseListe);
 
-        db.hubertusAnreiseListe.remove({});
+        db.saalbacherhofAnreiseListe.remove({});
 
         setTimeout(function() {
-            db.hubertusAnreiseListe.save(anreiseListe, function(err, anreiseListe) {
+            db.saalbacherhofAnreiseListe.save(anreiseListe, function(err, anreiseListe) {
                 if (err) {
                     res.send(err);
                 }
@@ -65,7 +65,7 @@ module.exports = {
         console.log(zimmernummerValue);
 
 
-        db.hubertusAnreiseListe.update(
+        db.saalbacherhofAnreiseListe.update(
             {name: nameValue,
                 "zimmernummer": zimmernummerValue},
             {$set: {
@@ -79,16 +79,16 @@ module.exports = {
 
 
         setTimeout(function() {
-            db.hubertusAnreiseListe.findOne(
+            db.saalbacherhofAnreiseListe.findOne(
                 {name: nameValue,
                     "zimmernummer": zimmernummerValue},
-                function (err, hubertusAnreiseListe) {
+                function (err, saalbacherhofAnreiseListe) {
                     if (err) {
                         res.send(err);
                     }
-                    res.json(hubertusAnreiseListe);
-                    console.log('hubertusAnreiseListe');
-                    console.log(JSON.stringify(hubertusAnreiseListe));
+                    res.json(saalbacherhofAnreiseListe);
+                    console.log('saalbacherhofAnreiseListe');
+                    console.log(JSON.stringify(saalbacherhofAnreiseListe));
                 });
         }, 700);
     },
@@ -96,7 +96,7 @@ module.exports = {
 
         console.log("anreiseListe get called");
 //Get guests from Mongo DB
-        db.hubertusAnreiseListe.find(function (err, anreiseListe) {
+        db.saalbacherhofAnreiseListe.find(function (err, anreiseListe) {
             if (err) {
                 res.send(err);
             }

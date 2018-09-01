@@ -1,8 +1,6 @@
-<app-bauernstube [term]="term" [tablesBauernstube]="tablesBauernstube" [showBauernStubnBool]="showBauernStubnBool" (occupied)="occupied($event)"></app-bauernstube>
-<app-bergler-stube-hubertus-stube [term]="term" [tablesBerglerStubeHubertusStube]="tablesBerglerStubeHubertusStube" [showBerglerBool]="showBerglerBool" (occupied)="occupied($event)"></app-bergler-stube-hubertus-stube>
-<app-edelweiss-kamin-stube [term]="term" [tablesEdelweissKaminStube]="tablesEdelweissKaminStube" [showEdelweissBool]="showEdelweissBool" (occupied)="occupied($event)"></app-edelweiss-kamin-stube>
-<app-teestube-teelounge  [term]="term" [tablesTeestubeTeelounge]="tablesTeestubeTeelounge" [showTeeStubeBool]="showTeeStubeBool" (occupied)="occupied($event)"></app-teestube-teelounge>
-<app-waeldler-stube-kristall-stube [term]="term" [tablesWaeldlerStubeKristallStube]="tablesWaeldlerStubeKristallStube" [showWaeldlerBool]="showWaeldlerBool" (occupied)="occupied($event)"></app-waeldler-stube-kristall-stube>
-<app-terasse [term]="term" [tablesTerasse]="tablesTerasse" [showTerasseBool]="showTerasseBool" (occupied)="occupied($event)"></app-terasse>
-<app-terrasse-edelweiss [term]="term" [tablesTerrasseEdelweiss]="tablesTerrasseEdelweiss" [showTerrasseEdelweissBool]="showTerrasseEdelweissBool" (occupied)="occupied($event)"></app-terrasse-edelweiss>
-<app-alle [showAlleBool]="showAlleBool" [term]="term" [tables]="tables" [tablesBauernstube]="tablesBauernstube" [tablesWaeldlerStubeKristallStube]="tablesWaeldlerStubeKristallStube" [tablesTeestubeTeelounge]="tablesTeestubeTeelounge" [tablesEdelweissKaminStube]="tablesEdelweissKaminStube" [tablesBerglerStubeHubertusStube]="tablesBerglerStubeHubertusStube" [tablesTerasse]="tablesTerasse" [tablesTerrasseEdelweiss]="tablesTerrasseEdelweiss" (occupied)="occupied($event)"></app-alle>
+<app-erde [term]="term" [tablesErde]="tablesErde" [showErdeBool]="showErdeBool" (occupied)="occupied($event)"></app-erde>
+<app-feuer [term]="term" [tablesFeuer]="tablesFeuer" [showFeuerBool]="showFeuerBool" (occupied)="occupied($event)"></app-feuer>
+<app-luft [term]="term" [tablesLuft]="tablesLuft" [showLuftBool]="showLuftBool" (occupied)="occupied($event)"></app-luft>
+<app-metall  [term]="term" [tablesMetall]="tablesMetall" [showMetallBool]="showMetallBool" (occupied)="occupied($event)"></app-metall>
+<app-wasser [term]="term" [tablesWasser]="tablesWasser" [showWasserBool]="showWasserBool" (occupied)="occupied($event)"></app-wasser>
+<app-alle [showAlleBool]="showAlleBool" [term]="term" [tables]="tables" [tablesErde]="tablesErde" [tablesWasser]="tablesWasser" [tablesMetall]="tablesMetall" [tablesLuft]="tablesLuft" [tablesFeuer]="tablesFeuer" [tablesTerasse]="tablesTerasse" [tablesTerrasseLuft]="tablesTerrasseLuft" (occupied)="occupied($event)"></app-alle>

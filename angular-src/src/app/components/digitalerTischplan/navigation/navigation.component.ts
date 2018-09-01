@@ -122,7 +122,7 @@ export class NavigationComponent implements OnInit {
       tableToMove.department = "berglerStubeHubertusStube";
       indexQuell = 3;
     } else if (Number(quellTisch) >= 10 && Number(quellTisch) <= 26) {
-      tableToMove.department = "Bauernstube";
+      tableToMove.department = "Erde";
       indexQuell = 2;
     } else if (Number(quellTisch) >= 50 && Number(quellTisch) <= 77) {
       tableToMove.department = "waeldlerStubeKristallStube";
@@ -134,17 +134,17 @@ export class NavigationComponent implements OnInit {
       tableToMove.department = "teestubeTeelounge";
       indexQuell = 0;
     } else if (Number(quellTisch) >= 100 && Number(quellTisch) < 180) {
-      tableToMove.department = "terasse";
+      tableToMove.department = "feuer";
       indexQuell = 5;
     } else if (Number(quellTisch) >= 180) {
-      tableToMove.department = "terrasseEdelweiss";
+      tableToMove.department = "terrasseFeuer";
       indexZiel = 6;
     }
     if (Number(zielTisch) >= 30 && Number(zielTisch) <= 47) {
       tableToMove.targetDepartment = "berglerStubeHubertusStube";
       indexZiel = 3;
     } else if (Number(zielTisch) >= 10 && Number(zielTisch) <= 26) {
-      tableToMove.targetDepartment = "Bauernstube";
+      tableToMove.targetDepartment = "Erde";
       indexZiel = 2;
     } else if (Number(zielTisch) >= 50 && Number(zielTisch) <= 77) {
       tableToMove.targetDepartment = "waeldlerStubeKristallStube";
@@ -157,10 +157,10 @@ export class NavigationComponent implements OnInit {
       tableToMove.targetDepartment = "teestubeTeelounge";
       indexZiel = 0;
     } else if (Number(zielTisch) >= 100 && Number(zielTisch) < 180) {
-      tableToMove.targetDepartment = "terasse";
+      tableToMove.targetDepartment = "feuer";
       indexZiel = 5;
     } else if (Number(zielTisch) >= 180) {
-      tableToMove.targetDepartment = "terrasseEdelweiss";
+      tableToMove.targetDepartment = "terrasseFeuer";
       indexZiel = 6;
     }
     tableToMove.number = quellTisch;

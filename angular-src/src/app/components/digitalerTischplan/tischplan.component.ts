@@ -45,16 +45,12 @@ export class TischplanComponent {
   buttonBgColor4: string;
   buttonBgColor5: string;
   buttonBgColor6: string;
-  buttonBgColor7: string;
-  buttonBgColor8: string;
   fontColor1: string;
   fontColor2: string;
   fontColor3: string;
   fontColor4: string;
   fontColor5: string;
   fontColor6: string;
-  fontColor7: string;
-  fontColor8: string;
   leftValues: LeftValue[];
   topValues: any[] = [];
   dateGenerated: any;
@@ -70,23 +66,19 @@ export class TischplanComponent {
   tempTablesArray2: any[] = [];
   tempTablesArray1: any[] = [];
   tempTablesArray3: any[] = [];
-  tablesBerglerStubeHubertusStube: Table[] = [];
-  tablesBauernstube: Table[] = [];
-  tablesWaeldlerStubeKristallStube: Table[] = [];
-  tablesEdelweissKaminStube: Table[] = [];
-  tablesTeestubeTeelounge: Table[] = [];
-  tablesTerasse: Table[] = [];
-  tablesTerrasseEdelweiss: Table[] = [];
+  tablesMetall: Table[] = [];
+  tablesErde: Table[] = [];
+  tablesLuft: Table[] = [];
+  tablesFeuer: Table[] = [];
+  tablesWasser: Table[] = [];
   title: string;
   filesToUpload: Array<File> = [];
   isDropped: any[] = [];
-  showBauernStubnBool: boolean;
-  showBerglerBool: boolean;
-  showWaeldlerBool: boolean;
-  showEdelweissBool: boolean;
-  showTeeStubeBool: boolean;
-  showTerasseBool: boolean;
-  showTerrasseEdelweissBool: boolean;
+  showErdeBool: boolean;
+  showMetallBool: boolean;
+  showLuftBool: boolean;
+  showFeuerBool: boolean;
+  showWasserBool: boolean;
   showAlleBool: boolean;
   roomNumber: string;
   tableNumber: string;
@@ -114,20 +106,16 @@ export class TischplanComponent {
   showTablePlanBool: boolean;
   buttonBgColorShowTablePlan: string;
   fontColorShowTablePlan: string;
-  erwBauernstube: any[] = [];
-  kiBauernstube: any[] = [];
-  erwEdelweiss: any[] = [];
-  kiEdelweiss: any[] = [];
-  erwWaeldlerStubeKristallStube: any[] = [];
-  kiWaeldlerStubeKristallStube: any[] = [];
-  erwBerglerStubeHubertusStube: any[] = [];
-  kiBerglerStubeHubertusStube: any[] = [];
-  erwTeestubeTeelounge: any[] = [];
-  kiTeestubeTeelounge: any[] = [];
-  erwTerasse: any[] = [];
-  kiTerasse: any[] = [];
-  erwTerrasseEdelweiss: any[] = [];
-  kiTerrasseEdelweiss: any[] = [];
+  erwErde: any[] = [];
+  kiErde: any[] = [];
+  erwFeuer: any[] = [];
+  kiFeuer: any[] = [];
+  erwLuft: any[] = [];
+  kiLuft: any[] = [];
+  erwMetall: any[] = [];
+  kiMetall: any[] = [];
+  erwWasser: any[] = [];
+  kiWasser: any[] = [];
 
 
   constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, private dragulaService: DragulaService) {
@@ -145,8 +133,6 @@ export class TischplanComponent {
     this.buttonBgColor4 = "0a7a74";
     this.buttonBgColor5 = "0a7a74";
     this.buttonBgColor6 = "0a7a74";
-    this.buttonBgColor7 = "0a7a74";
-    this.buttonBgColor8 = "0a7a74";
 
     this.fontColor1 = "f3efe4";
     this.fontColor2 = "f3efe4";
@@ -154,18 +140,14 @@ export class TischplanComponent {
     this.fontColor4 = "f3efe4";
     this.fontColor5 = "f3efe4";
     this.fontColor6 = "f3efe4";
-    this.fontColor7 = "f3efe4";
-    this.fontColor8 = "f3efe4";
 
     this.tablesOccupied = 0;
     this.backgroundColor = "ffffff";
-    this.showBauernStubnBool = false;
-    this.showBerglerBool = false;
-    this.showWaeldlerBool = false;
-    this.showEdelweissBool = false;
-    this.showTeeStubeBool = false;
-    this.showTerasseBool = false;
-    this.showTerrasseEdelweissBool = false;
+    this.showErdeBool = false;
+    this.showMetallBool = false;
+    this.showLuftBool = false;
+    this.showFeuerBool = false;
+    this.showWasserBool = false;
     this.term = "";
 
     this.tischplanService.getNotizElements()
@@ -292,24 +274,24 @@ export class TischplanComponent {
     // this.renderer.invokeElementMethod(this.input.nativeElement, 'focus');
   }
 
-  showBauernStubn() {
-    this.departmentmenuComponent.showBauernStubn();
+  showErde() {
+    this.departmentmenuComponent.showErde();
   }
 
-  showBergler() {
-    this.departmentmenuComponent.showBergler();
+  showMetall() {
+    this.departmentmenuComponent.showMetall();
   }
 
-  showWaeldler() {
-    this.departmentmenuComponent.showWaeldler();
+  showLuft() {
+    this.departmentmenuComponent.showLuft();
   }
 
-  showEdelweiss() {
-    this.departmentmenuComponent.showEdelweiss();
+  showFeuer() {
+    this.departmentmenuComponent.showFeuer();
   }
 
   showTeestube() {
-    this.departmentmenuComponent.showTeestube();
+    this.departmentmenuComponent.showWasser();
   }
 
   updateImHausListeElement(x) {
@@ -372,7 +354,7 @@ export class TischplanComponent {
       console.log("gettables in updateAzList");
       this.getTables();
       setTimeout(() => {
-        this.tables = this.tablesBauernstube.concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube).concat(this.tablesTerasse).concat(this.tablesTerrasseEdelweiss);;
+        this.tables = this.tablesErde.concat(this.tablesWasser).concat(this.tablesMetall).concat(this.tablesFeuer).concat(this.tablesLuft);
         //console.log('this.tables: in updateAzList');
         //console.log(this.tables);
         this.printComponent.formatAzListe(this.tables);
@@ -388,42 +370,34 @@ export class TischplanComponent {
           return;
         } else {
           for (let a = 0; a < tables.length; a++) {
-            if (tables[a].department === "Bauernstube") {
-              this.tablesBauernstube = tables[a].tables;
+            if (tables[a].department === "erde") {
+              this.tablesErde = tables[a].tables;
             }
-            else if (tables[a].department === "edelweissKaminStube") {
-              this.tablesEdelweissKaminStube = tables[a].tables;
-              //console.log('Test' + JSON.stringify(this.tablesEdelweissKaminStube));
+            else if (tables[a].department === "feuer") {
+              this.tablesFeuer = tables[a].tables;
+              //console.log('Test' + JSON.stringify(this.tablesFeuer));
             }
-            else if (tables[a].department === "berglerStubeHubertusStube") {
-              this.tablesBerglerStubeHubertusStube = tables[a].tables;
+            else if (tables[a].department === "metall") {
+              this.tablesMetall = tables[a].tables;
             }
-            else if (tables[a].department === "waeldlerStubeKristallStube") {
-              this.tablesWaeldlerStubeKristallStube = tables[a].tables;
+            else if (tables[a].department === "luft") {
+              this.tablesLuft = tables[a].tables;
             }
-            else if (tables[a].department === "teestubeTeelounge") {
-              this.tablesTeestubeTeelounge = tables[a].tables;
-            }
-            else if (tables[a].department === "terasse") {
-              this.tablesTerasse = tables[a].tables;
-            }
-            else if (tables[a].department === "terrasseEdelweiss") {
-              this.tablesTerrasseEdelweiss = tables[a].tables;
+            else if (tables[a].department === "wasser") {
+              this.tablesWasser = tables[a].tables;
             }
           }
         }
 
         //console.log(JSON.stringify(tables));
-        console.log(this.tablesBauernstube);
-        console.log(this.tablesEdelweissKaminStube);
-        console.log(this.tablesBerglerStubeHubertusStube);
-        console.log(this.tablesWaeldlerStubeKristallStube);
-        console.log(this.tablesTeestubeTeelounge);
-        console.log(this.tablesTerasse);
-        console.log(this.tablesTerrasseEdelweiss);
+        console.log(this.tablesErde);
+        console.log(this.tablesFeuer);
+        console.log(this.tablesMetall);
+        console.log(this.tablesLuft);
+        console.log(this.tablesWasser);
         this.tablesTempAbreise = tables;
 
-        this.tables = this.tablesBauernstube.concat(this.tablesTeestubeTeelounge).concat(this.tablesBerglerStubeHubertusStube).concat(this.tablesEdelweissKaminStube).concat(this.tablesWaeldlerStubeKristallStube).concat(this.tablesTerasse).concat(this.tablesTerrasseEdelweiss);
+        this.tables = this.tablesErde.concat(this.tablesWasser).concat(this.tablesMetall).concat(this.tablesFeuer).concat(this.tablesLuft);
         //console.log(this.tables);
         this.changeBgColorIfAnreise();
         this.printComponent.formatAzListe(this.tables);

@@ -1,0 +1,38 @@
+<div *ngIf="showWasserBool">
+  <div *ngFor="let tableWasser of tablesWasser; let j = index;">
+    <div *ngIf="tablesWasser[j] !== tablesWasser[j+1]">
+      <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF" type="button" class="btn btn-send" (click)="occupy(tableWasser)">{{tableWasser.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
+      <h4><b> Tisch:</b>{{tableWasser.number}} </h4><br>
+      <div class='cards-container' id='containerWasser' [ngStyle]="{'background-color': + tableWasser.bgColor}">
+        <div class="table" [ngStyle]="{'background-color': '#' + tableWasser.bgColor}">
+          <div *ngIf="tableWasser.isBesetzt === 'true'">
+            <div *ngFor="let group of tableWasser.groups; let j = index;">
+              <div [style.border]="getStyle(group.traceValue)">
+                <div *ngIf="group.nameValue">
+                  <p style="background-color: #FFFFFF; padding: 10px">
+                    <b> Name:</b> {{group.nameValue}}<br>
+                    <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>
+                    <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
+                    <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
+                    <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
+                    <b> Notiz1:</b> {{group.notiz1Value}}<br>
+                    <b> Notiz2:</b> {{group.notiz2Value}}<br>
+                    <b> Trace:</b> {{group.traceValue}}<br>
+                    <b> Bemerkung:</b> {{group.bemerkungValue}}<br>
+                  </p>
+                </div>
+              </div>
+              <div *ngIf="group.newTraceText">
+                <p style="background-color: #FFFFFF; border: solid 3px red">
+                  <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}
+                </p>
+              </div>
+            </div>
+        </div>
+        <div *ngIf="tableWasser.placeholder === 'true'">
+          <p [dragula]='"evented-bag"' id="Wasser" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableWasser.number}} {{tableWasser.department}} {{j}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

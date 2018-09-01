@@ -1,63 +1,45 @@
 <div *ngIf="showNotizFormBool">
   <div *ngIf="showAlleBool === false">
     <div class="notiz">
-      <div *ngIf="showBauernStubnBool">
+      <div *ngIf="showErdeBool">
         <div *ngFor="let notizElement of notizElements" >
-          <div *ngIf="notizElement.departmentNotizInput === 'Bauernstube'">
+          <div *ngIf="notizElement.departmentNotizInput === 'Erde'">
             <div style="border: solid 3px greenyellow; padding: 10px; margin: 20px;">
               <p  style="color: white"> {{notizElement.notizInput === '' ? "Keine Notiz" : notizElement.notizInput}} <br><b>  Datum: </b> {{notizElement.notizInput === '' ? "" : notizElement.date}}</p>
             </div>
           </div>
         </div>
       </div>
-      <div *ngIf="showEdelweissBool">
+      <div *ngIf="showFeuerBool">
         <div *ngFor="let notizElement of notizElements">
-          <div *ngIf="notizElement.departmentNotizInput === 'EdelweissKaminStube'">
+          <div *ngIf="notizElement.departmentNotizInput === 'Feuer'">
             <div style="border: solid 3px greenyellow; padding: 10px; margin: 20px;">
               <p  style="color: white"> {{notizElement.notizInput === '' ? "Keine Notiz" : notizElement.notizInput}} <br><b>  Datum: </b> {{notizElement.notizInput === '' ? "" : notizElement.date}}</p>
             </div>
           </div>
         </div>
       </div>
-      <div *ngIf="showBerglerBool">
+      <div *ngIf="showLuftBool">
         <div *ngFor="let notizElement of notizElements">
-          <div *ngIf="notizElement.departmentNotizInput === 'BerglerStubeHubertusStube'">
+          <div *ngIf="notizElement.departmentNotizInput === 'Luft'">
             <div style="border: solid 3px greenyellow; padding: 10px; margin: 20px;">
               <p  style="color: white"> {{notizElement.notizInput === '' ? "Keine Notiz" : notizElement.notizInput}} <br><b>  Datum: </b> {{notizElement.notizInput === '' ? "" : notizElement.date}}</p>
             </div>
           </div>
         </div>
       </div>
-      <div *ngIf="showTeeStubeBool">
+      <div *ngIf="showMetallBool">
         <div *ngFor="let notizElement of notizElements">
-          <div *ngIf="notizElement.departmentNotizInput === 'TeestubeTeelounge'">
+          <div *ngIf="notizElement.departmentNotizInput === 'Metall'">
             <div style="border: solid 3px greenyellow; padding: 10px; margin: 20px;">
               <p  style="color: white"> {{notizElement.notizInput === '' ? "Keine Notiz" : notizElement.notizInput}} <br><b>  Datum: </b> {{notizElement.notizInput === '' ? "" : notizElement.date}}</p>
             </div>
           </div>
         </div>
       </div>
-      <div *ngIf="showWaeldlerBool">
+      <div *ngIf="showWasserBool">
         <div *ngFor="let notizElement of notizElements">
-          <div *ngIf="notizElement.departmentNotizInput === 'WaeldlerStubeKristallStube'">
-            <div style="border: solid 3px greenyellow; padding: 10px; margin: 10px;">
-              <p  style="color: white"> {{notizElement.notizInput === '' ? "Keine Notiz" : notizElement.notizInput}} <br><b>  Datum: </b> {{notizElement.notizInput === '' ? "" : notizElement.date}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div *ngIf="showTerasseBool">
-        <div *ngFor="let notizElement of notizElements">
-          <div *ngIf="notizElement.departmentNotizInput === 'Terasse'">
-            <div style="border: solid 3px greenyellow; padding: 10px; margin: 10px;">
-              <p  style="color: white"> {{notizElement.notizInput === '' ? "Keine Notiz" : notizElement.notizInput}} <br><b>  Datum: </b> {{notizElement.notizInput === '' ? "" : notizElement.date}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div *ngIf="showTerrasseEdelweissBool">
-        <div *ngFor="let notizElement of notizElements">
-          <div *ngIf="notizElement.departmentNotizInput === 'TerrasseEdelweiss'">
+          <div *ngIf="notizElement.departmentNotizInput === 'Wasser'">
             <div style="border: solid 3px greenyellow; padding: 10px; margin: 10px;">
               <p  style="color: white"> {{notizElement.notizInput === '' ? "Keine Notiz" : notizElement.notizInput}} <br><b>  Datum: </b> {{notizElement.notizInput === '' ? "" : notizElement.date}}</p>
             </div>

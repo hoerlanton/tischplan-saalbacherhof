@@ -85,30 +85,24 @@ module.exports = {
             console.log(tableValue + " " + departmentValue);
 
 
-            if (departmentValue === "BerglerStubeHubertusStube") {
-                departmentValueDB = "berglerStubeHubertusStube";
+            if (departmentValue === "Wasser") {
+                departmentValueDB = "wasser";
             }
-            else if (departmentValue === "Bauernstube") {
-                departmentValueDB = "Bauernstube";
+            else if (departmentValue === "Erde") {
+                departmentValueDB = "erde";
             }
-            else if (departmentValue === "WaeldlerStubeKristallStube") {
-                departmentValueDB = "waeldlerStubeKristallStube";
+            else if (departmentValue === "Feuer") {
+                departmentValueDB = "feuer";
             }
-            else if (departmentValue === "EdelweissKaminStube") {
-                departmentValueDB = "edelweissKaminStube";
+            else if (departmentValue === "Luft") {
+                departmentValueDB = "luft";
             }
-            else if (departmentValue === "TeestubeTeelounge") {
-                departmentValueDB = "teestubeTeelounge";
-            }
-            else if (departmentValue === "Terasse") {
-                departmentValueDB = "terasse";
-            }
-            else if (departmentValue === "TerrasseEdelweiss") {
-                departmentValueDB = "terrasseEdelweiss";
+            else if (departmentValue === "Metall") {
+                departmentValueDB = "metall";
             }
 
             setTimeout(function () {
-                db.hubertusTables.update(
+                db.saalbacherhofTables.update(
                     {
                         department: departmentValueDB,
                         "tables.number": tableValue
@@ -177,7 +171,7 @@ module.exports = {
 
 
             setTimeout(function () {
-                db.hubertusTables.findOne(
+                db.saalbacherhofTables.findOne(
                     {
                         department: departmentValueDB,
                         "tables.number": tableValue
@@ -197,7 +191,7 @@ module.exports = {
                         console.log("Länge tables firstplace" + JSON.stringify(tablesfirst.tables[0]).length);
                         for (let i = 0; i < umsetzen[0].groups.length; i++) {
                             if (nameValue[i]) {
-                                db.hubertusTables.update(
+                                db.saalbacherhofTables.update(
                                     {
                                         department: departmentValueDB,
                                         "tables.number": tableValue
@@ -224,7 +218,7 @@ module.exports = {
                                         console.log("addInformationToTable updated successfully");
                                     });
                             } else {
-                                db.hubertusTables.update(
+                                db.saalbacherhofTables.update(
                                     {
                                         department: departmentValueDB,
                                         "tables.number": tableValue
@@ -253,7 +247,7 @@ module.exports = {
             }, 200);
         }
         setTimeout(function () {
-            db.hubertusTables.find(
+            db.saalbacherhofTables.find(
                 {
                     department: departmentValueDB,
                     "tables.number": tableValue

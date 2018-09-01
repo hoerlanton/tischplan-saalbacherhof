@@ -16,13 +16,11 @@ import { PrintComponent } from './components/digitalerTischplan/print/print.comp
 import { FormComponent } from './components/digitalerTischplan/form/form.component';
 import { DepartmentsComponent } from './components/digitalerTischplan/departments/departments.component';
 import { DepartmentmenuComponent } from './components/digitalerTischplan/departmentmenu/departmentmenu.component';
-import { BauernstubeComponent } from './components/digitalerTischplan/departments/bauernstube/bauernstube.component';
-import { BerglerStubeHubertusStubeComponent } from './components/digitalerTischplan/departments/bergler-stube-hubertus-stube/bergler-stube-hubertus-stube.component';
-import { WaeldlerStubeKristallStubeComponent } from './components/digitalerTischplan/departments/waeldler-stube-kristall-stube/waeldler-stube-kristall-stube.component';
-import { EdelweissKaminStubeComponent } from './components/digitalerTischplan/departments/edelweiss-kamin-stube/edelweiss-kamin-stube.component';
-import { TeestubeTeeloungeComponent } from './components/digitalerTischplan/departments/teestube-teelounge/teestube-teelounge.component';
-import { TerasseComponent } from './components/digitalerTischplan/departments/terasse/terasse.component';
-import { TerrasseEdelweissComponent } from './components/digitalerTischplan/departments/terrasse-edelweiss/terrasse-edelweiss.component';
+import { ErdeComponent } from './components/digitalerTischplan/departments/erde/erde.component';
+import { LuftComponent } from './components/digitalerTischplan/departments/luft/luft.component';
+import { WasserComponent } from './components/digitalerTischplan/departments/wasser/wasser.component';
+import { MetallComponent } from './components/digitalerTischplan/departments/metall/metall.component';
+import { FeuerComponent } from './components/digitalerTischplan/departments/feuer/feuer.component';
 import { AlleComponent } from './components/digitalerTischplan/departments/alle/alle.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { RouterModule, Routes } from '@angular/router';
@@ -56,13 +54,11 @@ const appRoutes: Routes =  [
     FormComponent,
     DepartmentsComponent,
     DepartmentmenuComponent,
-    BauernstubeComponent,
-    TerasseComponent,
-    TerrasseEdelweissComponent,
-    BerglerStubeHubertusStubeComponent,
-    WaeldlerStubeKristallStubeComponent,
-    EdelweissKaminStubeComponent,
-    TeestubeTeeloungeComponent,
+    ErdeComponent,
+    FeuerComponent,
+    LuftComponent,
+    WasserComponent,
+    MetallComponent,
     AlleComponent,
     LoginComponent,
     RegisterComponent,

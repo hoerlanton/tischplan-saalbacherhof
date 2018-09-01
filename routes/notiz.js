@@ -6,7 +6,7 @@
     getNotiz: function (req, res, db) {
         console.log("tables get called");
         //Get guests from Mongo DB
-        db.newNotizHubertusDb.find(function (err, information) {
+        db.newNotizSaalbacherhofDb.find(function (err, information) {
             if (err) {
                 res.send(err);
             }
@@ -20,7 +20,7 @@
 
         console.log(req.body);
         let newInformation = req.body;
-        db.newNotizHubertusDb.update(
+        db.newNotizSaalbacherhofDb.update(
             {
                 departmentNotizInput: newInformation.departmentNotizInput,
             },
@@ -38,7 +38,7 @@
             });
 
         setTimeout(function () {
-            db.newNotizHubertusDb.find(
+            db.newNotizSaalbacherhofDb.find(
                 function (err, notiz) {
                     if (err) {
                         res.send(err);
