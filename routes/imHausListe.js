@@ -39,7 +39,7 @@ module.exports = {
                 "pinfo1": imHausListeDataArrayConcatSplit[15],
                 "pinfo2": imHausListeDataArrayConcatSplit[32],
                 "pinfo3": imHausListeDataArrayConcatSplit[49],
-                "personenAnzahl": imHausListeDataArrayConcatSplit[74] + " / " + imHausListeDataArrayConcatSplit[77] + " / " + imHausListeDataArrayConcatSplit[78],
+                "personenAnzahl": imHausListeDataArrayConcatSplit[74] + " / " + imHausListeDataArrayConcatSplit[77],
                 "kategorie": imHausListeDataArrayConcatSplit[85],
             });
         }
@@ -83,7 +83,7 @@ module.exports = {
                     console.log(nameValueArray[i]);
                     console.log(zimmernummerValueArray[i]);
 
-                    db.lechImHausListe.update(
+                    db.saalbacherhofImHausListe.update(
                         {
                             name1: nameValueArray[i],
                             "zimmernummer": zimmernummerValueArray[i]
@@ -96,7 +96,7 @@ module.exports = {
                             if (err) {
                                 console.log("Error");
                             }
-                            console.log("lechImHausListe Update successful");
+                            console.log("saalbacherhofImHausListe Update successful");
                             console.log(imHausListe);
                         });
 
@@ -108,7 +108,7 @@ module.exports = {
                 console.log(nameValueArray[0]);
                 console.log(zimmernummerValueArray[0]);
 
-                db.lechImHausListe.update(
+                db.saalbacherhofImHausListe.update(
                     {
                         name1: nameValueArray[0],
                         "zimmernummer": zimmernummerValueArray[0]
@@ -126,7 +126,7 @@ module.exports = {
             }}
 
         setTimeout(function () {
-            db.lechImHausListe.find(
+            db.saalbacherhofImHausListe.find(
                 {},
                 function (err, imHausListe) {
                     if (err) {

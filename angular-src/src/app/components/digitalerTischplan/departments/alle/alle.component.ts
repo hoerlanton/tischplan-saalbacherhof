@@ -39,12 +39,13 @@ export class AlleComponent implements PipeTransform {
   }
 
   getStyle(j) {
-    if (j != "-") {
+    if (j.pinfo1Value != "" || j.pinfo2Value != "" || j.pinfo3Value != "") {
       return "solid 3px red";
     } else {
       return "";
     }
   }
+
 
   transform(tables: Array<any>, term: any) {
     //console.log("term");

@@ -4,7 +4,7 @@
 
 module.exports = {
     addTable: function (db, tableNumber, departmentValue, topValue, leftValue, height, width) {
-        if (tableNumber === '005' && topValue === '312' && leftValue === '722' && height === '187') {
+        if (tableNumber === 'W005' && topValue === '312' && leftValue === '722' && height === '187') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -24,7 +24,7 @@ module.exports = {
                 {department: departmentValue}, {
                     $pull: {
                         tables: {
-                            "number": "006",
+                            "number": "W006",
                         }
                     }
                 },
@@ -37,7 +37,7 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '011' && topValue === '619' && leftValue === '532' && height === '100') {
+        } else if (tableNumber === 'W011' && topValue === '619' && leftValue === '532' && height === '100') {
                 db.saalbacherhofTables.update(
                     {
                         department: departmentValue,
@@ -58,7 +58,7 @@ module.exports = {
                     {department: departmentValue}, {
                         $pull: {
                             tables: {
-                                "number": "012",
+                                "number": "W012",
                             }
                         }
                     },
@@ -71,7 +71,7 @@ module.exports = {
                         console.log("removeTable Update successful");
                         console.log(tables);
                     });
-        } else if (tableNumber === '011' && topValue === '515' && leftValue === '532' && height === '200') {
+        } else if (tableNumber === 'W011' && topValue === '515' && leftValue === '532' && height === '200') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -92,7 +92,7 @@ module.exports = {
                 {department: departmentValue}, {
                     $pull: {
                         tables: {
-                            "number": "013",
+                            "number": "W013",
                         }
                     }
                 },
@@ -105,7 +105,7 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '011' && topValue === '407' && leftValue === '532' && height === '300') {
+        } else if (tableNumber === 'W011' && topValue === '407' && leftValue === '532' && height === '300') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -126,7 +126,7 @@ module.exports = {
                 {department: departmentValue}, {
                     $pull: {
                         tables: {
-                            "number": "014",
+                            "number": "W014",
                         }
                     }
                 },
@@ -139,7 +139,7 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '012' && topValue === '515' && leftValue === '532' && height === '100') {
+        } else if (tableNumber === 'W012' && topValue === '515' && leftValue === '532' && height === '100') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -160,7 +160,7 @@ module.exports = {
                 {department: departmentValue}, {
                     $pull: {
                         tables: {
-                            "number": "013",
+                            "number": "W013",
                         }
                     }
                 },
@@ -173,7 +173,7 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '012' && topValue === '407' && leftValue === '532' && height === '200') {
+        } else if (tableNumber === 'W012' && topValue === '407' && leftValue === '532' && height === '200') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -194,7 +194,7 @@ module.exports = {
                 {department: departmentValue}, {
                     $pull: {
                         tables: {
-                            "number": "014",
+                            "number": "W014",
                         }
                     }
                 },
@@ -207,7 +207,7 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '013' && topValue === '407' && leftValue === '532' && height === '100') {
+        } else if (tableNumber === 'W013' && topValue === '407' && leftValue === '532' && height === '100') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -228,7 +228,7 @@ module.exports = {
                 {department: departmentValue}, {
                     $pull: {
                         tables: {
-                            "number": "014",
+                            "number": "W014",
                         }
                     }
                 },
@@ -241,7 +241,7 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '024' && topValue === '298' && leftValue === '27' && height === '100') {
+        } else if (tableNumber === 'W024' && topValue === '298' && leftValue === '27' && height === '100') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -261,7 +261,7 @@ module.exports = {
                 {department: departmentValue}, {
                     $pull: {
                         tables: {
-                            "number": "025",
+                            "number": "W025",
                         }
                     }
                 },
@@ -274,7 +274,7 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '024' && topValue === '298' && leftValue === '27' && height === '200') {
+        } else if (tableNumber === 'W024' && topValue === '298' && leftValue === '27' && height === '200') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -294,7 +294,7 @@ module.exports = {
                 {department: departmentValue}, {
                     $pull: {
                         tables: {
-                            "number": "026",
+                            "number": "W026",
                         }
                     }
                 },
@@ -307,7 +307,7 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '025' && topValue === '408' && leftValue === '27' && height === '100') {
+        } else if (tableNumber === 'W025' && topValue === '408' && leftValue === '27' && height === '100') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -327,7 +327,7 @@ module.exports = {
                 {department: departmentValue}, {
                     $pull: {
                         tables: {
-                            "number": "026",
+                            "number": "W026",
                         }
                     }
                 },

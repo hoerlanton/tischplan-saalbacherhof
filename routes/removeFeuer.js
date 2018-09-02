@@ -6,7 +6,7 @@
 module.exports = {
     removeTable: function (db, tableNumber, departmentValue, topValue, leftValue, height, width) {
 
-        if (tableNumber === '001' && topValue === '630' && leftValue === '1135' && height === '190') {
+        if (tableNumber === 'F001' && topValue === '630' && leftValue === '1135' && height === '190') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -32,7 +32,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "002",
+                                "number": "F002",
                                 "leftValue": "1135",
                                 "topValue": "630",
                                 "bgColor": "#ffffff",
@@ -53,7 +53,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '001' && topValue === '520' && leftValue === '1135' && height === '285') {
+        } else if (tableNumber === 'F001' && topValue === '520' && leftValue === '1135' && height === '285') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -79,7 +79,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "003",
+                                "number": "F003",
                                 "leftValue": "1135",
                                 "topValue": "520",
                                 "bgColor": "#ffffff",
@@ -100,7 +100,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '001' && topValue === '410' && leftValue === '1135' && height === '380') {
+        } else if (tableNumber === 'F001' && topValue === '410' && leftValue === '1135' && height === '380') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -126,7 +126,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "004",
+                                "number": "F004",
                                 "leftValue": "1135",
                                 "topValue": "410",
                                 "bgColor": "#ffffff",
@@ -147,7 +147,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '001' && topValue === '300' && leftValue === '1135' && height === '475') {
+        } else if (tableNumber === 'F001' && topValue === '300' && leftValue === '1135' && height === '475') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -173,7 +173,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "005",
+                                "number": "F005",
                                 "leftValue": "1135",
                                 "topValue": "300",
                                 "bgColor": "#ffffff",
@@ -194,7 +194,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '001' && topValue === '109' && leftValue === '1135' && height === '570') {
+        } else if (tableNumber === 'F001' && topValue === '109' && leftValue === '1135' && height === '570') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -220,7 +220,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "006",
+                                "number": "F006",
                                 "leftValue": "1167",
                                 "topValue": "109",
                                 "bgColor": "#ffffff",
@@ -242,7 +242,7 @@ module.exports = {
                     console.log("addTable Update successful");
                 });
 
-        } else if (tableNumber === '002' && topValue === '520' && leftValue === '1135' && height === '190') {
+        } else if (tableNumber === 'F002' && topValue === '520' && leftValue === '1135' && height === '190') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -268,7 +268,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "003",
+                                "number": "F003",
                                 "leftValue": "1135",
                                 "topValue": "520",
                                 "bgColor": "#ffffff",
@@ -289,7 +289,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '002' && topValue === '410' && leftValue === '1135' && height === '285') {
+        } else if (tableNumber === 'F002' && topValue === '410' && leftValue === '1135' && height === '285') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -315,7 +315,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "004",
+                                "number": "F004",
                                 "leftValue": "1135",
                                 "topValue": "410",
                                 "bgColor": "#ffffff",
@@ -336,7 +336,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '002' && topValue === '300' && leftValue === '1135' && height === '380') {
+        } else if (tableNumber === 'F002' && topValue === '300' && leftValue === '1135' && height === '380') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -362,7 +362,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "005",
+                                "number": "F005",
                                 "leftValue": "1135",
                                 "topValue": "300",
                                 "bgColor": "#ffffff",
@@ -383,7 +383,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '002' && topValue === '109' && leftValue === '1135' && height === '475') {
+        } else if (tableNumber === 'F002' && topValue === '109' && leftValue === '1135' && height === '475') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -409,7 +409,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "006",
+                                "number": "F006",
                                 "leftValue": "1167",
                                 "topValue": "109",
                                 "bgColor": "#ffffff",
@@ -430,7 +430,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '003' && topValue === '410' && leftValue === '1135' && height === '190') {
+        } else if (tableNumber === 'F003' && topValue === '410' && leftValue === '1135' && height === '190') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -456,7 +456,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "004",
+                                "number": "F004",
                                 "leftValue": "1135",
                                 "topValue": "410",
                                 "bgColor": "#ffffff",
@@ -477,7 +477,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '003' && topValue === '300' && leftValue === '1135' && height === '285') {
+        } else if (tableNumber === 'F003' && topValue === '300' && leftValue === '1135' && height === '285') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -503,7 +503,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "005",
+                                "number": "F005",
                                 "leftValue": "1135",
                                 "topValue": "300",
                                 "bgColor": "#ffffff",
@@ -524,7 +524,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '003' && topValue === '109' && leftValue === '1135' && height === '380') {
+        } else if (tableNumber === 'F003' && topValue === '109' && leftValue === '1135' && height === '380') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -550,7 +550,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "006",
+                                "number": "F006",
                                 "leftValue": "1167",
                                 "topValue": "109",
                                 "bgColor": "#ffffff",
@@ -571,7 +571,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '004' && topValue === '300' && leftValue === '1135' && height === '190') {
+        } else if (tableNumber === 'F004' && topValue === '300' && leftValue === '1135' && height === '190') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -597,7 +597,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "005",
+                                "number": "F005",
                                 "leftValue": "1135",
                                 "topValue": "300",
                                 "bgColor": "#ffffff",
@@ -618,7 +618,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '004' && topValue === '109' && leftValue === '1135' && height === '285') {
+        } else if (tableNumber === 'F004' && topValue === '109' && leftValue === '1135' && height === '285') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -644,7 +644,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "006",
+                                "number": "F006",
                                 "leftValue": "1167",
                                 "topValue": "109",
                                 "bgColor": "#ffffff",
@@ -665,7 +665,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '005' && topValue === '109' && leftValue === '1135' && height === '190') {
+        } else if (tableNumber === 'F005' && topValue === '109' && leftValue === '1135' && height === '190') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -691,7 +691,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "006",
+                                "number": "F006",
                                 "leftValue": "1167",
                                 "topValue": "109",
                                 "bgColor": "#ffffff",
@@ -712,7 +712,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '010' && topValue === '109' && leftValue === '64' && width === '260') {
+        } else if (tableNumber === 'F010' && topValue === '109' && leftValue === '64' && width === '260') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -738,7 +738,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "011",
+                                "number": "F011",
                                 "leftValue": "64",
                                 "topValue": "109",
                                 "bgColor": "#ffffff",
@@ -759,7 +759,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '012' && topValue === '335' && leftValue === '87' && height === '190') {
+        } else if (tableNumber === 'F012' && topValue === '335' && leftValue === '87' && height === '190') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -784,7 +784,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "013",
+                                "number": "F013",
                                 "leftValue": "87",
                                 "topValue": "468",
                                 "bgColor": "#ffffff",
@@ -805,7 +805,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '012' && topValue === '335' && leftValue === '87' && height === '285') {
+        } else if (tableNumber === 'F012' && topValue === '335' && leftValue === '87' && height === '285') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -830,7 +830,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "015",
+                                "number": "F015",
                                 "leftValue": "72",
                                 "topValue": "617",
                                 "bgColor": "#ffffff",
@@ -851,7 +851,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '013' && topValue === '468' && leftValue === '87' && height === '190') {
+        } else if (tableNumber === 'F013' && topValue === '468' && leftValue === '87' && height === '190') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -876,7 +876,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "015",
+                                "number": "F015",
                                 "leftValue": "72",
                                 "topValue": "617",
                                 "bgColor": "#ffffff",
@@ -897,7 +897,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '016' && topValue === '804' && leftValue === '166' && width === '300') {
+        } else if (tableNumber === 'F016' && topValue === '804' && leftValue === '166' && width === '300') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -922,7 +922,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "017",
+                                "number": "F017",
                                 "leftValue": "422",
                                 "topValue": "804",
                                 "bgColor": "#ffffff",
@@ -943,7 +943,7 @@ module.exports = {
                     }
                     console.log("addTable Update successful");
                 });
-        } else if (tableNumber === '018' && topValue === '804' && leftValue === '647' && width === '300') {
+        } else if (tableNumber === 'F018' && topValue === '804' && leftValue === '647' && width === '300') {
             db.saalbacherhofTables.update(
                 {
                     department: departmentValue,
@@ -968,7 +968,7 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "feuer",
-                                "number": "019",
+                                "number": "F019",
                                 "leftValue": "878",
                                 "topValue": "804",
                                 "bgColor": "#ffffff",

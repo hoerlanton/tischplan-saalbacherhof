@@ -120,7 +120,7 @@ span {
 
 }
 
-#containerRestaurant, #containerPanorama, #containerWintergarten, #containerSonnbergZirbn, #containerTerasse, #containerTerrasseFeuer, #containerErde {
+#containerMetall, #containerWasser, #containerLuft, #containerFeuer, #containerErde {
   border-radius: 3px;
   border: solid 1px grey;
 }
