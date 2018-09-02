@@ -3,24 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2b12636d-0934-43d0-9e11-bbac60639e35" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/alle/alle.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/alle/alle.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/alle/alle.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/alle/alle.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/print/print.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/print/print.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tableplan/tableplan.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tableplan/tableplan.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.css" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/default.json" afterPath="$PROJECT_DIR$/config/default.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/main.bundle.js" afterPath="$PROJECT_DIR$/public/main.bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/main.bundle.js.map" afterPath="$PROJECT_DIR$/public/main.bundle.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/addFeuer.js" afterPath="$PROJECT_DIR$/routes/addFeuer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/addTablesErde.js" afterPath="$PROJECT_DIR$/routes/addTablesErde.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/addTablesLuft.js" afterPath="$PROJECT_DIR$/routes/addTablesLuft.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/addWasser.js" afterPath="$PROJECT_DIR$/routes/addWasser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/imHausListe.js" afterPath="$PROJECT_DIR$/routes/imHausListe.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/removeFeuer.js" afterPath="$PROJECT_DIR$/routes/removeFeuer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/removeLuft.js" afterPath="$PROJECT_DIR$/routes/removeLuft.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/removeTablesErde.js" afterPath="$PROJECT_DIR$/routes/removeTablesErde.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/removeWasser.js" afterPath="$PROJECT_DIR$/routes/removeWasser.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -58,11 +41,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="print.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="print.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/print/print.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/default.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -103,26 +106,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="560">
               <caret line="144" column="32" lean-forward="false" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="removeMetall.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/removeMetall.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="removeTablesErde.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/removeTablesErde.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="359" column="43" lean-forward="true" selection-start-line="359" selection-start-column="43" selection-end-line="359" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -242,7 +225,6 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/alle/alle.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/alle/alle.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tableplan/tableplan.component.html" />
-        <option value="$PROJECT_DIR$/config/default.json" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.css" />
         <option value="$PROJECT_DIR$/routes/removeLuft.js" />
         <option value="$PROJECT_DIR$/routes/addTablesLuft.js" />
@@ -255,6 +237,7 @@
         <option value="$PROJECT_DIR$/routes/imHausListe.js" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/tischplan.component.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/print/print.component.ts" />
+        <option value="$PROJECT_DIR$/config/default.json" />
       </list>
     </option>
   </component>
@@ -1156,12 +1139,12 @@
       <workItem from="1533029868135" duration="1187000" />
       <workItem from="1533195772653" duration="617000" />
       <workItem from="1533559849951" duration="7370000" />
-      <workItem from="1535789371255" duration="37238000" />
+      <workItem from="1535789371255" duration="37365000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1262451000" />
+    <option name="totallyTimeSpent" value="1262578000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1241,14 +1224,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="167" column="11" lean-forward="false" selection-start-line="167" selection-start-column="11" selection-end-line="167" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-240">
@@ -1554,14 +1529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/default.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/erde/erde.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1710,6 +1677,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/default.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
           <folding />
         </state>
       </provider>
