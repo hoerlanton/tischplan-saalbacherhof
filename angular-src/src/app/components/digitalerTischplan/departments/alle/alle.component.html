@@ -5,22 +5,17 @@
         <div class="table" [ngStyle]="{'background-color': '#' + table.bgColor}">
           <div *ngIf="table.isBesetzt === 'true'">
             <div [style.border]="getStyle(table.traceValue)">
-              <div *ngIf="table.nameValue">
+              <div *ngIf="table.name1Value">
                 <p style="background-color: #FFFFFF; padding: 10px">
-                <b> Zimmernummer:</b> {{table.zimmernummerValue}}<br>
-                <b> Name:</b> {{table.nameValue}}<br>
-                <b> Anreise Datum:</b> {{table.anreiseValue}}<br>
-                <b> Abreise Datum:</b> {{table.abreiseValue}}<br>
-                <b> Personenanzahl:</b> {{table.personenAnzahlValue}}<br>
-                <b> Nation:</b> {{table.nationValue}}<br>
-                <b> Sprache:</b> {{table.spracheValue}}<br>
-                <b> Preis Typ:</b> {{table.preisTypValue}}<br>
-                <b> Reisebüro:</b> {{table.reisebueroValue}}<br>
-                <b> Kategorie:</b> {{table.kategorieValue}}<br>
-                <b> Notiz1:</b> {{table.notiz1Value}}<br>
-                <b> Notiz2:</b> {{table.notiz2Value}}<br>
-                <b> Trace:</b> {{table.traceValue}}<br>
-                <b> Bemerkung:</b> {{table.bemerkungValue}}<br>
+                  <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>
+                  <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
+                  <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
+                  <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
+                  <b> Name 1:</b> {{group.name1Value}}<br>
+                  <b> Info 1:</b> {{group.pinfo1Value}}<br>
+                  <b> Info 2:</b> {{group.pinfo2Value}}<br>
+                  <b> Info 3:</b> {{group.pinfo3Value}}<br>
+                  <b> Kategorie:</b> {{group.kategorieValue}}<br>
                 </p>
               </div>
             </div>

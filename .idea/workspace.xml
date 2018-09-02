@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b12636d-0934-43d0-9e11-bbac60639e35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/default.json" afterPath="$PROJECT_DIR$/config/default.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/alle/alle.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/alle/alle.component.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,16 +25,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-2385">
               <caret line="220" column="48" lean-forward="true" selection-start-line="220" selection-start-column="48" selection-end-line="220" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/form/form.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -82,11 +72,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/default.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+            <state relative-caret-position="45">
+              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="alle.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/alle/alle.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="erde.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/erde/erde.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="21" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -108,18 +118,6 @@
             <state relative-caret-position="150">
               <caret line="10" column="79" lean-forward="true" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/form/form.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#79#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -190,7 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/terrasse-edelweiss/terrasse-edelweiss.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/form/form.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/departments.component.html" />
@@ -241,6 +238,7 @@
         <option value="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/print/print.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/navigation/navigation.component.ts" />
         <option value="$PROJECT_DIR$/config/default.json" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/alle/alle.component.html" />
       </list>
     </option>
   </component>
@@ -889,6 +887,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="departments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tischplan-saalbacherhof" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tischplan-saalbacherhof" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="digitalerTischplan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="departmentmenu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1104,12 +1140,12 @@
       <workItem from="1533029868135" duration="1187000" />
       <workItem from="1533195772653" duration="617000" />
       <workItem from="1533559849951" duration="7370000" />
-      <workItem from="1535789371255" duration="34055000" />
+      <workItem from="1535789371255" duration="34657000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1259268000" />
+    <option name="totallyTimeSpent" value="1259870000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1189,14 +1225,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/erde/erde.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1550,14 +1578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/erde/erde.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/feuer/feuer.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1668,8 +1688,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/default.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        <state relative-caret-position="45">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/erde/erde.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="21" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-src/src/app/components/digitalerTischplan/departments/alle/alle.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
           <folding />
         </state>
       </provider>
