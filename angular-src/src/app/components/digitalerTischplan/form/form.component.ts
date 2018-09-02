@@ -79,31 +79,31 @@ export class FormComponent implements OnInit {
             if (Information === null) {
               return;
             } else {
-              if (Information.tables[0].department === "Erde") {
+              if (Information.tables[0].department === "erde") {
                 for (let i = 0; i < this.tablesErde.length; i++) {
                   if (this.tablesErde[i].number === Information.tables[0].number) {
                     this.tablesErde[i] = Information.tables[0];
                   }
                 }
-              } else if (Information.tables[0].department === "Wasser") {
+              } else if (Information.tables[0].department === "wasser") {
                 for (let i = 0; i < this.tablesWasser.length; i++) {
                   if (this.tablesWasser[i].number === Information.tables[0].number) {
                     this.tablesWasser[i] = Information.tables[0];
                   }
                 }
-              } else if (Information.tables[0].department === "Luft") {
+              } else if (Information.tables[0].department === "luft") {
                 for (let i = 0; i < this.tablesLuft.length; i++) {
                   if (this.tablesLuft[i].number === Information.tables[0].number) {
                     this.tablesLuft[i] = Information.tables[0];
                   }
                 }
-              } else if (Information.tables[0].department === "Feuer") {
+              } else if (Information.tables[0].department === "feuer") {
                 for (let i = 0; i < this.tablesFeuer.length; i++) {
                   if (this.tablesFeuer[i].number === Information.tables[0].number) {
                     this.tablesFeuer[i] = Information.tables[0];
                   }
                 }
-              } else if (Information.tables[0].department === "Metall") {
+              } else if (Information.tables[0].department === "metall") {
                 for (let i = 0; i < this.tablesMetall.length; i++) {
                   if (this.tablesMetall[i].number === Information.tables[0].number) {
                     this.tablesMetall[i] = Information.tables[0];

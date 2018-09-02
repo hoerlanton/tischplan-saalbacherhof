@@ -43,20 +43,19 @@ module.exports = "<router-outlet></router-outlet>\n"
 /***/ }),
 
 /***/ "../../../../../src/app/app.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var tischplan_service_1 = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'App works!';
@@ -64,98 +63,66 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 AppComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]],
+        providers: [tischplan_service_1.TischplanService],
     })
 ], AppComponent);
-
+exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/app/app.module.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_digitalerTischplan_tischplan_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_dragula__ = __webpack_require__("../../../../ng2-dragula/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_dragula___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_ng2_dragula__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_dropdown__ = __webpack_require__("../../../../ngx-bootstrap/dropdown/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_digitalerTischplan_im_haus_liste_im_haus_liste_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_digitalerTischplan_tableplan_tableplan_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/tableplan/tableplan.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_digitalerTischplan_navigation_navigation_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_digitalerTischplan_print_print_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/print/print.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_digitalerTischplan_form_form_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/form/form.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_digitalerTischplan_departments_departments_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/departments.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_digitalerTischplan_departmentmenu_departmentmenu_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_digitalerTischplan_departments_erde_erde_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/erde/erde.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_digitalerTischplan_departments_luft_luft_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/luft/luft.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_digitalerTischplan_departments_wasser_wasser_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/wasser/wasser.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_digitalerTischplan_departments_metall_metall_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/metall/metall.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_digitalerTischplan_departments_feuer_feuer_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/feuer/feuer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_digitalerTischplan_departments_alle_alle_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/alle/alle.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ng2_search_filter__ = __webpack_require__("../../../../ng2-search-filter/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ng2_search_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_ng2_search_filter__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_digitalerTischplan_login_login_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_digitalerTischplan_register_register_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/register/register.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_digitalerTischplan_profile_profile_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/profile/profile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var forms_1 = __webpack_require__("../../../forms/@angular/forms.es5.js");
+var http_1 = __webpack_require__("../../../http/@angular/http.es5.js");
+var app_component_1 = __webpack_require__("../../../../../src/app/app.component.ts");
+var tischplan_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.ts");
+var angular2_flash_messages_1 = __webpack_require__("../../../../angular2-flash-messages/index.js");
+var ng2_dragula_1 = __webpack_require__("../../../../ng2-dragula/index.js");
+var dropdown_1 = __webpack_require__("../../../../ngx-bootstrap/dropdown/index.js");
+var im_haus_liste_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.ts");
+var tableplan_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/tableplan/tableplan.component.ts");
+var navigation_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.ts");
+var print_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/print/print.component.ts");
+var form_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/form/form.component.ts");
+var departments_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/departments.component.ts");
+var departmentmenu_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.ts");
+var erde_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/erde/erde.component.ts");
+var luft_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/luft/luft.component.ts");
+var wasser_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/wasser/wasser.component.ts");
+var metall_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/metall/metall.component.ts");
+var feuer_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/feuer/feuer.component.ts");
+var alle_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/alle/alle.component.ts");
+var ng2_search_filter_1 = __webpack_require__("../../../../ng2-search-filter/dist/index.js");
+var router_1 = __webpack_require__("../../../router/@angular/router.es5.js");
+var login_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/login/login.component.ts");
+var register_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/register/register.component.ts");
+var profile_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/profile/profile.component.ts");
+var auth_guard_1 = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+var validate_service_1 = __webpack_require__("../../../../../src/app/services/validate.service.ts");
+var auth_service_1 = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 var appRoutes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_24__components_digitalerTischplan_login_login_component__["a" /* LoginComponent */] },
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_24__components_digitalerTischplan_login_login_component__["a" /* LoginComponent */] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_5__components_digitalerTischplan_tischplan_component__["a" /* TischplanComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_27__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'register', component: __WEBPACK_IMPORTED_MODULE_25__components_digitalerTischplan_register_register_component__["a" /* RegisterComponent */] },
-    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_26__components_digitalerTischplan_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_27__guards_auth_guard__["a" /* AuthGuard */]] }
+    { path: '', component: login_component_1.LoginComponent },
+    { path: 'login', component: login_component_1.LoginComponent },
+    { path: 'dashboard', component: tischplan_component_1.TischplanComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'register', component: register_component_1.RegisterComponent },
+    { path: 'profile', component: profile_component_1.ProfileComponent, canActivate: [auth_guard_1.AuthGuard] }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -163,43 +130,43 @@ var AppModule = (function () {
     return AppModule;
 }());
 AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+    core_1.NgModule({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_5__components_digitalerTischplan_tischplan_component__["a" /* TischplanComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__components_digitalerTischplan_im_haus_liste_im_haus_liste_component__["a" /* ImHausListeComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__components_digitalerTischplan_tableplan_tableplan_component__["a" /* TableplanComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__components_digitalerTischplan_navigation_navigation_component__["a" /* NavigationComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__components_digitalerTischplan_print_print_component__["a" /* PrintComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__components_digitalerTischplan_form_form_component__["a" /* FormComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__components_digitalerTischplan_departments_departments_component__["a" /* DepartmentsComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__components_digitalerTischplan_departmentmenu_departmentmenu_component__["a" /* DepartmentmenuComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__components_digitalerTischplan_departments_erde_erde_component__["a" /* ErdeComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__components_digitalerTischplan_departments_feuer_feuer_component__["a" /* FeuerComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__components_digitalerTischplan_departments_luft_luft_component__["a" /* LuftComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__components_digitalerTischplan_departments_wasser_wasser_component__["a" /* WasserComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__components_digitalerTischplan_departments_metall_metall_component__["a" /* MetallComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__components_digitalerTischplan_departments_alle_alle_component__["a" /* AlleComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__components_digitalerTischplan_login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_25__components_digitalerTischplan_register_register_component__["a" /* RegisterComponent */],
-            __WEBPACK_IMPORTED_MODULE_26__components_digitalerTischplan_profile_profile_component__["a" /* ProfileComponent */]
+            app_component_1.AppComponent,
+            tischplan_component_1.TischplanComponent,
+            im_haus_liste_component_1.ImHausListeComponent,
+            tableplan_component_1.TableplanComponent,
+            navigation_component_1.NavigationComponent,
+            print_component_1.PrintComponent,
+            form_component_1.FormComponent,
+            departments_component_1.DepartmentsComponent,
+            departmentmenu_component_1.DepartmentmenuComponent,
+            erde_component_1.ErdeComponent,
+            feuer_component_1.FeuerComponent,
+            luft_component_1.LuftComponent,
+            wasser_component_1.WasserComponent,
+            metall_component_1.MetallComponent,
+            alle_component_1.AlleComponent,
+            login_component_1.LoginComponent,
+            register_component_1.RegisterComponent,
+            profile_component_1.ProfileComponent
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_http__["HttpModule"],
-            __WEBPACK_IMPORTED_MODULE_6_angular2_flash_messages__["FlashMessagesModule"],
-            __WEBPACK_IMPORTED_MODULE_7_ng2_dragula__["DragulaModule"],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* ReactiveFormsModule */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_dropdown__["a" /* BsDropdownModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_22_ng2_search_filter__["Ng2SearchPipeModule"],
-            __WEBPACK_IMPORTED_MODULE_23__angular_router__["b" /* RouterModule */].forRoot(appRoutes)
+            forms_1.FormsModule,
+            http_1.HttpModule,
+            angular2_flash_messages_1.FlashMessagesModule,
+            ng2_dragula_1.DragulaModule,
+            forms_1.ReactiveFormsModule,
+            platform_browser_1.BrowserModule,
+            dropdown_1.BsDropdownModule.forRoot(),
+            ng2_search_filter_1.Ng2SearchPipeModule,
+            router_1.RouterModule.forRoot(appRoutes)
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_28__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_29__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_27__guards_auth_guard__["a" /* AuthGuard */]],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+        providers: [validate_service_1.ValidateService, auth_service_1.AuthService, auth_guard_1.AuthGuard],
+        bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
-
+exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map
 
 /***/ }),
@@ -230,11 +197,10 @@ module.exports = "<div class=\"row4\" style=\"min-height: 80px;\">\n  <div class
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DepartmentmenuComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -244,18 +210,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
 var DepartmentmenuComponent = (function () {
     function DepartmentmenuComponent() {
-        this.showErdeBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showFeuerBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showLuftBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showMetallBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showWasserBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showAlleBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showNotizFormBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showInfoFormBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showTablePlanBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.showErdeBoolChange = new core_1.EventEmitter();
+        this.showFeuerBoolChange = new core_1.EventEmitter();
+        this.showLuftBoolChange = new core_1.EventEmitter();
+        this.showMetallBoolChange = new core_1.EventEmitter();
+        this.showWasserBoolChange = new core_1.EventEmitter();
+        this.showAlleBoolChange = new core_1.EventEmitter();
+        this.showNotizFormBoolChange = new core_1.EventEmitter();
+        this.showInfoFormBoolChange = new core_1.EventEmitter();
+        this.showTablePlanBoolChange = new core_1.EventEmitter();
         this.showAbteilungen = true;
         this.buttonBgColorShowTablePlan = "0a7a74";
         this.buttonBgColorInfoForm = "0a7a74";
@@ -744,158 +711,158 @@ var DepartmentmenuComponent = (function () {
     return DepartmentmenuComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor1'),
+    core_1.Input('buttonBgColor1'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor1", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor2'),
+    core_1.Input('buttonBgColor2'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor2", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor3'),
+    core_1.Input('buttonBgColor3'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor3", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor4'),
+    core_1.Input('buttonBgColor4'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor4", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor5'),
+    core_1.Input('buttonBgColor5'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor5", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor6'),
+    core_1.Input('buttonBgColor6'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor6", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor1'),
+    core_1.Input('fontColor1'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor1", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor2'),
+    core_1.Input('fontColor2'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor2", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor3'),
+    core_1.Input('fontColor3'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor3", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor4'),
+    core_1.Input('fontColor4'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor4", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor5'),
+    core_1.Input('fontColor5'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor5", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor6'),
+    core_1.Input('fontColor6'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor6", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showErdeBool'),
+    core_1.Input('showErdeBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showErdeBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showFeuerBool'),
+    core_1.Input('showFeuerBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showFeuerBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showLuftBool'),
+    core_1.Input('showLuftBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showLuftBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showMetallBool'),
+    core_1.Input('showMetallBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showMetallBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showWasserBool'),
+    core_1.Input('showWasserBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showWasserBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAlleBool'),
+    core_1.Input('showAlleBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showAlleBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], DepartmentmenuComponent.prototype, "showErdeBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
 ], DepartmentmenuComponent.prototype, "showFeuerBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_c = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _c || Object)
 ], DepartmentmenuComponent.prototype, "showLuftBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _d || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_d = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _d || Object)
 ], DepartmentmenuComponent.prototype, "showMetallBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _e || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_e = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _e || Object)
 ], DepartmentmenuComponent.prototype, "showWasserBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _f || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_f = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _f || Object)
 ], DepartmentmenuComponent.prototype, "showAlleBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColorInfoForm'),
+    core_1.Input('buttonBgColorInfoForm'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColorInfoForm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColorInfoForm'),
+    core_1.Input('fontColorInfoForm'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColorInfoForm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColorNotizForm'),
+    core_1.Input('fontColorNotizForm'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColorNotizForm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColorNotizForm'),
+    core_1.Input('buttonBgColorNotizForm'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColorNotizForm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColorShowTablePlan'),
+    core_1.Input('buttonBgColorShowTablePlan'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColorShowTablePlan", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColorShowTablePlan'),
+    core_1.Input('fontColorShowTablePlan'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColorShowTablePlan", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showNotizFormBool'),
+    core_1.Input('showNotizFormBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showNotizFormBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showInfoFormBool'),
+    core_1.Input('showInfoFormBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showInfoFormBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showTablePlanBool'),
+    core_1.Input('showTablePlanBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showTablePlanBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _g || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_g = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _g || Object)
 ], DepartmentmenuComponent.prototype, "showNotizFormBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _h || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_h = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _h || Object)
 ], DepartmentmenuComponent.prototype, "showInfoFormBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _j || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_j = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _j || Object)
 ], DepartmentmenuComponent.prototype, "showTablePlanBoolChange", void 0);
 DepartmentmenuComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-departmentmenu',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], DepartmentmenuComponent);
-
+exports.DepartmentmenuComponent = DepartmentmenuComponent;
 var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 //# sourceMappingURL=departmentmenu.component.js.map
 
@@ -909,11 +876,10 @@ module.exports = "<div *ngIf=\"showAlleBool\">\n  <div *ngFor=\"let table of tab
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/alle/alle.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlleComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -923,11 +889,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var core_2 = __webpack_require__("../../../core/@angular/core.es5.js");
 var AlleComponent = (function () {
     function AlleComponent() {
-        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.occupied = new core_1.EventEmitter();
     }
     AlleComponent.prototype.ngOnInit = function () {
     };
@@ -971,61 +938,61 @@ var AlleComponent = (function () {
     return AlleComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tables'),
+    core_1.Input('tables'),
     __metadata("design:type", Object)
 ], AlleComponent.prototype, "tables", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesErde'),
+    core_1.Input('tablesErde'),
     __metadata("design:type", Array)
 ], AlleComponent.prototype, "tablesErde", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTerasse'),
+    core_1.Input('tablesTerasse'),
     __metadata("design:type", Array)
 ], AlleComponent.prototype, "tablesTerasse", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTerrasseLuft'),
+    core_1.Input('tablesTerrasseLuft'),
     __metadata("design:type", Array)
 ], AlleComponent.prototype, "tablesTerrasseLuft", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesFeuer'),
+    core_1.Input('tablesFeuer'),
     __metadata("design:type", Array)
 ], AlleComponent.prototype, "tablesFeuer", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesLuft'),
+    core_1.Input('tablesLuft'),
     __metadata("design:type", Array)
 ], AlleComponent.prototype, "tablesLuft", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesMetall'),
+    core_1.Input('tablesMetall'),
     __metadata("design:type", Array)
 ], AlleComponent.prototype, "tablesMetall", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesWasser'),
+    core_1.Input('tablesWasser'),
     __metadata("design:type", Array)
 ], AlleComponent.prototype, "tablesWasser", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
+    core_1.Input('term'),
     __metadata("design:type", String)
 ], AlleComponent.prototype, "term", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], AlleComponent.prototype, "occupied", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAlleBool'),
+    core_1.Input('showAlleBool'),
     __metadata("design:type", Boolean)
 ], AlleComponent.prototype, "showAlleBool", void 0);
 AlleComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+    core_2.Pipe({
         name: 'filter',
     }),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-alle',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/alle/alle.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], AlleComponent);
-
+exports.AlleComponent = AlleComponent;
 var _a;
 //# sourceMappingURL=alle.component.js.map
 
@@ -1039,18 +1006,10 @@ module.exports = "<app-erde [term]=\"term\" [tablesErde]=\"tablesErde\" [showErd
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/departments.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DepartmentsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__metall_metall_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/metall/metall.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__wasser_wasser_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/wasser/wasser.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__luft_luft_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/luft/luft.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__erde_erde_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/erde/erde.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__feuer_feuer_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/feuer/feuer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__alle_alle_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/alle/alle.component.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1060,24 +1019,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var tischplan_service_1 = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
+var metall_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/metall/metall.component.ts");
+var wasser_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/wasser/wasser.component.ts");
+var luft_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/luft/luft.component.ts");
+var erde_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/erde/erde.component.ts");
+var feuer_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/feuer/feuer.component.ts");
+var alle_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/alle/alle.component.ts");
 var DepartmentsComponent = (function () {
     function DepartmentsComponent(tischplanService) {
         this.tischplanService = tischplanService;
-        this.dispensedErde = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.dispensedFeuer = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.dispensedLuft = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.dispensedMetall = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.dispensedWasser = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.updateAzList = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.updateImHausListeElement = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.dispensedErde = new core_1.EventEmitter();
+        this.dispensedFeuer = new core_1.EventEmitter();
+        this.dispensedLuft = new core_1.EventEmitter();
+        this.dispensedMetall = new core_1.EventEmitter();
+        this.dispensedWasser = new core_1.EventEmitter();
+        this.updateAzList = new core_1.EventEmitter();
+        this.updateImHausListeElement = new core_1.EventEmitter();
         this.parts = [];
         this.date = [];
         this.parsedDate = [];
@@ -1174,7 +1134,7 @@ var DepartmentsComponent = (function () {
         this.tischplanService.addInformationToTable(dataString)
             .subscribe(function (response) {
             // let arrayIndex = response[1];
-            //console.log("RESPONSE addInformationToTable:" + JSON.stringify(response));
+            console.log("RESPONSE addInformationToTable:" + JSON.stringify(response));
             if (response === null) {
                 return;
             }
@@ -1305,156 +1265,140 @@ var DepartmentsComponent = (function () {
             this.alleComponent.transform(this.tables, term);
         }
         else if (this.showErdeBool) {
-            this.bauernstubeComponent.transform(this.tablesErde, term);
+            this.erdeComponent.transform(this.tablesErde, term);
         }
         else if (this.showFeuerBool) {
-            this.berglerStubeHubertusStubeComponent.transform(this.tablesFeuer, term);
+            this.feuerComponent.transform(this.tablesFeuer, term);
         }
         else if (this.showLuftBool) {
-            this.edelweissKaminStubeComponent.transform(this.tablesLuft, term);
+            this.luftComponent.transform(this.tablesLuft, term);
         }
         else if (this.showMetallBool) {
-            this.teestubeTeeloungeComponent.transform(this.tablesMetall, term);
+            this.metallComponent.transform(this.tablesMetall, term);
         }
         else if (this.showWasserBool) {
-            this.waeldlerStubeKristallStubeComponent.transform(this.tablesWasser, term);
+            this.wasserComponent.transform(this.tablesWasser, term);
         }
     };
     return DepartmentsComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesErde'),
+    core_1.Input('tablesErde'),
     __metadata("design:type", Array)
 ], DepartmentsComponent.prototype, "tablesErde", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTerasse'),
-    __metadata("design:type", Array)
-], DepartmentsComponent.prototype, "tablesTerasse", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showTerasseBool'),
-    __metadata("design:type", Boolean)
-], DepartmentsComponent.prototype, "showTerasseBool", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTerrasseLuft'),
-    __metadata("design:type", Array)
-], DepartmentsComponent.prototype, "tablesTerrasseLuft", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showTerrasseLuftBool'),
-    __metadata("design:type", Boolean)
-], DepartmentsComponent.prototype, "showTerrasseLuftBool", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showErdeBool'),
+    core_1.Input('showErdeBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showErdeBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesLuft'),
+    core_1.Input('tablesLuft'),
     __metadata("design:type", Array)
 ], DepartmentsComponent.prototype, "tablesLuft", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showLuftBool'),
+    core_1.Input('showLuftBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showLuftBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesFeuer'),
+    core_1.Input('tablesFeuer'),
     __metadata("design:type", Array)
 ], DepartmentsComponent.prototype, "tablesFeuer", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showFeuerBool'),
+    core_1.Input('showFeuerBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showFeuerBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesMetall'),
+    core_1.Input('tablesMetall'),
     __metadata("design:type", Array)
 ], DepartmentsComponent.prototype, "tablesMetall", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showMetallBool'),
+    core_1.Input('showMetallBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showMetallBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesWasser'),
+    core_1.Input('tablesWasser'),
     __metadata("design:type", Array)
 ], DepartmentsComponent.prototype, "tablesWasser", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showWasserBool'),
+    core_1.Input('showWasserBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showWasserBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tables'),
+    core_1.Input('tables'),
     __metadata("design:type", Object)
 ], DepartmentsComponent.prototype, "tables", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
+    core_1.Input('term'),
     __metadata("design:type", String)
 ], DepartmentsComponent.prototype, "term", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAlleBool'),
+    core_1.Input('showAlleBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showAlleBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTempAbreise'),
+    core_1.Input('tablesTempAbreise'),
     __metadata("design:type", Object)
 ], DepartmentsComponent.prototype, "tablesTempAbreise", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], DepartmentsComponent.prototype, "dispensedErde", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
 ], DepartmentsComponent.prototype, "dispensedFeuer", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_c = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _c || Object)
 ], DepartmentsComponent.prototype, "dispensedLuft", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _d || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_d = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _d || Object)
 ], DepartmentsComponent.prototype, "dispensedMetall", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _e || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_e = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _e || Object)
 ], DepartmentsComponent.prototype, "dispensedWasser", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _f || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_f = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _f || Object)
 ], DepartmentsComponent.prototype, "updateAzList", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _g || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_g = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _g || Object)
 ], DepartmentsComponent.prototype, "updateImHausListeElement", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_7__alle_alle_component__["a" /* AlleComponent */]),
-    __metadata("design:type", typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_7__alle_alle_component__["a" /* AlleComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__alle_alle_component__["a" /* AlleComponent */]) === "function" && _h || Object)
+    core_1.ViewChild(alle_component_1.AlleComponent),
+    __metadata("design:type", typeof (_h = typeof alle_component_1.AlleComponent !== "undefined" && alle_component_1.AlleComponent) === "function" && _h || Object)
 ], DepartmentsComponent.prototype, "alleComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3__wasser_wasser_component__["a" /* WasserComponent */]),
-    __metadata("design:type", typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_3__wasser_wasser_component__["a" /* WasserComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__wasser_wasser_component__["a" /* WasserComponent */]) === "function" && _j || Object)
-], DepartmentsComponent.prototype, "waeldlerStubeKristallStubeComponent", void 0);
+    core_1.ViewChild(wasser_component_1.WasserComponent),
+    __metadata("design:type", typeof (_j = typeof wasser_component_1.WasserComponent !== "undefined" && wasser_component_1.WasserComponent) === "function" && _j || Object)
+], DepartmentsComponent.prototype, "wasserComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__metall_metall_component__["a" /* MetallComponent */]),
-    __metadata("design:type", typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_2__metall_metall_component__["a" /* MetallComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__metall_metall_component__["a" /* MetallComponent */]) === "function" && _k || Object)
-], DepartmentsComponent.prototype, "teestubeTeeloungeComponent", void 0);
+    core_1.ViewChild(metall_component_1.MetallComponent),
+    __metadata("design:type", typeof (_k = typeof metall_component_1.MetallComponent !== "undefined" && metall_component_1.MetallComponent) === "function" && _k || Object)
+], DepartmentsComponent.prototype, "metallComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_4__luft_luft_component__["a" /* LuftComponent */]),
-    __metadata("design:type", typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_4__luft_luft_component__["a" /* LuftComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__luft_luft_component__["a" /* LuftComponent */]) === "function" && _l || Object)
-], DepartmentsComponent.prototype, "edelweissKaminStubeComponent", void 0);
+    core_1.ViewChild(luft_component_1.LuftComponent),
+    __metadata("design:type", typeof (_l = typeof luft_component_1.LuftComponent !== "undefined" && luft_component_1.LuftComponent) === "function" && _l || Object)
+], DepartmentsComponent.prototype, "luftComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_6__feuer_feuer_component__["a" /* FeuerComponent */]),
-    __metadata("design:type", typeof (_m = typeof __WEBPACK_IMPORTED_MODULE_6__feuer_feuer_component__["a" /* FeuerComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__feuer_feuer_component__["a" /* FeuerComponent */]) === "function" && _m || Object)
-], DepartmentsComponent.prototype, "berglerStubeHubertusStubeComponent", void 0);
+    core_1.ViewChild(feuer_component_1.FeuerComponent),
+    __metadata("design:type", typeof (_m = typeof feuer_component_1.FeuerComponent !== "undefined" && feuer_component_1.FeuerComponent) === "function" && _m || Object)
+], DepartmentsComponent.prototype, "feuerComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_5__erde_erde_component__["a" /* ErdeComponent */]),
-    __metadata("design:type", typeof (_o = typeof __WEBPACK_IMPORTED_MODULE_5__erde_erde_component__["a" /* ErdeComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__erde_erde_component__["a" /* ErdeComponent */]) === "function" && _o || Object)
-], DepartmentsComponent.prototype, "bauernstubeComponent", void 0);
+    core_1.ViewChild(erde_component_1.ErdeComponent),
+    __metadata("design:type", typeof (_o = typeof erde_component_1.ErdeComponent !== "undefined" && erde_component_1.ErdeComponent) === "function" && _o || Object)
+], DepartmentsComponent.prototype, "erdeComponent", void 0);
 DepartmentsComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-departments',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/departments.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_p = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _p || Object])
+    __metadata("design:paramtypes", [typeof (_p = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _p || Object])
 ], DepartmentsComponent);
-
+exports.DepartmentsComponent = DepartmentsComponent;
 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p;
 //# sourceMappingURL=departments.component.js.map
 
@@ -1463,16 +1407,15 @@ var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p;
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/erde/erde.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"showErdeBool\">\n  <div *ngFor=\"let tableErde of tablesErde; let j = index;\">\n    <div *ngIf=\"tablesErde[j] !== tablesErde[j+1]\">\n      <button style=\"float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF\"  type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableErde)\">{{tableErde.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>\n      <h4><b> Tisch:</b>{{tableErde.number}} </h4><br>\n      <div class='cards-container' id='containerErde' [ngStyle]=\"{'background-color': + tableErde.bgColor}\">\n        <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableErde.bgColor}\">\n          <div *ngIf=\"tableErde.isBesetzt === 'true'\">\n            <div *ngFor=\"let group of tableErde.groups; let j = index;\">\n              <div [style.border]=\"getStyle(group.traceValue)\">\n                <div *ngIf=\"group.nameValue\">\n                  <p style=\"background-color: #FFFFFF; padding: 10px\">\n                    <b> Name:</b> {{group.nameValue}}<br>\n                    <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>\n                    <b> Anreise Datum:</b> {{group.anreiseValue}}<br>\n                    <b> Abreise Datum:</b> {{group.abreiseValue}}<br>\n                    <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>\n                    <b> Notiz1:</b> {{group.notiz1Value}}<br>\n                    <b> Notiz2:</b> {{group.notiz2Value}}<br>\n                    <b> Trace:</b> {{group.traceValue}}<br>\n                    <b> Bemerkung:</b> {{group.bemerkungValue}}<br>\n                  </p>\n                </div>\n              </div>\n              <div *ngIf=\"group.newTraceText\">\n                <p style=\"background-color: #FFFFFF; border: solid 3px red\">\n                  <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                </p>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div *ngIf=\"tableErde.placeholder === 'true'\">\n          <p [dragula]='\"evented-bag\"' id=\"Erde\" style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px\">Listen-Element hier hin ziehen!{{tableErde.number}} {{tableErde.department}} {{j}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"showErdeBool\">\n  <div *ngFor=\"let tableErde of tablesErde; let j = index;\">\n    <div *ngIf=\"tablesErde[j] !== tablesErde[j+1]\">\n      <button style=\"float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF\"  type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableErde, j)\">{{tableErde.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>\n      <h4><b> Tisch:</b>{{tableErde.number}} </h4><br>\n      <div class='cards-container' id='containerErde' [ngStyle]=\"{'background-color': + tableErde.bgColor}\">\n        <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableErde.bgColor}\">\n          <div *ngIf=\"tableErde.isBesetzt === 'true'\">\n            <div *ngFor=\"let group of tableErde.groups; let j = index;\">\n              <div [style.border]=\"getStyle(group)\">\n                <div *ngIf=\"group.name1Value\">\n                  <p style=\"background-color: #FFFFFF; padding: 10px\">\n                    <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>\n                    <b> Anreise Datum:</b> {{group.anreiseValue}}<br>\n                    <b> Abreise Datum:</b> {{group.abreiseValue}}<br>\n                    <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>\n                    <b> Name 1:</b> {{group.name1Value}}<br>\n                    <b> Info 1:</b> {{group.pinfo1Value}}<br>\n                    <b> Info 2:</b> {{group.pinfo2Value}}<br>\n                    <b> Info 3:</b> {{group.pinfo3Value}}<br>\n                    <b> Kategorie:</b> {{group.kategorieValue}}<br>\n                  </p>\n                </div>\n              </div>\n              <div *ngIf=\"group.newTraceName\">\n                <p style=\"background-color: #FFFFFF; border: solid 3px red\">\n                  <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Info: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                </p>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div *ngIf=\"tableErde.placeholder === 'true'\">\n          <p [dragula]='\"evented-bag\"' id=\"erde\" style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px;\">Listen-Element hier hin ziehen! {{tableErde.number}} {{tableErde.department}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/erde/erde.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ErdeComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1482,10 +1425,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
 var ErdeComponent = (function () {
     function ErdeComponent() {
-        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.occupied = new core_1.EventEmitter();
         this.t = 1;
     }
     ErdeComponent.prototype.ngOnInit = function () {
@@ -1495,7 +1439,7 @@ var ErdeComponent = (function () {
         this.occupied.emit({ table: table, t: t });
     };
     ErdeComponent.prototype.getStyle = function (j) {
-        if (j != "-") {
+        if (j.pinfo1Value != "" || j.pinfo2Value != "" || j.pinfo3Value != "") {
             return "solid 3px red";
         }
         else {
@@ -1555,30 +1499,30 @@ var ErdeComponent = (function () {
     return ErdeComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesErde'),
+    core_1.Input('tablesErde'),
     __metadata("design:type", Array)
 ], ErdeComponent.prototype, "tablesErde", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showErdeBool'),
+    core_1.Input('showErdeBool'),
     __metadata("design:type", Boolean)
 ], ErdeComponent.prototype, "showErdeBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
+    core_1.Input('term'),
     __metadata("design:type", String)
 ], ErdeComponent.prototype, "term", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], ErdeComponent.prototype, "occupied", void 0);
 ErdeComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-erde',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/erde/erde.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], ErdeComponent);
-
+exports.ErdeComponent = ErdeComponent;
 var _a;
 //# sourceMappingURL=erde.component.js.map
 
@@ -1587,16 +1531,15 @@ var _a;
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/feuer/feuer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"showFeuerBool\">\n  <div *ngFor=\"let tableFeuer of tablesFeuer; let j = index;\">\n    <div *ngIf=\"tablesFeuer[j] !== tablesFeuer[j+1]\">\n      <button style=\"float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF\" type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableFeuer)\">{{tableFeuer.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>\n      <h4><b> Tisch:</b>{{tableFeuer.number}} </h4><br>\n      <div class='cards-container' id='containerFeuer' [ngStyle]=\"{'background-color': + tableFeuer.bgColor}\">\n        <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableFeuer.bgColor}\">\n          <div *ngIf=\"tableFeuer.isBesetzt === 'true'\">\n            <div *ngFor=\"let group of tableFeuer.groups; let j = index;\">\n              <div [style.border]=\"getStyle(group.traceValue)\">\n                <div *ngIf=\"group.nameValue\">\n                  <p style=\"background-color: #FFFFFF; padding: 10px\">\n                    <b> Name:</b> {{group.nameValue}}<br>\n                    <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>\n                    <b> Anreise Datum:</b> {{group.anreiseValue}}<br>\n                    <b> Abreise Datum:</b> {{group.abreiseValue}}<br>\n                    <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>\n                    <b> Notiz1:</b> {{group.notiz1Value}}<br>\n                    <b> Notiz2:</b> {{group.notiz2Value}}<br>\n                    <b> Trace:</b> {{group.traceValue}}<br>\n                    <b> Bemerkung:</b> {{group.bemerkungValue}}<br>\n                  </p>\n                </div>\n              </div>\n              <div *ngIf=\"group.newTraceText\">\n                <p style=\"background-color: #FFFFFF; border: solid 3px red\">\n                  <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                </p>\n              </div>\n            </div>\n\n          </div>\n        </div>\n        <div *ngIf=\"tableFeuer.placeholder === 'true'\">\n          <p [dragula]='\"evented-bag\"' id=\"Feuer\" style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px\">Listen-Element hier hin ziehen! {{tableFeuer.number}} {{tableFeuer.department}} {{j}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"showFeuerBool\">\n  <div *ngFor=\"let tableFeuer of tablesFeuer; let j = index;\">\n    <div *ngIf=\"tablesFeuer[j] !== tablesFeuer[j+1]\">\n      <button style=\"float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF\"  type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableFeuer, j)\">{{tableFeuer.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>\n      <h4><b> Tisch:</b>{{tableFeuer.number}} </h4><br>\n      <div class='cards-container' id='containerFeuer' [ngStyle]=\"{'background-color': + tableFeuer.bgColor}\">\n        <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableFeuer.bgColor}\">\n          <div *ngIf=\"tableFeuer.isBesetzt === 'true'\">\n            <div *ngFor=\"let group of tableFeuer.groups; let j = index;\">\n              <div [style.border]=\"getStyle(group)\">\n                <div *ngIf=\"group.name1Value\">\n                  <p style=\"background-color: #FFFFFF; padding: 10px\">\n                    <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>\n                    <b> Anreise Datum:</b> {{group.anreiseValue}}<br>\n                    <b> Abreise Datum:</b> {{group.abreiseValue}}<br>\n                    <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>\n                    <b> Name 1:</b> {{group.name1Value}}<br>\n                    <b> Info 1:</b> {{group.pinfo1Value}}<br>\n                    <b> Info 2:</b> {{group.pinfo2Value}}<br>\n                    <b> Info 3:</b> {{group.pinfo3Value}}<br>\n                    <b> Kategorie:</b> {{group.kategorieValue}}<br>\n                  </p>\n                </div>\n              </div>\n              <div *ngIf=\"group.newTraceName\">\n                <p style=\"background-color: #FFFFFF; border: solid 3px red\">\n                  <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Info: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                </p>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div *ngIf=\"tableFeuer.placeholder === 'true'\">\n          <p [dragula]='\"evented-bag\"' id=\"feuer\" style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px;\">Listen-Element hier hin ziehen! {{tableFeuer.number}} {{tableFeuer.department}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/feuer/feuer.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FeuerComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1606,10 +1549,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
 var FeuerComponent = (function () {
     function FeuerComponent() {
-        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.occupied = new core_1.EventEmitter();
         this.t = 0;
     }
     FeuerComponent.prototype.ngOnInit = function () {
@@ -1619,7 +1563,7 @@ var FeuerComponent = (function () {
         this.occupied.emit({ table: table, t: t });
     };
     FeuerComponent.prototype.getStyle = function (j) {
-        if (j != "-") {
+        if (j.pinfo1Value != "" || j.pinfo2Value != "" || j.pinfo3Value != "") {
             return "solid 3px red";
         }
         else {
@@ -1679,30 +1623,30 @@ var FeuerComponent = (function () {
     return FeuerComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesFeuer'),
+    core_1.Input('tablesFeuer'),
     __metadata("design:type", Array)
 ], FeuerComponent.prototype, "tablesFeuer", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showFeuerBool'),
+    core_1.Input('showFeuerBool'),
     __metadata("design:type", Boolean)
 ], FeuerComponent.prototype, "showFeuerBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
+    core_1.Input('term'),
     __metadata("design:type", String)
 ], FeuerComponent.prototype, "term", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], FeuerComponent.prototype, "occupied", void 0);
 FeuerComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-feuer',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/feuer/feuer.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], FeuerComponent);
-
+exports.FeuerComponent = FeuerComponent;
 var _a;
 //# sourceMappingURL=feuer.component.js.map
 
@@ -1711,16 +1655,15 @@ var _a;
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/luft/luft.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"showLuftBool\">\n  <div *ngFor=\"let tableLuft of tablesLuft; let j = index;\">\n    <div *ngIf=\"tablesLuft[j] !== tablesLuft[j+1]\">\n      <button style=\"float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF\" type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableLuft)\">{{tableLuft.isBesetzt === 'true' ? 'FREI MACHEN' : '' }}</button>\n      <h4><b> Tisch: </b>{{tableLuft.number}} </h4><br>\n      <div class='cards-container' id='containerLuft'  [ngStyle]=\"{'background-color': + tableLuft.bgColor}\">\n        <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableLuft.bgColor}\">\n          <div *ngIf=\"tableLuft.isBesetzt === 'true'\">\n            <div *ngFor=\"let group of tableLuft.groups; let j = index;\">\n              <div [style.border]=\"getStyle(group.traceValue)\">\n                <div *ngIf=\"group\">\n                  <div *ngIf=\"group.nameValue\">\n                    <p style=\"background-color: #FFFFFF; padding: 10px\">\n                      <b> Name:</b> {{group.nameValue}}<br>\n                      <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>\n                      <b> Anreise Datum:</b> {{group.anreiseValue}}<br>\n                      <b> Abreise Datum:</b> {{group.abreiseValue}}<br>\n                      <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>\n                      <b> Notiz1:</b> {{group.notiz1Value}}<br>\n                      <b> Notiz2:</b> {{group.notiz2Value}}<br>\n                      <b> Trace:</b> {{group.traceValue}}<br>\n                      <b> Bemerkung:</b> {{group.bemerkungValue}}<br>\n                    </p>\n                  </div>\n                </div>\n              </div>\n              <div *ngIf=\"group.newTraceText\">\n                <p style=\"background-color: #FFFFFF; border: solid 3px red\">\n                  <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                </p>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div *ngIf=\"tableLuft.placeholder === 'true'\">\n          <p [dragula]='\"evented-bag\"' id=\"Luft\" style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px\">Listen-Element hier hin ziehen!{{tableLuft.number}} {{tableLuft.department}} {{j}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"showLuftBool\">\n  <div *ngFor=\"let tableLuft of tablesLuft; let j = index;\">\n    <div *ngIf=\"tablesLuft[j] !== tablesLuft[j+1]\">\n      <button style=\"float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF\"  type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableLuft, j)\">{{tableLuft.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>\n      <h4><b> Tisch:</b>{{tableLuft.number}} </h4><br>\n      <div class='cards-container' id='containerLuft' [ngStyle]=\"{'background-color': + tableLuft.bgColor}\">\n        <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableLuft.bgColor}\">\n          <div *ngIf=\"tableLuft.isBesetzt === 'true'\">\n            <div *ngFor=\"let group of tableLuft.groups; let j = index;\">\n              <div [style.border]=\"getStyle(group)\">\n                <div *ngIf=\"group.name1Value\">\n                  <p style=\"background-color: #FFFFFF; padding: 10px\">\n                    <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>\n                    <b> Anreise Datum:</b> {{group.anreiseValue}}<br>\n                    <b> Abreise Datum:</b> {{group.abreiseValue}}<br>\n                    <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>\n                    <b> Name 1:</b> {{group.name1Value}}<br>\n                    <b> Info 1:</b> {{group.pinfo1Value}}<br>\n                    <b> Info 2:</b> {{group.pinfo2Value}}<br>\n                    <b> Info 3:</b> {{group.pinfo3Value}}<br>\n                    <b> Kategorie:</b> {{group.kategorieValue}}<br>\n                  </p>\n                </div>\n              </div>\n              <div *ngIf=\"group.newTraceName\">\n                <p style=\"background-color: #FFFFFF; border: solid 3px red\">\n                  <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Info: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                </p>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div *ngIf=\"tableLuft.placeholder === 'true'\">\n          <p [dragula]='\"evented-bag\"' id=\"luft\" style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px;\">Listen-Element hier hin ziehen! {{tableLuft.number}} {{tableLuft.department}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/luft/luft.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LuftComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1730,10 +1673,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
 var LuftComponent = (function () {
     function LuftComponent() {
-        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.occupied = new core_1.EventEmitter();
         this.t = 1;
     }
     LuftComponent.prototype.ngOnInit = function () {
@@ -1743,7 +1687,7 @@ var LuftComponent = (function () {
         this.occupied.emit({ table: table, t: t });
     };
     LuftComponent.prototype.getStyle = function (j) {
-        if (j != "-") {
+        if (j.pinfo1Value != "" || j.pinfo2Value != "" || j.pinfo3Value != "") {
             return "solid 3px red";
         }
         else {
@@ -1803,30 +1747,30 @@ var LuftComponent = (function () {
     return LuftComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesLuft'),
+    core_1.Input('tablesLuft'),
     __metadata("design:type", Array)
 ], LuftComponent.prototype, "tablesLuft", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showLuftBool'),
+    core_1.Input('showLuftBool'),
     __metadata("design:type", Boolean)
 ], LuftComponent.prototype, "showLuftBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
+    core_1.Input('term'),
     __metadata("design:type", String)
 ], LuftComponent.prototype, "term", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], LuftComponent.prototype, "occupied", void 0);
 LuftComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-luft',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/luft/luft.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], LuftComponent);
-
+exports.LuftComponent = LuftComponent;
 var _a;
 //# sourceMappingURL=luft.component.js.map
 
@@ -1835,16 +1779,15 @@ var _a;
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/metall/metall.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"showMetallBool\">\n  <div *ngFor=\"let tableMetall of tablesMetall; let j = index;\">\n    <div *ngIf=\"tablesMetall[j] !== tablesMetall[j+1]\">\n      <button style=\"float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF\" type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableMetall)\">{{tableMetall.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>\n      <h4><b> Tisch:</b>{{tableMetall.number}} </h4><br>\n      <div class='cards-container' id='containerMetall' [ngStyle]=\"{'background-color': + tableMetall.bgColor}\">\n        <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableMetall.bgColor}\">\n          <div *ngIf=\"tableMetall.isBesetzt === 'true'\">\n            <div *ngFor=\"let group of tableMetall.groups; let j = index;\">\n              <div [style.border]=\"getStyle(group.traceValue)\">\n                <div *ngIf=\"group.nameValue\">\n                  <p style=\"background-color: #FFFFFF; padding: 10px\">\n                    <b> Name:</b> {{group.nameValue}}<br>\n                    <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>\n                    <b> Anreise Datum:</b> {{group.anreiseValue}}<br>\n                    <b> Abreise Datum:</b> {{group.abreiseValue}}<br>\n                    <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>\n                    <b> Notiz1:</b> {{group.notiz1Value}}<br>\n                    <b> Notiz2:</b> {{group.notiz2Value}}<br>\n                    <b> Trace:</b> {{group.traceValue}}<br>\n                    <b> Bemerkung:</b> {{group.bemerkungValue}}<br>\n                  </p>\n                </div>\n              </div>\n              <div *ngIf=\"group.newTraceText\">\n                <p style=\"background-color: #FFFFFF; border: solid 3px red\">\n                  <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                </p>\n              </div>\n            </div>\n\n          </div>\n        </div>\n        <div *ngIf=\"tableMetall.placeholder === 'true'\">\n          <p [dragula]='\"evented-bag\"' id=\"Metall\" style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px\">Listen-Element hier hin ziehen! {{tableMetall.number}} {{tableMetall.department}} {{j}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"showMetallBool\">\n  <div *ngFor=\"let tableMetall of tablesMetall; let j = index;\">\n    <div *ngIf=\"tablesMetall[j] !== tablesMetall[j+1]\">\n      <button style=\"float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF\"  type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableMetall, j)\">{{tableMetall.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>\n      <h4><b> Tisch:</b>{{tableMetall.number}} </h4><br>\n      <div class='cards-container' id='containerMetall' [ngStyle]=\"{'background-color': + tableMetall.bgColor}\">\n        <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableMetall.bgColor}\">\n          <div *ngIf=\"tableMetall.isBesetzt === 'true'\">\n            <div *ngFor=\"let group of tableMetall.groups; let j = index;\">\n              <div [style.border]=\"getStyle(group)\">\n                <div *ngIf=\"group.name1Value\">\n                  <p style=\"background-color: #FFFFFF; padding: 10px\">\n                    <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>\n                    <b> Anreise Datum:</b> {{group.anreiseValue}}<br>\n                    <b> Abreise Datum:</b> {{group.abreiseValue}}<br>\n                    <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>\n                    <b> Name 1:</b> {{group.name1Value}}<br>\n                    <b> Info 1:</b> {{group.pinfo1Value}}<br>\n                    <b> Info 2:</b> {{group.pinfo2Value}}<br>\n                    <b> Info 3:</b> {{group.pinfo3Value}}<br>\n                    <b> Kategorie:</b> {{group.kategorieValue}}<br>\n                  </p>\n                </div>\n              </div>\n              <div *ngIf=\"group.newTraceName\">\n                <p style=\"background-color: #FFFFFF; border: solid 3px red\">\n                  <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Info: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                </p>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div *ngIf=\"tableMetall.placeholder === 'true'\">\n          <p [dragula]='\"evented-bag\"' id=\"metall\" style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px;\">Listen-Element hier hin ziehen! {{tableMetall.number}} {{tableMetall.department}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/metall/metall.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MetallComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1854,10 +1797,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
 var MetallComponent = (function () {
     function MetallComponent() {
-        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.occupied = new core_1.EventEmitter();
         this.t = 0;
     }
     MetallComponent.prototype.ngOnInit = function () {
@@ -1867,7 +1811,7 @@ var MetallComponent = (function () {
         this.occupied.emit({ table: table, t: t });
     };
     MetallComponent.prototype.getStyle = function (j) {
-        if (j != "-") {
+        if (j.pinfo1Value != "" || j.pinfo2Value != "" || j.pinfo3Value != "") {
             return "solid 3px red";
         }
         else {
@@ -1927,30 +1871,30 @@ var MetallComponent = (function () {
     return MetallComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesMetall'),
+    core_1.Input('tablesMetall'),
     __metadata("design:type", Array)
 ], MetallComponent.prototype, "tablesMetall", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showMetallBool'),
+    core_1.Input('showMetallBool'),
     __metadata("design:type", Boolean)
 ], MetallComponent.prototype, "showMetallBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
+    core_1.Input('term'),
     __metadata("design:type", String)
 ], MetallComponent.prototype, "term", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], MetallComponent.prototype, "occupied", void 0);
 MetallComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-metall',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/metall/metall.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], MetallComponent);
-
+exports.MetallComponent = MetallComponent;
 var _a;
 //# sourceMappingURL=metall.component.js.map
 
@@ -1959,16 +1903,15 @@ var _a;
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/wasser/wasser.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"showWasserBool\">\n  <div *ngFor=\"let tableWasser of tablesWasser; let j = index;\">\n    <div *ngIf=\"tablesWasser[j] !== tablesWasser[j+1]\">\n      <button style=\"float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF\" type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableWasser)\">{{tableWasser.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>\n      <h4><b> Tisch:</b>{{tableWasser.number}} </h4><br>\n      <div class='cards-container' id='containerWasser' [ngStyle]=\"{'background-color': + tableWasser.bgColor}\">\n        <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableWasser.bgColor}\">\n          <div *ngIf=\"tableWasser.isBesetzt === 'true'\">\n            <div *ngFor=\"let group of tableWasser.groups; let j = index;\">\n              <div [style.border]=\"getStyle(group.traceValue)\">\n                <div *ngIf=\"group.nameValue\">\n                  <p style=\"background-color: #FFFFFF; padding: 10px\">\n                    <b> Name:</b> {{group.nameValue}}<br>\n                    <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>\n                    <b> Anreise Datum:</b> {{group.anreiseValue}}<br>\n                    <b> Abreise Datum:</b> {{group.abreiseValue}}<br>\n                    <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>\n                    <b> Notiz1:</b> {{group.notiz1Value}}<br>\n                    <b> Notiz2:</b> {{group.notiz2Value}}<br>\n                    <b> Trace:</b> {{group.traceValue}}<br>\n                    <b> Bemerkung:</b> {{group.bemerkungValue}}<br>\n                  </p>\n                </div>\n              </div>\n              <div *ngIf=\"group.newTraceText\">\n                <p style=\"background-color: #FFFFFF; border: solid 3px red\">\n                  <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                </p>\n              </div>\n            </div>\n        </div>\n        <div *ngIf=\"tableWasser.placeholder === 'true'\">\n          <p [dragula]='\"evented-bag\"' id=\"Wasser\" style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px\">Listen-Element hier hin ziehen! {{tableWasser.number}} {{tableWasser.department}} {{j}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"showWasserBool\">\n  <div *ngFor=\"let tableWasser of tablesWasser; let j = index;\">\n    <div *ngIf=\"tablesWasser[j] !== tablesWasser[j+1]\">\n      <button style=\"float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF\"  type=\"button\" class=\"btn btn-send\" (click)=\"occupy(tableWasser, j)\">{{tableWasser.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>\n      <h4><b> Tisch:</b>{{tableWasser.number}} </h4><br>\n      <div class='cards-container' id='containerWasser' [ngStyle]=\"{'background-color': + tableWasser.bgColor}\">\n        <div class=\"table\" [ngStyle]=\"{'background-color': '#' + tableWasser.bgColor}\">\n          <div *ngIf=\"tableWasser.isBesetzt === 'true'\">\n            <div *ngFor=\"let group of tableWasser.groups; let j = index;\">\n              <div [style.border]=\"getStyle(group)\">\n                <div *ngIf=\"group.name1Value\">\n                  <p style=\"background-color: #FFFFFF; padding: 10px\">\n                    <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>\n                    <b> Anreise Datum:</b> {{group.anreiseValue}}<br>\n                    <b> Abreise Datum:</b> {{group.abreiseValue}}<br>\n                    <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>\n                    <b> Name 1:</b> {{group.name1Value}}<br>\n                    <b> Info 1:</b> {{group.pinfo1Value}}<br>\n                    <b> Info 2:</b> {{group.pinfo2Value}}<br>\n                    <b> Info 3:</b> {{group.pinfo3Value}}<br>\n                    <b> Kategorie:</b> {{group.kategorieValue}}<br>\n                  </p>\n                </div>\n              </div>\n              <div *ngIf=\"group.newTraceName\">\n                <p style=\"background-color: #FFFFFF; border: solid 3px red\">\n                  <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Info: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                </p>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div *ngIf=\"tableWasser.placeholder === 'true'\">\n          <p [dragula]='\"evented-bag\"' id=\"wasser\" style=\"background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px;\">Listen-Element hier hin ziehen! {{tableWasser.number}} {{tableWasser.department}}</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/wasser/wasser.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WasserComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1978,10 +1921,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
 var WasserComponent = (function () {
     function WasserComponent() {
-        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.occupied = new core_1.EventEmitter();
         this.t = 3;
     }
     WasserComponent.prototype.ngOnInit = function () {
@@ -1991,7 +1935,7 @@ var WasserComponent = (function () {
         this.occupied.emit({ table: table, t: t });
     };
     WasserComponent.prototype.getStyle = function (j) {
-        if (j != "-") {
+        if (j.pinfo1Value != "" || j.pinfo2Value != "" || j.pinfo3Value != "") {
             return "solid 3px red";
         }
         else {
@@ -2051,30 +1995,30 @@ var WasserComponent = (function () {
     return WasserComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesWasser'),
+    core_1.Input('tablesWasser'),
     __metadata("design:type", Array)
 ], WasserComponent.prototype, "tablesWasser", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showWasserBool'),
+    core_1.Input('showWasserBool'),
     __metadata("design:type", Boolean)
 ], WasserComponent.prototype, "showWasserBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
+    core_1.Input('term'),
     __metadata("design:type", String)
 ], WasserComponent.prototype, "term", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], WasserComponent.prototype, "occupied", void 0);
 WasserComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-wasser',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/wasser/wasser.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], WasserComponent);
-
+exports.WasserComponent = WasserComponent;
 var _a;
 //# sourceMappingURL=wasser.component.js.map
 
@@ -2088,14 +2032,10 @@ module.exports = "<div *ngIf=\"showNotizFormBool\">\n  <div *ngIf=\"showAlleBool
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/form/form.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FormComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2105,16 +2045,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var tischplan_service_1 = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
+var angular2_flash_messages_1 = __webpack_require__("../../../../angular2-flash-messages/index.js");
 var FormComponent = (function () {
     function FormComponent(tischplanService, _flashMessagesService) {
         this.tischplanService = tischplanService;
         this._flashMessagesService = _flashMessagesService;
         this.newInformationElements = [];
-        this.notizResponse = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.changeColorIfAnreiseExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.notizResponse = new core_1.EventEmitter();
+        this.changeColorIfAnreiseExport = new core_1.EventEmitter();
         this.departments = [];
         this.departments = ["Erde", "Luft", "Feuer", "Wasser", "Metall"];
     }
@@ -2151,35 +2092,35 @@ var FormComponent = (function () {
                         return;
                     }
                     else {
-                        if (Information.tables[0].department === "Erde") {
+                        if (Information.tables[0].department === "erde") {
                             for (var i = 0; i < _this.tablesErde.length; i++) {
                                 if (_this.tablesErde[i].number === Information.tables[0].number) {
                                     _this.tablesErde[i] = Information.tables[0];
                                 }
                             }
                         }
-                        else if (Information.tables[0].department === "Wasser") {
+                        else if (Information.tables[0].department === "wasser") {
                             for (var i = 0; i < _this.tablesWasser.length; i++) {
                                 if (_this.tablesWasser[i].number === Information.tables[0].number) {
                                     _this.tablesWasser[i] = Information.tables[0];
                                 }
                             }
                         }
-                        else if (Information.tables[0].department === "Luft") {
+                        else if (Information.tables[0].department === "luft") {
                             for (var i = 0; i < _this.tablesLuft.length; i++) {
                                 if (_this.tablesLuft[i].number === Information.tables[0].number) {
                                     _this.tablesLuft[i] = Information.tables[0];
                                 }
                             }
                         }
-                        else if (Information.tables[0].department === "Feuer") {
+                        else if (Information.tables[0].department === "feuer") {
                             for (var i = 0; i < _this.tablesFeuer.length; i++) {
                                 if (_this.tablesFeuer[i].number === Information.tables[0].number) {
                                     _this.tablesFeuer[i] = Information.tables[0];
                                 }
                             }
                         }
-                        else if (Information.tables[0].department === "Metall") {
+                        else if (Information.tables[0].department === "metall") {
                             for (var i = 0; i < _this.tablesMetall.length; i++) {
                                 if (_this.tablesMetall[i].number === Information.tables[0].number) {
                                     _this.tablesMetall[i] = Information.tables[0];
@@ -2233,106 +2174,106 @@ var FormComponent = (function () {
     return FormComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('newInformationElements'),
+    core_1.Input('newInformationElements'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "newInformationElements", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('dateGenerated'),
+    core_1.Input('dateGenerated'),
     __metadata("design:type", Object)
 ], FormComponent.prototype, "dateGenerated", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('title'),
+    core_1.Input('title'),
     __metadata("design:type", String)
 ], FormComponent.prototype, "title", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('roomNumber'),
+    core_1.Input('roomNumber'),
     __metadata("design:type", String)
 ], FormComponent.prototype, "roomNumber", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tableNumber'),
+    core_1.Input('tableNumber'),
     __metadata("design:type", String)
 ], FormComponent.prototype, "tableNumber", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('nameTraceInput'),
+    core_1.Input('nameTraceInput'),
     __metadata("design:type", String)
 ], FormComponent.prototype, "nameTraceInput", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('employee'),
+    core_1.Input('employee'),
     __metadata("design:type", String)
 ], FormComponent.prototype, "employee", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesErde'),
+    core_1.Input('tablesErde'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesErde", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesLuft'),
+    core_1.Input('tablesLuft'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesLuft", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesFeuer'),
+    core_1.Input('tablesFeuer'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesFeuer", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesMetall'),
+    core_1.Input('tablesMetall'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesMetall", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesWasser'),
+    core_1.Input('tablesWasser'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesWasser", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showInfoFormBool'),
+    core_1.Input('showInfoFormBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showInfoFormBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showNotizFormBool'),
+    core_1.Input('showNotizFormBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showNotizFormBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('notizElements'),
+    core_1.Input('notizElements'),
     __metadata("design:type", Object)
 ], FormComponent.prototype, "notizElements", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showErdeBool'),
+    core_1.Input('showErdeBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showErdeBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showLuftBool'),
+    core_1.Input('showLuftBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showLuftBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showFeuerBool'),
+    core_1.Input('showFeuerBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showFeuerBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showWasserBool'),
+    core_1.Input('showWasserBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showWasserBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showMetallBool'),
+    core_1.Input('showMetallBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showMetallBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAlleBool'),
+    core_1.Input('showAlleBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showAlleBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], FormComponent.prototype, "notizResponse", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
 ], FormComponent.prototype, "changeColorIfAnreiseExport", void 0);
 FormComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-form',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/form/form.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_c = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _c || Object, typeof (_d = typeof angular2_flash_messages_1.FlashMessagesService !== "undefined" && angular2_flash_messages_1.FlashMessagesService) === "function" && _d || Object])
 ], FormComponent);
-
+exports.FormComponent = FormComponent;
 var _a, _b, _c, _d;
 //# sourceMappingURL=form.component.js.map
 
@@ -2341,17 +2282,15 @@ var _a, _b, _c, _d;
 /***/ "../../../../../src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h3 style=\"margin-top: 0;margin-bottom: 0;color: #0a7a74;\">Im-Haus</h3>\n<div class=\"row1\">\n  <div class='wrapper'>\n    <div *ngFor=\"let imHausListeElement of imHausListeElemente\">\n          <div *ngIf=\"imHausListeElement.trace === '-' && !imHausListeElement.isAnreise\">\n            <div class='cards-container' id='container1' [dragula]='\"evented-bag\"'>\n              <div class=\"card\" id=\"card1\" [ngStyle]=\"{'background-color': '#' + imHausListeElement.bgColor}\">\n            <p>\n              <b>Name:</b> {{imHausListeElement.name}}<br>\n              <b>Personen Anzahl:</b> {{imHausListeElement.erwKi}}<br>\n              <b>Zimmernummer:</b> {{imHausListeElement.zimmernummer}}<br>\n              <b>Anreise:</b> {{imHausListeElement.anreise}}<br>\n              <b>Abreise:</b> {{imHausListeElement.abreise}}<br>\n              <b>Notiz1:</b> {{imHausListeElement.notiz1}}<br>\n              <b>Notiz2:</b> {{imHausListeElement.notiz2}}<br>\n              <b>Trace:</b> {{imHausListeElement.trace}}<br>\n              <b>Bemerkung:</b> {{imHausListeElement.bemerkung}}<br>\n            </p>\n            <div *ngIf=\"imHausListeElement.bgColor === '0a7a74'\">\n              <i class=\"fa fa-check\" style=\"float: right; color: white\"></i>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"anreiseTextButton\" style=\"height: 45px\">\n  <h3 style=\"margin-top: 0;margin-bottom: 0;color: #0a7a74; max-width: 50%; float: left\">Anreisen</h3>\n  <div class=\"btn-group\" style=\"float: right\" dropdown>\n    <button style=\"margin: 10px 0 0 0\" dropdownToggle class=\"btn btn-primary dropdown-toggle\" type=\"button\">Heute/Morgen<span class=\"caret\"></span></button>\n    <ul *dropdownMenu class=\"dropdown-menu\" style=\"padding: 0px; height: auto\" role=\"menu\">\n      <div style=\"margin: 0 0 0 0; padding: 10px\" class=\"changeToday\" (mouseenter)=\"mouseEnterChangeTodayButton()\"  (mouseleave)=\"mouseLeaveChangeTodayButton()\" (click)=\"changeDayToToday($event); sortList($event)\" [ngStyle]=\"{'background-color': '#' + bgColorToday}\"><p >Heute</p></div>\n      <div style=\"margin: 0 0 0 0; padding: 10px\" class=\"changeTomorrow\" (mouseenter)=\"mouseEnterChangeTomorrowButton()\"  (mouseleave)=\"mouseLeaveChangeTomorrowButton()\" (click)=\"changeDayToTomorrow($event); sortList($event)\" [ngStyle]=\"{'background-color': '#' + bgColorTomorrow}\"><p >Morgen</p></div>\n    </ul>\n  </div>\n</div>\n<div class=\"row1\">\n  <div class='wrapper'>\n    <div *ngFor=\"let imHausListeElement of imHausListeElemente\">\n          <div *ngIf=\"imHausListeElement.trace === '-' && imHausListeElement.isAnreise\">\n            <div class='cards-container' id='container2' [dragula]='\"evented-bag\"'>\n              <div class=\"card\" id=\"card2\" [ngStyle]=\"{'background-color': '#' + imHausListeElement.bgColor}\">\n            <p>\n              <b>Name:</b> {{imHausListeElement.name}}<br>\n              <b>Personen Anzahl:</b> {{imHausListeElement.erwKi}}<br>\n              <b>Zimmernummer:</b> {{imHausListeElement.zimmernummer}}<br>\n              <b>Anreise:</b> {{imHausListeElement.anreise}}<br>\n              <b>Abreise:</b> {{imHausListeElement.abreise}}<br>\n              <b>Notiz1:</b> {{imHausListeElement.notiz1}}<br>\n              <b>Notiz2:</b> {{imHausListeElement.notiz2}}<br>\n              <b>Trace:</b> {{imHausListeElement.trace}}<br>\n              <b>Bemerkung:</b> {{imHausListeElement.bemerkung}}<br>\n            </p>\n            <div *ngIf=\"imHausListeElement.bgColor === '0a7a74'\">\n              <i class=\"fa fa-check\" style=\"float: right; color: white\"></i>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<h3 style=\"margin-top: 0;margin-bottom: 0;color: #0a7a74;\">Traces</h3>\n<div class=\"row1\">\n  <div class='wrapper'>\n    <div *ngFor=\"let imHausListeElement of imHausListeElemente\">\n          <div *ngIf=\"imHausListeElement.trace != '-'\">\n            <div class='cards-container' id='container3' [dragula]='\"evented-bag\"'>\n              <div class=\"card\" id=\"card3\" [ngStyle]=\"{'background-color': '#' + imHausListeElement.bgColor}\">\n            <p>\n              <b>Name:</b> {{imHausListeElement.name}}<br>\n              <b>Personen Anzahl:</b> {{imHausListeElement.erwKi}}<br>\n              <b>Zimmernummer:</b> {{imHausListeElement.zimmernummer}}<br>\n              <b>Anreise:</b> {{imHausListeElement.anreise}}<br>\n              <b>Abreise:</b> {{imHausListeElement.abreise}}<br>\n              <b>Notiz1:</b> {{imHausListeElement.notiz1}}<br>\n              <b>Notiz2:</b> {{imHausListeElement.notiz2}}<br>\n              <b>Trace:</b> {{imHausListeElement.trace}}<br>\n              <b>Bemerkung:</b> {{imHausListeElement.bemerkung}}<br>\n            </p>\n            <div *ngIf=\"imHausListeElement.bgColor === '0a7a74'\">\n              <i class=\"fa fa-check\" style=\"float: right; color: white\"></i>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<h3 style=\"margin-top: 0;margin-bottom: 0;color: #0a7a74;\">Im-Haus</h3>\n<div class=\"row1\">\n  <div class='wrapper'>\n    <div *ngFor=\"let imHausListeElement of imHausListeElemente\">\n      <div *ngIf=\"!imHausListeElement.isAnreise\">\n        <div class='cards-container' id='container1' [dragula]='\"evented-bag\"'>\n          <div class=\"card\" id=\"card1\" [ngStyle]=\"{'background-color': '#' + imHausListeElement.bgColor}\">\n            <p>\n              <b>Zimmernummer:</b> {{imHausListeElement.zimmernummer}}<br>\n              <b>Anreise:</b> {{imHausListeElement.anreise}}<br>\n              <b>Abreise:</b> {{imHausListeElement.abreise}}<br>\n              <b>Personen Anzahl:</b> {{imHausListeElement.personenAnzahl}}<br>\n              <b>Name 1:</b> {{imHausListeElement.name1}}<br>\n              <b>Pinfo 1:</b> {{imHausListeElement.pinfo1}}<br>\n              <b>Pinfo 2:</b> {{imHausListeElement.pinfo2}}<br>\n              <b>Pinfo 3:</b> {{imHausListeElement.pinfo3}}<br>\n              <b>Kategorie:</b> {{imHausListeElement.kategorie}}<br>\n            </p>\n            <div *ngIf=\"imHausListeElement.bgColor === '0a7a74'\">\n              <i class=\"fa fa-check\" style=\"float: right; color: white\"></i>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"anreiseTextButton\" style=\"height: 45px\">\n  <h3 style=\"margin-top: 0;margin-bottom: 0;color: #0a7a74; max-width: 50%; float: left;\">Anreisen</h3><div class=\"btn-group\" style=\"float: right\" dropdown>\n  <button style=\"margin: 10px 0 0 0\" dropdownToggle class=\"btn btn-primary dropdown-toggle\" type=\"button\">Heute/Morgen<span class=\"caret\"></span></button>\n  <ul *dropdownMenu class=\"dropdown-menu\" style=\"padding: 0px; height: auto\" role=\"menu\">\n    <div style=\"margin: 0 0 0 0; padding: 10px\" class=\"changeToday\" (mouseenter)=\"mouseEnterChangeTodayButton()\"  (mouseleave)=\"mouseLeaveChangeTodayButton()\" (click)=\"changeDayToToday($event); sortList($event)\" [ngStyle]=\"{'background-color': '#' + bgColorToday}\"><p >Heute</p></div>\n    <div style=\"margin: 0 0 0 0; padding: 10px\" class=\"changeTomorrow\" (mouseenter)=\"mouseEnterChangeTomorrowButton()\"  (mouseleave)=\"mouseLeaveChangeTomorrowButton()\" (click)=\"changeDayToTomorrow($event); sortList($event)\" [ngStyle]=\"{'background-color': '#' + bgColorTomorrow}\"><p >Morgen</p></div>\n  </ul>\n</div>\n</div>\n<div class=\"row1\">\n  <div class='wrapper'>\n    <div *ngFor=\"let imHausListeElement of imHausListeElemente\">\n      <div *ngIf=\"imHausListeElement.isAnreise\">\n        <div class='cards-container' id='container2' [dragula]='\"evented-bag\"'>\n          <div class=\"card\" id=\"card2\" [ngStyle]=\"{'background-color': '#' + imHausListeElement.bgColor}\">\n            <p>\n              <b>Zimmernummer:</b> {{imHausListeElement.zimmernummer}}<br>\n              <b>Anreise:</b> {{imHausListeElement.anreise}}<br>\n              <b>Abreise:</b> {{imHausListeElement.abreise}}<br>\n              <b>Personen Anzahl:</b> {{imHausListeElement.personenAnzahl}}<br>\n              <b>Name 1:</b> {{imHausListeElement.name1}}<br>\n              <b>Pinfo 1:</b> {{imHausListeElement.pinfo1}}<br>\n              <b>Pinfo 2:</b> {{imHausListeElement.pinfo2}}<br>\n              <b>Pinfo 3:</b> {{imHausListeElement.pinfo3}}<br>\n              <b>Kategorie:</b> {{imHausListeElement.kategorie}}<br>\n            </p>\n            <div *ngIf=\"imHausListeElement.bgColor === '0a7a74'\">\n              <i class=\"fa fa-check\" style=\"float: right; color: white\"></i>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImHausListeComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2361,8 +2300,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var tischplan_service_1 = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
 var ImHausListeComponent = (function () {
     function ImHausListeComponent(tischplanService) {
         this.tischplanService = tischplanService;
@@ -2472,18 +2412,18 @@ var ImHausListeComponent = (function () {
     return ImHausListeComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('imHausListeElemente'),
+    core_1.Input('imHausListeElemente'),
     __metadata("design:type", Array)
 ], ImHausListeComponent.prototype, "imHausListeElemente", void 0);
 ImHausListeComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-im-haus-liste',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _a || Object])
 ], ImHausListeComponent);
-
+exports.ImHausListeComponent = ImHausListeComponent;
 var _a;
 //# sourceMappingURL=im-haus-liste.component.js.map
 
@@ -2510,18 +2450,15 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/digitalerTischplan/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n<head>\n  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n</head>\n<body>\n<div class=\"row\">\n<div class=\"container-fluid\">\n    <div class=\"col-md-4  hidden-xs hidden-sm\">\n    </div>\n    <div class=\"col-md-4\" style=\"padding-top: 20px\">\n      <div class=\"brand\" style=\"text-align: center\"><img alt=\"Brand\" href=\"http://www.servicio.io\" src=\"http://servicio.io/wp-content/uploads/2017/05/servicio-logo-lang-weiss.png\" style=\"height: 45px; width: auto; margin-top:0px; margin-right: 10px; text-align: center; display:inline-block; vertical-align:middle;\"></div>\n      <h2 style=\"color: #FFFFFF\">Login</h2>\n      <form (submit)=\"onLoginSubmit()\">\n        <div class=\"form-group\">\n          <label style=\"color: #FFFFFF\">Benutzername</label>\n          <input type=\"text\" class=\"form-control\" [(ngModel)]=\"username\" name=\"username\">\n        </div>\n        <div class=\"form-group\">\n          <label style=\"color: #FFFFFF\">Passwort</label>\n          <input type=\"password\" class=\"form-control\" [(ngModel)]=\"password\" name=\"password\">\n        </div>\n        <input type=\"submit\" class=\"btn btn-primary\" style=\"background-color: #ffffff; color: #0a7a74\" value=\"Login\">\n      </form>\n    </div>\n    <div class=\"col-md-4  hidden-xs  hidden-sm\">\n    </div>\n</div>\n</div>\n</body>\n</html>\n"
+module.exports = "<html>\n<head>\n  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n</head>\n<body>\n<div class=\"row\">\n<div class=\"container-fluid\">\n    <div class=\"col-md-4  hidden-xs hidden-sm\">\n    </div>\n    <div class=\"col-md-4\" style=\"padding-top: 20px\">\n      <div class=\"brand\" style=\"text-align: center\"><img alt=\"Brand\" href=\"http://www.kommis.net\" src=\"https://kommis.net/wp-content/uploads/2018/09/servicio-logo-weiss.png\" style=\"height: 45px; width: auto; margin-top:0px; margin-right: 10px; text-align: center; display:inline-block; vertical-align:middle;\"></div>\n      <h2 style=\"color: #FFFFFF\">Login</h2>\n      <form (submit)=\"onLoginSubmit()\">\n        <div class=\"form-group\">\n          <label style=\"color: #FFFFFF\">Benutzername</label>\n          <input type=\"text\" class=\"form-control\" [(ngModel)]=\"username\" name=\"username\">\n        </div>\n        <div class=\"form-group\">\n          <label style=\"color: #FFFFFF\">Passwort</label>\n          <input type=\"password\" class=\"form-control\" [(ngModel)]=\"password\" name=\"password\">\n        </div>\n        <input type=\"submit\" class=\"btn btn-primary\" style=\"background-color: #ffffff; color: #0a7a74\" value=\"Login\">\n      </form>\n    </div>\n    <div class=\"col-md-4  hidden-xs  hidden-sm\">\n    </div>\n</div>\n</div>\n</body>\n</html>\n"
 
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/login/login.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2531,9 +2468,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var auth_service_1 = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var router_1 = __webpack_require__("../../../router/@angular/router.es5.js");
 //import {FlashMessagesService} from 'angular2-flash-messages';
 var LoginComponent = (function () {
     function LoginComponent(authService, router) {
@@ -2568,14 +2506,14 @@ var LoginComponent = (function () {
     return LoginComponent;
 }());
 LoginComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-login',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/login/login.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/login/login.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof auth_service_1.AuthService !== "undefined" && auth_service_1.AuthService) === "function" && _a || Object, typeof (_b = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _b || Object])
 ], LoginComponent);
-
+exports.LoginComponent = LoginComponent;
 var _a, _b;
 //# sourceMappingURL=login.component.js.map
 
@@ -2602,22 +2540,15 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div class=\"container\">\n    <ul class=\"nav navbar-nav\">\n      <li class=\"brand\" ><img alt=\"Brand\" href=\"http://www.servicio.io\" src=\"https://kommis.net/wp-content/uploads/2018/09/servicio-logo-neu-laden.png\" (click)=\"brandClick()\" style=\"height: 45px; width: auto; margin-top:0px; margin-right: 10px; text-align: left; display:inline-block; vertical-align:middle;\"></li>\n      <li class=\"Belegte Tisch\" ><div class=\"TischDiv\"><h3 class=\"TischH3\">{{tablesOccupied}}</h3></div></li>\n      <div class=\"btn-group\" dropdown>\n        <button dropdownToggle type=\"button\" class=\"btn btn-primary dropdown-toggle\"><i class=\"fa fa-print\" aria-hidden=\"true\"></i><span class=\"caret\"></span>\n        </button>\n        <ul *dropdownMenu class=\"dropdown-menu\" style=\"height: auto; padding: 0\" role=\"menu\">\n          <li class=\"printToCart1\" (click)=\"printToCart1('printSectionId1')\" (mouseenter)=\"mouseEnterprintToCart1Button()\"  (mouseleave)=\"mouseLeaveprintToCart1Button()\" [ngStyle]=\"{'background-color': '#' + printToCart1Button}\"  style=\" display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 0px; padding: 10px; width:200px;\" >Tisch Übersicht Drucken</li>\n          <li class=\"divider dropdown-divider\" style=\"margin: 0\"></li>\n          <li class=\"printToCart2\" (click)=\"printToCart2('printSectionId2')\" (mouseenter)=\"mouseEnterprintToCart2Button()\"  (mouseleave)=\"mouseLeaveprintToCart2Button()\" [ngStyle]=\"{'background-color': '#' + printToCart2Button}\"  style=\"text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 0px; padding: 10px; width:200px;\" class=\"printToCart2\">Tisch Plan Drucken</li>\n          <li class=\"divider dropdown-divider\" style=\"margin: 0\"></li>\n          <li class=\"printToCart3\" (click)=\"printToCart3('printSectionId3')\" (mouseenter)=\"mouseEnterprintToCart3Button()\"  (mouseleave)=\"mouseLeaveprintToCart3Button()\" [ngStyle]=\"{'background-color': '#' + printToCart3Button}\"  style=\"text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 0px; padding: 10px; width:200px;\" class=\"printToCart3\">A-Z Liste Drucken</li>\n        </ul>\n      </div>\n      <div class=\"btn-group\" dropdown>\n        <button dropdownToggle class=\"btn btn-primary dropdown-toggle\" type=\"button\">XLS<i class=\"fa fa-upload\" aria-hidden=\"true\"></i><span class=\"caret\"></span>\n        </button>\n        <ul *dropdownMenu class=\"dropdown-menu\" style=\"padding: 10px; height: auto\" role=\"menu\">\n          <div class=\"xls\" (click)=\"none($event)\" ><h6 >XLS-Datei hochladen</h6>\n            <form class=\"SendMessage\" (submit)=\"sendMessage($event)\">\n              <input type=\"file\" style=\"max-width: 160px; min-height: 50px\" (change)=\"fileChangeEvent($event)\" placeholder=\"Upload file...\" />\n              <button type=\"button\" class=\"btn btn-send\" (click)=\"upload()\">XLS hochladen</button>\n            </form>\n          </div>\n        </ul>\n      </div>\n      <li class=\"navbar-logout\" *ngIf=\"authService.loggedIn()\"><a (click)=\"onLogoutClick()\" href=\"/\">LOGOUT</a></li>\n    </ul>\n    <ul class=\"nav navbar-nav navbar-right\">\n      <div class=\"btn-group\" dropdown>\n        <button dropdownToggle class=\"btn btn-primary dropdown-toggle\" type=\"button\">Abreisen entfernen <i class=\"fa fa-calendar-check-o\" aria-hidden=\"true\"></i><span class=\"caret\"></span>\n        </button>\n        <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\" style=\"max-height: 130px; padding: 0\">\n          <li role=\"menuitem\" class=\"menuitem\" (mouseenter)=\"mouseEnterAbreiseAbbrechenButton()\"  (mouseleave)=\"mouseLeaveAbreiseAbbrechenButton()\" [ngStyle]=\"{'background-color': '#' + abreiseAbbrechenButton}\" style=\"color: black;\">Abbrechen</li>\n          <li class=\"divider dropdown-divider\" style=\"margin: 0\"></li>\n          <li role=\"menuitem\" class=\"menuitem\" style=\"background-color: red; color: white;\" (mouseenter)=\"mouseEnterAbreiseAusfuehrenButton()\"  (mouseleave)=\"mouseLeaveAbreiseAusfuehrenButton()\" [ngStyle]=\"{'background-color': '#' + abreiseAusfuehrenButton}\" style=\"color: white;\" (click)=\"dispenseIfAbreiseHeute()\"><b> Abreisen für Heute entfernen</b></li>\n          <li class=\"divider dropdown-divider\" style=\"margin: 0\"></li>\n          <li role=\"menuitem\" class=\"menuitem\" style=\"background-color: red; color: white;\" (mouseenter)=\"mouseEnterAbreiseMorgenAusfuehrenButton()\"  (mouseleave)=\"mouseLeaveAbreiseMorgenAusfuehrenButton()\" [ngStyle]=\"{'background-color': '#' + abreiseAusfuehrenMorgenButton}\" style=\"color: white;\" (click)=\"dispenseIfAbreiseMorgen()\"><b> Abreisen für Morgen entfernen</b></li>\n          <li class=\"divider dropdown-divider\" style=\"margin: 0\"></li>\n        </ul>\n      </div>\n      <div class=\"btn-group\" dropdown>\n        <button dropdownToggle type=\"button\" class=\"btn btn-primary dropdown-toggle\">Umsetzen <i class=\"fa fa-exchange\" aria-hidden=\"true\"></i><span class=\"caret\"></span>\n        </button>\n        <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\" style=\"height: auto\">\n          <form class=\"SendInformation\" #myForm=\"ngForm\" (submit)=\"umsetzen($event)\">\n            <div class=\"form-group\" (click)=\"none($event)\">\n              <label for=\"quellTisch\">Quell-Tisch:</label>\n              <input class=\"form-control\" id=\"quellTisch\" [(ngModel)]=\"quellTisch\" name=\"quellTisch\" placeholder=\"Von Tischnummer:\" >\n            </div>\n            <div class=\"form-group\" (click)=\"none($event)\">\n              <label for=\"zielTisch\">Ziel-Tisch</label>\n              <input class=\"form-control\" id=\"zielTisch\" [(ngModel)]=\"zielTisch\" name=\"zielTisch\" placeholder=\"Zu Tischnummer:\" >\n            </div>\n            <button type=\"submit\" class=\"btn btn-primary\" >Umsetzen</button>\n          </form>\n        </ul>\n      </div>\n      <div class=\"btn-group\" dropdown>\n        <button dropdownToggle type=\"button\" class=\"btn btn-primary dropdown-toggle\">Traces <i class=\"fa fa-folder-open\" aria-hidden=\"true\"></i> <span class=\"caret\"></span>\n        </button>\n        <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\" style=\"padding: 0\">\n          <div *ngFor=\"let newInformationElement of newInformationElements; let j = index;\">\n            <button type=\"submit\" style=\"margin: 10px\" class=\"btn btn-send\" (click)=\"delete(newInformationElement, j, $event)\">x</button>\n            <li role=\"menuitem\" style=\"padding: 10px;\" class=\"menuitem\" (click)=\"none($event)\"> <b>Zimmer Nummer: </b> {{newInformationElement.roomNumber}} <br><b>Trace: </b> {{newInformationElement.text}} <br><b>Tisch: </b> {{newInformationElement.tableNumber}}<br><b>Datum: </b> {{newInformationElement.date}}<br><b>Name: </b> {{newInformationElement.name}}<br><b>Mitarbeiter: </b> {{newInformationElement.employee}}</li>\n            <li class=\"divider dropdown-divider\"></li>\n          </div>\n        </ul>\n      </div>\n      <form class=\"navbar-form navbar-left\">\n        <div class=\"form-group form-group-search\">\n          <input type=\"text\" class=\"form-control\" (keyup)=\"onKey($event)\">\n        </div>\n        <button type=\"submit\" class=\"btn search-btn-default\" ><i class=\"fa fa-search\" aria-hidden=\"true\"></i></button>\n      </form>\n      <li class=\"partnerLi\" ><img class=\"Partner\" alt=\"Partner\" href=\"www.kommis.net\" src=\"https://kommis.net/wp-content/uploads/2018/09/thumb_589acfbcbd346.png\" ></li>\n    </ul>\n  </div>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div class=\"container\">\n    <ul class=\"nav navbar-nav\">\n      <li class=\"brand\" ><img alt=\"Brand\" href=\"http://www.servicio.io\" src=\"https://kommis.net/wp-content/uploads/2018/09/servicio-logo-neu-laden.png\" (click)=\"brandClick()\" style=\"height: 45px; width: auto; margin-top:0px; margin-right: 10px; text-align: left; display:inline-block; vertical-align:middle;\"></li>\n      <li class=\"Belegte Tisch\" ><div class=\"TischDiv\"><h3 class=\"TischH3\">{{tablesOccupied}}</h3></div></li>\n      <div class=\"btn-group\" dropdown>\n        <button dropdownToggle type=\"button\" class=\"btn btn-primary dropdown-toggle\"><i class=\"fa fa-print\" aria-hidden=\"true\"></i><span class=\"caret\"></span>\n        </button>\n        <ul *dropdownMenu class=\"dropdown-menu\" style=\"height: auto; padding: 0\" role=\"menu\">\n          <li class=\"printToCart1\" (click)=\"printToCart1('printSectionId1')\" (mouseenter)=\"mouseEnterprintToCart1Button()\"  (mouseleave)=\"mouseLeaveprintToCart1Button()\" [ngStyle]=\"{'background-color': '#' + printToCart1Button}\"  style=\" display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 0px; padding: 10px; width:200px;\" >Tisch Übersicht Drucken</li>\n          <li class=\"divider dropdown-divider\" style=\"margin: 0\"></li>\n          <li class=\"printToCart2\" (click)=\"printToCart2('printSectionId2')\" (mouseenter)=\"mouseEnterprintToCart2Button()\"  (mouseleave)=\"mouseLeaveprintToCart2Button()\" [ngStyle]=\"{'background-color': '#' + printToCart2Button}\"  style=\"text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 0px; padding: 10px; width:200px;\" class=\"printToCart2\">Tisch Plan Drucken</li>\n          <li class=\"divider dropdown-divider\" style=\"margin: 0\"></li>\n          <li class=\"printToCart3\" (click)=\"printToCart3('printSectionId3')\" (mouseenter)=\"mouseEnterprintToCart3Button()\"  (mouseleave)=\"mouseLeaveprintToCart3Button()\" [ngStyle]=\"{'background-color': '#' + printToCart3Button}\"  style=\"text-align: left; display:table-cell; vertical-align:middle; margin-top: 15px; margin-right: 0px; padding: 10px; width:200px;\" class=\"printToCart3\">A-Z Liste Drucken</li>\n        </ul>\n      </div>\n      <div class=\"btn-group\" dropdown>\n        <button dropdownToggle class=\"btn btn-primary dropdown-toggle\" type=\"button\">CSV<i class=\"fa fa-upload\" aria-hidden=\"true\"></i><span class=\"caret\"></span>\n        </button>\n        <ul *dropdownMenu class=\"dropdown-menu\" style=\"padding: 10px; height: auto\" role=\"menu\">\n          <div class=\"csv\" (click)=\"none($event)\" ><h6 >CSV-Datei hochladen</h6>\n            <form class=\"SendMessage\" (submit)=\"sendMessage($event)\">\n              <input type=\"file\" style=\"max-width: 160px; min-height: 50px\" (change)=\"fileChangeEvent($event)\" placeholder=\"Upload file...\" />\n              <button type=\"button\" class=\"btn btn-send\" (click)=\"upload()\">CSV hochladen</button>\n            </form>\n          </div>\n        </ul>\n      </div>\n      <li class=\"navbar-logout\" *ngIf=\"authService.loggedIn()\"><a (click)=\"onLogoutClick()\" href=\"/\">LOGOUT</a></li>\n    </ul>\n    <ul class=\"nav navbar-nav navbar-right\">\n      <div class=\"btn-group\" dropdown>\n        <button dropdownToggle class=\"btn btn-primary dropdown-toggle\" type=\"button\">Abreisen entfernen <i class=\"fa fa-calendar-check-o\" aria-hidden=\"true\"></i><span class=\"caret\"></span>\n        </button>\n        <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\" style=\"max-height: 130px; padding: 0\">\n          <li role=\"menuitem\" class=\"menuitem\" (mouseenter)=\"mouseEnterAbreiseAbbrechenButton()\"  (mouseleave)=\"mouseLeaveAbreiseAbbrechenButton()\" [ngStyle]=\"{'background-color': '#' + abreiseAbbrechenButton}\" style=\"color: black;\">Abbrechen</li>\n          <li class=\"divider dropdown-divider\" style=\"margin: 0\"></li>\n          <li role=\"menuitem\" class=\"menuitem\" style=\"background-color: red; color: white;\" (mouseenter)=\"mouseEnterAbreiseAusfuehrenButton()\"  (mouseleave)=\"mouseLeaveAbreiseAusfuehrenButton()\" [ngStyle]=\"{'background-color': '#' + abreiseAusfuehrenButton}\" style=\"color: white;\" (click)=\"dispenseIfAbreiseHeute()\"><b> Abreisen für Heute entfernen</b></li>\n          <li class=\"divider dropdown-divider\" style=\"margin: 0\"></li>\n          <li role=\"menuitem\" class=\"menuitem\" style=\"background-color: red; color: white;\" (mouseenter)=\"mouseEnterAbreiseMorgenAusfuehrenButton()\"  (mouseleave)=\"mouseLeaveAbreiseMorgenAusfuehrenButton()\" [ngStyle]=\"{'background-color': '#' + abreiseAusfuehrenMorgenButton}\" style=\"color: white;\" (click)=\"dispenseIfAbreiseMorgen()\"><b> Abreisen für Morgen entfernen</b></li>\n          <li class=\"divider dropdown-divider\" style=\"margin: 0\"></li>\n        </ul>\n      </div>\n      <div class=\"btn-group\" dropdown>\n        <button dropdownToggle type=\"button\" class=\"btn btn-primary dropdown-toggle\">Umsetzen <i class=\"fa fa-exchange\" aria-hidden=\"true\"></i><span class=\"caret\"></span>\n        </button>\n        <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\" style=\"height: auto\">\n          <form class=\"SendInformation\" #myForm=\"ngForm\" (submit)=\"umsetzen($event)\">\n            <div class=\"form-group\" (click)=\"none($event)\">\n              <label for=\"quellTisch\">Quell-Tisch:</label>\n              <input class=\"form-control\" id=\"quellTisch\" [(ngModel)]=\"quellTisch\" name=\"quellTisch\" placeholder=\"Von Tischnummer:\" >\n            </div>\n            <div class=\"form-group\" (click)=\"none($event)\">\n              <label for=\"zielTisch\">Ziel-Tisch</label>\n              <input class=\"form-control\" id=\"zielTisch\" [(ngModel)]=\"zielTisch\" name=\"zielTisch\" placeholder=\"Zu Tischnummer:\" >\n            </div>\n            <button type=\"submit\" class=\"btn btn-primary\" >Umsetzen</button>\n          </form>\n        </ul>\n      </div>\n      <div class=\"btn-group\" dropdown>\n        <button dropdownToggle type=\"button\" class=\"btn btn-primary dropdown-toggle\">Traces <i class=\"fa fa-folder-open\" aria-hidden=\"true\"></i> <span class=\"caret\"></span>\n        </button>\n        <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\" style=\"padding: 0\">\n          <div *ngFor=\"let newInformationElement of newInformationElements; let j = index;\">\n            <button type=\"submit\" style=\"margin: 10px\" class=\"btn btn-send\" (click)=\"delete(newInformationElement, j, $event)\">x</button>\n            <li role=\"menuitem\" style=\"padding: 10px;\" class=\"menuitem\" (click)=\"none($event)\"> <b>Zimmer Nummer: </b> {{newInformationElement.roomNumber}} <br><b>Trace: </b> {{newInformationElement.text}} <br><b>Tisch: </b> {{newInformationElement.tableNumber}}<br><b>Datum: </b> {{newInformationElement.date}}<br><b>Name: </b> {{newInformationElement.name}}<br><b>Mitarbeiter: </b> {{newInformationElement.employee}}</li>\n            <li class=\"divider dropdown-divider\"></li>\n          </div>\n        </ul>\n      </div>\n      <form class=\"navbar-form navbar-left\">\n        <div class=\"form-group form-group-search\">\n          <input type=\"text\" class=\"form-control\" (keyup)=\"onKey($event)\">\n        </div>\n        <button type=\"submit\" class=\"btn search-btn-default\" ><i class=\"fa fa-search\" aria-hidden=\"true\"></i></button>\n      </form>\n      <li class=\"partnerLi\" ><img class=\"Partner\" alt=\"Partner\" href=\"www.kommis.net\" src=\"https://kommis.net/wp-content/uploads/2018/09/thumb_589acfbcbd346.png\" ></li>\n    </ul>\n  </div>\n</nav>\n"
 
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavigationComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2627,12 +2558,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var tischplan_service_1 = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
+var http_1 = __webpack_require__("../../../http/@angular/http.es5.js");
+var angular2_flash_messages_1 = __webpack_require__("../../../../angular2-flash-messages/index.js");
+var auth_service_1 = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var router_1 = __webpack_require__("../../../router/@angular/router.es5.js");
 var NavigationComponent = (function () {
     function NavigationComponent(tischplanService, http, _flashMessagesService, authService, router) {
         this.tischplanService = tischplanService;
@@ -2643,15 +2575,15 @@ var NavigationComponent = (function () {
         this.filesToUpload = [];
         this.tablesTempAbreise = [];
         this.newInformationElements = [];
-        this.umsetzenExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.abreisenExportExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.termExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.umsetzenExport = new core_1.EventEmitter();
+        this.abreisenExportExport = new core_1.EventEmitter();
+        this.termExport = new core_1.EventEmitter();
         this.date = [];
         this.parts = [];
         this.parsedDate = [];
         this.tableInformation = [];
-        this.reloadLists = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.transformExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.reloadLists = new core_1.EventEmitter();
+        this.transformExport = new core_1.EventEmitter();
         this.printToCart1Button = "ffffff";
         this.printToCart2Button = "ffffff";
         this.printToCart3Button = "ffffff";
@@ -2689,7 +2621,7 @@ var NavigationComponent = (function () {
         var innerContents = document.getElementById(printSectionId2).innerHTML;
         popupWinindow = window.open('', '_blank', 'width=1000,height=1000,scrollbars=no,menubar=no,toolbar=no,location=no,status=no,titlebar=no');
         popupWinindow.document.open();
-        popupWinindow.document.write('<html><head><style> .row .tTee1 { width: 30px; height: 60px; position: absolute; border: solid 1px #0a7a74; } .row .tTee2 { width: 30px; height: 60px; position: absolute; border: solid 1px #0a7a74; } .row .tTee3 { width: 30px; height: 60px; position: absolute; border: solid 1px #0a7a74; } .row .tTee4 { width: 30px; height: 60px; position: absolute; border: solid 1px #0a7a74; } .row .tTee5 { width: 30px; height: 80px; border: solid 1px #0a7a74; position: absolute; } .row .tTee6 { width: 30px; height: 80px; border: solid 1px #0a7a74; position: absolute; } .row .t7 { width: 30px; height: 80px; border: solid 1px #0a7a74; position: absolute; } .row .t8 { width: 100px; height: 90px; border: solid 1px #0a7a74; position: absolute; } .row .t9 { width: 40px; height: 60px; border: solid 1px #0a7a74; position: absolute; } .row .t10 { width: 40px; height: 60px; border: solid 1px #0a7a74; position: absolute; } .row .t11 { width: 30px; height: 80px; border: solid 1px #0a7a74; position: absolute; } .row .t12 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t13 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t14 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t15 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t16 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; } .row .t17 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t18 { position: absolute; } .row .t19 { position: absolute; }.row .t20 { position: absolute; } .row .t21 { position: absolute; }  .row .t22 { position: absolute; } .row .t23 { position: absolute; } .row .t24 { position: absolute; } .row .t40 { width: 60px; height: 40px; border: solid 1px #0a7a74; position: absolute; } .row .t41 { width: 60px; height: 40px; border: solid 1px #0a7a74; position: absolute; } .row .t42 { width: 80px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t43 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; } .row .t44 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; } .row .t45 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; } .row .t46 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; } .row .t47 { width: 80px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t48 { width: 60px; height: 40px; border: solid 1px #0a7a74; position: absolute; } .row .t49 { width: 60px; height: 40px; border: solid 1px #0a7a74; position: absolute; } .row .t50 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t51 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t52 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; } .row .t53 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; } .row .t54 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t55 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t56 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t57 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t58 { width: 60px; height: 40px; border: solid 1px #0a7a74; position: absolute; } .row .t59 { width: 60px; height: 40px; border: solid 1px #0a7a74; position: absolute; } .row .t60 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; } .row .t61 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; } .row .t62 { width: 30px; height: 60px; position: absolute; border: solid 1px #0a7a74; } .row .t63 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; } .row .t64 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; } .row .t65 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; } .row .t66 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; } .row .t67 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t68 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t69 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t70 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t71 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t72 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t73 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t74 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t75 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t76 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t77 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t78 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t79 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t80 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t81 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t82 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t83 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t84 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t85 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t86 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t87 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t88 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t89 { width: 60px; height: 30px; border: solid 1px #0a7a74; position: absolute; } .row .t501 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; } .row .t502 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; } .row .t503 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; transform: rotate(45deg); } .row .t504 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; transform: rotate(45deg); } .row .t505 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; transform: rotate(45deg); } .row .t506 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; transform: rotate(45deg); } .row .t507 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; border-radius: 50%; } .row .t508 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; border-radius: 50%; } .row .t509 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; border-radius: 50%; } .row .t510 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; border-radius: 50%; } .row .t511 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; border-radius: 50%; } .row .t512 { width: 80px; height: 45px; border: solid 1px #0a7a74; position: absolute; } .row .t513 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; border-radius: 50%; } .row .t514 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; border-radius: 50%; } .row .t515 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; transform: rotate(45deg); } .row .t516 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; transform: rotate(45deg); } .row .t517 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; transform: rotate(10deg); } .row .t518 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; transform: rotate(30deg); } .row .t519 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; transform: rotate(50deg); } .row .t520 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; transform: rotate(70deg); } .row .t521 { width: 30px; height: 60px; border: solid 1px #0a7a74; position: absolute; transform: rotate(90deg); } .row .t522 { width: 80px; height: 45px; border: solid 1px #0a7a74; position: absolute; } .row .t523 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; transform: rotate(45deg); } .row .t524 { width: 40px; height: 40px; border: solid 1px #0a7a74; position: absolute; transform: rotate(45deg); } .row .t525 { width: 40px; height: 40px; position: absolute; transform: rotate(45deg); } .row .t25 { position: absolute; } .row .t26 { position: absolute; } .row .t30 { position: absolute; } .row  [class~="t30.1"] { position: absolute; } [class~="t30.2"] { position: absolute; } .row  [class~="t30.3"]{ position: absolute; } .row  [class~="t30.4"] { position: absolute; }.t31 { position: absolute; } .t32 { position: absolute; } .t33 { position: absolute; } .t34 { position: absolute; } .t35 { position: absolute; } .t36 { position: absolute; } .t37 { position: absolute; } .t38 { position: absolute; }  .t90 { position: absolute; } .t91 { position: absolute; } .t92 { position: absolute; } .t93 { position: absolute; } .t94 { position: absolute; } .t95 { position: absolute; } .t96 { position: absolute; } .t97 { position: absolute; } .t98 { position: absolute; } .t100 { position: absolute; } .t101 { position: absolute; } .t102 { position: absolute; } .t103 { position: absolute; } .t104 { position: absolute; } .t110 { position: absolute; } .t111 { position: absolute; } .t112 { position: absolute; } .t113 { position: absolute; } .t114 { position: absolute; } .t115 { position: absolute; } .t116 { position: absolute; } .t117 { position: absolute; } .t118 { position: absolute; }  .t120 { position: absolute; }  .t121 { position: absolute; }  .t122 { position: absolute; }  .t123 { position: absolute; }  .t124 { position: absolute; }  .t125 { position: absolute; }  .t126 { position: absolute; }  .t160 { position: absolute; }  .t161 { position: absolute; }  .t162 { position: absolute; }  .t163 { position: absolute; }  .t164 { position: absolute; }  .t165 { position: absolute; }  .t150 { position: absolute; }  .t151 { position: absolute; }  .t140 { position: absolute; }  .t141 { position: absolute; }  .t142 { position: absolute; }  .t143 { position: absolute; } .t144 { position: absolute; } .t152 { position: absolute; } .t153 { position: absolute; } .t154 { position: absolute; } .t180 { position: absolute; } .t181 { position: absolute; } .t182 { position: absolute; } .t183 { position: absolute; } .t184 { position: absolute; } .t185 { position: absolute; } .t186 { position: absolute; } .t187 { position: absolute; } .t188 { position: absolute; } .t189 { position: absolute; } .t190 { position: absolute; } .t191 { position: absolute; } .t192 { position: absolute; } .t193 { position: absolute; }</style></head><body onload="window.print()">' + innerContents + '</html>');
+        popupWinindow.document.write('<html><head><style> .row .tW001 { position: absolute; } .row .tW002 { position: absolute; } .row .tW003 { position: absolute; } .row .tW004 { position: absolute; } .row .tW005 { position: absolute; } .row .tW006 { position: absolute; } .row .tW007 { position: absolute; } .row .tW008 { position: absolute; } .row .tW009 { position: absolute; } .row .tW010 { position: absolute; } .row .tW011 { position: absolute; } .row .tW012 { position: absolute; } .row .tW013 { position: absolute; } .row .tW014 { position: absolute; } .row .tW015 { position: absolute; } .row .tW016 { position: absolute; } .row .tW017 { position: absolute; } .row .tW018 { position: absolute; } .row .tW019 { position: absolute; } .row .tW020 { position: absolute; } .row .tW021 { position: absolute; } .row .tW022 { position: absolute; } .row .tW023 { position: absolute; } .row .tW024 { position: absolute; } .row .tW025 { position: absolute; } .row .tW026 { position: absolute; } .row .tL001 { position: absolute; } .row .tL002 { position: absolute; } .row .tL003 { position: absolute; } .row .tL004 { position: absolute; } .row .tL005 { position: absolute; } .row .tL006 { position: absolute; } .row .tL007 { position: absolute; } .row .tL008 { position: absolute; } .row .tL009 { position: absolute; } .row .tL010 { position: absolute; } .row .tL011 { position: absolute; } .row .tL012 { position: absolute; } .row .tL013 { position: absolute; } .row .tL014 { position: absolute; } .row .tL015 { position: absolute; } .row .tL016 { position: absolute; } .row .tL017 { position: absolute; } .row .tL018 { position: absolute; } .row .tL019 { position: absolute; } .row .tL020 { position: absolute; } .row .tL021 { position: absolute; } .row .tL022 { position: absolute; } .row .tL023 { position: absolute; } .row .tL024 { position: absolute; } .row .tL025 { position: absolute; } .row .tL026 { position: absolute; } .row .tF001 { position: absolute; } .row .tF002 { position: absolute; } .row .tF003 { position: absolute; } .row .tF004 { position: absolute; } .row .tF005 { position: absolute; } .row .tF006 { position: absolute; } .row .tF007 { position: absolute; } .row .tF008 { position: absolute; } .row .tF009 { position: absolute; } .row .tF010 { position: absolute; } .row .tF011 { position: absolute; } .row .tF012 { position: absolute; } .row .tF013 { position: absolute; } .row .tF014 { position: absolute; } .row .tF015 { position: absolute; } .row .tF016 { position: absolute; } .row .tF017 { position: absolute; } .row .tF018 { position: absolute; } .row .tF019 { position: absolute; } .row .tF020 { position: absolute; } .row .tF021 { position: absolute; } .row .tF022 { position: absolute; } .row .tF023 { position: absolute; } .row .tF024 { position: absolute; } .row .tF025 { position: absolute; } .row .tF026 { position: absolute; } .row .tE001 { position: absolute; } .row .tE002 { position: absolute; } .row .tE003 { position: absolute; } .row .tE004 { position: absolute; } .row .tE005 { position: absolute; } .row .tE006 { position: absolute; } .row .tE007 { position: absolute; } .row .tE008 { position: absolute; } .row .tE009 { position: absolute; } .row .tE010 { position: absolute; } .row .tE011 { position: absolute; } .row .tE012 { position: absolute; } .row .tE013 { position: absolute; } .row .tE014 { position: absolute; } .row .tE015 { position: absolute; } .row .tE016 { position: absolute; } .row .tE017 { position: absolute; } .row .tE018 { position: absolute; } .row .tE019 { position: absolute; } .row .tE020 { position: absolute; } .row .tE021 { position: absolute; } .row .tE022 { position: absolute; } .row .tE023 { position: absolute; } .row .tE024 { position: absolute; } .row .tE025 { position: absolute; } .row .tE026 { position: absolute; } .row .tM001 { position: absolute; } .row .tM002 { position: absolute; } .row .tM003 { position: absolute; } .row .tM004 { position: absolute; } .row .tM005 { position: absolute; } .row .tM006 { position: absolute; } .row .tM007 { position: absolute; } .row .tM008 { position: absolute; } .row .tM009 { position: absolute; } .row .tM010 { position: absolute; } .row .tM011 { position: absolute; } .row .tM012 { position: absolute; } .row .tM013 { position: absolute; } .row .tM014 { position: absolute; } .row .tM015 { position: absolute; } .row .tM016 { position: absolute; } .row .tM017 { position: absolute; } .row .tM018 { position: absolute; } .row .tM019 { position: absolute; } .row .tM020 { position: absolute; } .row .tM021 { position: absolute; } .row .tM022 { position: absolute; } .row .tM023 { position: absolute; } .row .tM024 { position: absolute; } .row .tM025 { position: absolute; } .row .tM026 { position: absolute; } .row .tM001 { position: absolute; } .row .tM002 { position: absolute; } .row .tM003 { position: absolute; } .row .tM004 { position: absolute; } .row .tM005 { position: absolute; } .row .tM006 { position: absolute; } .row .tM007 { position: absolute; } .row .tM008 { position: absolute; } .row .tM009 { position: absolute; } .row .tM010 { position: absolute; } .row .tM011 { position: absolute; } .row .tM012 { position: absolute; } .row .tM013 { position: absolute; } .row .tM014 { position: absolute; } .row .tM015 { position: absolute; } .row .tM016 { position: absolute; } .row .tM017 { position: absolute; } .row .tM018 { position: absolute; } .row .tM019 { position: absolute; } .row .tM020 { position: absolute; } .row .tM021 { position: absolute; } .row .tM022 { position: absolute; } .row .tM023 { position: absolute; } .row .tM024 { position: absolute; } .row .tM025 { position: absolute; } .row .tM026 { position: absolute; } </style></head><body onload="window.print()">' + innerContents + '</html>');
         popupWinindow.document.close();
     };
     NavigationComponent.prototype.printToCart3 = function (printSectionId3) {
@@ -2720,62 +2652,45 @@ var NavigationComponent = (function () {
         var tableToMove = { department: "Empty", number: "0", targetTable: "0", targetDepartment: "Empty" };
         var indexZiel = 0;
         var indexQuell = 0;
-        if (Number(quellTisch) >= 30 && Number(quellTisch) <= 47) {
-            tableToMove.department = "berglerStubeHubertusStube";
+        if (quellTisch.indexOf('W') !== -1) {
+            tableToMove.department = "wasser";
             indexQuell = 3;
         }
-        else if (Number(quellTisch) >= 10 && Number(quellTisch) <= 26) {
-            tableToMove.department = "Erde";
+        else if (quellTisch.indexOf('E') !== -1) {
+            tableToMove.department = "erde";
             indexQuell = 2;
         }
-        else if (Number(quellTisch) >= 50 && Number(quellTisch) <= 77) {
-            tableToMove.department = "waeldlerStubeKristallStube";
+        else if (quellTisch.indexOf('L') !== -1) {
+            tableToMove.department = "luft";
             indexQuell = 1;
         }
-        else if (Number(quellTisch) >= 80 && Number(quellTisch) <= 99) {
-            tableToMove.department = "edelweissKaminStube";
+        else if (quellTisch.indexOf('F') !== -1) {
+            tableToMove.department = "feuer";
             indexQuell = 4;
         }
-        else if ((Number(quellTisch) >= 1 && Number(quellTisch) <= 6) || quellTisch === "Tee1" || quellTisch === "Tee2" || quellTisch === "Tee3" || quellTisch === "Tee4" || quellTisch === "Tee5" || quellTisch === "Tee6") {
-            tableToMove.department = "teestubeTeelounge";
+        else if (quellTisch.indexOf('M') !== -1) {
+            tableToMove.department = "metall";
             indexQuell = 0;
         }
-        else if (Number(quellTisch) >= 100 && Number(quellTisch) < 180) {
-            tableToMove.department = "feuer";
-            indexQuell = 5;
-        }
-        else if (Number(quellTisch) >= 180) {
-            tableToMove.department = "terrasseFeuer";
-            indexZiel = 6;
-        }
-        if (Number(zielTisch) >= 30 && Number(zielTisch) <= 47) {
-            tableToMove.targetDepartment = "berglerStubeHubertusStube";
+        if (zielTisch.indexOf('W') !== -1) {
+            tableToMove.targetDepartment = "wasser";
             indexZiel = 3;
         }
-        else if (Number(zielTisch) >= 10 && Number(zielTisch) <= 26) {
-            tableToMove.targetDepartment = "Erde";
+        else if (zielTisch.indexOf('E') !== -1) {
+            tableToMove.targetDepartment = "erde";
             indexZiel = 2;
         }
-        else if (Number(zielTisch) >= 50 && Number(zielTisch) <= 77) {
-            tableToMove.targetDepartment = "waeldlerStubeKristallStube";
+        else if (zielTisch.indexOf('L') !== -1) {
+            tableToMove.targetDepartment = "luft";
             indexZiel = 1;
         }
-        else if (Number(zielTisch) >= 80 && Number(zielTisch) <= 99) {
-            tableToMove.targetDepartment = "edelweissKaminStube";
+        else if (zielTisch.indexOf('F') !== -1) {
+            tableToMove.targetDepartment = "feuer";
             indexZiel = 4;
         }
-        else if ((Number(zielTisch) >= 1 && Number(zielTisch) <= 6) || zielTisch === "Tee1" || zielTisch === "Tee2" || zielTisch === "Tee3" || zielTisch === "Tee4" || zielTisch === "Tee5" ||
-            zielTisch === "Tee6") {
-            tableToMove.targetDepartment = "teestubeTeelounge";
+        else if (zielTisch.indexOf('M') !== -1) {
+            tableToMove.targetDepartment = "metall";
             indexZiel = 0;
-        }
-        else if (Number(zielTisch) >= 100 && Number(zielTisch) < 180) {
-            tableToMove.targetDepartment = "feuer";
-            indexZiel = 5;
-        }
-        else if (Number(zielTisch) >= 180) {
-            tableToMove.targetDepartment = "terrasseFeuer";
-            indexZiel = 6;
         }
         tableToMove.number = quellTisch;
         tableToMove.targetTable = zielTisch;
@@ -2990,46 +2905,46 @@ var NavigationComponent = (function () {
     return NavigationComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTempAbreise'),
+    core_1.Input('tablesTempAbreise'),
     __metadata("design:type", Array)
 ], NavigationComponent.prototype, "tablesTempAbreise", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('newInformationElements'),
+    core_1.Input('newInformationElements'),
     __metadata("design:type", Array)
 ], NavigationComponent.prototype, "newInformationElements", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesOccupied'),
+    core_1.Input('tablesOccupied'),
     __metadata("design:type", Number)
 ], NavigationComponent.prototype, "tablesOccupied", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], NavigationComponent.prototype, "umsetzenExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
 ], NavigationComponent.prototype, "abreisenExportExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_c = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _c || Object)
 ], NavigationComponent.prototype, "termExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _d || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_d = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _d || Object)
 ], NavigationComponent.prototype, "reloadLists", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _e || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_e = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _e || Object)
 ], NavigationComponent.prototype, "transformExport", void 0);
 NavigationComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-navigation',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["Http"]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* Router */]) === "function" && _k || Object])
+    __metadata("design:paramtypes", [typeof (_f = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _f || Object, typeof (_g = typeof http_1.Http !== "undefined" && http_1.Http) === "function" && _g || Object, typeof (_h = typeof angular2_flash_messages_1.FlashMessagesService !== "undefined" && angular2_flash_messages_1.FlashMessagesService) === "function" && _h || Object, typeof (_j = typeof auth_service_1.AuthService !== "undefined" && auth_service_1.AuthService) === "function" && _j || Object, typeof (_k = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _k || Object])
 ], NavigationComponent);
-
+exports.NavigationComponent = NavigationComponent;
 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
 //# sourceMappingURL=navigation.component.js.map
 
@@ -3038,16 +2953,15 @@ var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
 /***/ "../../../../../src/app/components/digitalerTischplan/print/print.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"printSectionId3\" class=\"section3\">\n  <table style=\"border: solid 1px black; border-collapse: collapse;\">\n    <tr>\n      {{dateGeneratedListe}}\n    </tr>\n    <tr style=\"border: solid 1px black;\">\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">#</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Name</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Tisch</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">PAX</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Anreise</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Abreise</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">GRP</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Bemerkung</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz1</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz2</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Trace</th>\n    </tr>\n    <div *ngFor=\"let table of tables\">\n      <tr style=\"border: solid 1px black;\">\n        <div *ngIf=\"table.nameValue\">\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.zimmernummerValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.nameValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.personenAnzahlValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.anreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.abreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.bemerkungValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.notiz1Value}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.notiz2Value}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.traceValue}}</td>\n          </div>\n      </tr>\n    </div>\n  </table>\n</div>\n<div id=\"printSectionId1\" class=\"section3\">\n  <div *ngIf=\"showErdeBool\">\n    <table style=\"border: solid 1px black; border-collapse: collapse;\">\n      <tr>\n        {{dateGeneratedListe}}\n      </tr>\n      <tr>\n        Erde\n      </tr>\n      <tr style=\"border: solid 1px black;\">\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Tisch</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">#</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Name</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">PAX</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Anreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Abreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">GRP</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Trace</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Bemerkung</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz1</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz2</th>\n      </tr>\n      <div *ngFor=\"let table of tablesErde\">\n        <div *ngIf=\"!table.groups || table.groups.length < 1\">\n          <tr style=\"border: solid 1px black;\">\n          <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n        </div>\n        <div *ngFor=\"let group of table.groups\">\n          <tr style=\"border: solid 1px black;\">\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.zimmernummerValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.nameValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.personenAnzahlValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.anreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.abreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.traceValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.bemerkungValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz1Value}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz2Value}}</td>\n            <div *ngIf=\"group.newTraceText\">\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceRoomNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceName}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceTableNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceText}} {{group.newTraceDate}} {{table.newTraceEmployee}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            </div>\n          </tr>\n        </div>\n      </div>\n    </table>\n  </div>\n  <div *ngIf=\"showFeuerBool\">\n    <table style=\"border: solid 1px black; border-collapse: collapse;\">\n      <tr>\n        {{dateGeneratedListe}}\n      </tr>\n      <tr>\n        Feuer\n      </tr>\n      <tr style=\"border: solid 1px black;\">\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Tisch</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">#</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Name</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">PAX</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Anreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Abreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">GRP</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Trace</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Bemerkung</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz1</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz2</th>\n      </tr>\n      <div *ngFor=\"let table of tablesFeuer\">\n        <div *ngIf=\"!table.groups || table.groups.length < 1\">\n          <tr style=\"border: solid 1px black;\">\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n        </div>\n        <div *ngFor=\"let group of table.groups\">\n          <tr style=\"border: solid 1px black;\">\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.zimmernummerValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.nameValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.personenAnzahlValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.anreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.abreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.traceValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.bemerkungValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz1Value}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz2Value}}</td>\n            <div *ngIf=\"group.newTraceText\">\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceRoomNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceName}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceTableNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceText}} {{group.newTraceDate}} {{table.newTraceEmployee}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            </div>\n          </tr>\n        </div>\n      </div>\n    </table>\n  </div>\n  <div *ngIf=\"showWasserBool\">\n    <table style=\"border: solid 1px black; border-collapse: collapse;\">\n      <tr>\n        {{dateGeneratedListe}}\n      </tr>\n      <tr>\n        Wasser\n      </tr>\n      <tr style=\"border: solid 1px black;\">\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Tisch</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">#</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Name</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">PAX</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Anreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Abreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">GRP</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Trace</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Bemerkung</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz1</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz2</th>\n      </tr>\n      <div *ngFor=\"let table of tablesWasser\">\n        <div *ngIf=\"!table.groups || table.groups.length < 1\">\n          <tr style=\"border: solid 1px black;\">\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n        </div>\n        <div *ngFor=\"let group of table.groups\">\n          <tr style=\"border: solid 1px black;\">\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.zimmernummerValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.nameValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.personenAnzahlValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.anreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.abreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.traceValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.bemerkungValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz1Value}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz2Value}}</td>\n            <div *ngIf=\"group.newTraceText\">\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceRoomNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceName}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceTableNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceText}} {{group.newTraceDate}} {{table.newTraceEmployee}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            </div>\n          </tr>\n        </div>\n      </div>\n    </table>\n  </div>\n  <div *ngIf=\"showMetallBool\">\n    <table style=\"border: solid 1px black; border-collapse: collapse;\">\n      <tr>\n        {{dateGeneratedListe}}\n      </tr>\n      <tr>\n        Metall\n      </tr>\n          <tr style=\"border: solid 1px black;\">\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Tisch</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">#</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Name</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">PAX</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Anreise</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Abreise</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">GRP</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Trace</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Bemerkung</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz1</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz2</th>\n          </tr>\n          <div *ngFor=\"let table of tablesMetall\">\n            <div *ngIf=\"!table.groups || table.groups.length < 1\">\n              <tr style=\"border: solid 1px black;\">\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            </div>\n            <div *ngFor=\"let group of table.groups\">\n              <tr style=\"border: solid 1px black;\">\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.zimmernummerValue}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.nameValue}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.personenAnzahlValue}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.anreiseValue}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.abreiseValue}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.traceValue}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.bemerkungValue}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz1Value}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz2Value}}</td>\n                <div *ngIf=\"group.newTraceText\">\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceRoomNumber}}</td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceName}}</td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceTableNumber}}</td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceText}} {{group.newTraceDate}} {{table.newTraceEmployee}}</td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                </div>\n              </tr>\n            </div>\n          </div>\n        </table>\n      </div>\n  <div *ngIf=\"showLuftBool\">\n    <table style=\"border: solid 1px black; border-collapse: collapse;\">\n      <tr>\n        {{dateGeneratedListe}}\n      </tr>\n      <tr>\n        Luft\n      </tr>\n      <tr style=\"border: solid 1px black;\">\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Tisch</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">#</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Name</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">PAX</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Anreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Abreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">GRP</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Trace</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Bemerkung</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz1</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz2</th>\n      </tr>\n      <div *ngFor=\"let table of tablesLuft\">\n        <div *ngIf=\"!table.groups || table.groups.length < 1\">\n          <tr style=\"border: solid 1px black;\">\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n        </div>\n        <div *ngFor=\"let group of table.groups\">\n          <tr style=\"border: solid 1px black;\">\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.zimmernummerValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.nameValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.personenAnzahlValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.anreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.abreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.traceValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.bemerkungValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz1Value}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz2Value}}</td>\n            <div *ngIf=\"group.newTraceText\">\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceRoomNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceName}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceTableNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceText}} {{group.newTraceDate}} {{table.newTraceEmployee}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            </div>\n          </tr>\n        </div>\n      </div>\n    </table>\n  </div>\n</div>\n<div id=\"printSectionId2\" class=\"section2\">\n  <div class=\"row\" style=\" border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;\">\n    <div *ngIf=\"showWasserBool\">\n      <div *ngFor=\"let tableWasser of tablesWasser; let j = index;\">\n        <div dropdownToggle type=\"button\" class=\"t{{tableWasser.number}} table-item\"\n             [ngStyle]=\"{'top': tableWasser.topValue + 'px', 'left': tableWasser.leftValue + 'px', 'background-color': + tableWasser.bgColor, 'height': + tableWasser.height + 'px', 'width': + tableWasser.width + 'px', 'border': + tableWasser.border}\"\n             [style.border]=\"getStyle(tablesWasser[j].groups)\" dropdown>\n          <div *ngIf=\"tablesWasser[j] !== tablesWasser[j+1]\">\n            <p><b>{{tableWasser.number}} <br>{{erwWasser[j]}}/{{kiWasser[j]}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showErdeBool\">\n      <div *ngFor=\"let tableErde of tablesErde; let j = index;\">\n        <div dropdownToggle type=\"button\" class=\"t{{tableErde.number}} table-item\" [ngStyle]=\"{'top': tableErde.topValue + 'px', 'left': tableErde.leftValue + 'px', 'background-color': + tableErde.bgColor, 'height': + tableErde.height + 'px', 'width': + tableErde.width + 'px', 'border': + tableErde.border}\" [style.border]=\"getStyle(tablesErde[j].groups)\" dropdown>\n          <div *ngIf=\"tablesErde[j] !== tablesErde[j+1]\">\n            <p><b>{{tableErde.number}} <br>{{erwErde[j]}}/{{kiErde[j]}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showFeuerBool\">\n      <div *ngFor=\"let tableFeuer of tablesFeuer; let j = index;\">\n        <div dropdownToggle type=\"button\" class=\"t{{tableFeuer.number}} table-item\" [ngStyle]=\"{'top': tableFeuer.topValue + 'px', 'left': tableFeuer.leftValue + 'px', 'background-color': + tableFeuer.bgColor, 'height': + tableFeuer.height + 'px', 'width': + tableFeuer.width + 'px', 'border': + tableFeuer.border}\" [style.border]=\"getStyle(tablesFeuer[j].groups)\" dropdown>\n          <div *ngIf=\"tablesFeuer[j] !== tablesFeuer[j+1]\">\n            <p><b>{{tableFeuer.number}} <br>{{erwFeuer[j]}}/{{kiFeuer[j]}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showMetallBool\">\n      <div *ngFor=\"let tableMetall of tablesMetall; let j = index;\">\n        <div dropdownToggle type=\"button\" class=\"t{{tableMetall.number}} table-item\" [ngStyle]=\"{'top': tableMetall.topValue + 'px', 'left': tableMetall.leftValue + 'px', 'background-color': + tableMetall.bgColor, 'height': + tableMetall.height + 'px', 'width': + tableMetall.width + 'px', 'border': + tableMetall.border}\" [style.border]=\"getStyle(tablesMetall[j].groups)\" dropdown>\n          <div *ngIf=\"tablesMetall[j] !== tablesMetall[j+1]\">\n            <p><b>{{tableMetall.number}} <br>{{erwMetall[j]}}/{{kiMetall[j]}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showLuftBool\">\n      <div *ngFor=\"let tableLuft of tablesLuft; let j = index;\">\n        <div dropdownToggle type=\"button\" class=\"t{{tableLuft.number}} table-item\" [ngStyle]=\"{'top': tableLuft.topValue + 'px', 'left': tableLuft.leftValue + 'px', 'background-color': + tableLuft.bgColor, 'height': + tableLuft.height + 'px', 'width': + tableLuft.width + 'px', 'border': + tableLuft.border}\" [style.border]=\"getStyle(tablesLuft[j].groups)\" dropdown>\n          <div *ngIf=\"tablesLuft[j] !== tablesLuft[j+1]\">\n            <p><b>{{tableLuft.number}} <br>{{erwLuft[j]}}/{{kiLuft[j]}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n"
+module.exports = "<div id=\"printSectionId3\" class=\"section3\">\n  <table style=\"border: solid 1px black; border-collapse: collapse;\">\n    <tr>\n      {{dateGeneratedListe}}\n    </tr>\n    <tr style=\"border: solid 1px black;\">\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">TN</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">ZN</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Anr</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Abr</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Pers</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Name 1</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Info 1</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Info 2</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Info 3</th>\n      <th style=\"border: solid 1px black; border-collapse: collapse;\">Kategorie</th>\n    </tr>\n    <div *ngFor=\"let table of tables\">\n      <tr style=\"border: solid 1px black;\">\n        <div *ngIf=\"table.name1Value\">\n          <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.zimmernummerValue}}</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.anreiseValue}}</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.abreiseValue}}</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.personenAnzahlValue}}</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.name1Value}}</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.pinfo1Value}}</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.pinfo2Value}}</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.pinfo3Value}}</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.kategorieValue}}</td>\n        </div>\n      </tr>\n    </div>\n  </table>\n</div>\n<div id=\"printSectionId1\" class=\"section3\">\n  <div *ngIf=\"showErdeBool\">\n    <table style=\"border: solid 1px black; border-collapse: collapse;\">\n      <tr>\n        {{dateGeneratedListe}}\n      </tr>\n      <tr>\n        Erde\n      </tr>\n      <tr style=\"border: solid 1px black;\">\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Tisch</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">#</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Name</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">PAX</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Anreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Abreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">GRP</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Trace</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Bemerkung</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz1</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz2</th>\n      </tr>\n      <div *ngFor=\"let table of tablesErde\">\n        <div *ngIf=\"!table.groups || table.groups.length < 1\">\n          <tr style=\"border: solid 1px black;\">\n          <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n          <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n        </div>\n        <div *ngFor=\"let group of table.groups\">\n          <tr style=\"border: solid 1px black;\">\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.zimmernummerValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.nameValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.personenAnzahlValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.anreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.abreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.traceValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.bemerkungValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz1Value}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz2Value}}</td>\n            <div *ngIf=\"group.newTraceText\">\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceRoomNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceName}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceTableNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceText}} {{group.newTraceDate}} {{table.newTraceEmployee}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            </div>\n          </tr>\n        </div>\n      </div>\n    </table>\n  </div>\n  <div *ngIf=\"showFeuerBool\">\n    <table style=\"border: solid 1px black; border-collapse: collapse;\">\n      <tr>\n        {{dateGeneratedListe}}\n      </tr>\n      <tr>\n        Feuer\n      </tr>\n      <tr style=\"border: solid 1px black;\">\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Tisch</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">#</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Name</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">PAX</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Anreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Abreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">GRP</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Trace</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Bemerkung</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz1</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz2</th>\n      </tr>\n      <div *ngFor=\"let table of tablesFeuer\">\n        <div *ngIf=\"!table.groups || table.groups.length < 1\">\n          <tr style=\"border: solid 1px black;\">\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n        </div>\n        <div *ngFor=\"let group of table.groups\">\n          <tr style=\"border: solid 1px black;\">\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.zimmernummerValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.nameValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.personenAnzahlValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.anreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.abreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.traceValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.bemerkungValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz1Value}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz2Value}}</td>\n            <div *ngIf=\"group.newTraceText\">\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceRoomNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceName}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceTableNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceText}} {{group.newTraceDate}} {{table.newTraceEmployee}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            </div>\n          </tr>\n        </div>\n      </div>\n    </table>\n  </div>\n  <div *ngIf=\"showWasserBool\">\n    <table style=\"border: solid 1px black; border-collapse: collapse;\">\n      <tr>\n        {{dateGeneratedListe}}\n      </tr>\n      <tr>\n        Wasser\n      </tr>\n      <tr style=\"border: solid 1px black;\">\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Tisch</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">#</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Name</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">PAX</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Anreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Abreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">GRP</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Trace</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Bemerkung</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz1</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz2</th>\n      </tr>\n      <div *ngFor=\"let table of tablesWasser\">\n        <div *ngIf=\"!table.groups || table.groups.length < 1\">\n          <tr style=\"border: solid 1px black;\">\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n        </div>\n        <div *ngFor=\"let group of table.groups\">\n          <tr style=\"border: solid 1px black;\">\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.zimmernummerValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.nameValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.personenAnzahlValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.anreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.abreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.traceValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.bemerkungValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz1Value}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz2Value}}</td>\n            <div *ngIf=\"group.newTraceText\">\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceRoomNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceName}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceTableNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceText}} {{group.newTraceDate}} {{table.newTraceEmployee}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            </div>\n          </tr>\n        </div>\n      </div>\n    </table>\n  </div>\n  <div *ngIf=\"showMetallBool\">\n    <table style=\"border: solid 1px black; border-collapse: collapse;\">\n      <tr>\n        {{dateGeneratedListe}}\n      </tr>\n      <tr>\n        Metall\n      </tr>\n          <tr style=\"border: solid 1px black;\">\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Tisch</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">#</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Name</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">PAX</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Anreise</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Abreise</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">GRP</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Trace</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Bemerkung</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz1</th>\n            <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz2</th>\n          </tr>\n          <div *ngFor=\"let table of tablesMetall\">\n            <div *ngIf=\"!table.groups || table.groups.length < 1\">\n              <tr style=\"border: solid 1px black;\">\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            </div>\n            <div *ngFor=\"let group of table.groups\">\n              <tr style=\"border: solid 1px black;\">\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.zimmernummerValue}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.nameValue}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.personenAnzahlValue}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.anreiseValue}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.abreiseValue}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.traceValue}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.bemerkungValue}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz1Value}}</td>\n                <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz2Value}}</td>\n                <div *ngIf=\"group.newTraceText\">\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceRoomNumber}}</td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceName}}</td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceTableNumber}}</td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceText}} {{group.newTraceDate}} {{table.newTraceEmployee}}</td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                  <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n                </div>\n              </tr>\n            </div>\n          </div>\n        </table>\n      </div>\n  <div *ngIf=\"showLuftBool\">\n    <table style=\"border: solid 1px black; border-collapse: collapse;\">\n      <tr>\n        {{dateGeneratedListe}}\n      </tr>\n      <tr>\n        Luft\n      </tr>\n      <tr style=\"border: solid 1px black;\">\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Tisch</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">#</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Name</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">PAX</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Anreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Abreise</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">GRP</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Trace</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Bemerkung</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz1</th>\n        <th style=\"border: solid 1px black; border-collapse: collapse;\">Notiz2</th>\n      </tr>\n      <div *ngFor=\"let table of tablesLuft\">\n        <div *ngIf=\"!table.groups || table.groups.length < 1\">\n          <tr style=\"border: solid 1px black;\">\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"> -</td>\n        </div>\n        <div *ngFor=\"let group of table.groups\">\n          <tr style=\"border: solid 1px black;\">\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{table.number}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.zimmernummerValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.nameValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.personenAnzahlValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.anreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.abreiseValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.traceValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.bemerkungValue}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz1Value}}</td>\n            <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.notiz2Value}}</td>\n            <div *ngIf=\"group.newTraceText\">\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceRoomNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceName}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceTableNumber}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\">{{group.newTraceText}} {{group.newTraceDate}} {{table.newTraceEmployee}}</td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n              <td style=\"border: solid 1px black; border-collapse: collapse;\"></td>\n            </div>\n          </tr>\n        </div>\n      </div>\n    </table>\n  </div>\n</div>\n<div id=\"printSectionId2\" class=\"section2\">\n  <div class=\"row\" style=\" border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;\">\n    <div *ngIf=\"showWasserBool\">\n      <div *ngFor=\"let tableWasser of tablesWasser; let j = index;\">\n        <div dropdownToggle type=\"button\" class=\"t{{tableWasser.number}} table-item\"\n             [ngStyle]=\"{'top': tableWasser.topValue + 'px', 'left': tableWasser.leftValue + 'px', 'background-color': + tableWasser.bgColor, 'height': + tableWasser.height + 'px', 'width': + tableWasser.width + 'px', 'border': + tableWasser.border}\"\n             [style.border]=\"getStyle(tablesWasser[j].groups)\" dropdown>\n          <div *ngIf=\"tablesWasser[j] !== tablesWasser[j+1]\">\n            <p><b>{{tableWasser.number}} <br>{{erwWasser[j]}}/{{kiWasser[j]}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showErdeBool\">\n      <div *ngFor=\"let tableErde of tablesErde; let j = index;\">\n        <div dropdownToggle type=\"button\" class=\"t{{tableErde.number}} table-item\" [ngStyle]=\"{'top': tableErde.topValue + 'px', 'left': tableErde.leftValue + 'px', 'background-color': + tableErde.bgColor, 'height': + tableErde.height + 'px', 'width': + tableErde.width + 'px', 'border': + tableErde.border}\" [style.border]=\"getStyle(tablesErde[j].groups)\" dropdown>\n          <div *ngIf=\"tablesErde[j] !== tablesErde[j+1]\">\n            <p><b>{{tableErde.number}} <br>{{erwErde[j]}}/{{kiErde[j]}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showFeuerBool\">\n      <div *ngFor=\"let tableFeuer of tablesFeuer; let j = index;\">\n        <div dropdownToggle type=\"button\" class=\"t{{tableFeuer.number}} table-item\" [ngStyle]=\"{'top': tableFeuer.topValue + 'px', 'left': tableFeuer.leftValue + 'px', 'background-color': + tableFeuer.bgColor, 'height': + tableFeuer.height + 'px', 'width': + tableFeuer.width + 'px', 'border': + tableFeuer.border}\" [style.border]=\"getStyle(tablesFeuer[j].groups)\" dropdown>\n          <div *ngIf=\"tablesFeuer[j] !== tablesFeuer[j+1]\">\n            <p><b>{{tableFeuer.number}} <br>{{erwFeuer[j]}}/{{kiFeuer[j]}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showMetallBool\">\n      <div *ngFor=\"let tableMetall of tablesMetall; let j = index;\">\n        <div dropdownToggle type=\"button\" class=\"t{{tableMetall.number}} table-item\" [ngStyle]=\"{'top': tableMetall.topValue + 'px', 'left': tableMetall.leftValue + 'px', 'background-color': + tableMetall.bgColor, 'height': + tableMetall.height + 'px', 'width': + tableMetall.width + 'px', 'border': + tableMetall.border}\" [style.border]=\"getStyle(tablesMetall[j].groups)\" dropdown>\n          <div *ngIf=\"tablesMetall[j] !== tablesMetall[j+1]\">\n            <p><b>{{tableMetall.number}} <br>{{erwMetall[j]}}/{{kiMetall[j]}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"showLuftBool\">\n      <div *ngFor=\"let tableLuft of tablesLuft; let j = index;\">\n        <div dropdownToggle type=\"button\" class=\"t{{tableLuft.number}} table-item\" [ngStyle]=\"{'top': tableLuft.topValue + 'px', 'left': tableLuft.leftValue + 'px', 'background-color': + tableLuft.bgColor, 'height': + tableLuft.height + 'px', 'width': + tableLuft.width + 'px', 'border': + tableLuft.border}\" [style.border]=\"getStyle(tablesLuft[j].groups)\" dropdown>\n          <div *ngIf=\"tablesLuft[j] !== tablesLuft[j+1]\">\n            <p><b>{{tableLuft.number}} <br>{{erwLuft[j]}}/{{kiLuft[j]}}</b></p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/print/print.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrintComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3057,11 +2971,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
 var PrintComponent = (function () {
     function PrintComponent() {
-        this.getTablesOccupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.getTablesforAzListe = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.getTablesOccupied = new core_1.EventEmitter();
+        this.getTablesforAzListe = new core_1.EventEmitter();
         this.tempTablesArray = [];
         this.tempTablesArray2 = [];
         this.tempTablesArray1 = [];
@@ -3124,7 +3039,7 @@ var PrintComponent = (function () {
         });
         for (var i = 0; i < this.tables.length; i++) {
             //console.log(i);
-            if ("nameValue" in this.tables[i]) {
+            if ("name1Value" in this.tables[i]) {
                 //console.log("--->" + i);
                 this.tableNumbers.push(this.tables[i].number);
             }
@@ -3323,110 +3238,110 @@ var PrintComponent = (function () {
     return PrintComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tables'),
+    core_1.Input('tables'),
     __metadata("design:type", Array)
 ], PrintComponent.prototype, "tables", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('dateGeneratedListe'),
+    core_1.Input('dateGeneratedListe'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "dateGeneratedListe", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesErde'),
+    core_1.Input('tablesErde'),
     __metadata("design:type", Array)
 ], PrintComponent.prototype, "tablesErde", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showErdeBool'),
+    core_1.Input('showErdeBool'),
     __metadata("design:type", Boolean)
 ], PrintComponent.prototype, "showErdeBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesFeuer'),
+    core_1.Input('tablesFeuer'),
     __metadata("design:type", Array)
 ], PrintComponent.prototype, "tablesFeuer", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showFeuerBool'),
+    core_1.Input('showFeuerBool'),
     __metadata("design:type", Boolean)
 ], PrintComponent.prototype, "showFeuerBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesWasser'),
+    core_1.Input('tablesWasser'),
     __metadata("design:type", Array)
 ], PrintComponent.prototype, "tablesWasser", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showWasserBool'),
+    core_1.Input('showWasserBool'),
     __metadata("design:type", Boolean)
 ], PrintComponent.prototype, "showWasserBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesLuft'),
+    core_1.Input('tablesLuft'),
     __metadata("design:type", Array)
 ], PrintComponent.prototype, "tablesLuft", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showLuftBool'),
+    core_1.Input('showLuftBool'),
     __metadata("design:type", Boolean)
 ], PrintComponent.prototype, "showLuftBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesMetall'),
+    core_1.Input('tablesMetall'),
     __metadata("design:type", Array)
 ], PrintComponent.prototype, "tablesMetall", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showMetallBool'),
+    core_1.Input('showMetallBool'),
     __metadata("design:type", Boolean)
 ], PrintComponent.prototype, "showMetallBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('erwWasser'),
+    core_1.Input('erwWasser'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "erwWasser", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('kiWasser'),
+    core_1.Input('kiWasser'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "kiWasser", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('erwErde'),
+    core_1.Input('erwErde'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "erwErde", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('kiErde'),
+    core_1.Input('kiErde'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "kiErde", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('kiFeuer'),
+    core_1.Input('kiFeuer'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "kiFeuer", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('erwLuft'),
+    core_1.Input('erwLuft'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "erwLuft", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('kiLuft'),
+    core_1.Input('kiLuft'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "kiLuft", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('erwFeuer'),
+    core_1.Input('erwFeuer'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "erwFeuer", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('kiMetall'),
+    core_1.Input('kiMetall'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "kiMetall", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('erwMetall'),
+    core_1.Input('erwMetall'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "erwMetall", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], PrintComponent.prototype, "getTablesOccupied", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
 ], PrintComponent.prototype, "getTablesforAzListe", void 0);
 PrintComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-print',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/print/print.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], PrintComponent);
-
+exports.PrintComponent = PrintComponent;
 var _a, _b;
 //# sourceMappingURL=print.component.js.map
 
@@ -3440,13 +3355,10 @@ module.exports = "<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/profile/profile.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3456,9 +3368,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var auth_service_1 = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var router_1 = __webpack_require__("../../../router/@angular/router.es5.js");
 var ProfileComponent = (function () {
     function ProfileComponent(authService, router) {
         this.authService = authService;
@@ -3476,14 +3389,14 @@ var ProfileComponent = (function () {
     return ProfileComponent;
 }());
 ProfileComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-profile',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/profile/profile.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof auth_service_1.AuthService !== "undefined" && auth_service_1.AuthService) === "function" && _a || Object, typeof (_b = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _b || Object])
 ], ProfileComponent);
-
+exports.ProfileComponent = ProfileComponent;
 var _a, _b;
 //# sourceMappingURL=profile.component.js.map
 
@@ -3497,16 +3410,10 @@ module.exports = "<h2 class=\"page-header\">Register</h2>\n<form (submit)=\"onRe
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/register/register.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3516,11 +3423,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var validate_service_1 = __webpack_require__("../../../../../src/app/services/validate.service.ts");
+var auth_service_1 = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var angular2_flash_messages_1 = __webpack_require__("../../../../angular2-flash-messages/index.js");
+var router_1 = __webpack_require__("../../../router/@angular/router.es5.js");
 var RegisterComponent = (function () {
     function RegisterComponent(validateService, flashMessage, authService, router) {
         this.validateService = validateService;
@@ -3563,14 +3471,14 @@ var RegisterComponent = (function () {
     return RegisterComponent;
 }());
 RegisterComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-register',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/register/register.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* Router */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof validate_service_1.ValidateService !== "undefined" && validate_service_1.ValidateService) === "function" && _a || Object, typeof (_b = typeof angular2_flash_messages_1.FlashMessagesService !== "undefined" && angular2_flash_messages_1.FlashMessagesService) === "function" && _b || Object, typeof (_c = typeof auth_service_1.AuthService !== "undefined" && auth_service_1.AuthService) === "function" && _c || Object, typeof (_d = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _d || Object])
 ], RegisterComponent);
-
+exports.RegisterComponent = RegisterComponent;
 var _a, _b, _c, _d;
 //# sourceMappingURL=register.component.js.map
 
@@ -3579,17 +3487,15 @@ var _a, _b, _c, _d;
 /***/ "../../../../../src/app/components/digitalerTischplan/tableplan/tableplan.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"showTablePlanBool\">\n  <div class=\"col-xs-12 printTwo\">\n    <div class=\"row\" style=\" border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;\">\n      <div *ngIf=\"showMetallBool\">\n        <div *ngFor=\"let tableMetall of tablesMetall; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableMetall.number}} table-item\" [ngStyle]=\"{'top': tableMetall.topValue + 'px', 'left': tableMetall.leftValue + 'px', 'background-color': + tableMetall.bgColor, 'height': + tableMetall.height + 'px', 'width': + tableMetall.width + 'px', 'border': + tableMetall.border, 'border-radius': + tableMetall.borderRadius + '%'}\" [style.border]=\"getStyle(tablesMetall[j].groups)\" dropdown>\n            <div *ngIf=\"tablesMetall[j] !== tablesMetall[j+1]\">\n              <p><b>{{tableMetall.number}} <br>{{erwMetall[j]}}/{{kiMetall[j]}}</b></p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableMetall, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableMetall, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableMetall.groups\">\n                    <div *ngIf=\"group\">\n                      <div *ngIf=\"group.nameValue\">\n                        <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.traceValue)\"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>\n                        <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                      </div>\n                      <div *ngIf=\"group.newTraceText\">\n                        <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showErdeBool\">\n        <div *ngFor=\"let tableErde of tablesErde; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableErde.number}} table-item\" [ngStyle]=\"{'top': tableErde.topValue + 'px', 'left': tableErde.leftValue + 'px', 'background-color': + tableErde.bgColor, 'height': + tableErde.height + 'px', 'width': + tableErde.width + 'px', 'border': + tableErde.border, 'border-radius': + tableErde.borderRadius + '%', 'transform': + tableErde.transformValue}\" [style.border]=\"getStyle(tablesErde[j].groups)\" dropdown>\n            <div *ngIf=\"tablesErde[j] !== tablesErde[j+1]\">\n              <p><b>{{tableErde.number}} <br>{{erwErde[j]}}/{{kiErde[j]}}</b></p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableErde, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableErde, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableErde.groups\">\n                    <div *ngIf=\"group\">\n                      <div *ngIf=\"group.nameValue\">\n                        <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.traceValue)\"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>\n                        <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                      </div>\n                      <div *ngIf=\"group.newTraceText\">\n                        <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showLuftBool\">\n        <div *ngFor=\"let tableLuft of tablesLuft; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableLuft.number}} table-item\" [ngStyle]=\"{'top': tableLuft.topValue + 'px', 'left': tableLuft.leftValue + 'px', 'background-color': + tableLuft.bgColor, 'height': + tableLuft.height + 'px', 'width': + tableLuft.width + 'px', 'border': + tableLuft.border, 'border-radius': + tableLuft.borderRadius + '%'}\" [style.border]=\"getStyle(tablesLuft[j].groups)\" dropdown>\n            <div *ngIf=\"tablesLuft[j] !== tablesLuft[j+1]\">\n              <p><b>{{tableLuft.number}} <br>{{erwLuft[j]}}/{{kiLuft[j]}}</b></p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableLuft, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableLuft, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableLuft.groups\">\n                    <div *ngIf=\"group\">\n                      <div *ngIf=\"group.nameValue\">\n                        <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.traceValue)\"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>\n                        <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                      </div>\n                      <div *ngIf=\"group.newTraceText\">\n                        <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showFeuerBool\">\n        <div *ngFor=\"let tableFeuer of tablesFeuer; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableFeuer.number}} table-item\" [ngStyle]=\"{'top': tableFeuer.topValue + 'px', 'left': tableFeuer.leftValue + 'px', 'background-color': + tableFeuer.bgColor, 'height': + tableFeuer.height + 'px', 'width': + tableFeuer.width + 'px', 'border': + tableFeuer.border, 'border-radius': + tableFeuer.borderRadius + '%'}\" [style.border]=\"getStyle(tablesFeuer[j].groups)\" dropdown>\n            <div *ngIf=\"tablesFeuer[j] !== tablesFeuer[j+1]\">\n              <p><b>{{tableFeuer.number}} <br>{{erwFeuer[j]}}/{{kiFeuer[j]}}</b></p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableFeuer, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableFeuer, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableFeuer.groups\">\n                    <div *ngIf=\"group\">\n                      <div *ngIf=\"group.nameValue\">\n                        <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.traceValue)\"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>\n                        <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                      </div>\n                      <div *ngIf=\"group.newTraceText\">\n                        <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showWasserBool\">\n        <div *ngFor=\"let tableWasser of tablesWasser; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableWasser.number}} table-item\" [ngStyle]=\"{'top': tableWasser.topValue + 'px', 'left': tableWasser.leftValue + 'px', 'background-color': + tableWasser.bgColor, 'height': + tableWasser.height + 'px', 'width': + tableWasser.width + 'px', 'border': + tableWasser.border, 'border-radius': + tableWasser.borderRadius + '%'}\" [style.border]=\"getStyle(tablesWasser[j].groups)\" dropdown>\n            <div *ngIf=\"tablesWasser[j] !== tablesWasser[j+1]\">\n              <p><b>{{tableWasser.number}} <br>{{erwWasser[j]}}/{{kiWasser[j]}}</b></p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableWasser, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableWasser, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableWasser.groups\">\n                    <div *ngIf=\"group\">\n                      <div *ngIf=\"group.nameValue\">\n                        <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.traceValue)\"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>\n                        <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                      </div>\n                      <div *ngIf=\"group.newTraceText\">\n                        <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showAlleBool\">\n        <br>\n        <br>\n        <br>\n        <h1 style=\"color: white; margin-top: 200px\">Perfekt um eine Suche zu starten ;-)</h1>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"showTablePlanBool\">\n  <div class=\"col-xs-12 printTwo\">\n    <div class=\"row\" style=\" border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;\">\n      <div *ngIf=\"showMetallBool\">\n        <div *ngFor=\"let tableMetall of tablesMetall; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableMetall.number}} table-item\" [ngStyle]=\"{'top': tableMetall.topValue + 'px', 'left': tableMetall.leftValue + 'px', 'background-color': + tableMetall.bgColor, 'height': + tableMetall.height + 'px', 'width': + tableMetall.width + 'px', 'border': + tableMetall.border}\" [style.border]=\"getStyle(tablesMetall[j].groups)\" dropdown>\n            <div *ngIf=\"tablesMetall[j] !== tablesMetall[j+1]\">\n              <p><b>{{tableMetall.number}} <br>{{erwMetall[j]}}/{{kiMetall[j]}}</b></p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableMetall, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableMetall, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableMetall.groups\">\n                    <div *ngIf=\"group\">\n                      <div *ngIf=\"group.name1Value\">\n                        <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.pinfo1Value)\">\n                          <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>\n                          <b> Anreise Datum:</b> {{group.anreiseValue}}<br>\n                          <b> Abreise Datum:</b> {{group.abreiseValue}}<br>\n                          <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>\n                          <b> Name 1:</b> {{group.name1Value}}<br>\n                          <b> Info 1:</b> {{group.pinfo1Value}}<br>\n                          <b> Info 2:</b> {{group.pinfo2Value}}<br>\n                          <b> Info 3:</b> {{group.pinfo3Value}}<br>\n                          <b> Kategorie:</b> {{group.kategorieValue}}<br>\n                        </div>\n                        <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                      </div>\n                      <div *ngIf=\"group.newTraceText\">\n                        <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                        </div>s\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showErdeBool\">\n        <div *ngFor=\"let tableErde of tablesErde; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableErde.number}} table-item\" [ngStyle]=\"{'top': tableErde.topValue + 'px', 'left': tableErde.leftValue + 'px', 'background-color': + tableErde.bgColor, 'height': + tableErde.height + 'px', 'width': + tableErde.width + 'px', 'border': + tableErde.border, 'border-radius': + tableErde.borderRadius, 'transform': + tableErde.transformValue}\" [style.border]=\"getStyle(tablesErde[j].groups)\" dropdown>\n            <div *ngIf=\"tablesErde[j] !== tablesErde[j+1]\">\n              <p><b>{{tableErde.number}} <br>{{erwErde[j]}}/{{kiErde[j]}}</b></p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableErde, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableErde, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableErde.groups\">\n                    <div *ngIf=\"group\">\n                      <div *ngIf=\"group.name1Value\">\n                        <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.pinfo1Value)\">\n                          <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>\n                          <b> Anreise Datum:</b> {{group.anreiseValue}}<br>\n                          <b> Abreise Datum:</b> {{group.abreiseValue}}<br>\n                          <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>\n                          <b> Name 1:</b> {{group.name1Value}}<br>\n                          <b> Info 1:</b> {{group.pinfo1Value}}<br>\n                          <b> Info 2:</b> {{group.pinfo2Value}}<br>\n                          <b> Info 3:</b> {{group.pinfo3Value}}<br>\n                          <b> Kategorie:</b> {{group.kategorieValue}}<br>\n                        </div>\n                        <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                      </div>\n                      <div *ngIf=\"group.newTraceText\">\n                        <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showLuftBool\">\n        <div *ngFor=\"let tableLuft of tablesLuft; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableLuft.number}} table-item\" [ngStyle]=\"{'top': tableLuft.topValue + 'px', 'left': tableLuft.leftValue + 'px', 'background-color': + tableLuft.bgColor, 'height': + tableLuft.height + 'px', 'width': + tableLuft.width + 'px', 'border': + tableLuft.border}\" [style.border]=\"getStyle(tablesLuft[j].groups)\" dropdown>\n            <div *ngIf=\"tablesLuft[j] !== tablesLuft[j+1]\">\n              <p><b>{{tableLuft.number}} <br>{{erwLuft[j]}}/{{kiLuft[j]}}</b></p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableLuft, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableLuft, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableLuft.groups\">\n                    <div *ngIf=\"group\">\n                      <div *ngIf=\"group.name1Value\">\n                        <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.pinfo1Value)\">\n                          <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>\n                          <b> Anreise Datum:</b> {{group.anreiseValue}}<br>\n                          <b> Abreise Datum:</b> {{group.abreiseValue}}<br>\n                          <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>\n                          <b> Name 1:</b> {{group.name1Value}}<br>\n                          <b> Info 1:</b> {{group.pinfo1Value}}<br>\n                          <b> Info 2:</b> {{group.pinfo2Value}}<br>\n                          <b> Info 3:</b> {{group.pinfo3Value}}<br>\n                          <b> Kategorie:</b> {{group.kategorieValue}}<br>\n                        </div>\n                        <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                      </div>\n                      <div *ngIf=\"group.newTraceText\">\n                        <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showFeuerBool\">\n        <div *ngFor=\"let tableFeuer of tablesFeuer; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableFeuer.number}} table-item\" [ngStyle]=\"{'top': tableFeuer.topValue + 'px', 'left': tableFeuer.leftValue + 'px', 'background-color': + tableFeuer.bgColor, 'height': + tableFeuer.height + 'px', 'width': + tableFeuer.width + 'px', 'border': + tableFeuer.border}\" [style.border]=\"getStyle(tablesFeuer[j].groups)\" dropdown>\n            <div *ngIf=\"tablesFeuer[j] !== tablesFeuer[j+1]\">\n              <p><b>{{tableFeuer.number}} <br>{{erwFeuer[j]}}/{{kiFeuer[j]}}</b></p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableFeuer, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableFeuer, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableFeuer.groups\">\n                    <div *ngIf=\"group\">\n                      <div *ngIf=\"group.name1Value\">\n                        <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.pinfo1Value)\">\n                          <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>\n                          <b> Anreise Datum:</b> {{group.anreiseValue}}<br>\n                          <b> Abreise Datum:</b> {{group.abreiseValue}}<br>\n                          <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>\n                          <b> Name 1:</b> {{group.name1Value}}<br>\n                          <b> Info 1:</b> {{group.pinfo1Value}}<br>\n                          <b> Info 2:</b> {{group.pinfo2Value}}<br>\n                          <b> Info 3:</b> {{group.pinfo3Value}}<br>\n                          <b> Kategorie:</b> {{group.kategorieValue}}<br>\n                        </div>\n                        <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                      </div>\n                      <div *ngIf=\"group.newTraceText\">\n                        <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showWasserBool\">\n        <div *ngFor=\"let tableWasser of tablesWasser; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableWasser.number}} table-item\" [ngStyle]=\"{'top': tableWasser.topValue + 'px', 'left': tableWasser.leftValue + 'px', 'background-color': + tableWasser.bgColor, 'height': + tableWasser.height + 'px', 'width': + tableWasser.width + 'px', 'border': + tableWasser.border}\" [style.border]=\"getStyle(tablesWasser[j].groups)\" dropdown>\n            <div *ngIf=\"tablesWasser[j] !== tablesWasser[j+1]\">\n              <p><b>{{tableWasser.number}} <br>{{erwWasser[j]}}/{{kiWasser[j]}}</b></p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableWasser, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableWasser, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableWasser.groups\">\n                    <div *ngIf=\"group\">\n                      <div *ngIf=\"group.name1Value\">\n                        <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.pinfo1Value)\">\n                          <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>\n                          <b> Anreise Datum:</b> {{group.anreiseValue}}<br>\n                          <b> Abreise Datum:</b> {{group.abreiseValue}}<br>\n                          <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>\n                          <b> Name 1:</b> {{group.name1Value}}<br>\n                          <b> Info 1:</b> {{group.pinfo1Value}}<br>\n                          <b> Info 2:</b> {{group.pinfo2Value}}<br>\n                          <b> Info 3:</b> {{group.pinfo3Value}}<br>\n                          <b> Kategorie:</b> {{group.kategorieValue}}<br>\n                        </div>\n                        <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                      </div>\n                      <div *ngIf=\"group.newTraceText\">\n                        <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                          <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showAlleBool\">\n        <br>\n        <br>\n        <br>\n        <h1 style=\"color: white; margin-top: 200px\">Perfekt um eine Suche zu starten ;-)</h1>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/tableplan/tableplan.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TableplanComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3599,27 +3505,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var tischplan_service_1 = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
 var TableplanComponent = (function () {
     function TableplanComponent(tischplanService) {
         this.tischplanService = tischplanService;
-        this.movedMetall = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.movedErde = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.movedLuft = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.movedFeuer = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.movedWasser = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.changeBgColorIfAnreise = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.exportKiWasser = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.exportErwWasser = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.exportKiLuft = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.exportErwLuft = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.exportKiMetall = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.exportErwMetall = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.exportKiFeuer = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.exportErwFeuer = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.exportKiErde = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.exportErwErde = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.movedMetall = new core_1.EventEmitter();
+        this.movedErde = new core_1.EventEmitter();
+        this.movedLuft = new core_1.EventEmitter();
+        this.movedFeuer = new core_1.EventEmitter();
+        this.movedWasser = new core_1.EventEmitter();
+        this.changeBgColorIfAnreise = new core_1.EventEmitter();
+        this.exportKiWasser = new core_1.EventEmitter();
+        this.exportErwWasser = new core_1.EventEmitter();
+        this.exportKiLuft = new core_1.EventEmitter();
+        this.exportErwLuft = new core_1.EventEmitter();
+        this.exportKiMetall = new core_1.EventEmitter();
+        this.exportErwMetall = new core_1.EventEmitter();
+        this.exportKiFeuer = new core_1.EventEmitter();
+        this.exportErwFeuer = new core_1.EventEmitter();
+        this.exportKiErde = new core_1.EventEmitter();
+        this.exportErwErde = new core_1.EventEmitter();
         this.erwErde = [];
         this.kiErde = [];
         this.erwFeuer = [];
@@ -3695,17 +3602,15 @@ var TableplanComponent = (function () {
     TableplanComponent.prototype.getStyle = function (a) {
         //console.log("a");
         //console.log(a);
-        if (typeof a == null || typeof a === "undefined") {
+        if (typeof a === "undefined") {
             return "solid 3px rgb(243, 239, 228)";
         }
         else {
             for (var b = 0; b < a.length; b++) {
                 //console.log("LOOOOOOOOOOOOOOP");
-                //console.log(a[b].traceValue);
-                if (typeof a[b] != null) {
-                    if (a[b].traceValue != "-" || a[b].newTraceText) {
-                        this.trace = true;
-                    }
+                //console.log(a[b].InfoValue);
+                if (a[b].pinfo1Value != "" || a[b].pinfo2Value != "" || a[b].pinfo3Value != "" || a[b].newInfoText) {
+                    this.trace = true;
                 }
             }
             if (this.trace) {
@@ -3911,134 +3816,134 @@ var TableplanComponent = (function () {
     return TableplanComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tables'),
+    core_1.Input('tables'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tables", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('dateGeneratedListe'),
+    core_1.Input('dateGeneratedListe'),
     __metadata("design:type", String)
 ], TableplanComponent.prototype, "dateGeneratedListe", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesErde'),
+    core_1.Input('tablesErde'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tablesErde", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showErdeBool'),
+    core_1.Input('showErdeBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showErdeBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesFeuer'),
+    core_1.Input('tablesFeuer'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tablesFeuer", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showFeuerBool'),
+    core_1.Input('showFeuerBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showFeuerBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesMetall'),
+    core_1.Input('tablesMetall'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tablesMetall", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showMetallBool'),
+    core_1.Input('showMetallBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showMetallBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesWasser'),
+    core_1.Input('tablesWasser'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tablesWasser", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showWasserBool'),
+    core_1.Input('showWasserBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showWasserBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesLuft'),
+    core_1.Input('tablesLuft'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tablesLuft", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showLuftBool'),
+    core_1.Input('showLuftBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showLuftBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAlleBool'),
+    core_1.Input('showAlleBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showAlleBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showTablePlanBool'),
+    core_1.Input('showTablePlanBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showTablePlanBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], TableplanComponent.prototype, "movedMetall", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
 ], TableplanComponent.prototype, "movedErde", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_c = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _c || Object)
 ], TableplanComponent.prototype, "movedLuft", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _d || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_d = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _d || Object)
 ], TableplanComponent.prototype, "movedFeuer", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _e || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_e = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _e || Object)
 ], TableplanComponent.prototype, "movedWasser", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _f || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_f = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _f || Object)
 ], TableplanComponent.prototype, "changeBgColorIfAnreise", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _g || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_g = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _g || Object)
 ], TableplanComponent.prototype, "exportKiWasser", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _h || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_h = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _h || Object)
 ], TableplanComponent.prototype, "exportErwWasser", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _j || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_j = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _j || Object)
 ], TableplanComponent.prototype, "exportKiLuft", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _k || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_k = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _k || Object)
 ], TableplanComponent.prototype, "exportErwLuft", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _l || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_l = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _l || Object)
 ], TableplanComponent.prototype, "exportKiMetall", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_m = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _m || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_m = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _m || Object)
 ], TableplanComponent.prototype, "exportErwMetall", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_o = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _o || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_o = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _o || Object)
 ], TableplanComponent.prototype, "exportKiFeuer", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_p = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _p || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_p = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _p || Object)
 ], TableplanComponent.prototype, "exportErwFeuer", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_q = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _q || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_q = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _q || Object)
 ], TableplanComponent.prototype, "exportKiErde", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_r = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _r || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_r = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _r || Object)
 ], TableplanComponent.prototype, "exportErwErde", void 0);
 TableplanComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-tableplan',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/tableplan/tableplan.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_s = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _s || Object])
+    __metadata("design:paramtypes", [typeof (_s = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _s || Object])
 ], TableplanComponent);
-
+exports.TableplanComponent = TableplanComponent;
 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s;
 //# sourceMappingURL=tableplan.component.js.map
 
@@ -4052,7 +3957,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "html {\n  background-color: #0a7a74;\n}\n\nhtml, body {\n  padding: 0;\n  margin: 0;\n  height: 100vh;\n  background-color: #0a7a74;\n}\n\nspan {\n  color: #9d9d9d;\n}\n\n.container-fluid {\n  padding: 0 0 10px 0;\n  margin: 0;\n  height: 100vh;\n  max-width: 100vw;\n  background-color: #0a7a74;\n}\n\n.row {\n  max-width: 100vw;\n  min-height: 100vh;\n  padding: 0 15px 15px 15px;\n  background-color: #0a7a74;\n  margin: 0 0 0 0;\n}\n\n.line{\n  width: 100%;\n  height: 20px;\n  border-bottom: solid 10px #0a7a74;\n  position: absolute;\n  right: 0px;\n  top: 115px;\n}\n\n.line1{\n  width: 100%;\n  height: 20px;\n  border-bottom: solid 10px #0a7a74;\n  position: absolute;\n  right: 0px;\n  top: 95px;\n}\n\n.printTwo {\n  overflow-x: auto;\n  -webkit-overflow-scrolling: touch;\n  background-color: #0a7a74;\n  max-height: calc(100vh - 240px);\n}\n\n.row .inner-table {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n  max-height: calc(100vh - 120px);\n}\n\n.row .table-col {\n  min-height: calc(100vh - 70px);\n  max-height: calc(100vh - 70px);\n  background-color: #f3efe4;\n  padding: 10px 10px 20px 10px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  border-radius: 3px;\n  width: calc(100vw - 20px);\n  max-width: 100%;\n}\n\n.print-col {\n  padding: 0;\n  min-height: auto;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  z-index: 2;\n}\n\n.row .upload-col {\n  background-color: #f3efe4;\n  padding: 10px 10px 20px 10px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  min-height: calc(100vh - 70px);\n  max-height: calc(100vh - 70px);\n  border-radius: 3px;\n  z-index: 1;\n\n}\n\n.section3 {\n  display: none;\n}\n\n.section2 {\n  display: none;\n}\n\n.row1 {\n  height: calc((100vh - 195px) / 3);\n  overflow: auto;\n}\n\n.row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .printToCart3, .Tisch, .anleitung {\n  display: none;\n}\n\n.cards-container {\n  margin: 10px 0px 10px 0px;\n  padding: 10px 10px 40px 10px;\n}\n\n.row .container-fluid  .table-col .inner-table .row3 .wrapper .cards-container {\n  border-radius: 3px;\n  border: solid 1px grey;\n  padding: 10px 10px 15px 10px;\n\n}\n\n#containerRestaurant, #containerPanorama, #containerWintergarten, #containerSonnbergZirbn, #containerTerasse, #containerTerrasseFeuer, #containerErde {\n  border-radius: 3px;\n  border: solid 1px grey;\n}\n\n.row .container-fluid .col-md-4 .row1 {\n  overflow: auto;\n  margin: 0 0 0 0;\n  display: inline-block;\n  width: 105%;\n  height: 232.5px;\n  padding-top: 20px;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper {\n  overflow: auto;\n  margin: 0 0 0 0;\n  display: inline-block;\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper .container {\n  overflow: auto;\n  margin: 20px 40px 20px 0;\n  display: inline-block;\n  max-width: 100%;\n  border-radius: 3px;\n}\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 {\n  overflow: auto;\n  margin: 0 auto;\n  display: inline-block;\n  width: 100%;\n  height: 800px;\n  padding-top: 20px;\n}\n\n.row .container-fluid h3 {\n  -ms-flex-line-pack: center;\n      align-content: center;\n  margin: 0 auto;\n  display: inline-block;\n  color: #0a7a74;\n  position: relative;\n  text-align: center;\n}\n\n.row .container-fluid .col-md-4 h3 {\n  margin: 0 auto;\n  color: #0a7a74;\n  position: relative;\n}\n\nbody html .row .container-fluid .upload-col .outer-cards h3 {\n  margin-top: 0px;\n  margin-bottom: 0px;\n  color: #0a7a74;\n}\n\n.row1 .col {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n\n.row1 .col:nth-child(1) {\n  -webkit-box-ordinal-group: 2;\n      -ms-flex-order: 1;\n          order: 1;\n}\n\n.row1 .col:nth-child(2) {\n  -webkit-box-ordinal-group: 1;\n      -ms-flex-order: 0;\n          order: 0;\n}\n\n.row1 .col:nth-child(3) {\n  -webkit-box-ordinal-group: 3;\n      -ms-flex-order: 2;\n          order: 2;\n}\n\n.row .col-md-4 .row2 {\n  padding-bottom: 10px;\n  position: relative;\n  min-height: 100%;\n  border-bottom: 1px solid red;\n}\n\n.card {\n  background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n  background: rgba(255,255,255, 1);\n  border-radius: 3px;\n  border: solid 1px grey;\n  padding: 10px 10px 15px 10px;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper .container .card p {\n  /*padding:10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .wrapper .container .card p {\n  /*padding:10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .row3 .row1 p {\n  /*padding: 10px 10px 10px 10px;*/\n  background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n  background: rgba(255,255,255, 1);\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 .wrapper .container .card p {\n  /*padding: 10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-6 .row {\n  background-color: #eaf3f3;\n  padding: 20px 10px 20px 10px;\n  height: 100%;\n}\n\n.table-item {\n  position: absolute;\n}\n\n.btn-send {\n  display: none;\n}\n\n.csv {\n  margin-bottom: 30px;\n}\n\n.btn-default {\n  display: none;\n}\n\n.btn-primary {\n  background-color: #0a7a74;\n  color: #FFFFFF;\n  margin: 10px 20px 20px 0px;\n  border: none;\n}\n\n.btn-group-departments {\n  margin: 0px 10px 5px 0px;\n}\n\n.btn-primary:hover {\n  background-color: #1f5452;\n  color: #FFFFFF;\n  margin-left: 20px;\n  border: none;\n}\n\n.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {\n  background-color: #1f5452;\n  color: #FFFFFF;\n}\n\n.btn-primary.focus, .btn-primary:focus {\n  background-color: #0a7a74;\n  color: #FFFFFF;\n}\n\n@media (min-width: 701px) {\n\n  .row {\n    max-width: 100vw;\n    max-height: calc(100vh - 60px);\n    padding: 0 15px 15px 15px;\n    background-color: #0a7a74;\n  }\n\n  .row .table-col {\n    max-height: calc(100vh - 70px);\n    min-height: calc(100vh - 70px);\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    max-width: calc(100vw - 20px);\n    width: 30%;\n    margin: 60px 0 0 10px;\n  }\n\n  .btn-group-departments {\n    margin: 0 10px 5px 20px;\n  }\n\n  .printTwo {\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n    background-color: #0a7a74;\n    height: 100vh;\n    top: -100px;\n    z-index: -1;\n    min-height: calc(100vh - 60px);\n    max-height: calc(100vh - 60px);\n  }\n\n  .row .inner-table {\n    max-height: calc(100vh - 121px);\n    overflow: auto;\n    -webkit-overflow-scrolling: touch;\n  }\n\n  .row .upload-col {\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    min-height:  calc(100vh - 10px);\n    max-height: calc(100vh - 10px);\n  }\n\n  .print-col {\n    margin-left: 15px;\n    width: 65%;\n    max-height: calc(100vh - 60px);\n  }\n}\n\n@media (min-width: 1200px) {\n  .btn-default {\n    display: inline-block;\n  }\n\n  .btn-send {\n    display: block;\n  }\n\n  .printTwo {\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n    background-color: #0a7a74;\n    min-height: calc(100vh - 60px);\n    max-height: calc(100vh - 60px);\n  }\n\n  .row .table-col {\n    min-height: calc(100vh - 70px);\n    max-height: calc(100vh - 70px);\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    width: 24%;\n    margin: 60px 0 0 10px;\n\n  }\n\n  .row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .printToCart3, .Tisch, .anleitung {\n    display: block;\n  }\n\n  .print-col {\n    width: 48%;\n    margin-left: 15px;\n    margin-top: 60px;\n    max-height: calc(100vh - 60px);\n  }\n\n  .row .upload-col {\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    min-height: calc(100vh - 70px);\n    max-height: calc(100vh - 70px);\n    margin-top: 60px;\n  }\n\n  .row .inner-table {\n    max-height: calc(100vh - 125px);\n    overflow: auto;\n    -webkit-overflow-scrolling: touch;\n  }\n}\n\n@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {\n  .navbar-nav {\n    display: inline-block;\n  }\n}\n\n", ""]);
+exports.push([module.i, "html {\n  background-color: #0a7a74;\n}\n\nhtml, body {\n  padding: 0;\n  margin: 0;\n  height: 100vh;\n  background-color: #0a7a74;\n}\n\nspan {\n  color: #9d9d9d;\n}\n\n.container-fluid {\n  padding: 0 0 10px 0;\n  margin: 0;\n  height: 100vh;\n  max-width: 100vw;\n  background-color: #0a7a74;\n}\n\n.row {\n  max-width: 100vw;\n  min-height: 100vh;\n  padding: 0 15px 15px 15px;\n  background-color: #0a7a74;\n  margin: 0 0 0 0;\n}\n\n.line{\n  width: 100%;\n  height: 20px;\n  border-bottom: solid 10px #0a7a74;\n  position: absolute;\n  right: 0px;\n  top: 115px;\n}\n\n.line1{\n  width: 100%;\n  height: 20px;\n  border-bottom: solid 10px #0a7a74;\n  position: absolute;\n  right: 0px;\n  top: 95px;\n}\n\n.printTwo {\n  overflow-x: auto;\n  -webkit-overflow-scrolling: touch;\n  background-color: #0a7a74;\n  max-height: calc(100vh - 240px);\n}\n\n.row .inner-table {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n  max-height: calc(100vh - 120px);\n}\n\n.row .table-col {\n  min-height: calc(100vh - 70px);\n  max-height: calc(100vh - 70px);\n  background-color: #f3efe4;\n  padding: 10px 10px 20px 10px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  border-radius: 3px;\n  width: calc(100vw - 20px);\n  max-width: 100%;\n}\n\n.print-col {\n  padding: 0;\n  min-height: auto;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  z-index: 2;\n}\n\n.row .upload-col {\n  background-color: #f3efe4;\n  padding: 10px 10px 20px 10px;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  min-height: calc(100vh - 70px);\n  max-height: calc(100vh - 70px);\n  border-radius: 3px;\n  z-index: 1;\n\n}\n\n.section3 {\n  display: none;\n}\n\n.section2 {\n  display: none;\n}\n\n.row1 {\n  height: calc((100vh - 195px) / 2);\n  overflow: auto;\n}\n\n.row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .printToCart3, .Tisch, .anleitung {\n  display: none;\n}\n\n.cards-container {\n  margin: 10px 0px 10px 0px;\n  padding: 10px 10px 40px 10px;\n}\n\n.row .container-fluid  .table-col .inner-table .row3 .wrapper .cards-container {\n  border-radius: 3px;\n  border: solid 1px grey;\n  padding: 10px 10px 15px 10px;\n\n}\n\n#containerRestaurant, #containerPanorama, #containerWintergarten, #containerSonnbergZirbn, #containerTerasse, #containerTerrasseFeuer, #containerErde {\n  border-radius: 3px;\n  border: solid 1px grey;\n}\n\n.row .container-fluid .col-md-4 .row1 {\n  overflow: auto;\n  margin: 0 0 0 0;\n  display: inline-block;\n  width: 105%;\n  height: 232.5px;\n  padding-top: 20px;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper {\n  overflow: auto;\n  margin: 0 0 0 0;\n  display: inline-block;\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper .container {\n  overflow: auto;\n  margin: 20px 40px 20px 0;\n  display: inline-block;\n  max-width: 100%;\n  border-radius: 3px;\n}\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 {\n  overflow: auto;\n  margin: 0 auto;\n  display: inline-block;\n  width: 100%;\n  height: 800px;\n  padding-top: 20px;\n}\n\n.row .container-fluid h3 {\n  -ms-flex-line-pack: center;\n      align-content: center;\n  margin: 0 auto;\n  display: inline-block;\n  color: #0a7a74;\n  position: relative;\n  text-align: center;\n}\n\n.row .container-fluid .col-md-4 h3 {\n  margin: 0 auto;\n  color: #0a7a74;\n  position: relative;\n}\n\nbody html .row .container-fluid .upload-col .outer-cards h3 {\n  margin-top: 0px;\n  margin-bottom: 0px;\n  color: #0a7a74;\n}\n\n.row1 .col {\n  -webkit-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n\n.row1 .col:nth-child(1) {\n  -webkit-box-ordinal-group: 2;\n      -ms-flex-order: 1;\n          order: 1;\n}\n\n.row1 .col:nth-child(2) {\n  -webkit-box-ordinal-group: 1;\n      -ms-flex-order: 0;\n          order: 0;\n}\n\n.row1 .col:nth-child(3) {\n  -webkit-box-ordinal-group: 3;\n      -ms-flex-order: 2;\n          order: 2;\n}\n\n.row .col-md-4 .row2 {\n  padding-bottom: 10px;\n  position: relative;\n  min-height: 100%;\n  border-bottom: 1px solid red;\n}\n\n.card {\n  background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n  background: rgba(255,255,255, 1);\n  border-radius: 3px;\n  border: solid 1px grey;\n  padding: 10px 10px 15px 10px;\n}\n\n.row .container-fluid .col-md-4 .row1 .wrapper .container .card p {\n  /*padding:10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .wrapper .container .card p {\n  /*padding:10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .row3 .row1 p {\n  /*padding: 10px 10px 10px 10px;*/\n  background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n  background: rgba(255,255,255, 1);\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 .wrapper .container .card p {\n  /*padding: 10px 10px 10px 10px;*/\n  max-width: 100%;\n}\n\n.row .container-fluid .col-md-6 .row {\n  background-color: #eaf3f3;\n  padding: 20px 10px 20px 10px;\n  height: 100%;\n}\n\n.table-item {\n  position: absolute;\n}\n\n.btn-send {\n  display: none;\n}\n\n.csv {\n  margin-bottom: 30px;\n}\n\n.btn-default {\n  display: none;\n}\n\n.btn-primary {\n  background-color: #0a7a74;\n  color: #FFFFFF;\n  margin: 10px 20px 20px 0px;\n  border: none;\n}\n\n.btn-group-departments {\n  margin: 0px 10px 5px 0px;\n}\n\n.btn-primary:hover {\n  background-color: #1f5452;\n  color: #FFFFFF;\n  margin-left: 20px;\n  border: none;\n}\n\n.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {\n  background-color: #1f5452;\n  color: #FFFFFF;\n}\n\n.btn-primary.focus, .btn-primary:focus {\n  background-color: #0a7a74;\n  color: #FFFFFF;\n}\n\n@media (min-width: 701px) {\n\n  .row {\n    max-width: 100vw;\n    max-height: calc(100vh - 60px);\n    padding: 0 15px 15px 15px;\n    background-color: #0a7a74;\n  }\n\n  .row .table-col {\n    max-height: calc(100vh - 70px);\n    min-height: calc(100vh - 70px);\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    max-width: calc(100vw - 20px);\n    width: 30%;\n    margin: 60px 0 0 10px;\n  }\n\n  .btn-group-departments {\n    margin: 0 10px 5px 20px;\n  }\n\n  .printTwo {\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n    background-color: #0a7a74;\n    height: 100vh;\n    top: -100px;\n    z-index: -1;\n    min-height: calc(100vh - 60px);\n    max-height: calc(100vh - 60px);\n  }\n\n  .row .inner-table {\n    max-height: calc(100vh - 121px);\n    overflow: auto;\n    -webkit-overflow-scrolling: touch;\n  }\n\n  .row .upload-col {\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    min-height:  calc(100vh - 10px);\n    max-height: calc(100vh - 10px);\n  }\n\n  .print-col {\n    margin-left: 15px;\n    width: 65%;\n    max-height: calc(100vh - 60px);\n  }\n}\n\n@media (min-width: 1200px) {\n  .btn-default {\n    display: inline-block;\n  }\n\n  .btn-send {\n    display: block;\n  }\n\n  .printTwo {\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n    background-color: #0a7a74;\n    min-height: calc(100vh - 60px);\n    max-height: calc(100vh - 60px);\n  }\n\n  .row .table-col {\n    min-height: calc(100vh - 70px);\n    max-height: calc(100vh - 70px);\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    width: 24%;\n    margin: 60px 0 0 10px;\n\n  }\n\n  .row .upload-col, .printToCart2, .dropdown-toggle, .printToCart1, .printToCart3, .Tisch, .anleitung {\n    display: block;\n  }\n\n  .print-col {\n    width: 48%;\n    margin-left: 15px;\n    margin-top: 60px;\n    max-height: calc(100vh - 60px);\n  }\n\n  .row .upload-col {\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    min-height: calc(100vh - 70px);\n    max-height: calc(100vh - 70px);\n    margin-top: 60px;\n  }\n\n  .row .inner-table {\n    max-height: calc(100vh - 125px);\n    overflow: auto;\n    -webkit-overflow-scrolling: touch;\n  }\n}\n\n@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {\n  .navbar-nav {\n    display: inline-block;\n  }\n}\n\n", ""]);
 
 // exports
 
@@ -4070,24 +3975,10 @@ module.exports = "<html>\n<head>\n  <title>Dashboard</title>\n  <meta name=\"vie
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/tischplan.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TischplanComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_dragula__ = __webpack_require__("../../../../ng2-dragula/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_dragula___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_dragula__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__print_print_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/print/print.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__departmentmenu_departmentmenu_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__form_form_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/form/form.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__im_haus_liste_im_haus_liste_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__tableplan_tableplan_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/tableplan/tableplan.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__departments_departments_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/departments.component.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4097,18 +3988,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var tischplan_service_1 = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
+var ng2_dragula_1 = __webpack_require__("../../../../ng2-dragula/index.js");
+var http_1 = __webpack_require__("../../../http/@angular/http.es5.js");
+var angular2_flash_messages_1 = __webpack_require__("../../../../angular2-flash-messages/index.js");
+var print_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/print/print.component.ts");
+var departmentmenu_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.ts");
+var form_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/form/form.component.ts");
+var im_haus_liste_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.ts");
+var navigation_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.ts");
+var tableplan_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/tableplan/tableplan.component.ts");
+var departments_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/departments.component.ts");
 var TischplanComponent = (function () {
     function TischplanComponent(tischplanService, http, _flashMessagesService, dragulaService) {
         var _this = this;
@@ -4170,7 +4062,7 @@ var TischplanComponent = (function () {
         this.fontColor6 = "f3efe4";
         this.tablesOccupied = 0;
         this.backgroundColor = "ffffff";
-        this.showErdeBool = false;
+        this.showBauernStubnBool = false;
         this.showMetallBool = false;
         this.showLuftBool = false;
         this.showFeuerBool = false;
@@ -4240,13 +4132,15 @@ var TischplanComponent = (function () {
         }
         //console.log(informationElements2);
         var department = JSON.stringify(args[1].id);
-        //console.log("departement" + department);
+        console.log("departement" + department);
         var departementSubstring = department.substring(1, department.length - 1);
         //console.log("departementSubstring: " + departementSubstring);
         var innerText = args[1].innerText;
         console.log(innerText);
         //console.log("tableNumber: " + tableNumber);
-        var tableNumberSubstring = innerText.toString().match(/\d+/);
+        var tableNumberArray = [];
+        tableNumberArray = innerText.toString().match(/[A-Z\s]+\d+/g);
+        var tableNumberSubstring = tableNumberArray[0];
         //console.log('tableNumberSubstring');
         //console.log(tableNumberSubstring);
         var numbers = innerText.match(/\d+/g);
@@ -4290,7 +4184,7 @@ var TischplanComponent = (function () {
     TischplanComponent.prototype.ngOnInit = function () {
         // this.renderer.invokeElementMethod(this.input.nativeElement, 'focus');
     };
-    TischplanComponent.prototype.showErde = function () {
+    TischplanComponent.prototype.showBauernStubn = function () {
         this.departmentmenuComponent.showErde();
     };
     TischplanComponent.prototype.showMetall = function () {
@@ -4418,55 +4312,52 @@ var TischplanComponent = (function () {
     return TischplanComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_5__print_print_component__["a" /* PrintComponent */]),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_5__print_print_component__["a" /* PrintComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__print_print_component__["a" /* PrintComponent */]) === "function" && _a || Object)
+    core_1.ViewChild(print_component_1.PrintComponent),
+    __metadata("design:type", typeof (_a = typeof print_component_1.PrintComponent !== "undefined" && print_component_1.PrintComponent) === "function" && _a || Object)
 ], TischplanComponent.prototype, "printComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_6__departmentmenu_departmentmenu_component__["a" /* DepartmentmenuComponent */]),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__departmentmenu_departmentmenu_component__["a" /* DepartmentmenuComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__departmentmenu_departmentmenu_component__["a" /* DepartmentmenuComponent */]) === "function" && _b || Object)
+    core_1.ViewChild(departmentmenu_component_1.DepartmentmenuComponent),
+    __metadata("design:type", typeof (_b = typeof departmentmenu_component_1.DepartmentmenuComponent !== "undefined" && departmentmenu_component_1.DepartmentmenuComponent) === "function" && _b || Object)
 ], TischplanComponent.prototype, "departmentmenuComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_7__form_form_component__["a" /* FormComponent */]),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_7__form_form_component__["a" /* FormComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__form_form_component__["a" /* FormComponent */]) === "function" && _c || Object)
+    core_1.ViewChild(form_component_1.FormComponent),
+    __metadata("design:type", typeof (_c = typeof form_component_1.FormComponent !== "undefined" && form_component_1.FormComponent) === "function" && _c || Object)
 ], TischplanComponent.prototype, "formComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_11__departments_departments_component__["a" /* DepartmentsComponent */]),
-    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_11__departments_departments_component__["a" /* DepartmentsComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_11__departments_departments_component__["a" /* DepartmentsComponent */]) === "function" && _d || Object)
+    core_1.ViewChild(departments_component_1.DepartmentsComponent),
+    __metadata("design:type", typeof (_d = typeof departments_component_1.DepartmentsComponent !== "undefined" && departments_component_1.DepartmentsComponent) === "function" && _d || Object)
 ], TischplanComponent.prototype, "departmentsComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_8__im_haus_liste_im_haus_liste_component__["a" /* ImHausListeComponent */]),
-    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_8__im_haus_liste_im_haus_liste_component__["a" /* ImHausListeComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__im_haus_liste_im_haus_liste_component__["a" /* ImHausListeComponent */]) === "function" && _e || Object)
+    core_1.ViewChild(im_haus_liste_component_1.ImHausListeComponent),
+    __metadata("design:type", typeof (_e = typeof im_haus_liste_component_1.ImHausListeComponent !== "undefined" && im_haus_liste_component_1.ImHausListeComponent) === "function" && _e || Object)
 ], TischplanComponent.prototype, "imHausListeComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_9__navigation_navigation_component__["a" /* NavigationComponent */]),
-    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_9__navigation_navigation_component__["a" /* NavigationComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_9__navigation_navigation_component__["a" /* NavigationComponent */]) === "function" && _f || Object)
+    core_1.ViewChild(navigation_component_1.NavigationComponent),
+    __metadata("design:type", typeof (_f = typeof navigation_component_1.NavigationComponent !== "undefined" && navigation_component_1.NavigationComponent) === "function" && _f || Object)
 ], TischplanComponent.prototype, "navigationComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_10__tableplan_tableplan_component__["a" /* TableplanComponent */]),
-    __metadata("design:type", typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_10__tableplan_tableplan_component__["a" /* TableplanComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_10__tableplan_tableplan_component__["a" /* TableplanComponent */]) === "function" && _g || Object)
+    core_1.ViewChild(tableplan_component_1.TableplanComponent),
+    __metadata("design:type", typeof (_g = typeof tableplan_component_1.TableplanComponent !== "undefined" && tableplan_component_1.TableplanComponent) === "function" && _g || Object)
 ], TischplanComponent.prototype, "tableplanComponent", void 0);
 TischplanComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'tischplan',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")],
     }),
-    __metadata("design:paramtypes", [typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["Http"]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__["FlashMessagesService"]) === "function" && _k || Object, typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_2_ng2_dragula__["DragulaService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ng2_dragula__["DragulaService"]) === "function" && _l || Object])
+    __metadata("design:paramtypes", [typeof (_h = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _h || Object, typeof (_j = typeof http_1.Http !== "undefined" && http_1.Http) === "function" && _j || Object, typeof (_k = typeof angular2_flash_messages_1.FlashMessagesService !== "undefined" && angular2_flash_messages_1.FlashMessagesService) === "function" && _k || Object, typeof (_l = typeof ng2_dragula_1.DragulaService !== "undefined" && ng2_dragula_1.DragulaService) === "function" && _l || Object])
 ], TischplanComponent);
-
+exports.TischplanComponent = TischplanComponent;
 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
 //# sourceMappingURL=tischplan.component.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/app/guards/auth.guard.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthGuard; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4476,9 +4367,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var router_1 = __webpack_require__("../../../router/@angular/router.es5.js");
+var auth_service_1 = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 var AuthGuard = (function () {
     function AuthGuard(authService, router) {
         this.authService = authService;
@@ -4498,25 +4390,20 @@ var AuthGuard = (function () {
     return AuthGuard;
 }());
 AuthGuard = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object])
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [typeof (_a = typeof auth_service_1.AuthService !== "undefined" && auth_service_1.AuthService) === "function" && _a || Object, typeof (_b = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _b || Object])
 ], AuthGuard);
-
+exports.AuthGuard = AuthGuard;
 var _a, _b;
 //# sourceMappingURL=auth.guard.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/app/services/auth.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__ = __webpack_require__("../../../../angular2-jwt/angular2-jwt.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__);
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4526,17 +4413,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var http_1 = __webpack_require__("../../../http/@angular/http.es5.js");
+__webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+var angular2_jwt_1 = __webpack_require__("../../../../angular2-jwt/angular2-jwt.js");
 var AuthService = (function () {
     function AuthService(http) {
         this.http = http;
         this.isDev = true; // Change to false before deployment
     }
     AuthService.prototype.registerUser = function (user) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         var ep = this.prepEndpoint('register');
         return this.http.post(ep, user, { headers: headers })
@@ -4545,14 +4433,14 @@ var AuthService = (function () {
     // Gets called from submit login form
     AuthService.prototype.authenticateUser = function (user) {
         console.log("Check1");
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         var ep = this.prepEndpoint('authenticate');
         return this.http.post(ep, user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.getProfile = function () {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         this.loadToken();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
@@ -4573,7 +4461,7 @@ var AuthService = (function () {
         this.authToken = token;
     };
     AuthService.prototype.loggedIn = function () {
-        return Object(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])('id_token');
+        return angular2_jwt_1.tokenNotExpired('id_token');
     };
     AuthService.prototype.logout = function () {
         this.authToken = null;
@@ -4591,23 +4479,20 @@ var AuthService = (function () {
     return AuthService;
 }());
 AuthService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [typeof (_a = typeof http_1.Http !== "undefined" && http_1.Http) === "function" && _a || Object])
 ], AuthService);
-
+exports.AuthService = AuthService;
 var _a;
 //# sourceMappingURL=auth.service.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/app/services/tischplan.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TischplanService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4617,9 +4502,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var http_1 = __webpack_require__("../../../http/@angular/http.es5.js");
+__webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
 var TischplanService = (function () {
     function TischplanService(http) {
         this.http = http;
@@ -4646,91 +4532,91 @@ var TischplanService = (function () {
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.occupyTable = function (dataString) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('occupyTable', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.addTable = function (dataString) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('addTable', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.removeTable = function (dataString) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('removeTable', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.dispenseTable = function (table) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('dispenseTable', table, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.removePlaceholder = function (dataString) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('removePlaceholder', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.addPlaceholder = function (tableSonnbergZirbn) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('addPlaceholder', tableSonnbergZirbn, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.addInformationToTable = function (dataString) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('addInformationToTable', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.sendInformation = function (newInformation) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('newInformationToTables', newInformation, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.sendInformationToBox = function (newInformation) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('newInformationToBox', newInformation, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.deleteInformationElement = function (informationElement) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('deleteInformationElement', informationElement, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.updateImHausListeElement = function (informationElements2) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('updateImHausListeElement', informationElements2, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.updateAnreiseListeElement = function (informationElements2) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('updateAnreiseListeElement', informationElements2, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.updateTracesListeElement = function (informationElements2) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('updateTracesListeElement', informationElements2, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.sendInformationToNotizBlock = function (newInformation) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('newNotiz', newInformation, { headers: headers })
@@ -4743,21 +4629,20 @@ var TischplanService = (function () {
     return TischplanService;
 }());
 TischplanService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [typeof (_a = typeof http_1.Http !== "undefined" && http_1.Http) === "function" && _a || Object])
 ], TischplanService);
-
+exports.TischplanService = TischplanService;
 var _a;
 //# sourceMappingURL=tischplan.service.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/app/services/validate.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidateService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4767,7 +4652,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
 var ValidateService = (function () {
     function ValidateService() {
     }
@@ -4786,25 +4672,25 @@ var ValidateService = (function () {
     return ValidateService;
 }());
 ValidateService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    core_1.Injectable(),
     __metadata("design:paramtypes", [])
 ], ValidateService);
-
+exports.ValidateService = ValidateService;
 //# sourceMappingURL=validate.service.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/environments/environment.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
-var environment = {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.environment = {
     production: false
 };
 //# sourceMappingURL=environment.js.map
@@ -4812,22 +4698,19 @@ var environment = {
 /***/ }),
 
 /***/ "../../../../../src/main.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 
-
-
-
-if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+var platform_browser_dynamic_1 = __webpack_require__("../../../platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
+var app_module_1 = __webpack_require__("../../../../../src/app/app.module.ts");
+var environment_1 = __webpack_require__("../../../../../src/environments/environment.ts");
+if (environment_1.environment.production) {
+    core_1.enableProdMode();
 }
-Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
+platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
 //# sourceMappingURL=main.js.map
 
 /***/ }),

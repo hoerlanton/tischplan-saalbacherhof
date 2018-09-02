@@ -34,5 +34,9 @@ export class Table {
     newTraceEmployee: string;
     newTraceName: string;
     newTraceDate: string;
+    name1Value: string;
+    pinfo1Value: string;
+    pinfo2Value: string;
+    pinfo3Value: string;
   }];
 }

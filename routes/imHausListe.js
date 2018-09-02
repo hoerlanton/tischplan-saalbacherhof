@@ -5,7 +5,7 @@
 module.exports = {
     saveImHausListe: function (req, res, db) {
         //JSON string is parsed to a JSON object
-        console.log("Post request made to /saveImHausListeGastrodat");
+        console.log("Post request made to /saveImHausListe");
         //console.log(JSON.stringify(req.body));
         let imHausListeData = {
             data: "",
@@ -59,75 +59,84 @@ module.exports = {
     updateImHausListe: function (req, res, db) {
 
         console.log("Post request made to /updateImHausListeElement");
-        //console.log(req.body);
+
+        let informationElements = req.body;
+
+        console.log(req.body);
 
         let nameValueArray = [];
         let zimmernummerValueArray = [];
-
-        let informationElements = req.body;
-        //console.log(informationElements);
-
         let informationElementsString = JSON.stringify(informationElements);
-        if (informationElementsString.indexOf("targetTable") != -1 && informationElementsString.indexOf("nameValue") === -1) {
-            //console.log("BUG I GONNA KILL YOU !!!!")
-        } else {
-        if (informationElementsString.indexOf("leftValue") != -1) {
-            for (let i = 0; i < informationElements.groups.length; i++) {
-                 nameValueArray.push(informationElements.groups[i].nameValue);
-                 zimmernummerValueArray.push(informationElements.groups[i].zimmernummerValue);
 
-                db.saalbacherhofImHausListe.update(
+        if (informationElementsString.indexOf("targetTable") != -1) {
+            console.log("BUG I GONNA KILL YOU !!!!")
+        } else {
+
+            if (informationElementsString.indexOf("leftValue") != -1) {
+                for (let i = 0; i < informationElements.groups.length; i++) {
+                    nameValueArray.push(informationElements.groups[i].name1Value);
+                    zimmernummerValueArray.push(informationElements.groups[i].zimmernummerValue);
+
+                    let string = " ";
+                    nameValueArray[i] = string.concat(nameValueArray[i]);
+
+                    console.log(nameValueArray[i]);
+                    console.log(zimmernummerValueArray[i]);
+
+                    db.lechImHausListe.update(
+                        {
+                            name1: nameValueArray[i],
+                            "zimmernummer": zimmernummerValueArray[i]
+                        },
+                        {
+                            $set: {
+                                "bgColor": "ffffff",
+                            }
+                        }, function (err, imHausListe) {
+                            if (err) {
+                                console.log("Error");
+                            }
+                            console.log("lechImHausListe Update successful");
+                            console.log(imHausListe);
+                        });
+
+                }
+            } else {
+                nameValueArray.push(informationElements[4].substring(0, informationElements[4].length));
+                zimmernummerValueArray.push(informationElements[0].substring(1, informationElements[0].length));
+
+                console.log(nameValueArray[0]);
+                console.log(zimmernummerValueArray[0]);
+
+                db.lechImHausListe.update(
                     {
-                        name: nameValueArray[i],
-                        "zimmernummer": zimmernummerValueArray[i]
+                        name1: nameValueArray[0],
+                        "zimmernummer": zimmernummerValueArray[0]
                     },
                     {
                         $set: {
-                            "bgColor": "ffffff",
+                            "bgColor": "0a7a74",
                         }
                     }, function (err, tables) {
                         if (err) {
                             console.log("Error");
                         }
-                        console.log("updateImHausListe Update successful");
+                        console.log("occupyTable Update successful");
                     });
-            }
-        } else {
-            nameValueArray.push(informationElements[0].substring(1, informationElements[0].length));
-            zimmernummerValueArray.push(informationElements[2].substring(1, informationElements[2].length));
+            }}
 
-            //console.log(nameValueArray[0]);
-            //console.log(zimmernummerValueArray[0]);
-
-            db.saalbacherhofImHausListe.update(
-                {
-                    name: nameValueArray[0],
-                    "zimmernummer": zimmernummerValueArray[0]
-                },
-                {
-                    $set: {
-                        "bgColor": "0a7a74",
-                    }
-                }, function (err, tables) {
+        setTimeout(function () {
+            db.lechImHausListe.find(
+                {},
+                function (err, imHausListe) {
                     if (err) {
-                        console.log("Error");
+                        res.send(err);
                     }
-                    console.log("updateImHausListe Update successful");
+                    res.json(imHausListe);
+                    console.log('imHausListe');
+                    console.log(JSON.stringify(imHausListe));
                 });
-        }}
-
-            setTimeout(function () {
-                db.saalbacherhofImHausListe.find(
-                    {},
-                    function (err, saalbacherhofImHausListe) {
-                        if (err) {
-                            res.send(err);
-                        }
-                        res.json(saalbacherhofImHausListe);
-                        //console.log('saalbacherhofImHausListe');
-                        //console.log(JSON.stringify(saalbacherhofImHausListe));
-                    });
-            }, 700);
+        }, 700);
 
     },
     getImHausListe: function (req, res, db) {

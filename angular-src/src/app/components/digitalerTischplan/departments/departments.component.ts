@@ -15,10 +15,6 @@ import {AlleComponent} from "./alle/alle.component";
 })
 export class DepartmentsComponent  {
   @Input('tablesErde') tablesErde: Table[];
-  @Input('tablesTerasse') tablesTerasse: Table[];
-  @Input('showTerasseBool') showTerasseBool: boolean;
-  @Input('tablesTerrasseLuft') tablesTerrasseLuft: Table[];
-  @Input('showTerrasseLuftBool') showTerrasseLuftBool: boolean;
   @Input('showErdeBool') showErdeBool: boolean;
   @Input('tablesLuft') tablesLuft: Table[];
   @Input('showLuftBool') showLuftBool: boolean;
@@ -58,19 +54,19 @@ export class DepartmentsComponent  {
   private alleComponent: AlleComponent;
 
   @ViewChild(WasserComponent)
-  private waeldlerStubeKristallStubeComponent: WasserComponent;
+  private wasserComponent: WasserComponent;
 
   @ViewChild(MetallComponent)
-  private teestubeTeeloungeComponent: MetallComponent;
+  private metallComponent: MetallComponent;
 
   @ViewChild(LuftComponent)
-  private edelweissKaminStubeComponent: LuftComponent;
+  private luftComponent: LuftComponent;
 
   @ViewChild(FeuerComponent)
-  private berglerStubeHubertusStubeComponent: FeuerComponent;
+  private feuerComponent: FeuerComponent;
 
   @ViewChild(ErdeComponent)
-  private bauernstubeComponent: ErdeComponent;
+  private erdeComponent: ErdeComponent;
 
   constructor(private tischplanService: TischplanService) {
   }
@@ -170,7 +166,7 @@ export class DepartmentsComponent  {
     this.tischplanService.addInformationToTable(dataString)
       .subscribe(response => {
         // let arrayIndex = response[1];
-        //console.log("RESPONSE addInformationToTable:" + JSON.stringify(response));
+        console.log("RESPONSE addInformationToTable:" + JSON.stringify(response));
         if (response === null) {
           return;
         } else {
@@ -302,15 +298,15 @@ export class DepartmentsComponent  {
     if (this.showAlleBool) {
       this.alleComponent.transform(this.tables, term);
     } else if (this.showErdeBool) {
-      this.bauernstubeComponent.transform(this.tablesErde, term);
+      this.erdeComponent.transform(this.tablesErde, term);
     } else if (this.showFeuerBool) {
-      this.berglerStubeHubertusStubeComponent.transform(this.tablesFeuer, term);
+      this.feuerComponent.transform(this.tablesFeuer, term);
     } else if (this.showLuftBool) {
-      this.edelweissKaminStubeComponent.transform(this.tablesLuft, term);
+      this.luftComponent.transform(this.tablesLuft, term);
     } else if (this.showMetallBool) {
-      this.teestubeTeeloungeComponent.transform(this.tablesMetall, term);
+      this.metallComponent.transform(this.tablesMetall, term);
     } else if (this.showWasserBool) {
-      this.waeldlerStubeKristallStubeComponent.transform(this.tablesWasser, term);
+      this.wasserComponent.transform(this.tablesWasser, term);
     }
   }
 }

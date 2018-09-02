@@ -28,7 +28,7 @@ export class LuftComponent implements OnInit {
   }
 
   getStyle(j) {
-    if (j != "-") {
+    if (j.pinfo1Value != "" || j.pinfo2Value != "" || j.pinfo3Value != "") {
       return "solid 3px red";
     } else {
       return "";

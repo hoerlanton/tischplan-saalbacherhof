@@ -23,7 +23,7 @@ module.exports = {
                     console.log("moveTable Update successful");
                 });
             db.saalbacherhofTables.update(
-                {}, {
+                {department: departmentValue}, {
                     $pull: {
                         tables: {
                             "number": "81",
@@ -58,7 +58,7 @@ module.exports = {
                     console.log("moveTable Update successful");
                 });
             db.saalbacherhofTables.update(
-                {}, {
+                {department: departmentValue}, {
                     $pull: {
                         tables: {
                             "number": "84",
@@ -93,7 +93,7 @@ module.exports = {
                     console.log("moveTable Update successful");
                 });
             db.saalbacherhofTables.update(
-                {}, {
+                {department: departmentValue}, {
                     $pull: {
                         tables: {
                             "number": "86",
@@ -127,7 +127,7 @@ module.exports = {
                     console.log("moveTable Update successful");
                 });
             db.saalbacherhofTables.update(
-                {}, {
+                {department: departmentValue}, {
                     $pull: {
                         tables: {
                             "number": "90",
@@ -161,7 +161,7 @@ module.exports = {
                     console.log("moveTable Update successful");
                 });
             db.saalbacherhofTables.update(
-                {}, {
+                {department: departmentValue}, {
                     $pull: {
                         tables: {
                             "number": "90",
@@ -195,7 +195,7 @@ module.exports = {
                     console.log("moveTable Update successful");
                 });
             db.saalbacherhofTables.update(
-                {}, {
+                {department: departmentValue}, {
                     $pull: {
                         tables: {
                             "number": "97",
@@ -229,7 +229,7 @@ module.exports = {
                     console.log("moveTable Update successful");
                 });
             db.saalbacherhofTables.update(
-                {}, {
+                {department: departmentValue}, {
                     $pull: {
                         tables: {
                             "number": "98",
@@ -264,7 +264,7 @@ module.exports = {
                     console.log("moveTable Update successful");
                 });
             db.saalbacherhofTables.update(
-                {}, {
+                {department: departmentValue}, {
                     $pull: {
                         tables: {
                             "number": "98",
@@ -298,7 +298,7 @@ module.exports = {
                     console.log("moveTable Update successful");
                 });
             db.saalbacherhofTables.update(
-                {}, {
+                {department: departmentValue}, {
                     $pull: {
                         tables: {
                             "number": "96",
@@ -332,7 +332,7 @@ module.exports = {
                     console.log("moveTable Update successful");
                 });
             db.saalbacherhofTables.update(
-                {}, {
+                {department: departmentValue}, {
                     $pull: {
                         tables: {
                             "number": "97",
@@ -365,7 +365,7 @@ module.exports = {
                     console.log("moveTable Update successful");
                 });
             db.saalbacherhofTables.update(
-                {}, {
+                {department: departmentValue}, {
                     $pull: {
                         tables: {
                             "number": "98",

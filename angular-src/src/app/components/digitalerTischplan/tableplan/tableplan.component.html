@@ -3,7 +3,7 @@
     <div class="row" style=" border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;">
       <div *ngIf="showMetallBool">
         <div *ngFor="let tableMetall of tablesMetall; let j = index;">
-          <div dropdownToggle type="button" class="t{{tableMetall.number}} table-item" [ngStyle]="{'top': tableMetall.topValue + 'px', 'left': tableMetall.leftValue + 'px', 'background-color': + tableMetall.bgColor, 'height': + tableMetall.height + 'px', 'width': + tableMetall.width + 'px', 'border': + tableMetall.border, 'border-radius': + tableMetall.borderRadius + '%'}" [style.border]="getStyle(tablesMetall[j].groups)" dropdown>
+          <div dropdownToggle type="button" class="t{{tableMetall.number}} table-item" [ngStyle]="{'top': tableMetall.topValue + 'px', 'left': tableMetall.leftValue + 'px', 'background-color': + tableMetall.bgColor, 'height': + tableMetall.height + 'px', 'width': + tableMetall.width + 'px', 'border': + tableMetall.border}" [style.border]="getStyle(tablesMetall[j].groups)" dropdown>
             <div *ngIf="tablesMetall[j] !== tablesMetall[j+1]">
               <p><b>{{tableMetall.number}} <br>{{erwMetall[j]}}/{{kiMetall[j]}}</b></p>
             </div>
@@ -20,14 +20,24 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
                   <div *ngFor="let group of tableMetall.groups">
                     <div *ngIf="group">
-                      <div *ngIf="group.nameValue">
-                        <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
+                      <div *ngIf="group.name1Value">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.pinfo1Value)">
+                          <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>
+                          <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
+                          <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
+                          <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
+                          <b> Name 1:</b> {{group.name1Value}}<br>
+                          <b> Info 1:</b> {{group.pinfo1Value}}<br>
+                          <b> Info 2:</b> {{group.pinfo2Value}}<br>
+                          <b> Info 3:</b> {{group.pinfo3Value}}<br>
+                          <b> Kategorie:</b> {{group.kategorieValue}}<br>
+                        </div>
                         <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
                       </div>
                       <div *ngIf="group.newTraceText">
                         <div class="dropdown-item"  style="background-color: #FFFFFF; border: solid 3px red">
                           <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}
-                        </div>
+                        </div>s
                       </div>
                     </div>
                   </div>
@@ -39,7 +49,7 @@
       </div>
       <div *ngIf="showErdeBool">
         <div *ngFor="let tableErde of tablesErde; let j = index;">
-          <div dropdownToggle type="button" class="t{{tableErde.number}} table-item" [ngStyle]="{'top': tableErde.topValue + 'px', 'left': tableErde.leftValue + 'px', 'background-color': + tableErde.bgColor, 'height': + tableErde.height + 'px', 'width': + tableErde.width + 'px', 'border': + tableErde.border, 'border-radius': + tableErde.borderRadius + '%', 'transform': + tableErde.transformValue}" [style.border]="getStyle(tablesErde[j].groups)" dropdown>
+          <div dropdownToggle type="button" class="t{{tableErde.number}} table-item" [ngStyle]="{'top': tableErde.topValue + 'px', 'left': tableErde.leftValue + 'px', 'background-color': + tableErde.bgColor, 'height': + tableErde.height + 'px', 'width': + tableErde.width + 'px', 'border': + tableErde.border, 'border-radius': + tableErde.borderRadius, 'transform': + tableErde.transformValue}" [style.border]="getStyle(tablesErde[j].groups)" dropdown>
             <div *ngIf="tablesErde[j] !== tablesErde[j+1]">
               <p><b>{{tableErde.number}} <br>{{erwErde[j]}}/{{kiErde[j]}}</b></p>
             </div>
@@ -56,8 +66,18 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
                   <div *ngFor="let group of tableErde.groups">
                     <div *ngIf="group">
-                      <div *ngIf="group.nameValue">
-                        <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
+                      <div *ngIf="group.name1Value">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.pinfo1Value)">
+                          <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>
+                          <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
+                          <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
+                          <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
+                          <b> Name 1:</b> {{group.name1Value}}<br>
+                          <b> Info 1:</b> {{group.pinfo1Value}}<br>
+                          <b> Info 2:</b> {{group.pinfo2Value}}<br>
+                          <b> Info 3:</b> {{group.pinfo3Value}}<br>
+                          <b> Kategorie:</b> {{group.kategorieValue}}<br>
+                        </div>
                         <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
                       </div>
                       <div *ngIf="group.newTraceText">
@@ -75,7 +95,7 @@
       </div>
       <div *ngIf="showLuftBool">
         <div *ngFor="let tableLuft of tablesLuft; let j = index;">
-          <div dropdownToggle type="button" class="t{{tableLuft.number}} table-item" [ngStyle]="{'top': tableLuft.topValue + 'px', 'left': tableLuft.leftValue + 'px', 'background-color': + tableLuft.bgColor, 'height': + tableLuft.height + 'px', 'width': + tableLuft.width + 'px', 'border': + tableLuft.border, 'border-radius': + tableLuft.borderRadius + '%'}" [style.border]="getStyle(tablesLuft[j].groups)" dropdown>
+          <div dropdownToggle type="button" class="t{{tableLuft.number}} table-item" [ngStyle]="{'top': tableLuft.topValue + 'px', 'left': tableLuft.leftValue + 'px', 'background-color': + tableLuft.bgColor, 'height': + tableLuft.height + 'px', 'width': + tableLuft.width + 'px', 'border': + tableLuft.border}" [style.border]="getStyle(tablesLuft[j].groups)" dropdown>
             <div *ngIf="tablesLuft[j] !== tablesLuft[j+1]">
               <p><b>{{tableLuft.number}} <br>{{erwLuft[j]}}/{{kiLuft[j]}}</b></p>
             </div>
@@ -92,8 +112,18 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
                   <div *ngFor="let group of tableLuft.groups">
                     <div *ngIf="group">
-                      <div *ngIf="group.nameValue">
-                        <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
+                      <div *ngIf="group.name1Value">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.pinfo1Value)">
+                          <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>
+                          <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
+                          <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
+                          <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
+                          <b> Name 1:</b> {{group.name1Value}}<br>
+                          <b> Info 1:</b> {{group.pinfo1Value}}<br>
+                          <b> Info 2:</b> {{group.pinfo2Value}}<br>
+                          <b> Info 3:</b> {{group.pinfo3Value}}<br>
+                          <b> Kategorie:</b> {{group.kategorieValue}}<br>
+                        </div>
                         <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
                       </div>
                       <div *ngIf="group.newTraceText">
@@ -111,7 +141,7 @@
       </div>
       <div *ngIf="showFeuerBool">
         <div *ngFor="let tableFeuer of tablesFeuer; let j = index;">
-          <div dropdownToggle type="button" class="t{{tableFeuer.number}} table-item" [ngStyle]="{'top': tableFeuer.topValue + 'px', 'left': tableFeuer.leftValue + 'px', 'background-color': + tableFeuer.bgColor, 'height': + tableFeuer.height + 'px', 'width': + tableFeuer.width + 'px', 'border': + tableFeuer.border, 'border-radius': + tableFeuer.borderRadius + '%'}" [style.border]="getStyle(tablesFeuer[j].groups)" dropdown>
+          <div dropdownToggle type="button" class="t{{tableFeuer.number}} table-item" [ngStyle]="{'top': tableFeuer.topValue + 'px', 'left': tableFeuer.leftValue + 'px', 'background-color': + tableFeuer.bgColor, 'height': + tableFeuer.height + 'px', 'width': + tableFeuer.width + 'px', 'border': + tableFeuer.border}" [style.border]="getStyle(tablesFeuer[j].groups)" dropdown>
             <div *ngIf="tablesFeuer[j] !== tablesFeuer[j+1]">
               <p><b>{{tableFeuer.number}} <br>{{erwFeuer[j]}}/{{kiFeuer[j]}}</b></p>
             </div>
@@ -128,8 +158,18 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
                   <div *ngFor="let group of tableFeuer.groups">
                     <div *ngIf="group">
-                      <div *ngIf="group.nameValue">
-                        <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
+                      <div *ngIf="group.name1Value">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.pinfo1Value)">
+                          <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>
+                          <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
+                          <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
+                          <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
+                          <b> Name 1:</b> {{group.name1Value}}<br>
+                          <b> Info 1:</b> {{group.pinfo1Value}}<br>
+                          <b> Info 2:</b> {{group.pinfo2Value}}<br>
+                          <b> Info 3:</b> {{group.pinfo3Value}}<br>
+                          <b> Kategorie:</b> {{group.kategorieValue}}<br>
+                        </div>
                         <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
                       </div>
                       <div *ngIf="group.newTraceText">
@@ -147,7 +187,7 @@
       </div>
       <div *ngIf="showWasserBool">
         <div *ngFor="let tableWasser of tablesWasser; let j = index;">
-          <div dropdownToggle type="button" class="t{{tableWasser.number}} table-item" [ngStyle]="{'top': tableWasser.topValue + 'px', 'left': tableWasser.leftValue + 'px', 'background-color': + tableWasser.bgColor, 'height': + tableWasser.height + 'px', 'width': + tableWasser.width + 'px', 'border': + tableWasser.border, 'border-radius': + tableWasser.borderRadius + '%'}" [style.border]="getStyle(tablesWasser[j].groups)" dropdown>
+          <div dropdownToggle type="button" class="t{{tableWasser.number}} table-item" [ngStyle]="{'top': tableWasser.topValue + 'px', 'left': tableWasser.leftValue + 'px', 'background-color': + tableWasser.bgColor, 'height': + tableWasser.height + 'px', 'width': + tableWasser.width + 'px', 'border': + tableWasser.border}" [style.border]="getStyle(tablesWasser[j].groups)" dropdown>
             <div *ngIf="tablesWasser[j] !== tablesWasser[j+1]">
               <p><b>{{tableWasser.number}} <br>{{erwWasser[j]}}/{{kiWasser[j]}}</b></p>
             </div>
@@ -164,8 +204,18 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 240px; padding: 10px; overflow: auto">
                   <div *ngFor="let group of tableWasser.groups">
                     <div *ngIf="group">
-                      <div *ngIf="group.nameValue">
-                        <div class="dropdown-item" [style.border]="getStyleTrace(group.traceValue)"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>
+                      <div *ngIf="group.name1Value">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.pinfo1Value)">
+                          <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>
+                          <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
+                          <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
+                          <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
+                          <b> Name 1:</b> {{group.name1Value}}<br>
+                          <b> Info 1:</b> {{group.pinfo1Value}}<br>
+                          <b> Info 2:</b> {{group.pinfo2Value}}<br>
+                          <b> Info 3:</b> {{group.pinfo3Value}}<br>
+                          <b> Kategorie:</b> {{group.kategorieValue}}<br>
+                        </div>
                         <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
                       </div>
                       <div *ngIf="group.newTraceText">

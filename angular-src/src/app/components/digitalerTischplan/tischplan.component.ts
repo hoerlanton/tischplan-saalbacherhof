@@ -74,7 +74,7 @@ export class TischplanComponent {
   title: string;
   filesToUpload: Array<File> = [];
   isDropped: any[] = [];
-  showErdeBool: boolean;
+  showBauernStubnBool: boolean;
   showMetallBool: boolean;
   showLuftBool: boolean;
   showFeuerBool: boolean;
@@ -143,7 +143,7 @@ export class TischplanComponent {
 
     this.tablesOccupied = 0;
     this.backgroundColor = "ffffff";
-    this.showErdeBool = false;
+    this.showBauernStubnBool = false;
     this.showMetallBool = false;
     this.showLuftBool = false;
     this.showFeuerBool = false;
@@ -219,13 +219,16 @@ export class TischplanComponent {
     }
     //console.log(informationElements2);
     let department = JSON.stringify(args[1].id);
-    //console.log("departement" + department);
+    console.log("departement" + department);
     let departementSubstring = department.substring(1, department.length - 1);
     //console.log("departementSubstring: " + departementSubstring);
     let innerText = args[1].innerText;
     console.log(innerText);
     //console.log("tableNumber: " + tableNumber);
-    let tableNumberSubstring = innerText.toString().match(/\d+/);
+    let tableNumberArray = [];
+    tableNumberArray = innerText.toString().match(/[A-Z\s]+\d+/g);
+    let tableNumberSubstring = tableNumberArray[0];
+
     //console.log('tableNumberSubstring');
     //console.log(tableNumberSubstring);
     let numbers = innerText.match(/\d+/g);
@@ -274,7 +277,7 @@ export class TischplanComponent {
     // this.renderer.invokeElementMethod(this.input.nativeElement, 'focus');
   }
 
-  showErde() {
+  showBauernStubn() {
     this.departmentmenuComponent.showErde();
   }
 

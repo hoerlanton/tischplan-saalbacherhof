@@ -135,16 +135,14 @@ export class TableplanComponent implements AfterViewChecked {
   getStyle(a) {
     //console.log("a");
     //console.log(a);
-    if (typeof a == null || typeof a === "undefined") {
+    if (typeof a === "undefined") {
       return "solid 3px rgb(243, 239, 228)";
     } else {
       for (let b = 0; b < a.length; b++) {
         //console.log("LOOOOOOOOOOOOOOP");
-        //console.log(a[b].traceValue);
-        if (typeof a[b] != null) {
-          if (a[b].traceValue != "-" || a[b].newTraceText) {
-            this.trace = true;
-          }
+        //console.log(a[b].InfoValue);
+        if (a[b].pinfo1Value != "" || a[b].pinfo2Value != "" || a[b].pinfo3Value != "" || a[b].newInfoText) {
+          this.trace = true;
         }
       }
       if (this.trace) {
