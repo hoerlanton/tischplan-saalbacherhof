@@ -123,8 +123,8 @@ module.exports = {
                         }
                         console.log("occupyTable Update successful");
                     });
-            }}
-
+            }
+        }
         setTimeout(function () {
             db.saalbacherhofImHausListe.find(
                 {},

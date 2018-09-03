@@ -32,16 +32,15 @@ export class ImHausListeComponent implements OnInit {
   updateImHausListeElement(informationElements2) {
     this.tischplanService.updateImHausListeElement(informationElements2)
       .subscribe(response => {
-
         response.sort(function (a, b) {
-          if (a.name < b.name) return -1;
-          if (a.name > b.name) return 1;
+          if (a.name1 < b.name1) return -1;
+          if (a.name1 > b.name1) return 1;
           return 0;
         });
 
         this.imHausListeElemente = response;
-        //console.log('updateImHausListeElement response: ');
-        //console.log(response);
+        console.log('updateImHausListeElement response: ');
+        console.log(response);
         this.sortList();
       });
   }

@@ -198,9 +198,9 @@ export class DepartmentsComponent  {
     this.tischplanService.occupyTable(dataString)
       .subscribe(response => {
         //let arrayIndex = response[1];
-        //console.log("arrayIndex:" + arrayIndex);
+        console.log("arrayIndex:" + arrayIndex);
         //console.log("bgColor:" + JSON.stringify(response[0].tables[arrayIndex].bgColor));
-        //console.log("Response occupyTable:" + JSON.stringify(response));
+        console.log("Response occupyTable:" + JSON.stringify(response));
         if (response === null) {
           return;
         } else {

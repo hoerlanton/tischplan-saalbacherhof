@@ -260,6 +260,7 @@ export class TischplanComponent {
     this.departmentsComponent.addInformationToTable(dataString, arrayIndex);
     this.departmentsComponent.occupyTableOnDrop(dataString, arrayIndex);
     this.tableplanComponent.sumUpPersonenAnzahl();
+    console.log('informationElements2' + informationElements2);
     this.updateImHausListeElement(informationElements2);
   }
 
