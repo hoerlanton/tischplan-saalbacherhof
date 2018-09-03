@@ -22,12 +22,12 @@ module.exports = {
             pinfo2Value = [],
             pinfo3Value = [],
             personenAnzahlValue = [],
-            newInfoText = [],
-            newInfoRoomNumber = [],
-            newInfoName = [],
-            newInfoEmployee = [],
-            newInfoDate = [],
-            newInfoTableNumber = [],
+            newTraceText = [],
+            newTraceRoomNumber = [],
+            newTraceName = [],
+            newTraceEmployee = [],
+            newTraceDate = [],
+            newTraceTableNumber = [],
             kategorieValue = [];
 
         for (let s = 0; s < splitted.length; s++) {
@@ -120,12 +120,12 @@ module.exports = {
                 pinfo2Value.push(umsetzen[0].groups[i].pinfo2Value);
                 pinfo3Value.push(umsetzen[0].groups[i].pinfo3Value);
                 kategorieValue.push(umsetzen[0].groups[i].kategorieValue);
-                newInfoText.push(umsetzen[0].groups[i].newInfoName);
-                newInfoRoomNumber.push(umsetzen[0].groups[i].newInfoRoomNumber);
-                newInfoName.push(umsetzen[0].groups[i].newInfoName);
-                newInfoEmployee.push(umsetzen[0].groups[i].newInfoEmployee);
-                newInfoDate.push(umsetzen[0].groups[i].newInfoDate);
-                newInfoTableNumber.push(umsetzen[0].groups[i].newInfoTableNumber);
+                newTraceText.push(umsetzen[0].groups[i].newTraceName);
+                newTraceRoomNumber.push(umsetzen[0].groups[i].newTraceRoomNumber);
+                newTraceName.push(umsetzen[0].groups[i].newTraceName);
+                newTraceEmployee.push(umsetzen[0].groups[i].newTraceEmployee);
+                newTraceDate.push(umsetzen[0].groups[i].newTraceDate);
+                newTraceTableNumber.push(umsetzen[0].groups[i].newTraceTableNumber);
                 departmentValueDB = umsetzen[1].targetDepartment;
                 tableValue = umsetzen[1].targetTable;
                 umsetzen[0].department = umsetzen[1].targetDepartment;
@@ -188,12 +188,12 @@ module.exports = {
                                     {
                                         $push: {
                                             "tables.$.groups": {
-                                                "newInfoText" : newInfoText[i],
-                                                "newInfoRoomNumber": newInfoRoomNumber[i],
-                                                "newInfoName": newInfoName[i],
-                                                "newInfoEmployee": newInfoEmployee[i],
-                                                "newInfoDate": newInfoDate[i],
-                                                "newInfoTableNumber": newInfoTableNumber[i]
+                                                "newTraceText" : newTraceText[i],
+                                                "newTraceRoomNumber": newTraceRoomNumber[i],
+                                                "newTraceName": newTraceName[i],
+                                                "newTraceEmployee": newTraceEmployee[i],
+                                                "newTraceDate": newTraceDate[i],
+                                                "newTraceTableNumber": newTraceTableNumber[i]
                                             }
                                         }
                                     }, function (err, tables) {

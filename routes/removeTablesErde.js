@@ -275,8 +275,8 @@ module.exports = {
                                 $each: [{
                                     "arrayIndex": "0",
                                     "department": "erde",
-                                    "leftValue": "53",
                                     "number": "E009",
+                                    "leftValue": "53",
                                     "topValue": "229",
                                     "bgColor": "#ffffff",
                                     "isBesetzt": "false",
@@ -325,8 +325,158 @@ module.exports = {
                             $each: [{
                                 "arrayIndex": "0",
                                 "department": "erde",
-                                "leftValue": "28",
                                 "number": "E010",
+                                "leftValue": "28",
+                                "topValue": "137",
+                                "bgColor": "#ffffff",
+                                "isBesetzt": "false",
+                                "placeholder": "true",
+                                "border": "solid 3px #f3efe4",
+                                "width": "94",
+                                "height": "82",
+                                "transformValue": "rotate(-18deg)"
+                            }],
+                            $sort: {number: 1}
+                        }
+                    }
+                },
+                {multi: true},
+                function (err, tables) {
+                    if (err) {
+                        console.log("Error");
+                    }
+                    console.log("addTable Update successful");
+                });
+        } else if (tableNumber === 'E008' && topValue === '229' && leftValue === '53' && height === '160') {
+            db.saalbacherhofTables.update(
+                {
+                    department: departmentValue,
+                    "tables.number": tableNumber
+                },
+                {
+                    $set: {
+                        "tables.$.height": "82",
+                        "tables.$.leftValue": "81",
+                        "tables.$.topValue": "318",
+                    }
+                }, function (err, tables) {
+                    if (err) {
+                        console.log("Error");
+                    }
+                    console.log("moveTable Update successful");
+                });
+
+            db.saalbacherhofTables.update(
+                {
+                    department: departmentValue,
+                }, {
+                    $push: {
+                        tables: {
+                            $each: [{
+                                "arrayIndex": "0",
+                                "department": "erde",
+                                "number": "E009",
+                                "leftValue": "53",
+                                "topValue": "229",
+                                "bgColor": "#ffffff",
+                                "isBesetzt": "false",
+                                "placeholder": "true",
+                                "border": "solid 3px #f3efe4",
+                                "width": "94",
+                                "height": "82",
+                                "transformValue": "rotate(-18deg)"
+                            }],
+                            $sort: {number: 1}
+                        }
+                    }
+                },
+                {multi: true},
+                function (err, tables) {
+                    if (err) {
+                        console.log("Error");
+                    }
+                    console.log("addTable Update successful");
+                });
+        } else if (tableNumber === 'E008' && topValue === '137' && leftValue === '28' && height === '240') {
+            db.saalbacherhofTables.update(
+                {
+                    department: departmentValue,
+                    "tables.number": tableNumber
+                },
+                {
+                    $set: {
+                        "tables.$.height": "160",
+                        "tables.$.leftValue": "53",
+                        "tables.$.topValue": "229",
+                    }
+                }, function (err, tables) {
+                    if (err) {
+                        console.log("Error");
+                    }
+                    console.log("moveTable Update successful");
+                });
+
+            db.saalbacherhofTables.update(
+                {
+                    department: departmentValue,
+                }, {
+                    $push: {
+                        tables: {
+                            $each: [{
+                                "arrayIndex": "0",
+                                "department": "erde",
+                                "number": "E010",
+                                "leftValue": "28",
+                                "topValue": "137",
+                                "bgColor": "#ffffff",
+                                "isBesetzt": "false",
+                                "placeholder": "true",
+                                "border": "solid 3px #f3efe4",
+                                "width": "94",
+                                "height": "82",
+                                "transformValue": "rotate(-18deg)"
+                            }],
+                            $sort: {number: 1}
+                        }
+                    }
+                },
+                {multi: true},
+                function (err, tables) {
+                    if (err) {
+                        console.log("Error");
+                    }
+                    console.log("addTable Update successful");
+                });
+        } else if (tableNumber === 'E009' && topValue === '137' && leftValue === '28' && height === '160') {
+            db.saalbacherhofTables.update(
+                {
+                    department: departmentValue,
+                    "tables.number": tableNumber
+                },
+                {
+                    $set: {
+                        "tables.$.height": "82",
+                        "tables.$.leftValue": "53",
+                        "tables.$.topValue": "229",
+                    }
+                }, function (err, tables) {
+                    if (err) {
+                        console.log("Error");
+                    }
+                    console.log("moveTable Update successful");
+                });
+
+            db.saalbacherhofTables.update(
+                {
+                    department: departmentValue,
+                }, {
+                    $push: {
+                        tables: {
+                            $each: [{
+                                "arrayIndex": "0",
+                                "department": "erde",
+                                "number": "E010",
+                                "leftValue": "28",
                                 "topValue": "137",
                                 "bgColor": "#ffffff",
                                 "isBesetzt": "false",
