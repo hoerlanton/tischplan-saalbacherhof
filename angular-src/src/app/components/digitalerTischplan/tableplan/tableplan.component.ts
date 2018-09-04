@@ -338,11 +338,6 @@ export class TableplanComponent implements AfterViewChecked {
               }
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.erwFeuer[p] = this.erwFeuer[p] + Number(erwKi[0]);
-                //console.log(this.erw[p]);
-              }
-              if (erwKi != null) {
-                //console.log(erwKi);
                 this.ki1Feuer[p] = this.ki1Feuer[p] + Number(erwKi[1]);
                 //console.log(this.ki[p]);
               }
