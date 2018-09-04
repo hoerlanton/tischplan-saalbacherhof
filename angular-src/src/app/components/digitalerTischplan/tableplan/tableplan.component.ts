@@ -37,23 +37,55 @@ export class TableplanComponent implements AfterViewChecked {
   changeBgColorIfAnreise:EventEmitter<any> = new EventEmitter();
 
   @Output()
-  exportKiWasser:EventEmitter<any> = new EventEmitter();
+  exportKi1Wasser:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKi2Wasser:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKi3Wasser:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKi4Wasser:EventEmitter<any> = new EventEmitter();
   @Output()
   exportErwWasser:EventEmitter<any> = new EventEmitter();
   @Output()
-  exportKiLuft:EventEmitter<any> = new EventEmitter();
+  exportKi1Luft:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKi2Luft:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKi3Luft:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKi4Luft:EventEmitter<any> = new EventEmitter();
   @Output()
   exportErwLuft:EventEmitter<any> = new EventEmitter();
+
   @Output()
-  exportKiMetall:EventEmitter<any> = new EventEmitter();
+  exportKi1Metall:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKi2Metall:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKi3Metall:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKi4Metall:EventEmitter<any> = new EventEmitter();
+
   @Output()
   exportErwMetall:EventEmitter<any> = new EventEmitter();
   @Output()
-  exportKiFeuer:EventEmitter<any> = new EventEmitter();
+  exportKi1Feuer:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKi2Feuer:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKi3Feuer:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKi4Feuer:EventEmitter<any> = new EventEmitter();
   @Output()
   exportErwFeuer:EventEmitter<any> = new EventEmitter();
   @Output()
-  exportKiErde:EventEmitter<any> = new EventEmitter();
+  exportKi1Erde:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKi2Erde:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKi3Erde:EventEmitter<any> = new EventEmitter();
+  @Output()
+  exportKi4Erde:EventEmitter<any> = new EventEmitter();
   @Output()
   exportErwErde:EventEmitter<any> = new EventEmitter();
 
@@ -64,14 +96,31 @@ export class TableplanComponent implements AfterViewChecked {
   trace: boolean;
   erwErde: any[] = [];
   kiErde: any[] = [];
+  ki1Erde: any[] = [];
+  ki2Erde: any[] = [];
+  ki3Erde: any[] = [];
+  ki4Erde: any[] = [];
   erwFeuer: any[] = [];
-  kiFeuer: any[] = [];
+  ki1Feuer: any[] = [];
+  ki2Feuer: any[] = [];
+  ki3Feuer: any[] = [];
+  ki4Feuer: any[] = [];
   erwLuft: any[] = [];
-  kiLuft: any[] = [];
+  ki1Luft: any[] = [];
+  ki2Luft: any[] = [];
+  ki3Luft: any[] = [];
+  ki4Luft: any[] = [];
   erwMetall: any[] = [];
-  kiMetall: any[] = [];
+  ki1Metall: any[] = [];
+  ki2Metall: any[] = [];
+  ki3Metall: any[] = [];
+  ki4Metall: any[] = [];
   erwWasser: any[] = [];
-  kiWasser: any[] = [];
+  ki1Wasser: any[] = [];
+  ki2Wasser: any[] = [];
+  ki3Wasser: any[] = [];
+  ki4Wasser: any[] = [];
+
 
   constructor(private tischplanService: TischplanService) {
     this.buttonMoveTable = "ff0000";
@@ -231,7 +280,11 @@ export class TableplanComponent implements AfterViewChecked {
     if (this.tablesWasser) {
       for (let p = 0; p < this.tablesWasser.length; p++) {
         this.erwWasser[p] = 0;
-        this.kiWasser[p] = 0;
+        this.ki1Wasser[p] = 0;
+        this.ki2Wasser[p] = 0;
+        this.ki3Wasser[p] = 0;
+        this.ki4Wasser[p] = 0;
+
         if (this.tablesWasser[p].groups) {
           for (let g = 0; g < this.tablesWasser[p].groups.length; g++) {
             if (this.tablesWasser[p].groups[g].personenAnzahlValue) {
@@ -243,7 +296,22 @@ export class TableplanComponent implements AfterViewChecked {
               }
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.kiWasser[p] = this.kiWasser[p] + Number(erwKi[1]);
+                this.ki1Wasser[p] = this.ki1Wasser[p] + Number(erwKi[1]);
+                //console.log(this.ki[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki2Wasser[p] = this.ki2Wasser[p] + Number(erwKi[2]);
+                //console.log(this.ki[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki3Wasser[p] = this.ki3Wasser[p] + Number(erwKi[3]);
+                //console.log(this.ki[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki4Wasser[p] = this.ki4Wasser[p] + Number(erwKi[4]);
                 //console.log(this.ki[p]);
               }
             }
@@ -254,7 +322,11 @@ export class TableplanComponent implements AfterViewChecked {
     if (this.tablesFeuer) {
       for (let p = 0; p < this.tablesFeuer.length; p++) {
         this.erwFeuer[p] = 0;
-        this.kiFeuer[p] = 0;
+        this.ki1Feuer[p] = 0;
+        this.ki2Feuer[p] = 0;
+        this.ki3Feuer[p] = 0;
+        this.ki4Feuer[p] = 0;
+
         if (this.tablesFeuer[p].groups) {
           for (let g = 0; g < this.tablesFeuer[p].groups.length; g++) {
             if (this.tablesFeuer[p].groups[g].personenAnzahlValue) {
@@ -266,7 +338,27 @@ export class TableplanComponent implements AfterViewChecked {
               }
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.kiFeuer[p] = this.kiFeuer[p] + Number(erwKi[1]);
+                this.erwFeuer[p] = this.erwFeuer[p] + Number(erwKi[0]);
+                //console.log(this.erw[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki1Feuer[p] = this.ki1Feuer[p] + Number(erwKi[1]);
+                //console.log(this.ki[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki2Feuer[p] = this.ki2Feuer[p] + Number(erwKi[2]);
+                //console.log(this.ki[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki3Feuer[p] = this.ki3Feuer[p] + Number(erwKi[3]);
+                //console.log(this.ki[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki4Feuer[p] = this.ki4Feuer[p] + Number(erwKi[4]);
                 //console.log(this.ki[p]);
               }
             }
@@ -277,7 +369,11 @@ export class TableplanComponent implements AfterViewChecked {
     if (this.tablesErde) {
       for (let p = 0; p < this.tablesErde.length; p++) {
         this.erwErde[p] = 0;
-        this.kiErde[p] = 0;
+        this.ki1Erde[p] = 0;
+        this.ki2Erde[p] = 0;
+        this.ki3Erde[p] = 0;
+        this.ki4Erde[p] = 0;
+
         if (this.tablesErde[p].groups) {
           for (let g = 0; g < this.tablesErde[p].groups.length; g++) {
             if (this.tablesErde[p].groups[g].personenAnzahlValue) {
@@ -289,7 +385,22 @@ export class TableplanComponent implements AfterViewChecked {
               }
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.kiErde[p] = this.kiErde[p] + Number(erwKi[1]);
+                this.ki1Erde[p] = this.ki1Erde[p] + Number(erwKi[1]);
+                //console.log(this.ki[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki2Erde[p] = this.ki2Erde[p] + Number(erwKi[2]);
+                //console.log(this.ki[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki3Erde[p] = this.ki3Erde[p] + Number(erwKi[3]);
+                //console.log(this.ki[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki4Erde[p] = this.ki4Erde[p] + Number(erwKi[4]);
                 //console.log(this.ki[p]);
               }
             }
@@ -300,7 +411,11 @@ export class TableplanComponent implements AfterViewChecked {
     if (this.tablesMetall) {
       for (let p = 0; p < this.tablesMetall.length; p++) {
         this.erwMetall[p] = 0;
-        this.kiMetall[p] = 0;
+        this.ki1Metall[p] = 0;
+        this.ki2Metall[p] = 0;
+        this.ki3Metall[p] = 0;
+        this.ki4Metall[p] = 0;
+
         if (this.tablesMetall[p].groups) {
           for (let g = 0; g < this.tablesMetall[p].groups.length; g++) {
             if (this.tablesMetall[p].groups[g].personenAnzahlValue) {
@@ -312,7 +427,22 @@ export class TableplanComponent implements AfterViewChecked {
               }
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.kiMetall[p] = this.kiMetall[p] + Number(erwKi[1]);
+                this.ki1Metall[p] = this.ki1Metall[p] + Number(erwKi[1]);
+                //console.log(this.ki[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki2Metall[p] = this.ki2Metall[p] + Number(erwKi[2]);
+                //console.log(this.ki[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki3Metall[p] = this.ki3Metall[p] + Number(erwKi[3]);
+                //console.log(this.ki[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki4Metall[p] = this.ki4Metall[p] + Number(erwKi[4]);
                 //console.log(this.ki[p]);
               }
             }
@@ -323,7 +453,11 @@ export class TableplanComponent implements AfterViewChecked {
     if (this.tablesLuft) {
       for (let p = 0; p < this.tablesLuft.length; p++) {
         this.erwLuft[p] = 0;
-        this.kiLuft[p] = 0;
+        this.ki1Luft[p] = 0;
+        this.ki2Luft[p] = 0;
+        this.ki3Luft[p] = 0;
+        this.ki4Luft[p] = 0;
+
         if (this.tablesLuft[p].groups) {
           for (let g = 0; g < this.tablesLuft[p].groups.length; g++) {
             if (this.tablesLuft[p].groups[g].personenAnzahlValue) {
@@ -335,7 +469,22 @@ export class TableplanComponent implements AfterViewChecked {
               }
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.kiLuft[p] = this.kiLuft[p] + Number(erwKi[1]);
+                this.ki1Luft[p] = this.ki1Luft[p] + Number(erwKi[1]);
+                //console.log(this.ki[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki2Luft[p] = this.ki2Luft[p] + Number(erwKi[2]);
+                //console.log(this.ki[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki3Luft[p] = this.ki3Luft[p] + Number(erwKi[3]);
+                //console.log(this.ki[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.ki4Luft[p] = this.ki4Luft[p] + Number(erwKi[4]);
                 //console.log(this.ki[p]);
               }
             }
@@ -343,15 +492,30 @@ export class TableplanComponent implements AfterViewChecked {
         }
       }
     }
-    this.exportKiWasser.emit(this.kiWasser);
+    this.exportKi1Wasser.emit(this.ki1Wasser);
+    this.exportKi2Wasser.emit(this.ki2Wasser);
+    this.exportKi3Wasser.emit(this.ki3Wasser);
+    this.exportKi4Wasser.emit(this.ki4Wasser);
     this.exportErwWasser.emit(this.erwWasser);
-    this.exportKiLuft.emit(this.kiLuft);
+    this.exportKi1Luft.emit(this.ki1Luft);
+    this.exportKi2Luft.emit(this.ki2Luft);
+    this.exportKi3Luft.emit(this.ki3Luft);
+    this.exportKi4Luft.emit(this.ki4Luft);
     this.exportErwLuft.emit(this.erwLuft);
-    this.exportKiMetall.emit(this.kiMetall);
+    this.exportKi1Metall.emit(this.ki1Metall);
+    this.exportKi2Metall.emit(this.ki2Metall);
+    this.exportKi3Metall.emit(this.ki3Metall);
+    this.exportKi4Metall.emit(this.ki4Metall);
     this.exportErwMetall.emit(this.erwMetall);
-    this.exportKiFeuer.emit(this.kiFeuer);
+    this.exportKi1Feuer.emit(this.ki1Feuer);
+    this.exportKi2Feuer.emit(this.ki2Feuer);
+    this.exportKi3Feuer.emit(this.ki3Feuer);
+    this.exportKi4Feuer.emit(this.ki4Feuer);
     this.exportErwFeuer.emit(this.erwFeuer);
-    this.exportKiErde.emit(this.kiErde);
+    this.exportKi1Erde.emit(this.ki1Erde);
+    this.exportKi2Erde.emit(this.ki2Erde);
+    this.exportKi3Erde.emit(this.ki3Erde);
+    this.exportKi4Erde.emit(this.ki4Erde);
     this.exportErwErde.emit(this.erwErde);
   }
 }

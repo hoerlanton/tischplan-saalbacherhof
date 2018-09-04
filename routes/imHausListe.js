@@ -35,12 +35,12 @@ module.exports = {
                 "zimmernummer": zimmerNummerSplitted[0],
                 "anreise": imHausListeDataArrayConcatSplit[0],
                 "abreise": imHausListeDataArrayConcatSplit[1],
-                "name1": imHausListeDataArrayConcatSplit[8] + " " + imHausListeDataArrayConcatSplit[5] + " " + imHausListeDataArrayConcatSplit[6],
-                "pinfo1": imHausListeDataArrayConcatSplit[15],
-                "pinfo2": imHausListeDataArrayConcatSplit[32],
-                "pinfo3": imHausListeDataArrayConcatSplit[49],
-                "personenAnzahl": imHausListeDataArrayConcatSplit[74] + " / " + imHausListeDataArrayConcatSplit[77],
-                "kategorie": imHausListeDataArrayConcatSplit[85],
+                "personenAnzahl": imHausListeDataArrayConcatSplit[74] + " / " + imHausListeDataArrayConcatSplit[75] + " / " + imHausListeDataArrayConcatSplit[76] + " / " + imHausListeDataArrayConcatSplit[77] + " / " + imHausListeDataArrayConcatSplit[78],
+                "name1": imHausListeDataArrayConcatSplit[8] + " " + imHausListeDataArrayConcatSplit[5] + " " + imHausListeDataArrayConcatSplit[6] + " " + imHausListeDataArrayConcatSplit[7],
+                "name2": imHausListeDataArrayConcatSplit[21] + " " + imHausListeDataArrayConcatSplit[22],
+                "nation": imHausListeDataArrayConcatSplit[11],
+                "aufenthalte": imHausListeDataArrayConcatSplit[18],
+                "p_service": imHausListeDataArrayConcatSplit[86],
             });
         }
         console.log(imHausListe);

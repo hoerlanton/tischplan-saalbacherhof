@@ -5,7 +5,7 @@
         <div *ngFor="let tableMetall of tablesMetall; let j = index;">
           <div dropdownToggle type="button" class="t{{tableMetall.number}} table-item" [ngStyle]="{'top': tableMetall.topValue + 'px', 'left': tableMetall.leftValue + 'px', 'background-color': + tableMetall.bgColor, 'height': + tableMetall.height + 'px', 'width': + tableMetall.width + 'px', 'border': + tableMetall.border,  'border-radius': + tableMetall.borderRadius  + '%'}" [style.border]="getStyle(tablesMetall[j].groups)" dropdown>
             <div *ngIf="tablesMetall[j] !== tablesMetall[j+1]">
-              <p><b>{{tableMetall.number}} <br>{{erwMetall[j]}}/{{kiMetall[j]}}</b></p>
+              <p><b>{{tableMetall.number}} <br>{{erwMetall[j]}}/{{ki1Metall[j]}}/{{ki2Metall[j]}}/{{ki3Metall[j]}}/{{ki4Metall[j]}}</b></p>
             </div>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <div dropdownToggle type="button" style="color: white; padding: 10px;" (mouseenter)="mouseEnterMoveTableButton()"  (mouseleave)="mouseLeaveMoveTableButton()" [ngStyle]="{'background-color': '#' + buttonMoveTable}" (click)="none($event)" class="dropdownMoveTable" dropdown><b>Tisch verschieben</b>
@@ -27,10 +27,10 @@
                           <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
                           <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
                           <b> Name 1:</b> {{group.name1Value}}<br>
-                          <b> Info 1:</b> {{group.pinfo1Value}}<br>
-                          <b> Info 2:</b> {{group.pinfo2Value}}<br>
-                          <b> Info 3:</b> {{group.pinfo3Value}}<br>
-                          <b> Kategorie:</b> {{group.kategorieValue}}<br>
+                          <b> Name 2:</b> {{group.name2Value}}<br>
+                          <b> # Aufenthalte:</b> {{group.aufenthalteValue}}<br>
+                          <b> Nation:</b> {{group.nationValue}}<br>
+                          <b> P_SERVICE:</b> {{group.p_serviceValue}}<br>
                         </div>
                         <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
                       </div>
@@ -51,7 +51,7 @@
         <div *ngFor="let tableErde of tablesErde; let j = index;">
           <div dropdownToggle type="button" class="t{{tableErde.number}} table-item" [ngStyle]="{'top': tableErde.topValue + 'px', 'left': tableErde.leftValue + 'px', 'background-color': + tableErde.bgColor, 'height': + tableErde.height + 'px', 'width': + tableErde.width + 'px', 'border': + tableErde.border, 'border-radius': + tableErde.borderRadius  + '%', 'transform': + tableErde.transformValue}" [style.border]="getStyle(tablesErde[j].groups)" dropdown>
             <div *ngIf="tablesErde[j] !== tablesErde[j+1]">
-              <p><b>{{tableErde.number}} <br>{{erwErde[j]}}/{{kiErde[j]}}</b></p>
+              <p><b>{{tableErde.number}} <br>{{erwErde[j]}}/{{ki1Erde[j]}}/{{ki2Erde[j]}}/{{ki3Erde[j]}}/{{ki4Erde[j]}}</b></p>
             </div>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <div dropdownToggle type="button" style="color: white; padding: 10px;" (mouseenter)="mouseEnterMoveTableButton()"  (mouseleave)="mouseLeaveMoveTableButton()" [ngStyle]="{'background-color': '#' + buttonMoveTable}" (click)="none($event)" class="dropdownMoveTable" dropdown><b>Tisch verschieben</b>
@@ -73,10 +73,10 @@
                           <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
                           <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
                           <b> Name 1:</b> {{group.name1Value}}<br>
-                          <b> Info 1:</b> {{group.pinfo1Value}}<br>
-                          <b> Info 2:</b> {{group.pinfo2Value}}<br>
-                          <b> Info 3:</b> {{group.pinfo3Value}}<br>
-                          <b> Kategorie:</b> {{group.kategorieValue}}<br>
+                          <b> Name 2:</b> {{group.name2Value}}<br>
+                          <b> # Aufenthalte:</b> {{group.aufenthalteValue}}<br>
+                          <b> Nation:</b> {{group.nationValue}}<br>
+                          <b> P_SERVICE:</b> {{group.p_serviceValue}}<br>
                         </div>
                         <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
                       </div>
@@ -97,7 +97,7 @@
         <div *ngFor="let tableLuft of tablesLuft; let j = index;">
           <div dropdownToggle type="button" class="t{{tableLuft.number}} table-item" [ngStyle]="{'top': tableLuft.topValue + 'px', 'left': tableLuft.leftValue + 'px', 'background-color': + tableLuft.bgColor, 'height': + tableLuft.height + 'px', 'width': + tableLuft.width + 'px', 'border': + tableLuft.border,  'border-radius': + tableLuft.borderRadius  + '%'}" [style.border]="getStyle(tablesLuft[j].groups)" dropdown>
             <div *ngIf="tablesLuft[j] !== tablesLuft[j+1]">
-              <p><b>{{tableLuft.number}} <br>{{erwLuft[j]}}/{{kiLuft[j]}}</b></p>
+              <p><b>{{tableLuft.number}} <br>{{erwLuft[j]}}/{{ki1Luft[j]}}/{{ki2Luft[j]}}/{{ki3Luft[j]}}/{{ki4Luft[j]}}</b></p>
             </div>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <div dropdownToggle type="button" style="color: white; padding: 10px;" (mouseenter)="mouseEnterMoveTableButton()"  (mouseleave)="mouseLeaveMoveTableButton()" [ngStyle]="{'background-color': '#' + buttonMoveTable}" (click)="none($event)" class="dropdownMoveTable" dropdown><b>Tisch verschieben</b>
@@ -119,10 +119,10 @@
                           <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
                           <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
                           <b> Name 1:</b> {{group.name1Value}}<br>
-                          <b> Info 1:</b> {{group.pinfo1Value}}<br>
-                          <b> Info 2:</b> {{group.pinfo2Value}}<br>
-                          <b> Info 3:</b> {{group.pinfo3Value}}<br>
-                          <b> Kategorie:</b> {{group.kategorieValue}}<br>
+                          <b> Name 2:</b> {{group.name2Value}}<br>
+                          <b> # Aufenthalte:</b> {{group.aufenthalteValue}}<br>
+                          <b> Nation:</b> {{group.nationValue}}<br>
+                          <b> P_SERVICE:</b> {{group.p_serviceValue}}<br>
                         </div>
                         <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
                       </div>
@@ -143,7 +143,7 @@
         <div *ngFor="let tableFeuer of tablesFeuer; let j = index;">
           <div dropdownToggle type="button" class="t{{tableFeuer.number}} table-item" [ngStyle]="{'top': tableFeuer.topValue + 'px', 'left': tableFeuer.leftValue + 'px', 'background-color': + tableFeuer.bgColor, 'height': + tableFeuer.height + 'px', 'width': + tableFeuer.width + 'px', 'border': + tableFeuer.border,  'border-radius': + tableFeuer.borderRadius  + '%'}" [style.border]="getStyle(tablesFeuer[j].groups)" dropdown>
             <div *ngIf="tablesFeuer[j] !== tablesFeuer[j+1]">
-              <p><b>{{tableFeuer.number}} <br>{{erwFeuer[j]}}/{{kiFeuer[j]}}</b></p>
+              <p><b>{{tableFeuer.number}} <br>{{erwFeuer[j]}}/{{ki1Feuer[j]}}/{{ki2Feuer[j]}}/{{ki3Feuer[j]}}/{{ki4Feuer[j]}}</b></p>
             </div>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <div dropdownToggle type="button" style="color: white; padding: 10px;" (mouseenter)="mouseEnterMoveTableButton()"  (mouseleave)="mouseLeaveMoveTableButton()" [ngStyle]="{'background-color': '#' + buttonMoveTable}" (click)="none($event)" class="dropdownMoveTable" dropdown><b>Tisch verschieben</b>
@@ -165,10 +165,10 @@
                           <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
                           <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
                           <b> Name 1:</b> {{group.name1Value}}<br>
-                          <b> Info 1:</b> {{group.pinfo1Value}}<br>
-                          <b> Info 2:</b> {{group.pinfo2Value}}<br>
-                          <b> Info 3:</b> {{group.pinfo3Value}}<br>
-                          <b> Kategorie:</b> {{group.kategorieValue}}<br>
+                          <b> Name 2:</b> {{group.name2Value}}<br>
+                          <b> # Aufenthalte:</b> {{group.aufenthalteValue}}<br>
+                          <b> Nation:</b> {{group.nationValue}}<br>
+                          <b> P_SERVICE:</b> {{group.p_serviceValue}}<br>
                         </div>
                         <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
                       </div>
@@ -189,7 +189,7 @@
         <div *ngFor="let tableWasser of tablesWasser; let j = index;">
           <div dropdownToggle type="button" class="t{{tableWasser.number}} table-item" [ngStyle]="{'top': tableWasser.topValue + 'px', 'left': tableWasser.leftValue + 'px', 'background-color': + tableWasser.bgColor, 'height': + tableWasser.height + 'px', 'width': + tableWasser.width + 'px', 'border': + tableWasser.border,  'border-radius': + tableWasser.borderRadius  + '%'}" [style.border]="getStyle(tablesWasser[j].groups)" dropdown>
             <div *ngIf="tablesWasser[j] !== tablesWasser[j+1]">
-              <p><b>{{tableWasser.number}} <br>{{erwWasser[j]}}/{{kiWasser[j]}}</b></p>
+              <p><b>{{tableWasser.number}} <br>{{erwWasser[j]}}/{{ki1Wasser[j]}}/{{ki2Wasser[j]}}/{{ki3Wasser[j]}}/{{ki4Wasser[j]}}</b></p>
             </div>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <div dropdownToggle type="button" style="color: white; padding: 10px;" (mouseenter)="mouseEnterMoveTableButton()"  (mouseleave)="mouseLeaveMoveTableButton()" [ngStyle]="{'background-color': '#' + buttonMoveTable}" (click)="none($event)" class="dropdownMoveTable" dropdown><b>Tisch verschieben</b>
@@ -211,10 +211,10 @@
                           <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
                           <b> Personenanzahl:</b> {{group.personenAnzahlValue}}<br>
                           <b> Name 1:</b> {{group.name1Value}}<br>
-                          <b> Info 1:</b> {{group.pinfo1Value}}<br>
-                          <b> Info 2:</b> {{group.pinfo2Value}}<br>
-                          <b> Info 3:</b> {{group.pinfo3Value}}<br>
-                          <b> Kategorie:</b> {{group.kategorieValue}}<br>
+                          <b> Name 2:</b> {{group.name2Value}}<br>
+                          <b> # Aufenthalte:</b> {{group.aufenthalteValue}}<br>
+                          <b> Nation:</b> {{group.nationValue}}<br>
+                          <b> P_SERVICE:</b> {{group.p_serviceValue}}<br>
                         </div>
                         <li class="divider dropdown-divider" style="padding: 0 0 0 0"></li>
                       </div>

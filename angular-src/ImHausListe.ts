@@ -3,10 +3,10 @@ export class ImHausListe {
   anreise: string;
   abreise: string;
   name1: string;
-  pinfo1 : string;
-  pinfo2: string;
-  pinfo3 : string;
+  name2: string;
+  nation: string;
+  p_service: string;
   personenAnzahl : string;
-  kategorie: string;
+  aufenthalte: string;
   isAnreise : boolean;
 }

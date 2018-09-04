@@ -18,9 +18,9 @@ module.exports = {
             anreiseValue = [],
             abreiseValue = [],
             name1Value = [],
-            pinfo1Value = [],
-            pinfo2Value = [],
-            pinfo3Value = [],
+            aufenthalteValue = [],
+            nationValue = [],
+            p_serviceValue = [],
             personenAnzahlValue = [],
             newTraceText = [],
             newTraceRoomNumber = [],
@@ -28,7 +28,8 @@ module.exports = {
             newTraceEmployee = [],
             newTraceDate = [],
             newTraceTableNumber = [],
-            kategorieValue = [];
+            name2Value = [];
+
 
         for (let s = 0; s < splitted.length; s++) {
             informationElements2.push(splitted[s].split(/:(.+)/)[1]);
@@ -58,16 +59,16 @@ module.exports = {
                 name1Value.push(informationElements2[4].substring(1, informationElements2[4].length));
             }
             if (informationElements2[5]) {
-                pinfo1Value.push(informationElements2[5].substring(1, informationElements2[5].length));
+                name2Value.push(informationElements2[5].substring(1, informationElements2[5].length));
             }
             if (informationElements2[6]) {
-                pinfo2Value.push(informationElements2[6].substring(1, informationElements2[6].length));
+                nationValue.push(informationElements2[6].substring(1, informationElements2[6].length));
             }
             if (informationElements2[7]) {
-                pinfo3Value.push(informationElements2[7].substring(1, informationElements2[7].length));
+                aufenthalteValue.push(informationElements2[7].substring(1, informationElements2[7].length));
             }
             if (informationElements2[8]) {
-                kategorieValue.push(informationElements2[8].substring(1, informationElements2[8].length));
+                p_serviceValue.push(informationElements2[8].substring(1, informationElements2[8].length));
             }
 
             departmentValueDB = informationElements2[informationElements2.length - 1].substring(1, informationElements2[informationElements2.length - 1].length - 1).replace(new RegExp("[0-9]", "g"), "").replace(/\W/g, '').replace(/[A-Z\s]/g, '').replace(' ', '');
@@ -91,10 +92,10 @@ module.exports = {
                                 "abreiseValue": abreiseValue[0],
                                 "personenAnzahlValue": personenAnzahlValue[0],
                                 "name1Value": name1Value[0],
-                                "pinfo1Value": pinfo1Value[0],
-                                "pinfo2Value": pinfo2Value[0],
-                                "pinfo3Value": pinfo3Value[0],
-                                "kategorieValue": kategorieValue[0],
+                                "name2Value": name2Value[0],
+                                "nationValue": nationValue[0],
+                                "aufenthalteValue": aufenthalteValue[0],
+                                "p_serviceValue": p_serviceValue[0],
                             }
                         }
                     }, function (err, tables) {
@@ -116,10 +117,10 @@ module.exports = {
                 anreiseValue.push(umsetzen[0].groups[i].anreiseValue);
                 abreiseValue.push(umsetzen[0].groups[i].abreiseValue);
                 name1Value.push(umsetzen[0].groups[i].name1Value);
-                pinfo1Value.push(umsetzen[0].groups[i].pinfo1Value);
-                pinfo2Value.push(umsetzen[0].groups[i].pinfo2Value);
-                pinfo3Value.push(umsetzen[0].groups[i].pinfo3Value);
-                kategorieValue.push(umsetzen[0].groups[i].kategorieValue);
+                name2Value.push(umsetzen[0].groups[i].name2Value);
+                nationValue.push(umsetzen[0].groups[i].nationValue);
+                aufenthalteValue.push(umsetzen[0].groups[i].aufenthalteValue);
+                p_serviceValue.push(umsetzen[0].groups[i].p_serviceValue);
                 newTraceText.push(umsetzen[0].groups[i].newTraceName);
                 newTraceRoomNumber.push(umsetzen[0].groups[i].newTraceRoomNumber);
                 newTraceName.push(umsetzen[0].groups[i].newTraceName);
@@ -167,10 +168,10 @@ module.exports = {
                                                 "abreiseValue": abreiseValue[i],
                                                 "personenAnzahlValue": personenAnzahlValue[i],
                                                 "name1Value": name1Value[i],
-                                                "pinfo1Value": pinfo1Value[i],
-                                                "pinfo2Value": pinfo2Value[i],
-                                                "pinfo3Value": pinfo3Value[i],
-                                                "kategorieValue": kategorieValue[i],
+                                                "name2Value": name2Value[i],
+                                                "nationValue": nationValue[i],
+                                                "aufenthalteValue": aufenthalteValue[i],
+                                                "p_serviceValue": p_serviceValue[i],
                                             }
                                         }
                                     }, function (err, tables) {

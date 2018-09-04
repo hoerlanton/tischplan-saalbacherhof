@@ -22,14 +22,33 @@ export class PrintComponent implements OnInit {
   @Input('tablesMetall') tablesMetall: Table[];
   @Input('showMetallBool') showMetallBool: boolean;
   @Input('erwWasser') erwWasser: any;
-  @Input('kiWasser') kiWasser: any;
+  @Input('ki1Wasser') ki1Wasser: any;
+  @Input('ki2Wasser') ki2Wasser: any;
+  @Input('ki3Wasser') ki3Wasser: any;
+  @Input('ki4Wasser') ki4Wasser: any;
   @Input('erwErde') erwErde: any;
-  @Input('kiErde') kiErde: any;
-  @Input('kiFeuer') kiFeuer: any;
+  @Input('ki1Erde') ki1Erde: any;
+  @Input('ki2Erde') ki2Erde: any;
+  @Input('ki3Erde') ki3Erde: any;
+  @Input('ki4Erde') ki4Erde: any;
+
+  @Input('ki1Feuer') ki1Feuer: any;
+  @Input('ki2Feuer') ki2Feuer: any;
+  @Input('ki3Feuer') ki3Feuer: any;
+  @Input('ki4Feuer') ki4Feuer: any;
+
   @Input('erwLuft') erwLuft: any;
-  @Input('kiLuft') kiLuft: any;
+  @Input('ki1Luft') ki1Luft: any;
+  @Input('ki2Luft') ki2Luft: any;
+  @Input('ki3Luft') ki3Luft: any;
+  @Input('ki4Luft') ki4Luft: any;
+
   @Input('erwFeuer') erwFeuer: any;
-  @Input('kiMetall') kiMetall: any;
+  @Input('ki1Metall') ki1Metall: any;
+  @Input('ki2Metall') ki2Metall: any;
+  @Input('ki3Metall') ki3Metall: any;
+  @Input('ki4Metall') ki4Metall: any;
+
   @Input('erwMetall') erwMetall: any;
 
 

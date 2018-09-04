@@ -107,15 +107,34 @@ export class TischplanComponent {
   buttonBgColorShowTablePlan: string;
   fontColorShowTablePlan: string;
   erwErde: any[] = [];
-  kiErde: any[] = [];
+  ki1Erde: any[] = [];
+  ki2Erde: any[] = [];
+  ki3Erde: any[] = [];
+  ki4Erde: any[] = [];
+
   erwFeuer: any[] = [];
-  kiFeuer: any[] = [];
+  ki1Feuer: any[] = [];
+  ki2Feuer: any[] = [];
+  ki3Feuer: any[] = [];
+  ki4Feuer: any[] = [];
+
   erwLuft: any[] = [];
-  kiLuft: any[] = [];
+  ki1Luft: any[] = [];
+  ki2Luft: any[] = [];
+  ki3Luft: any[] = [];
+  ki4Luft: any[] = [];
+
   erwMetall: any[] = [];
-  kiMetall: any[] = [];
+  ki1Metall: any[] = [];
+  ki2Metall: any[] = [];
+  ki3Metall: any[] = [];
+  ki4Metall: any[] = [];
+
   erwWasser: any[] = [];
-  kiWasser: any[] = [];
+  ki1Wasser: any[] = [];
+  ki2Wasser: any[] = [];
+  ki3Wasser: any[] = [];
+  ki4Wasser: any[] = [];
 
 
   constructor(private tischplanService: TischplanService, private http: Http, private _flashMessagesService: FlashMessagesService, private dragulaService: DragulaService) {
