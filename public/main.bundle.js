@@ -43,19 +43,20 @@ module.exports = "<router-outlet></router-outlet>\n"
 /***/ }),
 
 /***/ "../../../../../src/app/app.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var tischplan_service_1 = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
+
+
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'App works!';
@@ -63,66 +64,98 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 AppComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")],
-        providers: [tischplan_service_1.TischplanService],
+        providers: [__WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]],
     })
 ], AppComponent);
-exports.AppComponent = AppComponent;
+
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/app/app.module.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_digitalerTischplan_tischplan_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_dragula__ = __webpack_require__("../../../../ng2-dragula/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_dragula___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_ng2_dragula__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_dropdown__ = __webpack_require__("../../../../ngx-bootstrap/dropdown/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_digitalerTischplan_im_haus_liste_im_haus_liste_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_digitalerTischplan_tableplan_tableplan_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/tableplan/tableplan.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_digitalerTischplan_navigation_navigation_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_digitalerTischplan_print_print_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/print/print.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_digitalerTischplan_form_form_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/form/form.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_digitalerTischplan_departments_departments_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/departments.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_digitalerTischplan_departmentmenu_departmentmenu_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_digitalerTischplan_departments_erde_erde_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/erde/erde.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_digitalerTischplan_departments_luft_luft_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/luft/luft.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_digitalerTischplan_departments_wasser_wasser_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/wasser/wasser.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_digitalerTischplan_departments_metall_metall_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/metall/metall.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_digitalerTischplan_departments_feuer_feuer_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/feuer/feuer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_digitalerTischplan_departments_alle_alle_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/alle/alle.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ng2_search_filter__ = __webpack_require__("../../../../ng2-search-filter/dist/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ng2_search_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_ng2_search_filter__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_digitalerTischplan_login_login_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_digitalerTischplan_register_register_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_digitalerTischplan_profile_profile_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/profile/profile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var platform_browser_1 = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var forms_1 = __webpack_require__("../../../forms/@angular/forms.es5.js");
-var http_1 = __webpack_require__("../../../http/@angular/http.es5.js");
-var app_component_1 = __webpack_require__("../../../../../src/app/app.component.ts");
-var tischplan_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.ts");
-var angular2_flash_messages_1 = __webpack_require__("../../../../angular2-flash-messages/index.js");
-var ng2_dragula_1 = __webpack_require__("../../../../ng2-dragula/index.js");
-var dropdown_1 = __webpack_require__("../../../../ngx-bootstrap/dropdown/index.js");
-var im_haus_liste_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.ts");
-var tableplan_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/tableplan/tableplan.component.ts");
-var navigation_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.ts");
-var print_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/print/print.component.ts");
-var form_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/form/form.component.ts");
-var departments_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/departments.component.ts");
-var departmentmenu_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.ts");
-var erde_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/erde/erde.component.ts");
-var luft_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/luft/luft.component.ts");
-var wasser_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/wasser/wasser.component.ts");
-var metall_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/metall/metall.component.ts");
-var feuer_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/feuer/feuer.component.ts");
-var alle_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/alle/alle.component.ts");
-var ng2_search_filter_1 = __webpack_require__("../../../../ng2-search-filter/dist/index.js");
-var router_1 = __webpack_require__("../../../router/@angular/router.es5.js");
-var login_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/login/login.component.ts");
-var register_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/register/register.component.ts");
-var profile_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/profile/profile.component.ts");
-var auth_guard_1 = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
-var validate_service_1 = __webpack_require__("../../../../../src/app/services/validate.service.ts");
-var auth_service_1 = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var appRoutes = [
-    { path: '', component: login_component_1.LoginComponent },
-    { path: 'login', component: login_component_1.LoginComponent },
-    { path: 'dashboard', component: tischplan_component_1.TischplanComponent, canActivate: [auth_guard_1.AuthGuard] },
-    { path: 'register', component: register_component_1.RegisterComponent },
-    { path: 'profile', component: profile_component_1.ProfileComponent, canActivate: [auth_guard_1.AuthGuard] }
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_24__components_digitalerTischplan_login_login_component__["a" /* LoginComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_24__components_digitalerTischplan_login_login_component__["a" /* LoginComponent */] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_5__components_digitalerTischplan_tischplan_component__["a" /* TischplanComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_27__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'register', component: __WEBPACK_IMPORTED_MODULE_25__components_digitalerTischplan_register_register_component__["a" /* RegisterComponent */] },
+    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_26__components_digitalerTischplan_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_27__guards_auth_guard__["a" /* AuthGuard */]] }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -130,43 +163,43 @@ var AppModule = (function () {
     return AppModule;
 }());
 AppModule = __decorate([
-    core_1.NgModule({
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
-            app_component_1.AppComponent,
-            tischplan_component_1.TischplanComponent,
-            im_haus_liste_component_1.ImHausListeComponent,
-            tableplan_component_1.TableplanComponent,
-            navigation_component_1.NavigationComponent,
-            print_component_1.PrintComponent,
-            form_component_1.FormComponent,
-            departments_component_1.DepartmentsComponent,
-            departmentmenu_component_1.DepartmentmenuComponent,
-            erde_component_1.ErdeComponent,
-            feuer_component_1.FeuerComponent,
-            luft_component_1.LuftComponent,
-            wasser_component_1.WasserComponent,
-            metall_component_1.MetallComponent,
-            alle_component_1.AlleComponent,
-            login_component_1.LoginComponent,
-            register_component_1.RegisterComponent,
-            profile_component_1.ProfileComponent
+            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__components_digitalerTischplan_tischplan_component__["a" /* TischplanComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__components_digitalerTischplan_im_haus_liste_im_haus_liste_component__["a" /* ImHausListeComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__components_digitalerTischplan_tableplan_tableplan_component__["a" /* TableplanComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__components_digitalerTischplan_navigation_navigation_component__["a" /* NavigationComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__components_digitalerTischplan_print_print_component__["a" /* PrintComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__components_digitalerTischplan_form_form_component__["a" /* FormComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__components_digitalerTischplan_departments_departments_component__["a" /* DepartmentsComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__components_digitalerTischplan_departmentmenu_departmentmenu_component__["a" /* DepartmentmenuComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__components_digitalerTischplan_departments_erde_erde_component__["a" /* ErdeComponent */],
+            __WEBPACK_IMPORTED_MODULE_20__components_digitalerTischplan_departments_feuer_feuer_component__["a" /* FeuerComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__components_digitalerTischplan_departments_luft_luft_component__["a" /* LuftComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__components_digitalerTischplan_departments_wasser_wasser_component__["a" /* WasserComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__components_digitalerTischplan_departments_metall_metall_component__["a" /* MetallComponent */],
+            __WEBPACK_IMPORTED_MODULE_21__components_digitalerTischplan_departments_alle_alle_component__["a" /* AlleComponent */],
+            __WEBPACK_IMPORTED_MODULE_24__components_digitalerTischplan_login_login_component__["a" /* LoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_25__components_digitalerTischplan_register_register_component__["a" /* RegisterComponent */],
+            __WEBPACK_IMPORTED_MODULE_26__components_digitalerTischplan_profile_profile_component__["a" /* ProfileComponent */]
         ],
         imports: [
-            forms_1.FormsModule,
-            http_1.HttpModule,
-            angular2_flash_messages_1.FlashMessagesModule,
-            ng2_dragula_1.DragulaModule,
-            forms_1.ReactiveFormsModule,
-            platform_browser_1.BrowserModule,
-            dropdown_1.BsDropdownModule.forRoot(),
-            ng2_search_filter_1.Ng2SearchPipeModule,
-            router_1.RouterModule.forRoot(appRoutes)
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_http__["HttpModule"],
+            __WEBPACK_IMPORTED_MODULE_6_angular2_flash_messages__["FlashMessagesModule"],
+            __WEBPACK_IMPORTED_MODULE_7_ng2_dragula__["DragulaModule"],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* ReactiveFormsModule */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+            __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_dropdown__["a" /* BsDropdownModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_22_ng2_search_filter__["Ng2SearchPipeModule"],
+            __WEBPACK_IMPORTED_MODULE_23__angular_router__["b" /* RouterModule */].forRoot(appRoutes)
         ],
-        providers: [validate_service_1.ValidateService, auth_service_1.AuthService, auth_guard_1.AuthGuard],
-        bootstrap: [app_component_1.AppComponent]
+        providers: [__WEBPACK_IMPORTED_MODULE_28__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_29__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_27__guards_auth_guard__["a" /* AuthGuard */]],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
-exports.AppModule = AppModule;
+
 //# sourceMappingURL=app.module.js.map
 
 /***/ }),
@@ -197,10 +230,11 @@ module.exports = "<div class=\"row4\" style=\"min-height: 80px;\">\n  <div class
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DepartmentmenuComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -210,19 +244,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var DepartmentmenuComponent = (function () {
     function DepartmentmenuComponent() {
-        this.showErdeBoolChange = new core_1.EventEmitter();
-        this.showFeuerBoolChange = new core_1.EventEmitter();
-        this.showLuftBoolChange = new core_1.EventEmitter();
-        this.showMetallBoolChange = new core_1.EventEmitter();
-        this.showWasserBoolChange = new core_1.EventEmitter();
-        this.showAlleBoolChange = new core_1.EventEmitter();
-        this.showNotizFormBoolChange = new core_1.EventEmitter();
-        this.showInfoFormBoolChange = new core_1.EventEmitter();
-        this.showTablePlanBoolChange = new core_1.EventEmitter();
+        this.showErdeBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.showFeuerBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.showLuftBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.showMetallBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.showWasserBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.showAlleBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.showNotizFormBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.showInfoFormBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.showTablePlanBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.showAbteilungen = true;
         this.buttonBgColorShowTablePlan = "0a7a74";
         this.buttonBgColorInfoForm = "0a7a74";
@@ -711,158 +744,158 @@ var DepartmentmenuComponent = (function () {
     return DepartmentmenuComponent;
 }());
 __decorate([
-    core_1.Input('buttonBgColor1'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor1'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor1", void 0);
 __decorate([
-    core_1.Input('buttonBgColor2'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor2'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor2", void 0);
 __decorate([
-    core_1.Input('buttonBgColor3'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor3'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor3", void 0);
 __decorate([
-    core_1.Input('buttonBgColor4'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor4'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor4", void 0);
 __decorate([
-    core_1.Input('buttonBgColor5'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor5'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor5", void 0);
 __decorate([
-    core_1.Input('buttonBgColor6'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor6'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor6", void 0);
 __decorate([
-    core_1.Input('fontColor1'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor1'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor1", void 0);
 __decorate([
-    core_1.Input('fontColor2'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor2'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor2", void 0);
 __decorate([
-    core_1.Input('fontColor3'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor3'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor3", void 0);
 __decorate([
-    core_1.Input('fontColor4'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor4'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor4", void 0);
 __decorate([
-    core_1.Input('fontColor5'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor5'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor5", void 0);
 __decorate([
-    core_1.Input('fontColor6'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor6'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor6", void 0);
 __decorate([
-    core_1.Input('showErdeBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showErdeBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showErdeBool", void 0);
 __decorate([
-    core_1.Input('showFeuerBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showFeuerBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showFeuerBool", void 0);
 __decorate([
-    core_1.Input('showLuftBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showLuftBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showLuftBool", void 0);
 __decorate([
-    core_1.Input('showMetallBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showMetallBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showMetallBool", void 0);
 __decorate([
-    core_1.Input('showWasserBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showWasserBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showWasserBool", void 0);
 __decorate([
-    core_1.Input('showAlleBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAlleBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showAlleBool", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
 ], DepartmentmenuComponent.prototype, "showErdeBoolChange", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
 ], DepartmentmenuComponent.prototype, "showFeuerBoolChange", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_c = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _c || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
 ], DepartmentmenuComponent.prototype, "showLuftBoolChange", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_d = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _d || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _d || Object)
 ], DepartmentmenuComponent.prototype, "showMetallBoolChange", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_e = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _e || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _e || Object)
 ], DepartmentmenuComponent.prototype, "showWasserBoolChange", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_f = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _f || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _f || Object)
 ], DepartmentmenuComponent.prototype, "showAlleBoolChange", void 0);
 __decorate([
-    core_1.Input('buttonBgColorInfoForm'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColorInfoForm'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColorInfoForm", void 0);
 __decorate([
-    core_1.Input('fontColorInfoForm'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColorInfoForm'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColorInfoForm", void 0);
 __decorate([
-    core_1.Input('fontColorNotizForm'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColorNotizForm'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColorNotizForm", void 0);
 __decorate([
-    core_1.Input('buttonBgColorNotizForm'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColorNotizForm'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColorNotizForm", void 0);
 __decorate([
-    core_1.Input('buttonBgColorShowTablePlan'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColorShowTablePlan'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColorShowTablePlan", void 0);
 __decorate([
-    core_1.Input('fontColorShowTablePlan'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColorShowTablePlan'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColorShowTablePlan", void 0);
 __decorate([
-    core_1.Input('showNotizFormBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showNotizFormBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showNotizFormBool", void 0);
 __decorate([
-    core_1.Input('showInfoFormBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showInfoFormBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showInfoFormBool", void 0);
 __decorate([
-    core_1.Input('showTablePlanBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showTablePlanBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showTablePlanBool", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_g = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _g || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _g || Object)
 ], DepartmentmenuComponent.prototype, "showNotizFormBoolChange", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_h = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _h || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _h || Object)
 ], DepartmentmenuComponent.prototype, "showInfoFormBoolChange", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_j = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _j || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _j || Object)
 ], DepartmentmenuComponent.prototype, "showTablePlanBoolChange", void 0);
 DepartmentmenuComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-departmentmenu',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], DepartmentmenuComponent);
-exports.DepartmentmenuComponent = DepartmentmenuComponent;
+
 var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 //# sourceMappingURL=departmentmenu.component.js.map
 
@@ -876,10 +909,11 @@ module.exports = "<div *ngIf=\"showAlleBool\">\n  <div *ngFor=\"let table of tab
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/alle/alle.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlleComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -889,12 +923,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var core_2 = __webpack_require__("../../../core/@angular/core.es5.js");
+
+
 var AlleComponent = (function () {
     function AlleComponent() {
-        this.occupied = new core_1.EventEmitter();
+        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
     AlleComponent.prototype.ngOnInit = function () {
     };
@@ -938,61 +971,61 @@ var AlleComponent = (function () {
     return AlleComponent;
 }());
 __decorate([
-    core_1.Input('tables'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tables'),
     __metadata("design:type", Object)
 ], AlleComponent.prototype, "tables", void 0);
 __decorate([
-    core_1.Input('tablesErde'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesErde'),
     __metadata("design:type", Array)
 ], AlleComponent.prototype, "tablesErde", void 0);
 __decorate([
-    core_1.Input('tablesTerasse'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTerasse'),
     __metadata("design:type", Array)
 ], AlleComponent.prototype, "tablesTerasse", void 0);
 __decorate([
-    core_1.Input('tablesTerrasseLuft'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTerrasseLuft'),
     __metadata("design:type", Array)
 ], AlleComponent.prototype, "tablesTerrasseLuft", void 0);
 __decorate([
-    core_1.Input('tablesFeuer'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesFeuer'),
     __metadata("design:type", Array)
 ], AlleComponent.prototype, "tablesFeuer", void 0);
 __decorate([
-    core_1.Input('tablesLuft'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesLuft'),
     __metadata("design:type", Array)
 ], AlleComponent.prototype, "tablesLuft", void 0);
 __decorate([
-    core_1.Input('tablesMetall'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesMetall'),
     __metadata("design:type", Array)
 ], AlleComponent.prototype, "tablesMetall", void 0);
 __decorate([
-    core_1.Input('tablesWasser'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesWasser'),
     __metadata("design:type", Array)
 ], AlleComponent.prototype, "tablesWasser", void 0);
 __decorate([
-    core_1.Input('term'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
     __metadata("design:type", String)
 ], AlleComponent.prototype, "term", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
 ], AlleComponent.prototype, "occupied", void 0);
 __decorate([
-    core_1.Input('showAlleBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAlleBool'),
     __metadata("design:type", Boolean)
 ], AlleComponent.prototype, "showAlleBool", void 0);
 AlleComponent = __decorate([
-    core_2.Pipe({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
         name: 'filter',
     }),
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-alle',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/alle/alle.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], AlleComponent);
-exports.AlleComponent = AlleComponent;
+
 var _a;
 //# sourceMappingURL=alle.component.js.map
 
@@ -1006,10 +1039,18 @@ module.exports = "<app-erde [term]=\"term\" [tablesErde]=\"tablesErde\" [showErd
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/departments.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DepartmentsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__metall_metall_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/metall/metall.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__wasser_wasser_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/wasser/wasser.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__luft_luft_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/luft/luft.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__erde_erde_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/erde/erde.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__feuer_feuer_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/feuer/feuer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__alle_alle_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/alle/alle.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1019,25 +1060,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var tischplan_service_1 = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
-var metall_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/metall/metall.component.ts");
-var wasser_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/wasser/wasser.component.ts");
-var luft_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/luft/luft.component.ts");
-var erde_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/erde/erde.component.ts");
-var feuer_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/feuer/feuer.component.ts");
-var alle_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/alle/alle.component.ts");
+
+
+
+
+
+
+
+
 var DepartmentsComponent = (function () {
     function DepartmentsComponent(tischplanService) {
         this.tischplanService = tischplanService;
-        this.dispensedErde = new core_1.EventEmitter();
-        this.dispensedFeuer = new core_1.EventEmitter();
-        this.dispensedLuft = new core_1.EventEmitter();
-        this.dispensedMetall = new core_1.EventEmitter();
-        this.dispensedWasser = new core_1.EventEmitter();
-        this.updateAzList = new core_1.EventEmitter();
-        this.updateImHausListeElement = new core_1.EventEmitter();
+        this.dispensedErde = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.dispensedFeuer = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.dispensedLuft = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.dispensedMetall = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.dispensedWasser = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.updateAzList = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.updateImHausListeElement = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.parts = [];
         this.date = [];
         this.parsedDate = [];
@@ -1283,122 +1323,122 @@ var DepartmentsComponent = (function () {
     return DepartmentsComponent;
 }());
 __decorate([
-    core_1.Input('tablesErde'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesErde'),
     __metadata("design:type", Array)
 ], DepartmentsComponent.prototype, "tablesErde", void 0);
 __decorate([
-    core_1.Input('showErdeBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showErdeBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showErdeBool", void 0);
 __decorate([
-    core_1.Input('tablesLuft'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesLuft'),
     __metadata("design:type", Array)
 ], DepartmentsComponent.prototype, "tablesLuft", void 0);
 __decorate([
-    core_1.Input('showLuftBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showLuftBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showLuftBool", void 0);
 __decorate([
-    core_1.Input('tablesFeuer'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesFeuer'),
     __metadata("design:type", Array)
 ], DepartmentsComponent.prototype, "tablesFeuer", void 0);
 __decorate([
-    core_1.Input('showFeuerBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showFeuerBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showFeuerBool", void 0);
 __decorate([
-    core_1.Input('tablesMetall'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesMetall'),
     __metadata("design:type", Array)
 ], DepartmentsComponent.prototype, "tablesMetall", void 0);
 __decorate([
-    core_1.Input('showMetallBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showMetallBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showMetallBool", void 0);
 __decorate([
-    core_1.Input('tablesWasser'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesWasser'),
     __metadata("design:type", Array)
 ], DepartmentsComponent.prototype, "tablesWasser", void 0);
 __decorate([
-    core_1.Input('showWasserBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showWasserBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showWasserBool", void 0);
 __decorate([
-    core_1.Input('tables'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tables'),
     __metadata("design:type", Object)
 ], DepartmentsComponent.prototype, "tables", void 0);
 __decorate([
-    core_1.Input('term'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
     __metadata("design:type", String)
 ], DepartmentsComponent.prototype, "term", void 0);
 __decorate([
-    core_1.Input('showAlleBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAlleBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showAlleBool", void 0);
 __decorate([
-    core_1.Input('tablesTempAbreise'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTempAbreise'),
     __metadata("design:type", Object)
 ], DepartmentsComponent.prototype, "tablesTempAbreise", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
 ], DepartmentsComponent.prototype, "dispensedErde", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
 ], DepartmentsComponent.prototype, "dispensedFeuer", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_c = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _c || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
 ], DepartmentsComponent.prototype, "dispensedLuft", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_d = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _d || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _d || Object)
 ], DepartmentsComponent.prototype, "dispensedMetall", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_e = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _e || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _e || Object)
 ], DepartmentsComponent.prototype, "dispensedWasser", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_f = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _f || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _f || Object)
 ], DepartmentsComponent.prototype, "updateAzList", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_g = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _g || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _g || Object)
 ], DepartmentsComponent.prototype, "updateImHausListeElement", void 0);
 __decorate([
-    core_1.ViewChild(alle_component_1.AlleComponent),
-    __metadata("design:type", typeof (_h = typeof alle_component_1.AlleComponent !== "undefined" && alle_component_1.AlleComponent) === "function" && _h || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_7__alle_alle_component__["a" /* AlleComponent */]),
+    __metadata("design:type", typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_7__alle_alle_component__["a" /* AlleComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__alle_alle_component__["a" /* AlleComponent */]) === "function" && _h || Object)
 ], DepartmentsComponent.prototype, "alleComponent", void 0);
 __decorate([
-    core_1.ViewChild(wasser_component_1.WasserComponent),
-    __metadata("design:type", typeof (_j = typeof wasser_component_1.WasserComponent !== "undefined" && wasser_component_1.WasserComponent) === "function" && _j || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3__wasser_wasser_component__["a" /* WasserComponent */]),
+    __metadata("design:type", typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_3__wasser_wasser_component__["a" /* WasserComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__wasser_wasser_component__["a" /* WasserComponent */]) === "function" && _j || Object)
 ], DepartmentsComponent.prototype, "wasserComponent", void 0);
 __decorate([
-    core_1.ViewChild(metall_component_1.MetallComponent),
-    __metadata("design:type", typeof (_k = typeof metall_component_1.MetallComponent !== "undefined" && metall_component_1.MetallComponent) === "function" && _k || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__metall_metall_component__["a" /* MetallComponent */]),
+    __metadata("design:type", typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_2__metall_metall_component__["a" /* MetallComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__metall_metall_component__["a" /* MetallComponent */]) === "function" && _k || Object)
 ], DepartmentsComponent.prototype, "metallComponent", void 0);
 __decorate([
-    core_1.ViewChild(luft_component_1.LuftComponent),
-    __metadata("design:type", typeof (_l = typeof luft_component_1.LuftComponent !== "undefined" && luft_component_1.LuftComponent) === "function" && _l || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_4__luft_luft_component__["a" /* LuftComponent */]),
+    __metadata("design:type", typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_4__luft_luft_component__["a" /* LuftComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__luft_luft_component__["a" /* LuftComponent */]) === "function" && _l || Object)
 ], DepartmentsComponent.prototype, "luftComponent", void 0);
 __decorate([
-    core_1.ViewChild(feuer_component_1.FeuerComponent),
-    __metadata("design:type", typeof (_m = typeof feuer_component_1.FeuerComponent !== "undefined" && feuer_component_1.FeuerComponent) === "function" && _m || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_6__feuer_feuer_component__["a" /* FeuerComponent */]),
+    __metadata("design:type", typeof (_m = typeof __WEBPACK_IMPORTED_MODULE_6__feuer_feuer_component__["a" /* FeuerComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__feuer_feuer_component__["a" /* FeuerComponent */]) === "function" && _m || Object)
 ], DepartmentsComponent.prototype, "feuerComponent", void 0);
 __decorate([
-    core_1.ViewChild(erde_component_1.ErdeComponent),
-    __metadata("design:type", typeof (_o = typeof erde_component_1.ErdeComponent !== "undefined" && erde_component_1.ErdeComponent) === "function" && _o || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_5__erde_erde_component__["a" /* ErdeComponent */]),
+    __metadata("design:type", typeof (_o = typeof __WEBPACK_IMPORTED_MODULE_5__erde_erde_component__["a" /* ErdeComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__erde_erde_component__["a" /* ErdeComponent */]) === "function" && _o || Object)
 ], DepartmentsComponent.prototype, "erdeComponent", void 0);
 DepartmentsComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-departments',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/departments.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_p = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _p || Object])
+    __metadata("design:paramtypes", [typeof (_p = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _p || Object])
 ], DepartmentsComponent);
-exports.DepartmentsComponent = DepartmentsComponent;
+
 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p;
 //# sourceMappingURL=departments.component.js.map
 
@@ -1412,10 +1452,11 @@ module.exports = "<div *ngIf=\"showErdeBool\">\n  <div *ngFor=\"let tableErde of
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/erde/erde.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ErdeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1425,11 +1466,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var ErdeComponent = (function () {
     function ErdeComponent() {
-        this.occupied = new core_1.EventEmitter();
+        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.t = 1;
     }
     ErdeComponent.prototype.ngOnInit = function () {
@@ -1499,30 +1539,30 @@ var ErdeComponent = (function () {
     return ErdeComponent;
 }());
 __decorate([
-    core_1.Input('tablesErde'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesErde'),
     __metadata("design:type", Array)
 ], ErdeComponent.prototype, "tablesErde", void 0);
 __decorate([
-    core_1.Input('showErdeBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showErdeBool'),
     __metadata("design:type", Boolean)
 ], ErdeComponent.prototype, "showErdeBool", void 0);
 __decorate([
-    core_1.Input('term'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
     __metadata("design:type", String)
 ], ErdeComponent.prototype, "term", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
 ], ErdeComponent.prototype, "occupied", void 0);
 ErdeComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-erde',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/erde/erde.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], ErdeComponent);
-exports.ErdeComponent = ErdeComponent;
+
 var _a;
 //# sourceMappingURL=erde.component.js.map
 
@@ -1536,10 +1576,11 @@ module.exports = "<div *ngIf=\"showFeuerBool\">\n  <div *ngFor=\"let tableFeuer 
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/feuer/feuer.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FeuerComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1549,11 +1590,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var FeuerComponent = (function () {
     function FeuerComponent() {
-        this.occupied = new core_1.EventEmitter();
+        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.t = 0;
     }
     FeuerComponent.prototype.ngOnInit = function () {
@@ -1623,30 +1663,30 @@ var FeuerComponent = (function () {
     return FeuerComponent;
 }());
 __decorate([
-    core_1.Input('tablesFeuer'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesFeuer'),
     __metadata("design:type", Array)
 ], FeuerComponent.prototype, "tablesFeuer", void 0);
 __decorate([
-    core_1.Input('showFeuerBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showFeuerBool'),
     __metadata("design:type", Boolean)
 ], FeuerComponent.prototype, "showFeuerBool", void 0);
 __decorate([
-    core_1.Input('term'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
     __metadata("design:type", String)
 ], FeuerComponent.prototype, "term", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
 ], FeuerComponent.prototype, "occupied", void 0);
 FeuerComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-feuer',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/feuer/feuer.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], FeuerComponent);
-exports.FeuerComponent = FeuerComponent;
+
 var _a;
 //# sourceMappingURL=feuer.component.js.map
 
@@ -1660,10 +1700,11 @@ module.exports = "<div *ngIf=\"showLuftBool\">\n  <div *ngFor=\"let tableLuft of
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/luft/luft.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LuftComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1673,11 +1714,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var LuftComponent = (function () {
     function LuftComponent() {
-        this.occupied = new core_1.EventEmitter();
+        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.t = 1;
     }
     LuftComponent.prototype.ngOnInit = function () {
@@ -1747,30 +1787,30 @@ var LuftComponent = (function () {
     return LuftComponent;
 }());
 __decorate([
-    core_1.Input('tablesLuft'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesLuft'),
     __metadata("design:type", Array)
 ], LuftComponent.prototype, "tablesLuft", void 0);
 __decorate([
-    core_1.Input('showLuftBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showLuftBool'),
     __metadata("design:type", Boolean)
 ], LuftComponent.prototype, "showLuftBool", void 0);
 __decorate([
-    core_1.Input('term'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
     __metadata("design:type", String)
 ], LuftComponent.prototype, "term", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
 ], LuftComponent.prototype, "occupied", void 0);
 LuftComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-luft',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/luft/luft.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], LuftComponent);
-exports.LuftComponent = LuftComponent;
+
 var _a;
 //# sourceMappingURL=luft.component.js.map
 
@@ -1784,10 +1824,11 @@ module.exports = "<div *ngIf=\"showMetallBool\">\n  <div *ngFor=\"let tableMetal
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/metall/metall.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MetallComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1797,11 +1838,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var MetallComponent = (function () {
     function MetallComponent() {
-        this.occupied = new core_1.EventEmitter();
+        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.t = 0;
     }
     MetallComponent.prototype.ngOnInit = function () {
@@ -1871,30 +1911,30 @@ var MetallComponent = (function () {
     return MetallComponent;
 }());
 __decorate([
-    core_1.Input('tablesMetall'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesMetall'),
     __metadata("design:type", Array)
 ], MetallComponent.prototype, "tablesMetall", void 0);
 __decorate([
-    core_1.Input('showMetallBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showMetallBool'),
     __metadata("design:type", Boolean)
 ], MetallComponent.prototype, "showMetallBool", void 0);
 __decorate([
-    core_1.Input('term'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
     __metadata("design:type", String)
 ], MetallComponent.prototype, "term", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
 ], MetallComponent.prototype, "occupied", void 0);
 MetallComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-metall',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/metall/metall.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], MetallComponent);
-exports.MetallComponent = MetallComponent;
+
 var _a;
 //# sourceMappingURL=metall.component.js.map
 
@@ -1908,10 +1948,11 @@ module.exports = "<div *ngIf=\"showWasserBool\">\n  <div *ngFor=\"let tableWasse
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/departments/wasser/wasser.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WasserComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1921,11 +1962,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var WasserComponent = (function () {
     function WasserComponent() {
-        this.occupied = new core_1.EventEmitter();
+        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.t = 3;
     }
     WasserComponent.prototype.ngOnInit = function () {
@@ -1995,30 +2035,30 @@ var WasserComponent = (function () {
     return WasserComponent;
 }());
 __decorate([
-    core_1.Input('tablesWasser'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesWasser'),
     __metadata("design:type", Array)
 ], WasserComponent.prototype, "tablesWasser", void 0);
 __decorate([
-    core_1.Input('showWasserBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showWasserBool'),
     __metadata("design:type", Boolean)
 ], WasserComponent.prototype, "showWasserBool", void 0);
 __decorate([
-    core_1.Input('term'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
     __metadata("design:type", String)
 ], WasserComponent.prototype, "term", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
 ], WasserComponent.prototype, "occupied", void 0);
 WasserComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-wasser',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/wasser/wasser.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], WasserComponent);
-exports.WasserComponent = WasserComponent;
+
 var _a;
 //# sourceMappingURL=wasser.component.js.map
 
@@ -2032,10 +2072,14 @@ module.exports = "<div *ngIf=\"showNotizFormBool\">\n  <div *ngIf=\"showAlleBool
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/form/form.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FormComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2045,17 +2089,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var tischplan_service_1 = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
-var angular2_flash_messages_1 = __webpack_require__("../../../../angular2-flash-messages/index.js");
+
+
+
 var FormComponent = (function () {
     function FormComponent(tischplanService, _flashMessagesService) {
         this.tischplanService = tischplanService;
         this._flashMessagesService = _flashMessagesService;
         this.newInformationElements = [];
-        this.notizResponse = new core_1.EventEmitter();
-        this.changeColorIfAnreiseExport = new core_1.EventEmitter();
+        this.notizResponse = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.changeColorIfAnreiseExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.departments = [];
         this.departments = ["Erde", "Luft", "Feuer", "Wasser", "Metall"];
     }
@@ -2174,106 +2217,106 @@ var FormComponent = (function () {
     return FormComponent;
 }());
 __decorate([
-    core_1.Input('newInformationElements'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('newInformationElements'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "newInformationElements", void 0);
 __decorate([
-    core_1.Input('dateGenerated'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('dateGenerated'),
     __metadata("design:type", Object)
 ], FormComponent.prototype, "dateGenerated", void 0);
 __decorate([
-    core_1.Input('title'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('title'),
     __metadata("design:type", String)
 ], FormComponent.prototype, "title", void 0);
 __decorate([
-    core_1.Input('roomNumber'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('roomNumber'),
     __metadata("design:type", String)
 ], FormComponent.prototype, "roomNumber", void 0);
 __decorate([
-    core_1.Input('tableNumber'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tableNumber'),
     __metadata("design:type", String)
 ], FormComponent.prototype, "tableNumber", void 0);
 __decorate([
-    core_1.Input('nameTraceInput'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('nameTraceInput'),
     __metadata("design:type", String)
 ], FormComponent.prototype, "nameTraceInput", void 0);
 __decorate([
-    core_1.Input('employee'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('employee'),
     __metadata("design:type", String)
 ], FormComponent.prototype, "employee", void 0);
 __decorate([
-    core_1.Input('tablesErde'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesErde'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesErde", void 0);
 __decorate([
-    core_1.Input('tablesLuft'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesLuft'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesLuft", void 0);
 __decorate([
-    core_1.Input('tablesFeuer'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesFeuer'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesFeuer", void 0);
 __decorate([
-    core_1.Input('tablesMetall'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesMetall'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesMetall", void 0);
 __decorate([
-    core_1.Input('tablesWasser'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesWasser'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesWasser", void 0);
 __decorate([
-    core_1.Input('showInfoFormBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showInfoFormBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showInfoFormBool", void 0);
 __decorate([
-    core_1.Input('showNotizFormBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showNotizFormBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showNotizFormBool", void 0);
 __decorate([
-    core_1.Input('notizElements'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('notizElements'),
     __metadata("design:type", Object)
 ], FormComponent.prototype, "notizElements", void 0);
 __decorate([
-    core_1.Input('showErdeBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showErdeBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showErdeBool", void 0);
 __decorate([
-    core_1.Input('showLuftBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showLuftBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showLuftBool", void 0);
 __decorate([
-    core_1.Input('showFeuerBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showFeuerBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showFeuerBool", void 0);
 __decorate([
-    core_1.Input('showWasserBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showWasserBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showWasserBool", void 0);
 __decorate([
-    core_1.Input('showMetallBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showMetallBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showMetallBool", void 0);
 __decorate([
-    core_1.Input('showAlleBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAlleBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showAlleBool", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
 ], FormComponent.prototype, "notizResponse", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
 ], FormComponent.prototype, "changeColorIfAnreiseExport", void 0);
 FormComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-form',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/form/form.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_c = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _c || Object, typeof (_d = typeof angular2_flash_messages_1.FlashMessagesService !== "undefined" && angular2_flash_messages_1.FlashMessagesService) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _d || Object])
 ], FormComponent);
-exports.FormComponent = FormComponent;
+
 var _a, _b, _c, _d;
 //# sourceMappingURL=form.component.js.map
 
@@ -2287,10 +2330,12 @@ module.exports = "<h3 style=\"margin-top: 0;margin-bottom: 0;color: #0a7a74;\">I
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImHausListeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2300,9 +2345,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var tischplan_service_1 = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
+
+
 var ImHausListeComponent = (function () {
     function ImHausListeComponent(tischplanService) {
         this.tischplanService = tischplanService;
@@ -2412,18 +2456,18 @@ var ImHausListeComponent = (function () {
     return ImHausListeComponent;
 }());
 __decorate([
-    core_1.Input('imHausListeElemente'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('imHausListeElemente'),
     __metadata("design:type", Array)
 ], ImHausListeComponent.prototype, "imHausListeElemente", void 0);
 ImHausListeComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-im-haus-liste',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _a || Object])
 ], ImHausListeComponent);
-exports.ImHausListeComponent = ImHausListeComponent;
+
 var _a;
 //# sourceMappingURL=im-haus-liste.component.js.map
 
@@ -2455,10 +2499,13 @@ module.exports = "<html>\n<head>\n  <link rel=\"stylesheet\" href=\"https://maxc
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/login/login.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2468,10 +2515,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var auth_service_1 = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-var router_1 = __webpack_require__("../../../router/@angular/router.es5.js");
+
+
+
 //import {FlashMessagesService} from 'angular2-flash-messages';
 var LoginComponent = (function () {
     function LoginComponent(authService, router) {
@@ -2506,14 +2552,14 @@ var LoginComponent = (function () {
     return LoginComponent;
 }());
 LoginComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-login',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/login/login.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/login/login.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof auth_service_1.AuthService !== "undefined" && auth_service_1.AuthService) === "function" && _a || Object, typeof (_b = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object])
 ], LoginComponent);
-exports.LoginComponent = LoginComponent;
+
 var _a, _b;
 //# sourceMappingURL=login.component.js.map
 
@@ -2545,10 +2591,17 @@ module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavigationComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2558,13 +2611,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var tischplan_service_1 = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
-var http_1 = __webpack_require__("../../../http/@angular/http.es5.js");
-var angular2_flash_messages_1 = __webpack_require__("../../../../angular2-flash-messages/index.js");
-var auth_service_1 = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-var router_1 = __webpack_require__("../../../router/@angular/router.es5.js");
+
+
+
+
+
+
 var NavigationComponent = (function () {
     function NavigationComponent(tischplanService, http, _flashMessagesService, authService, router) {
         this.tischplanService = tischplanService;
@@ -2575,15 +2627,15 @@ var NavigationComponent = (function () {
         this.filesToUpload = [];
         this.tablesTempAbreise = [];
         this.newInformationElements = [];
-        this.umsetzenExport = new core_1.EventEmitter();
-        this.abreisenExportExport = new core_1.EventEmitter();
-        this.termExport = new core_1.EventEmitter();
+        this.umsetzenExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.abreisenExportExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.termExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.date = [];
         this.parts = [];
         this.parsedDate = [];
         this.tableInformation = [];
-        this.reloadLists = new core_1.EventEmitter();
-        this.transformExport = new core_1.EventEmitter();
+        this.reloadLists = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.transformExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.printToCart1Button = "ffffff";
         this.printToCart2Button = "ffffff";
         this.printToCart3Button = "ffffff";
@@ -2905,46 +2957,46 @@ var NavigationComponent = (function () {
     return NavigationComponent;
 }());
 __decorate([
-    core_1.Input('tablesTempAbreise'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTempAbreise'),
     __metadata("design:type", Array)
 ], NavigationComponent.prototype, "tablesTempAbreise", void 0);
 __decorate([
-    core_1.Input('newInformationElements'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('newInformationElements'),
     __metadata("design:type", Array)
 ], NavigationComponent.prototype, "newInformationElements", void 0);
 __decorate([
-    core_1.Input('tablesOccupied'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesOccupied'),
     __metadata("design:type", Number)
 ], NavigationComponent.prototype, "tablesOccupied", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
 ], NavigationComponent.prototype, "umsetzenExport", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
 ], NavigationComponent.prototype, "abreisenExportExport", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_c = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _c || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
 ], NavigationComponent.prototype, "termExport", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_d = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _d || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _d || Object)
 ], NavigationComponent.prototype, "reloadLists", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_e = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _e || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _e || Object)
 ], NavigationComponent.prototype, "transformExport", void 0);
 NavigationComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-navigation',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_f = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _f || Object, typeof (_g = typeof http_1.Http !== "undefined" && http_1.Http) === "function" && _g || Object, typeof (_h = typeof angular2_flash_messages_1.FlashMessagesService !== "undefined" && angular2_flash_messages_1.FlashMessagesService) === "function" && _h || Object, typeof (_j = typeof auth_service_1.AuthService !== "undefined" && auth_service_1.AuthService) === "function" && _j || Object, typeof (_k = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _k || Object])
+    __metadata("design:paramtypes", [typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["Http"]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* Router */]) === "function" && _k || Object])
 ], NavigationComponent);
-exports.NavigationComponent = NavigationComponent;
+
 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
 //# sourceMappingURL=navigation.component.js.map
 
@@ -2958,10 +3010,11 @@ module.exports = "<div id=\"printSectionId3\" class=\"section3\">\n  <table styl
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/print/print.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrintComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2971,12 +3024,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var PrintComponent = (function () {
     function PrintComponent() {
-        this.getTablesOccupied = new core_1.EventEmitter();
-        this.getTablesforAzListe = new core_1.EventEmitter();
+        this.getTablesOccupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.getTablesforAzListe = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.tempTablesArray = [];
         this.tempTablesArray2 = [];
         this.tempTablesArray1 = [];
@@ -3238,170 +3290,170 @@ var PrintComponent = (function () {
     return PrintComponent;
 }());
 __decorate([
-    core_1.Input('tables'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tables'),
     __metadata("design:type", Array)
 ], PrintComponent.prototype, "tables", void 0);
 __decorate([
-    core_1.Input('dateGeneratedListe'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('dateGeneratedListe'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "dateGeneratedListe", void 0);
 __decorate([
-    core_1.Input('tablesErde'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesErde'),
     __metadata("design:type", Array)
 ], PrintComponent.prototype, "tablesErde", void 0);
 __decorate([
-    core_1.Input('showErdeBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showErdeBool'),
     __metadata("design:type", Boolean)
 ], PrintComponent.prototype, "showErdeBool", void 0);
 __decorate([
-    core_1.Input('tablesFeuer'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesFeuer'),
     __metadata("design:type", Array)
 ], PrintComponent.prototype, "tablesFeuer", void 0);
 __decorate([
-    core_1.Input('showFeuerBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showFeuerBool'),
     __metadata("design:type", Boolean)
 ], PrintComponent.prototype, "showFeuerBool", void 0);
 __decorate([
-    core_1.Input('tablesWasser'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesWasser'),
     __metadata("design:type", Array)
 ], PrintComponent.prototype, "tablesWasser", void 0);
 __decorate([
-    core_1.Input('showWasserBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showWasserBool'),
     __metadata("design:type", Boolean)
 ], PrintComponent.prototype, "showWasserBool", void 0);
 __decorate([
-    core_1.Input('tablesLuft'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesLuft'),
     __metadata("design:type", Array)
 ], PrintComponent.prototype, "tablesLuft", void 0);
 __decorate([
-    core_1.Input('showLuftBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showLuftBool'),
     __metadata("design:type", Boolean)
 ], PrintComponent.prototype, "showLuftBool", void 0);
 __decorate([
-    core_1.Input('tablesMetall'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesMetall'),
     __metadata("design:type", Array)
 ], PrintComponent.prototype, "tablesMetall", void 0);
 __decorate([
-    core_1.Input('showMetallBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showMetallBool'),
     __metadata("design:type", Boolean)
 ], PrintComponent.prototype, "showMetallBool", void 0);
 __decorate([
-    core_1.Input('erwWasser'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('erwWasser'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "erwWasser", void 0);
 __decorate([
-    core_1.Input('ki1Wasser'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki1Wasser'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki1Wasser", void 0);
 __decorate([
-    core_1.Input('ki2Wasser'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki2Wasser'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki2Wasser", void 0);
 __decorate([
-    core_1.Input('ki3Wasser'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki3Wasser'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki3Wasser", void 0);
 __decorate([
-    core_1.Input('ki4Wasser'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki4Wasser'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki4Wasser", void 0);
 __decorate([
-    core_1.Input('erwErde'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('erwErde'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "erwErde", void 0);
 __decorate([
-    core_1.Input('ki1Erde'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki1Erde'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki1Erde", void 0);
 __decorate([
-    core_1.Input('ki2Erde'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki2Erde'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki2Erde", void 0);
 __decorate([
-    core_1.Input('ki3Erde'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki3Erde'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki3Erde", void 0);
 __decorate([
-    core_1.Input('ki4Erde'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki4Erde'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki4Erde", void 0);
 __decorate([
-    core_1.Input('ki1Feuer'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki1Feuer'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki1Feuer", void 0);
 __decorate([
-    core_1.Input('ki2Feuer'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki2Feuer'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki2Feuer", void 0);
 __decorate([
-    core_1.Input('ki3Feuer'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki3Feuer'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki3Feuer", void 0);
 __decorate([
-    core_1.Input('ki4Feuer'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki4Feuer'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki4Feuer", void 0);
 __decorate([
-    core_1.Input('erwLuft'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('erwLuft'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "erwLuft", void 0);
 __decorate([
-    core_1.Input('ki1Luft'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki1Luft'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki1Luft", void 0);
 __decorate([
-    core_1.Input('ki2Luft'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki2Luft'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki2Luft", void 0);
 __decorate([
-    core_1.Input('ki3Luft'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki3Luft'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki3Luft", void 0);
 __decorate([
-    core_1.Input('ki4Luft'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki4Luft'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki4Luft", void 0);
 __decorate([
-    core_1.Input('erwFeuer'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('erwFeuer'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "erwFeuer", void 0);
 __decorate([
-    core_1.Input('ki1Metall'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki1Metall'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki1Metall", void 0);
 __decorate([
-    core_1.Input('ki2Metall'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki2Metall'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki2Metall", void 0);
 __decorate([
-    core_1.Input('ki3Metall'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki3Metall'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki3Metall", void 0);
 __decorate([
-    core_1.Input('ki4Metall'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('ki4Metall'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "ki4Metall", void 0);
 __decorate([
-    core_1.Input('erwMetall'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('erwMetall'),
     __metadata("design:type", Object)
 ], PrintComponent.prototype, "erwMetall", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
 ], PrintComponent.prototype, "getTablesOccupied", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
 ], PrintComponent.prototype, "getTablesforAzListe", void 0);
 PrintComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-print',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/print/print.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], PrintComponent);
-exports.PrintComponent = PrintComponent;
+
 var _a, _b;
 //# sourceMappingURL=print.component.js.map
 
@@ -3415,10 +3467,13 @@ module.exports = "<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/profile/profile.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3428,10 +3483,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var auth_service_1 = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-var router_1 = __webpack_require__("../../../router/@angular/router.es5.js");
+
+
+
 var ProfileComponent = (function () {
     function ProfileComponent(authService, router) {
         this.authService = authService;
@@ -3449,14 +3503,14 @@ var ProfileComponent = (function () {
     return ProfileComponent;
 }());
 ProfileComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-profile',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/profile/profile.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof auth_service_1.AuthService !== "undefined" && auth_service_1.AuthService) === "function" && _a || Object, typeof (_b = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object])
 ], ProfileComponent);
-exports.ProfileComponent = ProfileComponent;
+
 var _a, _b;
 //# sourceMappingURL=profile.component.js.map
 
@@ -3470,10 +3524,16 @@ module.exports = "<h2 class=\"page-header\">Register</h2>\n<form (submit)=\"onRe
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/register/register.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3483,12 +3543,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var validate_service_1 = __webpack_require__("../../../../../src/app/services/validate.service.ts");
-var auth_service_1 = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-var angular2_flash_messages_1 = __webpack_require__("../../../../angular2-flash-messages/index.js");
-var router_1 = __webpack_require__("../../../router/@angular/router.es5.js");
+
+
+
+
+
 var RegisterComponent = (function () {
     function RegisterComponent(validateService, flashMessage, authService, router) {
         this.validateService = validateService;
@@ -3531,14 +3590,14 @@ var RegisterComponent = (function () {
     return RegisterComponent;
 }());
 RegisterComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-register',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/register/register.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof validate_service_1.ValidateService !== "undefined" && validate_service_1.ValidateService) === "function" && _a || Object, typeof (_b = typeof angular2_flash_messages_1.FlashMessagesService !== "undefined" && angular2_flash_messages_1.FlashMessagesService) === "function" && _b || Object, typeof (_c = typeof auth_service_1.AuthService !== "undefined" && auth_service_1.AuthService) === "function" && _c || Object, typeof (_d = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* Router */]) === "function" && _d || Object])
 ], RegisterComponent);
-exports.RegisterComponent = RegisterComponent;
+
 var _a, _b, _c, _d;
 //# sourceMappingURL=register.component.js.map
 
@@ -3552,10 +3611,12 @@ module.exports = "<div *ngIf=\"showTablePlanBool\">\n  <div class=\"col-xs-12 pr
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/tableplan/tableplan.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TableplanComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3565,43 +3626,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var tischplan_service_1 = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
+
+
 var TableplanComponent = (function () {
     function TableplanComponent(tischplanService) {
         this.tischplanService = tischplanService;
-        this.movedMetall = new core_1.EventEmitter();
-        this.movedErde = new core_1.EventEmitter();
-        this.movedLuft = new core_1.EventEmitter();
-        this.movedFeuer = new core_1.EventEmitter();
-        this.movedWasser = new core_1.EventEmitter();
-        this.changeBgColorIfAnreise = new core_1.EventEmitter();
-        this.exportKi1Wasser = new core_1.EventEmitter();
-        this.exportKi2Wasser = new core_1.EventEmitter();
-        this.exportKi3Wasser = new core_1.EventEmitter();
-        this.exportKi4Wasser = new core_1.EventEmitter();
-        this.exportErwWasser = new core_1.EventEmitter();
-        this.exportKi1Luft = new core_1.EventEmitter();
-        this.exportKi2Luft = new core_1.EventEmitter();
-        this.exportKi3Luft = new core_1.EventEmitter();
-        this.exportKi4Luft = new core_1.EventEmitter();
-        this.exportErwLuft = new core_1.EventEmitter();
-        this.exportKi1Metall = new core_1.EventEmitter();
-        this.exportKi2Metall = new core_1.EventEmitter();
-        this.exportKi3Metall = new core_1.EventEmitter();
-        this.exportKi4Metall = new core_1.EventEmitter();
-        this.exportErwMetall = new core_1.EventEmitter();
-        this.exportKi1Feuer = new core_1.EventEmitter();
-        this.exportKi2Feuer = new core_1.EventEmitter();
-        this.exportKi3Feuer = new core_1.EventEmitter();
-        this.exportKi4Feuer = new core_1.EventEmitter();
-        this.exportErwFeuer = new core_1.EventEmitter();
-        this.exportKi1Erde = new core_1.EventEmitter();
-        this.exportKi2Erde = new core_1.EventEmitter();
-        this.exportKi3Erde = new core_1.EventEmitter();
-        this.exportKi4Erde = new core_1.EventEmitter();
-        this.exportErwErde = new core_1.EventEmitter();
+        this.movedMetall = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.movedErde = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.movedLuft = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.movedFeuer = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.movedWasser = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.changeBgColorIfAnreise = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi1Wasser = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi2Wasser = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi3Wasser = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi4Wasser = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportErwWasser = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi1Luft = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi2Luft = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi3Luft = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi4Luft = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportErwLuft = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi1Metall = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi2Metall = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi3Metall = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi4Metall = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportErwMetall = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi1Feuer = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi2Feuer = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi3Feuer = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi4Feuer = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportErwFeuer = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi1Erde = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi2Erde = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi3Erde = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportKi4Erde = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.exportErwErde = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.erwErde = [];
         this.kiErde = [];
         this.ki1Erde = [];
@@ -3837,11 +3897,6 @@ var TableplanComponent = (function () {
                             }
                             if (erwKi != null) {
                                 //console.log(erwKi);
-                                this.erwFeuer[p] = this.erwFeuer[p] + Number(erwKi[0]);
-                                //console.log(this.erw[p]);
-                            }
-                            if (erwKi != null) {
-                                //console.log(erwKi);
                                 this.ki1Feuer[p] = this.ki1Feuer[p] + Number(erwKi[1]);
                                 //console.log(this.ki[p]);
                             }
@@ -4017,194 +4072,194 @@ var TableplanComponent = (function () {
     return TableplanComponent;
 }());
 __decorate([
-    core_1.Input('tables'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tables'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tables", void 0);
 __decorate([
-    core_1.Input('dateGeneratedListe'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('dateGeneratedListe'),
     __metadata("design:type", String)
 ], TableplanComponent.prototype, "dateGeneratedListe", void 0);
 __decorate([
-    core_1.Input('tablesErde'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesErde'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tablesErde", void 0);
 __decorate([
-    core_1.Input('showErdeBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showErdeBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showErdeBool", void 0);
 __decorate([
-    core_1.Input('tablesFeuer'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesFeuer'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tablesFeuer", void 0);
 __decorate([
-    core_1.Input('showFeuerBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showFeuerBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showFeuerBool", void 0);
 __decorate([
-    core_1.Input('tablesMetall'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesMetall'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tablesMetall", void 0);
 __decorate([
-    core_1.Input('showMetallBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showMetallBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showMetallBool", void 0);
 __decorate([
-    core_1.Input('tablesWasser'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesWasser'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tablesWasser", void 0);
 __decorate([
-    core_1.Input('showWasserBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showWasserBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showWasserBool", void 0);
 __decorate([
-    core_1.Input('tablesLuft'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesLuft'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tablesLuft", void 0);
 __decorate([
-    core_1.Input('showLuftBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showLuftBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showLuftBool", void 0);
 __decorate([
-    core_1.Input('showAlleBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAlleBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showAlleBool", void 0);
 __decorate([
-    core_1.Input('showTablePlanBool'),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showTablePlanBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showTablePlanBool", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
 ], TableplanComponent.prototype, "movedMetall", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
 ], TableplanComponent.prototype, "movedErde", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_c = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _c || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
 ], TableplanComponent.prototype, "movedLuft", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_d = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _d || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _d || Object)
 ], TableplanComponent.prototype, "movedFeuer", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_e = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _e || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _e || Object)
 ], TableplanComponent.prototype, "movedWasser", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_f = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _f || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _f || Object)
 ], TableplanComponent.prototype, "changeBgColorIfAnreise", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_g = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _g || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _g || Object)
 ], TableplanComponent.prototype, "exportKi1Wasser", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_h = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _h || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _h || Object)
 ], TableplanComponent.prototype, "exportKi2Wasser", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_j = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _j || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _j || Object)
 ], TableplanComponent.prototype, "exportKi3Wasser", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_k = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _k || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _k || Object)
 ], TableplanComponent.prototype, "exportKi4Wasser", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_l = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _l || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _l || Object)
 ], TableplanComponent.prototype, "exportErwWasser", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_m = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _m || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_m = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _m || Object)
 ], TableplanComponent.prototype, "exportKi1Luft", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_o = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _o || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_o = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _o || Object)
 ], TableplanComponent.prototype, "exportKi2Luft", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_p = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _p || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_p = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _p || Object)
 ], TableplanComponent.prototype, "exportKi3Luft", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_q = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _q || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_q = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _q || Object)
 ], TableplanComponent.prototype, "exportKi4Luft", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_r = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _r || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_r = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _r || Object)
 ], TableplanComponent.prototype, "exportErwLuft", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_s = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _s || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_s = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _s || Object)
 ], TableplanComponent.prototype, "exportKi1Metall", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_t = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _t || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_t = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _t || Object)
 ], TableplanComponent.prototype, "exportKi2Metall", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_u = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _u || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_u = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _u || Object)
 ], TableplanComponent.prototype, "exportKi3Metall", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_v = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _v || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_v = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _v || Object)
 ], TableplanComponent.prototype, "exportKi4Metall", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_w = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _w || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_w = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _w || Object)
 ], TableplanComponent.prototype, "exportErwMetall", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_x = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _x || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_x = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _x || Object)
 ], TableplanComponent.prototype, "exportKi1Feuer", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_y = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _y || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_y = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _y || Object)
 ], TableplanComponent.prototype, "exportKi2Feuer", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_z = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _z || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_z = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _z || Object)
 ], TableplanComponent.prototype, "exportKi3Feuer", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_0 = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _0 || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_0 = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _0 || Object)
 ], TableplanComponent.prototype, "exportKi4Feuer", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_1 = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _1 || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_1 = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _1 || Object)
 ], TableplanComponent.prototype, "exportErwFeuer", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_2 = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _2 || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_2 = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _2 || Object)
 ], TableplanComponent.prototype, "exportKi1Erde", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_3 = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _3 || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_3 = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _3 || Object)
 ], TableplanComponent.prototype, "exportKi2Erde", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_4 = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _4 || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_4 = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _4 || Object)
 ], TableplanComponent.prototype, "exportKi3Erde", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_5 = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _5 || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_5 = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _5 || Object)
 ], TableplanComponent.prototype, "exportKi4Erde", void 0);
 __decorate([
-    core_1.Output(),
-    __metadata("design:type", typeof (_6 = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _6 || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_6 = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _6 || Object)
 ], TableplanComponent.prototype, "exportErwErde", void 0);
 TableplanComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-tableplan',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/tableplan/tableplan.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_7 = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _7 || Object])
+    __metadata("design:paramtypes", [typeof (_7 = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _7 || Object])
 ], TableplanComponent);
-exports.TableplanComponent = TableplanComponent;
+
 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7;
 //# sourceMappingURL=tableplan.component.js.map
 
@@ -4236,10 +4291,24 @@ module.exports = "<html>\n<head>\n  <title>Dashboard</title>\n  <meta name=\"vie
 /***/ }),
 
 /***/ "../../../../../src/app/components/digitalerTischplan/tischplan.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TischplanComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_dragula__ = __webpack_require__("../../../../ng2-dragula/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_dragula___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_dragula__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__print_print_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/print/print.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__departmentmenu_departmentmenu_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__form_form_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/form/form.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__im_haus_liste_im_haus_liste_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__navigation_navigation_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__tableplan_tableplan_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/tableplan/tableplan.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__departments_departments_component__ = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/departments.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4249,19 +4318,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var tischplan_service_1 = __webpack_require__("../../../../../src/app/services/tischplan.service.ts");
-var ng2_dragula_1 = __webpack_require__("../../../../ng2-dragula/index.js");
-var http_1 = __webpack_require__("../../../http/@angular/http.es5.js");
-var angular2_flash_messages_1 = __webpack_require__("../../../../angular2-flash-messages/index.js");
-var print_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/print/print.component.ts");
-var departmentmenu_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.ts");
-var form_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/form/form.component.ts");
-var im_haus_liste_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.ts");
-var navigation_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/navigation/navigation.component.ts");
-var tableplan_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/tableplan/tableplan.component.ts");
-var departments_component_1 = __webpack_require__("../../../../../src/app/components/digitalerTischplan/departments/departments.component.ts");
+
+
+
+
+
+
+
+
+
+
+
+
 var TischplanComponent = (function () {
     function TischplanComponent(tischplanService, http, _flashMessagesService, dragulaService) {
         var _this = this;
@@ -4589,52 +4657,55 @@ var TischplanComponent = (function () {
     return TischplanComponent;
 }());
 __decorate([
-    core_1.ViewChild(print_component_1.PrintComponent),
-    __metadata("design:type", typeof (_a = typeof print_component_1.PrintComponent !== "undefined" && print_component_1.PrintComponent) === "function" && _a || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_5__print_print_component__["a" /* PrintComponent */]),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_5__print_print_component__["a" /* PrintComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__print_print_component__["a" /* PrintComponent */]) === "function" && _a || Object)
 ], TischplanComponent.prototype, "printComponent", void 0);
 __decorate([
-    core_1.ViewChild(departmentmenu_component_1.DepartmentmenuComponent),
-    __metadata("design:type", typeof (_b = typeof departmentmenu_component_1.DepartmentmenuComponent !== "undefined" && departmentmenu_component_1.DepartmentmenuComponent) === "function" && _b || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_6__departmentmenu_departmentmenu_component__["a" /* DepartmentmenuComponent */]),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__departmentmenu_departmentmenu_component__["a" /* DepartmentmenuComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__departmentmenu_departmentmenu_component__["a" /* DepartmentmenuComponent */]) === "function" && _b || Object)
 ], TischplanComponent.prototype, "departmentmenuComponent", void 0);
 __decorate([
-    core_1.ViewChild(form_component_1.FormComponent),
-    __metadata("design:type", typeof (_c = typeof form_component_1.FormComponent !== "undefined" && form_component_1.FormComponent) === "function" && _c || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_7__form_form_component__["a" /* FormComponent */]),
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_7__form_form_component__["a" /* FormComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__form_form_component__["a" /* FormComponent */]) === "function" && _c || Object)
 ], TischplanComponent.prototype, "formComponent", void 0);
 __decorate([
-    core_1.ViewChild(departments_component_1.DepartmentsComponent),
-    __metadata("design:type", typeof (_d = typeof departments_component_1.DepartmentsComponent !== "undefined" && departments_component_1.DepartmentsComponent) === "function" && _d || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_11__departments_departments_component__["a" /* DepartmentsComponent */]),
+    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_11__departments_departments_component__["a" /* DepartmentsComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_11__departments_departments_component__["a" /* DepartmentsComponent */]) === "function" && _d || Object)
 ], TischplanComponent.prototype, "departmentsComponent", void 0);
 __decorate([
-    core_1.ViewChild(im_haus_liste_component_1.ImHausListeComponent),
-    __metadata("design:type", typeof (_e = typeof im_haus_liste_component_1.ImHausListeComponent !== "undefined" && im_haus_liste_component_1.ImHausListeComponent) === "function" && _e || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_8__im_haus_liste_im_haus_liste_component__["a" /* ImHausListeComponent */]),
+    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_8__im_haus_liste_im_haus_liste_component__["a" /* ImHausListeComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__im_haus_liste_im_haus_liste_component__["a" /* ImHausListeComponent */]) === "function" && _e || Object)
 ], TischplanComponent.prototype, "imHausListeComponent", void 0);
 __decorate([
-    core_1.ViewChild(navigation_component_1.NavigationComponent),
-    __metadata("design:type", typeof (_f = typeof navigation_component_1.NavigationComponent !== "undefined" && navigation_component_1.NavigationComponent) === "function" && _f || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_9__navigation_navigation_component__["a" /* NavigationComponent */]),
+    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_9__navigation_navigation_component__["a" /* NavigationComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_9__navigation_navigation_component__["a" /* NavigationComponent */]) === "function" && _f || Object)
 ], TischplanComponent.prototype, "navigationComponent", void 0);
 __decorate([
-    core_1.ViewChild(tableplan_component_1.TableplanComponent),
-    __metadata("design:type", typeof (_g = typeof tableplan_component_1.TableplanComponent !== "undefined" && tableplan_component_1.TableplanComponent) === "function" && _g || Object)
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_10__tableplan_tableplan_component__["a" /* TableplanComponent */]),
+    __metadata("design:type", typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_10__tableplan_tableplan_component__["a" /* TableplanComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_10__tableplan_tableplan_component__["a" /* TableplanComponent */]) === "function" && _g || Object)
 ], TischplanComponent.prototype, "tableplanComponent", void 0);
 TischplanComponent = __decorate([
-    core_1.Component({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'tischplan',
         template: __webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/digitalerTischplan/tischplan.component.css")],
     }),
-    __metadata("design:paramtypes", [typeof (_h = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _h || Object, typeof (_j = typeof http_1.Http !== "undefined" && http_1.Http) === "function" && _j || Object, typeof (_k = typeof angular2_flash_messages_1.FlashMessagesService !== "undefined" && angular2_flash_messages_1.FlashMessagesService) === "function" && _k || Object, typeof (_l = typeof ng2_dragula_1.DragulaService !== "undefined" && ng2_dragula_1.DragulaService) === "function" && _l || Object])
+    __metadata("design:paramtypes", [typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["Http"]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__["FlashMessagesService"]) === "function" && _k || Object, typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_2_ng2_dragula__["DragulaService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ng2_dragula__["DragulaService"]) === "function" && _l || Object])
 ], TischplanComponent);
-exports.TischplanComponent = TischplanComponent;
+
 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
 //# sourceMappingURL=tischplan.component.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/app/guards/auth.guard.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthGuard; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4644,10 +4715,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var router_1 = __webpack_require__("../../../router/@angular/router.es5.js");
-var auth_service_1 = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+
+
+
 var AuthGuard = (function () {
     function AuthGuard(authService, router) {
         this.authService = authService;
@@ -4667,20 +4737,25 @@ var AuthGuard = (function () {
     return AuthGuard;
 }());
 AuthGuard = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [typeof (_a = typeof auth_service_1.AuthService !== "undefined" && auth_service_1.AuthService) === "function" && _a || Object, typeof (_b = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _b || Object])
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object])
 ], AuthGuard);
-exports.AuthGuard = AuthGuard;
+
 var _a, _b;
 //# sourceMappingURL=auth.guard.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/app/services/auth.service.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__ = __webpack_require__("../../../../angular2-jwt/angular2-jwt.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4690,18 +4765,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var http_1 = __webpack_require__("../../../http/@angular/http.es5.js");
-__webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
-var angular2_jwt_1 = __webpack_require__("../../../../angular2-jwt/angular2-jwt.js");
+
+
+
+
 var AuthService = (function () {
     function AuthService(http) {
         this.http = http;
         this.isDev = true; // Change to false before deployment
     }
     AuthService.prototype.registerUser = function (user) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         var ep = this.prepEndpoint('register');
         return this.http.post(ep, user, { headers: headers })
@@ -4710,14 +4784,14 @@ var AuthService = (function () {
     // Gets called from submit login form
     AuthService.prototype.authenticateUser = function (user) {
         console.log("Check1");
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         var ep = this.prepEndpoint('authenticate');
         return this.http.post(ep, user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.getProfile = function () {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         this.loadToken();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
@@ -4738,7 +4812,7 @@ var AuthService = (function () {
         this.authToken = token;
     };
     AuthService.prototype.loggedIn = function () {
-        return angular2_jwt_1.tokenNotExpired('id_token');
+        return Object(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])('id_token');
     };
     AuthService.prototype.logout = function () {
         this.authToken = null;
@@ -4756,20 +4830,23 @@ var AuthService = (function () {
     return AuthService;
 }());
 AuthService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [typeof (_a = typeof http_1.Http !== "undefined" && http_1.Http) === "function" && _a || Object])
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
 ], AuthService);
-exports.AuthService = AuthService;
+
 var _a;
 //# sourceMappingURL=auth.service.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/app/services/tischplan.service.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TischplanService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4779,10 +4856,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var http_1 = __webpack_require__("../../../http/@angular/http.es5.js");
-__webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+
+
+
 var TischplanService = (function () {
     function TischplanService(http) {
         this.http = http;
@@ -4809,91 +4885,91 @@ var TischplanService = (function () {
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.occupyTable = function (dataString) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.post('occupyTable', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.addTable = function (dataString) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.post('addTable', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.removeTable = function (dataString) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.post('removeTable', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.dispenseTable = function (table) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.post('dispenseTable', table, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.removePlaceholder = function (dataString) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.post('removePlaceholder', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.addPlaceholder = function (tableSonnbergZirbn) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.post('addPlaceholder', tableSonnbergZirbn, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.addInformationToTable = function (dataString) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.post('addInformationToTable', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.sendInformation = function (newInformation) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('newInformationToTables', newInformation, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.sendInformationToBox = function (newInformation) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('newInformationToBox', newInformation, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.deleteInformationElement = function (informationElement) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('deleteInformationElement', informationElement, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.updateImHausListeElement = function (informationElements2) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('updateImHausListeElement', informationElements2, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.updateAnreiseListeElement = function (informationElements2) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('updateAnreiseListeElement', informationElements2, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.updateTracesListeElement = function (informationElements2) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('updateTracesListeElement', informationElements2, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.sendInformationToNotizBlock = function (newInformation) {
-        var headers = new http_1.Headers();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('newNotiz', newInformation, { headers: headers })
@@ -4906,20 +4982,21 @@ var TischplanService = (function () {
     return TischplanService;
 }());
 TischplanService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [typeof (_a = typeof http_1.Http !== "undefined" && http_1.Http) === "function" && _a || Object])
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
 ], TischplanService);
-exports.TischplanService = TischplanService;
+
 var _a;
 //# sourceMappingURL=tischplan.service.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/app/services/validate.service.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidateService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4929,8 +5006,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
+
 var ValidateService = (function () {
     function ValidateService() {
     }
@@ -4949,25 +5025,25 @@ var ValidateService = (function () {
     return ValidateService;
 }());
 ValidateService = __decorate([
-    core_1.Injectable(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
     __metadata("design:paramtypes", [])
 ], ValidateService);
-exports.ValidateService = ValidateService;
+
 //# sourceMappingURL=validate.service.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/environments/environment.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.environment = {
+// The file contents for the current environment will overwrite these during build.
+var environment = {
     production: false
 };
 //# sourceMappingURL=environment.js.map
@@ -4975,19 +5051,22 @@ exports.environment = {
 /***/ }),
 
 /***/ "../../../../../src/main.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var platform_browser_dynamic_1 = __webpack_require__("../../../platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
-var app_module_1 = __webpack_require__("../../../../../src/app/app.module.ts");
-var environment_1 = __webpack_require__("../../../../../src/environments/environment.ts");
-if (environment_1.environment.production) {
-    core_1.enableProdMode();
+
+
+
+if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
 }
-platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
+Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map
 
 /***/ }),
