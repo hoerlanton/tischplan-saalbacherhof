@@ -39,7 +39,7 @@ export class AlleComponent implements PipeTransform {
   }
 
   getStyle(j) {
-    if (j.pinfo1Value != "" || j.pinfo2Value != "" || j.pinfo3Value != "") {
+    if (j.p_serviceValue != "") {
       return "solid 3px red";
     } else {
       return "";

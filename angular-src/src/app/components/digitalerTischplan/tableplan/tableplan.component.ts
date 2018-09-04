@@ -190,7 +190,7 @@ export class TableplanComponent implements AfterViewChecked {
       for (let b = 0; b < a.length; b++) {
         //console.log("LOOOOOOOOOOOOOOP");
         //console.log(a[b].InfoValue);
-        if (a[b].pinfo1Value != "" || a[b].pinfo2Value != "" || a[b].pinfo3Value != "" || a[b].newInfoText) {
+        if (a[b].p_serviceValue != "") {
           this.trace = true;
         }
       }
@@ -268,7 +268,7 @@ export class TableplanComponent implements AfterViewChecked {
   }
 
   getStyleTrace(j) {
-    if (j != "-") {
+    if (j != "") {
       return "solid 3px red";
     } else {
       return "";

@@ -21,7 +21,7 @@
                   <div *ngFor="let group of tableMetall.groups">
                     <div *ngIf="group">
                       <div *ngIf="group.name1Value">
-                        <div class="dropdown-item" [style.border]="getStyleTrace(group.pinfo1Value)">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.p_serviceValue)">
                           <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>
                           <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
                           <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
@@ -67,7 +67,7 @@
                   <div *ngFor="let group of tableErde.groups">
                     <div *ngIf="group">
                       <div *ngIf="group.name1Value">
-                        <div class="dropdown-item" [style.border]="getStyleTrace(group.pinfo1Value)">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.p_serviceValue)">
                           <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>
                           <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
                           <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
@@ -113,7 +113,7 @@
                   <div *ngFor="let group of tableLuft.groups">
                     <div *ngIf="group">
                       <div *ngIf="group.name1Value">
-                        <div class="dropdown-item" [style.border]="getStyleTrace(group.pinfo1Value)">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.p_serviceValue)">
                           <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>
                           <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
                           <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
@@ -159,7 +159,7 @@
                   <div *ngFor="let group of tableFeuer.groups">
                     <div *ngIf="group">
                       <div *ngIf="group.name1Value">
-                        <div class="dropdown-item" [style.border]="getStyleTrace(group.pinfo1Value)">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.p_serviceValue)">
                           <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>
                           <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
                           <b> Abreise Datum:</b> {{group.abreiseValue}}<br>
@@ -205,7 +205,7 @@
                   <div *ngFor="let group of tableWasser.groups">
                     <div *ngIf="group">
                       <div *ngIf="group.name1Value">
-                        <div class="dropdown-item" [style.border]="getStyleTrace(group.pinfo1Value)">
+                        <div class="dropdown-item" [style.border]="getStyleTrace(group.p_serviceValue)">
                           <b> Zimmernummer:</b> {{group.zimmernummerValue}}<br>
                           <b> Anreise Datum:</b> {{group.anreiseValue}}<br>
                           <b> Abreise Datum:</b> {{group.abreiseValue}}<br>

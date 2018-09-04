@@ -323,7 +323,7 @@ export class PrintComponent implements OnInit {
       for (let b = 0; b < a.length; b++) {
         //console.log("LOOOOOOOOOOOOOOP");
         //console.log(a[b].traceValue);
-        if (a[b].traceValue != "-" || a[b].newTraceText) {
+        if (a[b].p_serviceValue != "" || a[b].newTraceText) {
           this.trace = true;
         }
       }

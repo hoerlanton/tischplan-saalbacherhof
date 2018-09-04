@@ -37,7 +37,7 @@ module.exports = {
                 "abreise": imHausListeDataArrayConcatSplit[1],
                 "personenAnzahl": imHausListeDataArrayConcatSplit[74] + " / " + imHausListeDataArrayConcatSplit[75] + " / " + imHausListeDataArrayConcatSplit[76] + " / " + imHausListeDataArrayConcatSplit[77] + " / " + imHausListeDataArrayConcatSplit[78],
                 "name1": imHausListeDataArrayConcatSplit[8] + " " + imHausListeDataArrayConcatSplit[5] + " " + imHausListeDataArrayConcatSplit[6] + " " + imHausListeDataArrayConcatSplit[7],
-                "name2": imHausListeDataArrayConcatSplit[21] + " " + imHausListeDataArrayConcatSplit[22],
+                "name2": imHausListeDataArrayConcatSplit[22] + " " + imHausListeDataArrayConcatSplit[23],
                 "nation": imHausListeDataArrayConcatSplit[11],
                 "aufenthalte": imHausListeDataArrayConcatSplit[18],
                 "p_service": imHausListeDataArrayConcatSplit[86],
